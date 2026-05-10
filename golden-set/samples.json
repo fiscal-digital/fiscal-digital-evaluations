@@ -21,10 +21,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T12:38:17.586Z",
       "createdAt": "2026-05-03T12:38:17.586Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:00:00Z",
+      "schemaVersion": 1,
+      "rationale": "Diario Oficial Sao Luis/MA 2024-04-15 (51 paginas). Indice (paginas 1-2) lista 13 atos: 9 NOMEACOES + 4 EXONERACOES, todos da Prefeitura. Cidade medium (~870k hab), limiar fora janela = 10. 13 atos > 10 = TP correto. Pessoas distintas: 12 (Maria Albaniza aparece em NOMEACAO+EXONERACAO, transicao de cargo). riskScore=46 abaixo do gate 60 = nao publica = comportamento correto (informativo apenas).",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:31:21.456Z"
     },
     {
       "id": "GS-002",
@@ -44,10 +50,18 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#3118601#pico_nomeacoes#2026-05-03T12:18:53.898Z",
       "createdAt": "2026-05-03T12:18:53.898Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Contagem/MG (medium, limiar 10). PDF tem apenas 9 atos reais (regex amplo NOMEIA/EXONERA/DESIGNA), abaixo do limiar. Fiscal disparou risk=78 mas com regex limitado (2 hits) — finding eh palpite, nao corresponde a pico real.",
+      "rootCause": {
+        "type": "regex_undercount_compensated_by_other_signal",
+        "location": "packages/engine/src/fiscais/pessoal.ts:NOMEACAO_RE",
+        "why": "Regex captura \"nome[ao]\" mas nao verbos conjugados NOMEIA/EXONERA. QD excerpt traz mais matches que o Fiscal interpreta como pico. Resultado: dispara em gazette com 9 atos reais quando limiar e 10."
+      },
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.077Z"
     },
     {
       "id": "GS-003",
@@ -67,10 +81,14 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#3300456#pico_nomeacoes#2026-05-03T15:10:23.832Z",
       "createdAt": "2026-05-03T15:10:23.832Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "borderline",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Belford Roxo/RJ (medium, limiar 10). PDF tem exatamente 10 atos no regex amplo. risk=37 baixo, nao publica. Borderline puro.",
+      "rootCause": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-004",
@@ -90,10 +108,14 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T15:13:47.580Z",
       "createdAt": "2026-05-03T15:13:47.580Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Sao Luis/MA (medium, limiar 10). PDF tem 56 atos reais. Bem acima do limiar = TP correto. risk=40 baixo (informativo).",
+      "rootCause": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-005",
@@ -113,10 +135,14 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#2704302#pico_nomeacoes#2026-05-03T06:25:49.004Z",
       "createdAt": "2026-05-03T06:25:49.004Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Maceio/AL (medium, limiar 10). 37 atos no PDF, acima do limiar. risk=74 razoavel.",
+      "rootCause": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-006",
@@ -139,10 +165,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T17:52:20.309Z",
       "createdAt": "2026-05-02T17:52:20.309Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:35:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS 2022. Fracionamento R$ 189k CNPJ 03.473.571/0001-31. Multiplas dispensas no mesmo periodo somando bem acima do teto = TP. risk=85, conf=0.9.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:37:34.741Z"
     },
     {
       "id": "GS-007",
@@ -164,10 +196,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#2704302#dispensa_irregular#2026-05-03T12:17:43.941Z",
       "createdAt": "2026-05-03T12:17:43.941Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:35:00Z",
+      "schemaVersion": 1,
+      "rationale": "Maceio/AL 2022. Dispensa R$ 1.859.984 — quase 19x o teto R$ 100k. TP forte. risk=87.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:37:34.742Z"
     },
     {
       "id": "GS-008",
@@ -189,10 +227,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:26:34.739Z",
       "createdAt": "2026-05-02T16:26:34.739Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:35:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS 2021. Dispensa R$ 264k > teto. TP. CNPJ ausente reduz confidence (0.65) — gap de extracao do Nova Lite.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:37:34.742Z"
     },
     {
       "id": "GS-009",
@@ -215,10 +259,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:49:23.452Z",
       "createdAt": "2026-05-02T16:49:23.452Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:35:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS 2021. Dispensa R$ 176k > teto. TP confiavel. risk=87 conf=0.85.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:37:34.742Z"
     },
     {
       "id": "GS-010",
@@ -240,10 +290,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:47:53.246Z",
       "createdAt": "2026-05-02T16:47:53.246Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:40:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS. Aditivo R$ 10.000 — aditivo de pequena monta. Sem comparacao com valor original do contrato, classificacao \"abusivo\" eh palpite.",
+      "rootCause": {
+        "type": "missing_cross_contract_lookup",
+        "location": "packages/engine/src/fiscais/contratos.ts",
+        "why": "Fiscal extrai valor do aditivo mas nao busca valor original do contrato em alerts-prod ou suppliers-prod. Resultado: aditivos de R$ 200-10k disparam aditivo_abusivo. Sem cross-reference, regra \"aditivo > 25%\" eh inaplicavel.",
+        "fix": "Apos EVO-002 (suppliers-prod com sk cronologico), buscar contrato original via SUPPLIER#{cnpj} + contractId. Se aditivo > 25% do original = TP. Sem original encontrado = nao disparar (recall menor mas precisao maior)."
+      },
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:40:03.698Z"
     },
     {
       "id": "GS-011",
@@ -264,10 +325,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:12:20.192Z",
       "createdAt": "2026-05-02T17:12:20.192Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:40:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS. Aditivo R$ 8.757.534 — valor alto, alta probabilidade de exceder 25% do contrato original. TP confiavel.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:40:03.699Z"
     },
     {
       "id": "GS-012",
@@ -288,10 +355,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4113700#aditivo_abusivo#2026-05-03T07:31:44.377Z",
       "createdAt": "2026-05-03T07:31:44.377Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:40:00Z",
+      "schemaVersion": 1,
+      "rationale": "Londrina/PR. Aditivo R$ 23.942.092 — gigantesco. TP forte mesmo sem cross-reference.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:40:03.699Z"
     },
     {
       "id": "GS-013",
@@ -312,10 +385,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:34:48.720Z",
       "createdAt": "2026-05-02T16:34:48.720Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "borderline",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:40:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS. Aditivo R$ 62.702 — pode ser legitimo (em contrato de R$ 1M+) ou abusivo (em contrato de R$ 200k). Sem cross-reference com original, decisao impossivel.",
+      "rootCause": {
+        "type": "missing_cross_contract_lookup",
+        "location": "packages/engine/src/fiscais/contratos.ts",
+        "why": "Fiscal extrai valor do aditivo mas nao busca valor original do contrato em alerts-prod ou suppliers-prod. Resultado: aditivos de R$ 200-10k disparam aditivo_abusivo. Sem cross-reference, regra \"aditivo > 25%\" eh inaplicavel.",
+        "fix": "Apos EVO-002 (suppliers-prod com sk cronologico), buscar contrato original via SUPPLIER#{cnpj} + contractId. Se aditivo > 25% do original = TP. Sem original encontrado = nao disparar (recall menor mas precisao maior)."
+      },
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:40:03.699Z"
     },
     {
       "id": "GS-014",
@@ -453,10 +537,14 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#5201405#pico_nomeacoes#2026-05-03T18:37:53.526Z",
       "createdAt": "2026-05-03T18:37:53.526Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Aparecida de Goiania/GO (medium, limiar 10). 25 atos, acima do limiar. risk=78.",
+      "rootCause": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-020",
@@ -476,10 +564,14 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#3303500#pico_nomeacoes#2026-05-03T18:47:54.586Z",
       "createdAt": "2026-05-03T18:47:54.586Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Nova Iguacu/RJ (medium, limiar 10). 11 atos reais, marginal acima do limiar. risk=78 alto pode ser superestimacao — borderline TP.",
+      "rootCause": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-021",
@@ -499,10 +591,18 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#4305108#pico_nomeacoes#2026-05-03T16:22:17.646Z",
       "createdAt": "2026-05-03T16:22:17.646Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS (medium, limiar 10). PDF tem APENAS 8 atos reais (regex amplo) mas Fiscal contou 47 (regex sobreconta \"nome[ao]\" pegando palavras que nao sao atos: pronomes, contratos com \"nomeacao do contratado\" etc). risk=53 abaixo gate. Bug claro de regex sobrecontagem.",
+      "rootCause": {
+        "type": "regex_overcount",
+        "location": "packages/engine/src/fiscais/pessoal.ts:NOMEACAO_RE",
+        "why": "Regex /nome[ao]/i captura \"nomeacao\", \"nomeada\", \"nome A\", \"nome O\" indiscriminadamente. Pega referencias contextuais nao-atos."
+      },
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-022",
@@ -522,10 +622,14 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#3303302#pico_nomeacoes#2026-05-03T12:46:50.553Z",
       "createdAt": "2026-05-03T12:46:50.553Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Niteroi/RJ (medium, limiar 10). 74 atos reais, MUITO acima do limiar. risk=35 baixo (informativo).",
+      "rootCause": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-023",
@@ -545,10 +649,14 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T05:39:51.763Z",
       "createdAt": "2026-05-03T05:39:51.763Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Sao Luis/MA (medium, limiar 10). 58 atos reais. TP forte. risk=40 informativo.",
+      "rootCause": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-024",
@@ -568,10 +676,17 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#3118601#pico_nomeacoes#2026-05-03T12:23:37.477Z",
       "createdAt": "2026-05-03T12:23:37.477Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Contagem/MG (medium, limiar 10). PDF tem 7 atos reais, abaixo do limiar. Fiscal disparou risk=76 com regex limitado (3 hits). Mesmo padrao de GS-002.",
+      "rootCause": {
+        "type": "regex_undercount_compensated_by_other_signal",
+        "location": "packages/engine/src/fiscais/pessoal.ts:NOMEACAO_RE"
+      },
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-025",
@@ -591,10 +706,14 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#3300456#pico_nomeacoes#2026-05-03T10:35:13.853Z",
       "createdAt": "2026-05-03T10:35:13.853Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Belford Roxo/RJ (medium, limiar 10). 20 atos reais, acima do limiar. risk=74.",
+      "rootCause": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-026",
@@ -614,10 +733,14 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T13:13:04.669Z",
       "createdAt": "2026-05-03T13:13:04.669Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Sao Luis/MA (medium, limiar 10). 47 atos reais, muito acima do limiar.",
+      "rootCause": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-027",
@@ -637,10 +760,14 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#3303302#pico_nomeacoes#2026-05-03T06:56:29.675Z",
       "createdAt": "2026-05-03T06:56:29.675Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Niteroi/RJ (medium, limiar 10). 26 atos reais. risk=39 informativo.",
+      "rootCause": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-028",
@@ -660,10 +787,14 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T17:35:40.129Z",
       "createdAt": "2026-05-03T17:35:40.129Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Sao Luis/MA (medium, limiar 10). 29 atos reais, acima do limiar.",
+      "rootCause": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-029",
@@ -683,10 +814,14 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T10:08:34.919Z",
       "createdAt": "2026-05-03T10:08:34.919Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:30:00Z",
+      "schemaVersion": 1,
+      "rationale": "Sao Luis/MA (medium, limiar 10). 26 atos reais, acima do limiar.",
+      "rootCause": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:36:24.078Z"
     },
     {
       "id": "GS-030",
@@ -707,10 +842,20 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:53:13.253Z",
       "createdAt": "2026-05-02T16:53:13.253Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "borderline",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:35:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS 2025. Dispensa R$ 91k — abaixo do teto Lei 14.133 atualizado (R$ 100k obras / R$ 50k servicos). Se for obras, abaixo do limite; se servicos, MUITO acima. Sem dados de classificacao subtype, decisao impossivel sem ler PDF inteiro. CNPJ ausente.",
+      "rootCause": {
+        "type": "missing_subtype_classification",
+        "location": "packages/engine/src/fiscais/licitacoes.ts",
+        "why": "Fiscal nao distingue obras vs servicos para escolher teto correto. Nova Lite deveria classificar via subtype."
+      },
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:37:34.742Z"
     },
     {
       "id": "GS-031",
@@ -731,10 +876,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4106902#dispensa_irregular#2026-05-03T06:06:47.979Z",
       "createdAt": "2026-05-03T06:06:47.979Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:35:00Z",
+      "schemaVersion": 1,
+      "rationale": "Curitiba/PR 2025. Dispensa R$ 1.080.000 — ~10x teto. TP forte. risk=93.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:37:34.742Z"
     },
     {
       "id": "GS-032",
@@ -755,10 +906,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-03T17:35:05.577Z",
       "createdAt": "2026-05-03T17:35:05.577Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:35:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS 2023. Dispensa R$ 228k > teto. TP.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:37:34.742Z"
     },
     {
       "id": "GS-033",
@@ -780,10 +937,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#5208707#dispensa_irregular#2026-05-03T09:08:45.144Z",
       "createdAt": "2026-05-03T09:08:45.144Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:35:00Z",
+      "schemaVersion": 1,
+      "rationale": "Goiania/GO 2022. Dispensa R$ 12.234.680 — gigantesca, 100x+ o teto. TP forte. CNPJ ausente reduz confidence — extracao falhou.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:37:34.742Z"
     },
     {
       "id": "GS-034",
@@ -805,10 +968,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:36:51.028Z",
       "createdAt": "2026-05-02T16:36:51.028Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:35:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS 2025. Dispensa R$ 4.020.000 — 40x teto. TP forte. CNPJ ausente.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:37:34.742Z"
     },
     {
       "id": "GS-035",
@@ -830,10 +999,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:55:55.565Z",
       "createdAt": "2026-05-02T16:55:55.565Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:35:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS 2025. Dispensa R$ 407k > teto. CNPJ presente, conf=0.85.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:37:34.742Z"
     },
     {
       "id": "GS-036",
@@ -855,10 +1030,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:20:24.239Z",
       "createdAt": "2026-05-02T16:20:24.239Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:35:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS 2025. Dispensa R$ 244k > teto. CNPJ ausente.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:37:34.742Z"
     },
     {
       "id": "GS-037",
@@ -881,10 +1062,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T16:56:10.911Z",
       "createdAt": "2026-05-02T16:56:10.911Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:35:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS 2021. Fracionamento R$ 179k CNPJ 27.180.624/0001-94. Multiplas dispensas somadas. TP.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:37:34.742Z"
     },
     {
       "id": "GS-038",
@@ -905,10 +1092,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:05:03.968Z",
       "createdAt": "2026-05-02T17:05:03.968Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:40:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS. Aditivo R$ 512 — irrisorio. FP claro de regex sem cross-reference. Mostra bug do Fiscal Contratos.",
+      "rootCause": {
+        "type": "missing_cross_contract_lookup",
+        "location": "packages/engine/src/fiscais/contratos.ts",
+        "why": "Fiscal extrai valor do aditivo mas nao busca valor original do contrato em alerts-prod ou suppliers-prod. Resultado: aditivos de R$ 200-10k disparam aditivo_abusivo. Sem cross-reference, regra \"aditivo > 25%\" eh inaplicavel.",
+        "fix": "Apos EVO-002 (suppliers-prod com sk cronologico), buscar contrato original via SUPPLIER#{cnpj} + contractId. Se aditivo > 25% do original = TP. Sem original encontrado = nao disparar (recall menor mas precisao maior)."
+      },
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:40:03.699Z"
     },
     {
       "id": "GS-039",
@@ -929,10 +1127,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:55:51.459Z",
       "createdAt": "2026-05-02T16:55:51.459Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:40:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS. Aditivo R$ 234 — quase R$ 0. FP grave. Bug critico.",
+      "rootCause": {
+        "type": "missing_cross_contract_lookup",
+        "location": "packages/engine/src/fiscais/contratos.ts",
+        "why": "Fiscal extrai valor do aditivo mas nao busca valor original do contrato em alerts-prod ou suppliers-prod. Resultado: aditivos de R$ 200-10k disparam aditivo_abusivo. Sem cross-reference, regra \"aditivo > 25%\" eh inaplicavel.",
+        "fix": "Apos EVO-002 (suppliers-prod com sk cronologico), buscar contrato original via SUPPLIER#{cnpj} + contractId. Se aditivo > 25% do original = TP. Sem original encontrado = nao disparar (recall menor mas precisao maior)."
+      },
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:40:03.699Z"
     },
     {
       "id": "GS-040",
@@ -953,10 +1162,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#1501402#aditivo_abusivo#2026-05-03T16:49:00.899Z",
       "createdAt": "2026-05-03T16:49:00.899Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:40:00Z",
+      "schemaVersion": 1,
+      "rationale": "Belem/PA. Aditivo R$ 1.974.200 — alto. TP confiavel.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:40:03.699Z"
     },
     {
       "id": "GS-041",
@@ -977,10 +1192,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:12:20.192Z",
       "createdAt": "2026-05-02T17:12:20.192Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:40:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS. Aditivo R$ 8.757.534 — duplica GS-011 (mesmo finding em duas amostras? possivel deduplica imperfeita). TP.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:40:03.699Z"
     },
     {
       "id": "GS-042",
@@ -1001,10 +1222,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:31:56.873Z",
       "createdAt": "2026-05-02T16:31:56.873Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:40:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS. Aditivo R$ 1.600 — irrisorio. FP grave.",
+      "rootCause": {
+        "type": "missing_cross_contract_lookup",
+        "location": "packages/engine/src/fiscais/contratos.ts",
+        "why": "Fiscal extrai valor do aditivo mas nao busca valor original do contrato em alerts-prod ou suppliers-prod. Resultado: aditivos de R$ 200-10k disparam aditivo_abusivo. Sem cross-reference, regra \"aditivo > 25%\" eh inaplicavel.",
+        "fix": "Apos EVO-002 (suppliers-prod com sk cronologico), buscar contrato original via SUPPLIER#{cnpj} + contractId. Se aditivo > 25% do original = TP. Sem original encontrado = nao disparar (recall menor mas precisao maior)."
+      },
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:40:03.699Z"
     },
     {
       "id": "GS-043",
@@ -1025,10 +1257,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:23:27.875Z",
       "createdAt": "2026-05-02T17:23:27.875Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:40:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS. Aditivo R$ 20.275 — pequeno, mais provavel rotina que abuso.",
+      "rootCause": {
+        "type": "missing_cross_contract_lookup",
+        "location": "packages/engine/src/fiscais/contratos.ts",
+        "why": "Fiscal extrai valor do aditivo mas nao busca valor original do contrato em alerts-prod ou suppliers-prod. Resultado: aditivos de R$ 200-10k disparam aditivo_abusivo. Sem cross-reference, regra \"aditivo > 25%\" eh inaplicavel.",
+        "fix": "Apos EVO-002 (suppliers-prod com sk cronologico), buscar contrato original via SUPPLIER#{cnpj} + contractId. Se aditivo > 25% do original = TP. Sem original encontrado = nao disparar (recall menor mas precisao maior)."
+      },
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:40:03.699Z"
     },
     {
       "id": "GS-044",
@@ -1049,10 +1292,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:54:55.753Z",
       "createdAt": "2026-05-02T16:54:55.753Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "borderline",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:40:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS. Aditivo R$ 44.410 — fronteirico. Sem cross-reference impossivel decidir.",
+      "rootCause": {
+        "type": "missing_cross_contract_lookup",
+        "location": "packages/engine/src/fiscais/contratos.ts",
+        "why": "Fiscal extrai valor do aditivo mas nao busca valor original do contrato em alerts-prod ou suppliers-prod. Resultado: aditivos de R$ 200-10k disparam aditivo_abusivo. Sem cross-reference, regra \"aditivo > 25%\" eh inaplicavel.",
+        "fix": "Apos EVO-002 (suppliers-prod com sk cronologico), buscar contrato original via SUPPLIER#{cnpj} + contractId. Se aditivo > 25% do original = TP. Sem original encontrado = nao disparar (recall menor mas precisao maior)."
+      },
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:40:03.699Z"
     },
     {
       "id": "GS-045",
@@ -1074,10 +1328,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:26:01.117Z",
       "createdAt": "2026-05-02T17:26:01.117Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-sonnet-4-6",
+      "labeledAt": "2026-05-10T03:40:00Z",
+      "schemaVersion": 1,
+      "rationale": "Caxias do Sul/RS. Aditivo R$ 555.359 contrato 2022/1389. Valor relevante + contractNumber presente. TP.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-sonnet-4-6",
+      "evaluatedAt": "2026-05-10T07:40:03.699Z"
     },
     {
       "id": "GS-046",
@@ -1522,6 +1782,897 @@
       ],
       "sourceFindingId": "FINDING#fiscal-locacao#3301009#locacao_sem_justificativa#2026-05-03T05:39:02.594Z",
       "createdAt": "2026-05-03T05:39:02.594Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-065",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "2111300",
+      "type": "pico_nomeacoes",
+      "riskScore": 48,
+      "confidence": 0.75,
+      "narrative": "Identificamos 14 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 13/11/2025, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": ".. \nEXONERAÇÃO DE ADRIANO CUTRIM ALVES 6 ....................................................................................................... \nEXONERAÇÃO DE CLAUDIA TERESA SOUZA SANTOS 6 ............................................................................................. \nEXONERAÇÃO DE INARA\n---\n.. \nEXONERAÇÃO DE INGRID KAROLAINE OLIVEIRA SAMPAIO 6 ....................................................................................... \nEXONERAÇÃO DE JACIENE FARIAS GOMES 6 ........................................................................................................ \nEXONERAÇÃO DE MARY\n---\n.... \nEXONERAÇÃO DE MATHEUS RIBEIRO FALCÃO 7 .................................................................................................... \nEXONERAÇÃO DE PAULO CESAR MENDES CARDOSO 7 ............................................................................................ \nEXONERAÇÃO DE TANIA\n---\n.... \nEXONERAÇÃO DE WANDERSON DOS SANTOS MOTA 7 ............................................................................................. \nNOMEAÇÃO DE ADRIANO CUTRIM ALVES 7 .......................................................................................................... \nNOMEAÇÃO DE MARY\n---\n......................................................................... \nNOMEAÇÃO DE MATHEUS RIBEIRO FALCÃO 8 ....................................................................................................... \nNOMEAÇÃO DE TANIA REGINA DURANS BALDEZ 8 ..........................................",
+          "date": "2025-11-13",
+          "source": "https://data.queridodiario.ok.org.br/2111300/2025-11-13/be8e76ef9f300f9452aaeb78e67a4d1b384c53ba.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T06:15:50.892Z",
+      "createdAt": "2026-05-03T06:15:50.892Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-066",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "3518800",
+      "type": "pico_nomeacoes",
+      "riskScore": 44,
+      "confidence": 0.75,
+      "narrative": "Identificamos 12 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 04/04/2024, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "seu nome completo, telefone de contato e a foto do RG e CPF.\nPara o cargo em comissão: Diretor de Departamento (302-34), lotado na SGMSAI04;\nVaga: exoneração de Dario José Barreto, sustando-se a Portaria nº 3.047/2021-GP.\n\nPORTARIA Nº 758/2024-GP\nGUSTAVO HENRIC COSTA, Prefeito da Cidade de Guarulhos, no\n---\ncompleto, telefone de contato e a foto do RG e CPF.\nPara o cargo em comissão: Subsecretário (345-4), lotado na SDHSPD;\nVaga: exoneração de Ana Maria de Oliveira Marques, exonerando-se do cargo que ocupa atualmente.\n\nPORTARIA Nº 759/2024-GP\nGUSTAVO HENRIC COSTA, Prefeito da Cidade de Guarulhos, no uso de\n---\nobrigatoriamente seu nome completo, telefone de contato e a foto do RG e CPF.\nPara o cargo em comissão: Subsecretário (345-3), lotado na SDHSJ;\nVaga: exoneração de Cesar Sousa de Oliveira, sustando-se a Portaria nº 2.671/2023-GP.\n\nPORTARIA Nº 760/2024-GP\nGUSTAVO HENRIC COSTA, Prefeito da Cidade de Guarulhos\n---\nobrigatoriamente seu nome completo, telefone de contato e a foto do RG e CPF.\nPara o cargo em comissão: Subsecretário (345-5), lotado na SDHSPM.\nVaga: exoneração de Vera Lucia Evangelista de Souza.\n\nPORTARIA Nº 761/2024-GP\nGUSTAVO HENRIC COSTA, Prefeito da Cidade de Guarulhos, no uso de suas atribuições legais\n---\ncompleto, telefone de contato e a foto do RG e CPF.\nPara o cargo em comissão: Secretário Adjunto (303-13), lotado na SDCETI;\nVaga: exoneração de Helio Silva Oliveira, exonerando-se do cargo que ocupa atualmente.\n\nPORTARIA Nº 762/2024-GP\nGUSTAVO HENRIC COSTA, Prefeito da Cidade de Guarulhos, no uso de suas",
+          "date": "2024-04-04",
+          "source": "https://data.queridodiario.ok.org.br/3518800/2024-04-04/b1c68b48f11037950c46c3baac46fe769b43b728.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#3518800#pico_nomeacoes#2026-05-03T08:40:30.468Z",
+      "createdAt": "2026-05-03T08:40:30.468Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-067",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "3303302",
+      "type": "pico_nomeacoes",
+      "riskScore": 35,
+      "confidence": 0.75,
+      "narrative": "Identificamos 7 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 31/05/2025, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "para exercer o cargo de Assessor A, CC1, da Secretaria Municipal de \n\nDesenvolvimento Econômico e Revitalização do Centro, em vaga decorrente da exoneração de Thalisom Carneiro Silva. \n \n\nPort. Nº 2892/2025 - Exonera BERNARDO BOIRON DOS SANTOS, do cargo de Assessor B, CC-2, da Subsecretaria de Transformação\n---\nExecutiva, em vacância decorrente da exoneração de Bernardo Boiron dos Santos. \n \n\nPort. Nº 2895/2025 - Nomeia BARTOLOMEU HOMEM DEL-REI PINTO para exercer o cargo Assessor A, CC-1, da Subsecretaria de \n\nTransformação Digital, da Secretaria Executiva, em decorrente da exoneração de Viviane Rodrigues Soares. \n---\n2897/2025 - Nomeia ACYR ASSIS GONÇALVES NETO para exercer o cargo de Subsecretário, SS, da Secretaria Municipal do Idoso, em \n\nvaga decorrente da exoneração de Elaine Lopes Gonçalves. \n \n\nPort. Nº 2898/2025 - Exonera, a pedido, LUZIA MARIA PEREIRA ROCHA do cargo de Assessor B, CC-2, da Secretaria Municipal\n---\nCARVALHO para exercer o cargo de Assessor B, CC-2, da Secretaria Municipal de \n\nPlanejamento, Orçamento e Modernização da Gestão, em vaga decorrente da exoneração de Luzia Maria Pereira Rocha. \n\n \nEDITAL Nº 01/2025 \n\nEDITAL DE CONVOCAÇÃO DAS ENTIDADES REPRESENTATIVAS DA SOCIEDADE COM ATIVIDADE NO MUNICÍPIO",
+          "date": "2025-05-31",
+          "source": "https://data.queridodiario.ok.org.br/3303302/2025-05-31/b532f504aa0f97032329e2fbb6921ae0d8fd4725.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#3303302#pico_nomeacoes#2026-05-03T12:13:48.389Z",
+      "createdAt": "2026-05-03T12:13:48.389Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-068",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "2111300",
+      "type": "pico_nomeacoes",
+      "riskScore": 40,
+      "confidence": 0.75,
+      "narrative": "Identificamos 10 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 18/08/2023, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": ".......................................................... \nEXONERAÇÃO A PEDIDO DE ANDRESA MAYARA MOTA FERREIRA 11 ................................................................................................................. \nEXONERAÇAO DE DANIELLE ARAÚJO DUAILIBE. 12 ...........................\n---\n..................................................... \nEXONERAÇAO DE LIZANDRA RAFAELA DIAS MARTINS. 12 ................................................................................................................................. \nEXONERAÇAO DE MANOEL CARLOS CORREIA DA SILVA. 12 .................\n---\n..................................................... \nEXONERAÇAO DE MARYLEIA DE SANTANA MENDES. 12 ..................................................................................................................................... \nEXONERAÇAO DE MAYARA DE SOUSA GONÇALVES. 12 .....................\n---\n................................................... \nEXONERAÇAO DE POLLYANA MENDES VIANA. 12 ............................................................................................................................................... \nNOMEAÇÃO DE ANA MICHELLE PEREIRA DUAILIBE. 13 ................\n---\n........................................................ \nNOMEAÇÃO DE ANDRESSA NAGILA MORAES AZEVEDO. 13 ............................................................................................................................... \nNOMEAÇÃO DE ANNA PAULA RAMOS DOS SANTOS CHAGAS. 13 ...............",
+          "date": "2023-08-18",
+          "source": "https://data.queridodiario.ok.org.br/2111300/2023-08-18/25101e05ef867dc2cae9821ea71e5176474fcfe4.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T14:01:30.179Z",
+      "createdAt": "2026-05-03T14:01:30.179Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-069",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "3118601",
+      "type": "pico_nomeacoes",
+      "riskScore": 78,
+      "confidence": 0.75,
+      "narrative": "Identificamos 5 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 29/08/2024, dentro da janela eleitoral municipal (eleição prevista para 06/10/2024). O documento aponta volume acima do limiar de 3 atos por publicação. Lei 9.504/97, Art. 73, V, veda nomeações para cargos em comissão no período eleitoral, salvo exceções.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "atribuições legais; considerando o disposto na Lei Complementar n° 247, de 29 de dezembro de 2017, que dispõe sobre a \nOrganização da Administração Direta do Poder Executivo; EXONERA, a pedido, do cargo em comissão DAM-11, código SEMOBS.DAM11.01, RAYSSA CORDEIRO FIGUEI-\nREDO, lotado(a) na Secretaria Municipal\n---\natribuições legais; considerando o disposto na Lei Complementar n° 247, de 29 de dezembro de 2017, que dispõe sobre a \nOrganização da Administração Direta do Poder Executivo; EXONERA, a pedido, do cargo em comissão DAM-3, código SEMOBS.DAM3.01, LUANA GABRIELA SIMOES \nPENA, lotado(a) na Secretaria Municipal\n---\natribuições legais; considerando o disposto na Lei Complementar n° 247, de 29 de dezembro de 2017, que dispõe sobre a \nOrganização da Administração Direta do Poder Executivo; RESOLVE:\nArt. 1º NOMEAR, para o cargo em comissão DAM-8, código SEMOBS.DAM8.01, o(a) servidor(a) RUBENS OLIVEIRA DO NASCIMENTO\n---\natribuições legais; considerando o disposto na Lei Complementar n° 247, de 29 de dezembro de 2017, que dispõe sobre \na Organização da Administração Direta do Poder Executivo; NOMEIA, paro o cargo em comissão DAM-4, código PARC.DAM4.10, GABRIELA LEANDRO DA COSTA, \ndesignado(a) para responder pela Divisão",
+          "date": "2024-08-29",
+          "source": "https://data.queridodiario.ok.org.br/3118601/2024-08-29/50d6e64ac83c11b7c1ae75bae59f1293e32d3506.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#3118601#pico_nomeacoes#2026-05-03T12:18:53.898Z",
+      "createdAt": "2026-05-03T12:18:53.898Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-070",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "2111300",
+      "type": "pico_nomeacoes",
+      "riskScore": 48,
+      "confidence": 0.75,
+      "narrative": "Identificamos 14 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 26/03/2026, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "..... \nEXONERAÇÃO DE AUGUSTO CÉSAR RODRIGUES XAVIER 7 ........................................................................................ \nEXONERAÇÃO DE JAYANE CAROLYNE AQUINO DA SILVA 7 ......................................................................................... \nEXONERAÇÃO DE JONNATAS\n---\n.... \nEXONERAÇÃO DE JOSÉ ANTÔNIO SILVA FRAZÃO JÚNIOR 7 ........................................................................................ \nEXONERAÇÃO DE KARLA MILENA DE JESUS MACHADO 7 .......................................................................................... \nEXONERAÇÃO DE MARTINHO\n---\n........................................................................ \nEXONERAÇÃO DE MAURÍCIO NUNES BORGES 8 ..................................................................................................... \nEXONERAÇÃO DE VINICIUS OLIVEIRA DA SILVA 8 ..........................................\n---\n...... \nEXONERAÇÃO DE VITOR AURÉLIO COELHO MORAES 8 ............................................................................................. \nEXONERAÇÃO DE YASMIN SANDOVAL SANTANA LEAL MACIEL 8 .................................................................................. \nNOMEAÇÃO DE ALICIA\n---\n.... \nNOMEAÇÃO DE AUGUSTO CÉSAR RODRIGUES XAVIER 9 ........................................................................................... \nNOMEAÇÃO DE CIRO NORONHA SANTANA 9 ........................................................................................................ \nNOMEAÇÃO DE DANIEL",
+          "date": "2026-03-26",
+          "source": "https://data.queridodiario.ok.org.br/2111300/2026-03-26/63ad2f5ba00faba9156fb430070cc8ae8f8c68a4.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T04:34:21.703Z",
+      "createdAt": "2026-05-03T04:34:21.703Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-071",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "3118601",
+      "type": "pico_nomeacoes",
+      "riskScore": 74,
+      "confidence": 0.75,
+      "narrative": "Identificamos 3 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 18/09/2024, dentro da janela eleitoral municipal (eleição prevista para 06/10/2024). O documento aponta volume acima do limiar de 3 atos por publicação. Lei 9.504/97, Art. 73, V, veda nomeações para cargos em comissão no período eleitoral, salvo exceções.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "945\nA PREFEITA DE CONTAGEM, no uso de suas atribuições legais; e, nos termos da Lei Complementar nº 202, de 22 de março de 2016; RESOLVE:\nArt.1º DISPENSAR da designação para o exercício da Função de Confiança de Direção de Controle Administrativo, referência FC-5, CFC-225, o(a) servidor(a) ADRIANA \nKELEN\n---\nCONSIDERANDO a necessidade de regularizar a vida funcional do servidor JOSE FRANCISCO CUELLAR ERAZO, bem como a sua nomeação no cargo efetivo de Médico do \nTrabalho:\nRESOLVE:\nArt.1º RATIFICAR a nomeação do servidor JOSE FRANCISCO CUELLAR ERAZO, matrícula 144090, inscrito sob o CPF nº ***.394.106-**, para o cargo",
+          "date": "2024-09-18",
+          "source": "https://data.queridodiario.ok.org.br/3118601/2024-09-18/97ba8e4ddc8f95eb66ed49088ff722f9b90a45e3.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#3118601#pico_nomeacoes#2026-05-03T15:21:43.418Z",
+      "createdAt": "2026-05-03T15:21:43.418Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-072",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "3518800",
+      "type": "pico_nomeacoes",
+      "riskScore": 39,
+      "confidence": 0.75,
+      "narrative": "Identificamos 9 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 14/01/2025, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "obrigatoriamente seu nome completo, telefone de contato e a foto do RG e CPF.\nPara o cargo em comissão: Diretor de Departamento (302-27), lotado na SH01.\nVaga: exoneração de Guilherme de Araujo Lavras.\n\nPORTARIA Nº 550/2025-GP\nLUCAS SANCHES, Prefeito da Cidade de Guarulhos, no uso de suas atribuições legais,\nConsiderando\n---\nseu nome completo, telefone de contato e a foto do RG e CPF.\nPara o cargo em comissão: Diretor de Departamento (302-66), lotado na SESE12;\nVaga: exoneração de Solange Turgante Adamoli, sustando-se a Portaria nº 253/2022-GP.\n\nPORTARIA Nº 553/2025-GP\nLUCAS SANCHES, Prefeito da Cidade de Guarulhos, no uso\n---\n36.494.672-6 419.366.958-04 1 SF\nCargo em caráter efetivo: Contador (409), com carga horária de 40 (quarenta) horas semanais de trabalho;\nVaga(s): exoneração de Maria Elza Silva de Brito.\n\nPORTARIA Nº 586/2025-GP\nCAIO SANTOS, Chefe de Gabinete do Prefeito, no uso de suas atribuições legais, conferidas\n---\ncompleto, telefone de contato e a foto do RG e CPF.\nPara o cargo em comissão: Assessor de Gestão (621-312), lotado na SGE, devendo atuar na SDAS.\nVaga: exoneração de Magda Regina Alves de Lima.\n\nPORTARIA Nº 589/2025-GP\nCAIO SANTOS, Chefe de Gabinete do Prefeito, no uso de suas atribuições legais, conferidas\n---\nobrigatoriamente seu nome completo, telefone de contato e a foto do RG e CPF.\nPara o cargo em comissão: Assessor de Gabinete (620-103), lotado na CPDC.\nVaga: exoneração de Maria da Anunciacao D´Araujo.\n\nPORTARIA Nº 590/2025-GP\nCAIO SANTOS, Chefe de Gabinete do Prefeito, no uso de suas atribuições legais, conferidas",
+          "date": "2025-01-14",
+          "source": "https://data.queridodiario.ok.org.br/3518800/2025-01-14/1385227bd10d51722edcf03635356320e0d57935.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#3518800#pico_nomeacoes#2026-05-03T16:28:37.314Z",
+      "createdAt": "2026-05-03T16:28:37.314Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-073",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "4205407",
+      "type": "pico_nomeacoes",
+      "riskScore": 35,
+      "confidence": 0.75,
+      "narrative": "Identificamos 7 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 20/05/2024, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "DE FLORIANÓPOLIS, usando \nda competência e atribuições, que lhe são \nconferidas pelo inciso VI do art. 74, da Lei Orgânica \ndo Município, RESOLVE: EXONERAR, A PEDIDO, \nLUIZ CARLOS PADILHA do Cargo em Comissão de \nDiretor de Empreendedorismo, Micro e Pequenas \nEmpresas (ASE-03) do Gabinete do Prefeito\n---\ncompetência e atribuições que lhe são \nconferidas pelo Decreto nº 11.359/2013 e, nos \ntermos da Lei Complementar nº 706/2021, resolve: \nArt. 1° CONSIDERAR DISPENSADA, a partir de 13 de \nmaio de 2024, da designação concedida por \nintermédio da Portaria de Designação de FG nº \n00463/2023, a servidora NIVIA BARROS\n---\npelo Decreto nº 11.359/2013 e, nos \ntermos da Lei Complementar nº 706/2021, resolve \nCONSIDERAR DISPENSADA, a partir de 13 de maio \nde 2024, da designação concedida por intermédio \nda Portaria de Dispensa e Designação de FG nº \n01614/2023, a servidora CLEUSA REGINA SILVANO, \nmatrícula n° 12403-6, da\n---\ncompetência e atribuições que lhe são \nconferidas pelo Decreto nº 11.359/2013 e, nos \ntermos da Lei Complementar nº 706/2021, resolve \nCONSIDERAR DISPENSADA, a partir de 13 de maio \nde 2024, da designação concedida por intermédio \nda Portaria de Designação de FG nº 01616/2023, a \nservidora SHEILA PATRICIA",
+          "date": "2024-05-20",
+          "source": "https://data.queridodiario.ok.org.br/4205407/2024-05-20/f9c8661744cd4a878aa0a6bf96ff377585f8f8a8.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#4205407#pico_nomeacoes#2026-05-03T09:26:05.992Z",
+      "createdAt": "2026-05-03T09:26:05.992Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-074",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "fracionamento",
+      "riskScore": 67,
+      "confidence": 0.9,
+      "narrative": "Identificamos 2 dispensas para o fornecedor CNPJ 89.982.037/0001-76 nos últimos 12 meses, totalizando R$ 68.100,00, acima do limite legal de R$ 65.492,11 (Lei 14.133/2021, Art. 75, §1º). O documento aponta possível fracionamento de contrato.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, §1º",
+      "cnpj": "89.982.037/0001-76",
+      "secretaria": "Administração, Tecnologia e Inovação",
+      "value": 68100,
+      "evidence": [
+        {
+          "excerpt": "Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Dispensa de Licitação\n \nContratado(a): MAX CIRURGICA COMERCIO DE MATERIAIS HOSPITALARES LTDA. CNPJ: 89.982.037/0001-76. Objeto:\nAquisição de Agulhas de Punção Intraóssea. Valor R$ 68.100,00. Dispensa n.º 151/2025. Processo n.º 2025/21457.",
+          "date": "2025-10-03",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2025-10-03/32e97c9a8017f0e4a2afaf944a738f0bfd017f6f.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T16:11:41.885Z",
+      "createdAt": "2026-05-02T16:11:41.885Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-075",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "fracionamento",
+      "riskScore": 85,
+      "confidence": 0.9,
+      "narrative": "Identificamos 2 dispensas para o fornecedor CNPJ 03.473.571/0001-31 nos últimos 12 meses, totalizando R$ 189.860,00, acima do limite legal de R$ 65.492,11 (Lei 14.133/2021, Art. 75, §1º). O documento aponta possível fracionamento de contrato.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, §1º",
+      "cnpj": "03.473.571/0001-31",
+      "secretaria": "SMED",
+      "value": 189860,
+      "evidence": [
+        {
+          "excerpt": "Roteiros 101 e 1002. Valor: R$\n189.860,00. Dispensa nº 174/2022. Processo nº 2022/26812. Fundamento legal: Art. 24, inciso IV, da Lei n.º 8.666/93.\n \nSMED – Contratado: GIJA TRANSPORTES ESCOLAR LTDA ME - CNPJ: 03.473.571/0001-31. Objeto: Dispensa de licitação\ncelebrada com a empresa Gija Transportes Escolar",
+          "date": "2022-08-16",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2022-08-16/79ab37d1e73a91c92bbbb6eb2da038d7ff2ccbca.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T17:52:20.309Z",
+      "createdAt": "2026-05-02T17:52:20.309Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-076",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "fracionamento",
+      "riskScore": 85,
+      "confidence": 0.9,
+      "narrative": "Identificamos 2 dispensas para o fornecedor CNPJ 87.368.304/0001-94 nos últimos 12 meses, totalizando R$ 549.066,18, acima do limite legal de R$ 65.492,11 (Lei 14.133/2021, Art. 75, §1º). O documento aponta possível fracionamento de contrato.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, §1º",
+      "cnpj": "87.368.304/0001-94",
+      "secretaria": "Tecnologia e Inovação",
+      "value": 549066.18,
+      "evidence": [
+        {
+          "excerpt": " Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Dispensa de Licitação\n \nContratado(a): SLOMP COMERCIO DE MATERIAIS DE CONSTRUCAO LTDA. CNPJ: 87.368.304/0001-94. Objeto:\nFornecimento de Concreto Usinado Convencional e Bombeado. Valor R$ 549.066,18. Dispensa n.º 87/2025. Processo n.º\n2025/8013",
+          "date": "2025-05-22",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2025-05-22/fff2456b0571c5c35675a146e288c630d0b138ae.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T16:50:08.493Z",
+      "createdAt": "2026-05-02T16:50:08.493Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-077",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "dispensa_irregular",
+      "riskScore": 87,
+      "confidence": 0.65,
+      "narrative": "# Achado de Fiscalização - Dispensa Irregular\n\nIdentificamos uma dispensa de licitação (nº 056/2019) no valor de R$ 264.000,00 realizada pela Secretaria Municipal de Meio Ambiente (SEMMA) de Caxias do Sul, conforme publicado no Diário Oficial Eletrônico em 21 de junho de 2021. O documento aponta que a modalidade utilizada apresenta desconformidade com os critérios estabelecidos na Lei 14.133/2021, Art. 75, I. Os dados indicam risco elevado (87/100) na estruturação desta contratação.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, I",
+      "secretaria": "SEMMA",
+      "value": 264000,
+      "evidence": [
+        {
+          "excerpt": "imóvel da sede\nadministrativa da SEMMA.\nValor Global: R$ 264.000,00 (duzentos e sessenta e quatro mil reais).\nModalidade de Licitação: Dispensa de Licitação nº 056/2019\nProcesso: 2019/23840\n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 2477 - 21/06/2021 - Página 4\n\nExploração sexual de",
+          "date": "2021-06-21",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2021-06-21/dc9011420f1f5c140461617a6d5a36eba67a383d.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:26:34.739Z",
+      "createdAt": "2026-05-02T16:26:34.739Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-078",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "fracionamento",
+      "riskScore": 92,
+      "confidence": 0.9,
+      "narrative": "Identificamos 3 dispensas para o fornecedor CNPJ 88.113.477/0001-24 nos últimos 12 meses, totalizando R$ 23.340.057,06, acima do limite legal de R$ 65.492,11 (Lei 14.133/2021, Art. 75, §1º). O documento aponta possível fracionamento de contrato.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, §1º",
+      "cnpj": "88.113.477/0001-24",
+      "secretaria": "SEMMA",
+      "value": 23340057.06,
+      "evidence": [
+        {
+          "excerpt": "Valor R$ 23.340.057,06. Dispensa nº 085/2024.\nProcesso nº 2023/22846. Fundamento Legal: Art. 75, inciso IX da Lei nº 14.133/21.\n \nLeia-se:\n \nSEMMA  –  Contratado(a):  CODECA  COMPANHIA  DE  DESENVOLVIMENTO  DE  CAXIAS  DO  SUL.  CNPJ:  88.113.477/0001-24.\nObjeto:  Termo  de  contrato  que  entre  si  celebram",
+          "date": "2024-03-12",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2024-03-12/47f076e855d722fbe0bedb2884724cc04e01f553.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T16:53:22.908Z",
+      "createdAt": "2026-05-02T16:53:22.908Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-079",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "dispensa_irregular",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "# Achado de Fiscalização - Dispensa Irregular\n\nIdentificamos uma dispensa de licitação pela Secretaria Municipal de Educação (SMED) no valor de R$ 378.950,00 para prestação de serviços de transporte escolar, contratando a empresa VIAÇÃO GIRATUR LTDA (CNPJ 02.080.759/0001-57), conforme Dispensa nº 104/2022. O documento aponta que a contratação foi fundamentada no Art. 75, II da Lei 14.133/2021, porém os dados indicam características que demandam análise quanto à conformidade com os requisitos legais para dispensa de licitação.\n\n---\n\n*Publicação automática - Dados de 04/05/2022*",
+      "legalBasis": "Lei 14.133/2021, Art. 75, II",
+      "cnpj": "02.080.759/0001-57",
+      "secretaria": "SMED",
+      "value": 378950,
+      "evidence": [
+        {
+          "excerpt": "Central de Licitações\n \n\nCENTRAL DE LICITAÇÕES - CENLIC\n \n\nAvisos de Dispensa de Licitação\n \nSMED – Contratado: VIAÇÃO GIRATUR LTDA - CNPJ: 02.080.759/0001-57. Objeto: Prestação de serviços de transporte\nescolar  para  alunos  da  Rede  Pública  de  Ensino.  Valor  R$  378.950,00.  Dispensa  nº  104/2022",
+          "date": "2022-05-04",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2022-05-04/837f74cc4880fe4fa3f4696a54c32aaa3c9b112b.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:14:13.563Z",
+      "createdAt": "2026-05-02T16:14:13.563Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-080",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "fracionamento",
+      "riskScore": 100,
+      "confidence": 0.9,
+      "narrative": "Identificamos 5 dispensas para o fornecedor CNPJ 02.080.759/0001-57 nos últimos 12 meses, totalizando R$ 176.000,00, acima do limite legal de R$ 65.492,11 (Lei 14.133/2021, Art. 75, §1º). O documento aponta possível fracionamento de contrato.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, §1º",
+      "cnpj": "02.080.759/0001-57",
+      "secretaria": "SMED",
+      "value": 176000,
+      "evidence": [
+        {
+          "excerpt": "146 M/T. Valor: R$ 176.000,00. Dispensa n.º 017/2021. Processo n.º 2021/5632. Fundamento legal: Art. 24,\ninciso IV, da Lei n.º 8.666/93.\n \nSMED  -  Contratado:  VIAÇÃO  GIRATUR  LTDA  EM  RECUPERAÇÃO  JUDICIAL  -  CNPJ:  02.080.759/0001-57.  Objeto:\nDispensa  de  licitação  celebrado  com  a  empresa ",
+          "date": "2021-03-09",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2021-03-09/80f13c025ab8f21e626db5b3a2313feec8e18f28.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T16:49:23.452Z",
+      "createdAt": "2026-05-02T16:49:23.452Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-081",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "3301702",
+      "type": "dispensa_irregular",
+      "riskScore": 87,
+      "confidence": 0.65,
+      "narrative": "# Achado Identificado - Dispensa de Licitação\n\nOs dados indicam a identificação de uma dispensa de licitação no valor de R$ 300.929,99 fundamentada no art. 24, inciso X da Lei 8.666/93. O documento aponta inconsistência temporal, com assinatura em 06/08/2009 e início de execução em 30/07/2021, gerando risco de irregularidade conforme Lei 14.133/2021, Art. 75, II. Identificamos necessidade de análise complementar sobre a fundamentação legal e continuidade do processo.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, II",
+      "value": 300929.99,
+      "evidence": [
+        {
+          "excerpt": "RIBEIRO\n\nVALOR R$ R$ 300.929,99\nDATA\nASSINATURA\n\n06/08/2009\n\nINÍCIO DA \nEXECUÇÃO\n\n30/07/2021\n\nTÉRMINO DA \nEXECUÇÃO\n\n28/06/2025\n\nATO DE ORIGEM DISPENSA DE LICITAÇÃO conforme art 24 inciso X da Lei 8666/93\n\nSERVIDOR MATRÍCULA CPF FUNÇÃO\nD A N I E L A  M E R C I E R 4 0 .9 8 7 -1 0 7 4 .3 7 1 .9 1 7 -4 1 G",
+          "date": "2022-06-20",
+          "source": "https://data.queridodiario.ok.org.br/3301702/2022-06-20/81ca8c66bb2826108623ff499b604e0b51a844c7.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#3301702#dispensa_irregular#2026-05-03T07:26:32.405Z",
+      "createdAt": "2026-05-03T07:26:32.405Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-082",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "# Achado Identificado - Aditivo Contratual\n\nOs dados indicam um termo aditivo no valor de R$ 2.700.000,00 celebrado pelo Município de Caxias do Sul com o contratado Marcelo Lissott, mediante inexigibilidade de licitação (processo 2022/14741). O documento aponta alteração de cláusula em contrato originário de 2021, apresentando risco score de 87 pontos conforme análise de conformidade com a Lei 14.133/2021, Art. 125, §1º, I. Recomenda-se análise técnica da justificativa da alteração contratual e verificação de adequação aos requisitos legais de aditivos.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 2700000,
+      "evidence": [
+        {
+          "excerpt": "R$ 2.700.000,00 (dois milhões e setecentos mil reais).\nModalidade de Licitação: Inexigibilidade nº 2022/59.\nProcesso: 2022/14741.\n \nSEMMA – Contratante: Município de Caxias do Sul\nContratado: MARCELO LISSOTT.\nObjeto: Termo aditivo n.º 01 ao termo de compromisso n.º 2021/1541 para alteração de cláusula",
+          "date": "2022-05-13",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2022-05-13/b18f98da6fc24f4b6774247c46dd1d2b507b6821.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:30:20.686Z",
+      "createdAt": "2026-05-02T16:30:20.686Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-083",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "**Achado de Fiscalização - Aditivo Contratual**\n\nIdentificamos um termo aditivo (nº 05) ao contrato de transporte escolar celebrado com a MARISOL TRANSPORTE LTDA ME no valor de R$ 25.850,00, referente à revisão anual de valores. O documento aponta que a operação ocorreu em 02/03/2021, e os dados indicam características que demandam análise quanto à conformidade com a Lei 14.133/2021, Art. 125, §1º, I, que estabelece limites para aditivos contratuais.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 25850,
+      "evidence": [
+        {
+          "excerpt": "do Sul\nContratado: MARISOL TRANSPORTE LTDA ME.\nObjeto: Termo Aditivo nº 05 ao Contrato 2019/192, para revisão anual de valores contratuais do transporte escolar. Roteiros 502\nM/T, 503 M/T e 515 M.\nValor estimado: R$ 25.850,00 (Vinte e cinco mil, oitocentos e cinquenta reais ).\nModalidade: Pregão Presencial",
+          "date": "2021-03-02",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2021-03-02/7234064c587cbf0b89b31c194e056228bd506433.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:31:39.503Z",
+      "createdAt": "2026-05-02T16:31:39.503Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-084",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "5002704",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "# Achado Identificado - Aditivo Contratual\n\nOs dados indicam alteração de valor no Contrato nº 388/2020, com aditivo registrado em 29 de junho de 2021, envolvendo R$ 19.458.639,47. O documento aponta modificação do valor contratual conforme consta em processo administrativo, com base na Lei 14.133/2021, Art. 125, §1º, I. Identificamos risco elevado (87/100) associado à operação, recomendando análise da conformidade com limites legais para aditivos contratuais.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 19458639.47,
+      "contractNumber": "388/2020",
+      "evidence": [
+        {
+          "excerpt": " na Justificativa, no cronograma \nfísico-financeiro e na Planilha de Aditivo, anexos nos autos do Processo n. 136281/2019-21.\nOBJETO: Alteração do valor do Contrato n. 388 de 28/9/2020.\nALTERAÇÃO: Fica alterado o valor do contrato n. 388/2020, o qual passará de R$ 19.458.639,47 \n(dezenove milhões, quatrocentos",
+          "date": "2021-06-29",
+          "source": "https://data.queridodiario.ok.org.br/5002704/2021-06-29/31393316b734d11fb2c43312f30399e2a014af63.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#5002704#aditivo_abusivo#2026-05-03T05:19:38.814Z",
+      "createdAt": "2026-05-03T05:19:38.814Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-085",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "# Achado de Fiscalização - Aditivo Contratual\n\nOs dados indicam um termo aditivo de R$ 2.200,00 ao Contrato nº 049/2022 para serviços de impressos diversos, com acréscimo de quantidade registrado em 30/09/2022. O documento aponta que a alteração foi formalizada sem evidência de justificativa técnica prévia, conforme exigido pela Lei 14.133/2021, Art. 125, §1º, I. Identificamos risco elevado (87/100) na operacionalização desta modificação contratual, recomendando análise da documentação de suporte pela administração municipal.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 2200,
+      "evidence": [
+        {
+          "excerpt": "COSTA. OBJETO: Termo Aditivo n.º 01 ao Contrato n.º 049/2022 de prestação de\nserviços de confecção de impressos diversos, para acréscimo de quantidade. VALOR: R$ 2.200,00. VIGÊNCIA: até a entrega\ndefinitiva  e  total  dos  materiais.  Proc.  Licitatório  n.º  15/2021  -  PREGÃO  PRESENCIAL  N.º  23/2022",
+          "date": "2022-09-30",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2022-09-30/4141b0201bbe4886cd54a1a7a13c9ee6cd862c13.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:38:15.890Z",
+      "createdAt": "2026-05-02T16:38:15.890Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-086",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "**Achado de Fiscalização - Aditivo Contratual**\n\nIdentificamos um termo aditivo (nº 08) ao Contrato nº 2018/751, celebrado com SERVIÇOS TEMPORÁRIOS EIRELI, no valor de R$ 8.757.534,60, para prorrogação de serviços de cuidadoria e monitoria do Programa Primeira Infância Melhor. O documento aponta potencial desconformidade com a Lei 14.133/2021, Art. 125, §1º, I, quanto aos critérios de justificativa para aditivos contratuais. Os dados indicam risco elevado (87/100) que recomenda análise técnica aprofundada pela administração municipal.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 8757534.6,
+      "evidence": [
+        {
+          "excerpt": "SERVIÇOS TEMPORÁRIOS EIRELI.\nObjeto: Termo Aditivo nº 08 ao Contrato nº 2018/751 celebrado para a prestação de serviços de cuidadoria e monitoria no\nPrograma Primeira Infância Melhor para prorrogar a vigência do contrato de 20/08/2023 até 19/08/2024.\nValor: R$ 8.757.534,60 (oito milhões e setecentos e",
+          "date": "2023-08-24",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2023-08-24/fd7c09964852a4386404b10015f655c9b01059fd.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:12:20.192Z",
+      "createdAt": "2026-05-02T17:12:20.192Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-087",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "2910800",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "# Achado Identificado - Aditivo Contratual\n\nOs dados indicam a identificação de um aditivo contratual no Município de Feira de Santana que elevou o valor acumulado do contrato nº 793-2019-15C para R$ 13.800.000,00, com prorrogação de até 12 meses. O documento aponta potencial desconformidade com a Lei 14.133/2021, Art. 125, §1º, I, que estabelece limites para aditivos contratuais. A análise técnica identificou risco elevado (score 87) na operação realizada em maio de 2021.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 13800000,
+      "evidence": [
+        {
+          "excerpt": "000,00, será prorrogado por até 12 (doze) meses, a contar do seu termo final, \npassando o valor acumulado do contrato para R$13.800.000,00. DATA:23/04/2021. \n \n\nADITIVO Nº 94-2021-15AC. CONTRATANTE: MUNICÍPIO DE FEIRA DE SANTANA. CONTRATADA: COMPACTA \nENGENHARIA LTDA. Aditar o contrato nº 793-2019-15C",
+          "date": "2021-05-04",
+          "source": "https://data.queridodiario.ok.org.br/2910800/2021-05-04/28e810ad51cbae5a62667e2d382d543dafa6ab13.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#2910800#aditivo_abusivo#2026-05-03T04:17:32.784Z",
+      "createdAt": "2026-05-03T04:17:32.784Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-088",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "# Achado Identificado - Aditivo Contratual\n\nIdentificamos um termo aditivo (nº 09) ao contrato 2019/159 celebrado entre o Município de Caxias do Sul e a empresa DELIZ VIAGENS E TRANSPORTES LTDA., no valor de R$ 234,96, referente a ajustes de quilometragem em roteiros de transporte. O documento aponta possível desconformidade com a Lei 14.133/2021, Art. 125, §1º, I, que estabelece limites para aditivos contratuais. Os dados indicam risco moderado-alto (score 87) na estruturação desta alteração contratual.\n\n---\n\n*Publicação automática do Fiscal Digital - Fiscalização de Gastos Públicos Municipais*",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 234.96,
+      "evidence": [
+        {
+          "excerpt": "SMED – Contratante: Município de Caxias do Sul\nContratado: DELIZ VIAGENS E TRANSPORTES LTDA.\nObjeto: Termo aditivo nº 09, ao contrato 2019/159 para redução de quilometragem roteiro 803 M/T e acréscimo de\nquilometragem roteiro 903 M/T.\nValor Estimado: R$ 234,96 (duzentos e trinta e quatro reais e noventa",
+          "date": "2021-11-08",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2021-11-08/1debb03e34ec578b8b3cd797495b700a1ed93dff.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:55:51.459Z",
+      "createdAt": "2026-05-02T16:55:51.459Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-089",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "**Achado de Fiscalização - Aditivo Contratual**\n\nIdentificamos um termo aditivo (nº 02) ao Termo de Compromisso nº 2020/604, celebrado pela Secretaria Municipal de Urbanismo de Caxias do Sul, no valor de R$ 10.752,00, com risco elevado de irregularidade conforme a Lei 14.133/2021, Art. 125, §1º, I. O documento aponta que a contratação foi realizada mediante renovação de prazo sem justificativa aparente de necessidade técnica ou operacional. Os dados indicam potencial desconformidade com os requisitos legais para aditivos contratuais.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "secretaria": "SMU",
+      "value": 10752,
+      "evidence": [
+        {
+          "excerpt": "estimado: R$ 10.752,00(dez mil, setecentos e cinquenta e dois reais)\nModalidade de licitação: Termo de Compromisso\nProcesso nº 2020/23391.\n \nSMU - Contratante: Município de Caxias do Sul\nContratado: FERNANDA PIVA\nObjeto: Termo Aditivo nº 02 ao Terno de Compromisso nº 2020/604 celebrado para renovação do prazo",
+          "date": "2021-02-05",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2021-02-05/fe341a2e643d0d2ab401c69cd4814e27067a1c50.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:13:19.560Z",
+      "createdAt": "2026-05-02T17:13:19.560Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-090",
+      "fiscalId": "fiscal-diarias",
+      "cityId": "2611606",
+      "type": "diaria_irregular",
+      "riskScore": 63,
+      "confidence": 0.6,
+      "narrative": "Identificamos pagamento de diária com data de referência em 21/01/2023 (sábado), publicada na gazette de 21/01/2023. O documento não aponta justificativa explícita (emergência, plantão ou inadiável). Diária é compensação por deslocamento em serviço (Lei 8.112/90, Art. 58, aplicada por analogia em âmbito municipal).",
+      "legalBasis": "Lei 8.112/90, Art. 58",
+      "evidence": [
+        {
+          "excerpt": "conectando duas áreas muito importantes \n- Zona Norte e Zona Oeste. A gente vai ga-\nrantir que cerca de 60 mil pessoas, diaria-\nmente, sejam beneficiadas diretamente. A \nPrefeitura segue trabalhando, aumentando \nmuito o investimento e olhando sempre \npara as intervenções que possam fazer com \nque o Recife se consolide",
+          "date": "2023-01-21",
+          "source": "https://data.queridodiario.ok.org.br/2611606/2023-01-21/299885d7d807db169ade6de9e5ab5f6c4770178d.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-diarias#2611606#diaria_irregular#2026-05-03T16:52:08.758Z",
+      "createdAt": "2026-05-03T16:52:08.758Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-091",
+      "fiscalId": "fiscal-diarias",
+      "cityId": "2507507",
+      "type": "diaria_irregular",
+      "riskScore": 63,
+      "confidence": 0.6,
+      "narrative": "Identificamos pagamento de diária com data de referência em 10/07/2021 (sábado), publicada na gazette de 10/07/2021. O documento não aponta justificativa explícita (emergência, plantão ou inadiável). Diária é compensação por deslocamento em serviço (Lei 8.112/90, Art. 58, aplicada por analogia em âmbito municipal).",
+      "legalBasis": "Lei 8.112/90, Art. 58",
+      "evidence": [
+        {
+          "excerpt": "Técnicas de tiro: tiro duplo,\nacompanhamento do alvo etc...\n- Panes/incidentes de tiro: identificação e\nsaneamento.\n- Identificação de meios de proteção e\ntomada de posições:\ncobertura e abrigo.\n- Técnicas de tiro defensivo, contendo:\ntécnicas de tiro em baixa\nluminosidade, embarcado, em\ndeslocamento e em ambientes",
+          "date": "2021-07-10",
+          "source": "https://data.queridodiario.ok.org.br/2507507/2021-07-10/32ff03adc2bc22628df4040cf92df67e6f23e242.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-diarias#2507507#diaria_irregular#2026-05-03T18:17:44.682Z",
+      "createdAt": "2026-05-03T18:17:44.682Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-092",
+      "fiscalId": "fiscal-diarias",
+      "cityId": "2611606",
+      "type": "diaria_irregular",
+      "riskScore": 63,
+      "confidence": 0.6,
+      "narrative": "Identificamos pagamento de diária com data de referência em 23/11/2024 (sábado), publicada na gazette de 23/11/2024. O documento não aponta justificativa explícita (emergência, plantão ou inadiável). Diária é compensação por deslocamento em serviço (Lei 8.112/90, Art. 58, aplicada por analogia em âmbito municipal).",
+      "legalBasis": "Lei 8.112/90, Art. 58",
+      "evidence": [
+        {
+          "excerpt": "gerados em todo o Estado.\n\nPara a loja de Boa Viagem, a Pre-\nfeitura do Recife, através da Secreta-\nria de Desenvolvimento Econômico, \napoiou nas contratações, usando o seu \nbanco de dados para disponibilizar as \ninformações sobre pessoas e empre-\n\nsas da cidade capazes de atender às \ndemandas de emprego",
+          "date": "2024-11-23",
+          "source": "https://data.queridodiario.ok.org.br/2611606/2024-11-23/8a0cba8227828d8bd81877dcedbc3f0eb4ff6903.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-diarias#2611606#diaria_irregular#2026-05-03T11:12:27.789Z",
+      "createdAt": "2026-05-03T11:12:27.789Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-093",
+      "fiscalId": "fiscal-diarias",
+      "cityId": "4305108",
+      "type": "diaria_irregular",
+      "riskScore": 85,
+      "confidence": 0.7,
+      "narrative": "Identificamos pagamento de diária no valor de R$ 3.264,48, acima do limite indiciário de R$ 800,00, com data de referência 15/05/2023. O documento aponta gasto que requer verificação do Decreto Municipal de diárias (limites variam por cidade). Lei 8.112/90, Art. 58 aplicada por analogia.",
+      "legalBasis": "Lei 8.112/90, Art. 58",
+      "value": 3264.48,
+      "evidence": [
+        {
+          "excerpt": "0500 DESPESAS DE EXERCÍCIOS ANTERIORES R$ 3.264,48\n0000000 Não se aplica  \n   \n04.122.0017.2057 Manutenção da Diretoria Financeira, de Compras e Licitações  \n   \n3.3.90.14.00.00.00.00.0500 DIÁRIAS - PESSOAL CIVIL R$ 1.000,00\n0000000 Não se aplica  \n   \n3.3.90.39.00.00.00.00.0500 OUTROS SERVIÇOS DE TERCEIROS",
+          "date": "2023-05-15",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2023-05-15/6cbb2f0117587213f36d7556e825656b71a95cab.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-diarias#4305108#diaria_irregular#2026-05-02T18:07:19.806Z",
+      "createdAt": "2026-05-02T18:07:19.806Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-094",
+      "fiscalId": "fiscal-convenios",
+      "cityId": "3106200",
+      "type": "convenio_sem_chamamento",
+      "riskScore": 89,
+      "confidence": 0.65,
+      "narrative": "**Achado de Fiscalização - Convênio sem Chamamento Público**\n\nIdentificamos um repasse de R$ 7.944.525,00 do Fundo Municipal de Saúde – FMS realizado sem processo de chamamento público, conforme indicado na documentação de julho de 2024. O documento aponta que os recursos foram destinados a despesas com auxílio transporte e repasse ao Hospital Metropolitano Odilon Behrens, situação que contraria o disposto na Lei 13.019/2014, Art. 24, que estabelece procedimentos obrigatórios para celebração de convênios. Os dados indicam risco elevado na operação, recomendando-se análise complementar da conformidade legal do processo.",
+      "legalBasis": "Lei 13.019/2014, Art. 24",
+      "secretaria": "Fundo Municipal de Saúde – FMS",
+      "value": 7944525,
+      "evidence": [
+        {
+          "excerpt": "objetivos:\n\nFundo Municipal de Saúde – FMS – R$7.944.525,00.\nDespesa com pagamento de auxílio transporte no terceiro trimestre de 2024. Gastos com \nos contratos administrativos (CADM) e repasse em favor do Hospital Metropolitano Odilon \nBehrens.\n\nII.1.2 – Conforme disposto no art. 5º da Lei nº 11.644, de 29",
+          "date": "2024-07-19",
+          "source": "https://data.queridodiario.ok.org.br/3106200/2024-07-19/d451d325d4fd32eed5ecbc99672a3a63ffaaf7a8.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-convenios#3106200#convenio_sem_chamamento#2026-05-03T16:33:42.040Z",
+      "createdAt": "2026-05-03T16:33:42.040Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-095",
+      "fiscalId": "fiscal-convenios",
+      "cityId": "3509502",
+      "type": "convenio_sem_chamamento",
+      "riskScore": 89,
+      "confidence": 0.65,
+      "narrative": "# Achado Identificado - Convênio sem Chamamento Público\n\nOs dados indicam a celebração de convênio no valor de R$ 5.000.000,00 pela Secretária Municipal de Infraestrutura, referente a obras e instalações, sem registro de chamamento público prévio conforme exigido pela Lei 13.019/2014, Art. 24. O documento aponta contrato de repasse nº 909091/2020 com risco identificado de 89 pontos na análise automatizada. Recomenda-se verificação da documentação de justificativa técnica e legal para dispensa do procedimento de seleção.",
+      "legalBasis": "Lei 13.019/2014, Art. 24",
+      "secretaria": "SECRETÁRIA MUNICIPAL DE INFRA ESTRUTURA",
+      "value": 5000000,
+      "evidence": [
+        {
+          "excerpt": "DEPARTAMENTO DE CULTURA\n13.392.1006.1070  AQUISIÇÃO, CONSTRUÇÃO E REFORMA DE BENS MÓVEIS E IMÓVEIS\n449051  OBRAS E INSTALAÇÕES\n05.100.563  GERAL - CONTRATO DE REPASSE Nº909091/2020/MTUR/CAIXA ... R$ 5.000.000,00\n201000  SECRETÁRIA MUNICIPAL DE INFRA ESTRUTURA\n20106 DEPARTAMENTO DE PROJETOS E OBRAS\n15",
+          "date": "2023-03-24",
+          "source": "https://data.queridodiario.ok.org.br/3509502/2023-03-24/24d84aac6a0d80019295991d3a8b7f1bbf3d6b1e.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T05:23:34.154Z",
+      "createdAt": "2026-05-03T05:23:34.154Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-096",
+      "fiscalId": "fiscal-convenios",
+      "cityId": "3509502",
+      "type": "convenio_sem_chamamento",
+      "riskScore": 89,
+      "confidence": 0.65,
+      "narrative": "**Achado - Convênio sem Chamamento Público**\n\nIdentificamos um convênio no valor de R$ 1.145.800,00 celebrado sem processo de chamamento público, conforme documento de 26 de março de 2025. O documento aponta a contratação de empresa para acolhimento de usuários, citando a impossibilidade de renovação de Termo de Colaboração anterior. A operação apresenta desconformidade com a Lei 13.019/2014, Art. 24, que estabelece requisitos para celebração de parcerias com organizações da sociedade civil.",
+      "legalBasis": "Lei 13.019/2014, Art. 24",
+      "value": 1145800,
+      "evidence": [
+        {
+          "excerpt": "SUPLEMEN-\nTAR, NO VALOR DE R$ 1.145.800,00 (Um milhão, cento e quarenta e \n\ncinco mil e oitocentos reais).\nConsiderando a necessidade de realizar a contratação de empresa destinada ao acolhi-\nmento de usuários de uma OSC que não poderá ter o Termo de Colaboração renova-\ndo, conforme informações constantes",
+          "date": "2025-03-26",
+          "source": "https://data.queridodiario.ok.org.br/3509502/2025-03-26/a8fab84e1e016ffacea2e152035de7921a23efd3.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T12:04:48.273Z",
+      "createdAt": "2026-05-03T12:04:48.273Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-097",
+      "fiscalId": "fiscal-convenios",
+      "cityId": "3509502",
+      "type": "convenio_sem_chamamento",
+      "riskScore": 89,
+      "confidence": 0.65,
+      "narrative": "**Achado de Fiscalização - Convênio sem Chamamento Público**\n\nIdentificamos um convênio no valor de R$ 955.000,00 celebrado pela Secretaria de Administração Regionais e Sub Prefeituras sem a realização de chamamento público, conforme aponta o documento de repasse nº 920231/2021/MCIDADANIA/CAIXA. A Lei 13.019/2014, Art. 24, estabelece requisitos para celebração de convênios que devem ser observados. Os dados indicam risco elevado (89/100) na conformidade desta operação com a legislação de parcerias público-privadas.",
+      "legalBasis": "Lei 13.019/2014, Art. 24",
+      "secretaria": "ADMINISTRAÇÃO REGIONAIS E SUB PREFEITURAS",
+      "value": 955000,
+      "evidence": [
+        {
+          "excerpt": "ADMINISTRAÇÃO REGIONAIS E SUB PREFEITU-\nRAS \n15.452.3017.1162 AQUISIÇÃO E REFORMA DE BENS MÓVEIS E IMÓVEIS\n449051 OBRAS E INSTALAÇÕES\n05.800.684 TUDEPI - CONTRATO REPASSE \nNº920231/2021/MCIDADANIA/CAIXA ........................ ....................................................... .........R$ 955.000,00\nII",
+          "date": "2025-02-07",
+          "source": "https://data.queridodiario.ok.org.br/3509502/2025-02-07/4df7a3649caba2973d47e6bbbd4ea2deaf0c6767.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T16:54:52.299Z",
+      "createdAt": "2026-05-03T16:54:52.299Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-098",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "2704302",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 60,
+      "confidence": 0.65,
+      "narrative": "**Achado Identificado - Locação sem Justificativa**\n\nIdentificamos contratação de locação de imóvel sem documentação de justificativa técnica ou econômica conforme exigido pela Lei 14.133/2021, Art. 74, III. O documento aponta apresentação de comprovantes cadastrais (RG, CPF, residência) e certidões negativas, porém os dados indicam ausência de análise comparativa de mercado ou parecer justificando a necessidade e adequação do valor contratado. Risco identificado: moderado (score 60).",
+      "legalBasis": "Lei 14.133/2021, Art. 74, III",
+      "evidence": [
+        {
+          "excerpt": "imóvel \n\ndevidamente transcrito pelo Registro de Imóveis, assim como os demais \n\nelementos necessários a aprovação de sua proposta e formalização de \n\ncontrato de locação quais sejam: RG, CPF, comprovante de residência \n\natualizado, como também CND’S e declaração que não existam débitos \n\n(IPTU, água, luz",
+          "date": "2021-07-15",
+          "source": "https://data.queridodiario.ok.org.br/2704302/2021-07-15/ad46246307f0a2ac5bd82ec7129f55341da84395.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-locacao#2704302#locacao_sem_justificativa#2026-05-03T14:18:32.115Z",
+      "createdAt": "2026-05-03T14:18:32.115Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-099",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "3549904",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 60,
+      "confidence": 0.65,
+      "narrative": "# Achado Identificado - Locação sem Justificativa\n\nIdentificamos a celebração do Contrato nº 558/2023, datado de 17 de outubro de 2023, entre o Município de São José dos Campos e a empresa Nova Opção Locadora de Veículos Ltda, sem documentação que justifique a necessidade da contratação conforme exigido pela Lei 14.133/2021, Art. 74, III. Os dados indicam ausência de estudos técnicos preliminares ou justificativa de interesse público no processo de formalização. Recomenda-se análise complementar da documentação de suporte para verificação de conformidade com os requisitos legais de contratação.",
+      "legalBasis": "Lei 14.133/2021, Art. 74, III",
+      "evidence": [
+        {
+          "excerpt": "documentos \njuntados no presente requerimento são verdadeiros.\n\n________________________\nAssinatura do proprietário do imóvel da CGEE\n\nContratos\nDivisão de Formalização e Atos\n\nCONTRATO Nº 558/23\nDATA: 17/10/2023\nPARTES: MUNICÍPIO DE SÃO JOSÉ DOS CAMPOS E NOVA OPCAO \nLOCADORA DE VEICULOS LTDA\nOBJETO: LOCACAO DE",
+          "date": "2023-11-13",
+          "source": "https://data.queridodiario.ok.org.br/3549904/2023-11-13/bcda663b45130a76a743cccf9bdafd913f864564.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-locacao#3549904#locacao_sem_justificativa#2026-05-03T04:10:34.699Z",
+      "createdAt": "2026-05-03T04:10:34.699Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-100",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "3509502",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 60,
+      "confidence": 0.65,
+      "narrative": "**Achado - Locação sem Justificativa**\n\nIdentificamos a renovação de contrato de locação pela Secretaria de Justiça de Campinas (docs. 3241406 e 3243676) sem documentação que justifique a necessidade da contratação, conforme exigido pela Lei 14.133/2021, Art. 74, III. O documento aponta ratificação de locação com proprietários privados, porém os autos não apresentam estudos de viabilidade ou justificativas técnicas para a manutenção do serviço. Recomenda-se análise da documentação complementar para verificação de conformidade com requisitos legais de contratação pública.",
+      "legalBasis": "Lei 14.133/2021, Art. 74, III",
+      "secretaria": "Secretaria de Justiça",
+      "evidence": [
+        {
+          "excerpt": "constantes no presente protocolado, e à vista das manifesta-\nções da Secretaria de Justiça (docs. 3241406 e 3243676),  RATIFICO  a renovação \ndo contrato de locação celebrado entre o Município de Campinas e o Sr. Edson Luiz \nDel’Grande Silva e a Sra. Maria Regina Moura Silva, proprietários do imóvel onde se",
+          "date": "2021-01-06",
+          "source": "https://data.queridodiario.ok.org.br/3509502/2021-01-06/b0dcecd888a49eec85a0dfe6d27165641157087f.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-locacao#3509502#locacao_sem_justificativa#2026-05-03T16:36:05.867Z",
+      "createdAt": "2026-05-03T16:36:05.867Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-101",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "2704302",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 60,
+      "confidence": 0.65,
+      "narrative": "# Achado de Fiscalização - Locação sem Justificativa\n\nIdentificamos contrato de locação de imóvel (nº 036/2020, celebrado com T.L.S Empreendimentos Imobiliários LTDA) para atividades do Bolsa Família e CAD Único sem documentação que justifique a necessidade da contratação, conforme exigido pela Lei 14.133/2021, Art. 74, III. O documento aponta risco moderado (60 pontos) na conformidade do processo licitatório. Recomenda-se análise complementar da documentação de justificativa técnica e econômica do referido contrato.",
+      "legalBasis": "Lei 14.133/2021, Art. 74, III",
+      "evidence": [
+        {
+          "excerpt": "lhes sejam correlatas. \n\n  \n\nArt. 3º Esta Portaria entra em vigor na data de sua publicação, \n\nrevogadas as disposições em contrário. \n\n  \n\nANEXO \n  \nCONTRATO FORNECEDOR OBJETO \n\n036/2020 \nT.L.S EMPREENDIMENTOS \n\nIMOBILIÁRIOS LTDA \n\nLOCAÇÃO DE IMÓVEL PARA \n\nATIVIDADES DO BOLSA FAMÍLIA E \n\nCAD ÚNICO \n\n525/2020",
+          "date": "2022-08-04",
+          "source": "https://data.queridodiario.ok.org.br/2704302/2022-08-04/e934c67169765f38d77c5f995de38293b99fe9df.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-locacao#2704302#locacao_sem_justificativa#2026-05-03T15:20:29.909Z",
+      "createdAt": "2026-05-03T15:20:29.909Z",
       "label": null,
       "labeledBy": null,
       "labeledAt": null,

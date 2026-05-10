@@ -75,15 +75,21 @@ A consequência é que Fiscais que não disparam em prod **não têm baseline de
 
 ---
 
-## Por que NÃO usamos amostras sintéticas
+## Política sobre amostras sintéticas
 
-Considerado e rejeitado:
+**Política em duas fases (atualizada 2026-05-10):**
 
-1. **Viés do criador:** quem cria o caso sintético tende a fazê-lo "perfeito" para o Fiscal detectar — superestima precisão.
-2. **Distribuição não-realista:** amostras sintéticas raramente refletem ruído de OCR, formatação, abreviações regionais.
-3. **Risco regulatório:** se publicarmos baseline baseado em sintéticos como se fossem reais, é falsa transparência.
+**Fase 1 (atual): apenas amostras reais.** Findings que dispararam em prod constroem o golden set primário. Por quê:
+- Viés do criador: quem cria caso sintético faz "perfeito" para o Fiscal detectar
+- Distribuição não-realista: sintéticos raramente refletem ruído de OCR, formatação, abreviações regionais
+- Risco regulatório: publicar baseline misturado seria falsa transparência
 
-A única forma honesta de avaliar é com dados que o sistema realmente encontrou em produção.
+**Fase 2 (após eval): sintéticos como ferramenta de investigação de gap.** Se um Fiscal não disparou em **nenhum dos 101 PDFs reais** do golden set, criamos amostras sintéticas controladas para validar:
+- "Se construirmos um caso textbook do que o Fiscal deveria detectar, ele detecta?"
+- Se sim → gap é de **dados de prod** (Fiscal funciona, mas casos reais são raros)
+- Se não → gap é **bug do Fiscal** (regex/threshold falhando mesmo no caso ideal)
+
+Sintéticos da Fase 2 ficam em `golden-set/synthetic/` (separado de `samples.json`) e são rotulados explicitamente como `source: "synthetic"` para nunca contaminarem métricas de precisão.
 
 ---
 
