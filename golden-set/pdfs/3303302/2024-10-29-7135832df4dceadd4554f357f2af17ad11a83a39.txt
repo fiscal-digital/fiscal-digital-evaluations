@@ -1,0 +1,590 @@
+
+
+ 
+ 
+Página 1 
+ 
+29/10/2024 
+PREFEITURA MUNICIPAL DE NITERÓI 
+Atos do Prefeito 
+DECRETO Nº 15.592/2024 
+CRIA A COORDENADORIA DE GESTÃO DE GEOTECNOLOGIAS - CGGEO, NO  
+ÂMBITO DO SECRETARIA DE CIÊNCIA, TECNOLOGIA E INOVAÇÃO    
+O PREFEITO DO MUNICÍPIO DE NITERÓI, no uso de suas atribuições legais,   
+Considerando a Lei federal nº 12.527 (Lei  de  acesso  à  informação),  de  18  de  novembro  de  2011  que  regula  o  acesso  à  informação  previsto  no 
+inciso XXXIII do art. 5º, no inciso II do § 3º do art. 37 e no § 2º do art. 216 da Constituição Federal;   
+Considerando a Lei municipal nº 3.575 de 29 de janeiro de 2021 que cria o Secretaria de Ciência, Tecnologia e Inovação de Niterói;    
+Considerando o Decreto nº 14.640/2022 de 23 de dezembro de 2022 que instituiu a estratégia de governo digital para o período de 2023 a 2033, 
+no âmbito da administração pública municipal direita e indireta;   
+Considerando o Decreto nº 12.947/2018 de  18  de  maio  de  2018  que  instituiu  o  Sistema  de  Gestão  da  Geoinformação  (SIGEO)  no  âmbito  do 
+Município de Niterói;   
+Considerando o decreto Decreto Nº 13.867/2021 que transferiu, sem aumento de despesas, o SIGEO para o Escritório de Gestão de Projetos do 
+Gabinete do Prefeito;   
+Considerando o Plano de Cidade Inteligente, Humana e Sustentável do Município de Niterói;   
+Considerando o papel do SIGEO para o cumprimento do Plano Estratégico 2013-2033 “Niterói Que Queremos”;   
+DECRETA: 
+Art.  1º Fica  criada,  sem  aumento  de  despesas,  no  âmbito  do  Secretaria  de  Ciência,  Tecnologia  e  Inovação,  a  Coordenadoria  de  Gestão  de 
+Geotecnologias,  à  qual  caberá  o  gerenciamento  do  banco de  dados  geográficos,  e  fornecimento  de  soluções  de  inteligência  geográfica  para 
+diversos setores da prefeitura de Niterói.   
+Art. 2º Compete à Coordenadoria de Gestão de Geotecnologias, no âmbito de suas atribuições, para o cumprimento de suas finalidades:   
+I. Planejar, acompanhar e gerenciar contratos, soluções e projetos de geoinformação;  
+II. Criar soluções inteligentes em geoprocessamento, como elaboração de dashboards, aplicações web, formulários de campo, entre outras;  
+III. Propor melhorias nos processos e nas bases de dados geográficas das secretarias;  
+IV. Capacitar e apoiar os setores da prefeitura na utilização das aplicações;  
+V. Realizar o gerenciamento técnico e a manutenção do banco de dados geoespacial, cadastro de usuários, integrações e processamento digital 
+de imagens;  
+VI. Planejar  e  organizar  eventos  e  workshops  com  o  propósito  de  disseminar  a  cultura  de  dados  e  tecnologia,  bem  como  divulgar  casos  de 
+sucesso na utilização das ferramentas disponibilizadas;  
+VII. Armazenar e disponibilizar a base cartográfica municipal oriunda de aerolevantamento;  
+VIII. Apoiar a transparência das informações ao público em geral;  
+IX. Administrar as licenças de uso de softwares e plataformas de geoprocessamento necessárias para o funcionamento do SIGEO;  
+X. Apoiar na territorialização de políticas públicas, visando a eficiência por meio da análise espacial na implementação dessas políticas.   
+Art.  3º Compete  à Coordenadoria  de  Gestão  de  Geotecnologias  realizar  a  gestão  do  Sistema  de  Gestão  da  Geoinformação  (SIGEO),  instituído 
+pelo decreto municipal nº 12.947/2018 de 18 de maio de 2018;   
+Art. 4º Fica alterado o Decreto nº 12.947 de 2018, modificado pelo Decreto nº 13.940 de 2021, da seguinte forma   
+I - Onde se lê "Escritório de Gestão de Projetos", leia-se "Coordenadoria de Gestão de Geotecnologias";   
+II – Onde se lê "EGP", leia-se "CGGEO".   
+Art.  5º Ficam  transferidos  do  Gabinete  do  Prefeito  para  a  Coordenadoria  de  Gestão  de  Geotecnologias  no  âmbito  da  Secretaria  de  Ciência, 
+Tecnologia  e  Inovação  os  cargos  de  provimento  em  comissão  e  as  funções  gratificadas,  bem  como  seus  atuais  ocupantes,  na  forma do  Anexo 
+Único deste Decreto.   
+Art. 6º Revoga-se o Art. 4º do Decreto Municipal nº 13.867 de 2021.   
+Art. 7º Os órgãos da administração direta e indireta que tenham dados dispostos no banco de dados do SIGEO deverão indicar um representante 
+cuja finalidade esteja relacionada ao geoprocessamento e que poderá estar submetido à Coordenadoria de Gestão de Geotecnologias (CGGEO) 
+para cumprir as seguintes atribuições:   
+I - Participar de comitês técnicos de geoprocessamento;   
+II - Realizar projetos em parceria e colaboração técnica com a CGGEO;   
+III - Participar de treinamentos organizados pela CGGEO;   
+IV - Atuar como ponto focal no compartilhamento do conhecimento técnico adquirido;   
+V - Participar de workshops e eventos para a expansão da cultura do geoprocessamento.   
+Art. 8º Este Decreto entra em vigor na data de sua publicação.  
+PREFEITURA MUNICIPAL DE NITERÓI, EM 28 DE OUTUBRO DE 2024. 
+AXEL GRAEL- PREFEITO 
+ANEXO ÚNICO AO DECRETO Nº 15.592/2024 
+NOME  CARGO  SÍMBOLO  
+RICARDO MARINHO SOARES BRAZ  SUBSECRETÁRIO  SS  
+DANIEL RIOS CERQUEIRA BARBOSA  ASSESSOR A  CC-1  
+ 
+Portarias 
+Port. Nº 1572/2024- Aposentar, a contar de 12 de setembro de  2024, de  acordo com o artigo 89, inciso IX, da Lei  nº 531, de 18 de janeiro de 
+1985, combinado com os incisos I, II, III e o parágrafo único do artigo 3º, da Emenda Constitucional n.º 47/2005, publicada em 06 de julho de 2005, 
+JAMIL  JACOB  SILVEIRA,  PROCURADOR  DE  PRIMEIRA  CLASSE,  classe  P-1, do  Quadro  Permanente,  matrícula  nº 1226.181-6, com  os 
+proventos fixados pela Secretaria Municipal de Administração Referente ao processo nº 9900062373/2024. 
+ 
+Port. Nº 1573/2024- Aposentar, de acordo com os incisos I, II, III e o parágrafo único do artigo 3º, da Emenda Constitucional n.º 47/2005, publicada 
+em 06 de julho de 2005, LUIZ FELIPE PINTO BARRETO,  TRABALHADOR, nível 01, do Quadro Permanente, matrícula nº 1228.346-3, com os 
+proventos fixados pela Secretaria Municipal de Administração Referente ao processo nº 9900068156/2024. 
+ 
+Port. Nº 1574/2024- Nomeia BRAZ LUIS SOUTO COLOMBO para exercer o cargo de Subsecretário, SS, da Secretaria Executiva.  
+ 
+Port. Nº 1575/2024- Faz cessar os efeitos da Portaria nº 1538/2024, publicada em 15 de outubro de 2024.  
+ 
+Port. Nº 1576/2024- Nomeia THAMYRIS MACHARETH ELPÍDIO para exercer o cargo de Secretário, SM, da Secretaria Municipal da Mulher.  
+ 
+SECRETARIA MUNICIPAL DE GOVERNO 
+Administração Regional do Rio do Ouro 
+PORTARIA SEMUG/ARRO Nº 001/2024- O Administrador Regional do Rio do Ouro, Paulo Henrique da Silva Oliveira, responsável pela gestão 
+dos contratos e aditivos, delegada através do Decreto nº 15.112/2023, em conformidade com o Processo Administrativo nº 9900036836/2024, 
+no uso de suas atribuições legais e tendo em vista o que estabelece a legislação em vigor, RESOLVE: 
+Art.  1º - Designar  os  servidores  abaixo  descritos,  para  atuarem  como  equipe  de  planejamento  e  fiscais  de  contrato,  na  locação  de  imóvel não 
+residencial. 
+I. Servidores que atuarão na Equipe de Planejamento: 
+Gilsinei Wilson dos Reis, Matrícula 1247102-0 
+Ivan Carlos de Carvalho, matrícula 1245434-0  
+Sueli Rodrigues Alves da Glória, matrícula 66702 
+II. Servidores que atuarão como Fiscais do Contrato: 
+Reinaldo Tavares Ribeiro, matrícula 1243497-0 
+Gabriela Cruz da Silva, matrícula 1247423-0 
+Art. 2º - Esta portaria entra em vigor na data da sua publicação, revogadas as disposições em contrário. 
+ 
+ 
+ 
+ 
+
+ 
+ 
+Página 2 
+ 
+29/10/2024 
+SECRETARIA MUNICIPAL DE ADMINISTRAÇÃO 
+Atos do Secretário 
+PORTARIA Nº 653/2024- Considerar designados os servidores abaixo relacionados para constituírem a Equipe de Planejamento da Contratação 
+(EPC),  visando  a  contratação  de  empresa  especializada  e  credenciada  no  corpo  de  bombeiros  e  registrada  no  INMETRO,  na  prestação  de 
+serviços  não  contínuos  de  inspeção, manutenção  preventiva  e  corretiva  dos  Extintores  de  Incêndio,  recarga,  testes  hidrostáticos,  pintura, 
+substituição de peças e acessórios. 
+Nome Matrícula 
+Alex Sandro Huguenin da Silva 1245.292-0 
+Manoel Alves Junior 1232.661-2 
+Claudia Soares de Oliveira 1224.672-6 
+A  Equipe  de  Planejamento  da  Contratação  será  automaticamente  destituída  quando  da  assinatura  do  contrato  ou  da  emissão  de  instrumento 
+equivalente, conforme o art. 10 do Decreto Municipal nº 14.730/2023. Processo nº 9900105267/2024. 
+EXTRATO Nº 89/2024-SMA 
+INSTRUMENTO:  Termo  de  Cooperação  nº  06/2024. PARTES:  Município  de  Niterói,  tendo  como  órgão  gestor  a  Secretaria  Municipal  de 
+Administração,  representada  neste  ato  pelo  Secretário  Municipal  de Administração LUIZ  ANTONIO  FRANCISCO  VIEIRA e  o BANCO 
+BRADESCO S.A, representada neste ato por JORGE LUIS CARDOUZO e JOÃO SEGUNDO DA COSTA. OBJETO: Constitui objeto do presente 
+TERMO DE COOPERAÇÃO a concessão pelo BANCO BRADESCO S.A, sob condições especiais, de estabelecer convênio para ofertar crédito 
+consignado  aos  Servidores  da  Administração  Pública  Municipal  Direta  do  Município  de  Niterói,  mediante  consignação  em  folha  de pagamento. 
+PRAZO: O  presente  TERMO  DE  COOPERAÇÃO  entra  em vigor  na  data  de  publicação  do  Extrato  no  Diário  Oficial  do  Município  de  Niterói, 
+vigorando por 12 (doze) meses, podendo ser prorrogado, pelo prazo máximo de 60 meses, na forma da lei, caso haja manifestação neste sentido 
+pelos envolvidos, mediante a celebração de TERMO ADITIVO. FUNDAMENTO: Decreto Municipal nº 10.605 de 22 de outubro de 2009, alterado 
+pelo Decreto nº 10.620 de 18 de novembro de 2009, alterado pelo Decreto nº 12.187 de 20 de janeiro de 2016, alterado pelo Decreto nº 13.115 de 
+27  de  novembro de  2018,  alterado  pelo  Decreto  nº  14.504/22  de  30  de  agosto  de  2022 e  pelas  demais  normas  legais  pertinentes  e  despachos 
+contidos no processo nº 990/92656/2024. DATA DA ASSINATURA: 15 de outubro de 2024. 
+Despacho do Secretário 
+9900091656/2024- Auxílio Gestação- Deferido 
+APOSTILA DE FIXAÇÃO DE PROVENTOS 
+Ficam fixados, a contar de 12 de setembro de 2024, em R$ 53.802,59 (Cinquenta e três mil oitocentos e dois reais e cinquenta e nove centavos) 
+os  proventos  mensais  de JAMIL  JACOB  SILVEIRA, aposentado  no  cargo  de PROCURADOR  DE  PRIMEIRA  CLASSE, classe  P-1, do  Quadro 
+Permanente, matrícula nº 1226.181-6, conforme as parcelas abaixo discriminadas: 
+Vencimento do cargo – Lei nº 3.932/2024, publicada em 12/07/2024– incisos I, II, III e o parágrafo único do artigo 3º da Emenda Constitucional nº 
+47, publicada em 06/07/2005.........................................................................................................R$ 22.894,72 
+Adicional  de  Tempo  de  Serviço– 35%- artigo  98  inciso  I  e  145  da  Lei  nº  531/85,  c/c  o  artigo  1º  da  Deliberacão  nº  2833/72,  calculada  sobre  o 
+vencimento do cargo integral....R$ 8.013,15 
+Verba  de  Representação– 100%  do  vencimento  do  cargo– artigo  98  inciso  II  da  lei  nº  531/85,  c/c  o  parágrafo  1º  do  artigo  7º  da  lei  nº 
+1.259/94....................................R$ 22.894,72 
+TOTAL:...................................R$ 53.802,59 
+ 
+APOSTILA DE FIXAÇÃO DE PROVENTOS 
+Ficam fixados, em R$ 2.259,49 (Dois mil duzentos e cinquenta e nove reais e quarenta e nove centavos), os proventos mensais de LUIZ FELIPE 
+PINTO BARRETO, aposentado  no cargo  de TRABALHADOR, nível 01, do Quadro Permanente, matrícula  nº 1228.346-3, conforme as parcelas 
+abaixo discriminadas:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+Vencimento do cargo- 3.932/2024, publicada em 12/07/2024- incisos I, II, III e o § único do artigo 3º da Emenda Constitucional nº 47, publicada em 
+06/07/2005......................R$ 905,32 
+Adicional  de  Tempo  de  Serviço- 35%- artigo  98  inciso  I  e  145  da  Lei  nº  531/85,  c/c  o  artigo  1º  da  Deliberacão  nº  2833/72,  calculada  sobre  o 
+vencimento do cargo integral.......R$ 316,86 
+Parcela de Direito Pessoal– 4/8 de 2/3 do símbolo CC-2- artigo 98 inciso II da Lei nº 531/85 c/c artigo- artigo 1º da Lei nº  3.251/2016, calculado 
+sobre o símbolo CC-2..............R$ 359,95 
+Parcela de Direito Pessoal– 4/8 de 90% de Tempo Integral, artigo 98, inciso II da Lei nº531/85, c/c artigo 1º a Lei nº 3.251/2016 e artigo 5º inciso 
+III, Decreto nº 3969/83, calculado sobre o cargo efetivo ..............................................................................R$ 407,39 
+Parcela de Direito Pessoal– 4/8 de 50% de Trabalho Técnico e Científico símbolo CC-2 artigo 98, inciso II Da Lei nº 531/85, c/c artigo 1º da Lei nº 
+3.251/2016 e artigo 9º, Deliberação nº 2.937/75, calculado sobre o símbolo CC-2......................................R$ 269,97 
+TOTAL............................R$ 2.259,49 
+ 
+SECRETARIA MUNICIPAL DE OBRAS E INFRAESTRUTURA 
+UNIDADE DE GESTÃO DO PROGRAMA - UGP 
+EXTRATO Nº 013/2024 
+CONSIDERANDO QUE A PUBLICAÇÃO É REQUISITO DE VALIDADE DO ATO ADMINISTRATIVO, TORNA PÚBLICO O QUE SEGUE: 
+PROCESSO  ADMNISTRATIVO  Nº.: 9900023958/2024; INSTRUMENTO: Terceiro Termo  Aditivo  ao  Contrato  SMO/UGP/BID  nº  001/2022; 
+PARTES: MUNICÍPIO  DE  NITERÓI,  através  da  Secretaria  de  Obras  e  Infraestrutura – SMO,  e  por  outro  lado  CLÁUDIA  TAVARES  CAMARGO, 
+CPF  Nº  818.056.910-15;  OBJETO: O  presente  termo  aditivo  tem  por  objetivo  a  prorrogação  do  prazo  de  conclusão  e  entrega  do  objeto  do 
+Contrato SMO/UGP/BID nº 001/2022 por 04 (quatro) meses. Sendo início da vigência do instrumento para o dia 01 de fevereiro de 2025 e o novo 
+término  para  o  dia  31  de  maio  de  2025; VERBA: Natureza  da  Despesa  33.90.04 – Fonte  de  Recurso:  704.00 – Programa  de  Trabalho 
+53.01.15.122.0145.0960; VALOR TOTAL: R$47.300,00 (quarenta e sete mil e trezentos reais); FUNDAMENTO: Art. 37, inciso IX da Constituição 
+da  República  Federativa  do  Brasil  de  1988,  Art.  89,  inciso III, alínea “a” da Lei Orgânica do Município de Niterói, Lei Municipal nº 3.378/2018 e 
+legislação aplicável à espécie; DATA DA ASSINATURA: 24 de outubro de 2024. 
+ 
+SECRETARIA MUNICIPAL DE ORDEM PÚBLICA 
+AVISO DE DISPENSA DE LICITAÇÃO N° 06/2024– SEOP 
+A Secretaria Municipal de Ordem Pública, em conformidade com o art. 75 da Lei Federal 14.133/21, II e art.  92, caput, do Decreto 14.730/2023, 
+torna público aos interessados que  o órgão competente pretende contratar empresa especializada  para AQUISIÇÃO DE ÁGUA MINERAL SEM 
+GÁS,  EM GARRAFAS DE 500  OU 510  ML., para garantir a continuidade e a qualidade dos serviços prestados da Secretaria da Ordem Pública 
+(SEOP) e da Guarda Civil Municipal, nos moldes estabelecidos no Termo de Referência. 
+Para solicitar o Termo de Referência e/ou quaisquer outras dúvidas poderão entrar em contato e-mail diradm@seop.niteroi.rj.gov.br ou telefone: 21 
+97244-1470. 
+Poderão  os  interessados  apresentar  proposta  de  preços  até  o  dia  07 de  novembro  de  2024,  ocasião  em  que  a  Administração  selecionará  a 
+proposta mais vantajosa.   
+A proposta deverá ser encaminhada para o e-mail cotacoesseop@gmail.com. 
+RESOLUÇÃO SEOP n.º 004/2024 
+Institui o Clube de Livro - Projeto Café Literário, no âmbito da Secretaria Municipal de Ordem Pública, visando reconectar as pessoas com a prática 
+enriquecedora da leitura, além do ambiente das bibliotecas. 
+O SECRETÁRIO MUNICIPAL DE ORDEM PÚBLICA, no uso de suas atribuições legais, bem como, a necessidade promover o hábito da leitura e 
+proporcionar o desenvolvimento do pensamento crítico das instituições afetas à SEOP, RESOLVE: 
+I – DAS DISPOSIÇÕES PRELIMINARES 
+Art. 1° O Clube de Livro é uma iniciativa para enriquecer o vocabulário, aprimorar a escrita e estimular a criatividade dos participantes.  
+Parágrafo  Único.  O  Projeto  Café  Literário  é  essencial  em  diversos  contextos  sociais  e  em  todas  as  fases  da  vida,  constituindo um  dos  pilares 
+fundamentais para o desenvolvimento do intelecto humano. 
+Art. 2° O espaço será dinâmico e acolhedor para debates literários, além da troca de experiências por meio de encontros regulares que possam 
+estimular o desenvolvimento pessoal e profissional dos participantes.    
+Art. 3° O Clube de Livro visa arrecadar livros doados pelos próprios membros das instituições, para construir  um acervo inicial, que  será a base 
+para futuras atividades e discussões. 
+
+ 
+ 
+Página 3 
+ 
+29/10/2024 
+Art. 4º A Diretoria de Ensino e Pesquisa (DEP/SEOP) realizará a gestão do Clube de Livro. 
+II – DOS OBJETIVOS 
+Art.  5º  O  Projeto  Café  Literário  busca  revitalizar  o  interesse  pela  leitura  e  pelo  debate  literário  dentro  das  instituições, criando  um  ambiente 
+acolhedor e estimulante. Por meio da doação de livros e da realização de encontros regulares, o projeto pretende construir uma base sólida para o 
+crescimento intelectual e social dos participantes, promovendo uma cultura rica e diversificada. 
+Parágrafo único: A implementação bem-sucedida do projeto depende do engajamento e da participação ativa dos membros das instituições, assim 
+como,  da  organização  cuidadosa  das  atividades  e  do  gerenciamento  eficiente  do  acervo.  Com  um  planejamento  detalhado  e  uma  abordagem 
+inclusiva, o Projeto Café Literário pode se tornar um pilar importante para o desenvolvimento educacional e cultural. 
+Art. 6º São objetivos do Clube do Livro: 
+I - Promover a leitura: incentivar a leitura de diversos gêneros literários e fomentar a prática da escrita entre os participantes; 
+II - Enriquecer o vocabulário e a criatividade: expandir o vocabulário dos participantes e estimular a criatividade por meio da leitura e discussão; 
+III - Fortalecer os Laços: estabelecer laços entre os membros das instituições, constituindo uma rede engajada em torno da leitura e da cultura. 
+III – DA DOAÇÃO DE LIVROS 
+Art. 7º As doações de livros serão realizadas, nos termos a seguir:  
+I - Arrecadação  inicial:  os  livros  serão  doados,  principalmente,  pelos  membros  das  instituições.  Logo,  a  DEP  definirá  uma  data  para  iniciar  uma 
+campanha interna para arrecadar livros que estejam em bom estado; 
+II - Critérios de aceitação: estabelecimento de critérios claros para a aceitação dos livros, como estado de conservação e relevância dos gêneros; 
+III - Logística de coleta: a DEP estabelecerá os pontos de coleta a fim de receber os livros para armazená-los em local apropriado. 
+IV – DA METODOLOGIA E DA ESTRUTURA 
+Art. 8º A metodologia do Clube de Livro será definida de acordo com os seguintes preceitos: 
+I - Frequência:  os  encontros  poderão  ser realizados  semanalmente,  quinzenalmente  ou  mensalmente,  conforme   a  disponibilidade  dos 
+participantes; 
+II - Horário:  os  encontros  ocorrerão  pela  manhã  ou  à  tarde  e  poderão  acontecer  após  o  horário  de  almoço  ou  no  final  do  expediente, a  fim  de 
+garantir a máxima participação, conforme a disponibilidade dos participantes; 
+III - Local: escolher a biblioteca, um espaço ao ar livre ou o pátio das instituições. O ambiente deve ser confortável e tranquilo; 
+IV - Café: serão organizados cafés e lanches durante os encontros para tornar o ambiente mais acolhedor; 
+V - Duração: a duração dos encontros deverá ser ajustável, conforme o interesse dos participantes, podendo variar entre 1h a 2h. 
+Parágrafo único: Não haverá obrigatoriedade de participação nos encontros. 
+Art.  9º Os  participantes  terão  livre  acesso  aos  livros.  Além  disso,  não  haverá  controle  de  saída  dos  livros,  ou  seja,  cada  participante  poderá 
+voluntariamente realizar a retirada e devolver no momento que achar oportuno. 
+V – DAS ATIVIDADES E DAS DISCUSSÕES 
+Art. 10. As atividades e as discussões serão realizadas por meio democrático entre os participantes, nos termos a seguir: 
+I - Escolha das obras: os livros a serem lidos serão escolhidos democraticamente pelos participantes por meio de sugestões e votação; 
+II - Moderador:  um  moderador  será  designado  para  cada  encontro,  o  qual  será  o  responsável  por  conduzir  as  discussões  e  garantir  que todos 
+tenham a oportunidade de participar; 
+III - Enriquecimento  cultural:  durante  os  encontros  será  feito  sugestões  de  novos  livros,  autores,  artigos,  filmes  e  outras  formas  de  expressão 
+cultural relacionadas ao tema discutido. 
+VI – DOS RECURSOS E DA ACESSIBILIDADE 
+Art. 11. Os livros disponibilizados serão físicos e/ou digitais, garantindo que todos os participantes tenham acesso aos mesmos recursos. 
+VII – DA PARTICIPAÇÃO E DO ENGAJAMENTO 
+Art. 12. Opiniões dos participantes serão solicitadas para aprimorar o projeto e ajustar as atividades, conforme necessário.  
+Art. 13. Os doadores e os participantes receberão agradecimentos e reconhecimento publicamente, a fim de estimular o engajamento contínuo. 
+Art. 14. Esta Resolução entrará em vigor na data de sua publicação. 
+GUARDA CIVIL MUNICIPAL 
+CORREGEDORIA GERAL 
+PORTARIA Nº 071/2024- O  Corregedor  da Guarda Civil Municipal de Niterói, no uso de suas  atribuições, resolve punir o Guarda Civil Municipal 
+JESSÉ SEVERINO  DE  SOUZA,  Mat.  1241.724-0,  com  pena  de SUSPENSÃO  POR  02  (DOIS)  DIAS,  CONVERTIDA  EM  MULTA,  por  infringir  o 
+artigo 124, inciso XVII da Lei 2.838/2011, não fazendo jus às circunstâncias atenuantes previstas no artigo 233 c/c artigo 234, I do mesmo Diploma 
+Legal. Ao lhe ser ofertado,  na FRD 0132/2024 o direito ao contraditório e a ampla defesa,  não apresentou fatos ou argumentos dentro do prazo 
+legal previsto. 
+ 
+SECRETARIA MUNICIPAL DE URBANISMO E MOBILIDADE 
+Atos do Subsecretário de Transporte 
+Portaria SMU/SST Nº 0328/2024- O Subsecretário de Transportes da Secretaria Municipal de Urbanismo, no cumprimento do disposto na Decreto 
+Municipal nº 13.889/2021, 
+Considerando o  conteúdo  nos  autos  do  PE9900060554/2023  munido  de  requerimento  toda  documentação  com  Pareceres  favorável  da 
+Fiscalização da SST. 
+RESOLVE: 
+Art. 1º- Deferir o requerimento de DEVOLUÇÃO do NIT nº  E: 015 d- Autorizatário João Catarino da Silva Filho. 
+Art. 2º- Esta portaria entra em vigor da data de sua publicação, revogadas as disposições em contrário. 
+ 
+SECRETARIA MUNICIPAL DE HABITAÇÃO E REGULARIZAÇÃO FUNDIÁRIA 
+Termo  de  rescisão  do  Convênio  firmado  entre  a  Caixa  Econômica  Federal,  CNPJ:  00.360.305/0001-04  e  o  Município  de  Niterói/RJ,  CNPJ 
+28.521.748/0001-59  para  execução  do  Trabalho  Social  no  âmbito  do  Programa  Minha  Casa  Minha  Vida - PMCMV - FAR,  referente  ao 
+empreendimento  RESIDENCIAL  PARQUE  ARAXÁ  APF:  0407.397-05,  com  amparo na  Cláusula  10  do  referido  Convênio  e  na  Portaria  do 
+Ministério das Cidades nº. 464/2018, Anexo III, item 8.1. Firmado em 02/10/2024. 
+ 
+Termo  de  rescisão  do  Convênio  firmado  entre  a  Caixa  Econômica  Federal,  CNPJ:  00.360.305/0001-04  e  o  Município  de  Niterói/RJ,  CNPJ 
+28.521.748/0001-59  para  execução  do  Trabalho  Social  no  âmbito  do  Programa  Minha  Casa  Minha  Vida - PMCMV - FAR,  referente  ao 
+empreendimento RESIDENCIAL PARQUE AÇU APF: 0407.391-40, com amparo na Cláusula 10 do referido Convênio e na Portaria do Ministério 
+das Cidades nº. 464/2018, Anexo III, item 8.1. Firmado em 02/10/2024. 
+ 
+Termo  de  rescisão  do  Convênio  firmado  entre  a  Caixa  Econômica  Federal,  CNPJ:  00.360.305/0001-04  e  o  Município  de  Niterói/RJ,  CNPJ 
+28.521.748/0001-59  para  execução  do  Trabalho  Social  no  âmbito  do  Programa  Minha  Casa  Minha  Vida - PMCMV - FAR,  referente  ao 
+empreendimento  RESIDENCIAL  PARQUE  ABARÉ  APF:  0407.399-23,  com  amparo  na  Cláusula  10  do  referido  Convênio  e  na  Portaria  do 
+Ministério das Cidades nº. 464/2018, Anexo III, item 8.1. Firmado em 02/10/2024. 
+ORDEM DE REINÍCIO 
+Estamos concedendo Ordem de Reinício ao CONTRATO nº. 51/2023, firmado com a Empresa SWOT GLOBAL CONSULTING LTDA, objetivando 
+a execução das obras e/ou serviços para Inventário, logística de preparação de escaneamento acondicionamento de documentação da carteira de 
+programas habitacionais retroativa ao dia 01/10/2024 com término previsto para 29/12/2024. Proc. nº. 650000003/2023. 
+ 
+SECRETARIA MUNICIPAL DE PLANEJAMENTO, ORÇAMENTO E MODERNIZAÇÃO DA GESTÃO 
+PORTARIA 069/SEPLAG/2024- A Secretária municipal de planejamento, orçamento e modernização da gestão, no uso de suas atribuições legais,  
+RESOLVE:  
+Art. 1º.  Designar os servidores abaixo identificados, para fiscalizarem a execução do objeto da contratação relativa à compra de ingressos no 38º 
+Congresso Brasileiro de Direito Administrativo, realizado nos dias 08 a 10 de outubro, na cidade de João Pessoa – PB, para atender à Secretaria 
+de Planejamento, Orçamento e Modernização da Gestão de Niterói (SEPLAG). Processo n°: 9900103871/2024 
+ 
+Nome Matrícula 
+Marcelle Fernandes Vieira 1246.060-0 
+Yngrid Lohaine Cardoso da Silva 1247.215-0 
+Luana Vale Nunes Coelho 1243.855-0 
+ 
+
+ 
+ 
+Página 4 
+ 
+29/10/2024 
+PORTARIA  N°070/SEPLAG/2024- A Secretária  Municipal  de  Planejamento,  Orçamento  e  Modernização  da  Gestão,  no  uso  de  suas  atribuições 
+legais, RESOLVE: 
+Art. 1º. Designar os servidores abaixo identificados para fiscalizarem a execução do objeto da contratação relativa à compra, por inexigibilidade, de 
+dois ingressos no XXIX Congresso Internacional do CLAD sobre reforma do Estado e da Administração pública: “A transformação necessária para 
+um Estado inclusivo, democrático e eficaz”, que ocorrerá nos dias 26, 27, 28 e 29 de novembro de 2024, em Brasília-DF, para atender à Secretaria 
+de Planejamento, Orçamento e Modernização da Gestão de Niterói (SEPLAG), conforme Processo nº 9900085620/2024. 
+Nome Matrícula 
+Ana Carolina Ferreira dos Santos 1245.810-0 
+Carolina Krugel Marques 1246.759-0 
+Lais Candida de Oliveira Dias 1247.402-0 
+Art. 4º. Esta Portaria entra em vigor na data de sua publicação. 
+ 
+ 
+FUNDAÇÃO MUNICIPAL DE SAÚDE 
+PORTARIA FMS/FGA Nº 293/2024 
+INSTITUI O GRUPO CONDUTOR DE ENSINO, PESQUISA E EDUCAÇÃO NA SAÚDE (GCEPES) NO ÂMBITO DO SUS/NITERÓI  
+CONSIDERANDO  a  responsabilidade  constitucional  do  Sistema  Único  de  Saúde  de  ordenar  a  formação  de  recursos  humanos  para  a  área  de 
+saúde e de incrementar, em sua área de atuação, o desenvolvimento científico e tecnológico, também prevista na Lei 8080, de 19 de setembro de 
+1990;  
+CONSIDERANDO  que  o  artigo  27,  parágrafo  único,  da  Lei  8.080/90,  afirma  que  os  serviços  públicos  que  integram  o  Sistema  Único de  Saúde 
+(SUS) constituem campo de prática para ensino e pesquisa, mediante normas específicas, elaboradas conjuntamente com o sistema educacional; 
+CONSIDERANDO a Portaria n° 1996/GM/MS, de 20 de agosto de 2007, que dispõe sobre as diretrizes para a implementação da Política Nacional 
+de Educação Permanente em Saúde; 
+CONSIDERANDO que a Educação na saúde consiste na produção e sistematização de conhecimentos relativos à formação e ao desenvolvimento 
+para a atuação em saúde, envolvendo práticas de ensino, diretrizes didáticas e orientação curricular; 
+CONSIDERANDO que a educação permanente em saúde, como um dispositivo da integralidade do cuidado, se concretiza na problematização do 
+processo de trabalho em saúde, a partir da ação refletida sobre os conhecimentos, as práticas adquiridas e as experiências de cada pessoa; 
+CONSIDERANDO  que  as  ações  educativas  devem  ter  como  objetivo  a  transformação  das  práticas  profissionais  e  da  própria  organização  do 
+trabalho, tomando como referência as necessidades de saúde das pessoas e das  populações, a reorganização da gestão setorial e a ampliação 
+dos laços da formação com o exercício do controle social em saúde;  
+CONSIDERANDO  o  Decreto  Municipal  nº  15.340,  de  04  de  abril  de  2024,  que  cria  a  Superintendência  de  Gestão  do  Trabalho  e  Educação  em 
+Saúde  (Sugete/FMS),  que  em  sua  estrutura  administrativa  conta  com  a  Divisão  de  Educação  em  Saúde,  tendo  a  ela  subordinadas  a  Seção  de 
+Educação Permanente, a Seção de Pesquisa e Extensão e a Seção de Integração, Ensino e Serviço;  
+CONSIDERANDO  a  existência  de  instâncias, no  âmbito  da  Fundação  Municipal  de  Saúde,  que  já  executam  atividades  relacionadas  ao  Ensino, 
+Pesquisa e Educação na Saúde vinculadas à Sugete/FMS, por meio da PORTARIA SMS/FMS Nº 197, de 10 de maio de 2024; 
+CONSIDERANDO  o  Decreto  nº  14.975/2023,  que  altera o  Decreto  nº  14.107/2021,  o  qual  aprova  o  Estatuto  da  Fundação  Estatal  de  Saúde  de 
+Niterói (FeSaúde), destacando entre seus objetivos a promoção da Educação Permanente em Saúde, a qualificação dos profissionais, o estímulo 
+à produção do conhecimento, bem como o estabelecimento de parcerias com instituições de ensino e pesquisa; 
+A SECRETÁRIA MUNICIPAL DE SAÚDE/PRESIDENTE DA FUNDAÇÃO MUNICIPAL DE SAÚDE, no uso de suas atribuições legais, e tendo em 
+vista delegação de competência que lhe confere o Decreto 6.150/91; 
+RESOLVE: 
+Art. 1º Instituir o Grupo Condutor de Ensino, Pesquisa e Educação na Saúde (Gcepes), vinculado à Secretaria Municipal de Saúde (SMS), que tem 
+por finalidade planejar, assessorar, monitorar as ações de ensino, pesquisa e educação na saúde, consolidando a integração dos diferentes atores 
+no âmbito do SUS/Niterói.   
+Parágrafo único – As ações de ensino, pesquisa e educação na saúde mencionadas no caput deste artigo compreendem: estimular, acompanhar, 
+fortalecer e apoiar a qualificação profissional dos trabalhadores e estudantes na área da saúde, para o aperfeiçoamento das práticas de saúde e 
+suas atualizações em direção aos princípios fundamentais do SUS, a partir da realidade local e da análise coletiva dos processos de trabalho. 
+Art 2º São atribuições do Grupo Condutor de Ensino, Pesquisa e Educação na Saúde (Gcepes) no âmbito do SUS/Niterói: 
+I – Propor  a  Política  Municipal  de  Educação  Permanente  em  Saúde,  a  partir  das  necessidades  de  formação  para  o  desenvolvimento  dos 
+trabalhadores do SUS/Niterói; 
+II – Propor o Plano Municipal de Educação Permanente em Saúde alinhado à Política Municipal de Educação Permanente; 
+III – Fomentar e garantir espaços de discussão coletiva, para indicar metas e ações relacionadas às temáticas de ensino, pesquisa e educação na 
+saúde visando à construção do Plano Municipal de Saúde Participativo; 
+IV – Garantir estratégias para utilização dos recursos financeiros, destinados à educação permanente no âmbito do SUS, oriundos das pactuações 
+estabelecidas nas três esferas de governo; 
+V – Estabelecer  estratégias  de  captação  de  recursos  financeiros  para  utilização  nas  ações  de  educação  permanente  em  saúde  no  âmbito 
+municipal; 
+VI - Planejar, assessorar e monitorar as ações e estratégias de ensino, pesquisa e educação na saúde implementadas no município; 
+VII - Propor estratégias avaliativas das ações de ensino, pesquisa e educação na saúde, desenvolvidas pelas instâncias de educação permanente 
+no município;  
+VIII -  Submeter,  semestralmente,  ao  Conselho  Municipal  de  Saúde  o  monitoramento  das  ações  de  ensino,  pesquisa  e  educação  na  saúde, 
+realizadas pelas instâncias de educação permanente no âmbito municipal; 
+Parágrafo Único: A Política Municipal de Educação Permanente em Saúde e o Plano Municipal de Educação Permanente em Saúde deverão ser 
+encaminhados ao Conselho Municipal de Saúde para apreciação e aprovação. 
+Art. 3º O Grupo Condutor de  Ensino, Pesquisa e Educação  na Saúde (Gcepes) será composto por dois membros, 01 Titular e 01 Suplente, dos 
+seguintes segmentos: 
+• Representantes da Superintendência de Gestão do Trabalho e Educação em Saúde (Sugete/FMS) que atuam na Divisão de Educação em 
+Saúde - seção de Educação Permanente, seção de Pesquisa e Extensão e a seção de Integração, Ensino e Serviço; 
+• Representantes do Conselho Municipal de Saúde de Niterói (CMS); 
+• Representantes da Gerência de Ensino e Produção do Conhecimento da FeSaúde - Coordenação de  Ensino e Produção  do Conhecimento da 
+Atenção Primária e Coordenação de Ensino e Produção do Conhecimento da Atenção Psicossocial; 
+• Representantes da Vice-Presidência de Atenção Hospitalar e de Emergência (Vipahe) que atuam na área de educação na saúde; 
+• Representantes da Vice-Presidência de Atenção Coletiva, Ambulatorial e da Família (Vipacaf) que atuam na área de educação na saúde; 
+• Representantes do Departamento de Controle, Avaliação e Auditoria (Decau) que atuam na área de educação na saúde; 
+• Representantes da Rede de Atenção Psicossocial/FMS que atuam na área de educação na saúde; 
+Parágrafo  Único:  Serão  integrados  ao  Gcepes  outros  segmentos  que  venham  a  ser  criados  para  atuar  na  área  de  educação  na  saúde  da 
+Secretaria Municipal de Saúde, na forma do caput deste artigo. 
+Art. 4º As reuniões do Gcepes se realizarão periodicamente, em caráter deliberativo, conforme cronograma pactuado pelos seus membros. 
+Parágrafo único - O Gcepes poderá contar, mediante necessidade, com a participação de convidados nos seus espaços de discussão. 
+Art. 5º Esta Portaria entra em vigor na data de sua publicação, revogando as disposições em contrário. 
+SUPERINTENDÊNCIA DE GESTÃO DO TRABALHO E EDUCAÇÃO EM SAÚDE 
+Edital de Citação: 
+Nome: MONIQUE SAMY PAMPLONA MAFORT, cargo Médico Dermatologista, matrícula FMS nº 438.438, com lotação na PESP. 
+Assunto: Exoneração, referente ao processo nº 9900084868/2024 de 26/08/2024. 
+Prazo: 10 (dez) dias, a contar da última publicação, que se fará durante 03 (três) dias. 
+Fundamentação  Legal:  Lei  nº  531/85,  conforme  artigo  84  do  Estatuto  dos  Servidores  Públicos  Municipais  e  Processo  nº.200/16817/2009  de 
+08/12/2009 sobre a cessação da obrigatoriedade do Exame Demissional. 
+ 
+ 
+ 
+
+ 
+ 
+Página 5 
+ 
+29/10/2024 
+SUPERINTENDÊNCIA DE ADMINISTRAÇÃO 
+EXTRATO DO CONTRATO 
+EXTRATO SUAD N.º: 174/2024 
+INSTRUMENTO: Contrato  n.°13/2024; PARTES: Fundação  Municipal  de  Saúde  de  Niterói  e  ESPÓLIO DE  JOSÉ  DOS  SANTOS  ROCHA; 
+PARTES QUE ASSINARAM O DOCUMENTO: Anamaria Carvalho Schneider e José Avelino Bottino Rocha; OBJETO: Locação de imóvel situado 
+na  Travessa  Júlio  Froes  nº  14,  Loja  101  e  Apto.  201,  bairro Engenhoca,  no  Município  de  Niterói – RJ,  com  matrícula  no  RGI  sob  o  nº  628,  do 
+Cartório  do  15º  Ofício  de  Registro  de  Imóveis  da  Comarca  de  Niterói,  para  abrigar  as  instalações  da  Unidade  Básica  de  Saúde  do  bairro  da 
+Engenhoca,  vinculada  à  Fundação  Municipal  de  Saúde; VALOR: R$  612.000,00 (seiscentos  e  doze  mil  reais); VERBA: Gestão/Unidade: Fundo 
+Municipal de Saúde de Niterói;  Fonte de Recursos:  2.600.50;  Programa de Trabalho: 25.43.10.301.0133.6171;  Elemento de Despesa: 33.90.36; 
+Nota de Empenho: 940; PRAZO DE VIGÊNCIA DO CONTRATO: O prazo de vigência da contratação é de 24 (doze) meses contados da data de 
+assinatura do contrato, prorrogável por até 10 anos, na forma dos artigos 106 e 107 da Lei n° 14.133/2021; FUNDAMENTO:  Lei nº 14133/2021, 
+bem como o processo administrativo n.º 9900039208/2023; ASSINATURA: 25 de outubro de 2024. 
+EXTRATO DE TERMO DE AJUSTE DE CONTAS 
+EXTRATO SUAD N.º: 175/2024 
+INSTRUMENTO: Termo  de  Ajuste  de  Contas  nº  054/2024; PARTES: Fundação  Municipal  de  Saúde  de  Niterói  e ECO – EMPRESA  DE 
+CONSULTORIA  E  ORGANIZAÇÃO  EM  SISTEMAS  E  EDITORAÇÃO  LTDA; PARTES  QUE  ASSINARAM  O  DOCUMENTO: Anamaria  Carvalho 
+Schneider e Luiz Antônio Duarte Silva; OBJETO: Serviços de prestação de serviços especializados na instalação, suporte técnico, manutenção e 
+treinamento no uso de Sistemas de Tecnologia da Informação e Consultoria Técnica em Gestão de Saúde, referentes aos meses de dezembro de 
+2023 e janeiro de 2024, no valor total de R$ 211.040,00 (duzentos e onze mil e quarenta reais), conforme discriminado no processo administrativo 
+n.º 9900018172/2024; VALOR: R$ 211.040,00 (duzentos e onze mil e quarenta reais); VERBA: Programa de Trabalho: 25.43.10.302.0133.5062; 
+Fonte:  2.600.50;  Código  de  Despesa:  33.90.92,  Nota  de  Empenho:  937    e  do  Programa  de  Trabalho: 25.43.10.302.0133.5062;  Fonte:  1.500.00; 
+Código  de  Despesa:  33.90.40,  Nota  de  Empenho:  939; FUNDAMENTO:  Lei  nº.  14133/2021  e  suas  alterações,  bem  como  o  processo 
+administrativo n.º 9900018172/2024; ASSINATURA: 25 de outubro de 2024 
+ 
+FUNDAÇÃO ESTATAL DE SAÚDE DE NITERÓI- FeSaúde 
+PORTARIA DAF Nº 125-2024 | COMISSÃO FISCAL DO CONTRATO FESAÚDE Nº 030/2022 
+O Diretor de Administração e Finanças da Fundação Estatal de Saúde de Niterói – FeSaúde, no exercício de suas atribuições, conferidas pela Lei 
+n.º  3.133/2015  e  pelo  Decreto  n.º  14.107/2021,  publicado  em  07/08/2021,  e  considerando  a  necessidade  de  formalização  da  designação  para  a 
+função de fiscal, de acordo com a natureza do contrato e sua execução, resolve: 
+Art.  1º. Alterar  a  composição da Comissão  de  Fiscalização e  Acompanhamento  do Contrato  FeSaúde  nº  030-2022,  celebrado  no  bojo 
+processo  administrativo  nº 9900075331/2024, que  tem  por  objeto  a  prestação  de serviço  de  alimentação  (coffee  break  e  kit  lanches)  em 
+reuniões e eventos de capacitação e de treinamento realizados pela Fundação Estatal de Saúde de Niterói - FeSaúde, na forma do Termo 
+de Referência. 
+Parágrafo único: A Comissão de Fiscalização mencionada no caput deste artigo passa a ser composta pelos seguintes empregados públicos: 
+Fiscais do Contrato: 
+Cassio Luis Pasin Do Couto | Analista Administrativo | Matrícula: 2156-3 
+Paola Pereira dos Santos | Assistente | Matrícula: 2522-4 
+Suplentes: 
+Renata Ferreira Boente | Analista Administrativa | Matrícula: 2666-2 
+Art. 2º. Esta Portaria entra em vigor na data de sua publicação. 
+EXTRATO Nº 084/2024 
+ATA DE REGISTRO DE PREÇOS Nº 149/2024 
+Partes: Fundação Estatal de Saúde de Niterói (FeSaúde), com sede na Rua Santa Clara, n.º 102, Ponta D’Areia, Niterói/RJ, CEP: 24040-050, 
+CNPJ sob o nº 34.906.284/0001-00 e a empresa Target Medicamentos e Produtos Hospitalares Ltda, com sede na Rua Claudio, 181, Sala 301, 
+Vila  Jurandir,  São  João  de  Meriti/RJ,  Cep:  25.540-220,  CNPJ  nº  52.969.017/0001-55; Objeto: Registro  de  preços  para  a  eventual  aquisição  de 
+materiais laboratoriais, para abastecimento das unidades da Rede de Atenção Psicossocial (RAPS) e do Programa Médico de Família (PMF), que 
+estão   sob   a   gestão   da   Fundação   Estatal   de   Saúde   de   Niterói   (FeSaúde).   Detalhamento   da   ata   nos   sites www.niteroi.rj.gov.br e 
+www.fesaude.niteroi.rj.gov.br; Modalidade  de  licitação:  Pregão  Eletrônico  nº  003/2024; Data  de  divulgação  no  PNCP: 28/10/2024; Id  ata 
+PNCP: 34906284000100-1-000014/2024-000001; Prazo: 1  (um)  ano,  contado  a  partir  do  primeiro  dia  útil  subsequente  à  data  de  divulgação  no 
+PNCP,  podendo  ser  prorrogada  por  igual  período,  mediante  a  anuência  do  fornecedor,  desde  que  comprovado  o  preço  vantajoso; Vigência: 
+29/10/2024  a  29/10/2025; Valor  total: R$  35.334,00  (trinta  e  cinco  mil,  trezentos  e  trinta  e  quatro  reais); Fundamento: Lei  nº  14.133,  de  2021, 
+bem como o processo administrativo n.º 9900062200/2024; Data da Assinatura: 25/10/2024. 
+ATA DE REGISTRO DE PREÇOS Nº 150/2024 
+Partes: Fundação Estatal de Saúde de Niterói (FeSaúde), com sede na Rua Santa Clara, n.º 102, Ponta D’Areia, Niterói/RJ, CEP: 24040-050, 
+CNPJ sob o nº 34.906.284/0001-00 e a empresa Procela Participações Ltda, com sede na Rua São Pedro Da Aldeia, 799, Serra do Curral, Belo 
+Horizonte/MG,  Cep:  30.390-021,  CNPJ  nº  09.686.716/0001-69; Objeto: Registro  de  preços  para  a  eventual  aquisição  de  materiais laboratoriais, 
+para abastecimento das unidades da Rede de Atenção Psicossocial (RAPS) e do Programa Médico de Família (PMF), que estão sob a gestão da 
+Fundação Estatal de Saúde de Niterói (FeSaúde). Detalhamento da ata nos sites www.niteroi.rj.gov.br e www.fesaude.niteroi.rj.gov.br; Modalidade 
+de  licitação:  Pregão  Eletrônico  nº  003/2024; Data  de  divulgação  no  PNCP: 28/10/2024; Id  ata  PNCP: 34906284000100-1-000014/2024-
+000002 Prazo: 1  (um)  ano,  contado  a  partir  do  primeiro  dia  útil  subsequente  à  data  de  divulgação  no  PNCP,  podendo  ser  prorrogada  por  igual 
+período,  mediante  a  anuência  do  fornecedor,  desde  que  comprovado  o  preço  vantajoso; Vigência:  29/10/2024  a  29/10/2025; Valor  total: R$ 
+54.500,00    (cinquenta  e  quatro  mil  e  quinhentos  reais); Fundamento: Lei  nº  14.133,  de  2021,  bem  como  o  processo  administrativo  n.º 
+9900062200/2024; Data da Assinatura: 25/10/2024. 
+ATA DE REGISTRO DE PREÇOS Nº 151/2024 
+Partes: Fundação Estatal de Saúde de Niterói (FeSaúde), com sede na Rua Santa Clara, n.º 102, Ponta D’Areia, Niterói/RJ, CEP: 24040-050, 
+CNPJ  sob  o  nº  34.906.284/0001-00  e  a  empresa Injex  Indústrias  Cirúrgicas  Ltda,  com  sede  na  Av.  Comendador  José  Zillo,  nº  160,  Distrito 
+Industrial,  Ourinhos/SP,  Cep:  19.908-170,  CNPJ  nº  59.309.302/0001-99; Objeto: Registro  de  preços  para  a  eventual  aquisição  de  materiais 
+laboratoriais, para abastecimento das unidades da Rede de Atenção Psicossocial (RAPS) e do Programa Médico de Família (PMF), que estão sob 
+a gestão da Fundação Estatal de Saúde de Niterói (FeSaúde). Detalhamento da ata nos sites www.niteroi.rj.gov.br e www.fesaude.niteroi.rj.gov.br; 
+Modalidade  de  licitação:  Pregão  Eletrônico  nº  003/2024; Data  de  divulgação  no  PNCP: 28/10/2024; Id  ata  PNCP: 34906284000100-1-
+000014/2024-000003; Prazo: 1  (um)  ano,  contado  a  partir  do  primeiro  dia  útil  subsequente  à  data  de  divulgação  no  PNCP,  podendo  ser 
+prorrogada por igual período, mediante a anuência do fornecedor, desde que comprovado o preço vantajoso; Vigência: 29/10/2024 a 29/10/2025; 
+Valor  total: R$  82.250,00  (oitenta  e  dois  mil,  duzentos  e  cinquenta  reais); Fundamento: Lei  nº  14.133,  de  2021,  bem  como  o  processo 
+administrativo n.º 9900062200/2024; Data da Assinatura: 25/10/2024. 
+ 
+FUNDAÇÃO MUNICIPAL DE EDUCAÇÃO 
+Atos do Presidente 
+EXTRATO DE TERMO ADITIVO Nº 022/2024 
+PROCESSO: 9900027188/2023. INSTRUMENTO:  Termo  Aditivo  n°  022/2024  ao  Termo  de  Colaboração  n°  001/2023. PARTES:  FUNDAÇÃO 
+MUNICIPAL  DE  EDUCAÇÃO  e,  do  outro  lado,  o  INSTITUTO  VIVA  MAIS  &  MELHOR,  inscrito  no  CNPJ/MF  sob  o  nº  01.412.689/0001-24. 
+OBJETO: Renovação do Termo de Colaboração n° 001/2023, cujo objeto é a gestão e operacionalização dos Jogos Escolares de Niterói. PRAZO: 
+12  (doze)  meses. VALOR: R$  1.196.251,00  (um  milhão,  cento  e  noventa  e  seis  mil  e  duzentos  e  cinquenta  e  um  reais). VERBA: Natureza  das 
+Despesas: 3.3.3.9.0.39.00.00.00; Programa de Trabalho: 20.43.12.368.0135.6045; Fonte de Recurso: 2.501.02; Nota de Empenho: 001648/2024. 
+FUNDAMENTO: Lei Federal n° 13.019/2014 c/c Decreto Municipal n° 13.996/2021. DATA DE ASSINATURA: 21/10/2024. 
+EXTRATO DE TERMO ADITIVO Nº 036/2024 
+PROCESSOS: 9900023354/2023  e  9900051558/2024. INSTRUMENTO:  Termo  Aditivo  n°  036/2024  ao  Contrato  n°  233/2023. PARTES: 
+FUNDAÇÃO MUNICIPAL DE EDUCAÇÃO e, do outro lado, a PERFIL X CONSTRUTORA S.A., inscrita no CNPJ/MF sob o nº 08.733.497/0001-69. 
+OBJETO: Prorrogação  de  prazo,  sem  renúncia  de  reajuste  ao  Contrato  n°  233/2023,  cujo  objeto  é  a  prestação  de  serviços  de  manutenção 
+preventiva  e  corretiva  de  telhados,  coberturas,  quadras  esportivas  e  estruturas  metálicas  das  Unidades  Escolares  de  Ensino  Infantil e  Educação 
+Fundamental,  bem  como  prédios  administrativos  pertencentes  à  Fundação  Municipal  de  Educação. PRAZO:  12  (doze)  meses. VALOR: 
+R$ 6.652.965,19 (seis milhões, seiscentos e cinquenta e dois mil, novecentos e sessenta e cinco reais e dezenove centavos), sendo empenhados 
+
+ 
+ 
+Página 6 
+ 
+29/10/2024 
+inicialmente,  R$  554.413,77  (quinhentos  e  cinquenta  e  quatro  mil,  quatrocentos  e  treze  reais  e  setenta  e  sete  centavos). VERBA: Natureza  das 
+Despesas: 3.3.3.9.0.39.00.00.00; Programa de Trabalho: 20.43.12.368.0135.4070; Fonte de Recurso: 1.550.99; Nota de Empenho: 001605/2024. 
+FUNDAMENTO: Art. 57, II c/c art. 55, III da Lei n° 8.666/93. DATA DE ASSINATURA: 11/10/2024. 
+ 
+NITERÓI EMPRESA DE LAZER E TURISMO - NELTUR 
+ATO DO PRESIDENTE 
+EXTRATO DE INSTRUMENTO CONTRATUAL 
+INSTRUMENTO:   CONTRATO   Nº   188/2024; PARTES:   NITERÓI   EMPRESA   DE   LAZER   E   TURISMO   S/A – NELTUR   E ESTRUTEND 
+ESTRUTURAS PARA EVENTOS LTDA; OBJETO: O presente contrato tem por objeto a prestação de serviços de fornecimento de estruturas para 
+atender  a  Festa  de  São  Judas  Tadeu,  a  ser  realizada  nos  dias  26  de  outubro  de  2024  a  28  de  outubro  de  2024,  na  Cidade  de  Niterói; VALOR 
+GLOBAL:  R$  66.729,00  (sessenta  e  seis  mil  setecentos  e  vinte  e  nove  reais); PRAZO:  O  prazo  de  vigência  do  contrato  será  de  07  (sete)  dias 
+contados a partir do dia 23 de outubro de 2024; DOTAÇÃO ORÇAMENTÁRIA: P.T. 10.52.23.695.0138.6067, N.D. 3.3.9.0.3.9.84.00.00 FT: 0138 
+FUNDAMENTAÇÃO  LEGAL: tendo  em  vista  o  CONTRATO  DE  PRESTAÇÃO  DE  SERVIÇOS  de  acordo  com  o  processo  eletrônico  n.º 
+9900024806/2023, o Edital de Pregão n.º 02/2023 e o respectivo Termo de Referência, regendo-se pelas normas da Lei Federal n.º 10.520/2002, 
+no   Decreto   Federal   nº   3.555/2000,   no   Decreto   Municipal   nº   9.614/2005,   na   Lei   Complementar   nº123/2006,   na   Lei   nº   13.303/2016, 
+REGULAMENTO DE LICITAÇÕES E CONTRATOS NITERÓI EMPRESA DE LAZER E TURISMO – NELTUR, atendidas as cláusulas e condições 
+que se enunciam; PROCESSO N° 9900024806/2023. DATA DA ASSINATURA: 23 de outubro de 2024. 
+EXTRATO DE INSTRUMENTO CONTRATUAL 
+INSTRUMENTO:   CONTRATO   Nº   189/2024; PARTES:   NITERÓI   EMPRESA   DE   LAZER   E   TURISMO   S/A – NELTUR   E CL   TRIO   E 
+SONORIZAÇÃO  LTDA  ME; OBJETO: O  presente  contrato  tem  por objeto  a  prestação  de  serviços  de  fornecimento  de  som  e  iluminação  para 
+atender  a  Festa  de  São  Judas  Tadeu,  a  ser  realizada  nos  dias  26  de  outubro  de  2024  a  28  de  outubro  de  2024,  na  Cidade  de  Niterói; VALOR 
+GLOBAL: R$ 85.250,00 (oitenta e cinco mil duzentos e cinquenta reais); PRAZO: O prazo de vigência do contrato será de 07 (sete) dias contados 
+a  partir  do  dia  23  de  outubro  de  2024; DOTAÇÃO  ORÇAMENTÁRIA:  P.T.  10.52.23.695.0138.6067,  N.D.  3.3.9.0.3.9.84.00.00  FT:  0138 
+FUNDAMENTAÇÃO  LEGAL: tendo  em  vista  o CONTRATO  DE  PRESTAÇÃO  DE  SERVIÇOS  de  acordo  com  o  processo  eletrônico  n.º 
+9900024806/2023, o Edital de Pregão n.º 02/2023 e o respectivo Termo de Referência, regendo-se pelas normas da Lei Federal n.º 10.520/2002, 
+no   Decreto   Federal   nº   3.555/2000,   no   Decreto   Municipal   nº   9.614/2005,   na   Lei   Complementar   nº123/2006,   na   Lei   nº   13.303/2016, 
+REGULAMENTO DE LICITAÇÕES E CONTRATOS NITERÓI EMPRESA DE LAZER E TURISMO – NELTUR, atendidas as cláusulas e condições 
+que se enunciam; PROCESSO N° 9900024806/2023. DATA DA ASSINATURA: 23 de outubro de 2024. 
+EXTRATO DE INSTRUMENTO CONTRATUAL 
+INSTRUMENTO:  CONTRATO  Nº  190/2024; PARTES:  NITERÓI  EMPRESA  DE  LAZER  E  TURISMO  S/A – NELTUR  E  JULIA  &  EVENTOS 
+EMPREENDIMENTOS LTDA; OBJETO: O presente contrato tem por objeto a prestação de serviços de fornecimento de banheiros químicos para 
+atender  a  Festa  de  São  Judas  Tadeu,  a  ser  realizada  nos  dias  26  de  outubro  de  2024  a  28  de  outubro  de  2024,  na  Cidade  de  Niterói; VALOR 
+GLOBAL: R$ 6.198,00 (seis mil cento e noventa e oito reais); PRAZO: O prazo de vigência do contrato será de 07 (sete) dias contados a partir do 
+dia 23 de outubro de 2024; DOTAÇÃO ORÇAMENTÁRIA: P.T. 10.52.23.695.0138.6067, N.D. 3.3.9.0.3.9.84.00.00 FT: 0138 FUNDAMENTAÇÃO 
+LEGAL: tendo em vista a decisão proferida no processo administrativo n.º 9900024806/2023, o Edital de Pregão n.º 02/2023 e o respectivo 
+Termo  de  Referência,  regendo-se  pelas  normas  da  Lei  Federal  n.º  10.520/2002,  no  Decreto  Federal  nº  3.555/2000,  no  Decreto  Municipal  nº 
+9.614/2005,  na  Lei  Complementar  nº  123/2006,  na  Lei  nº  13303/2016,  REGULAMENTO  DE  LICITAÇÕES  E  CONTRATOS  NITERÓI  EMPRESA 
+DE  LAZER  E  TURISMO – NELTUR  ,  atendidas  as  cláusulas  e  condições  que  se  enunciam; PROCESSO  N°  9900024806/2023.  DATA  DA 
+ASSINATURA: 23 de outubro de 2024. 
+PREGÃO ELETRÔNICO Nº 90006/2024 
+PROCESSO ADMINISTRATIVO Nº 9900093363/2024 
+HOMOLOGO, para  que  surta  os  efeitos  legais,  o  resultado  do  julgamento  da  presente  licitação  em  favor  das  Empresa:  BRAZÃOTUR  LTDA, 
+inscrita no CNPJ n° 05.486.166/0001-83, no valor de R$42.209,09 (quarenta e dois mil duzentos e nove reais e nove centavos), já adjudicados 
+e  homologado  pelo  Sr.  Diretor – Presidente  relacionado  ao  Pregão   ELETRÔNICO  em  epígrafe – PROCESSO  ADMINISTRATIVO  Nº 
+9900093363/2024, realizado em 28 de outubro de 2024. 
+ 
+NITERÓI TRANSPORTE E TRÂNSITO S/A- NITTRANS 
+Atos do Presidente 
+PORTARIA  NITTRANS  nº  356/2024- O  Presidente  da  Niterói  Trânsito  S.A. - NitTrans,  no  uso  de  suas  atribuições  legais    previstas  nas  Leis 
+Municipais n.
+os 
+2.283, de 28 de dezembro de 2005 e 3.852, de 12 de dezembro de 2023 e no cumprimento do art. 24, da Lei nº 9.503, de 23 de 
+setembro de 1997 – Código de Trânsito Brasileiro (CTB), e  
+Considerando a  necessidade  de  cumprimento  das  determinações  da  Secretaria  Municipal  de  Conservação  e  Serviços  Públicos,  da  Secretaria 
+Municipal de Ordem Pública, do Corpo de Bombeiros, do Comando do 12º Batalhão de Polícia Militar e da Delegacia Local; 
+Considerando o disposto no Decreto Municipal nº 14.218/2021; 
+Considerando o disposto no § 1º do art. 95 do CTB; 
+Considerando a realização da obra “2° FASE DA OBRA DE MICRODENAGEM DO BARRETO” 
+Considerando o processo administrativo nº 9900054242/2024. 
+RESOLVE:  
+Art.  1º – Interditar  o  tráfego  total    de  veículos  na  Rua  Galvão,  no  trecho  entre  as  Ruas  Amerino  Vanick  e  a  Presidente  Craveiro,  em  ambos  os 
+sentidos, a partir do dia 30/10/2024, às 06h, até a conclusão da obra. 
+Art. 2º – Proibir o estacionamento de veículos na Rua Americo Vanick, no trecho compreendido entre as ruas Galvão e a Salgado Filho, em ambos 
+os sentidos, a partir dia 29/10/2024, às 20h, até a conclusão da obra. 
+Art. 3º – Proibir o estacionamento de veículos na Rua Salgado Filho, no trecho compreendido entre as ruas Américo Vanick e Presidente Craveiro 
+Lopes, a partir do dia 29/10/2024, às 20h, até a conclusão da obra. 
+Art. 4º – Esta Portaria entrará em vigor na data de sua publicação, revogadas as disposições em contrário. 
+ 
+EMPRESA MUNICIPAL DE MORADIA, URBANIZAÇÃO E SANEAMENTO – EMUSA. 
+ATO DO PRESIDENTE 
+PORTARIA  Nº.  339/2024- Designa  Antonio  C.Lourosa  S.  Junior  (Mat.2411),  como  Gestor  e  Designar  os  Fiscais  André  Luiz  da  Cruz  Fidalgo 
+(Mat.41093),  Luiz  Cláudio  Rodrigues  Marins  (Mat.43109)  e  como  fiscal  suplente,  Antonio  Jorge  Guimarães  da  Silva  (Mat.0748),  para  exercerem 
+em nome da EMUSA, fiscalização dos seguintes serviços “PRESTAÇÃO DE SERVIÇOS DE CONSULTORIA, OBJETIVANDO ASSESSORAR O 
+PODER   PÚBLICO   MUNICIPAL,   PROCEDENDO   À   REALIZAÇÃO   DE   ESTUDOS   E   PERECER   CONCLUSIVO   DA   INDICAÇÃO   DA 
+NECESSIDADE  DO  REEQUILÍBRIO  ECONÔMICO-FINANCEIRO, DO  CONTRATO  DE  CONCESSÃO  DE  ÁGUA  E  ESGOTO,  NO  MUNICÍPIO 
+DE NITERÓI”. Contrato nº. 096/2024 e Processo nº. 9900026769/2023. 
+ORDEM DE INÍCIO 
+Estamos  concedendo  Ordem  de  Início  ao  Contrato  nº.  096/2024,  firmado,  com  a  Empresa, SIGLASUL  CONSULTORIA  LTDA,  à  execução  das 
+obras e/ou serviços de “PRESTAÇÃO  DE  SERVIÇOS  DE  CONSULTORIA,  OBJETIVANDO  ASSESSORAR  O  PODER  PÚBLICO  MUNICIPAL, 
+PROCEDENDO  À  REALIZAÇÃO  DE  ESTUDOS  E  PERECER  CONCLUSIVO  DA  INDICAÇÃO  DA  NECESSIDADE  DO  REEQUILÍBRIO 
+ECONÔMICO-FINANCEIRO,  DO  CONTRATO DE  CONCESSÃO  DE  ÁGUA  E  ESGOTO,  NO  MUNICÍPIO  DE  NITERÓI”, a  partir  do  dia 
+28/10/2024 , com término previsto para 25/01/2025. Proc. nº.9900026769/2023. 
+ 
+INSTRUMENTO:  Apostila  nº  01  ao  Contrato  nº  02/2023;  PARTES:  EMUSA  e RIVALL  ENGENHARIA  LTDA; OBJETO:  reestabelecer  o  equilíbrio 
+econômico inicial do contrato por meio de correção monetária, no período de 01/2022 à 10/2023, para construção de pista de atletismo, vestiários 
+e  reforma  do  campo  de  futebol  no  campus  da  Universidade  Federal  Fluminense – UFF  no  bairro  Gragoatá,  no  Município  de  Niterói/RJ; VALOR: 
+R$350.414,00   (trezentos   e   cinquenta   mil   quatrocentos   e   quatorze   reais),   que   correrão   à   conta   de   orçamento   da   EMUSA   pelo   PT 
+5351.15.451.0010.5071, ND: 4.4.90.51.00, FT: 2.501.03 Nota de Empenho nº 459/2024; FUNDAMENTO: artigo 65, §8º c/c art. 40, XI, todos da Lei 
+nº 8.666/93; DATA: 25/10/2024;  Proc. Nº 9900048483/2023. 
+ACEITE DEFINITIVO 
+Fica aceita definitivamente, a obra referente a,  “ELABORAÇÃO DE PROJETO BÁSICO E EXECUTIVO, PARA INTERVENÇÕES VIÁRIAS, NO 
+EIXO  CENTRO-NORTE  DE  ESTRUTURAÇÃO  E  MOBILIDADE,  TRECHO  FELICIANO  SODRÉ  A  JANSEN  DE  MELO,  NO  MUNICÍPIO  DE 
+NITERÓI/RJ.”      Contrato    nº  60/2022  (Processo  nº.  080008299/2019),  em  nome  da  Empresa, PCE  PROJETOS  e  CONSULTORIA  de 
+ENGENHARIA LTDA. 
