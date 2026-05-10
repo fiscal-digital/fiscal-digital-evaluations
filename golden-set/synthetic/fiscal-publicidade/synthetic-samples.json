@@ -1,0 +1,194 @@
+[
+  {
+    "id": "SYN-PUB-TP-001",
+    "fiscalId": "fiscal-publicidade",
+    "category": "tp_textbook",
+    "type": "publicidade_eleitoral",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2024-08-15",
+      "excerpt": "EXTRATO DO CONTRATO DE PRESTAÇÃO DE SERVIÇOS Nº 234/2024\nPARTES: Município de Caxias do Sul e AGÊNCIA PROPAGANDA SUL LTDA - CNPJ 12.345.678/0001-90\nOBJETO: Contratação direta de agência de publicidade para execução de campanha publicitária institucional 'Caxias que Cuida' - criação, produção e veiculação de inserções em rádio, TV aberta e mídia digital nos meses de agosto a outubro de 2024.\nVALOR GLOBAL: R$ 800.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 75, V (contratação de agência de publicidade)\nVIGÊNCIA: 90 (noventa) dias a partir da assinatura.\nASSINATURA: 15/08/2024."
+    },
+    "rationale": "Data 15/08/2024 dentro da janela eleitoral 2024 (06/jul-31/dez). Objeto contratual estrito: 'agência de publicidade', 'campanha publicitária institucional', 'inserções em rádio, TV'. Valor R$ 800k. Sem invocação de exceção (saúde, calamidade, educativa). Caso textbook do Art. 73 VI 'b' da Lei 9.504/97.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PUB-TP-002",
+    "fiscalId": "fiscal-publicidade",
+    "category": "tp_textbook",
+    "type": "publicidade_eleitoral",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-09-15",
+      "excerpt": "EXTRATO DO PRIMEIRO TERMO ADITIVO AO CONTRATO Nº 089/2026\nPARTES: Município de Porto Alegre e MIDIA PLENA COMUNICAÇÃO LTDA - CNPJ 98.765.432/0001-15\nOBJETO ORIGINAL: Serviços de publicidade institucional - campanha 'Porto Alegre em Movimento'.\nOBJETO DO ADITIVO: Acréscimo quantitativo de 24,9% no valor original para ampliação da veiculação de anúncios publicitários em rádio e TV até dezembro/2026, incluindo nova peça publicitária para mídia digital.\nVALOR ORIGINAL: R$ 1.200.000,00\nVALOR DO ACRÉSCIMO: R$ 298.800,00\nVALOR ATUALIZADO: R$ 1.498.800,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 125.\nDATA DA ASSINATURA: 15/09/2026."
+    },
+    "rationale": "Data 15/09/2026 dentro da janela eleitoral 2026 (04/jul-31/dez). Aditivo amplia campanha publicitária institucional já vigente, com 'anúncios publicitários em rádio e TV'. Vedação alcança ampliação de contrato pré-existente, conforme jurisprudência do TSE.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PUB-TP-003",
+    "fiscalId": "fiscal-publicidade",
+    "category": "tp_textbook",
+    "type": "publicidade_eleitoral",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2024-10-08",
+      "excerpt": "EXTRATO DA NOTA DE EMPENHO Nº 2024NE004532\nCREDOR: RADIO E TV NACIONAL S.A. - CNPJ 11.222.333/0001-44\nOBJETO: Serviços de mídia para inserções em rádio e TV referentes à campanha publicitária institucional 'São Paulo Conectada' - 360 inserções de 30 segundos em emissoras de rádio FM e 80 inserções de 15 segundos em TV aberta, no período de outubro de 2024.\nVALOR: R$ 2.450.000,00\nDOTAÇÃO: 23.122.3024.4346 - Publicidade Institucional.\nDATA: 08/10/2024."
+    },
+    "rationale": "Data 08/10/2024 dentro da janela eleitoral 2024 (06/jul-31/dez). Nota de empenho para 'inserções em rádio e TV' de 'campanha publicitária institucional' — núcleo da vedação do Art. 73 VI 'b'. Dotação orçamentária explícita de 'Publicidade Institucional'.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PUB-FP-001",
+    "fiscalId": "fiscal-publicidade",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fiscal_polissemico",
+    "type": "publicidade_eleitoral",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4113700",
+      "cityName": "Londrina",
+      "date": "2024-09-20",
+      "excerpt": "PORTARIA Nº 678/2024\nO PREFEITO DO MUNICÍPIO DE LONDRINA, no uso de suas atribuições legais,\nRESOLVE:\nArt. 1º DESIGNAR a servidora MARIA SANTOS DA SILVA, matrícula 45.221-3, como Fiscal do Contrato Nº 145/2024, firmado com SELBETTI TECNOLOGIA S.A. - CNPJ 02.094.219/0001-65, cujo objeto é a prestação de serviços de impressão em outsourcing.\nArt. 2º Como suplente, designar JOÃO PEREIRA, matrícula 32.118-7.\nArt. 3º Esta Portaria entra em vigor na data de sua publicação."
+    },
+    "rationale": "Termo 'Fiscal' refere-se a função de fiscalização contratual (Lei 14.133/2021 Art. 117), não a publicidade. Réplica direta de GS-050/054. Sem qualquer menção a publicidade, propaganda ou veiculação de mídia.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir matches em 'Designar.*Fiscal\\s+de\\s+Contrato|Nomear.*Fiscal'. Restringir keywords positivas a 'publicidade institucional', 'propaganda', 'agência de publicidade', 'inserções em rádio/TV', 'campanha publicitária'."
+  },
+  {
+    "id": "SYN-PUB-FP-002",
+    "fiscalId": "fiscal-publicidade",
+    "category": "fp_replica",
+    "fpPattern": "divulgacao_polissemico_atribuicao_funcional",
+    "type": "publicidade_eleitoral",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2024-08-22",
+      "excerpt": "PORTARIA Nº 1.245/2024 - SECRETARIA DE ASSISTÊNCIA SOCIAL\nDispõe sobre as atribuições funcionais da equipe técnica do Programa Família Acolhedora.\nArt. 3º São atribuições do Assistente Social vinculado ao Programa:\nI - acompanhar as famílias acolhedoras e biológicas;\nII - elaborar relatórios técnicos mensais;\nIII - realizar a divulgação do serviço junto à comunidade local, escolas e unidades de saúde;\nIV - articular a rede socioassistencial.\nArt. 4º Esta Portaria entra em vigor na data de sua publicação."
+    },
+    "rationale": "Termo 'divulgação do serviço' descreve atribuição funcional de assistente social (mobilização comunitária do SUAS), não contratação de publicidade institucional. Sem fornecedor, sem valor, sem objeto contratual. Réplica de GS-051.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Rejeitar 'divulgação' isolado como gatilho. Exigir co-ocorrência com objeto contratual (contrato, extrato, nota de empenho) E termo estrito de publicidade ('publicidade institucional', 'propaganda', 'agência de publicidade')."
+  },
+  {
+    "id": "SYN-PUB-FP-003",
+    "fiscalId": "fiscal-publicidade",
+    "category": "fp_replica",
+    "fpPattern": "publicacao_legal_excecao",
+    "type": "publicidade_eleitoral",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2024-07-30",
+      "excerpt": "AVISO DE LICITAÇÃO - PREGÃO ELETRÔNICO Nº 312/2024\nObjeto: Contratação de empresa especializada para prestação de serviços de inserções em Diários Oficiais (União, Estado e Município) para divulgação de anúncios de caráter legal — editais de licitação, atos administrativos sujeitos a publicidade obrigatória, citações, intimações e demais publicações exigidas por lei.\nValor estimado: R$ 480.000,00\nFundamento: Lei 14.133/2021 e Lei 8.666/93 (publicações remanescentes).\nAbertura: 12/08/2024."
+    },
+    "rationale": "Publicação legal obrigatória (editais, atos administrativos) é EXCEÇÃO expressa à vedação eleitoral — Lei 9.504/97 Art. 73 VI 'b' ressalva propaganda de produtos/serviços que tenham concorrência no mercado e veicula-se que publicações legais são obrigação de publicidade (lato sensu) impostas por lei. Réplica de GS-052.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Adicionar lista de exclusão: 'anúncios\\s+de\\s+caráter\\s+legal|publicação\\s+(de\\s+)?editais|publicação\\s+legal|inserções\\s+em\\s+Diários?\\s+Oficiais?'. Estes são publicidade-dever, não publicidade-promoção."
+  },
+  {
+    "id": "SYN-PUB-FP-004",
+    "fiscalId": "fiscal-publicidade",
+    "category": "fp_replica",
+    "fpPattern": "concessao_patrimonial_polaridade_invertida",
+    "type": "publicidade_eleitoral",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2024-09-12",
+      "excerpt": "EXTRATO DO 2º TERMO ADITIVO AO CONTRATO DE CONCESSÃO Nº 008/2019\nCONCEDENTE: Município de Manaus\nCONCESSIONÁRIA: BRASIL OUTDOOR PUBLICIDADE LTDA - CNPJ 33.444.555/0001-77\nOBJETO ORIGINAL: Concessão de uso do mobiliário urbano para exploração comercial de outdoors e painéis publicitários nas vias públicas municipais.\nOBJETO DO ADITIVO: Prorrogação contratual por 24 meses, mantendo a outorga mensal devida pela CONCESSIONÁRIA ao MUNICÍPIO no valor de R$ 145.000,00/mês (reajustado pelo IPCA).\nNATUREZA: receita patrimonial municipal (ingresso de recursos).\nDATA: 12/09/2024."
+    },
+    "rationale": "Polaridade invertida: a empresa concessionária PAGA outorga ao Município (receita patrimonial), o Município não contrata serviço publicitário. Não há despesa pública nem propaganda institucional do governo. Réplica de GS-053.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Detector de polaridade da operação: se o ato é CONCESSÃO/PERMISSÃO com Contratada/Concessionária pagando outorga ao Município (palavras-chave: 'concedente: município', 'outorga.*ao município', 'receita patrimonial'), suprimir. Adicionar exclusão: 'concessão.*outdoor|concessão.*mobiliário\\s+urbano|outorga.*pela\\s+concessionária'."
+  },
+  {
+    "id": "SYN-PUB-FP-005",
+    "fiscalId": "fiscal-publicidade",
+    "category": "fp_replica",
+    "fpPattern": "cabecalho_orgao_de_divulgacao",
+    "type": "publicidade_eleitoral",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2024-10-14",
+      "excerpt": "DIÁRIO OFICIAL DO MUNICÍPIO DO RECIFE\nÓrgão de divulgação oficial dos atos do Município do Recife - Lei nº 18.142/2015\nAno LIX - Nº 192 - Recife, 14 de outubro de 2024\n----------------------------------------\nDECRETO Nº 35.412/2024\nAbre crédito suplementar no valor de R$ 1.250.000,00 em favor da Secretaria de Saúde para cobertura de despesas de custeio da Atenção Básica.\nO PREFEITO DO RECIFE, no uso de suas atribuições, DECRETA:\nArt. 1º Fica aberto crédito suplementar..."
+    },
+    "rationale": "'Órgão de divulgação' é boilerplate de cabeçalho do Diário Oficial (definição institucional do veículo, Lei nº 18.142/2015), não contratação. O conteúdo do ato é decreto orçamentário de saúde, sem qualquer relação com publicidade. Réplica do padrão recorrente de cabeçalho de DO.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Adicionar à lista de exclusão de boilerplate de cabeçalho: 'Órgão\\s+de\\s+divulgação\\s+(oficial\\s+)?(d[oa]s?\\s+atos\\s+)?d[oe]\\s+Município'. Idealmente, ignorar primeiras 5 linhas do gazette (cabeçalho)."
+  },
+  {
+    "id": "SYN-PUB-FP-006",
+    "fiscalId": "fiscal-publicidade",
+    "category": "fp_edge_case",
+    "fpPattern": "fora_janela_por_um_dia",
+    "type": "publicidade_eleitoral",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4205407",
+      "cityName": "Florianópolis",
+      "date": "2024-07-03",
+      "excerpt": "EXTRATO DO CONTRATO Nº 178/2024\nPARTES: Município de Florianópolis e PUBLICOM AGÊNCIA DE PUBLICIDADE LTDA - CNPJ 55.666.777/0001-22\nOBJETO: Serviços de publicidade institucional - campanha 'Floripa Sustentável' - criação, produção e veiculação de peças publicitárias em rádio, TV e mídia exterior.\nVALOR: R$ 620.000,00\nVIGÊNCIA: 180 (cento e oitenta) dias.\nASSINATURA: 03/07/2024.\nFUNDAMENTO: Lei 14.133/2021."
+    },
+    "rationale": "Edge case temporal: contrato assinado em 03/07/2024, três dias ANTES do início da janela vedada de 2024 (06/07/2024 = três meses antes do 1º turno em 06/10/2024). Objeto seria TP textbook se a data fosse 06/07 ou posterior, mas está estritamente fora. Gate temporal deve ser exato.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Manter validação rigorosa de janela: gazette.date >= 06/07 do ano eleitoral (2020, 2022, 2024) OU >= 04/07/2026 (1º turno em 04/10/2026). Comparação inclusiva no início e em 31/12 no fim. Não tolerar 'arredondamento' para mês."
+  },
+  {
+    "id": "SYN-PUB-FP-007",
+    "fiscalId": "fiscal-publicidade",
+    "category": "fp_edge_case",
+    "fpPattern": "excecao_legal_calamidade",
+    "type": "publicidade_eleitoral",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2024-09-05",
+      "excerpt": "EXTRATO DO CONTRATO EMERGENCIAL Nº 311/2024\nPARTES: Município de Porto Alegre e RADIO ALERTA COMUNICAÇÃO LTDA - CNPJ 77.888.999/0001-33\nOBJETO: Contratação emergencial de serviços de mídia para veiculação de campanha publicitária de utilidade pública relativa à situação de calamidade pública decretada pelo Decreto Municipal nº 22.487/2024 (enchentes do Guaíba) - inserções em rádio e TV com orientações sobre pontos de abrigo, doação de mantimentos e procedimentos de evacuação.\nVALOR: R$ 380.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 75, VIII (emergência) c/c Lei 9.504/97 Art. 73 §3º (exceção para grave e urgente necessidade pública reconhecida pela Justiça Eleitoral em caso de calamidade).\nDATA: 05/09/2024."
+    },
+    "rationale": "Data 05/09/2024 dentro da janela eleitoral 2024, mas há EXCEÇÃO LEGAL EXPRESSA do Art. 73 §3º da Lei 9.504/97: campanhas de utilidade pública em situação de calamidade reconhecida pela Justiça Eleitoral são permitidas. Decreto de calamidade citado e fundamento legal explícito.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Detector de exceção legal: se excerpt contém ('calamidade pública' OU 'emergência sanitária' OU 'situação de emergência') E ('decreto.*calamidade' OU 'Art.\\s*73\\s*§\\s*3' OU 'utilidade pública'), suprimir. Esta é exceção textual da Lei 9.504/97."
+  },
+  {
+    "id": "SYN-PUB-FP-008",
+    "fiscalId": "fiscal-publicidade",
+    "category": "fp_edge_case",
+    "fpPattern": "excecao_legal_campanha_educativa_saude",
+    "type": "publicidade_eleitoral",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2024-08-30",
+      "excerpt": "EXTRATO DO CONTRATO Nº 542/2024 - SECRETARIA DE SAÚDE\nPARTES: Secretaria de Saúde do Distrito Federal e VETOR COMUNICAÇÃO INSTITUCIONAL LTDA - CNPJ 44.555.666/0001-88\nOBJETO: Serviços de publicidade para campanha educativa de vacinação contra Influenza, HPV e Sarampo, voltada à conscientização da população sobre o calendário vacinal do SUS — peças informativas em rádio, TV e mídia digital, com chamada à ação de comparecimento às UBS.\nVALOR: R$ 510.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021 c/c Lei 9.504/97 Art. 73 §3º (exceção para campanhas de caráter educativo, informativo ou de orientação social vinculadas à saúde pública).\nDATA: 30/08/2024."
+    },
+    "rationale": "Data dentro da janela eleitoral 2024, mas é EXCEÇÃO EXPRESSA do Art. 73 §3º da Lei 9.504/97: campanhas educativas, informativas ou de orientação social em saúde pública são permitidas, desde que sem promoção pessoal de autoridades. Sem nome/imagem do gestor, foco em vacinação.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Detector de exceção legal: se excerpt contém ('campanha educativa' OU 'campanha informativa' OU 'orientação social') E ('vacinação' OU 'saúde pública' OU 'prevenção' OU 'SUS') E referência a 'Art.\\s*73\\s*§\\s*3', suprimir. Validar ausência de promoção pessoal (nome/imagem de gestor)."
+  }
+]

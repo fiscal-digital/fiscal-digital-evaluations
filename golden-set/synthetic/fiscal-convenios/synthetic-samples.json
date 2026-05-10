@@ -1,0 +1,211 @@
+[
+  {
+    "id": "SYN-CONV-TP-001",
+    "fiscalId": "fiscal-convenios",
+    "category": "tp_textbook",
+    "type": "convenio_sem_chamamento",
+    "expectedOutcome": "TP",
+    "expectedRiskScore": ">= 70",
+    "expectedConfidence": ">= 0.75",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-04-15",
+      "excerpt": "EXTRATO DO TERMO DE FOMENTO Nº 023/2026\nPARTES: Município de Porto Alegre, por meio da Secretaria Municipal de Assistência Social, e CASA DE APOIO SÃO LUCAS - CNPJ 12.345.678/0001-90.\nOBJETO: Repasse financeiro para manutenção de abrigo de idosos em situação de vulnerabilidade.\nVALOR: R$ 240.000,00.\nVIGÊNCIA: 12 meses, contados da data de publicação.\nFundamento legal: Lei 13.019/2014.\nDOTAÇÃO ORÇAMENTÁRIA: 08.244.0050.4321 - Manutenção das Atividades de Proteção Social.\nO presente Termo de Fomento é celebrado conforme Plano de Trabalho aprovado pela SMAS.",
+      "fullPageContext": "EDIÇÃO Nº 4982 - DIÁRIO OFICIAL ELETRÔNICO DO MUNICÍPIO DE PORTO ALEGRE - SECRETARIA MUNICIPAL DE ASSISTÊNCIA SOCIAL - O Secretário Municipal de Assistência Social, no uso de suas atribuições legais, torna público o extrato do Termo de Fomento abaixo. [excerpt]. Demais cláusulas em conformidade com a minuta padrão SMAS/PMPA. Publicado em 15/04/2026."
+    },
+    "rationale": "Termo de Fomento celebrado entre Município e OSC privada (Casa de Apoio), repasse R$ 240k, fundamento expresso Lei 13.019/2014, sem qualquer menção a 'chamamento público' no documento inteiro nem invocação de Art. 30 (dispensa). FiscalConvênios DEVE detectar: (i) instrumento típico Lei 13.019, (ii) contraparte é OSC privada (CNPJ não-governamental, sem termos universidade/fundação/autarquia), (iii) há repasse financeiro positivo, (iv) ausência total de fundamentação para dispensa de chamamento.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-CONV-TP-002",
+    "fiscalId": "fiscal-convenios",
+    "category": "tp_textbook",
+    "type": "convenio_sem_chamamento",
+    "expectedOutcome": "TP",
+    "expectedRiskScore": ">= 70",
+    "expectedConfidence": ">= 0.75",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2025-09-22",
+      "excerpt": "TERMO DE COLABORAÇÃO Nº 047/2025\nA PREFEITURA MUNICIPAL DE CAXIAS DO SUL, por meio da Secretaria Municipal de Cultura, celebra Termo de Colaboração com o INSTITUTO CULTURAL ARTE PARA TODOS - CNPJ 12.345.678/0001-15, qualificada como Organização da Sociedade Civil, para execução de projeto de oficinas culturais nas escolas públicas do município.\nVALOR TOTAL: R$ 87.500,00.\nVIGÊNCIA: 8 meses.\nFUNDAMENTO LEGAL: Lei Federal nº 13.019/2014, Lei Municipal nº 8.842/2024 e Decreto Municipal nº 21.110/2024.",
+      "fullPageContext": "DIÁRIO OFICIAL DO MUNICÍPIO DE CAXIAS DO SUL - ANO XXXII - Nº 6.741 - Secretaria Municipal de Cultura. O Secretário Municipal de Cultura torna público o presente extrato. [excerpt]. Os recursos correrão por conta da dotação orçamentária 13.392.0034.2456 - Fomento Cultural. Plano de trabalho disponível na sede da Secretaria. Caxias do Sul, 22 de setembro de 2025."
+    },
+    "rationale": "Termo de Colaboração entre Município e OSC explicitamente qualificada (Instituto Cultural). Fundamento Lei 13.019 expresso. Valor R$ 87.500. SEM menção a chamamento público em nenhuma parte do documento, SEM fundamento Art. 30. Caso textbook que o Fiscal DEVE flagrar após patch.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-CONV-TP-003",
+    "fiscalId": "fiscal-convenios",
+    "category": "tp_textbook",
+    "type": "convenio_sem_chamamento",
+    "expectedOutcome": "TP",
+    "expectedRiskScore": ">= 70",
+    "expectedConfidence": ">= 0.75",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2024-11-08",
+      "excerpt": "EXTRATO DE TERMO DE FOMENTO\nProcesso SEI nº 6024.2024/0009876-3.\nPARTES: PREFEITURA DO MUNICÍPIO DE SÃO PAULO, por meio da Secretaria Municipal da Saúde, e ASSOCIAÇÃO BENEFICENTE COMUNITÁRIA VIDA NOVA, CNPJ 12.345.678/0001-44.\nOBJETO: Apoio a projeto de prevenção de doenças crônicas em comunidades vulneráveis da Zona Leste.\nVALOR: R$ 415.000,00.\nVIGÊNCIA: 18 meses.\nFUNDAMENTO: Lei nº 13.019/2014 e Decreto Municipal nº 57.575/2017.\nDATA DE ASSINATURA: 05/11/2024.",
+      "fullPageContext": "DIÁRIO OFICIAL DA CIDADE DE SÃO PAULO - SECRETARIA MUNICIPAL DA SAÚDE - GABINETE DO SECRETÁRIO. EXTRATOS. [excerpt]. Plano de Trabalho parte integrante do termo, arquivado no processo SEI. São Paulo, 08 de novembro de 2024. JOÃO PEREIRA DA SILVA - Secretário Municipal da Saúde."
+    },
+    "rationale": "Termo de Fomento Município-OSC (Associação Beneficente — claramente terceiro setor). Fundamento Lei 13.019. R$ 415k. Documento NÃO menciona chamamento público nem invoca dispensa Art. 30 (vulnerabilidade poderia ser usada como fundamento, mas o ato não a invocou). Padrão clássico de irregularidade detectável.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-CONV-FP-001",
+    "fiscalId": "fiscal-convenios",
+    "category": "fp_replica",
+    "fpPattern": "contrato_repasse_federal_mtur",
+    "type": "convenio_sem_chamamento",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-03-10",
+      "excerpt": "CONTRATO DE REPASSE Nº 0876543-21/2025/MTUR/CAIXA\nPARTES: A UNIÃO FEDERAL, por intermédio do MINISTÉRIO DO TURISMO, representado pela CAIXA ECONÔMICA FEDERAL na qualidade de mandatária, e o GOVERNO DO DISTRITO FEDERAL/MUNICÍPIO DE BRASÍLIA.\nOBJETO: Construção de centro de eventos turísticos no Lago Sul.\nVALOR TOTAL: R$ 5.000.000,00 (cinco milhões de reais), sendo R$ 4.750.000,00 de repasse federal e R$ 250.000,00 de contrapartida municipal.\nFUNDAMENTO: Lei nº 8.666/93, Decreto nº 6.170/2007 e Instrução Normativa STN nº 01/97.\nVIGÊNCIA: 24 meses.",
+      "fullPageContext": "DIÁRIO OFICIAL DO DISTRITO FEDERAL - SECRETARIA DE OBRAS - EXTRATO DE CONTRATO DE REPASSE. Publicação por força do Art. 61, parágrafo único, da Lei 8.666/93. [excerpt]. Brasília, 10 de março de 2026."
+    },
+    "rationale": "Transferência voluntária União → Município intermediada pela CAIXA, regida por Lei 8.666 e IN STN, NÃO pela Lei 13.019. Não há OSC envolvida — partes são entes federativos. FiscalConvênios atualmente dispara erradamente (réplica do padrão GS-056/095 do golden set real).",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "ADR-001 patch 1 — Whitelist de siglas federais: excluir CONTRATO DE REPASSE Nº ... /MTUR/CAIXA (regex: CONTRATO\\s+DE\\s+REPASSE.*N[º°]\\s*\\d+.*\\/(MTUR|MDR|MAPA|MS|MEC|MJ|MMA|MCID|MCIDADANIA|MIDR|MCTI|MEL|MINC)\\/CAIXA?\\b)"
+  },
+  {
+    "id": "SYN-CONV-FP-002",
+    "fiscalId": "fiscal-convenios",
+    "category": "fp_replica",
+    "fpPattern": "contrato_repasse_federal_mapa",
+    "type": "convenio_sem_chamamento",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2025-08-19",
+      "excerpt": "EXTRATO DO CONTRATO DE REPASSE Nº 0912345-67/2024/MAPA/CAIXA\nCONCEDENTE: UNIÃO FEDERAL, por intermédio do MINISTÉRIO DA AGRICULTURA, PECUÁRIA E ABASTECIMENTO.\nMANDATÁRIA: CAIXA ECONÔMICA FEDERAL.\nCONVENENTE: MUNICÍPIO DE CAXIAS DO SUL.\nOBJETO: Aquisição de equipamentos para fortalecimento da agricultura familiar e patrulha agrícola mecanizada.\nVALOR DE REPASSE FEDERAL: R$ 1.480.000,00.\nCONTRAPARTIDA MUNICIPAL: R$ 74.000,00.\nFUNDAMENTO LEGAL: Decreto nº 6.170/2007, Portaria Interministerial nº 424/2016 e IN STN nº 01/97.",
+      "fullPageContext": "DIÁRIO OFICIAL DE CAXIAS DO SUL - ANO XXXII - Nº 6.708. Secretaria Municipal de Desenvolvimento Rural. Extratos publicados conforme Art. 61, parágrafo único, da Lei 8.666/93. [excerpt]. Caxias do Sul, 19 de agosto de 2025."
+    },
+    "rationale": "Transferência União → Município via CAIXA (mandatária do MAPA). Regido por Decreto 6.170 e Portaria 424/2016, fora do escopo Lei 13.019/2014. Réplica direta do padrão GS-058 do golden set real.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "ADR-001 patch 1 — Whitelist de siglas federais (MAPA capturado pelo regex)"
+  },
+  {
+    "id": "SYN-CONV-FP-003",
+    "fiscalId": "fiscal-convenios",
+    "category": "fp_replica",
+    "fpPattern": "decreto_suplementar_convenio_universidade",
+    "type": "convenio_sem_chamamento",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2025-12-03",
+      "excerpt": "DECRETO Nº 53.872, DE 02 DE DEZEMBRO DE 2025.\nAbre Crédito Adicional Suplementar no valor de R$ 3.250.000,00 em favor de diversas Unidades Orçamentárias da Administração Direta para reforço de dotações destinadas à execução de convênio com a Universidade Federal do Rio de Janeiro - UFRJ, fonte de recursos 0124, conforme Plano Plurianual.\nO PREFEITO DO MUNICÍPIO DO RIO DE JANEIRO, no uso das atribuições que lhe são conferidas pela Lei Orgânica e tendo em vista o disposto no Art. 43 da Lei nº 4.320/64 e na Lei Municipal nº 7.960/2024, DECRETA: Art. 1º Fica aberto crédito adicional suplementar no valor de R$ 3.250.000,00 (três milhões duzentos e cinquenta mil reais).",
+      "fullPageContext": "DIÁRIO OFICIAL DO MUNICÍPIO DO RIO DE JANEIRO - PODER EXECUTIVO. ANO XXXIX - Nº 192. SECRETARIA MUNICIPAL DA CASA CIVIL. ATOS DO PREFEITO. [excerpt]. Anexo I - Detalhamento das fontes e aplicações. Rio de Janeiro, 03 de dezembro de 2025. EDUARDO PAES - Prefeito."
+    },
+    "rationale": "Ato é DECRETO ORÇAMENTÁRIO de abertura de crédito adicional suplementar (Art. 43 Lei 4.320/64), não instrumento de transferência. A palavra 'convênio' aparece apenas como referência ao destino orçamentário, e a contraparte é UNIVERSIDADE FEDERAL (UFRJ) — administração indireta federal, não OSC. Réplica do padrão GS-017/094 do golden set real.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "ADR-001 patches 3 e 7 combinados: (3) Excluir contrapartes não-OSC — match em 'Universidade Federal'/'UFRJ'; (7) Exclusão de decreto orçamentário — match em 'CRÉDITO ADICIONAL SUPLEMENTAR' e 'abertura de crédito' e 'Lei 4.320/64'"
+  },
+  {
+    "id": "SYN-CONV-FP-004",
+    "fiscalId": "fiscal-convenios",
+    "category": "fp_replica",
+    "fpPattern": "convenio_fundacao_publica",
+    "type": "convenio_sem_chamamento",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-01-28",
+      "excerpt": "EXTRATO DE CONVÊNIO\nProcesso SEI nº 6018.2026/0001234-5.\nPARTES: PREFEITURA DO MUNICÍPIO DE SÃO PAULO, por meio da Secretaria Municipal da Saúde, e a FUNDAÇÃO MUNICIPAL DO HOSPITAL DO SERVIDOR PÚBLICO MUNICIPAL - HSPM, fundação pública integrante da Administração Indireta do Município.\nOBJETO: Cooperação técnica para gestão compartilhada de leitos de UTI Covid-19.\nVALOR: R$ 2.800.000,00.\nVIGÊNCIA: 24 meses.\nFUNDAMENTO LEGAL: Art. 241 da Constituição Federal, Lei nº 11.107/2005 e Lei Municipal nº 13.531/2003 (criação da Fundação).",
+      "fullPageContext": "DIÁRIO OFICIAL DA CIDADE DE SÃO PAULO - SECRETARIA MUNICIPAL DA SAÚDE - EXTRATOS. [excerpt]. São Paulo, 28 de janeiro de 2026."
+    },
+    "rationale": "Convênio firmado entre Município e fundação pública municipal (HSPM — Administração Indireta). Fundamento é Art. 241 CF e Lei 11.107/2005 (consórcios públicos), NÃO Lei 13.019/2014 (que é restrita a OSC do terceiro setor). Réplica do padrão GS-055 do golden set real (Hospital Odilon Behrens em BH).",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "ADR-001 patch 3 — Excluir contrapartes não-OSC: regex match em 'fundação\\s+(municipal|estadual|federal)' e 'hospital\\s+\\w+' (HSPM); adicionalmente patch 2 — instrumento é 'CONVÊNIO' simples, não 'Termo de Fomento/Colaboração'"
+  },
+  {
+    "id": "SYN-CONV-FP-005",
+    "fiscalId": "fiscal-convenios",
+    "category": "fp_replica",
+    "fpPattern": "polaridade_negativa_rescisao",
+    "type": "convenio_sem_chamamento",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2025-07-14",
+      "excerpt": "DECRETO Nº 22.198, DE 14 DE JULHO DE 2025.\nDispõe sobre a rescisão do Termo de Colaboração nº 011/2023 celebrado com a OSC INSTITUTO SOLIDÁRIO PORTO ALEGRENSE e determina sua substituição por procedimento licitatório.\nO PREFEITO MUNICIPAL DE PORTO ALEGRE, considerando a Auditoria Interna nº 045/2025 que apontou falhas graves na prestação de contas, DECRETA: Art. 1º Fica rescindido o Termo de Colaboração nº 011/2023. Art. 2º A OSC NÃO PODERÁ ter o Termo de Colaboração renovado nem celebrar novo instrumento congênere com este Município pelo prazo de 5 (cinco) anos. Art. 3º O serviço será prestado, doravante, mediante processo licitatório a ser deflagrado pela Secretaria Municipal de Assistência Social no prazo de 60 dias.",
+      "fullPageContext": "DIÁRIO OFICIAL ELETRÔNICO DE PORTO ALEGRE - ATOS DO PREFEITO. [excerpt]. Sebastião MELO - Prefeito Municipal. Porto Alegre, 14 de julho de 2025."
+    },
+    "rationale": "Decreto está RESCINDINDO um termo existente e SUBSTITUINDO por licitação — movimento favorável à conformidade. Polaridade negativa explícita: 'NÃO PODERÁ ter o Termo de Colaboração renovado'. Réplica direta do padrão GS-096 do golden set real.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "ADR-001 patch 4 — Detector de polaridade negativa: 'não\\s+(poderá|será|deverá)\\b' aparece a < 100 chars do termo gatilho ('Termo de Colaboração')"
+  },
+  {
+    "id": "SYN-CONV-FP-EDGE-001",
+    "fiscalId": "fiscal-convenios",
+    "category": "fp_edge_case",
+    "fpPattern": "termo_fomento_com_chamamento_referenciado",
+    "type": "convenio_sem_chamamento",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-02-17",
+      "excerpt": "EXTRATO DO TERMO DE FOMENTO Nº 008/2026\nPARTES: PREFEITURA DO MUNICÍPIO DE SÃO PAULO, por meio da Secretaria Municipal de Direitos Humanos e Cidadania, e CENTRO DE ACOLHIDA HORIZONTE NOVO - CNPJ 12.345.678/0001-77.\nOBJETO: Acolhimento de pessoas em situação de rua na região central.\nVALOR: R$ 720.000,00.\nVIGÊNCIA: 12 meses.\nFUNDAMENTO LEGAL: Lei nº 13.019/2014.\nA presente celebração é resultado do procedimento de chamamento público nº 003/2025/SMDHC, homologado pelo Despacho publicado no DOC de 30/12/2025, página 47.",
+      "fullPageContext": "DIÁRIO OFICIAL DA CIDADE DE SÃO PAULO - SECRETARIA MUNICIPAL DE DIREITOS HUMANOS E CIDADANIA. EXTRATOS. [excerpt]. Plano de Trabalho parte integrante. São Paulo, 17 de fevereiro de 2026."
+    },
+    "rationale": "Edge case: o documento INCLUI menção explícita ao chamamento público anterior ('procedimento de chamamento público nº 003/2025/SMDHC, homologado...'). Mesmo sendo Termo de Fomento Lei 13.019 com OSC, o requisito legal foi cumprido — não há irregularidade. Testa que o Fiscal não dispara só por padrão de instrumento, lendo o documento inteiro.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "ADR-001 patch 6 — Detector de chamamento referenciado: buscar 'chamamento' no documento inteiro; reduzir confidence em 0,3 (suficiente para cair abaixo do limiar 0,75)"
+  },
+  {
+    "id": "SYN-CONV-FP-EDGE-002",
+    "fiscalId": "fiscal-convenios",
+    "category": "fp_edge_case",
+    "fpPattern": "oscip_dispensa_art_30_fundamentada",
+    "type": "convenio_sem_chamamento",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-01-09",
+      "excerpt": "EXTRATO DO TERMO DE COLABORAÇÃO Nº 002/2026\nPARTES: MUNICÍPIO DE CAXIAS DO SUL, por meio da Secretaria Municipal de Saúde, e a INSTITUTO MÉDICO HUMANITAS - OSCIP, CNPJ 12.345.678/0001-22, qualificada como OSCIP nos termos da Lei nº 9.790/99.\nOBJETO: Prestação de atendimento médico emergencial a vítimas das enchentes de novembro/2025 declaradas situação de calamidade pública pelo Decreto Municipal nº 22.450/2025.\nVALOR: R$ 380.000,00.\nVIGÊNCIA: 6 meses.\nFUNDAMENTO LEGAL: Lei nº 13.019/2014, com dispensa de chamamento público nos termos do Art. 30, inciso I (situação de urgência decorrente de calamidade pública), conforme Parecer Jurídico PGM nº 011/2026 e Decreto Municipal nº 22.450/2025 (declaração de calamidade).",
+      "fullPageContext": "DIÁRIO OFICIAL DE CAXIAS DO SUL - ANO XXXIII - Nº 6.823. Secretaria Municipal de Saúde. [excerpt]. Caxias do Sul, 09 de janeiro de 2026."
+    },
+    "rationale": "Edge case: Termo de Colaboração com OSCIP (terceiro setor genuíno), MAS com dispensa de chamamento público FUNDAMENTADA expressamente no Art. 30, inciso I (urgência por calamidade pública), com parecer jurídico PGM e decreto declaratório de calamidade citados. A dispensa é legal e o ato a invoca corretamente. Testa que o Fiscal lê o fundamento da dispensa antes de flagrar.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Patch novo proposto (não está no ADR-001 explicitamente; sugerir patch 8): Detector de fundamento Art. 30 — se documento contém 'Art\\.?\\s+30' próximo a 'dispensa' e 'Lei\\s+13\\.019', reduzir riskScore em 40 pontos. Adicionalmente patch 6 (chamamento referenciado) se aplica de forma indireta — palavra 'chamamento público' aparece no contexto da dispensa."
+  },
+  {
+    "id": "SYN-CONV-FP-EDGE-003",
+    "fiscalId": "fiscal-convenios",
+    "category": "fp_edge_case",
+    "fpPattern": "acordo_cooperacao_sem_repasse",
+    "type": "convenio_sem_chamamento",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2025-10-21",
+      "excerpt": "EXTRATO DO ACORDO DE COOPERAÇÃO TÉCNICA Nº 015/2025\nPARTES: MUNICÍPIO DO RIO DE JANEIRO, por meio da Secretaria Municipal de Educação, e a ASSOCIAÇÃO BRASILEIRA DE LITERATURA INFANTIL - ABLI, CNPJ 12.345.678/0001-66.\nOBJETO: Cooperação técnica para realização de oficinas de leitura voluntárias em escolas municipais, mediante esforço conjunto e sem qualquer transferência de recursos financeiros entre as partes.\nVALOR: NÃO HÁ REPASSE FINANCEIRO. Cada partícipe arca com seus próprios custos operacionais.\nVIGÊNCIA: 12 meses.\nFUNDAMENTO LEGAL: Art. 116 da Lei nº 8.666/93 e Lei nº 13.019/2014, Art. 2º, VIII-A (Acordo de Cooperação — sem dispensa de chamamento por ausência de transferência de recursos, conforme Art. 29).",
+      "fullPageContext": "DIÁRIO OFICIAL DO MUNICÍPIO DO RIO DE JANEIRO - SECRETARIA MUNICIPAL DE EDUCAÇÃO. EXTRATOS. [excerpt]. Plano de Trabalho parte integrante. Rio de Janeiro, 21 de outubro de 2025."
+    },
+    "rationale": "Edge case: Acordo de Cooperação com OSC, mas SEM repasse financeiro. Lei 13.019/2014 Art. 29 dispensa chamamento público para Acordos de Cooperação que não envolvem transferência de recursos. Categoria expressamente prevista como inaplicável ao gatilho de chamamento.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "ADR-001 patch 2 — Filtro de tipo de instrumento: 'Acordo de Cooperação Técnica' está na lista de exclusão explícita. Adicionalmente: detector secundário de 'NÃO HÁ REPASSE FINANCEIRO' / 'sem.*transferência.*recursos' deve neutralizar finding."
+  }
+]

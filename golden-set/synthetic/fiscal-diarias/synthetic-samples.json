@@ -1,0 +1,214 @@
+[
+  {
+    "id": "SYN-DIA-TP-001",
+    "fiscalId": "fiscal-diarias",
+    "category": "tp_textbook",
+    "type": "diaria_irregular",
+    "expectedOutcome": "TP",
+    "expectedRiskScore": ">= 70",
+    "expectedConfidence": ">= 0.75",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-03-15",
+      "excerpt": "PORTARIA Nº 234/2026\nO SECRETÁRIO MUNICIPAL DE ADMINISTRAÇÃO, no uso de suas atribuições legais, autoriza o pagamento de diárias no valor unitário de R$ 1.500,00 ao servidor JOÃO DA SILVA, matrícula 12345, lotado na Secretaria Municipal de Administração, para deslocamento à cidade de Brasília/DF nos dias 12, 13, 14 e 15 de março de 2026, totalizando R$ 6.000,00, a fim de participar de reunião técnica intermunicipal.",
+      "fullPageContext": "DIÁRIO OFICIAL DO MUNICÍPIO DE CAXIAS DO SUL — Edição nº 4.521 — 15 de março de 2026 — Atos do Poder Executivo. PORTARIA Nº 234/2026 ... Publique-se, registre-se e cumpra-se. Caxias do Sul, 14 de março de 2026."
+    },
+    "rationale": "Valor R$ 1.500/dia excede limite Lei 8.112/90 Art. 58 (R$ 800). Servidor identificado por nome + matrícula, verbo de pagamento explícito (\"autoriza o pagamento de diárias\"), valor monetário em janela < 150 chars. FiscalDiárias DEVE detectar.",
+    "shouldTriggerAfterPatch": true,
+    "lawReference": "Lei 8.112/90, Art. 58 — limite diária servidor"
+  },
+  {
+    "id": "SYN-DIA-TP-002",
+    "fiscalId": "fiscal-diarias",
+    "category": "tp_textbook",
+    "type": "diaria_fim_semana",
+    "expectedOutcome": "TP",
+    "expectedRiskScore": ">= 65",
+    "expectedConfidence": ">= 0.75",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-04-10",
+      "excerpt": "PORTARIA Nº 1.087/2026\nConcede ao servidor MARCOS PEREIRA DOS SANTOS, matrícula 78901, ocupante do cargo de Assessor Especial, o pagamento de 02 (duas) diárias no valor unitário de R$ 450,00, totalizando R$ 900,00, referentes ao deslocamento à cidade de Florianópolis/SC nos dias 11/04/2026 (sábado) e 12/04/2026 (domingo).",
+      "fullPageContext": "DIÁRIO OFICIAL DE PORTO ALEGRE — Edição nº 6.182 — 10 de abril de 2026 — Atos do Gabinete do Prefeito. PORTARIA Nº 1.087/2026 ... Publique-se. Porto Alegre, 10 de abril de 2026."
+    },
+    "rationale": "Pagamento de diárias inteiramente em sábado e domingo (11 e 12/04/2026 são fim de semana confirmado pela BrasilAPI), sem qualquer menção a evento, audiência ou justificativa para o deslocamento em dia não útil. Servidor identificado, verbo \"concede\", valor explícito.",
+    "shouldTriggerAfterPatch": true,
+    "lawReference": "Lei 8.112/90, Art. 58 c/c jurisprudência TCU sobre diárias em fim de semana sem justificativa"
+  },
+  {
+    "id": "SYN-DIA-TP-003",
+    "fiscalId": "fiscal-diarias",
+    "category": "tp_textbook",
+    "type": "diaria_sem_agenda",
+    "expectedOutcome": "TP",
+    "expectedRiskScore": ">= 60",
+    "expectedConfidence": ">= 0.70",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-02-25",
+      "excerpt": "PORTARIA SMA Nº 045/2026\nAutoriza-se o pagamento de 05 (cinco) diárias no valor unitário de R$ 700,00, totalizando R$ 3.500,00, à servidora ANA PAULA RODRIGUES, matrícula 456789, para viagem de 22 a 26 de fevereiro de 2026 ao Rio de Janeiro/RJ.",
+      "fullPageContext": "DIÁRIO OFICIAL DA CIDADE DE SÃO PAULO — Ano 71 — Edição nº 38 — 25 de fevereiro de 2026 — Secretaria Municipal de Administração."
+    },
+    "rationale": "Autorização de diárias sem qualquer menção a missão, evento, reunião, congresso, audiência ou objetivo formal do deslocamento. Apenas \"viagem\" genérica. Valor abaixo do limite mas ausência de finalidade documentada viola Lei 8.112/90 Art. 58 (diária pressupõe missão oficial).",
+    "shouldTriggerAfterPatch": true,
+    "lawReference": "Lei 8.112/90, Art. 58 — diária só é devida em missão a serviço"
+  },
+  {
+    "id": "SYN-DIA-FP-001",
+    "fiscalId": "fiscal-diarias",
+    "category": "fp_replica",
+    "fpPattern": "ata_rp_hospedagem",
+    "type": "diaria_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3549904",
+      "cityName": "São José do Rio Preto",
+      "date": "2026-02-20",
+      "excerpt": "EXTRATO DA ATA DE REGISTRO DE PREÇOS Nº 012/2026\nPREGÃO ELETRÔNICO Nº 045/2025\nPARTE: HOTEL CENTRAL EIRELI - CNPJ 12.345.678/0001-90\nOBJETO: PRESTAÇÃO DE SERVIÇO DE HOSPEDAGEM EM HOTEL — APARTAMENTO SIMPLES, VALOR UNITÁRIO POR DIÁRIA R$ 195,00.\nPRAZO: 12 (DOZE) MESES\nVALOR TOTAL ESTIMADO: R$ 136.500,00",
+      "fullPageContext": "DIÁRIO OFICIAL DO MUNICÍPIO DE SÃO JOSÉ DO RIO PRETO — 20 de fevereiro de 2026 — Atos da Secretaria de Administração."
+    },
+    "rationale": "Ata de Registro de Preços para hospedagem comercial (hotel), não pagamento de diária a servidor. \"Diária\" aqui é unidade de medida do contrato. Padrão idêntico a GS-015/GS-048/GS-049 do golden set real.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Skip imediato se excerpt contém 'ATA DE REGISTRO DE PREÇOS' OU 'ARP Nº' OU 'PREGÃO ELETRÔNICO Nº' E também 'HOSPEDAGEM' OU 'HOTEL' OU 'APARTAMENTO' (ADR-001 §3.3)"
+  },
+  {
+    "id": "SYN-DIA-FP-002",
+    "fiscalId": "fiscal-diarias",
+    "category": "fp_replica",
+    "fpPattern": "aditivo_locacao_veiculo",
+    "type": "diaria_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-03-05",
+      "excerpt": "EXTRATO DO 3º TERMO ADITIVO AO CONTRATO Nº 087/2023\nCONTRATADA: LOCALIZA RENT A CAR S.A. - CNPJ 16.670.085/0001-55\nOBJETO: LOCAÇÃO DE VEÍCULOS LEVES PARA A FROTA MUNICIPAL\nFINALIDADE DO ADITIVO: REAJUSTE PELO INPC ACUMULADO (4,12%), PASSANDO O VALOR DA DIÁRIA DO VEÍCULO CATEGORIA B DE R$ 142,30 PARA R$ 148,16. VALOR GLOBAL DO CONTRATO PASSA A R$ 1.247.880,00.",
+      "fullPageContext": "DIÁRIO OFICIAL DO MUNICÍPIO DE CURITIBA — 05 de março de 2026 — Secretaria Municipal de Administração e de Gestão de Pessoal."
+    },
+    "rationale": "Aditivo de reajuste INPC em contrato de locação de veículo. \"Diária\" é unidade contratual da tarifa de locação, não pagamento a servidor. Réplica do GS-047 do golden set real.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Skip imediato se excerpt contém 'LOCAÇÃO DE VEÍCULO' OU 'aluguel de veículo' OU 'RENT A CAR' (ADR-001 §3.4)"
+  },
+  {
+    "id": "SYN-DIA-FP-003",
+    "fiscalId": "fiscal-diarias",
+    "category": "fp_replica",
+    "fpPattern": "dotacao_orcamentaria",
+    "type": "diaria_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-01-30",
+      "excerpt": "DECRETO Nº 45.872, DE 30 DE JANEIRO DE 2026\nAbre crédito suplementar no valor de R$ 2.500.000,00 em favor da Secretaria de Estado de Saúde para reforço da seguinte Dotação Orçamentária:\n10.122.6203.8517.0001 — MANUTENÇÃO DA ADMINISTRAÇÃO\nElemento de Despesa: 3.3.90.14 — DIÁRIAS - PESSOAL CIVIL ........... R$ 2.500.000,00\nFonte: 100 — Recursos do Tesouro.",
+      "fullPageContext": "DIÁRIO OFICIAL DO DISTRITO FEDERAL — Ano LV — Edição Extra nº 21 — 30 de janeiro de 2026."
+    },
+    "rationale": "Decreto de abertura de crédito suplementar — autorização orçamentária genérica para o elemento de despesa 3.3.90.14, NÃO pagamento concreto a servidor identificado. Réplica do GS-093 do golden set real.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Skip imediato se excerpt contém '3.3.90.14' OU 'CRÉDITO SUPLEMENTAR' OU 'Dotação Orçamentária' como contexto principal (ADR-001 §3.6 e §3.7)"
+  },
+  {
+    "id": "SYN-DIA-FP-004",
+    "fiscalId": "fiscal-diarias",
+    "category": "fp_replica",
+    "fpPattern": "adverbio_diariamente",
+    "type": "diaria_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2026-04-02",
+      "excerpt": "INSTRUÇÃO NORMATIVA SME Nº 003/2026\nDISPÕE SOBRE A ROTINA DE LIMPEZA DAS UNIDADES ESCOLARES MUNICIPAIS.\nArt. 3º — As equipes de zeladoria deverão higienizar diariamente as superfícies de contato em salas de aula e banheiros, devendo a alimentação diária dos estudantes ser servida em recinto previamente sanitizado.",
+      "fullPageContext": "DIÁRIO OFICIAL DO MUNICÍPIO DE FORTALEZA — 02 de abril de 2026 — Secretaria Municipal de Educação."
+    },
+    "rationale": "Instrução normativa sobre rotina de limpeza escolar. Ocorrências da raiz 'diári-' são advérbio (\"diariamente\") e adjetivo (\"alimentação diária\"), não substantivo. Réplica do GS-090 do golden set real.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Word boundary obrigatório — regex deve ser \\b(diária|diárias)\\b para descartar 'diariamente', 'diariedade' e adjetivo 'diária' qualificando outro substantivo (ADR-001 §3.1)"
+  },
+  {
+    "id": "SYN-DIA-FP-005",
+    "fiscalId": "fiscal-diarias",
+    "category": "fp_replica",
+    "fpPattern": "boa_viagem_substring",
+    "type": "diaria_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-03-22",
+      "excerpt": "DECRETO Nº 38.421/2026\nDeclara de utilidade pública, para fins de desapropriação, o imóvel situado à Avenida Boa Viagem, nº 4.580, Bairro Boa Viagem, Recife/PE, destinado à ampliação da rede de drenagem urbana. As despesas de viagem técnica para vistoria do imóvel correrão por conta da Secretaria de Infraestrutura.",
+      "fullPageContext": "DIÁRIO OFICIAL DO MUNICÍPIO DE RECIFE — 22 de março de 2026 — Atos do Poder Executivo."
+    },
+    "rationale": "Decreto de desapropriação no bairro Boa Viagem. Ocorrências de 'viagem' são topônimo (nome de bairro/avenida) e expressão genérica 'despesas de viagem'. Nenhuma menção a diária ou servidor. Réplica do GS-014/GS-091/GS-046/GS-092 do golden set real.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Word boundary + co-ocorrência mandatória de verbo de pagamento + valor monetário + identificador de servidor em janela de 150 chars (ADR-001 §3.1 e §3.2). Topônimos 'Boa Viagem' / expressões 'despesas de viagem' não devem disparar."
+  },
+  {
+    "id": "SYN-DIA-EDGE-001",
+    "fiscalId": "fiscal-diarias",
+    "category": "fp_edge_case",
+    "fpPattern": "missao_internacional_documentada",
+    "type": "diaria_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-05-08",
+      "excerpt": "PORTARIA SMURB Nº 112/2026\nEm cumprimento ao disposto na Portaria GP nº 087/2026, que designou a comitiva oficial para participação na 28ª Conferência Iberoamericana de Cidades Inteligentes em Madri/Espanha (10 a 14 de maio de 2026), autoriza-se o pagamento de 06 (seis) diárias internacionais no valor unitário equivalente em moeda nacional a US$ 320,00 (R$ 1.760,00), conforme Decreto Federal nº 71.733/73 — diária internacional categoria B, ao servidor CARLOS ANTÔNIO MACHADO, matrícula 234567.",
+      "fullPageContext": "DIÁRIO OFICIAL DO MUNICÍPIO DO RIO DE JANEIRO — 08 de maio de 2026 — Secretaria Municipal de Urbanismo. Portaria GP nº 087/2026 publicada em 02/05/2026 designa comitiva e missão oficial."
+    },
+    "rationale": "Diária internacional com valor alto (R$ 1.760), porém respaldada em (a) Portaria GP nº 087/2026 que designa a missão, (b) evento oficial nominado (28ª Conferência Iberoamericana), (c) tabela legal aplicável (Decreto Federal 71.733/73). Edge case: regras de valor não se aplicam a diárias internacionais com base normativa explícita.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Quando excerpt cita 'diária internacional' + 'Decreto Federal nº 71.733/73' (ou tabela equivalente) + portaria de designação prévia, reduzir riskScore abaixo de threshold. Avaliar como exception ao limite R$ 800 (que é doméstico)."
+  },
+  {
+    "id": "SYN-DIA-EDGE-002",
+    "fiscalId": "fiscal-diarias",
+    "category": "fp_edge_case",
+    "fpPattern": "feriado_com_justificativa",
+    "type": "diaria_fim_semana",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5208707",
+      "cityName": "Goiânia",
+      "date": "2026-04-20",
+      "excerpt": "PORTARIA PGM Nº 058/2026\nAutoriza-se o pagamento de 01 (uma) diária no valor de R$ 380,00 ao Procurador Municipal RICARDO LOPES BARBOSA, matrícula 98765, para deslocamento à comarca de Anápolis/GO no dia 21/04/2026 (Tiradentes — feriado nacional), em razão de audiência judicial designada pelo Juízo da 2ª Vara da Fazenda Pública (processo nº 5001234-56.2026.8.09.0006), cujo adiamento foi indeferido pelo Magistrado.",
+      "fullPageContext": "DIÁRIO OFICIAL DO MUNICÍPIO DE GOIÂNIA — 20 de abril de 2026 — Procuradoria-Geral do Município."
+    },
+    "rationale": "Pagamento de diária em feriado nacional (Tiradentes, 21/04), porém com justificativa explícita (audiência judicial designada com indeferimento de adiamento) e número de processo verificável. Edge case que valida não disparar quando justificativa robusta acompanha o ato.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Quando match em fim de semana/feriado é acompanhado de termos como 'audiência judicial designada', 'evento oficial impreterível', 'sessão extraordinária convocada' + identificador externo verificável (nº de processo, ofício, decreto), reduzir riskScore."
+  },
+  {
+    "id": "SYN-DIA-EDGE-003",
+    "fiscalId": "fiscal-diarias",
+    "category": "fp_edge_case",
+    "fpPattern": "valor_proximo_limite_com_agenda",
+    "type": "diaria_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4209102",
+      "cityName": "Joinville",
+      "date": "2026-03-18",
+      "excerpt": "PORTARIA SEMAS Nº 211/2026\nAutoriza-se o pagamento de 02 (duas) diárias no valor unitário de R$ 850,00 à servidora MARIANA COSTA FERREIRA, matrícula 33445, para participação no XXII Congresso Brasileiro de Assistência Social (CONBRAS), realizado em Brasília/DF nos dias 19 e 20 de março de 2026 (terça e quarta-feira), conforme inscrição confirmada (anexo I) e programação oficial do evento publicada no sítio www.conbras.org.br.",
+      "fullPageContext": "DIÁRIO OFICIAL DO MUNICÍPIO DE JOINVILLE — 18 de março de 2026 — Secretaria Municipal de Assistência Social."
+    },
+    "rationale": "Valor R$ 850/dia está R$ 50 acima do teto referencial Lei 8.112/90 (R$ 800), porém em dia útil (terça/quarta), com evento oficial nominado (CONBRAS), inscrição confirmada e programação publicada. Edge case: pequena variação acima do limite + agenda formal robusta deve ser tratada como conforme. Threshold puro de valor sem contexto gera FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Limite de R$ 800 deve ser tratado como sinal (não corte rígido). Quando valor está em faixa R$ 800-1.000 E evento é nominado/publicamente verificável E dias são úteis, reduzir riskScore para abaixo de threshold de publicação (60)."
+  }
+]
