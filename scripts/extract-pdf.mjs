@@ -41,17 +41,33 @@ function txtPath(qdPath) {
   return path.join(PDFS_DIR, cityId, `${date}-${hash}.txt`)
 }
 
-async function downloadPdfFromS3(qdPath, localPath) {
-  const { S3Client, GetObjectCommand } = await import('@aws-sdk/client-s3')
-  const s3 = new S3Client({ region: 'us-east-1' })
-  const r = await s3.send(new GetObjectCommand({
-    Bucket: 'fiscal-digital-gazettes-cache-prod',
-    Key: qdPath,
-  }))
-  const chunks = []
-  for await (const chunk of r.Body) chunks.push(chunk)
+async function downloadPdf(qdPath, localPath, originalUrl) {
+  // 1. Tentar S3 cache primeiro (PDFs recentes, ~2026-05+)
+  try {
+    const { S3Client, GetObjectCommand } = await import('@aws-sdk/client-s3')
+    const s3 = new S3Client({ region: 'us-east-1' })
+    const r = await s3.send(new GetObjectCommand({
+      Bucket: 'fiscal-digital-gazettes-cache-prod',
+      Key: qdPath,
+    }))
+    const chunks = []
+    for await (const chunk of r.Body) chunks.push(chunk)
+    fs.mkdirSync(path.dirname(localPath), { recursive: true })
+    fs.writeFileSync(localPath.replace('.txt', '.pdf'), Buffer.concat(chunks))
+    return { source: 's3-cache' }
+  } catch (err) {
+    if (!(err.name === 'NoSuchKey' || err.message?.includes('does not exist'))) throw err
+  }
+
+  // 2. Fallback: baixar direto do Querido Diário (PDFs históricos pré-cache)
+  const r = await fetch(originalUrl, {
+    headers: { 'User-Agent': 'fiscal-digital-evaluations/0.1 (+https://fiscaldigital.org)' },
+  })
+  if (!r.ok) throw new Error(`QD HTTP ${r.status}`)
+  const buffer = Buffer.from(await r.arrayBuffer())
   fs.mkdirSync(path.dirname(localPath), { recursive: true })
-  fs.writeFileSync(localPath.replace('.txt', '.pdf'), Buffer.concat(chunks))
+  fs.writeFileSync(localPath.replace('.txt', '.pdf'), buffer)
+  return { source: 'qd-direct' }
 }
 
 async function extractTextFromPdf(pdfPath, txtFilePath) {
@@ -86,9 +102,9 @@ async function processUrl(url) {
   fs.mkdirSync(path.dirname(txtFilePath), { recursive: true })
 
   console.log(`▶ ${qdPath}`)
-  await downloadPdfFromS3(qdPath, txtFilePath)
+  const dl = await downloadPdf(qdPath, txtFilePath, url)
   const stats = await extractTextFromPdf(pdfFilePath, txtFilePath)
-  console.log(`  ${stats.pages} páginas, ${stats.chars} chars`)
+  console.log(`  ${stats.pages} páginas, ${stats.chars} chars (${dl.source})`)
 
   return { url, txtPath: txtFilePath, ...stats }
 }
