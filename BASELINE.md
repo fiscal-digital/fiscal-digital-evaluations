@@ -2,24 +2,48 @@
 
 **Data da avaliação:** 2026-05-10
 **Engine version:** v1.5.0
-**Avaliador:** claude-opus-4-7 (40 amostras manuais) + 7 sub-agents claude-opus-4-7 paralelos (61 amostras)
-**Amostras avaliadas:** 101/101 (100% do golden set)
-**Cobertura de Fiscais com amostras reais:** 7 de 10 (Nepotismo, Fornecedores, Geral sem amostras — ver [`GAP_REPORT.md`](GAP_REPORT.md))
+**Status:** Ciclo 2 em execução — 685/1016 amostras rotuladas (67%)
+
+> **Atualização 2026-05-10 (tarde):** Ciclo 2 ampliou o golden set de 101 para 1.016 amostras reais. Ver [`TRAINING_CYCLES.md`](TRAINING_CYCLES.md) para histórico completo. **Resultado parcial revelou viés amostral severo no Ciclo 1**: Licitações caiu de 88,9% (n=20) para 37,4% (n=150). Conclusão: golden set < 50 amostras por Fiscal tem risco alto de mascarar bugs. Recomenda-se sempre validar com n ≥ 100 antes de declarar Fiscal "pronto".
+
+**Avaliadores:**
+- Ciclo 1 (101 amostras): claude-opus-4-7 manual (40) + 7 sub-agents paralelos (61)
+- Ciclo 2 (915 novas): 14 sub-agents claude-opus-4-7 em paralelo (10 completos = 584 rotuladas, 4 com cota esgotada = 331 pendentes)
+
+**Cobertura de Fiscais com amostras reais:** 8 de 10 (Nepotismo e Fornecedores ainda sem amostras — ver [`GAP_REPORT.md`](GAP_REPORT.md))
 
 ---
 
 ## Quadro de precisão por Fiscal
 
+### Ciclo 1 (n=101) — baseline inicial
+
 | Fiscal | TP | FP | Borderline | Total | Precisão (TP/(TP+FP)) | Status |
 |---|---:|---:|---:|---:|---:|---|
-| **FiscalPessoal** | 18 | 6 | 1 | 25 | **75,0%** | OK — bug de subnotificação |
-| **FiscalLicitações** | 16 | 2 | 2 | 20 | **88,9%** | OK — refino fino |
+| **FiscalPessoal** | 18 | 6 | 1 | 25 | **75,0%** | abaixo do piso 85% |
+| **FiscalLicitações** | 16 | 2 | 2 | 20 | **88,9%** | ~~OK~~ enviesamento amostral |
 | **FiscalContratos** | 6 | 12 | 2 | 20 | **33,3%** | CRÍTICO — depende de EVO-002 |
 | **FiscalDiárias** | 0 | 10 | 0 | 10 | **0,0%** | CRÍTICO — overmatch sistemático |
 | **FiscalLocação** | 0 | 10 | 0 | 10 | **0,0%** | CRÍTICO — sem filtro de tipo de ato |
 | **FiscalConvênios** | 0 | 10 | 0 | 10 | **0,0%** | CRÍTICO — confunde Repasse federal |
 | **FiscalPublicidade** | 0 | 6 | 0 | 6 | **0,0%** | CRÍTICO — keyword polissêmica |
 | **TOTAL** | **40** | **56** | **5** | **101** | **41,7%** | — |
+
+### Ciclo 2 (n=685, em execução) — baseline ampliado
+
+| Fiscal | TP | FP | Borderline | Total | Pendentes | Precisão | Δ vs C1 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **FiscalPessoal** | 138 | 61 | 10 | 300 | 91 | **69,3%** | −5,7pp |
+| **FiscalLicitações** | 52 | 87 | 11 | 150 | 0 | **37,4%** | **−51,5pp** ⚠️ |
+| **FiscalContratos** | 8 | 89 | 3 | 180 | 80 | **8,2%** | **−25,1pp** ⚠️ |
+| **FiscalDiárias** | 0 | 37 | 0 | 37 | 0 | **0,0%** | 0pp |
+| **FiscalLocação** | 18 | 72 | 0 | 250 | 160 | **20,0%** | +20pp |
+| **FiscalConvênios** | 0 | 68 | 7 | 75 | 0 | **0,0%** | 0pp |
+| **FiscalPublicidade** | 2 | 21 | 0 | 23 | 0 | **8,7%** | +8,7pp |
+| **FiscalGeral** | 1 | 0 | 0 | 1 | 0 | **100,0%** | n/a |
+| **TOTAL** | **219** | **435** | **31** | **1.016** | **331** | **33,5%** | — |
+
+⚠️ **Achado crítico:** Licitações cai de 88,9% para 37,4% com escala. Confirma que golden set < 50 amostras tem risco alto de viés amostral. Bug central de Contratos (overmatch) é mais grave que estimado no Ciclo 1.
 
 **Leitura:** dos 96 findings classificados como TP+FP, apenas 41,7% são verdadeiros achados de irregularidade. Os 4 Fiscais com 0% precisão geraram **42 FPs publicados ou publicáveis em prod** (a métrica deteriora se incluirmos os 5 borderline como FP).
 

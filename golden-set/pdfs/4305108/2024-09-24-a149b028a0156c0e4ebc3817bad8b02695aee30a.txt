@@ -1,0 +1,478 @@
+
+
+MUNICÍPIO DE CAXIAS DO SUL
+Diário Oficial Eletrônico
+Número 4801    Órgão Oficial do Município de Caxias do Sul    24/09/2024
+Exploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.
+Poder Executivo
+ 
+LEI N° 9.176, DE 16 DE SETEMBRO DE 2024.
+Inclui o Circuito Trilhas e Montanhas no Calendário Oficial de Eventos do Município de Caxias do Sul.
+A PREFEITA MUNICIPAL EM EXERCÍCIO DE CAXIAS DO SUL.
+        Faço saber que a Câmara Municipal aprovou e eu sanciono a seguinte Lei.
+ 
+Art. 1º  Fica incluído, no Calendário Oficial de Eventos do Município de Caxias do Sul, o Circuito Trilhas e Montanhas.
+ 
+Parágrafo único.  O Circuito Trilhas e Montanhas ocorrerá anualmente, durante a primeira quinzena de março.
+ 
+Art. 2º  Esta Lei entra em vigor na data de sua publicação.
+Caxias do Sul, 16 de setembro de 2024; 149º da Colonização e 134º da Emancipação Política.
+  PAULA IORIS
+PREFEITA MUNICIPAL EM EXERCÍCIO
+ 
+LEI N° 9.177, DE 16 DE SETEMBRO DE 2024.
+Inclui o Dia Municipal do Corredor de Rua no Calendário Oficial de Eventos do Município de Caxias do Sul.
+A PREFEITA MUNICIPAL EM EXERCÍCIO DE CAXIAS DO SUL.
+        Faço saber que a Câmara Municipal aprovou e eu sanciono a seguinte Lei.
+ 
+Art. 1º  Fica incluído, no Calendário Oficial de Eventos do Município de Caxias do Sul, o Dia Municipal do Corredor de Rua, a ser
+celebrado anualmente no dia 25 de setembro.
+ 
+Art. 2º  Esta Lei entra em vigor na data de sua publicação.
+Caxias do Sul, 16 de setembro de 2024; 149º da Colonização e 134º da Emancipação Política.
+  PAULA IORIS
+PREFEITA MUNICIPAL EM EXERCÍCIO
+ 
+LEI N° 9184, DE 23 DE SETEMBRO DE 2024
+Denomina via pública municipal do Bairro Tijuca com o nome de RUA SADY MARI.
+   A PREFEITA MUNICIPAL EM EXERCÍCIO DE CAXIAS DO SUL.
+            Faço saber que a Câmara Municipal aprovou e eu sanciono a seguinte Lei.
+Art. 1º  Denomina-se RUA SADY MARI a via pública municipal do Bairro Tijuca, codificada sob número 44 01 87, com testada
+norte na Rua Luíza Pistori Mari e testada sul em cul-de-sac no interior da quadra 2837, tendo a leste e a oeste a quadra 2837.
+ 
+ 
+Art. 2º  Esta Lei entra em vigor na data de sua publicação.
+ 
+
+Diário Oficial Eletrônico do Município de Caxias do Sul Número 4801 - 24/09/2024 - Página 2
+Exploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.
+Caxias do Sul, 23 de setembro de 2024; 149º da Colonização e 134º da Emancipação Política.
+  PAULA IORIS
+PREFEITA MUNICIPAL EM EXERCÍCIO
+ 
+LEI N° 9185, DE 23 DE SETEMBRO DE 2024
+Denomina via pública municipal do 1º Distrito com o nome de RUA PAOLINO POLA.
+  A PREFEITA MUNICIPAL EM EXERCÍCIO DE CAXIAS DO SUL.
+            Faço saber que a Câmara Municipal aprovou e eu sanciono a seguinte Lei.
+Art. 1°  Denomina-se RUA PAOLINO POLA a via pública municipal do 1º Distrito, codificada sob o número 51 16 99, com testada
+nordeste na Estrada Municipal Fernandes Luiz Onzi, rumando a sudoeste, depois a sul e novamente a sudoeste, finalizando no
+entroncamento entre as ruas codificadas sob números 50 25 98 e 50 25 99.
+ 
+Art. 2º  Esta Lei entra em vigor na data de sua publicação.
+Caxias do Sul, 23 de setembro de 2024; 149º da Colonização e 134º da Emancipação Política.
+  PAULA IORIS
+PREFEITA MUNICIPAL EM EXERCÍCIO
+Poder Executivo
+Secretaria de Governo Municipal
+ 
+SÚMULA DE CONTRATO
+ 
+SMED – Contratante: Município de Caxias do Sul
+Contratado: CODECA COMPANHIA DE DESENVOLVIMENTO DE CAXIAS DO SUL
+Objeto: Termo Aditivo nº 3 junto ao Contrato 2023/464 para acréscimo de quantitativos de postos/cargos.
+Valor: R$ 129.308,61 (cento e vinte e nove mil e trezentos e oito reais e sessenta e um centavos)
+Modalidade: Dispensa nº 2023/77
+Processo GRP n.º 2023/20149 e PROA n.º 23/8050-0009819-9
+ 
+SMS – Contratante: Município de Caxias do Sul
+Contratado: RS MEDICA LTDA
+Objeto: Termo Aditivo n° 02 ao Contrato n° 2022/1239 para renovação contratual.
+Valor: R$ 19.175,94 (Dezenove Mil Cento e Setenta e Cinco Reais e Noventa e Quatro Centavos)
+Modalidade: Pregão eletrônico nº 2022/222
+Processo GRP n.º 2022/23201
+ 
+Os atos foram ratificados pelo Prefeito Municipal.
+Fundamento legal: Dispositivos da Lei Federal n. 8.666/93 e alterações, Lei Federal nº 10.520/2002, Lei Federal n. 14.133/21, Lei
+Municipal n. 5.285/1999 e demais normas aplicáveis.
+ 
+Poder Executivo
+Secretaria da Receita Municipal
+ 
+RELATÓRIO METODOLÓGICO PARA GERAÇÃO DE MAPA DE APTIDÕES AGRÍCOLAS
+ 
+Para chegar ao mapa de aptidões para a determinada localidade, fora produzido o mapa de declividade através do processamento
+e extração de dados, feito no SIG QGIS 3.22.11, a partir da carta de declividade originada de imagens orbitais adquiridas pela
+Missão Topográfica de Radar Transportado ― SRTM, da NASA, reprocessadas pela Embrapa Monitoramento, no projeto Brasil em
+Relevo, com uma resolução espacial de 30 m, que foi reamostrado e interpolado para que chegasse à resolução de 5 m.
+ 
+Em seguida, os dados foram reclassificados segundo as capacidades de uso, citadas por PRADO, H. (2013), considerando também
+as características de declividade conforme classificação de relevo dada por LEPSCH, I.F (1983, citado em Norma de Execução
+INCRA/DT/Nº52 de 2006), como plano, suave ondulado, moderado ondulado, ondulado, forte ondulado, montanhoso e escarpado,
+que posteriormente é equiparada às 6 classes da Receita Federal do Brasil, conforme a Instrução Normativa RFB nº 1877 de
+2019.
+ 
+Classes de Relevo (LEPSCH, I.F - 2013)
+
+Diário Oficial Eletrônico do Município de Caxias do Sul Número 4801 - 24/09/2024 - Página 3
+Exploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.
+Plano – De 0% a 2% - Lavoura Aptidão Boa;
+Suave Ondulado – De 2% a 5% - Lavoura Aptidão Boa;
+Moderadamente Ondulado – De 5% a 10% - Lavoura Aptidão Regular;
+Ondulado – De 10% a 15% - Lavoura Aptidão Restrita;
+Forte Ondulado – De 15% a 45% - Pastagem Plantada;
+Montanhoso – De 45% a 70% - Silvicultura ou Pastagem Natural;
+Escarpado – > 70% - Preservação da fauna e da flora.
+ 
+CLASSE DE RELEVO
+Classes de DeclividadeAptidões
+%GrausABNTRFB
+Plano0 a 20º a 1º8'45"II
+Suave Ondulado2 a 51º8'45" a 2º51'45"III
+Moderadamente Ondulado5 a 102º51'45" a 5º42'38"IIIII
+Ondulado10 a 155º42'38" a 8º31'51"IVIII
+Forte Ondulado15 a 458º31'51" a 24º13'40"VIIV
+Montanhoso45 a 7024º13'40" a 34º59'31"VIIV
+Escarpado> 70> 34º59'31"VIIIVI
+ 
+Cada classe é separada em uma camada que posteriormente, através da álgebra de mapas, é fusionada com os dados de solos
+elaborados e disponibilizados pelo IBGE (2002; 2018), com escala 1:250.000.
+Visando a representação fidedigna da realidade, foi realizado sobreposição entre as áreas de cambissolos (solo de melhor aptidão
+encontrado) com as áreas de lavouras temporária e soja (mapbiomas, 2022), obteve-se áreas que foram atribuídas a aptidão de
+lavoura boa.
+Também são utilizadas informações de altimetria extraídos do mapa gerado utilizando-se os dados de SRTM remostados, já citado
+anteriormente, onde são geradas curvas de 50 em 50 metros, para maior precisão classificam-se as faixas de altitude, em:
+ 
+Maior que 801m, classe 1;
+De 601m até 800m, classe 2;
+De 300m até 600m, classe 3;
+De 151 até 299, classe 5;
+De 0 até 150, classe 6.
+ 
+A partir disso, gera-se a rasterização deste produto, que se juntará as demais camadas raster para a álgebra de mapas.
+Após os dados citados no decorrer deste, unem-se ao material os dados de áreas de preservação permanente, remanescente de
+vegetação nativa e delimitação de reservas legais, advindas da base de dados espaciais do Cadastro Ambiental Rural-CAR, que se
+somam as áreas de preservação de fauna ou flora encontradas nos processos anteriores, seguindo as definições do Art. 4º do
+Código Florestal Brasileiro (Lei nº 12.651).
+As áreas com a presença de recursos hídricos e área urbana, são consideradas como aptidão de preservação de fauna ou flora,
+visto que, ambos os itens não estão previstos na metodologia da Receita Federal do Brasil, portanto, quando houver incidência em
+tais áreas, serão atribuídos os menores valores possíveis e que, posteriormente, serão isentos do cálculo do imposto, por serem
+áreas não tributáveis, que de fato são, por não haver previsão de cobrança sobre estas. Assim, obtemos o mapa de aptidões.
+A fim de melhor representar os cursos hídricos, foi utilizado a base de hidrografia disponível no GeoCaxias: .
+ 
+Bibliografia:
+BRASIL, Brasília-DF. Norma de Execução INCRA/DT/Nº52, de 25 de outubro de 2006, que aprova o manual de obtenção de terras
+e perícia judicial. Diário Oficial da União, edição 207, 27 de outubro de 2006, seção 1, página 108.
+BRASIL, Brasília-DF. Lei nº12.651 de 25 de maio de 2012, que dispões sobre a proteção da vegetação nativa; altera as Leis nºs
+6.938, de 31 de agosto de 1981, 9.393, de 19 de dezembro de 1996, e 11.428, de 22 de dezembro de 2006; revoga as Leis nºs
+4.771, de 15 de setembro de 1965, e 7.754, de 14 de abril de 1989, e a Medida Provisória nº 2.166-67, de 24 de agosto de 2001; e
+dá outras providências. Dário Oficial da União, edição 102, 28 de maio de 2012.
+MIRANDA, E. E. de; (Coord.). Brasil em Relevo. Campinas: Embrapa Monitoramento por Satélite, 2005. Disponível em: . Acesso
+em: 5 Set. 2022.
+MUITOS CAPÕES. Prefeitura Municipal. Mapa de aptidões agrícolas. Disponível em: <
+http://www.muitoscapoes.rs.gov.br/upload/editaispublicacoes/920.pdf >. Acesso em 21 de dez. 2023.
+LEPSCH, I.F; BELLINAZZI JÚNIOR, R. BERTOLINI, D. Manual para levantamento utilitário do meio físico e classificação de terras
+no sistema de capacidade de uso. 4ª aproximação. Campinas: SBCS, 1991. 175p.
+INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE). Mapa exploratório de solos do estado do Rio Grande do Sul.
+Rio de Janeiro: Diretoria de Geociências, IBGE. 2002. Escala 1:1.000.000.
+INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA (IBGE). Pedologia: Mapeamento de Recursos Naturais do Brasil
+(1:250.000). Diretoria de Geociências, Coordenação de Recursos Naturais e Estudos Ambientais, 2018. Disponível
+em:https://www.ibge.gov.br/geociencias/informacoes-ambientais/pedologia/10871-pedologia.html?=&t=downloads.
+PRADO, H. Pedologia Fácil – Aplicações em Solos Tropicais. 4º ED. Editora Oficina de Textos, Piracicaba-SP, Brasil, 2013.
+QGIS Development Team, 2022. QGIS Geographic Information System. Open Source Geospatial Foundation Project.
+
+Diário Oficial Eletrônico do Município de Caxias do Sul Número 4801 - 24/09/2024 - Página 4
+Exploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.
+http://qgis.osgeo.org.
+ 
+SEGUE MAPA DE APTIDÃO NO LINK:
+ 
+ https://caxias.rs.gov.br/servicos/receita/valor-da-terra-nua
+Poder Executivo
+Secretaria Municipal de Recursos Humanos e Logística
+ 
+PROCESSO SELETIVO PARA PROVIMENTO DE EMPREGO N.º 
+0
+1/2024
+EDITAL DE PROCESSO SELETIVO N.º 08/2024 – RESULTADO FINAL DA AVALIAÇÃO DOS CANDIDATOS
+AFRODESCENDENTES
+O MUNICÍPIO DE CAXIAS DO SUL, POR MEIO DA SECRETARIA DE RECURSOS HUMANOS E LOGÍSTICA, no uso de
+suas atribuições legais, por este edital torna público o seguinte ato de execução do Processo Seletivo (Edital de Abertura n.º
+01/2024), nos termos a seguir:
+ 
+1. A resposta do recurso referente ao resultado da avaliação dos candidatos afrodescendentes está disponível no endereço
+eletrônico www.legalleconcursos.com.br, na Área do Candidato. Em nada se altera o relatório nominal com o resultado
+anteriormente divulgado.
+ 
+2. Os candidatos, em todas as etapas do certame, deverão obedecer, rigorosamente, aos dispositivos contidos no Edital de
+Abertura n.º 01/2024.
+ 
+ 
+Caxias do Sul, 24 de setembro de 2024.
+ 
+ 
+DANIELA VIVIANE GOMES REIS,
+Respondendo pela Secretaria Municipal de Recursos Humanos e Logística.
+ 
+ 
+CÉSAR AUGUSTO PARISOTTO,
+Presidente da Comissão Executiva do Processo Seletivo.
+ 
+CONCURSO PÚBLICO PARA PROVIMENTO DE CARGOS N.º 03/2024
+EDITAL DE CONCURSO N.º 03/2024 - RELATÓRIO PRELIMINAR DE INSCRIÇÕES HOMOLOGADAS
+O MUNICÍPIO DE CAXIAS DO SUL, POR MEIO DA SECRETARIA DE RECURSOS HUMANOS E LOGÍSTICA, no uso de
+suas atribuições legais, por este edital torna público o seguinte ato de execução do Concurso (Edital de Abertura n.º 03/2024), nos
+termos a seguir:
+ 
+1.  RELATÓRIO  PRELIMINAR  DE  INSCRIÇÕES  HOMOLOGADAS:  o  relatório  nominal  de  candidatos  com  inscrições
+homologadas  encontra-se  afixado  no  saguão  do  Centro  Administrativo  Municipal  de  Caxias  do  Sul  e  disponível  nos  sites
+www.legalleconcursos.com.br e www.caxias.rs.gov.br.
+ 
+2. Os candidatos poderão interpor recurso relativo à homologação das inscrições no período de 25 a 27 de setembro de 2024,
+em conformidade com o disposto no Capítulo VIII do Edital de Abertura n.º 03/2024. Os recursos deverão ser enviados por
+Formulário  Eletrônico  que  será  disponibilizado  na  Área  do  Candidato  no  site  da  Legalle  Concursos  Ltda.
+www.legalleconcursos.com.br.
+ 
+3. Os candidatos, em todas as etapas do certame, deverão obedecer, rigorosamente, aos dispositivos contidos no Edital de
+Abertura n.º 03/2024.
+ 
+ 
+Caxias do Sul, 24 de setembro de 2024.
+ 
+DANIELA VIVIANE GOMES REIS,
+Respondendo pela Secretaria Municipal de Recursos Humanos e Logística.
+ 
+EDELVAN PERUZZO,
+Presidente da Comissão Executiva do Concurso.
+ 
+
+Diário Oficial Eletrônico do Município de Caxias do Sul Número 4801 - 24/09/2024 - Página 5
+Exploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.
+Secretaria Municipal de Recursos Humanos e Logística
+Central de Licitações
+ 
+AVISO DE LICITAÇÃO
+ 
+MODALIDADE: PREGÃO ELETRÔNICO Nº 274/2024.
+Abertura: 08 de outubro de 2024, às 9h.
+Objeto: Prestação de serviços de licenciamento de solução para atendimento ao cidadão, compreendendo a implantação, a
+disponibilização de infraestrutura de hospedagem, o suporte técnico, a manutenção, a evolução e demais elementos necessários
+ao seu funcionamento.
+ 
+O(s) documento(s) está(ão) disponível(is) no site https://caxias.rs.gov.br/servicos/recursos-humanos/central-de-licitacoes-cenlic, e,
+quando eletrônicos, também, no site www.gov.br/compras UASG: 988599. Informações: (54) 3218-6087.
+ 
+Caxias do Sul, 23 de setembro de 2024.
+ 
+Ronaldo Boniatti
+Secretário de Recursos Humanos e Logística
+ 
+ 
+JULGAMENTO E RESULTADO DE LICITAÇÃO 
+ 
+A Central de Licitações do Município de Caxias do Sul torna público que o Termo de Homologação, referente ao Pregão
+Eletrônico  por  SRP  n.º  240-2024  (fornecimento  e  garantia  de  pneus  de  diversas  bitolas),  está  disponível  no  site
+www.caxias.rs.gov.br. 
+ 
+O edital está disponível na Central de Licitações - CENLIC ou no site www.caxias.rs.gov.br. Mais informações pelo fone (54)
+3218-6000.
+ 
+Caxias do Sul, 23 de setembro de 2024.
+ 
+Ronaldo Boniatti
+Secretário de Recursos Humanos e Logística
+Poder Executivo
+Secretaria Municipal do Urbanismo
+ 
+EDITAL DE NOTIFICAÇÃO N.º 014/2024
+REGULARIZAÇÃO FUNDIÁRIA DE INTERESSE ESPECÍFICO – REURB E
+NÚCLEO URBANO INFORMAL CONSOLIDADO: COND. RECANTO DA CASCATA
+ 
+O Município de Caxias do Sul, pessoa jurídica de direito público, inscrito no CNPJ sob o número 88.830.609/0001-39, com sede e
+foro nesta cidade, na Rua Alfredo Chaves, n.º 1333, bairro Exposição, CEP 95020-460, representado pelo Prefeito Municipal,
+Senhor Adiló Didomênico e pelo Secretário Municipal do Urbanismo, Senhor Carlos Giovani Fontana, vêm por meio deste edital,
+NOTIFICAR a todos os titulares de domínio, confinantes e terceiros eventualmente interessados que o núcleo urbano informal
+consolidado denominado COND. RECANTO DA CASCATA, encontra-se em processo de Regularização Fundiária, na modalidade
+de interesse específico, conforme Lei Federal n.º 13.465/2017, Decreto Federal n.º9.310/2018 e Lei Complementar Municipal n.º
+657/2021.  O  núcleo  urbano  informal  consolidado,  tratado  no  expediente  administrativo  n.º  2022/29991.,  está  em  fase  de
+regularização, na qual foi realizado o levantamento georreferenciado, a fim de emissão de matrículas individualizadas aos
+detentores da posse dos lotes no referido loteamento.
+A área objeto da regularização fundiária denominada de COND. RECANTO DA CASCATA.
+ 
+Descrição georreferenciada atualizada:
+“IMÓVEL UM TERRENO URBANO, situado na cidade de Caxias do Sul-RS, constituído pelo lote administrativo n.º 001 da
+quadra 5862, com testada de 162,55metros para Estrada Municipal Valentino Venturin, tendo o terreno a área superficial de
+99.817,68m2 (noventa e nove mil e oitocentos e dezessete metros quadrados e sessenta e oito centímetros quadrados), com as
+seguintes medidas e confrontações: ao NORTE, por vinte e três linhas retas, a primeira por 123,00metros, segunda linha por
+49,57metros, a terceira linha por 15,71metros, quarta linha por 26,23metros, a quinta linha por 23,88metros, a sexta linha por
+22,97metros, a sétima linha por 21,49metros, a oitava linha por 23,93metros, a nona linha por 21,15metros, a décima linha por
+6,57metros, a décima primeira linha por 64,76metros, a décima segunda linha por 25,28metros, a décima terceira linha por
+18,18metros,  a  décima  quarta  linha  por  55,42metros,  a  décima  quinta  linha  por  30,33metros,  a  décima  sexta  linha  por
+30,62metros,  a  décima  sétima  linha  por  26,7  1metros,  a  décima  oitava  linha  por  42,01metros,  a  décima  nona  linha  por
+30,75metros, a vigésima linha por *24,A5Smetros, a vigésima primeira linha por 27,36metros, a vigésima segunda linha por 48
+,A2metros, todas com a Matrícula n.º 26.239 de propriedade de Hermogenes João Gasparin e Ema Elisa Bado Gasparin; e a
+
+Diário Oficial Eletrônico do Município de Caxias do Sul Número 4801 - 24/09/2024 - Página 6
+Exploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.
+vigésima terceira linha por 102,82metros com a Matrícula n.º 14.584 de propriedade de Polopar Participações e Administração
+LTDA, Flavio Gotardo Zanrosso, Ivete Bonlatti Zanrosso, Evandro Mario Zanrosso, Juliane Fuhr Zanrosso e Rosmari Otilia
+Zanrosso;  ao  LESTE,  por  uma  linha  reta  de  149,91  metros  com  a  Matrícula  n.º67.849  de  propriedade  de  Siviero
+Empreendimentos Imobiliários LTDA; ao SUL, por dezenove linhas retas, a primeira por 77,97metros com a Matrícula n.º 125 de
+propriedade de Adema Comércio e Representações LTDA, Zenaide Michielin Broilo, Carmen Odete Michielin Vieira, Flavia
+Peruchin Michielih e Serafini Administração e Participações LTDA, a segunda linha por 25,36metros, com a Matrícula n.º39.991
+de propriedade de Daniela Andréa Piccoli de Oliveira, Luiz Paulo Viana de Oliveira e Guardiã Administração Imobiliária Ltda, a
+terceira linha por 120,75metros, a quarta linha por 40,25metros, ambas com a Matrícula n.º 39.988 de propriedade de Nelson
+Antônio Piccoli, Libera Bertin Piccoli, Beatriz Fatima Piccoli Brogliato, Nelson Antônio Brogliato, David Piccoli e Clari Terezinha
+Vergani Piccoli, a quinta linha por 28,83metros, a sexta linha por 0,72metros, a sétima linha por 78,07 metros, oitava linha por
+112,17metros, todas com a Matrícula n.º 65.120 de propriedade de David Piccoli e Clari Terezinha Vergani Piccoli, a nona linha
+por 34,72metros, a décima linha por 44,27metros, a décima primeira linha por 39,89metros, a décima segunda linha por
+52,38metros, a décima terceira linha por 28,93metros, a décima quarta linha por 41,82metros, a décima quinta linha por 30,28
+metros, a décima sexta linha por 13,95 metros, a décima sétima linha por 24,70 metros, a décima oitava linha por 16,53 metros, e
+a décima nona linha por 109,66metros, todas com as Matrículas n.º202.742 e 202.741 de propriedade de ANC Comércio de
+Imóveis e Serviços LTDA; ao OESTE, por seis linhas, a primeira por 40,02 metros com a Matrícula n.º 39.988 de propriedade de
+Nelson Antônio Piccoli, Libera Bertin Piccoli, Beatriz Fatima Piccoli Brogliato, Nelson Antonio Brogliato, David Piccoli e Clari
+Terezinha Vergani Piccoli, a segunda por 4,18metros, a terceira linha por 21,28metros, quarta linha (curva) por 32,70metros, a
+quinta linha (curva) por 54,57metros, e a sexta linha (curva) por 49,82metros, todas com a Estrada Municipal Valentino Venturin,
+fechando assim o perímetro acima descrito, com uma área total de 99.817,68m2.”
+ 
+Os titulares de domínio, confinantes e terceiros interessados são notificados por este edital, sendo que a ausência de impugnação
+implicará a perda do eventual direito que os notificados possam ter sobre o imóvel objeto da Regularização Fundiária, de acordo
+com o art. 31, §1º, §5º e §6º, da Lei Federal n.º 13.465/2017, art. 24, §1º, §5º e §6º, do Decreto Federal n.º 9.310/2018 e art. 14 da
+Lei Complementar Municipal n.º 657/2021.
+ 
+Relação dos Notificados:
+Matrícula 125 - ADEMA COMÉRCIO E REPRESENTAÇÕES LTDA;
+CARMEM ODETE MICHELIN VIEIRA e s/m ENIO FERNANDES VIEIRA
+FLÁVIA PERUCHIN MICHELIN
+SERAFINI ADMINISTRAÇÃO E PARTICIPAÇÕES LTDA.
+ZENAIDE MICHIELIN BROILO;
+Matrícula 14.584 -EVANDRO MÁRIO ZANROSSO e s/m JULIANE FUHR ZANROSSO
+FLÁVIO GOTARDO ZANROSSO e s/m IVETE BONIATTI ZANROSSO
+POLOPAR PARTICIPAÇÕES E ADMINISTRAÇÃO LTDA.
+ROSMARI OTILIA ZANROSSO
+Matrícula 202.741- ANC COMÉRCIO DE IMÓVEIS E SERVIÇOS LTDA;
+Matrícula 202.742-ANC COMÉRCIO DE IMÓVEIS E SERVIÇOS LTDA;
+Matrícula 26.239 -GERALDO ALBERTO GASPARIN e s/m ELISETE MARLENE HOFFMANN GASPARIN
+HERMOGENES JOÃO GASPARIN e s/m EMA ELISA BADO GASPARIN;
+Matrícula 39.988 -BEATRIZ FÁTIMA PICCOLI BROGLIATO e s/m NELSON ANTONIO BROGLIATO;
+DAVID PICCOLI e s/m CLARA TEREZINHA VERGANI PICCOLI
+NELSON ANTONIO PICCOLI e s/m LIBERA BERTIN PICCOLI;
+Matrícula 39.991 -DANIELA ANDRÉIA PICCOLI DE OLIVEIRA e s/m LUIZ PAULO VIANA
+GUARDIÃ ADMINISTRAÇÃO IMOBILIÁRIA;
+Matrícula 65.120 -DAVID PICCOLI e s/m CLARA TEREZINHA VERGANI PICCOLI;
+Matrícula 67.849 -SIVIERO EMPRRENDIMENTOS IMOBILIÁRIOS LTDA;
+Matrícula 77.488 -CELSO JOSÉ PICCOLI e s/m ADRIANE MARIA BUIFFON PICCOLI
+ 
+As eventuais impugnações cabíveis, contrárias ao objeto deste ato, deverão ser apresentadas no prazo de 30 (trinta) dias, a contar
+da data da publicação do presente edital, sendo protocoladas na Secretaria Municipal do Urbanismo, com as devidas justificativas
+plausíveis que serão analisadas pelos setores responsáveis, priorizando o procedimento extrajudicial para solução dos conflitos,
+conforme art. 31, §3º, da Lei Federal n.º 13.465/2017 e art. 24, §7º, do Decreto Federal n.º 9.310/2018.
+Nos termos da Lei Federal n.º 13.465/2017, Decreto Federal n.º9.310/2018 e Lei Complementar Municipal n.º 657/2021 cientifica
+que em não havendo manifestações em contrário no período de 30 (trinta) dias, considerar-se-á como aceite pelos notificados os
+elementos e teor deste edital.
+Caxias do Sul, 23 de setembro de 2024.
+ 
+                                                 Paula Ioris                                                    Carlos Giovani Fontana
+                                Prefeita Municipal em Exercício                        Secretário Municipal do Urbanismo
+ 
+SERVIÇO AUTÔNOMO MUNICIPAL DE ÁGUA E
+ESGOTO SAMAE
+ 
+
+Diário Oficial Eletrônico do Município de Caxias do Sul Número 4801 - 24/09/2024 - Página 7
+Exploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.
+SÚMULA 
+Contrato  n.º  3241530000.  Pregão  Eletrônico  n.º  90089/2024.  Contratada:  Águatop  Soluções  Sustentáveis  em  Meio
+Ambiente e Saneamento Ltda. – CNPJ n.º 30.274.793/0001-06. Objeto: Aquisição de 30.000 (trinta mil) quilogramas de produto à
+base de ortopolifosfato de sódio, a ser utilizado nas Estações de Tratamento de Água do SAMAE, em Caxias do Sul – RS, conforme
+condições e exigências do Termo de Referência – Anexo I, do Edital. Valor: a R$ 252.000,00 (duzentos e cinquenta e dois mil
+reais). Vigência: 12 (doze) meses corridos, a contar da sua publicação. Fundamentação Legal: Lei Federal n.º 14.133, de 1º de
+abril de 2021; Lei Complementar n.º 101, de 04 de maio de 2000 e alterações; Lei Complementar n.º 123, de 14 de dezembro de
+2006 e alterações; e demais legislações pertinentes à matéria, as regras e condições estabelecidas no Edital e anexos que o
+integram. Caxias do Sul, 23 de setembro de 2024. Gilberto Meletti, Diretor-Presidente do SAMAE.
+INSTITUTO DE PREVIDÊNCIA E ASSISTÊNCIA
+MUNICIPAL IPAM
+ 
+SÚMULA DE CONTRATO
+ 
+CONTRATO N.º 45/2024
+Processo: Dispensa de Licitação n° 13/2024 (PROA n° 24/9120-0001294-9)
+Contratante: INSTITUTO DE PREVIDÊNCIA E ASSISTÊNCIA MUNICIPAL - IPAM
+Contratado: BRHOST SERVIÇOS DIGITAIS LTDA
+Objeto: Contratação de empresa fornecedora de Certificado SSL Wildcard DV.
+Valor: R$ 1.600,00 (um mil e seiscentos reais), para os primeiros 05 (cinco) anos.
+Vigência: 05 (cinco) anos.
+ 
+Em 24 de setembro de 2024.
+ 
+FLAVIO ALEXANDRE DE CARVALHO
+Presidente do IPAM
+ 
+AVISO DE LICITAÇÃO: PREGÃO ELETRÔNICO N.º 10/2024
+ 
+Repetição do Pregão Eletrônico n.° 9/2024, com alterações
+Objeto: Fornecimento, instalação, garantia e assistência técnica de aparelhos de ar condicionado, de acordo com as
+especificações técnicas mínimas adequadas, para o Instituto de Previdência e Assistência Municipal - IPAM.
+Edital: Encontra-se disponível no Portal Nacional de Contratações Públicas, e no site www.gov.br/compras.
+Endereço eletrônico da sessão pública: www.gov.br/compras.
+Código UASG: 929035.
+Abertura: 08/10/2024, às 09 horas, horário de Brasília - DF.
+Informações: Poderão ser obtidas pelo telefone (54) 3289 5457.
+ 
+Em 24 de setembro de 2024.
+ 
+FLAVIO ALEXANDRE DE CARVALHO
+Presidente do IPAM
+ 
+ 
+SÚMULA DE CONTRATAÇÃO DIRETA
+ 
+DISPENSA DE LICITAÇÃO N.º 5/2024
+Contratante: INSTITUTO DE PREVIDÊNCIA E ASSISTÊNCIA MUNICIPAL - IPAM
+Contratado: EMPRESA BRASILEIRA DE CORREIOS E TELÉGRAFOS
+Objeto: Prestação de serviços e venda de produtos, que atendam às necessidades do Instituto de Previdência e Assistência
+Municipal - IPAM.
+Valor: R$ 13.050,00 (Treze mil e cinquenta reais), anual estimado.
+Vigência: 5 (cinco) anos.
+ 
+Em 24 de setembro de 2024.
+ 
+ 
+FLAVIO ALEXANDRE DE CARVALHO
+Presidente do IPAM
+ 
+FUNDAÇÃO DE ASSISTÊNCIA SOCIAL FAS
+
+Diário Oficial Eletrônico do Município de Caxias do Sul Número 4801 - 24/09/2024 - Página 8
+Exploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.
+ 
+JULGAMENTO DA CHAMADA PÚBLICA N.º 027/2024
+A FUNDAÇÃO DE ASSISTÊNCIA SOCIAL, no uso de suas atribuições e de acordo com o Edtial de Chamamento Público n.º
+027/2024 que visa o credenciamento de pessoas físicas e jurídicas interessadas em prestar serviços de oficineiros, dentro das
+ações e demandas da Proteção Social Especial de Média Complexidade, no Centro POP Rua, após análise, conferência e avaliação
+dos documentos apresentados entre os dias 09 a 19 de setembro de 2024, pela Comissão Avaliadora DECLARA CLASSIFICADO,
+pelos critérios descritos no Edital o seguinte licitante:
+MÁRCIO CRISTIANO DA SILVA - CPF n.º XXX.XXX.740-27, para oficina de Musicalização.
+DECLARA DESCLASSIFICADO, por descumprimento de requisitos do Edital o seguinte licitante:
+COSME DA SILVA MESSIAS - CPF n.º XXX.XXX.664-00, para a oficina de Contação de Histórias.   
+O prazo para interposição de recursos é de 5 (cinco) dias úteis, ou seja, até 01 de outubro de 2024, conforme dispõe o subitem 3.3
+do Edital e deve seguir o modelo anexo do Edital.
+A análise completa está disponível no site da FAS, www.caxias.rs.gov.br/fas no linck licitações. Outras informeções poderão ser
+obtidas na Diretoria de Suprimentos da FAS, na rua Os Dezoito do Forte, 423, Bairro Nossa Senhora de Lourdes, ou pelos
+telefones (54) 3220.87.43, de segunda a sexta-feira, quando dias úteis, das 8:00 as 12:00 e das 13:00 as 17:00.
+Fundação de Assistência Social, 24 de setembro de 2024.
+RAFAEL DA SILVA VIEIRA - Presidente da FAS em exercício.
+ 
+DIÁRIO OFICIAL ELETRÔNICO DO MUNICÍPIO DE CAXIAS DO SUL
+Publicado em cumprimento ao que dispõe o art. 12 do Ato das Disposições Transitórias da Lei Orgânica do Município, em
+consonância com a Lei Municipal nº 8.038, de 11 de dezembro de 2015, regulamentada pelo Decreto nº 18.165, de 2 de maio de
+2016. Rua Alfredo Chaves, nº 1333, Caxias do Sul/RS. Editado pela Secretaria de Governo da Prefeitura Municipal de Caxias do
+Sul.
+Responsáveis:
+PODER EXECUTIVO: Prefeito Adiló Ângelo Didomenico. PODER LEGISLATIVO: Presidente Marisol Santos. Publicação: Secretaria
+de Governo do Município de Caxias do Sul.
+
+Diário Oficial Eletrônico do Município de Caxias do Sul Número 4801 - 24/09/2024 - Página 9
+Exploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.
+Índice
+Poder Executivo 1 ............................................................................................................................................................................... 
+Poder Executivo - Secretaria de Governo Municipal 2 .................................................................................................................. 
+Poder Executivo - Secretaria da Receita Municipal 2 ................................................................................................................... 
+Poder Executivo - Secretaria Municipal de Recursos Humanos e Logística 4 .......................................................................... 
+Secretaria Municipal de Recursos Humanos e Logística - Central de Licitações 5 .................................................................. 
+Poder Executivo - Secretaria Municipal do Urbanismo 5 ............................................................................................................. 
+SERVIÇO AUTÔNOMO MUNICIPAL DE ÁGUA E ESGOTO SAMAE 6 ................................................................................................ 
+INSTITUTO DE PREVIDÊNCIA E ASSISTÊNCIA MUNICIPAL IPAM 7 ................................................................................................ 
+FUNDAÇÃO DE ASSISTÊNCIA SOCIAL FAS 7 .................................................................................................................................... 
+
+Diário Oficial Eletrônico do Município de Caxias do Sul Número 4801 - 24/09/2024 - Página 10
+Exploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.

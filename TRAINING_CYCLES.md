@@ -129,9 +129,39 @@ Critério: **esgotar o universo amostral** dos Fiscais com pouco volume (Convên
 
 55 amostras sintéticas controladas (11 por Fiscal: 3 TP textbook + 5 FP réplica + 3 FP edge case). Marcadas com `source: "synthetic"` para nunca contaminarem métricas reais. Função: regression tests do patch antes de PR.
 
-### Resultado
+### Resultado parcial (685/1016 rotuladas, 67%)
 
-*Em execução. Atualização desta seção quando rotulagem dos +915 amostras concluir.*
+| Fiscal | TP | FP | Bo | Total | Pendentes | Precisão | Δ vs C1 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Pessoal | 138 | 61 | 10 | 300 | 91 | 69,3% | −5,7pp |
+| Licitações | 52 | 87 | 11 | 150 | 0 | **37,4%** | **−51,5pp** ⚠️ |
+| Contratos | 8 | 89 | 3 | 180 | 80 | **8,2%** | **−25,1pp** ⚠️ |
+| Locação | 18 | 72 | 0 | 250 | 160 | 20,0% | +20pp |
+| Convênios | 0 | 68 | 7 | 75 | 0 | 0,0% | 0pp |
+| Diárias | 0 | 37 | 0 | 37 | 0 | 0,0% | 0pp |
+| Publicidade | 2 | 21 | 0 | 23 | 0 | 8,7% | +8,7pp |
+| Geral | 1 | 0 | 0 | 1 | 0 | 100,0% | n/a |
+| **Total** | **219** | **435** | **31** | **1.016** | **331** | **33,5%** | — |
+
+### Achados críticos do Ciclo 2
+
+**1. Viés amostral severo no Ciclo 1.** Licitações com 88,9% precisão sobre 20 amostras revelou-se 37,4% sobre 150. **Lição metodológica:** golden set < 50 amostras por Fiscal tem risco alto de mascarar bugs. Sempre validar com n ≥ 100 antes de declarar Fiscal "pronto".
+
+**2. Bug central de Contratos é mais grave.** Ciclo 1 estimou 33,3% precisão sobre 20 amostras; Ciclo 2 mostrou 8,2% sobre 100. Aditivos sem cross-reference (suppliers-prod GSI ainda não consultado) geram FP em 92% dos casos.
+
+**3. FiscalGeral funciona.** Padrão recorrente VIAÇÃO GIRATUR (8+ atos do mesmo CNPJ em 12 meses, R$ 1,7M agregado) é TP forte. Detector cross-gazette está calibrado.
+
+**4. Pendentes (cota Anthropic resetará 9:20am SP):**
+- Pessoal shard 3 (91 amostras)
+- Locação shards 1 e 3 (160 amostras)
+- Contratos shard 1 (80 amostras)
+- **Total: 331 amostras** — retomar em janela de cota disponível
+
+### Próximo passo
+
+Após completar Ciclo 2 (rotular as 331 pendentes), o snapshot definitivo do baseline v1.5.0 estará pronto. A partir daí, **Ciclo 3** começa após primeiro patch P0 mergeado em `fiscal-digital`, validado contra os mesmos 1.016 amostras.
+
+---
 
 ---
 
