@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-10T08:55:38.521Z",
+  "generatedAt": "2026-05-10T23:53:08.326Z",
   "engine": "fiscal-digital@v1.5.0",
   "extractor": "realistic-regex-mock-v1",
   "totalSamples": 55,
@@ -14,32 +14,32 @@
     },
     "fiscal-convenios": {
       "tp_real": 0,
-      "fp_real": 4,
-      "tn_real": 4,
+      "fp_real": 0,
+      "tn_real": 8,
       "fn_real": 3,
       "errors": 0,
       "total": 11
     },
     "fiscal-diarias": {
       "tp_real": 3,
-      "fp_real": 7,
-      "tn_real": 1,
+      "fp_real": 3,
+      "tn_real": 5,
       "fn_real": 0,
       "errors": 0,
       "total": 11
     },
     "fiscal-locacao": {
       "tp_real": 3,
-      "fp_real": 6,
-      "tn_real": 2,
+      "fp_real": 2,
+      "tn_real": 6,
       "fn_real": 0,
       "errors": 0,
       "total": 11
     },
     "fiscal-publicidade": {
       "tp_real": 3,
-      "fp_real": 4,
-      "tn_real": 4,
+      "fp_real": 2,
+      "tn_real": 6,
       "fn_real": 0,
       "errors": 0,
       "total": 11
@@ -209,14 +209,10 @@
       "fiscalId": "fiscal-convenios",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "convenio_sem_chamamento",
-        "riskScore": 89,
-        "confidence": 0.65
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -224,14 +220,10 @@
       "fiscalId": "fiscal-convenios",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "convenio_sem_chamamento",
-        "riskScore": 89,
-        "confidence": 0.65
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -239,14 +231,10 @@
       "fiscalId": "fiscal-convenios",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "convenio_sem_chamamento",
-        "riskScore": 89,
-        "confidence": 0.65
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -254,14 +242,10 @@
       "fiscalId": "fiscal-convenios",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "convenio_sem_chamamento",
-        "riskScore": 89,
-        "confidence": 0.65
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -358,14 +342,10 @@
       "fiscalId": "fiscal-diarias",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "diaria_irregular",
-        "riskScore": 85,
-        "confidence": 0.7
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -373,14 +353,10 @@
       "fiscalId": "fiscal-diarias",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "diaria_irregular",
-        "riskScore": 85,
-        "confidence": 0.7
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -388,14 +364,10 @@
       "fiscalId": "fiscal-diarias",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "diaria_irregular",
-        "riskScore": 85,
-        "confidence": 0.7
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -414,14 +386,10 @@
       "fiscalId": "fiscal-diarias",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "diaria_irregular",
-        "riskScore": 63,
-        "confidence": 0.6
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -519,14 +487,10 @@
       "fiscalId": "fiscal-locacao",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "locacao_sem_justificativa",
-        "riskScore": 60,
-        "confidence": 0.65
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -534,14 +498,10 @@
       "fiscalId": "fiscal-locacao",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "locacao_sem_justificativa",
-        "riskScore": 81,
-        "confidence": 0.85
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -560,14 +520,10 @@
       "fiscalId": "fiscal-locacao",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "locacao_sem_justificativa",
-        "riskScore": 60,
-        "confidence": 0.65
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -616,14 +572,10 @@
       "fiscalId": "fiscal-locacao",
       "category": "fp_edge_case",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "locacao_sem_justificativa",
-        "riskScore": 72,
-        "confidence": 0.65
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -698,14 +650,10 @@
       "fiscalId": "fiscal-publicidade",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "publicidade_eleitoral",
-        "riskScore": 89,
-        "confidence": 0.8
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
@@ -713,14 +661,10 @@
       "fiscalId": "fiscal-publicidade",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": true,
-      "emittedCount": 1,
-      "verdict": "fp_real",
-      "firstFinding": {
-        "type": "publicidade_eleitoral",
-        "riskScore": 84,
-        "confidence": 0.8
-      },
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
       "error": null
     },
     {
