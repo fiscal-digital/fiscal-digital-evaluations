@@ -8,3 +8,6 @@ coverage/
 
 # PDFs binários extraídos localmente — só texto entra no repo
 golden-set/pdfs/**/*.pdf
+
+# Arquivos intermediários de orquestração de sub-agents (labels de Opus, pending shards)
+.tmp-*.json

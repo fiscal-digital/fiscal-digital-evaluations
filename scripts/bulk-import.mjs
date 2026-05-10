@@ -20,14 +20,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = path.resolve(__dirname, '..')
 const SAMPLES_PATH = path.join(REPO_ROOT, 'golden-set/samples.json')
 
-// Plano alvo aprovado em 2026-05-10 (total 1016)
-// Esgota classes pequenas (Conv/Diarias/Pub/Geral = 100% do disponivel)
-// Maximiza Pessoal (300) e Locacao (250) para baseline statistico robusto
+// Plano alvo aprovado em 2026-05-10 (Ciclo 3 — total 1695, esgota prod)
 const TARGET = {
-  'fiscal-pessoal': 300,
-  'fiscal-locacao': 250,
-  'fiscal-contratos': 180,
-  'fiscal-licitacoes': 150,
+  'fiscal-pessoal': 708,
+  'fiscal-locacao': 476,
+  'fiscal-contratos': 204,
+  'fiscal-licitacoes': 171,
   'fiscal-convenios': 75,
   'fiscal-diarias': 37,
   'fiscal-publicidade': 23,

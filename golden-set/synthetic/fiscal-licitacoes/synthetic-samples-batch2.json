@@ -1,0 +1,1852 @@
+[
+  {
+    "id": "SYN-LIC-TP-001",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-04-12",
+      "excerpt": "EXTRATO DE DISPENSA DE LICITAÇÃO Nº 142/2026\nFUNDAMENTO: Art. 75, inciso I, da Lei nº 14.133/2021.\nOBJETO: Contratação de empresa para execução de obra de pavimentação asfáltica de 1.200 metros lineares na Rua Marechal Floriano, bairro Cinquentenário, com fornecimento de materiais e mão de obra.\nCONTRATADA: PAVIMENTADORA SERRA GAÚCHA LTDA - CNPJ 14.567.890/0001-22\nVALOR GLOBAL: R$ 187.500,00 (cento e oitenta e sete mil e quinhentos reais)\nPRAZO DE EXECUÇÃO: 90 dias\nDOTAÇÃO ORÇAMENTÁRIA: 15.451.0010.1023 - 4.4.90.51.00\nCaxias do Sul, 11 de abril de 2026.\nAdiló Didomenico Zanini - Prefeito Municipal",
+      "fullPageContext": "[Página 9 do DO de 12/04/2026 - Ato classificado como obra (pavimentação asfáltica) com valor R$ 187.500 que excede em 87% o teto legal de R$ 100.000 do Art. 75, I, da Lei 14.133/2021. Não há referência a parecer técnico justificando a dispensa, ausência de orçamento estimado, nem fundamentação para a escolha do fornecedor.]"
+    },
+    "rationale": "Dispensa de obra fundamentada no Art. 75, I (teto R$ 100k para obras), porém valor é R$ 187.500 — quase 2x o teto. Caso clássico de dispensa fora do limite legal. TP textbook.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-002",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-03-18",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0876/SMSO/2026\nFUNDAMENTO LEGAL: Art. 75, I, Lei 14.133/2021\nOBJETO: Reforma estrutural do telhado e troca de calhas do galpão da Subprefeitura Lapa, incluindo recuperação de vigas metálicas e impermeabilização.\nCONTRATADA: CONSTRUTORA OESTE PAULISTA EIRELI - CNPJ 22.345.678/0001-15\nVALOR: R$ 245.800,00\nVIGÊNCIA: 120 dias\nProcesso SEI: 6022.2026/0001234-5",
+      "fullPageContext": "[Página 17 do DOC de 18/03/2026 - Reforma estrutural (obra) com valor R$ 245.800 — 145% acima do teto R$ 100k para obras pelo Art. 75, I. Ato não cita laudo técnico, parecer da SMSO ou justificativa da escolha. PDF inteiro não menciona 'emergência', 'calamidade' nem outro inciso aplicável.]"
+    },
+    "rationale": "Reforma estrutural é obra. Valor R$ 245.800 ultrapassa em 145% o teto Art. 75 I de R$ 100k. Ausência de fundamentação adicional configura TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-003",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-02-25",
+      "excerpt": "RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO Nº 099/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Construção de muro de arrimo de 80 metros lineares ao longo da Avenida Beira-Rio, com altura média de 2,80m, fundação em concreto armado.\nCONTRATADA: ENGENHARIA CIVIL DO SUL LTDA - CNPJ 05.678.901/0001-33\nVALOR GLOBAL: R$ 156.700,00\nPRAZO: 60 dias\nPorto Alegre, 24 de fevereiro de 2026.",
+      "fullPageContext": "[Página 11 do DOPOA de 25/02/2026 - Construção de muro de arrimo é obra civil. Valor R$ 156.700 supera teto R$ 100k em 56%. Ato isolado, sem laudo de emergência, sem situação de calamidade declarada formalmente, sem fornecedor exclusivo. Trata-se de simples dispensa por valor declarada acima do limite.]"
+    },
+    "rationale": "Construção de muro de arrimo é obra. R$ 156.700 ultrapassa teto Art. 75 I em 56%. Sem fundamentação para outros incisos. TP claro.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-004",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-04-03",
+      "excerpt": "EXTRATO DE DISPENSA - PROCESSO 09/000654/2026\nMODALIDADE: Dispensa de Licitação - Art. 75, I, Lei 14.133/2021\nOBJETO: Recapeamento asfáltico da Rua Pacheco Leão, trecho entre os números 200 e 800, com base CBUQ e selagem hidráulica.\nCONTRATADA: ASFALTOS ZONA SUL S.A. - CNPJ 11.234.567/0001-08\nVALOR ESTIMADO: R$ 198.000,00\nSECRETARIA: Secretaria Municipal de Conservação - SECONSERVA",
+      "fullPageContext": "[Página 25 do DOM RJ de 03/04/2026 - Recapeamento asfáltico classifica como obra de engenharia. Valor R$ 198.000 quase dobra o teto Art. 75 I. Sem laudo, sem emergência declarada, sem fornecedor exclusivo. SECONSERVA não fundamenta singularidade técnica.]"
+    },
+    "rationale": "Recapeamento asfáltico é obra. R$ 198k quase 2x o teto Art. 75 I. Sem fundamentação extra. TP textbook.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-005",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-03-30",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0234/SES-DF/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Construção de cobertura metálica para área de espera externa do Hospital Regional de Sobradinho, dimensões 12x18m, telhas termoacústicas.\nCONTRATADA: METALURGIA CENTRAL LTDA - CNPJ 33.456.789/0001-44\nVALOR GLOBAL: R$ 134.500,00",
+      "fullPageContext": "[Página 7 do DODF de 30/03/2026 - Construção de cobertura metálica é obra civil. Valor R$ 134.500 ultrapassa teto Art. 75 I em 34,5%. Não há justificativa de emergência sanitária para esta cobertura específica nem fornecedor exclusivo declarado.]"
+    },
+    "rationale": "Cobertura metálica é obra. R$ 134.500 acima do teto R$ 100k Art. 75 I. Ausência de outros fundamentos. TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-006",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2026-04-08",
+      "excerpt": "EXTRATO DE DISPENSA Nº 145/SEMINF/2026\nFUNDAMENTO LEGAL: Art. 75, inciso I, Lei nº 14.133/2021\nOBJETO: Construção de praça pública na Rua das Acácias, bairro Cidade Nova, incluindo bancos de concreto, pavimentação intertravada de 800m² e iluminação ornamental.\nCONTRATADA: PAISAGISMO AMAZONAS LTDA - CNPJ 18.765.432/0001-77\nVALOR: R$ 220.300,00\nPRAZO: 75 dias",
+      "fullPageContext": "[Página 13 do DOM Manaus de 08/04/2026 - Construção de praça pública é obra de engenharia. Valor R$ 220.300 ultrapassa em 120% o teto R$ 100k. SEMINF não declara emergência ambiental, calamidade ou exclusividade.]"
+    },
+    "rationale": "Construção de praça é obra. R$ 220.300 vs teto R$ 100k → 120% acima. Sem outros fundamentos. TP claro.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-007",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-02-12",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0567/SEINFRA/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Reforma do galpão de manutenção da Garagem Municipal, incluindo demolição de paredes internas, refazimento de piso industrial 600m² e troca de portões metálicos.\nCONTRATADA: REFORMAS PERNAMBUCO LTDA - CNPJ 25.987.654/0001-19\nVALOR: R$ 312.400,00",
+      "fullPageContext": "[Página 19 do DOM Recife de 12/02/2026 - Reforma com demolição estrutural é obra. Valor R$ 312.400 mais que triplica o teto Art. 75 I. Sem laudo de emergência, sem singularidade técnica, sem outro inciso aplicável.]"
+    },
+    "rationale": "Reforma estrutural é obra. R$ 312.400 vs teto R$ 100k → 3x o limite. TP textbook.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-008",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5208707",
+      "cityName": "Goiânia",
+      "date": "2026-03-05",
+      "excerpt": "EXTRATO DE DISPENSA Nº 098/2026/SEINFRA\nFUNDAMENTAÇÃO: Art. 75, I, Lei 14.133/2021\nOBJETO: Construção de quadra poliesportiva coberta no CMEI Setor Bueno, dimensões 20x12m, com vestiários, arquibancada e iluminação esportiva.\nCONTRATADA: ENGENHARIA CENTRO-OESTE LTDA - CNPJ 09.876.543/0001-66\nVALOR GLOBAL: R$ 287.900,00",
+      "fullPageContext": "[Página 22 do DOM Goiânia de 05/03/2026 - Construção de quadra é obra civil. Valor R$ 287.900 quase triplica teto R$ 100k. Sem fundamentação adicional. SEINFRA não cita parecer técnico de exclusividade.]"
+    },
+    "rationale": "Construção de quadra poliesportiva é obra. R$ 287.900 vs R$ 100k → quase 3x. TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-009",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2026-04-22",
+      "excerpt": "RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO\nProcesso: P09876/2026 - SEINF\nFUNDAMENTO: Art. 75, I, Lei nº 14.133/2021\nOBJETO: Construção de unidade básica de saúde tipo II, alvenaria estrutural, área 280m², no bairro Pirambu.\nCONTRATADA: BUILDERS NORDESTE S.A. - CNPJ 41.234.567/0001-88\nVALOR GLOBAL: R$ 432.000,00",
+      "fullPageContext": "[Página 31 do DOM Fortaleza de 22/04/2026 - Construção de UBS é obra. Valor R$ 432.000 ultrapassa em 332% o teto Art. 75 I. Não há declaração de emergência sanitária, calamidade pública ou inciso IV. Trata-se de obra programada utilizando dispensa por valor de forma indevida.]"
+    },
+    "rationale": "Construção de UBS é obra. R$ 432.000 vs R$ 100k → 4,3x o teto. Sem fundamentação para outro inciso. TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-010",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-03-14",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0345/SMOP/2026\nFUNDAMENTO LEGAL: Art. 75, I, Lei 14.133/2021\nOBJETO: Construção de passarela elevada metálica sobre Av. Marechal Floriano Peixoto, com 24m de vão livre, escadas e rampas de acessibilidade.\nCONTRATADA: ESTRUTURAS METÁLICAS PARANÁ LTDA - CNPJ 78.123.456/0001-22\nVALOR: R$ 365.000,00",
+      "fullPageContext": "[Página 14 do DOM Curitiba de 14/03/2026 - Construção de passarela é obra de engenharia. Valor R$ 365.000 supera teto R$ 100k em 265%. Sem fundamentação de calamidade nem exclusividade.]"
+    },
+    "rationale": "Passarela é obra. R$ 365k vs R$ 100k → 3,65x o teto. TP textbook.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-011",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-02-08",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 029/2026\nFUNDAMENTO: Art. 75, II, Lei 14.133/2021\nOBJETO: Contratação de empresa especializada para prestação de serviços continuados de limpeza e conservação predial das unidades da Secretaria Municipal de Educação.\nCONTRATADA: LIMPEZA SERRANA LTDA - CNPJ 14.789.012/0001-55\nVALOR ANUAL: R$ 142.300,00\nVIGÊNCIA: 12 meses",
+      "fullPageContext": "[Página 6 do DO de 08/02/2026 - Serviço continuado de limpeza com valor R$ 142.300 ultrapassa em 184% o teto Art. 75 II (R$ 50k para serviços). Sem fundamentação para outros incisos.]"
+    },
+    "rationale": "Serviço de limpeza. Teto Art. 75 II é R$ 50k. R$ 142.300 = 2,84x o teto. TP claro.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-012",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-04-15",
+      "excerpt": "EXTRATO DE DISPENSA Nº 1456/SMC/2026\nFUNDAMENTO: Art. 75, II, Lei 14.133/2021\nOBJETO: Prestação de serviços técnicos de consultoria em comunicação institucional e mídias sociais para a Secretaria Municipal de Cultura.\nCONTRATADA: COMUNICA SP LTDA - CNPJ 56.789.012/0001-91\nVALOR GLOBAL: R$ 96.500,00\nVIGÊNCIA: 12 meses",
+      "fullPageContext": "[Página 28 do DOC de 15/04/2026 - Serviço de consultoria. Valor R$ 96.500 ultrapassa teto R$ 50k em 93%. Sem justificativa para fornecedor único, sem emergência declarada. Não cita Art. 74 (inexigibilidade).]"
+    },
+    "rationale": "Serviço de consultoria. R$ 96.500 vs teto R$ 50k → 1,93x. TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-013",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-03-21",
+      "excerpt": "DISPENSA Nº 0211/SMS/2026\nFUNDAMENTO LEGAL: Art. 75, II, da Lei 14.133/2021\nOBJETO: Prestação de serviços de manutenção preventiva e corretiva em equipamentos médico-hospitalares (raios-X portáteis, monitores cardíacos e bombas de infusão).\nCONTRATADA: MEDTECH SUL LTDA - CNPJ 92.345.678/0001-44\nVALOR ANUAL: R$ 168.000,00",
+      "fullPageContext": "[Página 18 do DOPOA de 21/03/2026 - Serviço de manutenção. R$ 168.000 supera teto Art. 75 II em 236%. Não menciona Art. 75 IX (insumos saúde — não se aplica a serviços), nem Art. 74 (inexigibilidade), nem fornecedor exclusivo. Existem múltiplas empresas no mercado.]"
+    },
+    "rationale": "Serviço de manutenção (não compra de insumo Art. 75 IX). R$ 168k vs teto R$ 50k → 3,36x. TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-014",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-02-19",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0612/SEEC-DF/2026\nFUNDAMENTO: Art. 75, II, Lei 14.133/2021\nOBJETO: Contratação de serviços de transporte escolar terceirizado para 8 rotas no Plano Piloto, com 16 veículos.\nCONTRATADA: TRANSPORTE ESCOLAR DF EIRELI - CNPJ 38.901.234/0001-77\nVALOR: R$ 234.000,00\nPRAZO: 12 meses",
+      "fullPageContext": "[Página 26 do DODF de 19/02/2026 - Serviço continuado de transporte. R$ 234.000 ultrapassa teto R$ 50k em 368%. Sem fundamentação de exclusividade ou emergência.]"
+    },
+    "rationale": "Serviço de transporte escolar. R$ 234k vs R$ 50k → 4,68x o teto. TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-015",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2026-04-09",
+      "excerpt": "EXTRATO DE DISPENSA Nº 287/SEMASC/2026\nFUNDAMENTO LEGAL: Art. 75, II, Lei 14.133/2021\nOBJETO: Prestação de serviços de vigilância armada e desarmada para 12 unidades de assistência social no Município de Manaus.\nCONTRATADA: SEGURANÇA AMAZÔNIA LTDA - CNPJ 67.890.123/0001-55\nVALOR GLOBAL: R$ 312.000,00\nVIGÊNCIA: 12 meses",
+      "fullPageContext": "[Página 21 do DOM Manaus de 09/04/2026 - Serviço continuado de vigilância. R$ 312.000 ultrapassa teto R$ 50k em 524%. Sem justificativa de exclusividade, sem emergência.]"
+    },
+    "rationale": "Serviço de vigilância. R$ 312k vs R$ 50k → 6,24x o teto. TP textbook.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-016",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2026-03-12",
+      "excerpt": "DISPENSA Nº 0789/SDE/2026\nFUNDAMENTO: Art. 75, II, Lei 14.133/2021\nOBJETO: Serviços técnicos de organização de eventos institucionais (4 eventos anuais) com sonorização, palco, iluminação, recepcionistas e coffee break.\nCONTRATADA: EVENTOS NORDESTE PRODUÇÕES LTDA - CNPJ 22.345.678/0001-33\nVALOR ANUAL: R$ 78.500,00",
+      "fullPageContext": "[Página 19 do DOM Fortaleza de 12/03/2026 - Serviço de eventos. R$ 78.500 ultrapassa teto R$ 50k em 57%. Sem fundamentação adicional.]"
+    },
+    "rationale": "Serviço de eventos. R$ 78.500 vs R$ 50k → 1,57x o teto. TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-017",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-04-18",
+      "excerpt": "EXTRATO DE DISPENSA Nº 0456/SMAB/2026\nFUNDAMENTO LEGAL: Art. 75, II, Lei 14.133/2021\nOBJETO: Prestação de serviços de assessoria jurídica para análise de processos administrativos disciplinares.\nCONTRATADA: ESCRITÓRIO ADVOCACIA PARANÁ LTDA - CNPJ 91.234.567/0001-88\nVALOR: R$ 88.000,00\nPRAZO: 12 meses",
+      "fullPageContext": "[Página 32 do DOM Curitiba de 18/04/2026 - Serviço de assessoria jurídica. R$ 88.000 ultrapassa teto R$ 50k em 76%. Não cita Art. 74 III (inexigibilidade para serviços técnicos especializados de natureza singular). Sem demonstração de notória especialização.]"
+    },
+    "rationale": "Serviço de assessoria jurídica via Art. 75 II (errado). R$ 88k vs R$ 50k → 1,76x o teto. Caso típico de uso indevido para evitar Art. 74. TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-018",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "fracionamento",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-03-15",
+      "excerpt": "DISPENSA Nº 056/2026 - SMED\nFUNDAMENTO: Art. 75, II, Lei 14.133/2021\nOBJETO: Aquisição de material de expediente (papel A4, canetas, pastas) para escolas municipais.\nCONTRATADA: PAPELARIA SERRA LTDA - CNPJ 19.456.789/0001-22\nVALOR: R$ 48.500,00\n\nDISPENSA Nº 057/2026 - SMED\nFUNDAMENTO: Art. 75, II, Lei 14.133/2021\nOBJETO: Aquisição de material escolar (cadernos, lápis, borrachas) para escolas municipais.\nCONTRATADA: PAPELARIA SERRA LTDA - CNPJ 19.456.789/0001-22\nVALOR: R$ 47.800,00\n\nDISPENSA Nº 058/2026 - SMED\nFUNDAMENTO: Art. 75, II, Lei 14.133/2021\nOBJETO: Aquisição de material gráfico (cartolinas, papel pardo, papel craft).\nCONTRATADA: PAPELARIA SERRA LTDA - CNPJ 19.456.789/0001-22\nVALOR: R$ 46.200,00\nCaxias do Sul, 14 de março de 2026.",
+      "fullPageContext": "[Página 5 do DO de 15/03/2026 - Três dispensas no MESMO DIA, MESMA SECRETARIA (SMED), MESMO FORNECEDOR (CNPJ 19.456.789), todas para material de papelaria/expediente escolar. Soma total: R$ 142.500. Cada uma logo abaixo do teto R$ 50k. Padrão clássico de fracionamento para escapar do limite legal.]"
+    },
+    "rationale": "Fracionamento clássico: 3 dispensas mesmo dia, mesma secretaria, mesmo fornecedor, objetos correlatos (material de papelaria). Soma R$ 142.500 quase 3x o teto unitário. TP textbook.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-019",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "fracionamento",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-02-26",
+      "excerpt": "DISPENSA Nº 0145/SMS/2026 - Aquisição de seringas descartáveis. Fornecedor: HOSPITALAR PAULISTA LTDA - CNPJ 27.890.123/0001-44. Valor: R$ 49.800,00. Fundamento: Art. 75, II.\nDISPENSA Nº 0146/SMS/2026 - Aquisição de luvas de procedimento. Fornecedor: HOSPITALAR PAULISTA LTDA - CNPJ 27.890.123/0001-44. Valor: R$ 49.500,00. Fundamento: Art. 75, II.\nDISPENSA Nº 0147/SMS/2026 - Aquisição de máscaras cirúrgicas. Fornecedor: HOSPITALAR PAULISTA LTDA - CNPJ 27.890.123/0001-44. Valor: R$ 48.900,00. Fundamento: Art. 75, II.\nDISPENSA Nº 0148/SMS/2026 - Aquisição de gaze. Fornecedor: HOSPITALAR PAULISTA LTDA - CNPJ 27.890.123/0001-44. Valor: R$ 47.300,00. Fundamento: Art. 75, II.\nSão Paulo, 25/02/2026.",
+      "fullPageContext": "[Página 47 do DOC de 26/02/2026 - Quatro dispensas no MESMO DIA, MESMA SMS, MESMO FORNECEDOR (CNPJ 27.890.123) com objetos da mesma natureza (insumos hospitalares correlatos). Cada uma R$ ~49k, somando R$ 195.500. Não usaram Art. 75 IX (insumos saúde) propositalmente para evitar pregão e fracionaram em Art. 75 II.]"
+    },
+    "rationale": "Fracionamento em saúde: 4 dispensas mesmo dia/SMS/CNPJ, objetos correlatos. Soma R$ 195.500 vs teto R$ 50k. Não usou Art. 75 IX. TP claro.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-020",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "fracionamento",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-04-02",
+      "excerpt": "DISPENSA Nº 0167/SMOV/2026 - Pavimentação Rua A (trecho 1, 200m). CONTRATADA: PAVIMENTOS GAÚCHOS LTDA - CNPJ 88.123.456/0001-09. Valor: R$ 99.500,00.\nDISPENSA Nº 0168/SMOV/2026 - Pavimentação Rua A (trecho 2, 200m). CONTRATADA: PAVIMENTOS GAÚCHOS LTDA - CNPJ 88.123.456/0001-09. Valor: R$ 99.700,00.\nDISPENSA Nº 0169/SMOV/2026 - Pavimentação Rua A (trecho 3, 200m). CONTRATADA: PAVIMENTOS GAÚCHOS LTDA - CNPJ 88.123.456/0001-09. Valor: R$ 98.900,00.\nFundamento legal de todas: Art. 75, I, Lei 14.133/2021.\nPorto Alegre, 01/04/2026.",
+      "fullPageContext": "[Página 9 do DOPOA de 02/04/2026 - Três dispensas para pavimentação da MESMA RUA, dividida em trechos de 200m, MESMO DIA, MESMA SMOV, MESMO FORNECEDOR. Soma R$ 298.100. Pavimentação contínua de uma via fragmentada em 3 contratos para escapar do teto Art. 75 I.]"
+    },
+    "rationale": "Fracionamento em obra: 3 dispensas mesmo dia, mesma rua dividida em trechos, mesmo fornecedor. Soma R$ 298.100 vs teto R$ 100k. TP textbook.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-021",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "fracionamento",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5208707",
+      "cityName": "Goiânia",
+      "date": "2026-03-08",
+      "excerpt": "EXTRATOS DE DISPENSA — SMM (Secretaria Municipal de Meio Ambiente):\nDISPENSA 0234/2026 - Coleta seletiva Setor Bueno. JARDIM LIMPO LTDA - CNPJ 12.345.678/0001-12. R$ 49.000,00.\nDISPENSA 0235/2026 - Coleta seletiva Setor Oeste. JARDIM LIMPO LTDA - CNPJ 12.345.678/0001-12. R$ 49.500,00.\nDISPENSA 0236/2026 - Coleta seletiva Setor Sul. JARDIM LIMPO LTDA - CNPJ 12.345.678/0001-12. R$ 48.700,00.\nFundamento: Art. 75, II, Lei 14.133/2021. Goiânia, 07/03/2026.",
+      "fullPageContext": "[Página 14 do DOM Goiânia de 08/03/2026 - Três dispensas mesmo dia, mesma SMM, mesmo CNPJ, mesmo objeto (coleta seletiva) divididas por setor. Soma R$ 147.200 vs teto R$ 50k. Fracionamento territorial.]"
+    },
+    "rationale": "Fracionamento territorial: 3 dispensas mesmo dia/SMM/CNPJ, mesmo objeto dividido por setor. Soma R$ 147.200 vs R$ 50k → 2,94x. TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-022",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "fracionamento",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2026-04-04",
+      "excerpt": "DISPENSA 0312/SEMED/2026 - Mobiliário escolar lote 1 (cadeiras). CNPJ 33.456.789/0001-77 (MOBILIÁRIO NORTE LTDA). R$ 49.700,00.\nDISPENSA 0313/SEMED/2026 - Mobiliário escolar lote 2 (mesas). CNPJ 33.456.789/0001-77 (MOBILIÁRIO NORTE LTDA). R$ 49.300,00.\nDISPENSA 0314/SEMED/2026 - Mobiliário escolar lote 3 (armários). CNPJ 33.456.789/0001-77 (MOBILIÁRIO NORTE LTDA). R$ 48.500,00.\nDISPENSA 0315/SEMED/2026 - Mobiliário escolar lote 4 (estantes). CNPJ 33.456.789/0001-77 (MOBILIÁRIO NORTE LTDA). R$ 47.900,00.\nFundamento: Art. 75, II. Manaus, 03/04/2026.",
+      "fullPageContext": "[Página 11 do DOM Manaus de 04/04/2026 - Quatro dispensas mesmo dia, mesma SEMED, mesmo CNPJ, objeto único (mobiliário escolar) fragmentado em 4 lotes. Soma R$ 195.400 vs R$ 50k. Fracionamento por lote.]"
+    },
+    "rationale": "Fracionamento por lote: 4 dispensas mesmo dia/CNPJ/objeto correlato. Soma R$ 195.400 vs R$ 50k → 3,9x. TP claro.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-023",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "fracionamento",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-02-21",
+      "excerpt": "DISPENSA 0567/SECONT/2026 - Reforma fachada UBS Boa Vista. R$ 99.800,00. CONSTRUÇÕES PE LTDA - CNPJ 51.234.567/0001-09.\nDISPENSA 0568/SECONT/2026 - Reforma fachada UBS Madalena. R$ 99.500,00. CONSTRUÇÕES PE LTDA - CNPJ 51.234.567/0001-09.\nDISPENSA 0569/SECONT/2026 - Reforma fachada UBS Casa Amarela. R$ 99.200,00. CONSTRUÇÕES PE LTDA - CNPJ 51.234.567/0001-09.\nFundamento: Art. 75, I. Recife, 20/02/2026.",
+      "fullPageContext": "[Página 23 do DOM Recife de 21/02/2026 - Três dispensas para reforma de fachada de UBS, mesmo dia, mesmo CNPJ, valores quase no limite (R$ 99k cada). Soma R$ 298.500 vs teto R$ 100k. Fracionamento por UBS.]"
+    },
+    "rationale": "Fracionamento de obra: 3 dispensas mesmo dia/CNPJ, mesmo tipo de serviço (reforma fachada UBS). Soma R$ 298.500 vs R$ 100k → 2,98x. TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-TP-024",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "fracionamento",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-03-25",
+      "excerpt": "DISPENSA 0789/SES-DF/2026 - Aquisição de medicamentos básicos lote A. FARMA CENTRAL LTDA - CNPJ 28.901.234/0001-66. R$ 49.900,00.\nDISPENSA 0790/SES-DF/2026 - Aquisição de medicamentos básicos lote B. FARMA CENTRAL LTDA - CNPJ 28.901.234/0001-66. R$ 49.700,00.\nDISPENSA 0791/SES-DF/2026 - Aquisição de medicamentos básicos lote C. FARMA CENTRAL LTDA - CNPJ 28.901.234/0001-66. R$ 49.500,00.\nFundamento: Art. 75, II, Lei 14.133/2021. Brasília, 24/03/2026.",
+      "fullPageContext": "[Página 17 do DODF de 25/03/2026 - Três dispensas mesmo dia, mesma SES, mesmo CNPJ, mesmo objeto (medicamentos básicos) divididos artificialmente em lotes A/B/C. Soma R$ 149.100. Fundamento Art. 75 II (não usaram Art. 75 IX para insumos saúde — propositalmente para mascarar). Fracionamento.]"
+    },
+    "rationale": "Fracionamento em saúde com Art. 75 II em vez de IX: 3 dispensas mesmo dia/CNPJ, objeto único dividido em lotes. Soma R$ 149.100 vs R$ 50k → 2,98x. TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LIC-FP-001",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-03-10",
+      "excerpt": "EXTRATO DE INEXIGIBILIDADE DE LICITAÇÃO Nº 045/2026\nFUNDAMENTO: Art. 74, III, 'b', Lei 14.133/2021\nOBJETO: Locação de imóvel destinado à instalação da Unidade Básica de Saúde do bairro São Pelegrino.\nLOCADOR: IMOBILIÁRIA SERRA LTDA - CNPJ 11.456.789/0001-22\nLOCATÁRIO: MUNICÍPIO DE CAXIAS DO SUL\nVALOR MENSAL: R$ 12.000,00 / VALOR GLOBAL: R$ 720.000,00 (60 meses)",
+      "fullPageContext": "[Página 8 do DO de 10/03/2026 - Locação de imóvel via Art. 74 III 'b' (inexigibilidade — não dispensa). Não é dispensa por valor; é inexigibilidade por singularidade do imóvel para sede de UBS. Valor global alto pelo período mas mensalidade R$ 12k é compatível com mercado.]"
+    },
+    "rationale": "Locação de imóvel é inexigibilidade Art. 74 III, NÃO dispensa Art. 75. FiscalLicitações deve filtrar — esse é caso de FiscalLocação. FP recorrente do Ciclo 2.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO\\s+DE\\s+IMÓVEL|INEXIGIBILIDADE.*Art\\.\\s*74) — locação é território do FiscalLocação"
+  },
+  {
+    "id": "SYN-LIC-FP-002",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-02-15",
+      "excerpt": "EXTRATO DE CONTRATO DE LOCAÇÃO Nº 0234/SME/2026\nMODALIDADE: Inexigibilidade de Licitação - Art. 74, III, 'b', Lei 14.133/2021\nOBJETO: Locação de imóvel comercial para instalação da Diretoria Regional de Educação - Pirituba.\nLOCADOR: EDIFÍCIOS SP LTDA - CNPJ 45.678.901/0001-33\nLOCATÁRIO: MUNICÍPIO DE SÃO PAULO\nVALOR MENSAL: R$ 28.500,00",
+      "fullPageContext": "[Página 41 do DOC de 15/02/2026 - Locação para sede de DRE. Art. 74 (inexigibilidade), não Art. 75 (dispensa). Valor mensal compatível para imóvel comercial em Pirituba.]"
+    },
+    "rationale": "Locação direta. Modalidade é Inexigibilidade Art. 74, não Dispensa Art. 75. Não é território do FiscalLicitações.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO|LOCADOR|LOCATÁRIO|Art\\.\\s*74)"
+  },
+  {
+    "id": "SYN-LIC-FP-003",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-04-05",
+      "excerpt": "TERMO DE DISPENSA DE LICITAÇÃO Nº 087/2026 — LOCAÇÃO DE IMÓVEL\nFUNDAMENTO: Art. 75, X, Lei 14.133/2021 (compra ou locação de imóvel destinado ao serviço público)\nOBJETO: Locação de imóvel para instalação da CRAS Restinga.\nLOCADOR: PROPRIEDADES GAÚCHAS LTDA - CNPJ 67.890.123/0001-44\nVALOR MENSAL: R$ 8.500,00",
+      "fullPageContext": "[Página 12 do DOPOA de 05/04/2026 - Locação via Art. 75 X (inciso específico para locação de imóvel — sem teto de valor por força do § 3º). Não é Art. 75 I/II por valor.]"
+    },
+    "rationale": "Art. 75 X é inciso específico para locação de imóvel, sem teto de valor. FiscalLicitações filtra Art. 75 I e II — não X.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*X — inciso específico para locação"
+  },
+  {
+    "id": "SYN-LIC-FP-004",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2026-03-22",
+      "excerpt": "EXTRATO DE LOCAÇÃO\nProcesso 12345/2026-SEMSA\nINEXIGIBILIDADE - Art. 74, III, 'b', Lei 14.133/2021\nOBJETO: Locação de imóvel comercial para Posto de Saúde do bairro Compensa II.\nLOCADOR: ESPÓLIO DE MARIA DOS SANTOS - CPF 234.567.890-11\nLOCATÁRIO: MUNICÍPIO DE MANAUS / SEMSA\nVALOR MENSAL: R$ 6.800,00",
+      "fullPageContext": "[Página 10 do DOM Manaus de 22/03/2026 - Locação de imóvel para PSF. Inexigibilidade Art. 74. Mensalidade compatível.]"
+    },
+    "rationale": "Locação Art. 74 III. Não é dispensa Art. 75 — território do FiscalLocação.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO\\s+DE\\s+IMÓVEL|Art\\.\\s*74)"
+  },
+  {
+    "id": "SYN-LIC-FP-005",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-04-12",
+      "excerpt": "EXTRATO - INEXIGIBILIDADE DE LICITAÇÃO\nProcesso SEI 04345.00.123/2026\nFUNDAMENTO: Art. 74, III, 'b', Lei 14.133/2021\nOBJETO: Locação de imóvel para abrigamento temporário de família vítima de incêndio (Programa Habitar Brasília).\nLOCADOR: SUL IMÓVEIS LTDA - CNPJ 22.345.678/0001-99\nVALOR MENSAL: R$ 2.400,00 / VALOR GLOBAL: R$ 28.800,00",
+      "fullPageContext": "[Página 6 do DODF de 12/04/2026 - Locação social/habitacional via Art. 74. Mensalidade R$ 2.400 dentro do mercado de Sobradinho. Programa social de abrigamento.]"
+    },
+    "rationale": "Locação social via Art. 74. Não é dispensa por valor.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO\\s+DE\\s+IMÓVEL|Art\\.\\s*74)"
+  },
+  {
+    "id": "SYN-LIC-FP-006",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2026-02-28",
+      "excerpt": "TERMO DE LOCAÇÃO DE IMÓVEL Nº 056/2026/SECULT\nMODALIDADE: Inexigibilidade de Licitação - Art. 74, III, alínea 'b'\nOBJETO: Locação de prédio histórico tombado pelo IPHAN para sede do Centro Cultural Iracema.\nLOCADOR: PATRIMÔNIO CEARENSE S.A. - CNPJ 71.345.678/0001-12\nVALOR MENSAL: R$ 38.000,00",
+      "fullPageContext": "[Página 28 do DOM Fortaleza de 28/02/2026 - Locação de imóvel histórico tombado, singularidade clara para Art. 74. Não é dispensa Art. 75.]"
+    },
+    "rationale": "Locação Art. 74 III, imóvel singular tombado. Não é Art. 75.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO|LOCADOR|Art\\.\\s*74)"
+  },
+  {
+    "id": "SYN-LIC-FP-007",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-03-30",
+      "excerpt": "INEXIGIBILIDADE DE LICITAÇÃO Nº 0234/SMS/2026\nFUNDAMENTO: Art. 74, III, 'b', Lei 14.133/2021\nOBJETO: Locação de imóvel para Pronto Atendimento Boa Vista - prédio com infraestrutura específica para serviços médicos.\nLOCADOR: SAÚDE IMÓVEIS LTDA - CNPJ 91.234.567/0001-09\nVALOR MENSAL: R$ 22.500,00",
+      "fullPageContext": "[Página 19 do DOM Curitiba de 30/03/2026 - Locação para PA com instalações específicas (oxigênio canalizado, salas adequadas). Singular para Art. 74.]"
+    },
+    "rationale": "Locação singular para PA via Art. 74. Não é dispensa por valor.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO\\s+DE\\s+IMÓVEL|Art\\.\\s*74)"
+  },
+  {
+    "id": "SYN-LIC-FP-008",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-04-07",
+      "excerpt": "EXTRATO DE LOCAÇÃO 098/2026 - Inexigibilidade Art. 74 III\nOBJETO: Locação de galpão para almoxarifado central da SECONT.\nLOCADOR: ARMAZÉNS PE LTDA - CNPJ 41.567.890/0001-22\nLOCATÁRIO: PREFEITURA DE RECIFE\nVALOR MENSAL: R$ 16.000,00 / GLOBAL 24 MESES: R$ 384.000,00",
+      "fullPageContext": "[Página 14 do DOM Recife de 07/04/2026 - Locação de galpão para almoxarifado. Inexigibilidade Art. 74 III. Não é dispensa Art. 75.]"
+    },
+    "rationale": "Locação Art. 74. Não é dispensa por valor — território do FiscalLocação.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO|LOCADOR|Art\\.\\s*74)"
+  },
+  {
+    "id": "SYN-LIC-FP-009",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5208707",
+      "cityName": "Goiânia",
+      "date": "2026-02-08",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 023/2026 — LOCAÇÃO\nFUNDAMENTO: Art. 75, X, Lei 14.133/2021\nOBJETO: Locação de imóvel para sede da Subsecretaria de Habitação.\nLOCADOR: GOIÂNIA EDIFÍCIOS LTDA - CNPJ 18.901.234/0001-77\nLOCATÁRIO: MUNICÍPIO DE GOIÂNIA\nVALOR MENSAL: R$ 19.000,00",
+      "fullPageContext": "[Página 22 do DOM Goiânia de 08/02/2026 - Locação via Art. 75 X (inciso específico para locação, sem teto). Não é Art. 75 I/II.]"
+    },
+    "rationale": "Art. 75 X é exceção legal para locação, sem teto. Não é Art. 75 I/II.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*X"
+  },
+  {
+    "id": "SYN-LIC-FP-010",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-03-15",
+      "excerpt": "TERMO DE LOCAÇÃO DE IMÓVEL Nº 0345/SMS-RJ/2026\nMODALIDADE: Inexigibilidade Art. 74 III 'b'\nOBJETO: Locação de imóvel para Centro Municipal de Saúde Tijuca.\nLOCADOR: ZONA NORTE IMÓVEIS S.A. - CNPJ 33.456.789/0001-12\nVALOR MENSAL: R$ 32.000,00",
+      "fullPageContext": "[Página 26 do DOM RJ de 15/03/2026 - Locação para CMS via Art. 74 III. Não é dispensa por valor.]"
+    },
+    "rationale": "Locação Art. 74 III. Não é Art. 75.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO|Art\\.\\s*74)"
+  },
+  {
+    "id": "SYN-LIC-FP-011",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3170206",
+      "cityName": "Uberlândia",
+      "date": "2026-04-20",
+      "excerpt": "EXTRATO DE INEXIGIBILIDADE DE LICITAÇÃO 087/2026\nFundamento: Art. 74, III, 'b', Lei 14.133/2021\nOBJETO: Locação de imóvel para abrigo institucional da rede de proteção à mulher.\nLOCADOR: PROPRIEDADES MG LTDA - CNPJ 24.678.901/0001-22\nVALOR MENSAL: R$ 5.500,00",
+      "fullPageContext": "[Página 9 do DOM Uberlândia de 20/04/2026 - Locação para abrigo da rede de proteção, endereço sigiloso por questão de segurança. Singular Art. 74.]"
+    },
+    "rationale": "Locação Art. 74. Singularidade pela natureza sigilosa do uso. Não é Art. 75.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO|Art\\.\\s*74)"
+  },
+  {
+    "id": "SYN-LIC-FP-012",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4205407",
+      "cityName": "Florianópolis",
+      "date": "2026-03-08",
+      "excerpt": "INEXIGIBILIDADE DE LICITAÇÃO 0145/2026/SMTH\nART. 74 III 'b' LEI 14.133/2021\nOBJETO: Locação de imóvel comercial sito na Rua João Pinto, 234, Centro, para instalação da Casa do Empreendedor.\nLOCADOR: CENTRO HISTÓRICO FLORIPA EIRELI - CNPJ 14.567.890/0001-66\nVALOR MENSAL: R$ 14.200,00",
+      "fullPageContext": "[Página 7 do DOM Floripa de 08/03/2026 - Locação para órgão municipal via Art. 74. Não é dispensa.]"
+    },
+    "rationale": "Locação Art. 74 III. Não é dispensa Art. 75.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO|Art\\.\\s*74)"
+  },
+  {
+    "id": "SYN-LIC-FP-013",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5002704",
+      "cityName": "Campo Grande",
+      "date": "2026-04-25",
+      "excerpt": "EXTRATO DE LOCAÇÃO Nº 0098/SECID/2026\nINEXIGIBILIDADE - ART. 74 III 'b'\nOBJETO: Locação de imóvel para arquivo central da Prefeitura de Campo Grande.\nLOCADOR: GALPÕES MS LTDA - CNPJ 38.234.567/0001-44\nVALOR MENSAL: R$ 18.500,00",
+      "fullPageContext": "[Página 13 do DOM Campo Grande de 25/04/2026 - Locação de galpão para arquivo via Art. 74. Não é Art. 75.]"
+    },
+    "rationale": "Locação Art. 74. Não é dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO|Art\\.\\s*74)"
+  },
+  {
+    "id": "SYN-LIC-FP-014",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1501402",
+      "cityName": "Belém",
+      "date": "2026-02-19",
+      "excerpt": "INEXIGIBILIDADE DE LICITAÇÃO Nº 0067/SEMOB/2026\nFUNDAMENTO: Art. 74, III, 'b', Lei 14.133/2021\nOBJETO: Locação de imóvel para central de monitoramento de trânsito.\nLOCADOR: TORRES DE BELÉM LTDA - CNPJ 64.890.123/0001-77\nVALOR MENSAL: R$ 11.900,00",
+      "fullPageContext": "[Página 17 do DOM Belém de 19/02/2026 - Locação para central de monitoramento, infraestrutura específica via Art. 74.]"
+    },
+    "rationale": "Locação Art. 74 III. Não é dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO|Art\\.\\s*74)"
+  },
+  {
+    "id": "SYN-LIC-FP-015",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "locacao_imovel",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3106200",
+      "cityName": "Belo Horizonte",
+      "date": "2026-04-14",
+      "excerpt": "TERMO DE LOCAÇÃO DE IMÓVEL Nº 0567/PBH/2026\nMODALIDADE: Inexigibilidade Art. 74 III 'b' Lei 14.133/2021\nOBJETO: Locação de imóvel para sede da Regional Centro-Sul.\nLOCADOR: IMOBILIÁRIA MINEIRA S.A. - CNPJ 17.234.567/0001-09\nVALOR MENSAL: R$ 45.000,00 / GLOBAL: R$ 1.620.000,00 (36 meses)",
+      "fullPageContext": "[Página 33 do DOM BH de 14/04/2026 - Locação Art. 74 para regional. Valor global alto pelo período de 36 meses.]"
+    },
+    "rationale": "Locação via Art. 74. Valor global alto por causa de 36 meses, mas mensalidade R$ 45k é compatível com regional. Não é Art. 75.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (LOCAÇÃO|Art\\.\\s*74)"
+  },
+  {
+    "id": "SYN-LIC-FP-016",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "termo_aditivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-03-18",
+      "excerpt": "EXTRATO DO PRIMEIRO TERMO ADITIVO AO CONTRATO Nº 045/2024\nOBJETO ORIGINAL: Prestação de serviços de coleta de lixo domiciliar.\nCONTRATADA: COLETA SERRANA LTDA - CNPJ 12.345.678/0001-99\nOBJETO DO ADITIVO: Prorrogação contratual por mais 12 meses, conforme Art. 107 da Lei 14.133/2021.\nVALOR ESTIMADO: R$ 280.000,00",
+      "fullPageContext": "[Página 8 do DO de 18/03/2026 - Termo Aditivo de prorrogação ao contrato 045/2024. Não é dispensa nova; é aditamento de contrato existente. Território do FiscalContratos.]"
+    },
+    "rationale": "Termo Aditivo é aditamento de contrato existente, não nova dispensa. Território do FiscalContratos. FP recorrente.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (TERMO\\s+ADITIVO|ADITIVO\\s+CONTRATUAL|PRORROGA[CÇ][AÃ]O.*CONTRATO|Art\\.\\s*107)"
+  },
+  {
+    "id": "SYN-LIC-FP-017",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "termo_aditivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-04-08",
+      "excerpt": "EXTRATO DO 2º TERMO ADITIVO AO CONTRATO Nº 0234/SMS/2025\nCONTRATADA: HOSPITAIS SP LTDA - CNPJ 56.789.012/0001-44\nOBJETO: Acréscimo quantitativo de 22% ao contrato original (Art. 125, Lei 14.133/2021).\nVALOR ADICIONAL: R$ 168.000,00\nVALOR FINAL DO CONTRATO: R$ 932.000,00",
+      "fullPageContext": "[Página 24 do DOC de 08/04/2026 - Aditivo quantitativo Art. 125, dentro do limite de 25%. Não é dispensa nova.]"
+    },
+    "rationale": "Aditivo Art. 125 (acréscimo quantitativo). Território do FiscalContratos.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (TERMO\\s+ADITIVO|Art\\.\\s*125)"
+  },
+  {
+    "id": "SYN-LIC-FP-018",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "termo_aditivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-02-22",
+      "excerpt": "EXTRATO DO 3º TERMO ADITIVO AO CONTRATO 089/2023 - SMOV\nCONTRATADA: PAVIMENTOS SUL LTDA - CNPJ 33.456.789/0001-22\nOBJETO: Reajuste contratual por aplicação do INCC, conforme cláusula 7ª do contrato original.\nVALOR REAJUSTADO: R$ 234.500,00\nFundamento: Art. 134 Lei 14.133/2021",
+      "fullPageContext": "[Página 11 do DOPOA de 22/02/2026 - Reajuste contratual previsto, não é dispensa.]"
+    },
+    "rationale": "Reajuste contratual via Art. 134. Não é nova dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (TERMO\\s+ADITIVO|REAJUSTE\\s+CONTRATUAL|Art\\.\\s*134)"
+  },
+  {
+    "id": "SYN-LIC-FP-019",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "termo_aditivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2026-03-29",
+      "excerpt": "EXTRATO DO 1º TERMO ADITIVO AO CONTRATO Nº 0145/SEMINF/2024\nCONTRATADA: CONSTRUTORA AMAZÔNIA EIRELI - CNPJ 71.234.567/0001-88\nOBJETO: Acréscimo qualitativo (modificação do projeto) conforme Art. 124 Lei 14.133/2021.\nVALOR ADICIONAL: R$ 195.000,00",
+      "fullPageContext": "[Página 18 do DOM Manaus de 29/03/2026 - Aditivo qualitativo Art. 124. Não é dispensa.]"
+    },
+    "rationale": "Aditivo qualitativo. Território do FiscalContratos.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (TERMO\\s+ADITIVO|Art\\.\\s*124|Art\\.\\s*125)"
+  },
+  {
+    "id": "SYN-LIC-FP-020",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "termo_aditivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-04-16",
+      "excerpt": "EXTRATO DO 4º TERMO ADITIVO AO CONTRATO 0089/SEEC-DF/2023\nCONTRATADA: MERENDA DF LTDA - CNPJ 22.345.678/0001-55\nOBJETO: Prorrogação por 12 meses para serviço continuado (alimentação escolar) - Art. 107 Lei 14.133/2021.\nVALOR ANUAL: R$ 1.250.000,00",
+      "fullPageContext": "[Página 21 do DODF de 16/04/2026 - Aditivo de prorrogação para serviço continuado. Não é dispensa nova.]"
+    },
+    "rationale": "Aditivo Art. 107 prorrogação. Não é dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (TERMO\\s+ADITIVO|PRORROGA[CÇ][AÃ]O|Art\\.\\s*107)"
+  },
+  {
+    "id": "SYN-LIC-FP-021",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "termo_aditivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-02-26",
+      "excerpt": "EXTRATO DO 2º TERMO ADITIVO AO CONTRATO Nº 0987/SECONSERVA/2024\nCONTRATADA: ZELADORIA RJ LTDA - CNPJ 92.345.678/0001-66\nOBJETO: Aditivo de reequilíbrio econômico-financeiro conforme cláusula contratual.\nVALOR REVISADO: R$ 387.000,00\nArt. 124 § 2º Lei 14.133/2021",
+      "fullPageContext": "[Página 27 do DOM RJ de 26/02/2026 - Reequilíbrio econômico-financeiro. Não é dispensa.]"
+    },
+    "rationale": "Aditivo de reequilíbrio. Território do FiscalContratos.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (TERMO\\s+ADITIVO|REEQUILÍBRIO|Art\\.\\s*124)"
+  },
+  {
+    "id": "SYN-LIC-FP-022",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "termo_aditivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-04-23",
+      "excerpt": "EXTRATO DE PRORROGAÇÃO CONTRATUAL\nCONTRATO Nº 0445/SMSO/2023\nCONTRATADA: SERVIÇOS GERAIS PR LTDA - CNPJ 56.789.012/0001-77\nOBJETO: Prorrogação de prazo de vigência por 24 meses. Fundamento: Art. 107, Lei 14.133/2021.\nVALOR DA PRORROGAÇÃO: R$ 480.000,00",
+      "fullPageContext": "[Página 16 do DOM Curitiba de 23/04/2026 - Prorrogação de contrato. Não é dispensa.]"
+    },
+    "rationale": "Prorrogação contratual. Não é dispensa nova.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (PRORROGA[CÇ][AÃ]O\\s+CONTRATUAL|TERMO\\s+ADITIVO|Art\\.\\s*107)"
+  },
+  {
+    "id": "SYN-LIC-FP-023",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "termo_aditivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5208707",
+      "cityName": "Goiânia",
+      "date": "2026-03-26",
+      "excerpt": "TERMO DE APOSTILAMENTO Nº 023/2026\nCONTRATO ORIGINAL: 0567/SMS/2024\nCONTRATADA: HOSPITALAR CENTRO LTDA - CNPJ 12.345.678/0001-08\nOBJETO: Apostilamento para atualização de dotação orçamentária e CNPJ filial. Não altera valor nem objeto.",
+      "fullPageContext": "[Página 4 do DOM Goiânia de 26/03/2026 - Apostilamento (alteração unilateral) sem nova contratação. Não é dispensa.]"
+    },
+    "rationale": "Apostilamento é alteração administrativa do contrato. Não é dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (APOSTILAMENTO|TERMO\\s+ADITIVO)"
+  },
+  {
+    "id": "SYN-LIC-FP-024",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "termo_aditivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-02-13",
+      "excerpt": "EXTRATO DO 5º TERMO ADITIVO AO CONTRATO Nº 0234/SECONT/2022\nCONTRATADA: VIGILÂNCIA NORDESTE LTDA - CNPJ 41.234.567/0001-99\nOBJETO: Acréscimo de 12% ao valor contratual original e prorrogação por 12 meses. Art. 125 e Art. 107 Lei 14.133/2021.\nVALOR ADICIONAL: R$ 156.000,00",
+      "fullPageContext": "[Página 19 do DOM Recife de 13/02/2026 - Aditivo dentro de limite legal. Não é dispensa nova.]"
+    },
+    "rationale": "Aditivo combinado (acréscimo + prorrogação). Não é nova dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (TERMO\\s+ADITIVO|Art\\.\\s*125|Art\\.\\s*107)"
+  },
+  {
+    "id": "SYN-LIC-FP-025",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "termo_aditivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2026-04-11",
+      "excerpt": "EXTRATO DO 1º TERMO ADITIVO AO CONTRATO 0098/SDE/2024\nCONTRATADA: TI CEARÁ LTDA - CNPJ 22.345.678/0001-66\nOBJETO: Acréscimo qualitativo de funcionalidades ao sistema (módulo BI), conforme Art. 124 Lei 14.133/2021.\nVALOR ADICIONAL: R$ 178.000,00",
+      "fullPageContext": "[Página 23 do DOM Fortaleza de 11/04/2026 - Aditivo qualitativo. Território do FiscalContratos.]"
+    },
+    "rationale": "Aditivo qualitativo Art. 124. Não é dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (TERMO\\s+ADITIVO|Art\\.\\s*124)"
+  },
+  {
+    "id": "SYN-LIC-FP-026",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fiscal",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-03-04",
+      "excerpt": "PORTARIA Nº 234/2026\nO SECRETÁRIO MUNICIPAL DE OBRAS, no uso de suas atribuições, RESOLVE:\nArt. 1º DESIGNAR o servidor JOSÉ DA SILVA, matrícula 12345-6, como FISCAL DO CONTRATO Nº 0089/2024, firmado para execução de obra de pavimentação.\nArt. 2º DESIGNAR a servidora MARIA OLIVEIRA, matrícula 67890-1, como GESTORA DO CONTRATO referido no art. 1º.\nArt. 3º Esta portaria entra em vigor na data de sua publicação.",
+      "fullPageContext": "[Página 3 do DO de 04/03/2026 - Designação de servidores como fiscal/gestor de contrato existente, conforme Art. 117 Lei 14.133/2021. Não é nova dispensa.]"
+    },
+    "rationale": "Designação de fiscal/gestor de contrato. Cumprimento Art. 117. FP recorrente do Ciclo 2.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em DESIGNAR.*(Gestor|Fiscal)\\s+do?\\s+Contrato"
+  },
+  {
+    "id": "SYN-LIC-FP-027",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fiscal",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-04-09",
+      "excerpt": "PORTARIA Nº 0876/SMS/2026\nA SECRETÁRIA MUNICIPAL DE SAÚDE, RESOLVE:\nArt. 1º DESIGNAR a servidora ANA PEREIRA como FISCAL TÉCNICA do Contrato 0145/SMS/2025.\nArt. 2º DESIGNAR o servidor PAULO COSTA como FISCAL ADMINISTRATIVO do mesmo contrato.\nSão Paulo, 08/04/2026.",
+      "fullPageContext": "[Página 12 do DOC de 09/04/2026 - Designação de fiscal técnico/administrativo. Não é dispensa.]"
+    },
+    "rationale": "Designação de fiscal técnico/administrativo. Não é nova dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em DESIGNAR.*(Fiscal\\s+T[eé]cnic[oa]|Fiscal\\s+Administrativ[oa])"
+  },
+  {
+    "id": "SYN-LIC-FP-028",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fiscal",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-02-19",
+      "excerpt": "PORTARIA Nº 0345/SMOV/2026\nO SECRETÁRIO MUNICIPAL DE OBRAS, RESOLVE:\nArt. 1º NOMEAR como GESTOR DO CONTRATO Nº 0234/2024 o servidor CARLOS SOUZA, matrícula 22334-5.\nArt. 2º Esta portaria entra em vigor nesta data.",
+      "fullPageContext": "[Página 5 do DOPOA de 19/02/2026 - Nomeação de gestor de contrato existente.]"
+    },
+    "rationale": "Nomeação de gestor de contrato existente. Não é dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em (NOMEAR|DESIGNAR).*(Gestor|Fiscal)\\s+do?\\s+Contrato"
+  },
+  {
+    "id": "SYN-LIC-FP-029",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fiscal",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2026-03-13",
+      "excerpt": "PORTARIA Nº 0567/SEMINF/2026\nDESIGNAR como FISCAL e GESTOR do Contrato 0345/2024 — execução de pavimentação asfáltica:\nFISCAL: Eng. RICARDO ALMEIDA - matrícula 33445-6\nGESTOR: ROBERTA LIMA - matrícula 22113-4",
+      "fullPageContext": "[Página 8 do DOM Manaus de 13/03/2026 - Designação dupla. Cumprimento Art. 117.]"
+    },
+    "rationale": "Designação de fiscal e gestor. Não é dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em DESIGNAR.*(Fiscal|Gestor)\\s+do?\\s+Contrato"
+  },
+  {
+    "id": "SYN-LIC-FP-030",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fiscal",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-04-25",
+      "excerpt": "PORTARIA Nº 0234/SEEC-DF/2026\nDESIGNAR a servidora LUÍSA MARTINS, matrícula 99876-1, como FISCAL DO CONTRATO 0987/2024 — alimentação escolar.\nValor mensal do contrato: R$ 980.000,00 (apenas referencial — não é objeto desta portaria).",
+      "fullPageContext": "[Página 14 do DODF de 25/04/2026 - Designação de fiscal. Valor mencionado é referência ao contrato existente, não nova dispensa.]"
+    },
+    "rationale": "Designação de fiscal. Valor é referencial ao contrato existente, não nova contratação.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em DESIGNAR.*Fiscal\\s+do?\\s+Contrato — valor referencial não conta"
+  },
+  {
+    "id": "SYN-LIC-FP-031",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fiscal",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-02-08",
+      "excerpt": "PORTARIA Nº 0098/SECONSERVA-RJ/2026\nDESIGNAR como FISCAIS DO CONTRATO Nº 0234/2025 (zeladoria pública) os servidores:\n- Titular: JOÃO PAULO MENDES - matrícula 11122-3\n- Suplente: MARCELA GOMES - matrícula 44556-7\nFundamento: Art. 117, Lei 14.133/2021.",
+      "fullPageContext": "[Página 6 do DOM RJ de 08/02/2026 - Designação titular/suplente. Não é dispensa.]"
+    },
+    "rationale": "Designação de fiscal titular e suplente. Não é dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em DESIGNAR.*Fiscais?\\s+do?\\s+Contrato"
+  },
+  {
+    "id": "SYN-LIC-FP-032",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fiscal",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-03-19",
+      "excerpt": "PORTARIA Nº 0456/SMS/2026\nNOMEAR como FISCAL DO CONTRATO 0789/2024 (limpeza hospitalar) a Enfermeira CLAUDIA PEREIRA - matrícula 87654-3.",
+      "fullPageContext": "[Página 4 do DOM Curitiba de 19/03/2026 - Nomeação de fiscal. Não é dispensa.]"
+    },
+    "rationale": "Nomeação de fiscal. Não é dispensa nova.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em NOMEAR.*Fiscal\\s+do?\\s+Contrato"
+  },
+  {
+    "id": "SYN-LIC-FP-033",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fiscal",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-04-17",
+      "excerpt": "PORTARIA Nº 0234/SECONT/2026\nDESIGNAR comissão de fiscalização do Contrato 0567/2024 (obras de drenagem):\n- Eng. ANA RIBEIRO (presidente) - matrícula 99001-2\n- Eng. PAULO LIMA - matrícula 88110-3\n- Téc. RAFAEL SOARES - matrícula 77221-4",
+      "fullPageContext": "[Página 9 do DOM Recife de 17/04/2026 - Designação de comissão de fiscalização. Cumprimento Art. 117.]"
+    },
+    "rationale": "Designação de comissão de fiscalização. Não é dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em DESIGNAR.*comiss[aã]o\\s+de\\s+fiscaliza[cç][aã]o"
+  },
+  {
+    "id": "SYN-LIC-FP-034",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fiscal",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5208707",
+      "cityName": "Goiânia",
+      "date": "2026-02-04",
+      "excerpt": "PORTARIA Nº 0567/SEMOB/2026\nDESIGNAR o servidor ANTÔNIO COSTA, matrícula 33445-5, como FISCAL DE CONTRATOS da SEMOB para o exercício de 2026, abrangendo TODOS OS CONTRATOS vinculados à secretaria.",
+      "fullPageContext": "[Página 7 do DOM Goiânia de 04/02/2026 - Designação genérica. Não cita nova contratação.]"
+    },
+    "rationale": "Designação genérica de fiscal abrangente. Não é dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em DESIGNAR.*Fiscal\\s+de\\s+Contratos"
+  },
+  {
+    "id": "SYN-LIC-FP-035",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fiscal",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2026-03-23",
+      "excerpt": "PORTARIA Nº 0123/SECULT/2026\nDESIGNAR como FISCAL TÉCNICO e FISCAL ADMINISTRATIVO do CONTRATO 0234/2024 — produção cultural:\nTÉCNICO: VITOR PAULO SANTOS - matrícula 11223-3\nADMINISTRATIVO: ROBERTO TOLEDO - matrícula 44556-6",
+      "fullPageContext": "[Página 11 do DOM Fortaleza de 23/03/2026 - Designação de fiscais técnico e administrativo.]"
+    },
+    "rationale": "Designação dupla técnico+administrativo. Não é dispensa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em DESIGNAR.*Fiscal\\s+(T[eé]cnico|Administrativo)"
+  },
+  {
+    "id": "SYN-LIC-FP-036",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iv_emergencia",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-04-19",
+      "excerpt": "RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO Nº 167/2026\nFUNDAMENTO LEGAL: Art. 75, inciso VIII, Lei 14.133/2021 (situação de emergência ou calamidade pública)\nOBJETO: Contratação emergencial de empresa para reparo da rede de drenagem rompida na Avenida Júlio de Castilhos, prevenindo enchente em bairros do entorno.\nCONTRATADA: EMERGÊNCIAS SUL LTDA - CNPJ 67.890.123/0001-44\nVALOR: R$ 285.000,00\nJUSTIFICATIVA: Conforme Decreto Municipal 12.345/2026 que declara situação de emergência face às chuvas intensas registradas em 16-17/04/2026, com risco iminente de transbordamento. Laudo técnico anexo ao Processo 2026/4567 atestando rompimento da galeria principal e necessidade de intervenção em até 72 horas.",
+      "fullPageContext": "[Página 14 do DO de 19/04/2026 - Dispensa fundamentada no Art. 75 VIII (emergência). Decreto municipal de calamidade citado, laudo técnico de risco anexado, prazo de 72h justificado tecnicamente. Documentação adequada para o inciso VIII.]"
+    },
+    "rationale": "Art. 75 VIII (emergência) com decreto municipal + laudo técnico + prazo justificado. Fundamentação adequada — não é dispensa irregular por valor.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*VIII.*(emerg[eê]ncia|calamidade|decreto|laudo)"
+  },
+  {
+    "id": "SYN-LIC-FP-037",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iv_emergencia",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-02-04",
+      "excerpt": "DISPENSA DE LICITAÇÃO EMERGENCIAL Nº 0234/SMS/2026\nFUNDAMENTO: Art. 75, VIII, Lei 14.133/2021\nOBJETO: Contratação emergencial de serviços de hemodiálise para 38 pacientes do SUS após interdição da clínica conveniada por irregularidades sanitárias.\nCONTRATADA: NEFROCLÍNICA SP S.A. - CNPJ 56.789.012/0001-77\nVALOR ESTIMADO: R$ 480.000,00 (3 meses)\nJUSTIFICATIVA: Risco iminente à vida de 38 pacientes em terapia renal substitutiva. Interdição emergencial pela Vigilância Sanitária em 02/02/2026. Notificação do Ministério Público de Saúde 0234/2026 exigindo realocação imediata.",
+      "fullPageContext": "[Página 38 do DOC de 04/02/2026 - Emergência sanitária com risco à vida, interdição formal pela VISA, notificação do MP. Documentação substancial para Art. 75 VIII.]"
+    },
+    "rationale": "Emergência sanitária com VISA + MP + risco à vida. Art. 75 VIII fundamentado adequadamente.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*VIII com (interdi[cç][aã]o|MP|emerg[eê]ncia\\s+sanit[aá]ria)"
+  },
+  {
+    "id": "SYN-LIC-FP-038",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iv_emergencia",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-03-02",
+      "excerpt": "DISPENSA EMERGENCIAL Nº 067/2026 - DEFESA CIVIL\nFUNDAMENTO: Art. 75, VIII, Lei 14.133/2021\nOBJETO: Contratação emergencial de máquinas e operadores para desobstrução de via afetada por deslizamento de encosta no bairro Vila Cruzeiro.\nCONTRATADA: TERRAPLANAGEM RS LTDA - CNPJ 33.456.789/0001-08\nVALOR: R$ 156.000,00\nDecreto Municipal 23.456/2026 - Estado de Calamidade. Boletim Defesa Civil 09/2026 atestando risco de novos deslizamentos e necessidade de intervenção imediata.",
+      "fullPageContext": "[Página 7 do DOPOA de 02/03/2026 - Calamidade declarada por decreto, boletim Defesa Civil, risco iminente. Art. 75 VIII fundamentado.]"
+    },
+    "rationale": "Calamidade com decreto + Defesa Civil. Art. 75 VIII fundamentado.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*VIII com (calamidade|defesa\\s+civil|decreto)"
+  },
+  {
+    "id": "SYN-LIC-FP-039",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iv_emergencia",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2026-04-26",
+      "excerpt": "DISPENSA DE LICITAÇÃO EMERGENCIAL Nº 0345/SEMSA/2026\nFUNDAMENTO LEGAL: Art. 75, VIII, Lei 14.133/2021\nOBJETO: Contratação emergencial de serviços de combate a foco epidêmico de dengue tipo 2 detectado em 12 bairros da zona leste, conforme Boletim Epidemiológico 18/2026.\nCONTRATADA: VETOR AMAZÔNIA S.A. - CNPJ 22.345.678/0001-44\nVALOR: R$ 720.000,00\nDecreto Municipal 4567/2026 declarando emergência em saúde pública.",
+      "fullPageContext": "[Página 16 do DOM Manaus de 26/04/2026 - Emergência em saúde pública com decreto + boletim epidemiológico. Art. 75 VIII fundamentado.]"
+    },
+    "rationale": "Emergência epidemiológica fundamentada. Art. 75 VIII.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*VIII com (epidemia|epidemiol[oó]gico|emerg[eê]ncia)"
+  },
+  {
+    "id": "SYN-LIC-FP-040",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iv_emergencia",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-03-21",
+      "excerpt": "DISPENSA EMERGENCIAL Nº 0789/SEDF/2026\nFUNDAMENTO: Art. 75, VIII, Lei 14.133/2021\nOBJETO: Contratação emergencial de empresa para reparo do sistema de ar-condicionado central do Hospital de Base, após pane elétrica em 19/03/2026 que comprometeu UTI cardiológica.\nCONTRATADA: REFRIGERAÇÃO BSB LTDA - CNPJ 67.890.123/0001-11\nVALOR: R$ 198.000,00\nLaudo Engenharia Hospitalar 0089/2026 atestando risco a 14 pacientes em UTI.",
+      "fullPageContext": "[Página 11 do DODF de 21/03/2026 - Emergência hospitalar com laudo + risco à vida. Art. 75 VIII fundamentado.]"
+    },
+    "rationale": "Emergência hospitalar com laudo. Art. 75 VIII.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*VIII com (emerg[eê]ncia|risco\\s+(à|a)\\s+vida|laudo)"
+  },
+  {
+    "id": "SYN-LIC-FP-041",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iv_emergencia",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-02-15",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0234/SECONSERVA/2026\nFUNDAMENTO: Art. 75, VIII, Lei 14.133/2021\nOBJETO: Contratação emergencial para contenção de encosta deslizada em rua principal do morro do Salgueiro, com risco iminente a 47 residências.\nCONTRATADA: GEOTÉCNICA RJ LTDA - CNPJ 41.234.567/0001-22\nVALOR: R$ 380.000,00\nDecreto Municipal 56789/2026 - Estado de Emergência. Laudo GEORIO 0023/2026.",
+      "fullPageContext": "[Página 19 do DOM RJ de 15/02/2026 - Emergência geotécnica com decreto + laudo GEORIO. Risco a vidas. Art. 75 VIII fundamentado.]"
+    },
+    "rationale": "Emergência geotécnica fundamentada. Art. 75 VIII.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*VIII com (deslizamento|encosta|emerg[eê]ncia|GEORIO)"
+  },
+  {
+    "id": "SYN-LIC-FP-042",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iv_emergencia",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-04-03",
+      "excerpt": "DISPENSA EMERGENCIAL Nº 0123/SMS/2026\nFUNDAMENTO: Art. 75, VIII, Lei 14.133/2021\nOBJETO: Contratação emergencial de leitos de UTI em hospitais privados conveniados, para pacientes adultos críticos da fila do SUS, considerando taxa de ocupação 102% nos hospitais públicos municipais.\nCONTRATADA: HOSPITAL CRUZEIRO S.A. - CNPJ 91.234.567/0001-33\nVALOR ESTIMADO: R$ 890.000,00 (60 dias)\nNota Técnica SMS 0234/2026 + Boletim de Ocupação 18/2026.",
+      "fullPageContext": "[Página 22 do DOM Curitiba de 03/04/2026 - Emergência hospitalar com nota técnica + boletim de ocupação. Art. 75 VIII fundamentado.]"
+    },
+    "rationale": "Emergência por superlotação UTI fundamentada. Art. 75 VIII.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*VIII com (UTI|superlota[cç][aã]o|nota\\s+t[eé]cnica)"
+  },
+  {
+    "id": "SYN-LIC-FP-043",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iv_emergencia",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-03-12",
+      "excerpt": "DISPENSA DE LICITAÇÃO EMERGENCIAL Nº 0456/SECONT/2026\nFUNDAMENTO: Art. 75, VIII, Lei 14.133/2021\nOBJETO: Reparo emergencial de ponte no Rio Capibaribe (Ponte da Madalena) após colapso parcial em 10/03/2026, com risco a tráfego.\nCONTRATADA: ENGENHARIA NORDESTE S.A. - CNPJ 22.345.678/0001-09\nVALOR: R$ 1.450.000,00\nDecreto 234/2026 - Calamidade Pública na Engenharia Civil. Laudo IPMA 067/2026.",
+      "fullPageContext": "[Página 6 do DOM Recife de 12/03/2026 - Calamidade com colapso de ponte. Decreto + laudo. Art. 75 VIII fundamentado.]"
+    },
+    "rationale": "Calamidade em obra de arte com colapso. Art. 75 VIII fundamentado.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*VIII com (colapso|calamidade|laudo)"
+  },
+  {
+    "id": "SYN-LIC-FP-044",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iv_emergencia",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5208707",
+      "cityName": "Goiânia",
+      "date": "2026-04-08",
+      "excerpt": "DISPENSA EMERGENCIAL Nº 0234/SEMAS/2026\nFUNDAMENTO: Art. 75, VIII, Lei 14.133/2021\nOBJETO: Contratação emergencial de albergamento e alimentação para 234 pessoas em situação de rua durante onda de frio (temperaturas abaixo de 8°C).\nCONTRATADA: ASSISTÊNCIA SOCIAL CENTRO LTDA - CNPJ 18.901.234/0001-66\nVALOR: R$ 167.000,00\nAlerta INMET 0089/2026 + Decreto Municipal 2345/2026.",
+      "fullPageContext": "[Página 13 do DOM Goiânia de 08/04/2026 - Emergência climática com INMET + decreto. Art. 75 VIII fundamentado.]"
+    },
+    "rationale": "Emergência climática (onda de frio) fundamentada com INMET + decreto. Art. 75 VIII.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*VIII com (INMET|onda\\s+de\\s+frio|emerg[eê]ncia)"
+  },
+  {
+    "id": "SYN-LIC-FP-045",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iv_emergencia",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2026-02-21",
+      "excerpt": "DISPENSA EMERGENCIAL Nº 0089/SECULT/2026\nFUNDAMENTO: Art. 75, VIII, Lei 14.133/2021\nOBJETO: Contratação emergencial de empresa para reparo estrutural do telhado do Teatro José de Alencar (Patrimônio Histórico) após desabamento parcial em 19/02/2026.\nCONTRATADA: RESTAURO HISTÓRICO LTDA - CNPJ 41.234.567/0001-77\nVALOR: R$ 248.000,00\nLaudo IPHAN 0023/2026 + Notificação Defesa Civil 0044/2026.",
+      "fullPageContext": "[Página 24 do DOM Fortaleza de 21/02/2026 - Emergência em patrimônio histórico com IPHAN + Defesa Civil. Art. 75 VIII fundamentado.]"
+    },
+    "rationale": "Emergência em patrimônio histórico fundamentada. Art. 75 VIII.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*VIII com (IPHAN|defesa\\s+civil|patrimônio)"
+  },
+  {
+    "id": "SYN-LIC-FP-046",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iii_fornecedor_exclusivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-03-25",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 089/2026\nFUNDAMENTO: Art. 75, III, alínea 'a', Lei 14.133/2021 (fornecedor exclusivo)\nOBJETO: Aquisição de peças originais de reposição para frota de ônibus articulados Mercedes-Benz O-500UA da empresa concessionária municipal.\nCONTRATADA: MERCEDES-BENZ DO BRASIL LTDA - CNPJ 59.104.422/0001-35\nVALOR: R$ 234.000,00\nAtestado de Exclusividade emitido pela ANFAVEA 0234/2026 comprovando que apenas a Mercedes-Benz do Brasil é fabricante e detém distribuição exclusiva de peças originais para o modelo.",
+      "fullPageContext": "[Página 9 do DO de 25/03/2026 - Fornecedor exclusivo com atestado ANFAVEA. Art. 75 III 'a' fundamentado.]"
+    },
+    "rationale": "Art. 75 III 'a' com atestado de exclusividade ANFAVEA. Fornecedor único legítimo.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*III com (atestado\\s+de\\s+exclusividade|fornecedor\\s+exclusivo)"
+  },
+  {
+    "id": "SYN-LIC-FP-047",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iii_fornecedor_exclusivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-04-13",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0567/SME/2026\nFUNDAMENTO LEGAL: Art. 75, III, 'a', Lei 14.133/2021\nOBJETO: Aquisição de licenças de software de gestão escolar produzidas exclusivamente pela empresa contratada.\nCONTRATADA: EDUTECH BRASIL S.A. - CNPJ 67.890.123/0001-22\nVALOR: R$ 567.000,00\nAtestado de Exclusividade emitido pela ABES 0123/2026 e Carta de Patente INPI 234567.",
+      "fullPageContext": "[Página 26 do DOC de 13/04/2026 - Software exclusivo com atestado ABES + INPI. Art. 75 III 'a' fundamentado.]"
+    },
+    "rationale": "Software com patente + atestado ABES. Fornecedor exclusivo Art. 75 III 'a'.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*III com (ABES|INPI|exclusividade|patente)"
+  },
+  {
+    "id": "SYN-LIC-FP-048",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iii_fornecedor_exclusivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-02-28",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0098/SMS/2026\nFUNDAMENTO: Art. 75, III, 'a', Lei 14.133/2021\nOBJETO: Aquisição de equipamento de ressonância magnética modelo único compatível com sistema legado HCPA, fabricante exclusivo.\nCONTRATADA: SIEMENS HEALTHINEERS BRASIL S.A. - CNPJ 88.123.456/0001-09\nVALOR: R$ 1.890.000,00\nAtestado de Exclusividade ABIMED 0078/2026 + Laudo Técnico HCPA 0034/2026.",
+      "fullPageContext": "[Página 18 do DOPOA de 28/02/2026 - Equipamento médico exclusivo com ABIMED + laudo técnico. Art. 75 III 'a' fundamentado.]"
+    },
+    "rationale": "Equipamento médico exclusivo. Art. 75 III 'a' com ABIMED + laudo.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*III com (ABIMED|exclusividade|laudo\\s+t[eé]cnico)"
+  },
+  {
+    "id": "SYN-LIC-FP-049",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iii_fornecedor_exclusivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2026-04-21",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0345/SEMASC/2026\nFUNDAMENTO: Art. 75, III, 'a', Lei 14.133/2021 (fornecedor exclusivo)\nOBJETO: Manutenção e atualização do sistema de gestão integrada do Hospital Pronto-Socorro Platão Araújo, sistema próprio do desenvolvedor original.\nCONTRATADA: SOFTWARE NORTE S.A. - CNPJ 22.345.678/0001-44\nVALOR: R$ 280.000,00\nAtestado da Junta Comercial e Carta de Exclusividade INPI 567890.",
+      "fullPageContext": "[Página 14 do DOM Manaus de 21/04/2026 - Sistema próprio do fornecedor com INPI. Art. 75 III 'a' fundamentado.]"
+    },
+    "rationale": "Software proprietário com INPI. Art. 75 III 'a'.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*III com (INPI|exclusividade|sistema\\s+próprio)"
+  },
+  {
+    "id": "SYN-LIC-FP-050",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_iii_fornecedor_exclusivo",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-03-09",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0234/SEEC-DF/2026\nFUNDAMENTO: Art. 75, III, 'a', Lei 14.133/2021\nOBJETO: Aquisição de material didático Programa Federal Saberes (autoria exclusiva da União, distribuição via convênio).\nCONTRATADA: EDITORA DA UNIÃO - FNDE - CNPJ 00.378.257/0001-81\nVALOR: R$ 320.000,00\nConvênio FNDE 0234/2026 + Atestado de Exclusividade FNDE.",
+      "fullPageContext": "[Página 9 do DODF de 09/03/2026 - Material didático exclusivo da União via FNDE. Art. 75 III 'a' fundamentado.]"
+    },
+    "rationale": "Material didático com exclusividade da União/FNDE. Art. 75 III 'a'.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*III com (FNDE|exclusividade|convênio)"
+  },
+  {
+    "id": "SYN-LIC-FP-051",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_ix_insumos_saude",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-04-04",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 098/2026\nFUNDAMENTO LEGAL: Art. 75, IX, Lei 14.133/2021 (aquisição de bens essenciais à saúde)\nOBJETO: Aquisição emergencial de medicamentos antineoplásicos para pacientes oncológicos do Hospital Pompéia (oncologia pediátrica).\nCONTRATADA: ONCO-FARMA SUL S.A. - CNPJ 14.567.890/0001-09\nVALOR: R$ 480.000,00\nLista Médico-Hospitalar SUS 0123/2026 + Prescrição médica vinculada a 23 pacientes em tratamento ativo.",
+      "fullPageContext": "[Página 11 do DO de 04/04/2026 - Insumos saúde Art. 75 IX, sem teto de valor para esse inciso. Lista SUS + prescrições vinculadas comprovam essencialidade.]"
+    },
+    "rationale": "Art. 75 IX é específico para insumos saúde, sem teto de valor. Medicamentos oncológicos pediátricos com lista SUS + prescrições.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*IX com (medicamento|insumo\\s+sa[uú]de|SUS)"
+  },
+  {
+    "id": "SYN-LIC-FP-052",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_ix_insumos_saude",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-02-19",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0789/SMS/2026\nFUNDAMENTO: Art. 75, IX, Lei 14.133/2021 (insumos essenciais à saúde)\nOBJETO: Aquisição de seringas descartáveis 3ml e 5ml, agulhas 25x7 e 30x8, para campanha municipal de vacinação contra influenza.\nCONTRATADA: HOSPITALAR PAULISTA S.A. - CNPJ 56.789.012/0001-44\nVALOR: R$ 740.000,00\nPrograma Nacional de Imunização - PNI 2026 + Plano Municipal de Vacinação 0234/2026.",
+      "fullPageContext": "[Página 31 do DOC de 19/02/2026 - Insumos para campanha de vacinação. Art. 75 IX fundamentado com PNI + plano municipal.]"
+    },
+    "rationale": "Insumos para vacinação. Art. 75 IX sem teto, com PNI + plano.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*IX com (vacina[cç][aã]o|seringa|agulha|PNI)"
+  },
+  {
+    "id": "SYN-LIC-FP-053",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_ix_insumos_saude",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-03-31",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0145/SMS/2026\nFUNDAMENTO LEGAL: Art. 75, IX, Lei 14.133/2021\nOBJETO: Aquisição de insulinas (NPH e Regular) para Programa Municipal de Diabetes, atendendo 8.234 pacientes cadastrados na rede básica de saúde.\nCONTRATADA: NOVO NORDISK FARMACÊUTICA LTDA - CNPJ 82.277.957/0001-67\nVALOR: R$ 980.000,00\nLista de Medicamentos Essenciais (RENAME) + Programa Municipal de Diabetes 0023/2026.",
+      "fullPageContext": "[Página 16 do DOPOA de 31/03/2026 - Insulinas para programa de diabetes. Art. 75 IX com RENAME + programa municipal.]"
+    },
+    "rationale": "Insulinas para programa de diabetes. Art. 75 IX com RENAME.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*IX com (insulina|RENAME|medicamento\\s+essencial)"
+  },
+  {
+    "id": "SYN-LIC-FP-054",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_ix_insumos_saude",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2026-04-29",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0567/SEMSA/2026\nFUNDAMENTO: Art. 75, IX, Lei 14.133/2021\nOBJETO: Aquisição de antirretrovirais para Programa Municipal de DST/Aids, atendendo 1.245 pacientes em tratamento.\nCONTRATADA: FARMANGUINHOS - FIOCRUZ - CNPJ 33.781.055/0007-72\nVALOR: R$ 670.000,00\nPrograma Nacional DST/Aids + Lista Estadual de Medicamentos.",
+      "fullPageContext": "[Página 8 do DOM Manaus de 29/04/2026 - Antirretrovirais para programa DST/Aids via Fiocruz. Art. 75 IX fundamentado.]"
+    },
+    "rationale": "Antirretrovirais para programa DST/Aids via Fiocruz. Art. 75 IX.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*IX com (antirretroviral|FIOCRUZ|DST|AIDS)"
+  },
+  {
+    "id": "SYN-LIC-FP-055",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_replica",
+    "fpPattern": "art_75_ix_insumos_saude",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-03-17",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0345/SES-DF/2026\nFUNDAMENTO LEGAL: Art. 75, IX, Lei 14.133/2021\nOBJETO: Aquisição de imunoglobulina humana endovenosa para 67 pacientes com imunodeficiência primária - Hospital de Base do DF.\nCONTRATADA: HEMOBRÁS - EMPRESA BRASILEIRA DE HEMODERIVADOS - CNPJ 07.607.851/0001-51\nVALOR: R$ 1.234.000,00\nNota Técnica HBDF 0089/2026 + Lista CONITEC.",
+      "fullPageContext": "[Página 19 do DODF de 17/03/2026 - Imunoglobulina via Hemobrás (estatal exclusiva). Art. 75 IX fundamentado.]"
+    },
+    "rationale": "Imunoglobulina via Hemobrás. Art. 75 IX.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*75[,\\s]*IX com (imunoglobulina|HEMOBR[AÁ]S|CONITEC)"
+  },
+  {
+    "id": "SYN-LIC-FP-056",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "teto_obra_servico_invertido",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-04-15",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 098/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Construção de muro de divisa (alvenaria, 35 metros lineares, altura 1,80m) para o Cemitério Municipal Bom Pastor.\nCONTRATADA: CONSTRUÇÕES SERRA LTDA - CNPJ 14.567.890/0001-22\nVALOR: R$ 78.500,00",
+      "fullPageContext": "[Página 7 do DO de 15/04/2026 - Construção de muro é OBRA. Teto Art. 75 I = R$ 100k. Valor R$ 78.500 ESTÁ ABAIXO do teto correto. Se Fiscal aplicar incorretamente teto de serviço (R$ 50k), gerará falso positivo.]"
+    },
+    "rationale": "Construção de muro é OBRA. Teto correto Art. 75 I = R$ 100k. R$ 78.500 está abaixo do teto. FP edge case se aplicar teto serviço.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Para construção/obra: aplicar teto R$ 100k (Art. 75 I), NÃO R$ 50k (Art. 75 II de serviços)"
+  },
+  {
+    "id": "SYN-LIC-FP-057",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "teto_obra_servico_invertido",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-03-08",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0345/SIURB/2026\nFUNDAMENTO LEGAL: Art. 75, I, Lei 14.133/2021\nOBJETO: Reforma de pequena escala (pintura externa, troca de calhas e ajuste de portões) na unidade da Subprefeitura Lapa.\nCONTRATADA: REFORMA SP LTDA - CNPJ 56.789.012/0001-33\nVALOR: R$ 89.700,00",
+      "fullPageContext": "[Página 22 do DOC de 08/03/2026 - Reforma é OBRA. Teto Art. 75 I = R$ 100k. R$ 89.700 dentro do teto.]"
+    },
+    "rationale": "Reforma é OBRA. Teto R$ 100k. R$ 89.700 dentro do limite. FP se aplicar teto serviço.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Para reforma: teto Art. 75 I = R$ 100k (não R$ 50k)"
+  },
+  {
+    "id": "SYN-LIC-FP-058",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "teto_obra_servico_invertido",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-02-13",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0067/SMOV/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Pavimentação asfáltica (recapeamento) de 380m da Rua Aureliano de Figueiredo Pinto.\nCONTRATADA: PAVIMENTOS GAÚCHOS LTDA - CNPJ 88.123.456/0001-22\nVALOR: R$ 95.300,00",
+      "fullPageContext": "[Página 5 do DOPOA de 13/02/2026 - Pavimentação é OBRA. R$ 95.300 dentro do teto R$ 100k Art. 75 I.]"
+    },
+    "rationale": "Pavimentação é OBRA. R$ 95.300 dentro do teto. FP se aplicar teto serviço.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Pavimentação = obra → teto R$ 100k"
+  },
+  {
+    "id": "SYN-LIC-FP-059",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "teto_obra_servico_invertido",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2026-04-22",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0234/SEMINF/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Construção de cobertura simples para área externa (estrutura metálica + telha cerâmica) na escola CMEI Cidade Nova.\nCONTRATADA: ESTRUTURAS AM LTDA - CNPJ 22.345.678/0001-09\nVALOR: R$ 86.500,00",
+      "fullPageContext": "[Página 13 do DOM Manaus de 22/04/2026 - Construção de cobertura é OBRA. R$ 86.500 dentro do teto R$ 100k.]"
+    },
+    "rationale": "Construção é OBRA. Dentro do teto Art. 75 I.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Construção = obra → teto R$ 100k"
+  },
+  {
+    "id": "SYN-LIC-FP-060",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "teto_obra_servico_invertido",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-03-04",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0456/SECID-DF/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Reforma e adequação de calçadas (substituição de piso e acessibilidade) na quadra 502 norte.\nCONTRATADA: PAVI BSB LTDA - CNPJ 67.890.123/0001-66\nVALOR: R$ 92.800,00",
+      "fullPageContext": "[Página 17 do DODF de 04/03/2026 - Reforma de calçadas é OBRA. R$ 92.800 dentro do teto R$ 100k.]"
+    },
+    "rationale": "Reforma é OBRA. Dentro do teto.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Reforma = obra → teto R$ 100k"
+  },
+  {
+    "id": "SYN-LIC-FP-061",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "teto_obra_servico_invertido",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-04-10",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0145/SECONSERVA/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Tapa-buraco e selagem de fissuras em 1.200m² de pista da Av. Maracanã.\nCONTRATADA: ASFALTOS RJ LTDA - CNPJ 78.012.345/0001-77\nVALOR: R$ 99.000,00",
+      "fullPageContext": "[Página 28 do DOM RJ de 10/04/2026 - Tapa-buraco asfáltico é OBRA. R$ 99.000 dentro do teto R$ 100k.]"
+    },
+    "rationale": "Tapa-buraco é OBRA. Dentro do teto Art. 75 I.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Tapa-buraco/asfalto = obra → teto R$ 100k"
+  },
+  {
+    "id": "SYN-LIC-FP-062",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "teto_obra_servico_invertido",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-02-26",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0089/SMSO/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Pintura externa do prédio da Subprefeitura Boa Vista (incluindo retoques estruturais e impermeabilização de fachada).\nCONTRATADA: PINTURAS PR LTDA - CNPJ 91.234.567/0001-66\nVALOR: R$ 88.900,00",
+      "fullPageContext": "[Página 10 do DOM Curitiba de 26/02/2026 - Pintura externa + impermeabilização é OBRA. R$ 88.900 dentro do teto R$ 100k.]"
+    },
+    "rationale": "Pintura + impermeabilização (OBRA). Dentro do teto Art. 75 I.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Pintura externa estrutural = obra → teto R$ 100k"
+  },
+  {
+    "id": "SYN-LIC-FP-063",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "teto_obra_servico_invertido",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-03-15",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0234/SEMOB/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Substituição de 12 faixas de pedestre elevadas em concreto + sinalização horizontal.\nCONTRATADA: SINALIZA PE LTDA - CNPJ 41.234.567/0001-77\nVALOR: R$ 94.700,00",
+      "fullPageContext": "[Página 14 do DOM Recife de 15/03/2026 - Faixas elevadas em concreto = OBRA civil. R$ 94.700 dentro do teto Art. 75 I.]"
+    },
+    "rationale": "Concreto + obra civil de mobilidade. Dentro do teto.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Obra civil mobilidade → teto R$ 100k"
+  },
+  {
+    "id": "SYN-LIC-FP-064",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "valor_no_limite",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-02-26",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 067/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Construção de calçada em paver no entorno da Praça Dante Alighieri (140m²).\nCONTRATADA: PISOS SERRA LTDA - CNPJ 19.456.789/0001-22\nVALOR: R$ 100.000,00",
+      "fullPageContext": "[Página 9 do DO de 26/02/2026 - Obra com valor exatamente R$ 100.000 = teto Art. 75 I. Não há excesso. Valor no limite legal.]"
+    },
+    "rationale": "Valor R$ 100.000 = teto exato Art. 75 I. Não excede. FP se Fiscal disparar para valor igual ao teto.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Valor exato = teto não dispara (apenas valor > teto)"
+  },
+  {
+    "id": "SYN-LIC-FP-065",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "valor_no_limite",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-04-06",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0567/SMC/2026\nFUNDAMENTO: Art. 75, II, Lei 14.133/2021\nOBJETO: Prestação de serviços de tradução simultânea para Festival Internacional de Cinema (3 sessões).\nCONTRATADA: TRADUTORES SP LTDA - CNPJ 33.456.789/0001-44\nVALOR: R$ 50.000,00",
+      "fullPageContext": "[Página 23 do DOC de 06/04/2026 - Serviço com valor exato R$ 50.000 = teto Art. 75 II. Limite legal.]"
+    },
+    "rationale": "Valor exato R$ 50.000 = teto Art. 75 II. Não excede. FP se disparar.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Valor exato = teto não dispara"
+  },
+  {
+    "id": "SYN-LIC-FP-066",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "valor_no_limite",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-03-19",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0123/SMOV/2026\nFUNDAMENTO LEGAL: Art. 75, I, Lei 14.133/2021\nOBJETO: Reforma de vestiário no Estádio Olímpico Monumental (interior).\nCONTRATADA: ESTÁDIOS RS LTDA - CNPJ 88.123.456/0001-22\nVALOR: R$ 99.999,00",
+      "fullPageContext": "[Página 11 do DOPOA de 19/03/2026 - Valor R$ 99.999 - 1 real abaixo do teto R$ 100k. Limite quase exato.]"
+    },
+    "rationale": "Valor 1 real abaixo do teto. Não excede. FP se disparar.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Apenas valor > teto dispara (não ≥)"
+  },
+  {
+    "id": "SYN-LIC-FP-067",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "valor_no_limite",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2026-04-26",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0456/SEMASC/2026\nFUNDAMENTO: Art. 75, II, Lei 14.133/2021\nOBJETO: Serviços técnicos de fotografia institucional para campanha social (4 eventos).\nCONTRATADA: FOTO AMAZONAS EIRELI - CNPJ 67.890.123/0001-44\nVALOR: R$ 49.999,00",
+      "fullPageContext": "[Página 7 do DOM Manaus de 26/04/2026 - Valor R$ 49.999 - 1 real abaixo do teto R$ 50k.]"
+    },
+    "rationale": "Valor 1 real abaixo do teto serviço.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Apenas valor > teto dispara"
+  },
+  {
+    "id": "SYN-LIC-FP-068",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "valor_no_limite",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-03-12",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0234/SECID-DF/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Reforma de quiosques no Parque Vivencial - SQS 308.\nCONTRATADA: REFORMAS DF LTDA - CNPJ 22.345.678/0001-99\nVALOR: R$ 100.000,00",
+      "fullPageContext": "[Página 14 do DODF de 12/03/2026 - Valor exato R$ 100k.]"
+    },
+    "rationale": "Valor = teto. Não excede.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Valor exato = teto não dispara"
+  },
+  {
+    "id": "SYN-LIC-FP-069",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "valor_no_limite",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-02-09",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0067/SMS/2026\nFUNDAMENTO: Art. 75, II, Lei 14.133/2021\nOBJETO: Manutenção preventiva de equipamentos de imagem (raios-X) no Hospital Souza Aguiar.\nCONTRATADA: MEDIMAGE RJ LTDA - CNPJ 41.234.567/0001-66\nVALOR: R$ 50.000,00",
+      "fullPageContext": "[Página 32 do DOM RJ de 09/02/2026 - Valor exato R$ 50k.]"
+    },
+    "rationale": "Valor = teto serviço.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Valor = teto não dispara"
+  },
+  {
+    "id": "SYN-LIC-FP-070",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "valor_no_limite",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-04-19",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0345/SMSO/2026\nFUNDAMENTO: Art. 75, I, Lei 14.133/2021\nOBJETO: Construção de muro de divisa (60m, alvenaria simples) no terreno do CMEI Tatuquara.\nCONTRATADA: CONSTRUÇÕES PR LTDA - CNPJ 91.234.567/0001-22\nVALOR: R$ 99.999,99",
+      "fullPageContext": "[Página 16 do DOM Curitiba de 19/04/2026 - Valor R$ 99.999,99 - 1 centavo abaixo do teto.]"
+    },
+    "rationale": "Valor 1 centavo abaixo do teto obra.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Valor < teto não dispara"
+  },
+  {
+    "id": "SYN-LIC-FP-071",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "inexigibilidade_art_74",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-04-08",
+      "excerpt": "EXTRATO DE INEXIGIBILIDADE DE LICITAÇÃO Nº 056/2026\nFUNDAMENTO: Art. 74, I, Lei 14.133/2021 (aquisição de materiais cuja produção é restrita)\nOBJETO: Aquisição de uniformes da Guarda Municipal Civil com brasão oficial registrado pelo Município.\nCONTRATADA: UNIFORMES MUNICIPAIS LTDA - CNPJ 14.567.890/0001-99\nVALOR: R$ 320.000,00\nCertificação de Exclusividade do Brasão Municipal Lei 4.567/2018.",
+      "fullPageContext": "[Página 13 do DO de 08/04/2026 - Inexigibilidade Art. 74, sem teto. Brasão municipal exclusivo justifica inexigibilidade.]"
+    },
+    "rationale": "Inexigibilidade Art. 74 (não Art. 75). Sem teto de valor.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*74 (inexigibilidade) — sem teto, fora do escopo Art. 75"
+  },
+  {
+    "id": "SYN-LIC-FP-072",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "inexigibilidade_art_74",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-03-26",
+      "excerpt": "EXTRATO DE INEXIGIBILIDADE Nº 0456/SMC/2026\nFUNDAMENTO: Art. 74, II, Lei 14.133/2021 (contratação de profissional do setor artístico consagrado pela crítica especializada ou opinião pública)\nOBJETO: Contratação de show da artista internacional XYZ para evento Virada Cultural 2026.\nCONTRATADA: PRODUÇÃO ARTÍSTICA SP LTDA - CNPJ 56.789.012/0001-77\nVALOR: R$ 1.890.000,00",
+      "fullPageContext": "[Página 41 do DOC de 26/03/2026 - Inexigibilidade Art. 74 II para artista consagrado. Sem teto.]"
+    },
+    "rationale": "Inexigibilidade Art. 74 II - artista consagrado. Sem teto.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*74 (inexigibilidade)"
+  },
+  {
+    "id": "SYN-LIC-FP-073",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "inexigibilidade_art_74",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-02-23",
+      "excerpt": "EXTRATO DE INEXIGIBILIDADE DE LICITAÇÃO Nº 0067/PGM/2026\nFUNDAMENTO: Art. 74, III, 'a', Lei 14.133/2021 (serviços técnicos especializados de natureza singular)\nOBJETO: Contratação de escritório de advocacia notoriamente especializado em direito administrativo previdenciário para defesa em ações judiciais que tramitam no STF.\nCONTRATADA: ADVOCACIA NOTÓRIA LTDA - CNPJ 88.123.456/0001-66\nVALOR: R$ 480.000,00",
+      "fullPageContext": "[Página 18 do DOPOA de 23/02/2026 - Inexigibilidade Art. 74 III - serviço técnico singular com notória especialização. Sem teto.]"
+    },
+    "rationale": "Inexigibilidade Art. 74 III - notória especialização. Sem teto.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*74"
+  },
+  {
+    "id": "SYN-LIC-FP-074",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "inexigibilidade_art_74",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2026-03-31",
+      "excerpt": "EXTRATO DE INEXIGIBILIDADE Nº 0123/FUNDEB/2026\nFUNDAMENTO: Art. 74, IV, Lei 14.133/2021 (objetos que devam ou possam ser contratados por meio de credenciamento)\nOBJETO: Credenciamento de profissionais e instituições para cursos de capacitação docente da rede municipal (modalidade chamamento permanente).\nCONTRATADAS: 47 instituições credenciadas conforme Edital de Chamamento 0023/2026.\nVALOR ESTIMADO ANUAL: R$ 1.200.000,00",
+      "fullPageContext": "[Página 21 do DOM Manaus de 31/03/2026 - Inexigibilidade por credenciamento Art. 74 IV. Sem teto.]"
+    },
+    "rationale": "Credenciamento Art. 74 IV. Sem teto.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*74[,\\s]*IV"
+  },
+  {
+    "id": "SYN-LIC-FP-075",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "fp_edge",
+    "fpPattern": "inexigibilidade_art_74",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-04-29",
+      "excerpt": "EXTRATO DE INEXIGIBILIDADE Nº 0789/SECULT-DF/2026\nFUNDAMENTO LEGAL: Art. 74, V, Lei 14.133/2021 (aquisição de bens com mercado restrito)\nOBJETO: Aquisição de instrumentos musicais artesanais únicos para Orquestra Sinfônica do DF (luthier especializado em violinos do século XVIII).\nCONTRATADA: LUTHIER MAESTRO LTDA - CNPJ 33.456.789/0001-88\nVALOR: R$ 230.000,00",
+      "fullPageContext": "[Página 9 do DODF de 29/04/2026 - Inexigibilidade Art. 74 V - bens com mercado restrito (instrumentos artesanais únicos). Sem teto.]"
+    },
+    "rationale": "Inexigibilidade Art. 74 V. Bens com mercado restrito (instrumentos artesanais). Sem teto.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Art\\.\\s*74[,\\s]*V"
+  },
+  {
+    "id": "SYN-LIC-TP-025",
+    "fiscalId": "fiscal-licitacoes",
+    "category": "tp_textbook",
+    "type": "dispensa_irregular",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4205407",
+      "cityName": "Florianópolis",
+      "date": "2026-04-11",
+      "excerpt": "DISPENSA DE LICITAÇÃO Nº 0087/SECULT/2026\nFUNDAMENTO: Art. 75, II, Lei 14.133/2021\nOBJETO: Prestação de serviços técnicos de marketing digital e gestão de redes sociais da Prefeitura.\nCONTRATADA: MÍDIA SC LTDA - CNPJ 14.234.567/0001-22\nVALOR: R$ 142.500,00\nVIGÊNCIA: 12 meses",
+      "fullPageContext": "[Página 16 do DOM Floripa de 11/04/2026 - Serviço de marketing digital. R$ 142.500 ultrapassa teto Art. 75 II em 185%. Sem fundamentação adicional.]"
+    },
+    "rationale": "Serviço de marketing. R$ 142.500 vs teto R$ 50k → 2,85x. TP.",
+    "shouldTriggerAfterPatch": true
+  }
+]

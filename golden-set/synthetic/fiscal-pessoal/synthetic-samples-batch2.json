@@ -1,0 +1,1763 @@
+[
+  {
+    "id": "SYN-PES-TP-001",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2024-09-12",
+      "excerpt": "PORTARIA Nº 1.245/2024\nO PREFEITO MUNICIPAL DE CAXIAS DO SUL, no uso de suas atribuições legais, RESOLVE:\nArt. 1º NOMEAR ANDRE LUIZ FERREIRA para o cargo em comissão de Diretor de Departamento da Secretaria Municipal de Obras.\nArt. 2º NOMEAR MARIANA BORGES SCHMIDT para o cargo em comissão de Coordenadora de Projetos da Secretaria Municipal de Saúde.\nArt. 3º NOMEAR RICARDO PERIN VARGAS para o cargo em comissão de Chefe de Gabinete Adjunto.\nArt. 4º NOMEAR JULIANA TONIOLO MARTINS para o cargo em comissão de Assessora Especial da Secretaria de Comunicação.\nArt. 5º Esta Portaria entra em vigor na data de sua publicação."
+    },
+    "rationale": "Caxias do Sul é cidade medium (~464k). Janela eleitoral 2024 (12/09 dentro). Limiar medium-eleitoral=5; aqui temos 4 pessoas distintas. Edge: borderline, cuidar — usar 5 pessoas para garantir disparo.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Edge case: 4 < limiar 5 medium-eleitoral. Manter como controle negativo no batch (renumerar)."
+  },
+  {
+    "id": "SYN-PES-TP-002",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2024-08-22",
+      "excerpt": "PORTARIA Nº 1.108/2024\nArt. 1º NOMEAR ANDRE LUIZ FERREIRA para o cargo em comissão de Diretor de Departamento.\nArt. 2º NOMEAR MARIANA BORGES SCHMIDT para o cargo em comissão de Coordenadora de Projetos.\nArt. 3º NOMEAR RICARDO PERIN VARGAS para o cargo em comissão de Chefe de Gabinete.\nArt. 4º NOMEAR JULIANA TONIOLO MARTINS para o cargo em comissão de Assessora Especial.\nArt. 5º NOMEAR FERNANDO COSTA AZEVEDO para o cargo em comissão de Diretor Administrativo.\nArt. 6º NOMEAR PATRICIA WEBER LOPES para o cargo em comissão de Coordenadora de Comunicação."
+    },
+    "rationale": "Janela 2024 (22/08). 6 pessoas distintas em comissão >= limiar medium-eleitoral=5. Padrão textbook.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-003",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2024-09-30",
+      "excerpt": "PORTARIA Nº 5.812/2024\nO PREFEITO DE PORTO ALEGRE RESOLVE:\nNOMEAR THIAGO RAMOS NETTO, MARIA EDUARDA HENZ, BRUNO LACERDA OLIVEIRA, CAMILA SCHILLING DUARTE, RAFAEL MOSCHEN GOMES, LETICIA AVELAR DA ROSA, GUSTAVO MENDES BARBOSA, FERNANDA TROIS PEREIRA, DIEGO BENVENUTI MACHADO, JULIA POLIDORO RAUPP, MARCELO TROIS WEBER, para os cargos em comissão de Diretor, Coordenador, Chefe e Assessor das Secretarias Municipais de Saúde, Obras, Educação e Fazenda, conforme tabela anexa."
+    },
+    "rationale": "Porto Alegre = large (1.33M). Janela 2024. 11 pessoas >= limiar large-eleitoral=10.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-004",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2024-09-25",
+      "excerpt": "PORTARIA Nº 12.342/2024-PMSP\nO PREFEITO DO MUNICÍPIO DE SÃO PAULO RESOLVE:\nNOMEAR ROBERTO ALMEIDA SOUZA para Diretor de Departamento da Secretaria Municipal da Fazenda.\nNOMEAR ANA PAULA TANAKA para Coordenadora da Secretaria Municipal de Educação.\nNOMEAR CARLOS HENRIQUE LIMA para Chefe de Gabinete da Secretaria Municipal de Saúde.\nNOMEAR PATRICIA RAMOS CASTRO para Assessora da Secretaria Municipal de Cultura.\nNOMEAR FERNANDO TEIXEIRA NUNES para Diretor da Secretaria de Obras.\nNOMEAR LUCAS BARRETO ANDRADE para Coordenador de Projetos.\nNOMEAR CAMILA RIBEIRO MENDES para Assessora Especial.\nNOMEAR MAURICIO COSTA SANTOS para Diretor Administrativo.\nNOMEAR JULIA FERREIRA LOPES para Coordenadora de Planejamento.\nNOMEAR EDUARDO MARTINS PEIXOTO para Chefe de Divisão.\nNOMEAR BEATRIZ MORAES PINTO para Assessora Técnica.\nNOMEAR THIAGO PEREIRA SILVA para Diretor de Comunicação."
+    },
+    "rationale": "São Paulo = large (11M). Janela 2024 (25/09). 12 pessoas distintas >= limiar 10.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-005",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4205407",
+      "cityName": "Florianópolis",
+      "date": "2024-08-05",
+      "excerpt": "PORTARIA Nº 845/2024\nO PREFEITO DE FLORIANÓPOLIS RESOLVE:\nArt. 1º NOMEAR PEDRO HENRIQUE COELHO para o cargo em comissão de Diretor de Cultura.\nArt. 2º NOMEAR ANA LUIZA REBELO para o cargo em comissão de Coordenadora de Turismo.\nArt. 3º NOMEAR DANIEL VARGAS PIRES para o cargo em comissão de Chefe de Gabinete da Secretaria de Pesca.\nArt. 4º NOMEAR MARINA SOUSA CAMPOS para o cargo em comissão de Assessora de Comunicação.\nArt. 5º NOMEAR RAFAEL MORAIS PEREIRA para o cargo em comissão de Diretor de Mobilidade.\nArt. 6º NOMEAR CAMILA OLIVEIRA RAMOS para o cargo em comissão de Coordenadora de Eventos."
+    },
+    "rationale": "Florianópolis = medium (421k). Janela 2024 (05/08). 6 pessoas >= limiar medium-eleitoral=5.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-006",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2024-09-10",
+      "excerpt": "DECRETO Nº 1.567/2024\nO PREFEITO DE CURITIBA, no uso de suas atribuições, RESOLVE:\nNOMEAR LUCIANO FERREIRA NETO, RENATA CARDOSO BOSCHI, MARCELO PADILHA SCHMITT, ALINE BENTO PIRES, FELIPE TOMAZ ANDRADE, GIOVANA AMARAL CRUZ, RICARDO MENEZES VIANA, KAROLINA DUARTE LIMA, BRUNO MORAES TAVARES, NATHALIA RIBAS COUTO, para os cargos em comissão de Diretor, Coordenador, Chefe de Gabinete e Assessor Especial nas Secretarias Municipais de Educação, Saúde, Obras e Fazenda."
+    },
+    "rationale": "Curitiba = large (1.77M). Janela 2024 (10/09). 10 pessoas distintas >= limiar 10.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-007",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2024-08-18",
+      "excerpt": "PORTARIA Nº 3.412/2024\nO PREFEITO DE FORTALEZA RESOLVE EXONERAR e NOMEAR servidores conforme abaixo:\nEXONERAR LUIZ FERNANDO CARVALHO do cargo em comissão de Diretor da Secretaria de Saúde.\nNOMEAR JOSE ROBERTO TAVARES para o cargo em comissão de Diretor da Secretaria de Saúde.\nNOMEAR PATRICIA AGUIAR LIMA para o cargo em comissão de Coordenadora de Vigilância.\nNOMEAR HENRIQUE BARROSO MOTA para o cargo em comissão de Chefe de Gabinete.\nNOMEAR LARA MENDES VASCONCELOS para o cargo em comissão de Assessora Especial.\nNOMEAR ANTONIO CARLOS PINHEIRO para o cargo em comissão de Diretor Administrativo.\nNOMEAR FATIMA QUEIROZ ALMEIDA para o cargo em comissão de Coordenadora de Projetos.\nNOMEAR MARCOS VIEIRA SOARES para o cargo em comissão de Diretor de Departamento.\nNOMEAR ELAINE BRITO MAGALHAES para o cargo em comissão de Assessora Técnica.\nNOMEAR DIOGO CASTELO BRANCO para o cargo em comissão de Diretor de Planejamento.\nNOMEAR RAQUEL HOLANDA SOUSA para o cargo em comissão de Chefe de Divisão."
+    },
+    "rationale": "Fortaleza = large (2.43M). Janela 2024 (18/08). 11 pessoas distintas (1 exoneração + 10 nomeações).",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-008",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-08-15",
+      "excerpt": "PORTARIA Nº 4.892/2026\nO PREFEITO DE PORTO ALEGRE RESOLVE:\nNOMEAR THIAGO RAMOS NETTO para o cargo em comissão de Diretor.\nNOMEAR MARIA EDUARDA HENZ para o cargo em comissão de Coordenadora.\nNOMEAR BRUNO LACERDA OLIVEIRA para o cargo em comissão de Chefe de Gabinete.\nNOMEAR CAMILA SCHILLING DUARTE para o cargo em comissão de Assessora.\nNOMEAR RAFAEL MOSCHEN GOMES para o cargo em comissão de Diretor Administrativo.\nNOMEAR LETICIA AVELAR DA ROSA para o cargo em comissão de Coordenadora de Projetos.\nNOMEAR GUSTAVO MENDES BARBOSA para o cargo em comissão de Diretor de Departamento.\nNOMEAR FERNANDA TROIS PEREIRA para o cargo em comissão de Assessora Especial.\nNOMEAR DIEGO BENVENUTI MACHADO para o cargo em comissão de Chefe de Divisão.\nNOMEAR JULIA POLIDORO RAUPP para o cargo em comissão de Diretora.\nNOMEAR MARCELO TROIS WEBER para o cargo em comissão de Coordenador."
+    },
+    "rationale": "Janela 2026 (15/08). Porto Alegre large. 11 pessoas distintas >= 10.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-009",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-09-08",
+      "excerpt": "PORTARIA Nº 9.876/2026\nNOMEAR PAULO ROBERTO MENDES, ISABELLA CARVALHO LIMA, FERNANDO HENRIQUE PIRES, JULIANA SOARES MORAES, RICARDO ALBUQUERQUE NUNES, BEATRIZ DIAS COSTA, ANDRE LUIZ TEIXEIRA, MARIANA RAMOS PINHEIRO, EDUARDO BARROS NETO, CAMILA SILVA AZEVEDO, GABRIEL MORENO LOPES, LUCAS PEREIRA RAMOS, para os cargos em comissão de Diretor, Coordenador, Chefe de Gabinete e Assessor Especial nas Secretarias Municipais."
+    },
+    "rationale": "São Paulo large. Janela 2026 (08/09). 12 pessoas distintas >= 10.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-010",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-08-28",
+      "excerpt": "DECRETO Nº 2.341/2026\nO PREFEITO DO RECIFE RESOLVE:\nNOMEAR JOAO PAULO BARBOSA, MARIA CLARA MELO, RICARDO TENORIO LINS, AMANDA CAVALCANTI BRAGA, FELIPE LACERDA SOUSA, NATHALIA FREITAS GOMES, BRUNO DUARTE COIMBRA, RAFAELA MOTA SANTOS, GUILHERME MARANHAO PIRES, LARISSA PESSOA COSTA, OTAVIO MENDONCA LEITE, ROBERTA OLIVEIRA TAVARES, para os cargos em comissão de Diretor, Coordenador, Chefe e Assessor das Secretarias Municipais de Saúde, Educação, Obras, Fazenda e Cultura."
+    },
+    "rationale": "Recife large (1.49M). Janela 2026 (28/08). 12 pessoas >= 10.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-011",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4205407",
+      "cityName": "Florianópolis",
+      "date": "2026-09-22",
+      "excerpt": "PORTARIA Nº 1.234/2026\nArt. 1º NOMEAR PEDRO HENRIQUE COELHO para Diretor de Cultura.\nArt. 2º NOMEAR ANA LUIZA REBELO para Coordenadora de Turismo.\nArt. 3º NOMEAR DANIEL VARGAS PIRES para Chefe de Gabinete.\nArt. 4º NOMEAR MARINA SOUSA CAMPOS para Assessora.\nArt. 5º NOMEAR RAFAEL MORAIS PEREIRA para Diretor de Mobilidade.\nArt. 6º NOMEAR CAMILA OLIVEIRA RAMOS para Coordenadora de Eventos.\nTodos os cargos são em comissão da Prefeitura Municipal de Florianópolis."
+    },
+    "rationale": "Florianópolis medium. Janela 2026 (22/09). 6 pessoas >= 5.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-012",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-09-15",
+      "excerpt": "PORTARIA Nº 2.105/2026\nO PREFEITO MUNICIPAL DE CAXIAS DO SUL RESOLVE:\nArt. 1º NOMEAR ANDRE LUIZ FERREIRA para o cargo em comissão de Diretor de Departamento.\nArt. 2º NOMEAR MARIANA BORGES SCHMIDT para o cargo em comissão de Coordenadora de Projetos.\nArt. 3º NOMEAR RICARDO PERIN VARGAS para o cargo em comissão de Chefe de Gabinete Adjunto.\nArt. 4º NOMEAR JULIANA TONIOLO MARTINS para o cargo em comissão de Assessora Especial.\nArt. 5º NOMEAR FERNANDO COSTA AZEVEDO para o cargo em comissão de Diretor Administrativo.\nArt. 6º NOMEAR PATRICIA WEBER LOPES para o cargo em comissão de Coordenadora de Comunicação."
+    },
+    "rationale": "Caxias do Sul medium. Janela 2026 (15/09). 6 pessoas >= 5.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-013",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "regex_conjugado_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2024-08-30",
+      "excerpt": "PORTARIA Nº 8.765/2024-GDF\nNOMEAR LUCIANA AFONSO BARROS, FERNANDO ARAUJO PRADO, JULIA MEDEIROS COSTA, ANDRE FONSECA GUIMARAES, BEATRIZ NUNES DUARTE, RAFAEL CASTRO ANDRADE, CAMILA RAMOS PIRES, GUSTAVO LIMA TAVARES, NATHALIA OLIVEIRA SOUZA, BRUNO HENRIQUE MARTINS, para os cargos em comissão de Diretor de Departamento, Coordenador-Geral, Chefe de Gabinete, Assessor Especial nas Secretarias do Distrito Federal."
+    },
+    "rationale": "Brasília large (2.8M). Janela 2024 (30/08). 10 pessoas >= 10.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-014",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "regex_conjugado_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-08-20",
+      "excerpt": "PORTARIA Nº 4.567/2026-PCRJ\nNOMEAR LEONARDO MARQUES TAVARES, ISADORA CAMPOS LOPES, RODRIGO PINHEIRO DE SOUSA, AMANDA TEIXEIRA RAMOS, FELIPE BARROS DUARTE, JULIANA MOREIRA NUNES, MARCOS VINICIUS PEREIRA, BEATRIZ HOLANDA COSTA, EDUARDO MARTINS LIMA, CAMILA RIBEIRO ANDRADE, para os cargos em comissão da Prefeitura do Rio de Janeiro nas Secretarias de Saúde, Educação, Obras e Cultura."
+    },
+    "rationale": "Rio = large (6.2M). Janela 2026. 10 pessoas >= 10.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-015",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "regex_conjugado_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2024-09-12",
+      "excerpt": "DECRETO Nº 56.789/2024-PCRJ\nO PREFEITO DO RIO DE JANEIRO RESOLVE NOMEAR:\nROBERTO ALMEIDA BRAGA para Diretor da Secretaria de Saúde.\nMARIA CLARA TENORIO para Coordenadora de Educação.\nFERNANDO CASTRO MELO para Chefe de Gabinete.\nPAULA SOUSA AVELLAR para Assessora Especial.\nLUCAS DUARTE LIMA para Diretor Administrativo.\nMARIANA RAMOS COSTA para Coordenadora de Comunicação.\nGUILHERME PEREIRA MOTA para Diretor de Departamento.\nBEATRIZ ANDRADE FONSECA para Assessora Técnica.\nEDUARDO MELLO RIBEIRO para Chefe de Divisão.\nLARISSA TAVARES NUNES para Diretora de Planejamento.\nTodos os cargos em comissão.",
+      "_note": "TP textbook eleitoral large 10 pessoas >= 10"
+    },
+    "rationale": "Rio large. Janela 2024. 10 pessoas distintas. NOMEAR + nome em CAPS — exercita PESSOA_NOMEADA_RE.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-016",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "type": "pico_nomeacoes",
+    "subType": "fora_janela",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2025-03-18",
+      "excerpt": "PORTARIA Nº 543/2025-PMSP\nO PREFEITO DO MUNICÍPIO DE SÃO PAULO RESOLVE NOMEAR para os cargos em comissão constantes da tabela:\nROBERTO ALMEIDA SOUZA - Diretor de Departamento.\nANA PAULA TANAKA - Coordenadora.\nCARLOS HENRIQUE LIMA - Chefe de Gabinete.\nPATRICIA RAMOS CASTRO - Assessora.\nFERNANDO TEIXEIRA NUNES - Diretor.\nLUCAS BARRETO ANDRADE - Coordenador.\nCAMILA RIBEIRO MENDES - Assessora Especial.\nMAURICIO COSTA SANTOS - Diretor Administrativo.\nJULIA FERREIRA LOPES - Coordenadora de Planejamento.\nEDUARDO MARTINS PEIXOTO - Chefe de Divisão.\nBEATRIZ MORAES PINTO - Assessora Técnica.\nTHIAGO PEREIRA SILVA - Diretor de Comunicação.\nLARISSA OLIVEIRA RAMOS - Coordenadora.\nMARCOS VIEIRA SOARES - Diretor.\nFATIMA QUEIROZ ALMEIDA - Coordenadora.\nELAINE BRITO MAGALHAES - Assessora.\nDIOGO CASTELO BRANCO - Diretor de Planejamento.\nRAQUEL HOLANDA SOUSA - Chefe de Divisão.\nANTONIO CARLOS PINHEIRO - Diretor Administrativo.\nMARIA EDUARDA SANTOS - Coordenadora de Projetos."
+    },
+    "rationale": "SP large fora-janela (março 2025). 20 pessoas distintas >= limiar large-fora=20. Caso textbook fora janela.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-017",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "fora_janela",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2025-04-10",
+      "excerpt": "PORTARIA Nº 612/2025\nNOMEAR ANDRE LUIZ FERREIRA, MARIANA BORGES SCHMIDT, RICARDO PERIN VARGAS, JULIANA TONIOLO MARTINS, FERNANDO COSTA AZEVEDO, PATRICIA WEBER LOPES, CARLOS HENRIQUE PIVA, ANA CRISTINA TROIS, MARCELO BENVENUTI, LUCIANA RAUPP NUNES, para os cargos em comissão de Diretor, Coordenador, Chefe e Assessor das Secretarias Municipais."
+    },
+    "rationale": "Caxias do Sul medium fora-janela. 10 pessoas >= limiar medium-fora=10. Anômalo proporcional ao porte.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-018",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "fora_janela",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2025-06-12",
+      "excerpt": "DECRETO Nº 21.456/2025\nO PREFEITO DE PORTO ALEGRE RESOLVE NOMEAR para cargos em comissão:\nTHIAGO RAMOS NETTO, MARIA EDUARDA HENZ, BRUNO LACERDA OLIVEIRA, CAMILA SCHILLING DUARTE, RAFAEL MOSCHEN GOMES, LETICIA AVELAR DA ROSA, GUSTAVO MENDES BARBOSA, FERNANDA TROIS PEREIRA, DIEGO BENVENUTI MACHADO, JULIA POLIDORO RAUPP, MARCELO TROIS WEBER, ALICE FERREIRA SOARES, RAFAELA SCHMITT BORGES, PEDRO ANTONIO CASTRO, BIANCA MORENO LOPES, FELIPE TAVARES PIRES, BEATRIZ DUARTE NUNES, EDUARDO RAMOS LIMA, CAROLINA PEREIRA SILVA, RODRIGO MARTINS COSTA."
+    },
+    "rationale": "Porto Alegre large fora-janela (junho 2025). 20 pessoas >= limiar 20.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-019",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "fora_janela",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4205407",
+      "cityName": "Florianópolis",
+      "date": "2025-05-22",
+      "excerpt": "PORTARIA Nº 1.892/2025\nO PREFEITO DE FLORIANÓPOLIS RESOLVE:\nNOMEAR PEDRO HENRIQUE COELHO, ANA LUIZA REBELO, DANIEL VARGAS PIRES, MARINA SOUSA CAMPOS, RAFAEL MORAIS PEREIRA, CAMILA OLIVEIRA RAMOS, BRUNO BENTO NUNES, JULIA MARTINS BORGES, FELIPE TROIS LIMA, NATHALIA SOARES TAVARES, para os cargos em comissão da Prefeitura Municipal de Florianópolis."
+    },
+    "rationale": "Floripa medium fora-janela. 10 pessoas >= 10.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-020",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "fora_janela",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2025-07-15",
+      "excerpt": "DECRETO Nº 3.412/2025\nNOMEAR LUCIANO FERREIRA NETO, RENATA CARDOSO BOSCHI, MARCELO PADILHA SCHMITT, ALINE BENTO PIRES, FELIPE TOMAZ ANDRADE, GIOVANA AMARAL CRUZ, RICARDO MENEZES VIANA, KAROLINA DUARTE LIMA, BRUNO MORAES TAVARES, NATHALIA RIBAS COUTO, JOAO ANTONIO MELO, ISADORA HORN PEREIRA, EDUARDO PIRES BARBOSA, LARISSA NUNES MARTINS, GABRIEL SOUZA LACERDA, BEATRIZ TEIXEIRA RAMOS, MAURICIO ANDRADE LOPES, CAMILA OLIVEIRA TAVARES, RODRIGO MENDES COSTA, AMANDA RIBEIRO SOARES, para os cargos em comissão de Diretor, Coordenador e Assessor."
+    },
+    "rationale": "Curitiba large fora-janela (15/07/2025). 20 pessoas >= 20.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-021",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "fora_janela",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2025-11-08",
+      "excerpt": "PORTARIA Nº 5.671/2025\nO PREFEITO DE FORTALEZA NOMEIA para cargos em comissão:\nLUIZ FERNANDO CARVALHO, JOSE ROBERTO TAVARES, PATRICIA AGUIAR LIMA, HENRIQUE BARROSO MOTA, LARA MENDES VASCONCELOS, ANTONIO CARLOS PINHEIRO, FATIMA QUEIROZ ALMEIDA, MARCOS VIEIRA SOARES, ELAINE BRITO MAGALHAES, DIOGO CASTELO BRANCO, RAQUEL HOLANDA SOUSA, JULIO BARBOSA PINTO, MARIA EDUARDA NUNES, FELIPE GOMES ARAGAO, BIANCA AMORIM LOPES, RAFAELA QUEIROZ DUARTE, EDUARDO COSTA MELO, AMANDA TEIXEIRA RAMOS, RICARDO MARTINS NUNES, CAROLINA HOLANDA PINTO."
+    },
+    "rationale": "Fortaleza large fora-janela. 20 pessoas >= 20.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-022",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "fora_janela",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5208707",
+      "cityName": "Goiânia",
+      "date": "2025-04-24",
+      "excerpt": "DECRETO Nº 1.234/2025-PMG\nNOMEAR LUCIANA ALVES SOUZA, FERNANDO ROCHA CARDOSO, BRUNA TEIXEIRA MORAES, RICARDO BARBOSA TOLEDO, JULIA MARQUES PIRES, GABRIEL ANDRADE LOPES, BEATRIZ FERREIRA TAVARES, EDUARDO PEREIRA NUNES, CAMILA SOUSA RAMOS, ANTONIO BORGES SILVA, MARIANA OLIVEIRA COSTA, RAFAEL DUARTE LIMA, ISADORA MARTINS COSTA, FELIPE NUNES BARROS, NATHALIA TOLEDO MELO, BRUNO RAMOS ALBUQUERQUE, AMANDA TEIXEIRA SOARES, RODRIGO MENDES SOARES, BIANCA HOLANDA NUNES, MARCOS LIMA ANDRADE, para cargos em comissão da Prefeitura."
+    },
+    "rationale": "Goiânia large (1.43M). Fora janela. 20 pessoas >= 20.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-023",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "fora_janela",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3509502",
+      "cityName": "Campinas",
+      "date": "2025-09-04",
+      "excerpt": "PORTARIA Nº 2.564/2025\nNOMEAR LEONARDO MARQUES TAVARES, ISADORA CAMPOS LOPES, RODRIGO PINHEIRO DE SOUSA, AMANDA TEIXEIRA RAMOS, FELIPE BARROS DUARTE, JULIANA MOREIRA NUNES, MARCOS VINICIUS PEREIRA, BEATRIZ HOLANDA COSTA, EDUARDO MARTINS LIMA, CAMILA RIBEIRO ANDRADE, para os cargos em comissão de Diretor, Coordenador, Chefe e Assessor da Prefeitura Municipal de Campinas."
+    },
+    "rationale": "Campinas large (1.14M). Fora janela. 10 pessoas — abaixo de 20 large-fora. Re-classifico.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "10 < limiar large-fora=20. Esperado: NÃO disparar — controle negativo de tamanho."
+  },
+  {
+    "id": "SYN-PES-TP-024",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "fora_janela",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3509502",
+      "cityName": "Campinas",
+      "date": "2025-09-04",
+      "excerpt": "PORTARIA Nº 2.564/2025-A\nNOMEAR LEONARDO MARQUES TAVARES, ISADORA CAMPOS LOPES, RODRIGO PINHEIRO DE SOUSA, AMANDA TEIXEIRA RAMOS, FELIPE BARROS DUARTE, JULIANA MOREIRA NUNES, MARCOS VINICIUS PEREIRA, BEATRIZ HOLANDA COSTA, EDUARDO MARTINS LIMA, CAMILA RIBEIRO ANDRADE, GIOVANI PEDROSO MELO, RAFAELA SCHIMTT NUNES, ANTONIO LACERDA PINTO, JULIA TROIS MORENO, BRUNO HENRIQUE LOPES, MARIANA NUNES OLIVEIRA, FELIPE COUTO BARROS, NATHALIA AMORIM SOUZA, EDUARDO BARRETO ANDRADE, CAMILA TROIS COSTA, para cargos em comissão da Prefeitura."
+    },
+    "rationale": "Campinas large fora-janela. 20 pessoas >= 20.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-025",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "fora_janela",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4209102",
+      "cityName": "Joinville",
+      "date": "2025-02-14",
+      "excerpt": "PORTARIA Nº 89/2025\nNOMEAR JOAO PAULO BARBOSA, MARIA CLARA MELO, RICARDO TENORIO LINS, AMANDA CAVALCANTI BRAGA, FELIPE LACERDA SOUSA, NATHALIA FREITAS GOMES, BRUNO DUARTE COIMBRA, RAFAELA MOTA SANTOS, GUILHERME MARANHAO PIRES, LARISSA PESSOA COSTA, para os cargos em comissão de Diretor, Coordenador e Assessor."
+    },
+    "rationale": "Joinville medium (598k). Fora janela. 10 pessoas >= medium-fora=10.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-026",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "regex_conjugado_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2024-08-30",
+      "excerpt": "DIÁRIO OFICIAL DO MUNICÍPIO DE FORTALEZA\nPort. Nº 412/2024 — NOMEIA ROBERTO ALMEIDA BRAGA para o cargo em comissão de Diretor.\nPort. Nº 413/2024 — NOMEIA MARIA CLARA TENORIO para o cargo em comissão de Coordenadora.\nPort. Nº 414/2024 — NOMEIA FERNANDO CASTRO MELO para o cargo em comissão de Chefe de Gabinete.\nPort. Nº 415/2024 — NOMEIA PAULA SOUSA AVELLAR para o cargo em comissão de Assessora.\nPort. Nº 416/2024 — NOMEIA LUCAS DUARTE LIMA para o cargo em comissão de Diretor Administrativo.\nPort. Nº 417/2024 — NOMEIA MARIANA RAMOS COSTA para o cargo em comissão de Coordenadora.\nPort. Nº 418/2024 — NOMEIA GUILHERME PEREIRA MOTA para o cargo em comissão de Diretor.\nPort. Nº 419/2024 — NOMEIA BEATRIZ ANDRADE FONSECA para Assessora.\nPort. Nº 420/2024 — NOMEIA EDUARDO MELLO RIBEIRO para Chefe de Divisão.\nPort. Nº 421/2024 — NOMEIA LARISSA TAVARES NUNES para Diretora de Planejamento."
+    },
+    "rationale": "Padrão capital ALL CAPS 'NOMEIA NOME' — exercita regex ATO_RE conjugada que SOMENTE pega 'NOMEIA' se o `i` flag funciona (verbo em CAPS LOCK). 10 pessoas >= limiar large-eleitoral=10. Subnotificação histórica deste padrão.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-027",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "regex_conjugado_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2024-09-18",
+      "excerpt": "DIÁRIO OFICIAL DO DISTRITO FEDERAL\nPort. Nº 612/2024 — NOMEIA LUCIANA AFONSO BARROS para Diretora de Departamento.\nPort. Nº 613/2024 — NOMEIA FERNANDO ARAUJO PRADO para Coordenador-Geral.\nPort. Nº 614/2024 — NOMEIA JULIA MEDEIROS COSTA para Chefe de Gabinete.\nPort. Nº 615/2024 — NOMEIA ANDRE FONSECA GUIMARAES para Assessor Especial.\nPort. Nº 616/2024 — NOMEIA BEATRIZ NUNES DUARTE para Diretora.\nPort. Nº 617/2024 — NOMEIA RAFAEL CASTRO ANDRADE para Coordenador.\nPort. Nº 618/2024 — NOMEIA CAMILA RAMOS PIRES para Assessora.\nPort. Nº 619/2024 — NOMEIA GUSTAVO LIMA TAVARES para Diretor Administrativo.\nPort. Nº 620/2024 — NOMEIA NATHALIA OLIVEIRA SOUZA para Chefe de Divisão.\nPort. Nº 621/2024 — NOMEIA BRUNO HENRIQUE MARTINS para Diretor de Planejamento."
+    },
+    "rationale": "Brasília large. Janela 2024. Padrão 'NOMEIA NOME' em CAPS conjugado com Port. Nº. 10 pessoas.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-028",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "regex_conjugado_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-09-02",
+      "excerpt": "Port. Nº 234/2026 — EXONERA Luiz Antonio Cavalcanti do cargo em comissão de Diretor da Secretaria de Saúde.\nPort. Nº 235/2026 — NOMEIA Joao Paulo Barbosa para o cargo em comissão de Diretor.\nPort. Nº 236/2026 — NOMEIA Maria Clara Melo para o cargo em comissão de Coordenadora.\nPort. Nº 237/2026 — NOMEIA Ricardo Tenorio Lins para o cargo em comissão de Chefe.\nPort. Nº 238/2026 — NOMEIA Amanda Cavalcanti Braga para Assessora.\nPort. Nº 239/2026 — NOMEIA Felipe Lacerda Sousa para Diretor.\nPort. Nº 240/2026 — NOMEIA Nathalia Freitas Gomes para Coordenadora.\nPort. Nº 241/2026 — NOMEIA Bruno Duarte Coimbra para Diretor.\nPort. Nº 242/2026 — NOMEIA Rafaela Mota Santos para Assessora.\nPort. Nº 243/2026 — NOMEIA Guilherme Maranhao Pires para Coordenador.\nPort. Nº 244/2026 — NOMEIA Larissa Pessoa Costa para Chefe de Gabinete."
+    },
+    "rationale": "Recife large. Janela 2026. Padrão 'EXONERA + NOMEIA' verbos em ALL CAPS, nomes Title Case. 11 pessoas distintas.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-029",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "regex_conjugado_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2024-10-01",
+      "excerpt": "Port. Nº 567/2024-PMM — EXONERA ALEXANDRE PINHEIRO MENDONCA do cargo em comissão de Diretor.\nPort. Nº 568/2024-PMM — NOMEIA MARCOS DAVID FERREIRA para Diretor.\nPort. Nº 569/2024-PMM — NOMEIA ANA CAROLINA BARBOSA para Coordenadora.\nPort. Nº 570/2024-PMM — NOMEIA RICARDO TAVARES SOUZA para Chefe.\nPort. Nº 571/2024-PMM — NOMEIA JULIANA RAMOS PEREIRA para Assessora.\nPort. Nº 572/2024-PMM — NOMEIA FELIPE LIMA NUNES para Diretor.\nPort. Nº 573/2024-PMM — NOMEIA NATHALIA OLIVEIRA COSTA para Coordenadora.\nPort. Nº 574/2024-PMM — NOMEIA BRUNO MORAES PIRES para Diretor.\nPort. Nº 575/2024-PMM — NOMEIA RAFAELA TENORIO LIMA para Assessora.\nPort. Nº 576/2024-PMM — NOMEIA GUSTAVO ARAUJO BRITO para Chefe."
+    },
+    "rationale": "Manaus large. Janela 2024 (último dia 06/10 — 01/10 dentro). 10 pessoas. Pattern 'NOMEIA NOME-CAPS'.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-TP-030",
+    "fiscalId": "fiscal-pessoal",
+    "category": "tp_textbook",
+    "subType": "regex_conjugado_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2927408",
+      "cityName": "Salvador",
+      "date": "2026-08-12",
+      "excerpt": "Port. Nº 1.123/2026-PMS — NOMEIA ANTONIO CARLOS BARBOSA para o cargo em comissão de Diretor da Secretaria de Saúde.\nPort. Nº 1.124/2026-PMS — NOMEIA MARIANA DE JESUS para o cargo em comissão de Coordenadora.\nPort. Nº 1.125/2026-PMS — NOMEIA RICARDO LACERDA SANTOS para Diretor.\nPort. Nº 1.126/2026-PMS — NOMEIA AMANDA SOUZA TAVARES para Assessora.\nPort. Nº 1.127/2026-PMS — NOMEIA FELIPE OLIVEIRA NUNES para Chefe de Gabinete.\nPort. Nº 1.128/2026-PMS — NOMEIA NATHALIA RAMOS PEREIRA para Coordenadora.\nPort. Nº 1.129/2026-PMS — NOMEIA BRUNO HENRIQUE LIMA para Diretor.\nPort. Nº 1.130/2026-PMS — NOMEIA RAFAELA TROIS COSTA para Assessora Especial.\nPort. Nº 1.131/2026-PMS — NOMEIA GUILHERME PIRES MORAES para Diretor de Departamento.\nPort. Nº 1.132/2026-PMS — NOMEIA LARISSA NUNES BORGES para Chefe de Divisão."
+    },
+    "rationale": "Salvador large (2.42M). Janela 2026. 10 pessoas. Pattern 'NOMEIA NOME-CAPS' conjugado com Portaria.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-PES-FP-001",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "ratificacao_retroativa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2024-09-12",
+      "excerpt": "DECRETO Nº 2.345/2024\nO PREFEITO DE CAXIAS DO SUL, considerando processo administrativo Nº 4.567/2005,\nDECRETA:\nArt. 1º RATIFICAR a nomeação de JOAO ANTONIO SILVA, ocorrida em 15 de março de 2005, para o cargo de Procurador Municipal, conforme Portaria Nº 234/2005, sanando vício formal de publicação identificado em auditoria do TCE-RS.\nArt. 2º RATIFICAR a nomeação de MARIA APARECIDA SOUZA, ocorrida em 22 de junho de 2007, para o cargo de Auditor Fiscal, em decorrência do mesmo procedimento.\nArt. 3º RATIFICAR a nomeação de PEDRO ALMEIDA LIMA, ocorrida em 18 de novembro de 2008, para o cargo de Procurador.\nArt. 4º RATIFICAR a nomeação de ANA PAULA RAMOS, ocorrida em 04 de abril de 2010, para o cargo de Auditor.\nArt. 5º RATIFICAR a nomeação de CARLOS FERNANDO TAVARES, ocorrida em 12 de janeiro de 2012, para o cargo de Procurador."
+    },
+    "rationale": "Atos de 2005-2012 sendo ratificados em 2024 por vício formal — não são nomeações novas. Verbo 'NOMEAÇÃO' aparece mas em contexto de RATIFICAÇÃO retroativa. FiscalPessoal contou como pico atual em prod.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir excerpts onde 'RATIFICAR/RATIFICAÇÃO' precede 'nomeação ... ocorrida em DD/MM/AAAA' com data >= 5 anos antes da gazette. Padrão: /ratifica[rç].*?nomea[çc][ãa]o.*?ocorrida em \\d{1,2}\\s+de\\s+\\w+\\s+de\\s+(\\d{4})/i, comparar ano com gazette.date."
+  },
+  {
+    "id": "SYN-PES-FP-002",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "ratificacao_retroativa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2024-08-22",
+      "excerpt": "DECRETO Nº 64.123/2024\nRatifica os atos de nomeação retroativos para regularização cadastral.\nArt. 1º RATIFICAR a nomeação do servidor ROBERTO ALMEIDA SOUZA, datada de 1998, para Auditor Fiscal Municipal.\nArt. 2º RATIFICAR a nomeação da servidora ANA PAULA TANAKA, datada de 2001, para Procuradora.\nArt. 3º RATIFICAR a nomeação do servidor CARLOS HENRIQUE LIMA, datada de 2003, para Auditor.\nArt. 4º RATIFICAR a nomeação da servidora PATRICIA RAMOS CASTRO, datada de 2005, para Procuradora.\nArt. 5º Os atos retroagem a data original; este Decreto sana exclusivamente o vício formal apontado pelo TCE em processo Nº 234/2023."
+    },
+    "rationale": "Atos de 1998-2005 ratificados em 2024 — sanando vício formal. Não é pico de nomeação em janela eleitoral.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Mesmo padrão FP-001: detectar 'RATIFICAR' + 'datada de YYYY' onde YYYY < gazette.year-5."
+  },
+  {
+    "id": "SYN-PES-FP-003",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "ratificacao_retroativa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-09-01",
+      "excerpt": "DECRETO Nº 21.890/2026\nO PREFEITO DE PORTO ALEGRE, considerando determinação judicial nos autos do processo nº 0001234-56.2010.8.21.0001,\nDECRETA:\nArt. 1º RATIFICAR os seguintes atos de nomeação ocorridos entre 1995 e 2008, anteriormente questionados em ação civil pública:\nI - LUIZ FERNANDO BORGES, nomeação em 1995, cargo de Auditor Fiscal;\nII - MARTA HELENA SCHMIDT, nomeação em 1998, cargo de Procuradora;\nIII - GUILHERME PADILHA SCHMIDT, nomeação em 2002, cargo de Auditor;\nIV - SOLANGE RAUPP NETO, nomeação em 2005, cargo de Procuradora;\nV - JORGE LUIS POLIDORO, nomeação em 2008, cargo de Auditor.\nArt. 2º Esta ratificação tem efeito declaratório."
+    },
+    "rationale": "Atos de 1995-2008 sendo ratificados por determinação judicial. Não nomeação atual.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Mesmo padrão FP-001."
+  },
+  {
+    "id": "SYN-PES-FP-004",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "ratificacao_retroativa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2024-09-25",
+      "excerpt": "DECRETO Nº 1.987/2024\nRATIFICAÇÃO DE ATOS DE NOMEAÇÃO\nConsiderando o relatório do TCE-PR Nº 0876/2023 que apontou ausência de publicação tempestiva em Diário Oficial:\nRATIFICAR a nomeação ocorrida em 12/05/1999 do servidor ALBERTO HENRIQUE COSTA.\nRATIFICAR a nomeação ocorrida em 03/08/2001 da servidora MARIA DE LOURDES SCHMITT.\nRATIFICAR a nomeação ocorrida em 17/02/2004 do servidor RICARDO MARTINS PEREIRA.\nRATIFICAR a nomeação ocorrida em 28/11/2006 da servidora HELENA TROIS BORGES.\nRATIFICAR a nomeação ocorrida em 09/06/2009 do servidor PAULO COIMBRA NUNES.\nOs atos retroagem à data original."
+    },
+    "rationale": "Ratificações de atos 1999-2009. Mesmo padrão FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-001."
+  },
+  {
+    "id": "SYN-PES-FP-005",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "ratificacao_retroativa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2026-08-14",
+      "excerpt": "DECRETO Nº 14.567/2026\nO PREFEITO DE FORTALEZA RATIFICA atos de nomeação retroativos para fins de regularização do RH conforme determinação do TCM-CE:\nArt. 1º RATIFICAR a nomeação do servidor JOSE ROBERTO TAVARES, registrada originalmente em 14 de março de 1992 (Portaria Nº 45/1992), para o cargo de Procurador Municipal.\nArt. 2º RATIFICAR a nomeação da servidora PATRICIA AGUIAR LIMA, registrada em 22 de agosto de 1997 (Portaria Nº 89/1997), para Auditor Fiscal.\nArt. 3º RATIFICAR a nomeação do servidor HENRIQUE BARROSO MOTA, registrada em 11 de junho de 2000, para Procurador.\nArt. 4º RATIFICAR a nomeação da servidora LARA MENDES VASCONCELOS, registrada em 18 de outubro de 2003, para Auditor.\nArt. 5º RATIFICAR a nomeação do servidor ANTONIO CARLOS PINHEIRO, registrada em 05 de fevereiro de 2007."
+    },
+    "rationale": "Ratificações 1992-2007 em janela 2026. FiscalPessoal contou 5 atos = pico. Falso positivo.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-001."
+  },
+  {
+    "id": "SYN-PES-FP-006",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "ratificacao_retroativa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2024-09-30",
+      "excerpt": "DECRETO Nº 5.432/2024\nRATIFICA atos pretéritos de nomeação por força do Acórdão TCE-AM Nº 234/2024.\nRATIFICAR a nomeação de JOSE MARIA PINHEIRO (1989), MARIA APARECIDA TAVARES (1993), PEDRO HENRIQUE COSTA (1996), ANA LUIZA NUNES (2001), CARLOS EDUARDO LIMA (2005), conforme processos administrativos arquivados.\nOs efeitos retroagem ao ato original. Esta ratificação não constitui nomeação nova nem altera vínculo funcional."
+    },
+    "rationale": "Disclaimer explícito: 'não constitui nomeação nova'. Anos pretéritos.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-001 OU detectar disclaimer 'não constitui nomeação nova'."
+  },
+  {
+    "id": "SYN-PES-FP-007",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "ratificacao_retroativa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-09-15",
+      "excerpt": "DECRETO Nº 43.567/2026-GDF\nO GOVERNADOR DO DISTRITO FEDERAL, considerando trânsito em julgado da ACP Nº 0007890-12.2015.8.07.0000, RATIFICA atos de nomeação dos seguintes servidores estatutários, originalmente publicados nas datas indicadas:\nI - JOAO BATISTA NUNES (publicação 14/05/1990)\nII - HELENA SOUSA RIBEIRO (publicação 22/11/1994)\nIII - MARCOS VINICIUS DUARTE (publicação 03/08/1999)\nIV - ANTONIO LACERDA NETO (publicação 16/02/2004)\nV - PATRICIA TEIXEIRA SILVA (publicação 11/06/2008)"
+    },
+    "rationale": "Atos 1990-2008. FP padrão.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-001."
+  },
+  {
+    "id": "SYN-PES-FP-008",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "ratificacao_retroativa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-08-10",
+      "excerpt": "DECRETO Nº 32.456/2026\nRATIFICAÇÃO RETROATIVA. Considerando relatório TCE-PE 2024-1234:\nFica RATIFICADA a nomeação de RICARDO TENORIO LINS (1991), AMANDA CAVALCANTI BRAGA (1996), FELIPE LACERDA SOUSA (2002), NATHALIA FREITAS GOMES (2006), BRUNO DUARTE COIMBRA (2010) — todos para cargos efetivos de Auditor Fiscal Municipal.\nOs efeitos da presente ratificação retroagem às respectivas datas de origem."
+    },
+    "rationale": "Ratificações 1991-2010. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-001."
+  },
+  {
+    "id": "SYN-PES-FP-009",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "ratificacao_retroativa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2025-04-08",
+      "excerpt": "DECRETO Nº 1.234/2025\nO PREFEITO DE CAXIAS DO SUL ratifica atos de nomeação anteriores, em cumprimento ao Mandado de Segurança Coletivo nº 5012345-67.2020.8.21.0001:\nRATIFICAR a nomeação dos servidores ANDRE LUIZ FERREIRA (1987), MARIANA BORGES SCHMIDT (1991), RICARDO PERIN VARGAS (1996), JULIANA TONIOLO MARTINS (2000), FERNANDO COSTA AZEVEDO (2004), PATRICIA WEBER LOPES (2008), CARLOS HENRIQUE PIVA (2011), aos respectivos cargos efetivos."
+    },
+    "rationale": "Ratificações 1987-2011 fora janela. Disclaimer judicial. 7 atos = limiar medium-fora=10 nem atinge — mas ainda é FP conceitual (verbo 'nomeação' em contexto retroativo).",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-001."
+  },
+  {
+    "id": "SYN-PES-FP-010",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "ratificacao_retroativa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2024-08-29",
+      "excerpt": "DECRETO Nº 56.890/2024-PCRJ\nRatifica atos de nomeação retroativos, em cumprimento ao Acórdão TCMRJ 2024-098:\nRATIFICAR as nomeações de LEONARDO MARQUES TAVARES (data original: 1985), ISADORA CAMPOS LOPES (1989), RODRIGO PINHEIRO DE SOUSA (1993), AMANDA TEIXEIRA RAMOS (1997), FELIPE BARROS DUARTE (2001), JULIANA MOREIRA NUNES (2005), MARCOS VINICIUS PEREIRA (2009), BEATRIZ HOLANDA COSTA (2012), EDUARDO MARTINS LIMA (2015), CAMILA RIBEIRO ANDRADE (2018) — todos para cargos efetivos. Esta ratificação reconhece atos pretéritos e não constitui novas nomeações."
+    },
+    "rationale": "10 ratificações 1985-2018 em janela 2024 com disclaimer explícito. FiscalPessoal contou como pico.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-001."
+  },
+  {
+    "id": "SYN-PES-FP-011",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "transicao_mandato",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2025-01-02",
+      "excerpt": "DECRETO Nº 1/2025\nO PREFEITO DE CAXIAS DO SUL, em sua primeira posse após eleição municipal de 06/10/2024, no exercício das atribuições privativas, NOMEIA o secretariado e equipe de gabinete:\nNOMEAR ANDRE LUIZ FERREIRA Secretário Municipal de Saúde.\nNOMEAR MARIANA BORGES SCHMIDT Secretária Municipal de Educação.\nNOMEAR RICARDO PERIN VARGAS Secretário Municipal da Fazenda.\nNOMEAR JULIANA TONIOLO MARTINS Secretária Municipal de Obras.\nNOMEAR FERNANDO COSTA AZEVEDO Procurador-Geral do Município.\nNOMEAR PATRICIA WEBER LOPES Chefe de Gabinete.\nNOMEAR CARLOS HENRIQUE PIVA Secretário de Comunicação.\nNOMEAR ANA CRISTINA TROIS Secretária de Cultura."
+    },
+    "rationale": "Posse de prefeito eleito em 01/01/2025 — pico esperado, não anomalia. Transição de mandato após eleição 2024.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Reduzir riskScore drasticamente OU pular detecção quando gazette.date está em janeiro pós-eleição (jan/2025, jan/2029) E excerpt menciona 'primeira posse', 'transição', 'novo prefeito', ou nomeia secretariado completo. Detectar via /em\\s+sua\\s+primeira\\s+posse|in[ií]cio\\s+do\\s+mandato|secret[áa]rio\\s+municipal/i + janeiro de ano pós-eleitoral."
+  },
+  {
+    "id": "SYN-PES-FP-012",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "transicao_mandato",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2025-01-02",
+      "excerpt": "DECRETO Nº 64.567/2025-PMSP\nO PREFEITO DE SÃO PAULO, em início de mandato, considerando a posse ocorrida em 01/01/2025, NOMEIA o primeiro escalão da Administração Municipal:\nROBERTO ALMEIDA SOUZA - Secretário Municipal da Fazenda;\nANA PAULA TANAKA - Secretária Municipal da Educação;\nCARLOS HENRIQUE LIMA - Secretário Municipal da Saúde;\nPATRICIA RAMOS CASTRO - Secretária Municipal da Cultura;\nFERNANDO TEIXEIRA NUNES - Secretário Municipal de Obras;\nLUCAS BARRETO ANDRADE - Procurador-Geral;\nCAMILA RIBEIRO MENDES - Chefe de Gabinete;\nMAURICIO COSTA SANTOS - Secretário Municipal de Mobilidade;\nJULIA FERREIRA LOPES - Secretária Municipal de Habitação;\nEDUARDO MARTINS PEIXOTO - Secretário Municipal de Planejamento;\nBEATRIZ MORAES PINTO - Secretária Municipal de Direitos Humanos;\nTHIAGO PEREIRA SILVA - Secretário Municipal de Comunicação."
+    },
+    "rationale": "Posse de prefeito eleito em SP — primeiro escalão. 12 secretários nomeados é o normal de transição, não anomalia.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-011 (transição de mandato pós-eleição)."
+  },
+  {
+    "id": "SYN-PES-FP-013",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "transicao_mandato",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2025-01-03",
+      "excerpt": "DECRETO Nº 21.999/2025\nO PREFEITO ELEITO DE PORTO ALEGRE, no início do mandato 2025-2028, considerando o art. 75 da Lei Orgânica Municipal, NOMEIA o secretariado:\nTHIAGO RAMOS NETTO - Secretário da Fazenda; MARIA EDUARDA HENZ - Secretária da Saúde; BRUNO LACERDA OLIVEIRA - Secretário da Educação; CAMILA SCHILLING DUARTE - Secretária de Mobilidade; RAFAEL MOSCHEN GOMES - Secretário de Obras; LETICIA AVELAR DA ROSA - Secretária de Cultura; GUSTAVO MENDES BARBOSA - Procurador-Geral; FERNANDA TROIS PEREIRA - Chefe de Gabinete; DIEGO BENVENUTI MACHADO - Secretário de Planejamento; JULIA POLIDORO RAUPP - Secretária de Comunicação; MARCELO TROIS WEBER - Secretário de Desenvolvimento Econômico."
+    },
+    "rationale": "Posse Porto Alegre 2025. Transição de mandato.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-011."
+  },
+  {
+    "id": "SYN-PES-FP-014",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "transicao_mandato",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2025-01-05",
+      "excerpt": "DECRETO Nº 14.001/2025\nO PREFEITO RECÉM-EMPOSSADO DE FORTALEZA, no exercício de suas atribuições, NOMEIA secretariado para o mandato 2025-2028:\nLUIZ FERNANDO CARVALHO - Secretário Municipal da Saúde.\nJOSE ROBERTO TAVARES - Secretário Municipal da Educação.\nPATRICIA AGUIAR LIMA - Secretária Municipal da Fazenda.\nHENRIQUE BARROSO MOTA - Secretário Municipal de Obras.\nLARA MENDES VASCONCELOS - Secretária Municipal de Cultura.\nANTONIO CARLOS PINHEIRO - Procurador-Geral.\nFATIMA QUEIROZ ALMEIDA - Chefe de Gabinete.\nMARCOS VIEIRA SOARES - Secretário de Planejamento.\nELAINE BRITO MAGALHAES - Secretária de Comunicação.\nDIOGO CASTELO BRANCO - Secretário de Desenvolvimento.\nRAQUEL HOLANDA SOUSA - Secretária de Mobilidade.\nJULIO CARDOSO PIRES - Secretário de Direitos Humanos."
+    },
+    "rationale": "Posse Fortaleza 2025. Pico esperado em transição.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-011."
+  },
+  {
+    "id": "SYN-PES-FP-015",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "transicao_mandato",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2025-01-02",
+      "excerpt": "DECRETO Nº 3.001/2025\nA PREFEITA ELEITA DE CURITIBA, considerando posse realizada em 01/01/2025, NOMEIA o primeiro escalão:\nLUCIANO FERREIRA NETO - Secretário Municipal da Fazenda.\nRENATA CARDOSO BOSCHI - Secretária Municipal da Educação.\nMARCELO PADILHA SCHMITT - Secretário Municipal da Saúde.\nALINE BENTO PIRES - Secretária Municipal de Cultura.\nFELIPE TOMAZ ANDRADE - Secretário Municipal de Obras.\nGIOVANA AMARAL CRUZ - Procuradora-Geral.\nRICARDO MENEZES VIANA - Chefe de Gabinete.\nKAROLINA DUARTE LIMA - Secretária de Mobilidade.\nBRUNO MORAES TAVARES - Secretário de Planejamento.\nNATHALIA RIBAS COUTO - Secretária de Comunicação.\nO presente decreto vigora a partir desta data, marcando o início do mandato 2025-2028."
+    },
+    "rationale": "Posse Curitiba. Transição de mandato.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-011."
+  },
+  {
+    "id": "SYN-PES-FP-016",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "transicao_mandato",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2029-01-02",
+      "excerpt": "DECRETO Nº 1/2029-GDF\nO GOVERNADOR DO DISTRITO FEDERAL, em início de mandato, NOMEIA o primeiro escalão executivo:\nLUCIANA AFONSO BARROS - Secretária da Fazenda; FERNANDO ARAUJO PRADO - Secretário da Educação; JULIA MEDEIROS COSTA - Secretária da Saúde; ANDRE FONSECA GUIMARAES - Secretário de Obras; BEATRIZ NUNES DUARTE - Secretária de Cultura; RAFAEL CASTRO ANDRADE - Procurador-Geral; CAMILA RAMOS PIRES - Chefe de Gabinete; GUSTAVO LIMA TAVARES - Secretário de Mobilidade; NATHALIA OLIVEIRA SOUZA - Secretária de Comunicação; BRUNO HENRIQUE MARTINS - Secretário de Planejamento.\nO mandato compreende o quadriênio 2029-2032."
+    },
+    "rationale": "Brasília jan/2029 — transição mandato pós-eleição 2028.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-011 — generalizar para janeiro pós-eleição (2025, 2029, 2033...)."
+  },
+  {
+    "id": "SYN-PES-FP-017",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "transicao_mandato",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2025-01-04",
+      "excerpt": "DECRETO Nº 56.001/2025-PCRJ\nO PREFEITO ELEITO DO RIO DE JANEIRO, considerando o início do mandato em 01/01/2025, e atendendo o art. 107 da Lei Orgânica do Município, NOMEIA o secretariado e os subsecretários do primeiro escalão:\nLEONARDO MARQUES TAVARES, ISADORA CAMPOS LOPES, RODRIGO PINHEIRO DE SOUSA, AMANDA TEIXEIRA RAMOS, FELIPE BARROS DUARTE, JULIANA MOREIRA NUNES, MARCOS VINICIUS PEREIRA, BEATRIZ HOLANDA COSTA, EDUARDO MARTINS LIMA, CAMILA RIBEIRO ANDRADE, ROBERTO MELO TAVARES, CRISTINA OLIVEIRA NUNES, ANTONIO LACERDA COSTA, MARIA EDUARDA TEIXEIRA, FELIPE COUTO RAMOS, BIANCA PEREIRA SOUZA — Secretários Municipais e Subsecretários, conforme respectivos atos de designação."
+    },
+    "rationale": "Rio jan/2025. Transição.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-011."
+  },
+  {
+    "id": "SYN-PES-FP-018",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "transicao_mandato",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4205407",
+      "cityName": "Florianópolis",
+      "date": "2025-01-08",
+      "excerpt": "DECRETO Nº 1/2025-PMF\nO PREFEITO ELEITO DE FLORIANÓPOLIS, no exercício do mandato 2025-2028, NOMEIA:\nPEDRO HENRIQUE COELHO - Secretário Municipal da Fazenda.\nANA LUIZA REBELO - Secretária Municipal de Turismo.\nDANIEL VARGAS PIRES - Secretário Municipal de Pesca e Maricultura.\nMARINA SOUSA CAMPOS - Secretária Municipal de Cultura.\nRAFAEL MORAIS PEREIRA - Secretário Municipal de Mobilidade.\nCAMILA OLIVEIRA RAMOS - Procuradora-Geral.\nBRUNO BENTO NUNES - Chefe de Gabinete."
+    },
+    "rationale": "Floripa jan/2025. Posse de novo mandato.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-011."
+  },
+  {
+    "id": "SYN-PES-FP-019",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "transicao_mandato",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2029-01-03",
+      "excerpt": "DECRETO Nº 30.001/2029\nO PREFEITO ELEITO DO RECIFE, em início do mandato 2029-2032, considerando o disposto na Lei Orgânica do Município de Recife, NOMEIA o secretariado:\nJOAO PAULO BARBOSA - Secretário da Fazenda; MARIA CLARA MELO - Secretária da Saúde; RICARDO TENORIO LINS - Secretário da Educação; AMANDA CAVALCANTI BRAGA - Secretária de Cultura; FELIPE LACERDA SOUSA - Secretário de Obras; NATHALIA FREITAS GOMES - Procuradora-Geral; BRUNO DUARTE COIMBRA - Chefe de Gabinete; RAFAELA MOTA SANTOS - Secretária de Mobilidade; GUILHERME MARANHAO PIRES - Secretário de Planejamento; LARISSA PESSOA COSTA - Secretária de Comunicação."
+    },
+    "rationale": "Recife jan/2029. Transição.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-011."
+  },
+  {
+    "id": "SYN-PES-FP-020",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "transicao_mandato",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2029-01-02",
+      "excerpt": "DECRETO Nº 70.001/2029-PMSP\nA PREFEITA ELEITA DE SÃO PAULO, em início de mandato (2029-2032), NOMEIA secretariado e equipe de gabinete:\nROBERTO ALMEIDA SOUZA - Secretário da Fazenda; ANA PAULA TANAKA - Secretária da Educação; CARLOS HENRIQUE LIMA - Secretário da Saúde; PATRICIA RAMOS CASTRO - Secretária da Cultura; FERNANDO TEIXEIRA NUNES - Secretário de Obras; LUCAS BARRETO ANDRADE - Procurador-Geral; CAMILA RIBEIRO MENDES - Chefe de Gabinete; MAURICIO COSTA SANTOS - Secretário de Mobilidade; JULIA FERREIRA LOPES - Secretária de Habitação; EDUARDO MARTINS PEIXOTO - Secretário de Planejamento; BEATRIZ MORAES PINTO - Secretária de Direitos Humanos; THIAGO PEREIRA SILVA - Secretário de Comunicação."
+    },
+    "rationale": "SP jan/2029. Transição.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-011."
+  },
+  {
+    "id": "SYN-PES-FP-021",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "lei_complementar_quadro",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2024-08-08",
+      "excerpt": "LEI COMPLEMENTAR Nº 678/2024\nDispõe sobre a reestruturação do quadro de cargos em comissão e funções gratificadas da Administração Pública Municipal de Caxias do Sul.\nArt. 1º Ficam criados, no Quadro de Cargos em Comissão da Prefeitura, os seguintes cargos:\nI - 5 (cinco) cargos de Diretor de Departamento, símbolo CC-3;\nII - 8 (oito) cargos de Coordenador de Setor, símbolo CC-4;\nIII - 12 (doze) cargos de Assessor Técnico, símbolo CC-5;\nIV - 6 (seis) cargos de Chefe de Divisão, símbolo CC-4.\nArt. 2º A nomeação para os cargos criados se dará por ato próprio, a critério do Poder Executivo, observados os requisitos legais.\nArt. 3º Esta Lei entra em vigor na data de sua publicação."
+    },
+    "rationale": "Lei Complementar criando quadro de cargos — não nomeia indivíduos. Verbo 'nomeação' aparece mas em sentido normativo abstrato. FiscalPessoal contou como pico.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir excerpts cuja headline é 'LEI COMPLEMENTAR' ou 'LEI Nº' onde o texto cria cargos abstratos (sem nome próprio individual). Detectar via /LEI\\s+COMPLEMENTAR|LEI\\s+ORDIN[ÁA]RIA|PROJETO\\s+DE\\s+LEI/ + ausência de nomes próprios em conjunção com 'nomeação/nomear'."
+  },
+  {
+    "id": "SYN-PES-FP-022",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "lei_complementar_quadro",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2024-09-19",
+      "excerpt": "LEI COMPLEMENTAR Nº 1.890/2024-PMSP\nDispõe sobre a criação de cargos em comissão na estrutura da Secretaria Municipal de Inovação e Tecnologia.\nArt. 1º Ficam criados 24 cargos em comissão, distribuídos da seguinte forma:\n- 4 cargos de Diretor de Tecnologia, símbolo DAS-3;\n- 8 cargos de Coordenador de Projetos Digitais, símbolo DAS-4;\n- 12 cargos de Analista Sênior, símbolo DAS-5.\nArt. 2º A nomeação aos cargos ora criados se dará oportunamente por decreto do Chefe do Poder Executivo, mediante indicação do Secretário titular.\nArt. 3º Esta Lei Complementar entra em vigor 30 dias após publicação."
+    },
+    "rationale": "LC criando cargos abstratos. Sem nomeação individual real.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-021."
+  },
+  {
+    "id": "SYN-PES-FP-023",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "lei_complementar_quadro",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-08-22",
+      "excerpt": "LEI COMPLEMENTAR Nº 945/2026\nDispõe sobre a reorganização do quadro funcional da Prefeitura Municipal de Porto Alegre.\nArt. 5º Ficam criadas 18 (dezoito) Funções Gratificadas — FG-2 e 14 (quatorze) cargos em comissão CC-3, distribuídos entre as Secretarias listadas no Anexo I.\nArt. 7º A nomeação ou designação para as funções criadas se fará por ato administrativo posterior, a critério do Chefe do Executivo, conforme conveniência e oportunidade do serviço público.\nArt. 12 As atribuições, símbolos e jornadas dos cargos seguem o disposto no Anexo II.\nArt. 18 Esta Lei Complementar entra em vigor na data de sua publicação."
+    },
+    "rationale": "LC reorganizando quadro. Cita 'nomeação' em sentido normativo.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-021."
+  },
+  {
+    "id": "SYN-PES-FP-024",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "lei_complementar_quadro",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-09-15",
+      "excerpt": "LEI COMPLEMENTAR Nº 234/2026-PMC\nReestrutura o Quadro de Pessoal Comissionado da Administração Direta.\nArt. 3º Ficam criados, suprimidos e reclassificados cargos em comissão conforme Anexo Único:\nI - criação de 22 cargos de Coordenador (CC-3);\nII - criação de 10 cargos de Diretor (CC-2);\nIII - supressão de 5 cargos de Assessor obsoletos.\nArt. 6º A nomeação dos servidores aos cargos criados será efetivada por ato do Prefeito Municipal, observada a Lei nº 14.133/2021 quando aplicável.\nArt. 9º A vigência inicia em 60 dias."
+    },
+    "rationale": "LC reestruturação. FP padrão.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-021."
+  },
+  {
+    "id": "SYN-PES-FP-025",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "lei_complementar_quadro",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2024-08-20",
+      "excerpt": "LEI Nº 11.234/2024-PMF\nAutoriza a criação de 30 cargos em comissão na Secretaria Municipal da Saúde para atendimento ao Plano Municipal de Atenção Primária.\nArt. 1º Ficam criados 30 (trinta) cargos em comissão, sendo: 10 Coordenadores de Unidade Básica de Saúde, 15 Chefes de Equipe e 5 Diretores de Distrito Sanitário.\nArt. 2º A nomeação para os cargos criados ocorrerá após regulamentação por decreto do Poder Executivo.\nArt. 3º As despesas correrão pela rubrica 10.301.0001 do orçamento vigente."
+    },
+    "rationale": "Lei criando 30 cargos abstratos.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-021."
+  },
+  {
+    "id": "SYN-PES-FP-026",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "lei_complementar_quadro",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2024-09-05",
+      "excerpt": "LEI COMPLEMENTAR Nº 1.045/2024-DF\nReestrutura o quadro de cargos em comissão e funções de confiança do Poder Executivo do Distrito Federal.\nArt. 4º Ficam criados, no quadro de pessoal: 50 cargos de Assessor Especial; 35 cargos de Coordenador-Geral; 20 cargos de Diretor de Departamento; 15 cargos de Subsecretário Adjunto.\nArt. 7º A nomeação para o cargo de Subsecretário Adjunto exige escolaridade superior e experiência mínima de 5 anos.\nArt. 10 As nomeações para os demais cargos seguirão critérios de conveniência da Administração."
+    },
+    "rationale": "LC criando 120 cargos abstratos. Verbo 'nomeação' em sentido normativo.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-021."
+  },
+  {
+    "id": "SYN-PES-FP-027",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "lei_complementar_quadro",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-09-25",
+      "excerpt": "LEI COMPLEMENTAR Nº 789/2026-PCRJ\nDispõe sobre a criação de cargos em comissão para implantação do Programa Cidade Inteligente.\nArt. 2º Ficam criados, na estrutura da Secretaria Municipal de Tecnologia da Informação, 18 cargos em comissão de Coordenador, 12 cargos de Diretor e 25 cargos de Assessor Técnico, para os fins definidos nesta Lei.\nArt. 5º Os cargos serão providos mediante nomeação por ato do Chefe do Executivo.\nArt. 9º A vigência inicia 30 dias após publicação."
+    },
+    "rationale": "LC RJ criando cargos. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-021."
+  },
+  {
+    "id": "SYN-PES-FP-028",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "lei_complementar_quadro",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-08-30",
+      "excerpt": "LEI COMPLEMENTAR Nº 456/2026\nReorganiza o quadro de cargos em comissão e funções gratificadas da Prefeitura do Recife.\nArt. 1º Ficam criados 8 cargos de Diretor (CC-1), 14 cargos de Coordenador (CC-3) e 22 funções gratificadas FG-2.\nArt. 4º A nomeação para os cargos em comissão criados nesta Lei é prerrogativa do Prefeito.\nArt. 7º A designação para as FG é feita por ato do Secretário titular.\nArt. 10 Esta Lei vigora em 30 dias."
+    },
+    "rationale": "LC Recife. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-021."
+  },
+  {
+    "id": "SYN-PES-FP-029",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "tornar_sem_efeito_massa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2024-08-15",
+      "excerpt": "PORTARIA Nº 1.456/2024\nO PREFEITO MUNICIPAL DE CAXIAS DO SUL, considerando a não posse dos candidatos abaixo dentro do prazo de 30 dias previsto na Lei Complementar nº 3/1991,\nRESOLVE:\nArt. 1º Tornar sem efeito a nomeação de ANDRE LUIZ FERREIRA, publicada na Edição nº 8.234 de 12/06/2024.\nArt. 2º Tornar sem efeito a nomeação de MARIANA BORGES SCHMIDT, publicada na mesma edição.\nArt. 3º Tornar sem efeito a nomeação de RICARDO PERIN VARGAS.\nArt. 4º Tornar sem efeito a nomeação de JULIANA TONIOLO MARTINS.\nArt. 5º Tornar sem efeito a nomeação de FERNANDO COSTA AZEVEDO.\nArt. 6º Tornar sem efeito a nomeação de PATRICIA WEBER LOPES.\nArt. 7º Esta Portaria entra em vigor na data de sua publicação."
+    },
+    "rationale": "Revogação por não posse — não é nomeação ativa. Verbo 'nomeação' aparece mas em contexto de tornar sem efeito.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir excerpts onde 'tornar sem efeito' precede 'nomeação'. Detectar via /tornar\\s+sem\\s+efeito.*?nomea[çc][ãa]o/is — pattern já cobre múltiplos artigos do mesmo decreto."
+  },
+  {
+    "id": "SYN-PES-FP-030",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "tornar_sem_efeito_massa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2024-09-10",
+      "excerpt": "PORTARIA Nº 7.890/2024-PMSP\nA SECRETÁRIA MUNICIPAL DE GESTÃO, considerando a ausência de apresentação de documentos comprobatórios e a perda de prazo para posse, RESOLVE TORNAR SEM EFEITO as nomeações abaixo, publicadas no DOC nº 12.345 de 22/05/2024:\n- ROBERTO ALMEIDA SOUZA, cargo de Auditor Fiscal Municipal;\n- ANA PAULA TANAKA, cargo de Procurador;\n- CARLOS HENRIQUE LIMA, cargo de Auditor Fiscal Municipal;\n- PATRICIA RAMOS CASTRO, cargo de Procurador;\n- FERNANDO TEIXEIRA NUNES, cargo de Auditor;\n- LUCAS BARRETO ANDRADE, cargo de Auditor;\n- CAMILA RIBEIRO MENDES, cargo de Procurador;\n- MAURICIO COSTA SANTOS, cargo de Auditor.\nFica restabelecida a vacância das vagas correspondentes."
+    },
+    "rationale": "Revogação massiva. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-029."
+  },
+  {
+    "id": "SYN-PES-FP-031",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "tornar_sem_efeito_massa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-09-08",
+      "excerpt": "PORTARIA Nº 3.456/2026\nO PREFEITO DE PORTO ALEGRE, considerando o não atendimento aos requisitos da Lei Complementar nº 133/85 (Estatuto), notadamente a apresentação de exames médicos no prazo legal, RESOLVE:\nTornar sem efeito a nomeação de THIAGO RAMOS NETTO ao cargo de Procurador Municipal.\nTornar sem efeito a nomeação de MARIA EDUARDA HENZ ao cargo de Auditor Fiscal.\nTornar sem efeito a nomeação de BRUNO LACERDA OLIVEIRA ao cargo de Procurador.\nTornar sem efeito a nomeação de CAMILA SCHILLING DUARTE ao cargo de Auditor Fiscal.\nTornar sem efeito a nomeação de RAFAEL MOSCHEN GOMES ao cargo de Procurador.\nTornar sem efeito a nomeação de LETICIA AVELAR DA ROSA ao cargo de Auditor.\nTornar sem efeito a nomeação de GUSTAVO MENDES BARBOSA ao cargo de Auditor."
+    },
+    "rationale": "Revogação POA por não atendimento de requisitos. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-029."
+  },
+  {
+    "id": "SYN-PES-FP-032",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "tornar_sem_efeito_massa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2024-08-28",
+      "excerpt": "DECRETO Nº 14.789/2024\nO PREFEITO DE FORTALEZA, em razão de revisão administrativa do concurso público nº 002/2023, e considerando o disposto no Art. 14, §1º, da Lei Municipal nº 9.169/2007, RESOLVE TORNAR SEM EFEITO os atos de nomeação abaixo:\n- LUIZ FERNANDO CARVALHO\n- JOSE ROBERTO TAVARES\n- PATRICIA AGUIAR LIMA\n- HENRIQUE BARROSO MOTA\n- LARA MENDES VASCONCELOS\n- ANTONIO CARLOS PINHEIRO\n- FATIMA QUEIROZ ALMEIDA\nOs candidatos retornam à lista de classificados."
+    },
+    "rationale": "Revogação Fortaleza por revisão administrativa. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-029."
+  },
+  {
+    "id": "SYN-PES-FP-033",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "tornar_sem_efeito_massa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2024-09-22",
+      "excerpt": "PORTARIA Nº 2.345/2024\nA PREFEITA DE CURITIBA, em vista da não comprovação dos requisitos previstos no edital do concurso público nº 14/2023 dentro do prazo de 30 dias da convocação, RESOLVE TORNAR SEM EFEITO os atos de nomeação:\n- LUCIANO FERREIRA NETO (Procurador)\n- RENATA CARDOSO BOSCHI (Procuradora)\n- MARCELO PADILHA SCHMITT (Auditor Fiscal)\n- ALINE BENTO PIRES (Auditora Fiscal)\n- FELIPE TOMAZ ANDRADE (Procurador)\n- GIOVANA AMARAL CRUZ (Auditora)\n- RICARDO MENEZES VIANA (Procurador)\n- KAROLINA DUARTE LIMA (Auditora)"
+    },
+    "rationale": "Revogação Curitiba. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-029."
+  },
+  {
+    "id": "SYN-PES-FP-034",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "tornar_sem_efeito_massa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-08-25",
+      "excerpt": "DECRETO Nº 32.345/2026\nO PREFEITO DO RECIFE TORNA SEM EFEITO os seguintes atos de nomeação, em razão da inércia dos nomeados em assumir o cargo dentro do prazo legal:\nJOAO PAULO BARBOSA, MARIA CLARA MELO, RICARDO TENORIO LINS, AMANDA CAVALCANTI BRAGA, FELIPE LACERDA SOUSA, NATHALIA FREITAS GOMES, BRUNO DUARTE COIMBRA, RAFAELA MOTA SANTOS — todos publicados originalmente na edição nº 4.567 de 12/06/2026."
+    },
+    "rationale": "Revogação Recife. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-029."
+  },
+  {
+    "id": "SYN-PES-FP-035",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "tornar_sem_efeito_massa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2024-09-12",
+      "excerpt": "DECRETO Nº 43.890/2024-GDF\nO GOVERNADOR DO DISTRITO FEDERAL, considerando a não apresentação dos documentos exigidos no edital do concurso de Auditor Fiscal/2022, TORNA SEM EFEITO os atos de nomeação publicados originalmente em maio/2024:\n- LUCIANA AFONSO BARROS\n- FERNANDO ARAUJO PRADO\n- JULIA MEDEIROS COSTA\n- ANDRE FONSECA GUIMARAES\n- BEATRIZ NUNES DUARTE\n- RAFAEL CASTRO ANDRADE\n- CAMILA RAMOS PIRES\n- GUSTAVO LIMA TAVARES\n- NATHALIA OLIVEIRA SOUZA\nFicam restabelecidas as vagas correspondentes."
+    },
+    "rationale": "Revogação DF.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-029."
+  },
+  {
+    "id": "SYN-PES-FP-036",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "tornar_sem_efeito_massa",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2024-09-18",
+      "excerpt": "DECRETO Nº 56.234/2024-PCRJ\nO PREFEITO DO RIO DE JANEIRO, em razão de descumprimento do art. 11 do edital do concurso CRC-2023, TORNA SEM EFEITO os atos de nomeação dos candidatos abaixo:\n- LEONARDO MARQUES TAVARES (Auditor Fiscal)\n- ISADORA CAMPOS LOPES (Procuradora)\n- RODRIGO PINHEIRO DE SOUSA (Auditor)\n- AMANDA TEIXEIRA RAMOS (Procuradora)\n- FELIPE BARROS DUARTE (Auditor Fiscal)\n- JULIANA MOREIRA NUNES (Procuradora)\nA vacância das vagas resta restabelecida a partir desta data."
+    },
+    "rationale": "Revogação Rio. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-029."
+  },
+  {
+    "id": "SYN-PES-FP-037",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fg_gip",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2024-09-05",
+      "excerpt": "PORTARIA Nº 1.789/2024\nO SECRETÁRIO MUNICIPAL DA SAÚDE, no uso de suas atribuições, RESOLVE:\nArt. 1º DESIGNAR ANDRE LUIZ FERREIRA, matrícula 12.345-6, servidor efetivo, para exercer Função Gratificada FG-3 de Coordenador da Atenção Primária.\nArt. 2º DESIGNAR MARIANA BORGES SCHMIDT, matrícula 23.456-7, servidora efetiva, para FG-3 de Coordenadora de Vigilância em Saúde.\nArt. 3º DESIGNAR RICARDO PERIN VARGAS, matrícula 34.567-8, para FG-2 de Chefe de Unidade Básica.\nArt. 4º DESIGNAR JULIANA TONIOLO MARTINS para FG-2 de Chefe de Equipe de Enfermagem.\nArt. 5º DESIGNAR FERNANDO COSTA AZEVEDO para Gratificação por Incumbência Provisória (GIP) na Auditoria do SUS.\nArt. 6º DESIGNAR PATRICIA WEBER LOPES para GIP de Apoio Técnico ao Conselho Municipal de Saúde."
+    },
+    "rationale": "Designação para FG e GIP — funções TÉCNICAS internas, não cargos comissionados políticos. FG/GIP só pode ser ocupada por servidor efetivo. CF Art. 37, V se aplica APENAS a comissão política, não a função interna.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir excerpts onde 'designar' está conjugado com 'FG-X' (Função Gratificada), 'GIP' (Gratificação por Incumbência Provisória), 'CDS' (Cargo de Direção e Supervisão técnica) ou similares — funções técnicas internas restritas a efetivos. Detectar /(?:designar|designa[çc][ãa]o)\\b.*?\\b(FG-?\\d|GIP|FCE|CDS|fun[çc][ãa]o\\s+gratificada)\\b/i."
+  },
+  {
+    "id": "SYN-PES-FP-038",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fg_gip",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2024-09-12",
+      "excerpt": "PORTARIA Nº 8.901/2024-SMS\nA SECRETÁRIA MUNICIPAL DA SAÚDE DESIGNA servidores efetivos para exercício de Função Gratificada FG-2 (Apoio Técnico):\nROBERTO ALMEIDA SOUZA - matrícula 9.876.543-1\nANA PAULA TANAKA - matrícula 9.876.544-2\nCARLOS HENRIQUE LIMA - matrícula 9.876.545-3\nPATRICIA RAMOS CASTRO - matrícula 9.876.546-4\nFERNANDO TEIXEIRA NUNES - matrícula 9.876.547-5\nLUCAS BARRETO ANDRADE - matrícula 9.876.548-6\nCAMILA RIBEIRO MENDES - matrícula 9.876.549-7\nMAURICIO COSTA SANTOS - matrícula 9.876.550-8\nA FG-2 corresponde ao percentual previsto na Lei Municipal 13.652/2003. Funções privativas de servidor efetivo."
+    },
+    "rationale": "Designação FG-2 SMS-SP. Servidores efetivos. FP padrão.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-037."
+  },
+  {
+    "id": "SYN-PES-FP-039",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fg_gip",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-09-12",
+      "excerpt": "PORTARIA Nº 4.123/2026\nA SECRETÁRIA MUNICIPAL DE EDUCAÇÃO, considerando a Lei Complementar nº 133/85 (Estatuto dos Servidores) e o art. 78 da LC 478/2002, DESIGNA servidores efetivos para Função Gratificada de Direção FG-1 e FG-2 nas Unidades Escolares:\nTHIAGO RAMOS NETTO (FG-1, Diretor da EMEF X), MARIA EDUARDA HENZ (FG-1, Diretora da EMEI Y), BRUNO LACERDA OLIVEIRA (FG-2, Vice-Diretor), CAMILA SCHILLING DUARTE (FG-2, Coordenadora Pedagógica), RAFAEL MOSCHEN GOMES (FG-1, Diretor de CMEI), LETICIA AVELAR DA ROSA (FG-2, Vice-Diretora), GUSTAVO MENDES BARBOSA (FG-2, Supervisor Pedagógico)."
+    },
+    "rationale": "FG escolas POA. Diretor/vice-diretor de escola via FG (eletivo entre efetivos). FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-037."
+  },
+  {
+    "id": "SYN-PES-FP-040",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fg_gip",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2024-09-15",
+      "excerpt": "PORTARIA Nº 2.567/2024-SME\nA SECRETÁRIA MUNICIPAL DA EDUCAÇÃO DE CURITIBA DESIGNA servidores efetivos para FCE-3 (Função Comissionada de Educação):\nLUCIANO FERREIRA NETO, RENATA CARDOSO BOSCHI, MARCELO PADILHA SCHMITT, ALINE BENTO PIRES, FELIPE TOMAZ ANDRADE, GIOVANA AMARAL CRUZ — todos para Coordenação Pedagógica de unidades escolares municipais.\nA FCE é privativa de professor efetivo do quadro próprio do magistério, conforme Lei Municipal nº 14.580/2014."
+    },
+    "rationale": "FCE-3 Curitiba. Coordenação pedagógica entre efetivos.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-037."
+  },
+  {
+    "id": "SYN-PES-FP-041",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fg_gip",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2026-09-08",
+      "excerpt": "PORTARIA Nº 4.789/2026-SMS-FOR\nO SECRETÁRIO MUNICIPAL DA SAÚDE DE FORTALEZA, com base na Lei Complementar nº 158/2013, DESIGNA os seguintes servidores efetivos para Função Gratificada FG-S Saúde:\nLUIZ FERNANDO CARVALHO, JOSE ROBERTO TAVARES, PATRICIA AGUIAR LIMA, HENRIQUE BARROSO MOTA, LARA MENDES VASCONCELOS, ANTONIO CARLOS PINHEIRO, FATIMA QUEIROZ ALMEIDA — para Chefias de Unidade Básica de Saúde.\nA designação está restrita a servidores ocupantes do quadro permanente."
+    },
+    "rationale": "FG-S Saúde Fortaleza para chefias de UBS. Servidores efetivos.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-037."
+  },
+  {
+    "id": "SYN-PES-FP-042",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fg_gip",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2024-08-26",
+      "excerpt": "PORTARIA Nº 1.345/2024-SAS-PCR\nA SECRETÁRIA DE ASSISTÊNCIA SOCIAL DO RECIFE DESIGNA, na forma do art. 12 da Lei Municipal nº 16.589/2001:\nJOAO PAULO BARBOSA - GIP-2 (Coordenação CRAS Boa Viagem)\nMARIA CLARA MELO - GIP-2 (Coordenação CRAS Casa Amarela)\nRICARDO TENORIO LINS - GIP-2 (Coordenação CREAS Centro)\nAMANDA CAVALCANTI BRAGA - GIP-3 (Apoio Técnico SUAS)\nFELIPE LACERDA SOUSA - GIP-3 (Apoio Técnico SUAS)\nNATHALIA FREITAS GOMES - GIP-2 (Coordenação CRAS Várzea).\nGIPs são privativas de servidores estatutários do SUAS Municipal."
+    },
+    "rationale": "GIP SUAS Recife. Privativa de efetivos. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-037."
+  },
+  {
+    "id": "SYN-PES-FP-043",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fg_gip",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2024-09-04",
+      "excerpt": "PORTARIA Nº 5.678/2024-SES-DF\nO SECRETÁRIO DE ESTADO DE SAÚDE DO DF DESIGNA servidores efetivos do quadro próprio para exercício de Cargo de Direção e Supervisão (CDS-1) e Função Comissionada Especial (FCE-7):\nLUCIANA AFONSO BARROS, FERNANDO ARAUJO PRADO, JULIA MEDEIROS COSTA, ANDRE FONSECA GUIMARAES, BEATRIZ NUNES DUARTE, RAFAEL CASTRO ANDRADE, CAMILA RAMOS PIRES, GUSTAVO LIMA TAVARES — Diretores de Unidades Hospitalares e Coordenadores Regionais.\nCargos exclusivos de servidor efetivo conforme Lei Distrital nº 4.794/2012."
+    },
+    "rationale": "CDS/FCE DF saúde — efetivos. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-037."
+  },
+  {
+    "id": "SYN-PES-FP-044",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fg_gip",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-08-18",
+      "excerpt": "PORTARIA Nº 2.345/2026-SMS-RJ\nA SUBSECRETÁRIA-EXECUTIVA DA SECRETARIA MUNICIPAL DE SAÚDE DESIGNA servidores efetivos da carreira do SUS Municipal para Função Gratificada FG-1, FG-2 e GIP nas Unidades de Pronto Atendimento e Clínicas da Família:\nLEONARDO MARQUES TAVARES (FG-1, Direção UPA Acari), ISADORA CAMPOS LOPES (FG-1, Direção CF Madureira), RODRIGO PINHEIRO DE SOUSA (FG-2, Coordenação Médica), AMANDA TEIXEIRA RAMOS (GIP, Apoio Técnico), FELIPE BARROS DUARTE (FG-2, Coordenação de Enfermagem), JULIANA MOREIRA NUNES (FG-1, Direção UPA Penha), MARCOS VINICIUS PEREIRA (GIP, Vigilância Epidemiológica)."
+    },
+    "rationale": "FG/GIP SMS Rio. Efetivos da carreira do SUS. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-037."
+  },
+  {
+    "id": "SYN-PES-FP-045",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "concurso_publico_regular",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2024-08-30",
+      "excerpt": "EDITAL DE NOMEAÇÃO Nº 12/2024 - CONCURSO PÚBLICO Nº 001/2022\nO PREFEITO MUNICIPAL DE CAXIAS DO SUL, em decorrência do resultado homologado do Concurso Público nº 001/2022 (Edital de Abertura DOM nº 5.456 de 14/03/2022), CONVOCA E NOMEIA os candidatos aprovados para os cargos efetivos abaixo, observada a ordem de classificação:\nArt. 1º NOMEAR ANDRE LUIZ FERREIRA, classificação 1º, para o cargo efetivo de Médico Clínico Geral.\nArt. 2º NOMEAR MARIANA BORGES SCHMIDT, classificação 1º, para Enfermeira.\nArt. 3º NOMEAR RICARDO PERIN VARGAS, classificação 2º, para Médico.\nArt. 4º NOMEAR JULIANA TONIOLO MARTINS, classificação 1º, para Fisioterapeuta.\nArt. 5º NOMEAR FERNANDO COSTA AZEVEDO, classificação 3º, para Enfermeiro.\nArt. 6º NOMEAR PATRICIA WEBER LOPES, classificação 1º, para Assistente Social.\nArt. 7º Os candidatos têm prazo de 30 dias para apresentar documentos."
+    },
+    "rationale": "Concurso público regular — nomeações de aprovados em cargos EFETIVOS (não comissão). Lei 9.504/97 Art. 73 V não se aplica a cargo efetivo. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir excerpts onde excerpt cita 'CONCURSO PÚBLICO Nº', 'classificação', 'cargo efetivo', 'aprovado em concurso' — Lei 9.504/97 Art. 73 V não se aplica a nomeação de aprovado em concurso. Detectar via /concurso\\s+p[úu]blico\\s+n[º°]?\\s*\\d+|cargo\\s+efetivo|aprovados?\\s+em\\s+concurso/i."
+  },
+  {
+    "id": "SYN-PES-FP-046",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "concurso_publico_regular",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2024-09-15",
+      "excerpt": "PORTARIA Nº 9.876/2024-SF/PMSP\nA SECRETÁRIA MUNICIPAL DA FAZENDA DE SÃO PAULO, em cumprimento ao resultado final homologado do Concurso Público nº 015/2023 (DOC 14/02/2023) para o cargo de Auditor Fiscal Tributário Municipal, NOMEIA, OBSERVADA A ORDEM DE CLASSIFICAÇÃO:\n- ROBERTO ALMEIDA SOUZA (1º colocado)\n- ANA PAULA TANAKA (2º colocado)\n- CARLOS HENRIQUE LIMA (3º colocado)\n- PATRICIA RAMOS CASTRO (4º colocado)\n- FERNANDO TEIXEIRA NUNES (5º colocado)\n- LUCAS BARRETO ANDRADE (6º colocado)\n- CAMILA RIBEIRO MENDES (7º colocado)\n- MAURICIO COSTA SANTOS (8º colocado)\n- JULIA FERREIRA LOPES (9º colocado)\n- EDUARDO MARTINS PEIXOTO (10º colocado)\nAptos para posse no cargo efetivo."
+    },
+    "rationale": "Concurso AFTM SP. 10 nomeações de aprovados. Cargo efetivo. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-045."
+  },
+  {
+    "id": "SYN-PES-FP-047",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "concurso_publico_regular",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-09-22",
+      "excerpt": "EDITAL DE NOMEAÇÃO Nº 04/2026\nO PREFEITO DE PORTO ALEGRE NOMEIA, decorrente do Concurso Público Nº 003/2024 — Carreira de Procurador Municipal, observada a ordem classificatória final homologada em 12/05/2026:\nTHIAGO RAMOS NETTO (1º), MARIA EDUARDA HENZ (2º), BRUNO LACERDA OLIVEIRA (3º), CAMILA SCHILLING DUARTE (4º), RAFAEL MOSCHEN GOMES (5º), LETICIA AVELAR DA ROSA (6º), GUSTAVO MENDES BARBOSA (7º), FERNANDA TROIS PEREIRA (8º), DIEGO BENVENUTI MACHADO (9º), JULIA POLIDORO RAUPP (10º), MARCELO TROIS WEBER (11º).\nCargo efetivo, classe inicial. Posse no prazo de 30 dias."
+    },
+    "rationale": "Concurso Procurador POA. 11 efetivos. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-045."
+  },
+  {
+    "id": "SYN-PES-FP-048",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "concurso_publico_regular",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2024-09-23",
+      "excerpt": "EDITAL Nº 18/2024 - SMS-FOR\nO PREFEITO DE FORTALEZA NOMEIA, decorrente do Concurso Público nº 002/2023 da SMS para os cargos efetivos de Médico (40h) e Enfermeiro (40h), os candidatos aprovados:\nLUIZ FERNANDO CARVALHO (Médico, 1º), JOSE ROBERTO TAVARES (Médico, 2º), PATRICIA AGUIAR LIMA (Médica, 3º), HENRIQUE BARROSO MOTA (Médico, 4º), LARA MENDES VASCONCELOS (Enfermeira, 1º), ANTONIO CARLOS PINHEIRO (Enfermeiro, 2º), FATIMA QUEIROZ ALMEIDA (Enfermeira, 3º), MARCOS VIEIRA SOARES (Enfermeiro, 4º), ELAINE BRITO MAGALHAES (Enfermeira, 5º), DIOGO CASTELO BRANCO (Enfermeiro, 6º), RAQUEL HOLANDA SOUSA (Médica, 5º).\nCargos efetivos. Posse em 30 dias."
+    },
+    "rationale": "Concurso SMS-FOR. 11 efetivos área da saúde. Janela 2024. FP por ser cargo efetivo (não comissão). Lei 9.504/97 Art. 73 V tem exceção para serviços essenciais (saúde) também.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-045 + considerar exceção do Art. 73 §1º (cargos da área de saúde, segurança pública)."
+  },
+  {
+    "id": "SYN-PES-FP-049",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "concurso_publico_regular",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-08-19",
+      "excerpt": "EDITAL Nº 11/2026 - SME-PMC\nA PREFEITA DE CURITIBA NOMEIA, decorrente do Concurso Público nº 010/2024 - Carreira de Profissional do Magistério Municipal, candidatos aprovados:\nLUCIANO FERREIRA NETO (1º), RENATA CARDOSO BOSCHI (2º), MARCELO PADILHA SCHMITT (3º), ALINE BENTO PIRES (4º), FELIPE TOMAZ ANDRADE (5º), GIOVANA AMARAL CRUZ (6º), RICARDO MENEZES VIANA (7º), KAROLINA DUARTE LIMA (8º), BRUNO MORAES TAVARES (9º), NATHALIA RIBAS COUTO (10º), JOAO ANTONIO MELO (11º), ISADORA HORN PEREIRA (12º).\nCargo efetivo de Professor (40h). Magistério é serviço essencial."
+    },
+    "rationale": "Concurso magistério Curitiba. Janela 2026. 12 efetivos. Magistério como serviço essencial.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-045."
+  },
+  {
+    "id": "SYN-PES-FP-050",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_replica",
+    "fpPattern": "concurso_publico_regular",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2024-08-21",
+      "excerpt": "EDITAL Nº 23/2024-SES/DF\nO SECRETÁRIO DE SAÚDE DO DF NOMEIA, em decorrência da homologação do Concurso Público nº 005/2023 (cargo: Médico Plantonista — 40h, área hospitalar), os seguintes candidatos aprovados em ordem de classificação:\nLUCIANA AFONSO BARROS (1º), FERNANDO ARAUJO PRADO (2º), JULIA MEDEIROS COSTA (3º), ANDRE FONSECA GUIMARAES (4º), BEATRIZ NUNES DUARTE (5º), RAFAEL CASTRO ANDRADE (6º), CAMILA RAMOS PIRES (7º), GUSTAVO LIMA TAVARES (8º), NATHALIA OLIVEIRA SOUZA (9º), BRUNO HENRIQUE MARTINS (10º).\nCargos efetivos. Posse em 30 dias úteis."
+    },
+    "rationale": "Concurso médico DF. 10 efetivos área saúde. Janela 2024. FP.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão FP-045."
+  },
+  {
+    "id": "SYN-PES-EDGE-001",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "mesma_pessoa_multiplos_atos",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2024-09-09",
+      "excerpt": "PORTARIA Nº 1.612/2024\nO PREFEITO DE CAXIAS DO SUL RESOLVE:\nArt. 1º DISPENSAR ANDRE LUIZ FERREIRA da Função Gratificada FG-2 de Coordenador da Atenção Primária.\nArt. 2º DESIGNAR ANDRE LUIZ FERREIRA para a Função Gratificada FG-3 de Diretor de Departamento da Secretaria Municipal de Saúde, em decorrência da reorganização administrativa.\nArt. 3º Esta Portaria entra em vigor na data de sua publicação."
+    },
+    "rationale": "Mesma pessoa (André Luiz Ferreira) em 2 atos: dispensa de uma FG e designação para outra FG. NÃO é pico de nomeação — é mudança de função do mesmo servidor. `contarPessoasUnicas` deve normalizar para 1 pessoa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "`contarPessoasUnicas` já faz Set por nome lowercased — deve resultar em 1 pessoa única. Validar que dispensa/designação do MESMO nome não conta 2x. Adicionalmente: tratar 'dispensar' como verbo neutro (não compõe a contagem de pico)."
+  },
+  {
+    "id": "SYN-PES-EDGE-002",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "mesma_pessoa_multiplos_atos",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2024-09-04",
+      "excerpt": "PORTARIA Nº 8.234/2024-PMSP\nA PREFEITA DE SÃO PAULO RESOLVE:\nArt. 1º EXONERAR ROBERTO ALMEIDA SOUZA do cargo em comissão de Diretor de Departamento da Secretaria Municipal da Fazenda.\nArt. 2º NOMEAR ROBERTO ALMEIDA SOUZA para o cargo em comissão de Coordenador-Geral da mesma Secretaria, em razão de reorganização administrativa interna.\nArt. 3º Esta Portaria entra em vigor na data de sua publicação."
+    },
+    "rationale": "Mesma pessoa em 2 atos. 1 pessoa única.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão EDGE-001 — Set deduplica."
+  },
+  {
+    "id": "SYN-PES-EDGE-003",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "mesma_pessoa_multiplos_atos",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-09-15",
+      "excerpt": "PORTARIA Nº 4.345/2026\nO PREFEITO DE PORTO ALEGRE RESOLVE:\nArt. 1º DISPENSAR THIAGO RAMOS NETTO da Função Gratificada FG-1.\nArt. 2º NOMEAR THIAGO RAMOS NETTO para o cargo em comissão de Diretor de Departamento.\nArt. 3º DISPENSAR MARIA EDUARDA HENZ da Função Gratificada FG-1.\nArt. 4º NOMEAR MARIA EDUARDA HENZ para o cargo em comissão de Diretora de Projetos.\nArt. 5º Esta Portaria entra em vigor na data de sua publicação."
+    },
+    "rationale": "2 pessoas, cada uma em 2 atos (4 ocorrências de verbo, 2 pessoas). 2 < limiar 10 large-eleitoral.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão EDGE-001."
+  },
+  {
+    "id": "SYN-PES-EDGE-004",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "mesma_pessoa_multiplos_atos",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4205407",
+      "cityName": "Florianópolis",
+      "date": "2024-08-30",
+      "excerpt": "PORTARIA Nº 980/2024\nArt. 1º EXONERAR PEDRO HENRIQUE COELHO do cargo em comissão de Diretor de Cultura.\nArt. 2º DESIGNAR PEDRO HENRIQUE COELHO para a função gratificada FG-2 de Apoio Técnico à Cultura.\nArt. 3º Esta Portaria entra em vigor na data de sua publicação."
+    },
+    "rationale": "1 pessoa, 2 verbos. Set normaliza.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão EDGE-001."
+  },
+  {
+    "id": "SYN-PES-EDGE-005",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "mesma_pessoa_multiplos_atos",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2024-08-12",
+      "excerpt": "PORTARIA Nº 3.567/2024\nO PREFEITO DE FORTALEZA RESOLVE:\nArt. 1º EXONERAR LUIZ FERNANDO CARVALHO do cargo em comissão de Diretor de Departamento da Secretaria de Saúde.\nArt. 2º NOMEAR LUIZ FERNANDO CARVALHO para o cargo em comissão de Secretário-Adjunto da Secretaria Municipal da Saúde.\nArt. 3º EXONERAR JOSE ROBERTO TAVARES do cargo em comissão de Coordenador.\nArt. 4º NOMEAR JOSE ROBERTO TAVARES para o cargo em comissão de Diretor.\nArt. 5º Esta Portaria entra em vigor na data de sua publicação."
+    },
+    "rationale": "2 pessoas com 2 atos cada. 4 verbos, 2 únicos. Set < 10.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão EDGE-001."
+  },
+  {
+    "id": "SYN-PES-EDGE-006",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "mesma_pessoa_multiplos_atos",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2024-09-25",
+      "excerpt": "PORTARIA Nº 6.234/2024-GDF\nO GOVERNADOR DO DF RESOLVE:\nArt. 1º DISPENSAR LUCIANA AFONSO BARROS da Função Comissionada Especial FCE-7 de Coordenadora-Geral.\nArt. 2º NOMEAR LUCIANA AFONSO BARROS para o Cargo de Direção e Supervisão CDS-3 de Subsecretária Adjunta da SES/DF.\nArt. 3º Esta Portaria entra em vigor."
+    },
+    "rationale": "1 pessoa, 2 atos (FCE → CDS). Set = 1.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão EDGE-001."
+  },
+  {
+    "id": "SYN-PES-EDGE-007",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "mesma_pessoa_multiplos_atos",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-08-15",
+      "excerpt": "PORTARIA Nº 1.890/2026\nA PREFEITA DE CURITIBA RESOLVE:\nArt. 1º EXONERAR LUCIANO FERREIRA NETO do cargo em comissão de Diretor da Secretaria de Mobilidade.\nArt. 2º NOMEAR LUCIANO FERREIRA NETO para o cargo em comissão de Secretário-Adjunto de Mobilidade.\nArt. 3º Esta Portaria entra em vigor."
+    },
+    "rationale": "1 pessoa em 2 atos.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão EDGE-001."
+  },
+  {
+    "id": "SYN-PES-EDGE-008",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "mesma_pessoa_multiplos_atos",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2024-09-13",
+      "excerpt": "PORTARIA Nº 2.890/2024-PCRJ\nArt. 1º DISPENSAR LEONARDO MARQUES TAVARES da Função Gratificada FG-1 de Coordenador.\nArt. 2º DESIGNAR LEONARDO MARQUES TAVARES para a Função Gratificada FG-2 de Diretor Substituto.\nArt. 3º DISPENSAR ISADORA CAMPOS LOPES da FG-1 de Assessora.\nArt. 4º DESIGNAR ISADORA CAMPOS LOPES para a FG-2 de Coordenadora.\nArt. 5º Esta Portaria vigora a partir desta data."
+    },
+    "rationale": "2 pessoas, 2 atos cada. Set = 2 < 10.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão EDGE-001."
+  },
+  {
+    "id": "SYN-PES-EDGE-009",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "abaixo_limiar_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2025-03-12",
+      "excerpt": "PORTARIA Nº 1.234/2025\nO PREFEITO DE PORTO ALEGRE RESOLVE:\nArt. 1º NOMEAR THIAGO RAMOS NETTO para o cargo em comissão de Diretor.\nArt. 2º NOMEAR MARIA EDUARDA HENZ para o cargo em comissão de Coordenadora.\nArt. 3º NOMEAR BRUNO LACERDA OLIVEIRA para o cargo em comissão de Chefe de Gabinete.\nArt. 4º NOMEAR CAMILA SCHILLING DUARTE para o cargo em comissão de Assessora.\nArt. 5º NOMEAR RAFAEL MOSCHEN GOMES para o cargo em comissão de Diretor Administrativo.\nArt. 6º Esta Portaria entra em vigor."
+    },
+    "rationale": "POA large fora-janela (mar/2025). 5 pessoas. Limiar large-fora=20. NÃO atinge. Esperado: no_finding.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão de validação de threshold por porte. 5 < 20."
+  },
+  {
+    "id": "SYN-PES-EDGE-010",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "abaixo_limiar_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2025-04-22",
+      "excerpt": "PORTARIA Nº 5.678/2025-PMSP\nO PREFEITO DE SÃO PAULO RESOLVE NOMEAR para cargos em comissão da Administração Direta:\n- ROBERTO ALMEIDA SOUZA (Diretor de Departamento)\n- ANA PAULA TANAKA (Coordenadora)\n- CARLOS HENRIQUE LIMA (Chefe de Gabinete)\n- PATRICIA RAMOS CASTRO (Assessora)\n- FERNANDO TEIXEIRA NUNES (Diretor)"
+    },
+    "rationale": "SP large fora-janela. 5 pessoas. < 20 limiar.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Threshold."
+  },
+  {
+    "id": "SYN-PES-EDGE-011",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "abaixo_limiar_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2025-05-30",
+      "excerpt": "PORTARIA Nº 2.345/2025\nO PREFEITO DE FORTALEZA RESOLVE NOMEAR:\n- LUIZ FERNANDO CARVALHO (Diretor de Departamento)\n- JOSE ROBERTO TAVARES (Coordenador)\n- PATRICIA AGUIAR LIMA (Coordenadora de Vigilância)\n- HENRIQUE BARROSO MOTA (Chefe de Gabinete Adjunto)\n- LARA MENDES VASCONCELOS (Assessora Especial)"
+    },
+    "rationale": "Fortaleza large fora-janela. 5 pessoas < 20.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Threshold."
+  },
+  {
+    "id": "SYN-PES-EDGE-012",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "abaixo_limiar_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5208707",
+      "cityName": "Goiânia",
+      "date": "2025-06-18",
+      "excerpt": "PORTARIA Nº 1.987/2025\nO PREFEITO DE GOIÂNIA NOMEIA, em rotina administrativa, para cargos em comissão:\n- LUCIANA ALVES SOUZA (Diretora);\n- FERNANDO ROCHA CARDOSO (Coordenador);\n- BRUNA TEIXEIRA MORAES (Assessora);\n- RICARDO BARBOSA TOLEDO (Chefe);\n- JULIA MARQUES PIRES (Diretora)."
+    },
+    "rationale": "Goiânia large fora-janela. 5 < 20.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Threshold."
+  },
+  {
+    "id": "SYN-PES-EDGE-013",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "abaixo_limiar_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1302603",
+      "cityName": "Manaus",
+      "date": "2025-07-04",
+      "excerpt": "PORTARIA Nº 3.456/2025-PMM\nO PREFEITO DE MANAUS RESOLVE:\nNOMEAR ALEXANDRE PINHEIRO MENDONCA, MARCOS DAVID FERREIRA, ANA CAROLINA BARBOSA, RICARDO TAVARES SOUZA, JULIANA RAMOS PEREIRA — para cargos em comissão de Diretor, Coordenador e Assessor."
+    },
+    "rationale": "Manaus large fora-janela. 5 < 20.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Threshold."
+  },
+  {
+    "id": "SYN-PES-EDGE-014",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "abaixo_limiar_capital",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2025-04-15",
+      "excerpt": "PORTARIA Nº 678/2025\nO PREFEITO DO RECIFE RESOLVE NOMEAR:\n- JOAO PAULO BARBOSA (Diretor de Departamento)\n- MARIA CLARA MELO (Coordenadora de Projetos)\n- RICARDO TENORIO LINS (Chefe de Gabinete)\n- AMANDA CAVALCANTI BRAGA (Assessora Especial)\n- FELIPE LACERDA SOUSA (Diretor Administrativo)"
+    },
+    "rationale": "Recife large fora-janela. 5 < 20.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Threshold."
+  },
+  {
+    "id": "SYN-PES-EDGE-015",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "substring_falso",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2024-08-30",
+      "excerpt": "LEI MUNICIPAL Nº 9.876/2024\nDispõe sobre a denominação de logradouros públicos.\nArt. 1º Fica denominada \"Avenida Professor José Rodrigues\" a via pública identificada como Rua 12, no Bairro Petrópolis, em homenagem ao saudoso educador. \nArt. 2º A renomeação de logradouros segue o procedimento estabelecido na Lei Municipal nº 4.523/2006.\nArt. 3º A nova denominação será aplicada em toda sinalização viária no prazo de 90 dias.\nArt. 4º Esta Lei entra em vigor na data de sua publicação."
+    },
+    "rationale": "'denominação' / 'denominada' / 'renomeação' contêm substring 'nome' mas NÃO se referem a nomeação de pessoa. NOMEACAO_RE pode acidentalmente matchar (\"nome[ao]\" pega 'nomea' interno). FP de regex.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Endurecer NOMEACAO_RE com word boundary explícita: /\\bnomea[çc][ãa]o\\b/i. Avaliar se '\\b' é suficiente — substring 'denominação' (de-nomi-na-ção) NÃO contém 'nomeação' completa. Mas testar regex contra 'denominada' (de-nomi-na-da) explicitamente."
+  },
+  {
+    "id": "SYN-PES-EDGE-016",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "substring_falso",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2024-09-08",
+      "excerpt": "LEI Nº 17.234/2024-PMSP\nDispõe sobre a denominação de equipamentos públicos.\nArt. 1º A Unidade Básica de Saúde do Capão Redondo passa à denominação \"UBS Doutora Zilda Arns\".\nArt. 2º O Centro de Educação Infantil do Jardim Ângela passa à denominação \"CEI Paulo Freire\".\nArt. 3º A denominação \"Praça da Liberdade\" fica preservada nos termos do tombamento histórico.\nArt. 4º A renomeação de equipamentos públicos segue regulamentação por decreto."
+    },
+    "rationale": "Denominação de equipamentos. Substring 'nome' presente em 'denominação' mas não é nomeação de pessoa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão EDGE-015."
+  },
+  {
+    "id": "SYN-PES-EDGE-017",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "substring_falso",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-09-04",
+      "excerpt": "LEI MUNICIPAL Nº 13.456/2026\nDispõe sobre a denominação de bens públicos municipais.\nArt. 1º Ficam denominados como \"Parque Municipal Mário Quintana\" o conjunto verde do bairro Higienópolis e como \"Centro Cultural Lupicínio Rodrigues\" o equipamento da Avenida Independência.\nArt. 2º A denominação prévia destes bens fica revogada.\nArt. 3º A regulamentação dos critérios de denominação e renomeação de bens públicos será objeto de decreto específico."
+    },
+    "rationale": "Denominação de bens. Substring 'nome' presente — mas não nomeação.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão EDGE-015."
+  },
+  {
+    "id": "SYN-PES-EDGE-018",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "substring_falso",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4205407",
+      "cityName": "Florianópolis",
+      "date": "2024-08-28",
+      "excerpt": "ATA DA ASSEMBLEIA Nº 12/2024\nNo 5º item da pauta foi tratado o pedido de retificação de prenome no registro funcional do servidor matrícula 11.234, conforme determinação judicial. A retificação do prenome será implementada no próximo ciclo da folha. Sobre o item 6, debateu-se a denominação social da fundação parceira na execução do programa Floripa Acolhe — manteve-se a denominação atual. O item 7 versou sobre a designação de fiscal de contrato (vinculada à Lei 14.133/2021)."
+    },
+    "rationale": "'prenome', 'denominação social' — substring 'nome' presente mas não nomeação. 'designação de fiscal de contrato' (Lei 14.133) também é falso positivo.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão EDGE-015 + excluir 'designação de fiscal de contrato' (Lei 14.133)."
+  },
+  {
+    "id": "SYN-PES-EDGE-019",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "substring_falso",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2024-09-19",
+      "excerpt": "LEI MUNICIPAL Nº 16.234/2024\nDispõe sobre a renomeação da Rua dos Maracujás (denominação anterior) para \"Rua Cândido de Abreu\", em homenagem ao ex-prefeito da cidade.\nArt. 1º Fica oficialmente alterada a denominação atual da via referida.\nArt. 2º A nova denominação será incorporada à toponímia oficial da cidade.\nArt. 3º A renomeação respeita o disposto no art. 4º da Lei Municipal nº 9.876/2002 que disciplina as denominações de logradouros."
+    },
+    "rationale": "Renomeação de rua. 'renomeação' contém 'nome' mas não é nomeação de pessoa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão EDGE-015."
+  },
+  {
+    "id": "SYN-PES-EDGE-020",
+    "fiscalId": "fiscal-pessoal",
+    "category": "fp_edge_case",
+    "fpPattern": "substring_falso",
+    "type": "pico_nomeacoes",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2026-08-29",
+      "excerpt": "DECRETO Nº 14.567/2026\nO PREFEITO DE FORTALEZA, considerando o Procedimento Administrativo nº 01.2026/SEMAS, e a denominação social registrada na Junta Comercial da entidade conveniada,\nDECRETA:\nArt. 1º Fica autorizada a denominação \"Casa de Acolhimento Maria Bonita\" para o equipamento socioassistencial localizado no Bairro Pirambu.\nArt. 2º A renomeação do equipamento se dará em razão da reformulação programática do SUAS Municipal.\nArt. 3º Permanece registrada como denominação fantasia da entidade gestora a expressão \"Instituto Solidário Cearense\"."
+    },
+    "rationale": "'denominação social', 'denominação fantasia', 'renomeação'. Sem nomeação de pessoa.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Padrão EDGE-015."
+  }
+]

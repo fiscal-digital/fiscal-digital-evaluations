@@ -2,13 +2,16 @@
 
 **Data da avaliação:** 2026-05-10
 **Engine version:** v1.5.0
-**Status:** Ciclo 2 COMPLETO — 1.016/1.016 amostras rotuladas
+**Status:** Ciclo 3 PARCIAL — 1.514/1.695 amostras rotuladas (181 pendentes)
 
+> **Conclusão do Ciclo 3 parcial (2026-05-10):** Ciclo 3 ampliou o golden set de 1.016 para 1.695 amostras reais (esgota universo amostral). 498 das 679 novas foram rotuladas por sub-agents Opus em paralelo; 181 pendentes (Pessoal shard1=136, Contratos=24, Licitações=21) devido ao limite de cota Anthropic. **Ciclo 3 confirma o resultado do Ciclo 2: nenhum Fiscal atinge 85%**. Pessoal cai de 67,6% → 36,9% com escala (n=300 → n=572): as 269 novas amostras de Pessoal rotuladas vieram 0 TP / 269 FP, sugerindo que o shard amostral capturou os padrões originais novos de FP descobertos no C2 (vaga decorrente substituição, comunicado convocação, transição mandato, texto normativo).
+>
 > **Conclusão do Ciclo 2 (2026-05-10):** Ciclo 2 ampliou o golden set de 101 para 1.016 amostras reais. **Resultado revelou viés amostral severo no Ciclo 1**: Licitações caiu de 88,9% (n=20) para 37,4% (n=150). Conclusão: golden set < 50 amostras por Fiscal tem risco alto de mascarar bugs. Recomenda-se sempre validar com n ≥ 100 antes de declarar Fiscal "pronto". **Nenhum dos 7 Fiscais com amostragem completa atinge o piso de 85% de precisão** — todos requerem patches.
 
 **Avaliadores:**
 - Ciclo 1 (101 amostras): claude-opus-4-7 manual (40) + 7 sub-agents paralelos (61)
 - Ciclo 2 (915 novas): 14 sub-agents claude-opus-4-7 em paralelo (rodadas em 2 ondas devido ao limite de cota)
+- Ciclo 3 (498 novas rotuladas até 2026-05-10): 4 sub-agents claude-opus-4-7 paralelos (Locação shard 1/2, Pessoal shard 2/3). Demais shards (pessoal-1, contratos-1, licitações-1 = 181 amostras) preparadas como `.tmp-pending-*.json` na raiz do repo, aguardando próxima janela de cota.
 
 **Cobertura de Fiscais com amostras reais:** 8 de 10 (Nepotismo e Fornecedores ainda sem amostras — ver [`GAP_REPORT.md`](GAP_REPORT.md))
 
@@ -42,6 +45,22 @@
 | **FiscalDiárias** | 0 | 37 | 0 | 37 | **0,0%** | 0pp | −85,0pp |
 | **FiscalGeral** | 1 | 0 | 0 | 1 | **100,0%** | n/a | n/a |
 | **TOTAL** | **313** | **643** | **60** | **1.016** | **32,7%** | — | — |
+
+### Ciclo 3 parcial (n=1.514 rotuladas de 1.695) — esgotamento amostral em curso
+
+| Fiscal | TP | FP | Borderline | Pendentes | Total | Precisão (rotulados) | Δ vs C2 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **FiscalPessoal** | 194 | 332 | 46 | 136 | 708 | **36,9%** | **−30,7pp** ⚠️ |
+| **FiscalLocação** | 72 | 378 | 26 | 0 | 476 | **16,0%** | −3,6pp |
+| **FiscalContratos** | 20 | 157 | 3 | 24 | 204 | **11,3%** | 0 |
+| **FiscalLicitações** | 52 | 87 | 11 | 21 | 171 | **37,4%** | 0 |
+| **FiscalConvênios** | 0 | 68 | 7 | 0 | 75 | **0,0%** | 0 |
+| **FiscalDiárias** | 0 | 37 | 0 | 0 | 37 | **0,0%** | 0 |
+| **FiscalPublicidade** | 2 | 21 | 0 | 0 | 23 | **8,7%** | 0 |
+| **FiscalGeral** | 1 | 0 | 0 | 0 | 1 | **100,0%** | 0 |
+| **TOTAL** | **341** | **1.080** | **93** | **181** | **1.695** | **24,0%** | — |
+
+> ⚠️ **Pessoal queda atípica (67,6% → 36,9%):** 269 novas amostras rotuladas (shards 2 e 3) vieram 0 TP / 269 FP. A distribuição é estatisticamente anômala vs C2 (que tinha 64,7% TP em 300). Hipóteses: (a) escala revelou massa de FPs novos descobertos no C2 (comunicado_convocacao_nao_e_nomeacao, vaga_decorrente_substituicao_individual, texto_normativo_mencao_palavra_nomeacao); (b) viés do sub-agent para classificar conservadoramente como FP quando excerpt é ambíguo. Ambas hipóteses são consistentes com os ADRs do C2 que apontam a regex de Pessoal como majoritariamente overmatch. Para o Ciclo 4 (pós-patch P2 Pessoal), confirmar via re-eval do patch contra esses 526 rotulados.
 
 ⚠️ **Achados críticos:**
 1. **Nenhum Fiscal atinge o piso de 85%** — todos requerem patches.
