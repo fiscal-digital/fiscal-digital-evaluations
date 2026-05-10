@@ -1,25 +1,24 @@
 {
-  "generatedAt": "2026-05-10T08:49:47.314Z",
+  "generatedAt": "2026-05-10T08:55:38.521Z",
   "engine": "fiscal-digital@v1.5.0",
+  "extractor": "realistic-regex-mock-v1",
   "totalSamples": 55,
   "matrix": {
     "fiscal-contratos": {
-      "tp_real": 0,
+      "tp_real": 1,
       "fp_real": 0,
-      "tn_real": 3,
-      "fn_real": 0,
+      "tn_real": 8,
+      "fn_real": 2,
       "errors": 0,
-      "total": 11,
-      "error": null
+      "total": 11
     },
     "fiscal-convenios": {
       "tp_real": 0,
-      "fp_real": 0,
-      "tn_real": 1,
-      "fn_real": 0,
+      "fp_real": 4,
+      "tn_real": 4,
+      "fn_real": 3,
       "errors": 0,
-      "total": 11,
-      "error": null
+      "total": 11
     },
     "fiscal-diarias": {
       "tp_real": 3,
@@ -30,13 +29,12 @@
       "total": 11
     },
     "fiscal-locacao": {
-      "tp_real": 0,
-      "fp_real": 0,
+      "tp_real": 3,
+      "fp_real": 6,
       "tn_real": 2,
       "fn_real": 0,
       "errors": 0,
-      "total": 11,
-      "error": null
+      "total": 11
     },
     "fiscal-publicidade": {
       "tp_real": 3,
@@ -53,11 +51,15 @@
       "fiscalId": "fiscal-contratos",
       "category": "tp_textbook",
       "expected": "TP",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "tp_real",
+      "firstFinding": {
+        "type": "aditivo_abusivo",
+        "riskScore": 87,
+        "confidence": 0.85
+      },
+      "error": null
     },
     {
       "id": "SYN-CON-TP-002",
@@ -66,9 +68,9 @@
       "expected": "TP",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "fn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CON-TP-003",
@@ -77,9 +79,9 @@
       "expected": "TP",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "fn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CON-FP-001",
@@ -88,9 +90,9 @@
       "expected": "no_finding",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "tn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CON-FP-002",
@@ -99,9 +101,9 @@
       "expected": "no_finding",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "tn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CON-FP-003",
@@ -132,9 +134,9 @@
       "expected": "no_finding",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "tn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CON-FP-EDGE-001",
@@ -143,9 +145,9 @@
       "expected": "no_finding",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "tn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CON-FP-EDGE-002",
@@ -165,9 +167,9 @@
       "expected": "no_finding",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "tn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CONV-TP-001",
@@ -176,9 +178,9 @@
       "expected": "TP",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "fn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CONV-TP-002",
@@ -187,9 +189,9 @@
       "expected": "TP",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "fn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CONV-TP-003",
@@ -198,53 +200,69 @@
       "expected": "TP",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "fn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CONV-FP-001",
       "fiscalId": "fiscal-convenios",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "convenio_sem_chamamento",
+        "riskScore": 89,
+        "confidence": 0.65
+      },
+      "error": null
     },
     {
       "id": "SYN-CONV-FP-002",
       "fiscalId": "fiscal-convenios",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "convenio_sem_chamamento",
+        "riskScore": 89,
+        "confidence": 0.65
+      },
+      "error": null
     },
     {
       "id": "SYN-CONV-FP-003",
       "fiscalId": "fiscal-convenios",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "convenio_sem_chamamento",
+        "riskScore": 89,
+        "confidence": 0.65
+      },
+      "error": null
     },
     {
       "id": "SYN-CONV-FP-004",
       "fiscalId": "fiscal-convenios",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "convenio_sem_chamamento",
+        "riskScore": 89,
+        "confidence": 0.65
+      },
+      "error": null
     },
     {
       "id": "SYN-CONV-FP-005",
@@ -253,9 +271,9 @@
       "expected": "no_finding",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "tn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CONV-FP-EDGE-001",
@@ -264,9 +282,9 @@
       "expected": "no_finding",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "tn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CONV-FP-EDGE-002",
@@ -275,9 +293,9 @@
       "expected": "no_finding",
       "emitted": false,
       "emittedCount": 0,
-      "verdict": "error",
+      "verdict": "tn_real",
       "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "error": null
     },
     {
       "id": "SYN-CONV-FP-EDGE-003",
@@ -456,55 +474,75 @@
       "fiscalId": "fiscal-locacao",
       "category": "tp_textbook",
       "expected": "TP",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "tp_real",
+      "firstFinding": {
+        "type": "locacao_sem_justificativa",
+        "riskScore": 62,
+        "confidence": 0.85
+      },
+      "error": null
     },
     {
       "id": "SYN-LOC-TP-002",
       "fiscalId": "fiscal-locacao",
       "category": "tp_textbook",
       "expected": "TP",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "tp_real",
+      "firstFinding": {
+        "type": "locacao_sem_justificativa",
+        "riskScore": 62,
+        "confidence": 0.65
+      },
+      "error": null
     },
     {
       "id": "SYN-LOC-TP-003",
       "fiscalId": "fiscal-locacao",
       "category": "tp_textbook",
       "expected": "TP",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "tp_real",
+      "firstFinding": {
+        "type": "locacao_sem_justificativa",
+        "riskScore": 81,
+        "confidence": 0.85
+      },
+      "error": null
     },
     {
       "id": "SYN-LOC-FP-001",
       "fiscalId": "fiscal-locacao",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "locacao_sem_justificativa",
+        "riskScore": 60,
+        "confidence": 0.65
+      },
+      "error": null
     },
     {
       "id": "SYN-LOC-FP-002",
       "fiscalId": "fiscal-locacao",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "locacao_sem_justificativa",
+        "riskScore": 81,
+        "confidence": 0.85
+      },
+      "error": null
     },
     {
       "id": "SYN-LOC-FP-003",
@@ -522,11 +560,15 @@
       "fiscalId": "fiscal-locacao",
       "category": "fp_replica",
       "expected": "no_finding",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "locacao_sem_justificativa",
+        "riskScore": 60,
+        "confidence": 0.65
+      },
+      "error": null
     },
     {
       "id": "SYN-LOC-FP-005",
@@ -544,33 +586,45 @@
       "fiscalId": "fiscal-locacao",
       "category": "fp_edge_case",
       "expected": "no_finding",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "locacao_sem_justificativa",
+        "riskScore": 62,
+        "confidence": 0.85
+      },
+      "error": null
     },
     {
       "id": "SYN-LOC-FP-007",
       "fiscalId": "fiscal-locacao",
       "category": "fp_edge_case",
       "expected": "no_finding",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "locacao_sem_justificativa",
+        "riskScore": 81,
+        "confidence": 0.85
+      },
+      "error": null
     },
     {
       "id": "SYN-LOC-FP-008",
       "fiscalId": "fiscal-locacao",
       "category": "fp_edge_case",
       "expected": "no_finding",
-      "emitted": false,
-      "emittedCount": 0,
-      "verdict": "error",
-      "firstFinding": null,
-      "error": "extractFn.execute is not a function"
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "locacao_sem_justificativa",
+        "riskScore": 72,
+        "confidence": 0.65
+      },
+      "error": null
     },
     {
       "id": "SYN-PUB-TP-001",
