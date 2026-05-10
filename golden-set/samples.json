@@ -434,6 +434,1098 @@
       "labeledBy": null,
       "labeledAt": null,
       "schemaVersion": 1
+    },
+    {
+      "id": "GS-019",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "5201405",
+      "type": "pico_nomeacoes",
+      "riskScore": 78,
+      "confidence": 0.75,
+      "narrative": "Identificamos 5 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 02/08/2024, dentro da janela eleitoral municipal (eleição prevista para 06/10/2024). O documento aponta volume acima do limiar de 3 atos por publicação. Lei 9.504/97, Art. 73, V, veda nomeações para cargos em comissão no período eleitoral, salvo exceções.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "POLLYANA OLIVEIRA BORGES\nSecretária de Governo\n\n______________________________________\n\nDECRETO “P” Nº 857-A DE 12 DE ABRIL DE 2024.\n\nDISPÕE SOBRE NOMEAÇÃO DE SERVIDOR (A) PARA OCUPAR CARGO \nCOMISSIONADO E DÁ OUTRAS PROVIDÊNCIAS.\n.\nO PREFEITO MUNICIPAL DE APARECIDA DE GOIÂNIA, no uso de suas \natribuições\n---\n2024.\n\nVILMAR MARIANO DA SILVA\nPREFEITO MUNICIPAL\n\n______________________________________\n\nDECRETO “P” Nº 1743 DE 29 DE JULHO DE 2024.\n\nDISPÕE SOBRE NOMEAÇÃO DE SERVIDOR (A) PARA OCUPAR CARGO \nCOMISSIONADO E DÁ OUTRAS PROVIDÊNCIAS.\n.\nO PREFEITO MUNICIPAL DE APARECIDA DE GOIÂNIA, no uso de suas \natribuições\n---\n2024.\n\nVILMAR MARIANO DA SILVA\nPREFEITO MUNICIPAL\n\n______________________________________\n\nDECRETO “P” Nº 1747 DE 29 DE JULHO DE 2024.\n\nDISPÕE SOBRE NOMEAÇÃO DE SERVIDOR (A) PARA OCUPAR CARGO \nCOMISSIONADO E DÁ OUTRAS PROVIDÊNCIAS.\n.\nO PREFEITO MUNICIPAL DE APARECIDA DE GOIÂNIA, no uso de suas \natribuições\n---\n2024.\n\nVILMAR MARIANO DA SILVA\nPREFEITO MUNICIPAL\n\n______________________________________\n\nDECRETO “P” Nº 1767 DE 30 DE JULHO DE 2024.\n\nDISPÕE SOBRE NOMEAÇÃO DE SERVIDOR (A) PARA OCUPAR CARGO \nCOMISSIONADO E DÁ OUTRAS PROVIDÊNCIAS.\n.\nO PREFEITO MUNICIPAL DE APARECIDA DE GOIÂNIA, no uso de suas \natribuições\n---\n2024.\n\nVILMAR MARIANO DA SILVA\nPREFEITO MUNICIPAL\n\n______________________________________\n\nDECRETO “P” Nº 1768 DE 30 DE JULHO DE 2024.\n\nDISPÕE SOBRE NOMEAÇÃO DE SERVIDOR (A) PARA OCUPAR CARGO \nCOMISSIONADO E DÁ OUTRAS PROVIDÊNCIAS.\n.\nO PREFEITO MUNICIPAL DE APARECIDA DE GOIÂNIA, no uso de suas \natribuições",
+          "date": "2024-08-02",
+          "source": "https://data.queridodiario.ok.org.br/5201405/2024-08-02/50a64da7767e3232273d382b71187a6a763e18c2.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#5201405#pico_nomeacoes#2026-05-03T18:37:53.526Z",
+      "createdAt": "2026-05-03T18:37:53.526Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-020",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "3303500",
+      "type": "pico_nomeacoes",
+      "riskScore": 78,
+      "confidence": 0.75,
+      "narrative": "Identificamos 5 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 17/07/2024, dentro da janela eleitoral municipal (eleição prevista para 06/10/2024). O documento aponta volume acima do limiar de 3 atos por publicação. Lei 9.504/97, Art. 73, V, veda nomeações para cargos em comissão no período eleitoral, salvo exceções.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "2024. \n\nO PREFEITO DA CIDADE DE NOVA IGUAÇU, no exercício das atribuições \nque lhe confere a legislação em vigor, RESOLVE:                    \n\nI – Exonerar, a pedido, ESTER DE PONTES SILVA, do cargo em comissão \nde Assessor de Atividades Turísticas, símbolo DAS III (2785), da Secretaria \nMunicipal de\n---\nDE 16 DE JULHO DE 2024. \n\nO PREFEITO DA CIDADE DE NOVA IGUAÇU, no exercício das atribuições \nque lhe confere a legislação em vigor, RESOLVE:  \n\nI – Exonerar JULIANA SOARES DA SILVA, do cargo em comissão de As-\nsessor de Gabinete Semug Nível III, símbolo DAS III (1554), da Secretaria \nMunicipal de Governo\n---\n367 DE 16 DE JULHO DE 2024. \n\nO PREFEITO DA CIDADE DE NOVA IGUAÇU, no exercício das atribuições \nque lhe confere a legislação em vigor, RESOLVE:  \n\nExonerar FERNANDO SANTANA, do cargo em comissão de Assessor de \nAssuntos Comunitários Nível III, símbolo DAS III (1496), da Secretaria Mu-\nnicipal de Governo\n---\n           \n\nI - Tornar sem efeito o item II, da Portaria nº 324 de 12 de junho de 2024, \npublicada no D.O.E. em 14 de junho de 2024, referente a nomeação de \nSOLANGE BORGES DA SILVA SOUZA; \n\nII - Nomear LIGIA RODRIGUES E SILVA VIANNA, para ocupar o cargo em \ncomissão de Assessor da Diretoria Técnica",
+          "date": "2024-07-17",
+          "source": "https://data.queridodiario.ok.org.br/3303500/2024-07-17/9e5097740a4c588a1a732a6719b983418dd278a0.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#3303500#pico_nomeacoes#2026-05-03T18:47:54.586Z",
+      "createdAt": "2026-05-03T18:47:54.586Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-021",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "4305108",
+      "type": "pico_nomeacoes",
+      "riskScore": 53,
+      "confidence": 0.75,
+      "narrative": "Identificamos 19 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 29/06/2023, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "Complementar nº 409, de 2012:\n \n- Nomeação de 35 Agentes Administrativos, padrão 03;\n- Nomeação de 03 Analistas de Sistemas, padrão 06;\n- Nomeação de 04 Arquitetos, padrão 06;\n- Nomeação de 01 Arquivista, padrão 06;\n- Nomeação de 10 Assistentes Sociais, padrão 04;\n- Nomeação de 07 Auditores Fiscais da Receita\n---\nMunicipal, padrão 06;\n- Nomeação de 30 Auxiliares de Infraestrutura, padrão 01;\n- Nomeação de 05 Auxiliares de Regulação Médica, padrão 03;\n- Nomeação de 08 Auxiliares de Saúde Bucal, padrão 03;\n- Nomeação de 02 Bibliotecários, padrão 06;\n- Nomeação de 02 Biólogos, padrão 06;\n- Nomeação de 02 Contadores, padrão\n---\npadrão 06;\n- Nomeação de 03 Eletricistas, padrão 03;\n- Nomeação de 30 Enfermeiros, padrão 04;\n- Nomeação de 08 Engenheiros, padrão 06;\n- Nomeação de 03 Farmacêuticos, padrão 04;\n- Nomeação de 08 Fiscais Municipais, padrão 04;\n- Nomeação de 20 Fiscais de Trânsito e Transportes, padrão 04;\n- Nomeação de 04 Fisioterapeutas",
+          "date": "2023-06-29",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2023-06-29/09d04fccee8674cc0e6f8c7201aaa170b3821b45.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#4305108#pico_nomeacoes#2026-05-03T16:22:17.646Z",
+      "createdAt": "2026-05-03T16:22:17.646Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-022",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "3303302",
+      "type": "pico_nomeacoes",
+      "riskScore": 35,
+      "confidence": 0.75,
+      "narrative": "Identificamos 7 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 02/10/2021, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "CC-1, da Secretaria \nMunicipal de Assistência Social e Economia Solidária, em vaga da exoneração de \nLayana Rosa Neves, acrescido das gratificações previstas na CI nº 01/09. \n \n\nPort. nº 2524/2021- Considera exonerado, a pedido, a contar de 01/10/2021, \nADALSON GONÇALVES do cargo de Assessor B, CC-2, da\n---\nexercer o cargo de Assessor B, CC-2, da Secretaria \nExecutiva, em vaga decorrente da exoneração de Adalson Gonçalves, acrescido das \ngratificações previstas na CI nº 01/09. \n \n\nPort. nº 2526/2021- Considera exonerada, a pedido, a contar de 01/10/2021, LUANA \nELLER DE ALMEIDA MOREIRA MOTA do cargo de Assessor\n---\nTrabalho, Emprego e Renda, da Secretaria Executiva, em vaga \ndecorrente da exoneração de Luana Eller de Almeira Moreira Mota, acrescido das \ngratificações previstas na CI nº 01/09. \n \n\nPort. nº 2528/2021- Considera exonerado, a contar de 01/10/2021, NILTON DA \nSILVEIRA CAMPOS FILHO do cargo de Assistente\n---\ncargo de Assistente A, CC-4, da Secretaria \nExecutiva, em vaga decorrente da exoneração de Nilton da Silveira Campos Filho, \nacrescido das gratificações previstas na CI nº 01/09. \n \n\nPort. nº 2530/2021- Considera exonerado, a pedido, a contar de 01/10/2021, \nDANILO GROFF FILHO do cargo de Assessor A",
+          "date": "2021-10-02",
+          "source": "https://data.queridodiario.ok.org.br/3303302/2021-10-02/deb1438c1943acd63a7e064a11f2bec260c1a0b6.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#3303302#pico_nomeacoes#2026-05-03T12:46:50.553Z",
+      "createdAt": "2026-05-03T12:46:50.553Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-023",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "2111300",
+      "type": "pico_nomeacoes",
+      "riskScore": 40,
+      "confidence": 0.75,
+      "narrative": "Identificamos 10 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 14/12/2022, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "........................................... \nATO DE EXONERAÇÃO DE FLAVIA SILVA COSTA 20 ............................................................................................................................................ \nATO DE EXONERAÇÃO DE SURANMA SAMYLE FERREIRA AMATE 20 ................\n---\n.............................................. \nATO DE NOMEAÇÃO DE FLAVIA SILVA COSTA 20 ............................................................................................................................................... \nEXONERAÇÃO DE INALDO DE CASTRO GARROS 20 .........................\n---\n.................................................... \nEXONERAÇÃO DE MARILENE ALVES DE MORAIS 21 ........................................................................................................................................... \nNOMEAÇÃO DE CARLOS ALBERTO FERREIRA SANTOS JÚNIOR 21 ..........\n---\n.......................................................... \nNOMEAÇÃO DE GABRIELA CRISTINA BASTOS SARAIVA MARTINS 21 .................................................................................................................. \nNOMEAÇÃO DE JEANNE SOARES COSTA 21 .................................\n---\n......................................................... \nNOMEAÇÃO DE LUCIANA MECIA FERNANDES DE CARVALHO 21 ........................................................................................................................ \nNOMEAÇÃO DE SIDNEY SILVA PEREIRA 22 ................................",
+          "date": "2022-12-14",
+          "source": "https://data.queridodiario.ok.org.br/2111300/2022-12-14/a665e2ea7846d847c2c96065b9783470ab73f025.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T05:39:51.763Z",
+      "createdAt": "2026-05-03T05:39:51.763Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-024",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "3118601",
+      "type": "pico_nomeacoes",
+      "riskScore": 76,
+      "confidence": 0.75,
+      "narrative": "Identificamos 4 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 26/07/2024, dentro da janela eleitoral municipal (eleição prevista para 06/10/2024). O documento aponta volume acima do limiar de 3 atos por publicação. Lei 9.504/97, Art. 73, V, veda nomeações para cargos em comissão no período eleitoral, salvo exceções.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "atribuições legais; considerando o disposto na Lei Complementar n° 247, de 29 de dezembro de 2017, que dispõe sobre a \nOrganização da Administração Direta do Poder Executivo, EXONERA,  do cargo em comissão DAM-6, código SEFAZ.DAM6.11, o(a) servidor(a) PEDRO VIANA SILVA DE \nSOUZA MARQUES, lotado(a) na\n---\natribuições legais; considerando o disposto na Lei Complementar n° 247, de 29 de dezembro de 2017, que dispõe sobre \na Organização da Administração Direta do Poder Executivo; NOMEIA, para o cargo em comissão DAM-15, código PARC.DAM15.03, PEDRO VIANA SILVA DE SOUZA \nMARQUES, designado(a) para responder\n---\nconsiderando o disposto na Lei Complementar n° 247, de 29 de dezembro de 2017, que dispõe sobre a \nOrganização da Administração Direta do Poder Executivo; RESOLVE:\nArt.1º EXONERAR, do cargo em comissão DAM-6, código SMS.DAM6.51, SAMARA CHAVES RODRIGUES COSTA, designado(a) para responder pela UBS João Evangelista",
+          "date": "2024-07-26",
+          "source": "https://data.queridodiario.ok.org.br/3118601/2024-07-26/0ca839a0ea42d421cf98d2539af38738f9bef731.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#3118601#pico_nomeacoes#2026-05-03T12:23:37.477Z",
+      "createdAt": "2026-05-03T12:23:37.477Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-025",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "3300456",
+      "type": "pico_nomeacoes",
+      "riskScore": 74,
+      "confidence": 0.75,
+      "narrative": "Identificamos 3 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 19/07/2024, dentro da janela eleitoral municipal (eleição prevista para 06/10/2024). O documento aponta volume acima do limiar de 3 atos por publicação. Lei 9.504/97, Art. 73, V, veda nomeações para cargos em comissão no período eleitoral, salvo exceções.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "Roxo, 15 de julho de 2024.\nWAGNER DOS SANTOS CARNEIRO\n\nPrefeito Municipal\nREPUBLICADO POR INCORREÇÃO\n\nPORTARIA Nº 94/GP/2024 DE 19 DE JULHO DE 2024\nExonerar, a contar desta data, com fundamento do disposto no inciso V, do art. 87, da Lei Orgânica Municipal, GILVAN GORGONHO DE MEDEIROS, do cargo em\ncomissão\n---\nem Comissão de Assessor de Serviço, Símbolo DAS-8, na Secretaria Municipal de Saúde.\n\nPORTARIA Nº 3143/SEMAD/2024 DE 19 DE JULHO DE 2024\nExonerar, a contar desta data, com fundamento do disposto no inciso V, do art. 87, da Lei Orgânica Municipal, os servidores abaixo, do cargo em comissão de Assessor\nEspecial\n---\nCARDOSO GOMES DE MORAES\nJOSÉ DE OLIVEIRA LOPES LIMA\nMICHEL CAMPOS MOREIRA\nMARCELO ALMEIDA DA COSTA\n\nPORTARIA Nº 3145/SEMAD/2024 DE 19 DE JULHO DE 2024\nExonerar, a contar desta data, com fundamento do disposto no inciso V, do art. 87, da Lei Orgânica Municipal, os servidores abaixo, do cargo em comissão de",
+          "date": "2024-07-19",
+          "source": "https://data.queridodiario.ok.org.br/3300456/2024-07-19/f4f9d48df992377550ea98cb61d6e0b4bfb71848.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#3300456#pico_nomeacoes#2026-05-03T10:35:13.853Z",
+      "createdAt": "2026-05-03T10:35:13.853Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-026",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "2111300",
+      "type": "pico_nomeacoes",
+      "riskScore": 39,
+      "confidence": 0.75,
+      "narrative": "Identificamos 9 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 14/03/2023, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": ".................................................... \nEXONERAÇÃO A PEDIDO DE ELIANA ROCHA SOUZA 6 ....................................................................................................................................... \nEXONERAÇÃO A PEDIDO DE ENILDO PEREIRA 6 .........................\n---\n....................................................... \nEXONERAÇÃO A PEDIDO DE GIULIANA GIANE PEREIRA SENA 6 ......................................................................................................................... \nEXONERAÇÃO A PEDIDO DE MARCELA PELÚCIO DOMINICI 6 .................\n---\n........................................................ \nEXONERAÇÃO DE ÂNGELA MARIA DE ARAUJO DUTRA OLIVEIRA 7 ..................................................................................................................... \nEXONERAÇÃO DE MARIANA BARROS DE MATOS 7 .............................\n---\n....................................................... \nNOMEAÇÃO DE CONCEIÇÃO DE MARIA ABREU QUEIROZ 7 ................................................................................................................................ \nNOMEAÇÃO DE DÉBORA DE JESUS ROCHA 7 ..............................\n---\n........................................................................................................................ \nNOMEAÇÃO DE GABRIELL JORGE MONTEIRO AZEVEDO 7 .................................................................................................................................. \n",
+          "date": "2023-03-14",
+          "source": "https://data.queridodiario.ok.org.br/2111300/2023-03-14/9becafbf0a473522a9083af55c983590ee5eec70.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T13:13:04.669Z",
+      "createdAt": "2026-05-03T13:13:04.669Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-027",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "3303302",
+      "type": "pico_nomeacoes",
+      "riskScore": 39,
+      "confidence": 0.75,
+      "narrative": "Identificamos 9 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 12/01/2023, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "28/2023- Nomeia CLÁUDIA ALVES DE SOUZA DOS SANTOS para exercer o \ncargo de Encarregado A, CC-4, da Administração Regional de Rio do Ouro, em vaga da \nexoneração de Antonio Angelo da Cruz Gregório, acrescido das gratificações previstas na \nCI nº 387/2022. \nPort. nº 29/2023- Exonera, a pedido, ISABELA DOS SANTOS\n---\nvaga da \nexoneração de Isabela dos Santos Oliveira, acrescido das gratificações previstas na CI nº \n387/2022. \nPort. nº 32/2023- Nomeia RONALD ESTEVES FREITAS DE MEDEIROS para exercer o \ncargo de Assistente A, CC-4, da Secretaria Municipal de Desenvolvimento Econômico, em \nvaga da exoneração de Gabriel\n---\nnº 34/2023- Nomeia ANDRÉ CARNEIRO DA SILVA para exercer o cargo de \nAssessor C, CC-3, da Secretaria Municipal de Governo, em vaga decorrente da \nexoneração de Diego Vinicius Nascimento de Souza, acrescido das gratificações previstas \nna CI nº 387/2022. \nPort. nº 35/2023- Exonera, a pedido, PÉRICLES MORAES\n---\nFazenda. \nPort. nº 36/2023- Nomeia VITTORIA TORRES SILVA para exercer o cargo de Assistente \n\nB, CC-5, da Secretaria Municipal de Fazenda, em vaga da exoneração de Péricles Moraes \nda Silva, acrescido das gratificações previstas na CI nº 387/2022. \n\nDespacho do Prefeito \nProcessos nº 180/5451, 5452, 5455",
+          "date": "2023-01-12",
+          "source": "https://data.queridodiario.ok.org.br/3303302/2023-01-12/856f6f66b03aa78465dd7772f7af83b648759241.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#3303302#pico_nomeacoes#2026-05-03T06:56:29.675Z",
+      "createdAt": "2026-05-03T06:56:29.675Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-028",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "2111300",
+      "type": "pico_nomeacoes",
+      "riskScore": 35,
+      "confidence": 0.75,
+      "narrative": "Identificamos 7 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 03/06/2024, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": ". \n\nNOMEAÇÃO DE MATHEUS DA ROCHA MONTE 3 ..................................................................................................... \nNOMEAÇÃO DE LARISSA FÉLIX MACIEL FELÍCIO 3 ................................................................................................... \nNOMEAÇÃO DE ELDILENE\n---\n...... \nEXONERAÇÃO DE SILVIA ALMEIDA MARQUES CAETANO GOMES 3 ................................................................................ \nEXONERAÇÃO DE MATHEUS DA ROCHA MONTE 3 .................................................................................................. \nEXONERAÇÃO DE JACIENE\n---\nJACIENE DE FATIMA ALVES PEREIRA 3 ........................................................................................... \nEXONERAÇÃO DE CAROLINE PAES PEREIRA 4 ....................................................................................................... \nDECRETO Nº 60.454 DE 03 DE JUNHO DE",
+          "date": "2024-06-03",
+          "source": "https://data.queridodiario.ok.org.br/2111300/2024-06-03/3d05c82af004c618056eacafcc7582284bdea2fd.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T17:35:40.129Z",
+      "createdAt": "2026-05-03T17:35:40.129Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-029",
+      "fiscalId": "fiscal-pessoal",
+      "cityId": "2111300",
+      "type": "pico_nomeacoes",
+      "riskScore": 35,
+      "confidence": 0.75,
+      "narrative": "Identificamos 7 atos de nomeação, exoneração e designação de cargos comissionados em gazette de 24/02/2025, acima do limiar de 7 atos por publicação fora de período eleitoral. Registro informativo para monitoramento de tendências.",
+      "legalBasis": "Lei 9.504/97, Art. 73, V; CF, Art. 37, V",
+      "evidence": [
+        {
+          "excerpt": "... \nEXONERAÇÃO DE ANDRÉ PESSOA DANTAS FREIRE 4 .............................................................................................. \nEXONERAÇÃO DE ELISIANE JESUS DE SOUSA CARES 4 ............................................................................................. \nEXONERAÇÃO DE GEORGE\n---\n..... \nEXONERAÇÃO DE GIRLENE SILVA DO ROSARIO DA CONCEIÇÃO 5 ................................................................................ \nEXONERAÇÃO DE MARIA DA GLÓRIA SILVA DE OLIVEIRA 5 ........................................................................................ \nEXONERAÇÃO DE TIAGO\n---\nTIAGO CEREZOLI VIANA 5 ........................................................................................................ \nNOMEAÇÃO DE LUCIANO DOS SANTOS DI RENNA 5 ................................................................................................ \n\nGABINETE DA VICE-PREFEITURA - GAVIC",
+          "date": "2025-02-24",
+          "source": "https://data.queridodiario.ok.org.br/2111300/2025-02-24/5a9cfd50e9e996d5a2e366751afbf8688acd3daf.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T10:08:34.919Z",
+      "createdAt": "2026-05-03T10:08:34.919Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-030",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "dispensa_irregular",
+      "riskScore": 86,
+      "confidence": 0.65,
+      "narrative": "**Achado de Fiscalização - Dispensa de Licitação**\n\nOs dados indicam uma dispensa de licitação (047/2025) no valor de R$ 91.000,00 para aquisição de peças de manutenção de frota junto à FW DISTRIBUIDORA LTDA, com vigência de 26/03/2025 a 26/09/2025. O documento aponta possível desconformidade com a Lei 14.133/2021, Art. 75, II, que estabelece critérios específicos para dispensa de licitação. Identificamos risco elevado (86%) na operação que requer análise complementar da administração municipal.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, II",
+      "value": 91000,
+      "evidence": [
+        {
+          "excerpt": "26/03/2025 a 26/09/2025. O valor total deste contrato é R$91.000,00 (noventa e um mil reais).\nDISPENSA DE LICITAÇÃO 047/2025 – Contratada: FW DISTRIBUIDORA LTDA. Objeto: Aquisição de peças para\nmanutenção geral da frota, em remessa única. Data da Dispensa: 12/03/2025. Valor da aquisição: R$ 1.512,65",
+          "date": "2025-03-28",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2025-03-28/5ab3647138840006b42587cf420a1d7e7c9df88f.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:53:13.253Z",
+      "createdAt": "2026-05-02T16:53:13.253Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-031",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4106902",
+      "type": "dispensa_irregular",
+      "riskScore": 93,
+      "confidence": 0.65,
+      "narrative": "# Achado de Fiscalização - Dispensa de Licitação\n\nIdentificamos uma dispensa de licitação no valor de R$ 1.080.000,00 (um milhão e oitenta mil reais) com vigência de 24 meses em favor do Instituto AOCP, fundamentada no artigo 75, inciso XV da Lei Federal nº 14.133/2021. Os documentos indicam que a operação apresenta características que demandam análise quanto à conformidade com os requisitos legais para este tipo de contratação. O achado foi registrado em 04 de agosto de 2025 e requer verificação de documentação complementar para conclusão da avaliação.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, II",
+      "value": 1080000,
+      "evidence": [
+        {
+          "excerpt": "vigência de 24 (vinte e\nquatro) meses, em favor do Instituto AOCP, no valor total de R$ 1.080.000,00 (um milhão e oitenta mil reais) mediante\nDispensa de Licitação – DT nº 15/2025 fundamentada no inciso XV do artigo 75 da Lei Federal nº 14.133, de 1º de abril de\n2021 e no Decreto Municipal nº 700/2023,",
+          "date": "2025-08-04",
+          "source": "https://data.queridodiario.ok.org.br/4106902/2025-08-04/7ff7f431108e17e8a0454e43940a94e63a22e427.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4106902#dispensa_irregular#2026-05-03T06:06:47.979Z",
+      "createdAt": "2026-05-03T06:06:47.979Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-032",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "dispensa_irregular",
+      "riskScore": 87,
+      "confidence": 0.65,
+      "narrative": "# Achado Identificado - Dispensa de Licitação\n\nOs dados indicam uma dispensa de licitação no valor de R$ 228.264,96 realizada pela Prefeitura Municipal de Caxias do Sul, fundamentada no Art. 25 da Lei nº 8.666/93 (Inexigibilidade nº 104/2023). O documento aponta contratação da empresa Giacomin Comércio de Tintas, publicado em 30 de agosto de 2023. Identificamos que a fundamentação legal utilizada (Lei 8.666/93) diverge da legislação vigente (Lei 14.133/2021, Art. 75, II), o que requer análise de conformidade com a legislação atual de licitações.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, II",
+      "value": 228264.96,
+      "evidence": [
+        {
+          "excerpt": "Municipal. Valor R$ 228.264,96. Inexigibilidade n.º 104/2023.\nProcesso n.º 2023/25610. Fundamento legal: Art. 25, caput da Lei n.º 8.666/93.\n \n\nCaxias do Sul, 30 de agosto de 2023.\n \n\nAdiló Ângelo Didomenico\nPrefeito Municipal\n\n \nAviso de Dispensa de Licitação\n\n \nSMS – Contratado(a): GIACOMIN COMERCIO DE TINTAS",
+          "date": "2023-08-31",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2023-08-31/bc7f39790b64f6a01b4afd77706e29a09fdaeda4.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-03T17:35:05.577Z",
+      "createdAt": "2026-05-03T17:35:05.577Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-033",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "5208707",
+      "type": "dispensa_irregular",
+      "riskScore": 87,
+      "confidence": 0.65,
+      "narrative": "# Achado de Fiscalização - Dispensa de Licitação\n\nIdentificamos uma contratação por dispensa de licitação realizada pela Secretaria de Relações Institucionais no valor de R$ 12.234.680,84, fundamentada no artigo 24, inciso VIII da Lei 8.666/93. O documento aponta a contratação da Companhia de Urbanização (COMURG) conforme especificações do Projeto Básico anexado. Os dados indicam um risco moderado-alto (score 87) quanto à regularidade do procedimento conforme Lei 14.133/2021, Art. 75, II.\n\n---\n\n**Nota para publicação:** Este texto apresenta os fatos identificados de forma objetiva, sem atribuir responsabilidades ou culpabilidades, adequado para divulgação em canais públicos de transparência.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, II",
+      "secretaria": "Secretaria de Relações Institucionais",
+      "value": 12234680.84,
+      "evidence": [
+        {
+          "excerpt": "Secretaria de Relações Institucionais, conforme \nespecificações constantes neste Projeto Básico e \nseus anexos. \n\nFUNDAMENTAÇÃO LEGAL: Contratação por Dispensa de Licitação da \nCompanhia de Urbanização – COMURG, inc. \nVIII, artigo 24 da Lei 8.666/93. \n\nVALOR : R$ 12.234.680,84 (doze milhões, duzentos e ",
+          "date": "2022-06-07",
+          "source": "https://data.queridodiario.ok.org.br/5208707/2022-06-07/570e3c22ff87083dfe48c0521d7fcbbef35ed295.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#5208707#dispensa_irregular#2026-05-03T09:08:45.144Z",
+      "createdAt": "2026-05-03T09:08:45.144Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-034",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "dispensa_irregular",
+      "riskScore": 93,
+      "confidence": 0.65,
+      "narrative": "**Achado de Fiscalização - Dispensa Irregular**\n\nIdentificamos uma dispensa de licitação no valor de R$ 4.020.000,00 pela Secretaria Municipal da Saúde (Dispensa nº 114/2025), fundamentada no Art. 75, inciso VIII, da Lei 14.133/2021, destinada à Companhia de Desenvolvimento de Caxias do Sul (CODECA). Os dados indicam inconsistência entre o fundamento legal citado (inciso VIII) e o dispositivo aplicável (inciso II) para a modalidade de dispensa registrada, gerando risco de irregularidade processual.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, II",
+      "secretaria": "Secretaria Municipal da Saúde",
+      "value": 4020000,
+      "evidence": [
+        {
+          "excerpt": "Valor R$\n4.020.000,00. Dispensa n.º 114/2025. Processo n.º 2025/24860. Fundamento Legal: Art. 75, inciso VIII, da Lei nº 14.133/21.\n\nDaniele Meneguzzi\nSecretária Municipal da Saúde\n\nCOMPANHIA DE DESENVOLVIMENTO DE CAXIAS\nDO SUL CODECA\n\n \nAVISO DE LICITAÇÃO\n \nRITO PROCEDIMENTAL PREGÃO ELETRONICA 080/2025",
+          "date": "2025-07-09",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2025-07-09/24086c09ac68fa30fd5e1a6ee0b91083f46d04a2.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:36:51.028Z",
+      "createdAt": "2026-05-02T16:36:51.028Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-035",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "dispensa_irregular",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "# Achado Identificado - Dispensa de Licitação\n\nOs dados indicam uma dispensa de licitação celebrada com a empresa Caxias Pavimentações e Construções Ltda (CNPJ 40.329.940/0001-43) no valor de R$ 407.768,82, referente à manutenção de pontilhões na Rua João Mincatto, fundamentada no Art. 75, I da Lei 14.133/2021. O documento aponta que a dispensa (nº 44/2025, Processo nº 2024/49229) foi registrada em 10 de março de 2025, apresentando indicadores que sugerem necessidade de análise quanto à conformidade com os requisitos legais para dispensa de procedimento licitatório.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, I",
+      "cnpj": "40.329.940/0001-43",
+      "value": 407768.82,
+      "evidence": [
+        {
+          "excerpt": "CONSTRUCOES LTDA. CNPJ: 40.329.940/0001-43. Objeto: Dispensa\nde licitação celebrada com a empresa Caxias Pavimentações e Construções Ltda para execução da obra de manutenção de\npontilhões na Rua João Mincatto, Galópolis. Valor R$ 407.768,82. Dispensa n.º 44/2025. Processo n.º 2024/49229. Fundamento\nLegal: Art",
+          "date": "2025-03-10",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2025-03-10/8beeefe4626e61ab1912425023b1a77efd9af64f.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:55:55.565Z",
+      "createdAt": "2026-05-02T16:55:55.565Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-036",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "dispensa_irregular",
+      "riskScore": 93,
+      "confidence": 0.65,
+      "narrative": "# Achado Identificado - Dispensa de Licitação\n\nIdentificamos uma dispensa de licitação no valor de R$ 244.331,12 realizada pela Secretaria Municipal da Educação de Caxias do Sul (Dispensa nº 023/2025), fundamentada no Art. 75, inciso VIII, da Lei nº 14.133/2021. O documento aponta a contratação da empresa MKT Indústria de Produtos, conforme aviso publicado em 18 de fevereiro de 2025. Os dados indicam um risco score de 93, sugerindo necessidade de análise complementar sobre a adequação legal do procedimento adotado.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, II",
+      "secretaria": "Secretaria Municipal da Educação",
+      "value": 244331.12,
+      "evidence": [
+        {
+          "excerpt": " Valor R$ 244.331,12. Dispensa n.º 023/2025. Processo n.º 2025/6146. Fundamento Legal: Art. 75, inciso VIII,\nda Lei nº 14.133/21.\n \n\nCaxias do Sul, 18 de fevereiro de 2025.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAviso de Dispensa de Licitação\n\n \nSMS –  Contratado(a):  MKT INDUSTRIA DE PRODUTOS",
+          "date": "2025-02-18",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2025-02-18/97d9bae8311d0b5b9349b7e377575855558a4f0a.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:20:24.239Z",
+      "createdAt": "2026-05-02T16:20:24.239Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-037",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "fracionamento",
+      "riskScore": 85,
+      "confidence": 0.9,
+      "narrative": "Identificamos 2 dispensas para o fornecedor CNPJ 27.180.624/0001-94 nos últimos 12 meses, totalizando R$ 179.640,00, acima do limite legal de R$ 65.492,11 (Lei 14.133/2021, Art. 75, §1º). O documento aponta possível fracionamento de contrato.",
+      "legalBasis": "Lei 14.133/2021, Art. 75, §1º",
+      "cnpj": "27.180.624/0001-94",
+      "secretaria": "SEMMA",
+      "value": 179640,
+      "evidence": [
+        {
+          "excerpt": "Logística\nCentral de Licitações\n \n\nCENTRAL DE LICITAÇÕES - CENLIC\n \n\nAviso de Dispensa de Licitação\n \nSEMMA - Contratado: CLEBER C DE SOUZA EIRELI - CNPJ: 27.180.624/0001-94. Objeto: Fornecimento de ração para cães,\npara atender a demanda do Canil Municipal. Valor: R$ 179.640,00. Dispensa n.º 027/2021. Processo",
+          "date": "2021-03-19",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2021-03-19/1fb2d44941e1eaceb18ae61efb9294aeb0b4762f.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T16:56:10.911Z",
+      "createdAt": "2026-05-02T16:56:10.911Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-038",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "**Achado de Fiscalização - Aditivo Contratual**\n\nIdentificamos um termo aditivo ao Contrato nº 2025/662 celebrado entre o Município de Caxias do Sul e a empresa TECNOGOV COMERCIAL LTDA, no valor de R$ 512,40, para acréscimo de quantitativo. Os dados indicam que o documento aponta para possível desconformidade com a Lei 14.133/2021, Art. 125, §1º, I, que estabelece limites para alterações contratuais em contratos originários de licitação.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 512.4,
+      "evidence": [
+        {
+          "excerpt": "2020/38317\n \nSMH – Contratante: Município de Caxias do Sul\nContratado: TECNOGOV COMERCIAL LTDA\nObjeto: Termo Aditivo n° 3 ao Contrato n° 2025/662 para acréscimo de quantitativo.\nValor: R$ 512,40 (quinhentos e doze reais, quarenta centavos)\nModalidade: Pregão eletrônico nº 2025/104\nProcesso GRP n.º 2025/8059 e",
+          "date": "2025-09-26",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2025-09-26/bd43bfd868565bbf2aded60e5c19b82f3596f68e.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:05:03.968Z",
+      "createdAt": "2026-05-02T17:05:03.968Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-039",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "# Achado Identificado - Aditivo Contratual\n\nIdentificamos um termo aditivo (nº 09) ao contrato 2019/159 celebrado entre o Município de Caxias do Sul e a empresa DELIZ VIAGENS E TRANSPORTES LTDA., no valor de R$ 234,96, referente a ajustes de quilometragem em roteiros de transporte. O documento aponta possível desconformidade com a Lei 14.133/2021, Art. 125, §1º, I, que estabelece limites para aditivos contratuais. Os dados indicam risco moderado-alto (score 87) na estruturação desta alteração contratual.\n\n---\n\n*Publicação automática do Fiscal Digital - Fiscalização de Gastos Públicos Municipais*",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 234.96,
+      "evidence": [
+        {
+          "excerpt": "SMED – Contratante: Município de Caxias do Sul\nContratado: DELIZ VIAGENS E TRANSPORTES LTDA.\nObjeto: Termo aditivo nº 09, ao contrato 2019/159 para redução de quilometragem roteiro 803 M/T e acréscimo de\nquilometragem roteiro 903 M/T.\nValor Estimado: R$ 234,96 (duzentos e trinta e quatro reais e noventa",
+          "date": "2021-11-08",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2021-11-08/1debb03e34ec578b8b3cd797495b700a1ed93dff.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:55:51.459Z",
+      "createdAt": "2026-05-02T16:55:51.459Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-040",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "1501402",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "# Achado de Fiscalização - Aditivo Contratual\n\nIdentificamos um aditivo contratual que elevou o valor inicial de R$ 1.974.200,22 para R$ 2.920.221,10, representando um acréscimo de aproximadamente 48% ao contrato original. O documento aponta potencial desconformidade com a Lei 14.133/2021, Art. 125, §1º, I, que estabelece limites para variações contratuais. Os dados indicam risco elevado (score 87) que requer análise detalhada da justificativa técnica e legal do aditivo.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 1974200.22,
+      "evidence": [
+        {
+          "excerpt": "Assim, ao \ncontrato inicial de R$ 1.974.200,22 (um milhão, novecentos \ne setenta e quatro mil, duzentos reais e vinte e dois centavos), \npassando o contrato a ser de R$2.920.221,10 (dois milhões, \nnovecentos e vinte mil, duzentos e vinte e um reais e dez \ncentavos).\n\n 2.2 O referido aditivo segue representado",
+          "date": "2023-09-29",
+          "source": "https://data.queridodiario.ok.org.br/1501402/2023-09-29/9c927abb44113c5db8683591c15e27cbcc555596.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#1501402#aditivo_abusivo#2026-05-03T16:49:00.899Z",
+      "createdAt": "2026-05-03T16:49:00.899Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-041",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "**Achado de Fiscalização - Aditivo Contratual**\n\nIdentificamos um termo aditivo (nº 08) ao Contrato nº 2018/751, celebrado com SERVIÇOS TEMPORÁRIOS EIRELI, no valor de R$ 8.757.534,60, para prorrogação de serviços de cuidadoria e monitoria do Programa Primeira Infância Melhor. O documento aponta potencial desconformidade com a Lei 14.133/2021, Art. 125, §1º, I, quanto aos critérios de justificativa para aditivos contratuais. Os dados indicam risco elevado (87/100) que recomenda análise técnica aprofundada pela administração municipal.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 8757534.6,
+      "evidence": [
+        {
+          "excerpt": "SERVIÇOS TEMPORÁRIOS EIRELI.\nObjeto: Termo Aditivo nº 08 ao Contrato nº 2018/751 celebrado para a prestação de serviços de cuidadoria e monitoria no\nPrograma Primeira Infância Melhor para prorrogar a vigência do contrato de 20/08/2023 até 19/08/2024.\nValor: R$ 8.757.534,60 (oito milhões e setecentos e",
+          "date": "2023-08-24",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2023-08-24/fd7c09964852a4386404b10015f655c9b01059fd.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:12:20.192Z",
+      "createdAt": "2026-05-02T17:12:20.192Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-042",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "# Achado Identificado - Aditivo Contratual\n\nIdentificamos um termo aditivo ao contrato nº 2021/763 celebrado entre o Município de Caxias do Sul e BETINA WEIRICH, no valor de R$ 1.600,00, que apresenta características de potencial desvio da modalidade de dispensa de licitação conforme Lei 14.133/2021, Art. 125, §1º, I. O documento aponta a inclusão de cláusulas de dotação orçamentária sem justificativa aparente de necessidade superveniente, configurando possível fracionamento de despesa. Recomenda-se análise da documentação original para verificação da conformidade com os requisitos legais de aditivos contratuais.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 1600,
+      "evidence": [
+        {
+          "excerpt": "prazo.\nValor Estimado: R$ 1.600,00 (um mil e seiscentos reais)\nModalidade de Licitação: Dispensa nº055/2019\nProcesso: 2019/20862\n \nSMU – Contratante: Município de Caxias do Sul\nContratado: BETINA WEIRICH\nObjeto: Termo Aditivo nº 01 ao Termo de Compromisso 2021/763, para acrescentar cláusulas de dotação",
+          "date": "2021-06-23",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2021-06-23/52e0e34bd0052c2c1fb714d2f93bedcf2be7afe2.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:31:56.873Z",
+      "createdAt": "2026-05-02T16:31:56.873Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-043",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "# Achado de Fiscalização - Aditivo Contratual\n\nIdentificamos o 6º termo aditivo ao contrato de locação de imóvel (nº 08/2015) da Fundação de Ação Social, com valor mensal de R$ 20.275,60, prorrogando a vigência por 12 meses a partir de março de 2021. O documento aponta que a operação foi fundamentada em dispensa de licitação, enquanto a Lei 14.133/2021, Art. 125, §1º, I, estabelece critérios específicos para sucessivas prorrogações contratuais. Os dados indicam risco elevado (87/100) quanto à conformidade com os limites legais para aditivos.\n\n---\n\n*Publicação automática - Fiscalização Digital de Gastos Públicos*",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 20275.6,
+      "evidence": [
+        {
+          "excerpt": "OBJETO: Termo Aditivo n.º 6 ao contrato n.º 08/2015 de locação de imóvel para a instalação da Sede Administrativa da\nFAS, para prorrogar o prazo de vigência. VALOR MENSAL: R$ 20.275,60. VIGÊNCIA: mais 12 meses a contar de 18 de março\nde 2021. Proc. Licitatório n.º 02/2015. Dispensa de Licitação. FUNDAMENTO",
+          "date": "2021-02-17",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2021-02-17/d4e9a3e369d458b728a75659b4b15da7a230591a.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:23:27.875Z",
+      "createdAt": "2026-05-02T17:23:27.875Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-044",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "**Achado de Fiscalização - Aditivo Contratual**\n\nIdentificamos um termo aditivo ao Contrato nº 2022/543 celebrado com a CARESTREAM DO BRASIL COMERCIO E SERVICOS DE PRODUTOS MEDICOS LTDA, no valor de R$ 44.410,80, que apresenta indicadores de potencial irregularidade conforme a Lei 14.133/2021, Art. 125, §1º, I. Os dados indicam que a renovação contratual foi formalizada via Dispensa nº 2022/24, modalidade que requer análise quanto aos requisitos legais de justificativa e proporcionalidade. Recomenda-se verificação da documentação de suporte e conformidade com os limites estabelecidos pela legislação de licitações.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 44410.8,
+      "evidence": [
+        {
+          "excerpt": "de Caxias do Sul\nContratado: CARESTREAM DO BRASIL COMERCIO E SERVICOS DE PRODUTOS MEDICOS LTDA\nObjeto: Termo Aditivo n° 02 ao Contrato n° 2022/543 para renovação contratual.\nValor: R$ 44.410,80 (quarenta e quatro mil, quatrocentos e dez reais e oitenta centavos).\nModalidade: Dispensa n.º 2022/24\nProcesso",
+          "date": "2024-03-28",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2024-03-28/0b3a8448708f531ba53c21aadaf153dc532c6769.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:54:55.753Z",
+      "createdAt": "2026-05-02T16:54:55.753Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-045",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": "# Achado: Aditivo Contratual Identificado\n\nOs dados indicam um termo aditivo ao contrato 2022/1389, celebrado com SHEILA TRANSPORTES LTDA., no valor de R$ 555.359,64, referente a acréscimo de quilometragem. O documento aponta modalidade de Pregão Presencial e data de 02/08/2023. A análise identifica potencial desconformidade com a Lei 14.133/2021, Art. 125, §1º, I, que estabelece limites para variações contratuais.",
+      "legalBasis": "Lei 14.133/2021, Art. 125, §1º, I",
+      "value": 555359.64,
+      "contractNumber": "2022/1389",
+      "evidence": [
+        {
+          "excerpt": "Sul.\nContratada: SHEILA TRANSPORTES LTDA.\nObjeto: Termo Aditivo nº 01, ao contrato 2022/1389, para acréscimo de quilometragem do roteiro 164 T/N.\nValor Estimado: R$ 555.359,64 (quinhentos e cinquenta e cinco mil, trezentos e cinquenta e nove reais e sessenta e quatro\ncentavos).\nModalidade: Pregão Presencial",
+          "date": "2023-08-02",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2023-08-02/859a18d2f5116eca184871ac436b7b63f5f6aeed.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:26:01.117Z",
+      "createdAt": "2026-05-02T17:26:01.117Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-046",
+      "fiscalId": "fiscal-diarias",
+      "cityId": "3106200",
+      "type": "diaria_irregular",
+      "riskScore": 85,
+      "confidence": 0.7,
+      "narrative": "Identificamos pagamento de diária no valor de R$ 2.329,52, acima do limite indiciário de R$ 800,00, com data de referência 25/05/2022. O documento aponta gasto que requer verificação do Decreto Municipal de diárias (limites variam por cidade). Lei 8.112/90, Art. 58 aplicada por analogia.",
+      "legalBasis": "Lei 8.112/90, Art. 58",
+      "value": 2329.52,
+      "evidence": [
+        {
+          "excerpt": "órgãos. \nVIII- Despesas de Viagem: R$ 2.329,52\n\nPedro Mousinho Gomes Carvalho Silva\nDiretor de Planejamento, Gestão e Finanças\n\nATA DA SESSÃO PÚBLICA\nPREGÃO ELETRÔNICO Nº 001/2022\n\nProcesso nº 01.010910.22.98\nObjeto: Prestação de serviço sob demanda, de \ninspeção técnica e manutenção de extintores \nusados",
+          "date": "2022-05-25",
+          "source": "https://data.queridodiario.ok.org.br/3106200/2022-05-25/6c5c19c71d70eac249054dc67b618e6a0d6944b7.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-diarias#3106200#diaria_irregular#2026-05-03T06:01:25.961Z",
+      "createdAt": "2026-05-03T06:01:25.961Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-047",
+      "fiscalId": "fiscal-diarias",
+      "cityId": "4205407",
+      "type": "diaria_irregular",
+      "riskScore": 85,
+      "confidence": 0.7,
+      "narrative": "Identificamos pagamento de diária no valor de R$ 2.283,48, acima do limite indiciário de R$ 800,00, com data de referência 16/01/2023. O documento aponta gasto que requer verificação do Decreto Municipal de diárias (limites variam por cidade). Lei 8.112/90, Art. 58 aplicada por analogia.",
+      "legalBasis": "Lei 8.112/90, Art. 58",
+      "value": 2283.48,
+      "evidence": [
+        {
+          "excerpt": "3,415370%, o \nvalor global da diária do contrato passará de R$ \n2.208,00 (dois mil, duzentos e oito reais), para R$ \n2.283,48 (dois mil, duzentos e oitenta e três reais e \nquarenta e oito centavos), gerando uma \nimpactação financeira no global da diária de R$ \n75,48 (setenta e cinco reais e quarenta",
+          "date": "2023-01-16",
+          "source": "https://data.queridodiario.ok.org.br/4205407/2023-01-16/d7a056126375d2d080b0a94de99ddd10c27709b4.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-diarias#4205407#diaria_irregular#2026-05-03T09:51:59.067Z",
+      "createdAt": "2026-05-03T09:51:59.067Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-048",
+      "fiscalId": "fiscal-diarias",
+      "cityId": "3549904",
+      "type": "diaria_irregular",
+      "riskScore": 85,
+      "confidence": 0.7,
+      "narrative": "Identificamos pagamento de diária no valor de R$ 136.500,00, acima do limite indiciário de R$ 800,00, com data de referência 19/02/2024. O documento aponta gasto que requer verificação do Decreto Municipal de diárias (limites variam por cidade). Lei 8.112/90, Art. 58 aplicada por analogia.",
+      "legalBasis": "Lei 8.112/90, Art. 58",
+      "value": 136500,
+      "evidence": [
+        {
+          "excerpt": "19/02/2024\nPARTE: LUZINETE GOES CAVALCANTE 16204643819\nOBJETO: ATA DE REGISTRO DE PREÇOS PARA A PRESTAÇÃO DE \nSERVIÇO DE DIÁRIA EM HOTEL - APARTAMENTO SIMPLES.\nPRAZO: 12 (DOZE) MESES\nVALOR: R$ 136.500,00\nMODALIDADE: PREGAO ELETRONICO - 302/2023\nPROCESSO ADMINISTRATIVO DIGITAL: 138237/2023\n\nARP Nº 22/2024",
+          "date": "2024-02-20",
+          "source": "https://data.queridodiario.ok.org.br/3549904/2024-02-20/653403c4ca47fc698f2c0ff5a4e420eb7d4a9519.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-diarias#3549904#diaria_irregular#2026-05-03T06:22:11.998Z",
+      "createdAt": "2026-05-03T06:22:11.998Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-049",
+      "fiscalId": "fiscal-diarias",
+      "cityId": "2611606",
+      "type": "diaria_irregular",
+      "riskScore": 63,
+      "confidence": 0.6,
+      "narrative": "Identificamos pagamento de diária com data de referência em 14/06/2025 (sábado), publicada na gazette de 14/06/2025. O documento não aponta justificativa explícita (emergência, plantão ou inadiável). Diária é compensação por deslocamento em serviço (Lei 8.112/90, Art. 58, aplicada por analogia em âmbito municipal).",
+      "legalBasis": "Lei 8.112/90, Art. 58",
+      "evidence": [
+        {
+          "excerpt": "Magalhães - Praça do \nDerby (nos sentidos Boa Viagem e Olinda) e \nPraça do Amorim - com distribuição de pan-\nfletos, faixas informativas e diálogo direto \n\ncom motoristas, passageiros e pedestres.\nA mobilização também estará presente \n\nnos polos juninos espalhados pela cidade. \nA partir das 17h, equipes",
+          "date": "2025-06-14",
+          "source": "https://data.queridodiario.ok.org.br/2611606/2025-06-14/025c821fe290f882e839fa7a9f2b1da6d1757d4f.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-diarias#2611606#diaria_irregular#2026-05-03T04:28:00.311Z",
+      "createdAt": "2026-05-03T04:28:00.311Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-050",
+      "fiscalId": "fiscal-publicidade",
+      "cityId": "4113700",
+      "type": "publicidade_eleitoral",
+      "riskScore": 79,
+      "confidence": 0.72,
+      "narrative": "Identificamos contratação ou execução de publicidade institucional em gazette de 27/08/2024, dentro da janela vedada de 3 meses antes da eleição (eleição prevista para 06/10/2024). O documento não detalha valor explícito no excerpt analisado. Lei 9.504/97, Art. 73, VI, \"b\" veda publicidade institucional no período, salvo grave e urgente necessidade pública autorizada pela Justiça Eleitoral.",
+      "legalBasis": "Lei 9.504/97, Art. 73, VI, \"b\"",
+      "evidence": [
+        {
+          "excerpt": "Jornal Oficial nº 5284  Pág. 4 Terça-feira, 27 de agosto de 2024 \n \n\nRESOLVEM: \n \nArt. 1º  Designar servidores para exercer a função de Fiscal de Contrato, conforme segue: \n  \n\nNOME MATRÍCULA ÓRGÃO \n\nANA KARLA JACOBY AGUIAR VALIM 151670 \nSECRETARIA MUNICIPAL DE RECURSOS HUMANOS - PREFEITURA DE LONDRINA",
+          "date": "2024-08-27",
+          "source": "https://data.queridodiario.ok.org.br/4113700/2024-08-27/03b291544c6122f6261b9e41df09bbe360f39522.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-publicidade#4113700#publicidade_eleitoral#2026-05-03T16:44:15.811Z",
+      "createdAt": "2026-05-03T16:44:15.811Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-051",
+      "fiscalId": "fiscal-publicidade",
+      "cityId": "5201405",
+      "type": "publicidade_eleitoral",
+      "riskScore": 79,
+      "confidence": 0.72,
+      "narrative": "Identificamos contratação ou execução de publicidade institucional em gazette de 06/12/2024, dentro da janela vedada de 3 meses antes da eleição (eleição prevista para 06/10/2024). O documento não detalha valor explícito no excerpt analisado. Lei 9.504/97, Art. 73, VI, \"b\" veda publicidade institucional no período, salvo grave e urgente necessidade pública autorizada pela Justiça Eleitoral. O excerpt menciona o(a) prefeito(a) ou a gestão municipal — Art. 73, VII também veda uso promocional em favor de candidato.",
+      "legalBasis": "Lei 9.504/97, Art. 73, VI, \"b\" e VII",
+      "evidence": [
+        {
+          "excerpt": "gestão e supervisão do funcionamento do serviço;\n\nII- organização da divulgação do serviço e mobilização das famílias;\n\nIII- organização de seleção e contratação de pessoal e supervisão dos trabalhos \ndesenvolvidos;\n\nIV- organização das informações das crianças e adolescentes e suas respectivas \nfamílias;",
+          "date": "2024-12-06",
+          "source": "https://data.queridodiario.ok.org.br/5201405/2024-12-06/163bdd2963b9a09170f5282b95f1de166db359e4.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-publicidade#5201405#publicidade_eleitoral#2026-05-03T11:54:00.675Z",
+      "createdAt": "2026-05-03T11:54:00.675Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-052",
+      "fiscalId": "fiscal-publicidade",
+      "cityId": "4314902",
+      "type": "publicidade_eleitoral",
+      "riskScore": 79,
+      "confidence": 0.72,
+      "narrative": "Identificamos contratação ou execução de publicidade institucional em gazette de 26/07/2024, dentro da janela vedada de 3 meses antes da eleição (eleição prevista para 06/10/2024). O documento não detalha valor explícito no excerpt analisado. Lei 9.504/97, Art. 73, VI, \"b\" veda publicidade institucional no período, salvo grave e urgente necessidade pública autorizada pela Justiça Eleitoral.",
+      "legalBasis": "Lei 9.504/97, Art. 73, VI, \"b\"",
+      "evidence": [
+        {
+          "excerpt": "DOS\nSANTOS BARBOSA\n\n159168/07\n\nAutoridade competente\npor homologar as\ncontratações diretas\n(titular da pasta ou\nOrdenador de Despesa\ncom delegação)\n\nSecretário Municipal\n\n\n\nÓrgão de divulgação do Município - Ano XXIX - Edição 7315 - Sexta-feira, 26 de julho de 2024\n\nhttp://www.portoalegre.rs.gov.br/dopa/",
+          "date": "2024-07-26",
+          "source": "https://data.queridodiario.ok.org.br/4314902/2024-07-26/0f9bf22eaa342fa2b4167e6a1b654b47ca325345.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-publicidade#4314902#publicidade_eleitoral#2026-05-02T18:09:03.680Z",
+      "createdAt": "2026-05-02T18:09:03.680Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-053",
+      "fiscalId": "fiscal-publicidade",
+      "cityId": "4305108",
+      "type": "publicidade_eleitoral",
+      "riskScore": 79,
+      "confidence": 0.72,
+      "narrative": "Identificamos contratação ou execução de publicidade institucional em gazette de 04/11/2024, dentro da janela vedada de 3 meses antes da eleição (eleição prevista para 06/10/2024). O documento não detalha valor explícito no excerpt analisado. Lei 9.504/97, Art. 73, VI, \"b\" veda publicidade institucional no período, salvo grave e urgente necessidade pública autorizada pela Justiça Eleitoral.",
+      "legalBasis": "Lei 9.504/97, Art. 73, VI, \"b\"",
+      "evidence": [
+        {
+          "excerpt": "2024/28703 e PROA n.º 24/8050-0017355-2\n \nSMOSP – Contratante: Município de Caxias do Sul\nContratado: BRASIL OUTDOOR CAXIAS SPE S.A.\nObjeto: Termo aditivo n.º 01 ao contrato de concessão n.º 503/2023 para prorrogação da segunda parcela da outorga fixa.\nModalidade: Concorrência nº 2023/76\nProcesso GRP nº",
+          "date": "2024-11-04",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2024-11-04/8f444db5a02319d9d6a2f97c68aaf1a88637ca0f.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-publicidade#4305108#publicidade_eleitoral#2026-05-02T17:22:14.586Z",
+      "createdAt": "2026-05-02T17:22:14.586Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-054",
+      "fiscalId": "fiscal-publicidade",
+      "cityId": "4314902",
+      "type": "publicidade_eleitoral",
+      "riskScore": 79,
+      "confidence": 0.72,
+      "narrative": "Identificamos contratação ou execução de publicidade institucional em gazette de 18/12/2024, dentro da janela vedada de 3 meses antes da eleição (eleição prevista para 06/10/2024). O documento não detalha valor explícito no excerpt analisado. Lei 9.504/97, Art. 73, VI, \"b\" veda publicidade institucional no período, salvo grave e urgente necessidade pública autorizada pela Justiça Eleitoral.",
+      "legalBasis": "Lei 9.504/97, Art. 73, VI, \"b\"",
+      "evidence": [
+        {
+          "excerpt": "para acompanhar eDESIGNA  27/01/2025  26/01/2026,\nfiscalizar a execução e o adequado cumprimento das cláusulas estabelecidas no Contrato  referente nº 81833/2023,\nTermo Aditivo  firmado no Processo SEI  com a empresa SELBETTI TECNOLOGIA 92899/2024,  nº 23.0.000000906-7,\n\n\n\nÓrgão de divulgação do Município",
+          "date": "2024-12-18",
+          "source": "https://data.queridodiario.ok.org.br/4314902/2024-12-18/85a7856b11fcc45d8611ce49f8dd5bdd5356d2e7.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-publicidade#4314902#publicidade_eleitoral#2026-05-02T18:01:11.154Z",
+      "createdAt": "2026-05-02T18:01:11.154Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-055",
+      "fiscalId": "fiscal-convenios",
+      "cityId": "2927408",
+      "type": "convenio_sem_chamamento",
+      "riskScore": 89,
+      "confidence": 0.65,
+      "narrative": "# Achado - Convênio sem Chamamento Público\n\nIdentificamos um convênio no valor de R$ 2.397.000,00 celebrado pela SEMDEC sem realização de chamamento público, conforme exigido pela Lei 13.019/2014, Art. 24. Os dados indicam execução de apenas 2% do valor orçado na subação 1047 (fonte 0124), com posterior migração dos contratos para a SUCOP. O documento aponta celebração do instrumento em março de 2021, período posterior à Reforma Administrativa municipal.",
+      "legalBasis": "Lei 13.019/2014, Art. 24",
+      "secretaria": "SEMDEC",
+      "value": 2397000,
+      "evidence": [
+        {
+          "excerpt": "O valor orçado na subação 1047 esta incluso a fonte: 0124 de convênio no valor de R$ 2.397.000,00 que teve  \nsomente 2% da sua execução, pois os contratos foram migrados para a SUCOP. \n \n2. SEMDEC - Em virtude da Reforma Administrativa (Lei 076/2020), a SEMTEL passou a denominar-se SEMDEC e as \n\natribuições",
+          "date": "2021-03-25",
+          "source": "https://data.queridodiario.ok.org.br/2927408/2021-03-25/faa61a0ff9fbe61a36b6a939184bca2d5298a4cc.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-convenios#2927408#convenio_sem_chamamento#2026-05-03T15:47:23.990Z",
+      "createdAt": "2026-05-03T15:47:23.990Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-056",
+      "fiscalId": "fiscal-convenios",
+      "cityId": "3509502",
+      "type": "convenio_sem_chamamento",
+      "riskScore": 89,
+      "confidence": 0.65,
+      "narrative": "# Achado Identificado - Convênio sem Chamamento Público\n\nOs dados indicam a celebração de convênio no valor de R$ 5.000.000,00 pela Secretária Municipal de Infraestrutura, referente a obras e instalações, sem registro de chamamento público prévio conforme exigido pela Lei 13.019/2014, Art. 24. O documento aponta contrato de repasse nº 909091/2020 com risco identificado de 89 pontos na análise automatizada. Recomenda-se verificação da documentação de justificativa técnica e legal para dispensa do procedimento de seleção.",
+      "legalBasis": "Lei 13.019/2014, Art. 24",
+      "secretaria": "SECRETÁRIA MUNICIPAL DE INFRA ESTRUTURA",
+      "value": 5000000,
+      "evidence": [
+        {
+          "excerpt": "DEPARTAMENTO DE CULTURA\n13.392.1006.1070  AQUISIÇÃO, CONSTRUÇÃO E REFORMA DE BENS MÓVEIS E IMÓVEIS\n449051  OBRAS E INSTALAÇÕES\n05.100.563  GERAL - CONTRATO DE REPASSE Nº909091/2020/MTUR/CAIXA ... R$ 5.000.000,00\n201000  SECRETÁRIA MUNICIPAL DE INFRA ESTRUTURA\n20106 DEPARTAMENTO DE PROJETOS E OBRAS\n15",
+          "date": "2023-03-24",
+          "source": "https://data.queridodiario.ok.org.br/3509502/2023-03-24/24d84aac6a0d80019295991d3a8b7f1bbf3d6b1e.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T05:23:34.154Z",
+      "createdAt": "2026-05-03T05:23:34.154Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-057",
+      "fiscalId": "fiscal-convenios",
+      "cityId": "3509502",
+      "type": "convenio_sem_chamamento",
+      "riskScore": 81,
+      "confidence": 0.65,
+      "narrative": "# Achado - Convênio sem Chamamento Público\n\nIdentificamos um convênio no valor de R$ 723.352,00 destinado a obras de ampliação da malha viária e rede de drenagem urbana que foi celebrado sem processo de chamamento público, conforme indicado nos documentos de 6 de fevereiro de 2023. A Lei 13.019/2014, em seu artigo 24, estabelece requisitos para celebração de convênios com organizações da sociedade civil, incluindo a necessidade de seleção pública em determinadas situações. Os dados sugerem potencial desconformidade com os procedimentos legais de transparência e competitividade exigidos pela legislação de parcerias público-privadas.",
+      "legalBasis": "Lei 13.019/2014, Art. 24",
+      "value": 723352,
+      "evidence": [
+        {
+          "excerpt": "OBRAS\n15.451.3012.1118 AMPLIAR A MALHA VIÁRIA COM ASFALTO NOVO (PAV) \n E AMPL. DA RED DE DRENAGEM URBANA\n449051 OBRAS E INSTALAÇÕES\n05.100.503 GERAL CONTRATO DE REPASSE N° 903505/2020/MDR/CAIXA ......... R$ 723.352,00\n\nII - nos termos do artigo 4º, § 1º, inciso V, da Lei nº 16.351 de 29 de Dezembro de 2022:",
+          "date": "2023-02-06",
+          "source": "https://data.queridodiario.ok.org.br/3509502/2023-02-06/6ec46937e52863a64a08327393b654446b4c67bf.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T15:53:05.863Z",
+      "createdAt": "2026-05-03T15:53:05.863Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-058",
+      "fiscalId": "fiscal-convenios",
+      "cityId": "3509502",
+      "type": "convenio_sem_chamamento",
+      "riskScore": 81,
+      "confidence": 0.65,
+      "narrative": "# Achado de Fiscalização - Convênio sem Chamamento Público\n\nOs dados indicam a celebração de convênio no valor de R$ 723.352,00 sem processo de chamamento público, conforme identificado no Contrato Repasse nº903505/2020/MDR/CAIXA. A Lei 13.019/2014, em seu artigo 24, estabelece requisitos para dispensa de chamamento em situações específicas, sendo necessária verificação da adequação legal do caso. O documento foi localizado em execução orçamentária de 14 de janeiro de 2022.",
+      "legalBasis": "Lei 13.019/2014, Art. 24",
+      "value": 723352,
+      "evidence": [
+        {
+          "excerpt": "INSTALAÇÕES\n05.100.503  GERAL - CONTRATO REPASSE Nº903505/2020/MDR/CAIXA ............... R$ 723.352,00\nArtigo 2º - O Crédito aberto pelo artigo anterior será coberto com recurso de que trata \no artigo 43, § 1º, inciso II da Lei 4.320 de 17/03/64, provenientes do Contrato Repasse \nnº903505/2020/MDR/CAIXA",
+          "date": "2022-01-14",
+          "source": "https://data.queridodiario.ok.org.br/3509502/2022-01-14/4344722a8ab9a006e8f49fc044645e16256c3f57.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T05:12:14.915Z",
+      "createdAt": "2026-05-03T05:12:14.915Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-059",
+      "fiscalId": "fiscal-convenios",
+      "cityId": "4305108",
+      "type": "convenio_sem_chamamento",
+      "riskScore": 89,
+      "confidence": 0.65,
+      "narrative": "**Achado de Fiscalização - Convênio sem Chamamento Público**\n\nOs dados indicam a liberação de R$ 955.000,00 pela Caixa Econômica Federal ao Município de Caxias do Sul em junho de 2022, para pavimentação asfáltica na Estrada Municipal São João Batista, sem evidência de chamamento público prévio conforme exigido pela Lei 13.019/2014, Art. 24. O documento aponta potencial irregularidade no processo de seleção da entidade executora, configurando risco significativo de desvio de procedimento licitatório. Recomenda-se análise complementar da documentação de justificativa e dispensa de chamamento junto aos órgãos competentes.",
+      "legalBasis": "Lei 13.019/2014, Art. 24",
+      "value": 955000,
+      "evidence": [
+        {
+          "excerpt": "comunicamos que a Caixa Econômica\nFederal efetuou, em 15 de junho de 2022, liberação de recurso financeiro ao Município de Caxias do Sul, no âmbito do Contrato\nde Repasse nº 907854/2020/MAPA/Caixa, para execução de pavimentação asfáltica em CBUQ na Estrada Municipal São João\nBatista, no valor de R$ 955.000",
+          "date": "2022-06-17",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2022-06-17/fe34d4ef08dc1ba63cb5aeb5cda27bd2266313cf.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-convenios#4305108#convenio_sem_chamamento#2026-05-02T17:47:03.155Z",
+      "createdAt": "2026-05-02T17:47:03.155Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-060",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "3205200",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 60,
+      "confidence": 0.65,
+      "narrative": "**Achado Identificado - Locação sem Justificativa**\n\nOs dados indicam a contratação de locação de imóvel sem documentação que justifique a necessidade ou a seleção do bem, conforme exigido pela Lei 14.133/2021, Art. 74, III. O documento aponta lacunas na comprovação dos critérios técnicos que fundamentaram a escolha do imóvel para fins administrativos. Identificamos risco moderado (60/100) na conformidade desta despesa com os requisitos legais de transparência e rastreabilidade.",
+      "legalBasis": "Lei 14.133/2021, Art. 74, III",
+      "evidence": [
+        {
+          "excerpt": "manutenção do imóvel nas condições em que foi recebido. \nIV - arcar com todas as despesas decorrentes de eventuais danos causados ao imóvel objeto do contrato de \nlocação; \nV - adequar a data do vencimento do pagamento do aluguel à data do recebimento do benefício; \nVI - apresentar documentação ou prestar",
+          "date": "2022-02-22",
+          "source": "https://data.queridodiario.ok.org.br/3205200/2022-02-22/eca253a26e5bd0afb108a1f50eb00f95f79aa34a.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-locacao#3205200#locacao_sem_justificativa#2026-05-03T10:48:40.377Z",
+      "createdAt": "2026-05-03T10:48:40.377Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-061",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "3300456",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 60,
+      "confidence": 0.65,
+      "narrative": "# Achado de Fiscalização - Locação sem Justificativa\n\nOs dados identificam um contrato de locação (001/SEMAD/2014) para imóvel na Avenida Florípes Rocha, Belford Roxo, sem documentação que justifique a necessidade da contratação conforme exigido pela Lei 14.133/2021, Art. 74, III. O documento de rescisão datado de 27 de julho de 2023 aponta a falta de fundamentação técnica prévia para a locação do espaço. A análise indica necessidade de revisão da documentação comprobatória que sustentou a decisão pela contratação deste serviço.\n\n---\n\n**Classificação:** Risco Médio (Score: 60)  \n**Base Legal:** Lei 14.133/2021, Art. 74, III",
+      "legalBasis": "Lei 14.133/2021, Art. 74, III",
+      "evidence": [
+        {
+          "excerpt": "DE RESCISÃO \nPROCESSO: 4/5311/2013 \nCONTRATO: 001/SEMAD/2014 \nLOCATÁRIO: Sr. JOÃO LUIZ GONÇALVES GATTO \nOBJETO: Locação do Imóvel na Avenida Florípes Rocha, nº 380, Loja 02 e 03, Centro, Belford Roxo. \nFUNDAMENTAÇÃO LEGAL: As partes acordam em rescindir o contrato de locação firmado em 09 de janeiro",
+          "date": "2023-07-27",
+          "source": "https://data.queridodiario.ok.org.br/3300456/2023-07-27/1f63aea183765675ff5f61a8fbd52e0ae527fc12.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-locacao#3300456#locacao_sem_justificativa#2026-05-03T18:27:46.570Z",
+      "createdAt": "2026-05-03T18:27:46.570Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-062",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "2507507",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 60,
+      "confidence": 0.65,
+      "narrative": "**Achado Identificado - Locação sem Justificativa**\n\nIdentificamos contrato de locação de imóvel para a Junta Médica do Município, conforme Portaria de 24 de outubro de 2022, sem documentação que justifique a necessidade da contratação ou análise de alternativas, conforme exigido pela Lei 14.133/2021, Art. 74, III. O documento aponta designação de gestor e fiscal pela Secretaria da Administração, porém os dados indicam ausência de fundamentação técnica prévia para a locação.",
+      "legalBasis": "Lei 14.133/2021, Art. 74, III",
+      "secretaria": "Secretaria da Administração",
+      "evidence": [
+        {
+          "excerpt": "902-\n6, GESTOR, e MARILEIDE PONTES DA SILVA, matrícula nº 17.226-0, FISCAL,\nlotados na Secretaria da Administração, para acompanhar e fiscalizar o contrato de\nLocação de Imóvel para funcionamento da Junta Médica do Município.\n\nII - Esta portaria entra em vigor a partir de sua publicação.\n\nARIOSVALDO DE",
+          "date": "2022-10-24",
+          "source": "https://data.queridodiario.ok.org.br/2507507/2022-10-24/26e96e231433ea45b100a6475420adaa09e533b8.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-locacao#2507507#locacao_sem_justificativa#2026-05-03T15:58:52.384Z",
+      "createdAt": "2026-05-03T15:58:52.384Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-063",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "3170206",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 60,
+      "confidence": 0.65,
+      "narrative": "**Achado Identificado - Locação sem Justificativa**\n\nOs dados indicam a identificação de contrato de locação de imóvel sem documentação adequada de justificativa técnica ou econômica conforme exigido pela Lei 14.133/2021, Art. 74, III. O documento aponta a necessidade de apresentação de autorização do proprietário e comprovação de utilização, elementos que não foram localizados nos registros analisados. Recomenda-se à administração municipal a regularização da documentação ou revisão da continuidade dessa despesa.",
+      "legalBasis": "Lei 14.133/2021, Art. 74, III",
+      "evidence": [
+        {
+          "excerpt": "deverá obedecer ao cronograma constante do Anexo deste Decreto e \napresentar os seguintes documentos perante a Plataforma de Atendimento:\n\nI – cópia do contrato de locação ou de documento similar que comprove a \nutilização do imóvel por terceiro;\n\nII – autorização emitida pelo proprietário do imóvel com fi",
+          "date": "2022-01-21",
+          "source": "https://data.queridodiario.ok.org.br/3170206/2022-01-21/76adafdc3f781b38704a40fdc1abf90279c91fdb.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-locacao#3170206#locacao_sem_justificativa#2026-05-03T07:09:54.099Z",
+      "createdAt": "2026-05-03T07:09:54.099Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
+    },
+    {
+      "id": "GS-064",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "3301009",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 60,
+      "confidence": 0.65,
+      "narrative": "**Achado de Fiscalização - Locação sem Justificativa**\n\nOs dados indicam a designação de fiscais para o Contrato nº 006L/2022 (Processo 2022.021.000119-9-PR), referente à locação de imóvel, sem que o documento apresente justificativa técnica ou administrativa para a contratação. A Lei 14.133/2021, Art. 74, III, exige fundamentação para despesas desta natureza. O achado apresenta risco moderado (score 60) e recomenda-se análise complementar da documentação de suporte da locação.",
+      "legalBasis": "Lei 14.133/2021, Art. 74, III",
+      "evidence": [
+        {
+          "excerpt": "Gestor de Contrato e Rosângela \nPereira Marvila, matrícula nº 41.112, Coordenadora de Proteção de Média Complexidade\n, para atuar como Fiscal de Contrato, no que se refere a Locação de Imóvel referente ao \nContrato nº 006L/2022 - Processo nº 2022.021.000119-9-PR. Objeto: O presente Contrato \ntem por objeto",
+          "date": "2023-07-19",
+          "source": "https://data.queridodiario.ok.org.br/3301009/2023-07-19/60b4e4a363dd18f2dc87c5ad993f056d8f2ec87a.pdf"
+        }
+      ],
+      "sourceFindingId": "FINDING#fiscal-locacao#3301009#locacao_sem_justificativa#2026-05-03T05:39:02.594Z",
+      "createdAt": "2026-05-03T05:39:02.594Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "schemaVersion": 1
     }
   ]
 }
