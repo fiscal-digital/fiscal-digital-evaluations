@@ -1,9 +1,10 @@
 # ADR-001 — FiscalPublicidade dispara em "divulgação", concessões e publicações legais
 
-**Status:** Aceito (aguardando patch)
+**Status:** Aplicado (2026-05-10 — `fiscal-digital` PR a ser aberto)
 **Data:** 2026-05-10
-**Precisão atual:** 0,0% (0 TP / 6 FP em 6 amostras)
-**Severidade:** P0 — desligar publicação até correção
+**Precisão pré-patch:** 0,0% Ciclo 1 (n=6) → 8,7% Ciclo 2 (n=23, universo esgotado em prod)
+**Precisão pós-patch:** a medir contra os mesmos 23 rotulados após merge
+**Severidade:** P0 — patch incorpora 18 stopwords (header DO + designação fiscal + publicação legal + concessão patrimonial + atribuição funcional)
 
 ---
 

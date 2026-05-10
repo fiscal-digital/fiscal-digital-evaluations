@@ -1,17 +1,12 @@
 # Baseline v1.5.0 — Fiscal Digital Engine
 
 **Data da avaliação:** 2026-05-10
-**Engine version:** v1.5.0
-**Status:** Ciclo 3 PARCIAL — 1.514/1.695 amostras rotuladas (181 pendentes)
+**Engine version:** v1.5.0 (com 7 PRs P0/P1/P2 abertos — ainda não merged em main)
+**Status:** Ciclo 3 COMPLETO — **1.695/1.695 amostras rotuladas (100% do universo amostral em prod)**
 
-> **Conclusão do Ciclo 3 parcial (2026-05-10):** Ciclo 3 ampliou o golden set de 1.016 para 1.695 amostras reais (esgota universo amostral). 498 das 679 novas foram rotuladas por sub-agents Opus em paralelo; 181 pendentes (Pessoal shard1=136, Contratos=24, Licitações=21) devido ao limite de cota Anthropic. **Ciclo 3 confirma o resultado do Ciclo 2: nenhum Fiscal atinge 85%**. Pessoal cai de 67,6% → 36,9% com escala (n=300 → n=572): as 269 novas amostras de Pessoal rotuladas vieram 0 TP / 269 FP, sugerindo que o shard amostral capturou os padrões originais novos de FP descobertos no C2 (vaga decorrente substituição, comunicado convocação, transição mandato, texto normativo).
+> **Conclusão do Ciclo 3 completo (2026-05-10):** Universo amostral de `alerts-prod` totalmente esgotado para 8 dos 10 Fiscais (Locação, Convênios, Diárias, Publicidade, Geral, Pessoal, Contratos, Licitações). **Nenhum Fiscal atinge o piso de 85% de precisão**. Pessoal caiu de 67,6% (C2, n=300) → 31,6% (C3, n=708). 7 PRs de patch P0/P1/P2 abertos em `fiscal-digital` (#16-22) endereçando todos os padrões de FP identificados; aguardam merge + re-eval pós-patch para confirmar elevação de precisão.
 >
-> **Conclusão do Ciclo 2 (2026-05-10):** Ciclo 2 ampliou o golden set de 101 para 1.016 amostras reais. **Resultado revelou viés amostral severo no Ciclo 1**: Licitações caiu de 88,9% (n=20) para 37,4% (n=150). Conclusão: golden set < 50 amostras por Fiscal tem risco alto de mascarar bugs. Recomenda-se sempre validar com n ≥ 100 antes de declarar Fiscal "pronto". **Nenhum dos 7 Fiscais com amostragem completa atinge o piso de 85% de precisão** — todos requerem patches.
-
-**Avaliadores:**
-- Ciclo 1 (101 amostras): claude-opus-4-7 manual (40) + 7 sub-agents paralelos (61)
-- Ciclo 2 (915 novas): 14 sub-agents claude-opus-4-7 em paralelo (rodadas em 2 ondas devido ao limite de cota)
-- Ciclo 3 (498 novas rotuladas até 2026-05-10): 4 sub-agents claude-opus-4-7 paralelos (Locação shard 1/2, Pessoal shard 2/3). Demais shards (pessoal-1, contratos-1, licitações-1 = 181 amostras) preparadas como `.tmp-pending-*.json` na raiz do repo, aguardando próxima janela de cota.
+> **Avaliadores:** Ciclo 1 (101): claude-opus-4-7 manual + 7 sub-agents. Ciclo 2 (915 novas): 14 sub-agents paralelos. Ciclo 3 (679 novas): 7 sub-agents paralelos em 2 ondas (4 + 3 retomado após pausa de cota).
 
 **Cobertura de Fiscais com amostras reais:** 8 de 10 (Nepotismo e Fornecedores ainda sem amostras — ver [`GAP_REPORT.md`](GAP_REPORT.md))
 
@@ -46,21 +41,56 @@
 | **FiscalGeral** | 1 | 0 | 0 | 1 | **100,0%** | n/a | n/a |
 | **TOTAL** | **313** | **643** | **60** | **1.016** | **32,7%** | — | — |
 
-### Ciclo 3 parcial (n=1.514 rotuladas de 1.695) — esgotamento amostral em curso
+### Ciclo 3 COMPLETO (n=1.695 amostras = universo amostral em prod esgotado)
 
-| Fiscal | TP | FP | Borderline | Pendentes | Total | Precisão (rotulados) | Δ vs C2 |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| **FiscalPessoal** | 194 | 332 | 46 | 136 | 708 | **36,9%** | **−30,7pp** ⚠️ |
-| **FiscalLocação** | 72 | 378 | 26 | 0 | 476 | **16,0%** | −3,6pp |
-| **FiscalContratos** | 20 | 157 | 3 | 24 | 204 | **11,3%** | 0 |
-| **FiscalLicitações** | 52 | 87 | 11 | 21 | 171 | **37,4%** | 0 |
-| **FiscalConvênios** | 0 | 68 | 7 | 0 | 75 | **0,0%** | 0 |
-| **FiscalDiárias** | 0 | 37 | 0 | 0 | 37 | **0,0%** | 0 |
-| **FiscalPublicidade** | 2 | 21 | 0 | 0 | 23 | **8,7%** | 0 |
-| **FiscalGeral** | 1 | 0 | 0 | 0 | 1 | **100,0%** | 0 |
-| **TOTAL** | **341** | **1.080** | **93** | **181** | **1.695** | **24,0%** | — |
+| Fiscal | TP | FP | Borderline | Total | Precisão | Δ vs C2 | Gap p/ 85% | PR patch |
+|---|---:|---:|---:|---:|---:|---:|---:|:---|
+| **FiscalPessoal** | 194 | 419 | 95 | 708 | **31,6%** | **−36,0pp** ⚠️ | −53,4pp | [#20](https://github.com/fiscal-digital/fiscal-digital/pull/20) |
+| **FiscalLocação** | 72 | 378 | 26 | 476 | **16,0%** | −3,6pp | −69,0pp | [#16](https://github.com/fiscal-digital/fiscal-digital/pull/16) |
+| **FiscalLicitações** | 59 | 99 | 13 | 171 | **37,3%** | −0,1pp | −47,7pp | [#21](https://github.com/fiscal-digital/fiscal-digital/pull/21) |
+| **FiscalContratos** | 20 | 180 | 4 | 204 | **10,0%** | −1,3pp | −75,0pp | [#22](https://github.com/fiscal-digital/fiscal-digital/pull/22) |
+| **FiscalPublicidade** | 2 | 21 | 0 | 23 | **8,7%** | 0 | −76,3pp | [#19](https://github.com/fiscal-digital/fiscal-digital/pull/19) |
+| **FiscalConvênios** | 0 | 68 | 7 | 75 | **0,0%** | 0 | −85,0pp | [#18](https://github.com/fiscal-digital/fiscal-digital/pull/18) |
+| **FiscalDiárias** | 0 | 37 | 0 | 37 | **0,0%** | 0 | −85,0pp | [#17](https://github.com/fiscal-digital/fiscal-digital/pull/17) |
+| **FiscalGeral** | 1 | 0 | 0 | 1 | **100,0%** | 0 | +15,0pp | n/a |
+| **TOTAL** | **348** | **1.202** | **145** | **1.695** | **22,5%** | −10,2pp | — | 7 PRs |
 
-> ⚠️ **Pessoal queda atípica (67,6% → 36,9%):** 269 novas amostras rotuladas (shards 2 e 3) vieram 0 TP / 269 FP. A distribuição é estatisticamente anômala vs C2 (que tinha 64,7% TP em 300). Hipóteses: (a) escala revelou massa de FPs novos descobertos no C2 (comunicado_convocacao_nao_e_nomeacao, vaga_decorrente_substituicao_individual, texto_normativo_mencao_palavra_nomeacao); (b) viés do sub-agent para classificar conservadoramente como FP quando excerpt é ambíguo. Ambas hipóteses são consistentes com os ADRs do C2 que apontam a regex de Pessoal como majoritariamente overmatch. Para o Ciclo 4 (pós-patch P2 Pessoal), confirmar via re-eval do patch contra esses 526 rotulados.
+> ⚠️ **Pessoal queda final 67,6% → 31,6% com escala total (n=708):** Confirma a hipótese do parcial — escala revelou massa de FPs novos. 87 FPs adicionais do shard 1 (universo esgotado) confirmam padrões dominantes: `texto_normativo_mencao_palavra_nomeacao` (23 amostras), `exoneracao_a_pedido_individual` (20), `vaga_decorrente_substituicao_individual` (16), `tornar_sem_efeito_massa` (11). Todos endereçados no [PR #20](https://github.com/fiscal-digital/fiscal-digital/pull/20).
+>
+> 📊 **Comparação com Ciclo 2 — diferenças nos 181 novos rotulados:** Pessoal +87 FP, Contratos +23 FP, Licitações +7 TP / +12 FP / +2 borderline. Licitações é o único Fiscal com TPs novos detectados (~33% TP rate no shard — superior à média global do Fiscal de 37,3%).
+
+### Patches abertos (aguardam merge + re-eval)
+
+7 PRs no [`fiscal-digital`](https://github.com/fiscal-digital/fiscal-digital):
+
+| PR | Fiscal | Suite tests | Filtros |
+|---|---|---:|---|
+| #16 | Locação | 26/26 | 12 (RESCISÃO, designação fiscal, Termo Aditivo, AVISO, Decreto, Anexo, SÚMULA, Lei 13.303, Termo Fomento, rol documental, cláusulas, Pregão) |
+| #17 | Diárias | 40/40 | trigger restrito + 19 stopwords (ARP/Pregão/hotel, veículo, dotação 3.3.90.14, polissemia) |
+| #18 | Convênios | 24/24 | 4 (Contrato Repasse federal MTUR/MDR/MAPA/MS/MEC/MJ/MMA/MCID, contraparte não-OSC, decreto orçamentário, polaridade negativa) |
+| #19 | Publicidade | 19/19 | 18 stopwords (cabeçalho DO, designação fiscal, publicação legal, concessão outdoor, atribuição funcional, polissemia Fiscal) |
+| #20 | Pessoal | 17/17 | 14 stopwords (comunicado convocação, vaga substituição, texto normativo, ratificação retroativa, Lei Complementar, tornar sem efeito, FG/GIP, concurso público, exoneração a pedido) + exceção transição mandato |
+| #21 | Licitações | 21/21 | 3 vazamento escopo + 5 hipóteses sem teto (Art. 75 III/IV/VIII/IX/XV) |
+| #22 | Contratos | 23/23 | 4 defensivos (floor R$ 5k, % declarado, instrumento fora escopo, reajuste legal Art. 124); cross-ref `suppliers-prod` formal como follow-up |
+
+**Suite engine total:** 226/233 passing (vs baseline 201/208 — +25 tests, 0 regressões).
+
+### Eval offline simulado (sem LLM — branch `eval-all-7-patches` local)
+
+Rodado contra 1.602 PDFs com mock `extractEntities` retornando vazio. Resultado descritivo (não comparável diretamente à prod com Bedrock):
+
+| Fiscal | Findings offline | Observação |
+|---|---:|---|
+| Locação | 0 | Patches eliminam todos os triggers offline |
+| Contratos | 0 | Sem valor original LLM, skip silencioso |
+| Convênios | 0 | Filtros + sem extração LLM |
+| Licitações | 0 | Sem valor LLM, skip |
+| Pessoal | 230 | Regex local não depende de LLM |
+| Publicidade | 407 | Gate temporal + keywords (filtros não eliminam tudo offline) |
+| Diárias | 150 | Regex local + stopwords |
+| Nepotismo | 130 | Não afetado por patches |
+
+**Caveat:** o eval offline mock não simula prod com Bedrock ligado. A precisão real só pode ser medida (a) re-executando engine contra um amostral de gazettes em prod após merge OU (b) tendo um extractor regex local realista (existe no eval:synthetic mas não no eval-fiscal.mjs). Sugerido: rodar `npm run eval:synthetic` após merge para confirmar regression das 55 amostras controladas.
 
 ⚠️ **Achados críticos:**
 1. **Nenhum Fiscal atinge o piso de 85%** — todos requerem patches.

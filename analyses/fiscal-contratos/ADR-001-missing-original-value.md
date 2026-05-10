@@ -1,9 +1,10 @@
 # ADR-001 — FiscalContratos calcula % de aditivo sem valor original do contrato
 
-**Status:** Aceito (aguardando patch — depende de EVO-002 já implementado)
+**Status:** Aplicado parcial (2026-05-10 — `fiscal-digital` PR a ser aberto; cross-ref suppliers-prod pendente)
 **Data:** 2026-05-10
-**Precisão atual:** 33,3% (6 TP / 12 FP em 20 amostras)
-**Severidade:** P1 — desligar disparos de aditivo até integração com `suppliers-prod`
+**Precisão pré-patch:** 33,3% Ciclo 1 (n=20) → 11,3% Ciclo 2 (n=180)
+**Precisão pós-patch:** a medir contra os mesmos 180 rotulados após merge
+**Severidade:** P1 — patch aplica filtros defensivos (4 itens do ADR sem mexer em IaC): floor R$ 5.000, percentual declarado, instrumento fora de escopo (Termo Compromisso/Cooperação/Fomento/Colaboração/Cessão Uso/Convênio/Súmula), reajuste legal Art. 124 (revisão anual/IPCA/repactuação CCT/apostilamento/supressão). Cross-ref formal com `suppliers-prod` GSI fica como follow-up (requer skill adicional via context).
 
 ---
 
