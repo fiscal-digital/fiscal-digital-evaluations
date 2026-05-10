@@ -10,8 +10,8 @@ A meta de qualidade do treinamento é **≥ 85% de precisão por Fiscal sobre o 
 
 | Ciclo | Data | Engine | Amostras totais | Sintéticos | Fiscais ≥ 85% |
 |---:|---|---|---:|---:|---:|
-| 1 | 2026-05-10 | v1.5.0 | 101 reais | 0 | 1 de 7 |
-| 2 | 2026-05-10 | v1.5.0 | 1.016 reais | 55 | em execução |
+| 1 | 2026-05-10 | v1.5.0 | 101 reais | 0 | 1 de 7 (mas era viés amostral) |
+| 2 | 2026-05-10 | v1.5.0 | 1.016 reais | 55 | **0 de 7** (com n suficiente) |
 | 3 | (próximo) | v1.6.0 | 1.016 reais | 55 | meta: 7 de 7 |
 
 ---
@@ -129,37 +129,51 @@ Critério: **esgotar o universo amostral** dos Fiscais com pouco volume (Convên
 
 55 amostras sintéticas controladas (11 por Fiscal: 3 TP textbook + 5 FP réplica + 3 FP edge case). Marcadas com `source: "synthetic"` para nunca contaminarem métricas reais. Função: regression tests do patch antes de PR.
 
-### Resultado parcial (685/1016 rotuladas, 67%)
+### Resultado final (1.016/1.016 rotuladas, 100%)
 
-| Fiscal | TP | FP | Bo | Total | Pendentes | Precisão | Δ vs C1 |
+| Fiscal | TP | FP | Bo | Total | Precisão | Δ vs C1 | Gap p/ 85% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Pessoal | 138 | 61 | 10 | 300 | 91 | 69,3% | −5,7pp |
-| Licitações | 52 | 87 | 11 | 150 | 0 | **37,4%** | **−51,5pp** ⚠️ |
-| Contratos | 8 | 89 | 3 | 180 | 80 | **8,2%** | **−25,1pp** ⚠️ |
-| Locação | 18 | 72 | 0 | 250 | 160 | 20,0% | +20pp |
-| Convênios | 0 | 68 | 7 | 75 | 0 | 0,0% | 0pp |
-| Diárias | 0 | 37 | 0 | 37 | 0 | 0,0% | 0pp |
-| Publicidade | 2 | 21 | 0 | 23 | 0 | 8,7% | +8,7pp |
-| Geral | 1 | 0 | 0 | 1 | 0 | 100,0% | n/a |
-| **Total** | **219** | **435** | **31** | **1.016** | **331** | **33,5%** | — |
+| Pessoal | 194 | 93 | 13 | 300 | **67,6%** | −7,4pp | −17,4pp |
+| Licitações | 52 | 87 | 11 | 150 | **37,4%** | **−51,5pp** ⚠️ | −47,6pp |
+| Locação | 44 | 180 | 26 | 250 | **19,6%** | +19,6pp | −65,4pp |
+| Contratos | 20 | 157 | 3 | 180 | **11,3%** | **−22,0pp** ⚠️ | −73,7pp |
+| Publicidade | 2 | 21 | 0 | 23 | **8,7%** | +8,7pp | −76,3pp |
+| Convênios | 0 | 68 | 7 | 75 | **0,0%** | 0pp | −85,0pp |
+| Diárias | 0 | 37 | 0 | 37 | **0,0%** | 0pp | −85,0pp |
+| Geral | 1 | 0 | 0 | 1 | **100,0%** | n/a | n/a |
+| **Total** | **313** | **643** | **60** | **1.016** | **32,7%** | — | — |
 
 ### Achados críticos do Ciclo 2
 
-**1. Viés amostral severo no Ciclo 1.** Licitações com 88,9% precisão sobre 20 amostras revelou-se 37,4% sobre 150. **Lição metodológica:** golden set < 50 amostras por Fiscal tem risco alto de mascarar bugs. Sempre validar com n ≥ 100 antes de declarar Fiscal "pronto".
+**1. Nenhum Fiscal atinge piso de 85%.** Todos os 7 Fiscais com amostragem suficiente (≥ 23) ficam abaixo. Patches são obrigatórios antes de declarar qualquer Fiscal "pronto".
 
-**2. Bug central de Contratos é mais grave.** Ciclo 1 estimou 33,3% precisão sobre 20 amostras; Ciclo 2 mostrou 8,2% sobre 100. Aditivos sem cross-reference (suppliers-prod GSI ainda não consultado) geram FP em 92% dos casos.
+**2. Viés amostral severo no Ciclo 1.** Licitações com 88,9% precisão sobre 20 amostras revelou-se 37,4% sobre 150. **Lição metodológica:** golden set < 50 amostras por Fiscal tem risco alto de mascarar bugs. Sempre validar com n ≥ 100 antes de declarar Fiscal "pronto".
 
-**3. FiscalGeral funciona.** Padrão recorrente VIAÇÃO GIRATUR (8+ atos do mesmo CNPJ em 12 meses, R$ 1,7M agregado) é TP forte. Detector cross-gazette está calibrado.
+**3. Bug central de Contratos é mais grave que o estimado.** Ciclo 1 mostrou 33,3% sobre 20; Ciclo 2 confirmou 11,3% sobre 180. 89% dos aditivos viram FP por falta de cross-reference (suppliers-prod GSI ainda não consultado).
 
-**4. Pendentes (cota Anthropic resetará 9:20am SP):**
-- Pessoal shard 3 (91 amostras)
-- Locação shards 1 e 3 (160 amostras)
-- Contratos shard 1 (80 amostras)
-- **Total: 331 amostras** — retomar em janela de cota disponível
+**4. TPs reais existem na maioria dos Fiscais.** Locação salta de 0% para 19,6% com escala (44 TPs reais identificados). Bug não é total — há detecção legítima misturada com overmatch sistemático. Patches devem preservar TPs.
+
+**5. FiscalGeral funciona.** Padrão recorrente VIAÇÃO GIRATUR (8+ atos do mesmo CNPJ em 12 meses, R$ 1,7M agregado) é TP forte. Detector cross-gazette está calibrado.
+
+**6. Padrões NOVOS de FP descobertos com escala** (não capturados nos ADRs do Ciclo 1):
+- **Pessoal:** ratificação retroativa, transição de mandato (jan pós-eleição), Lei Complementar criando quadro funcional, "tornar sem efeito em massa", designação para FG/GIP (≠ comissionado), concurso público regular
+- **Locação:** menção documental ("contrato de locação" em rol de comprovantes), aviso de procura/cotação (fase pré-contratual), cross-block matching em SÚMULA DE CONTRATOS, atos sob Lei 13.303 (estatais), Termo de Fomento Lei 13.019 confundido com locação
+- **Diárias:** "Divisão de Diárias e Passagens" (unidade administrativa), "publicação diária"/"circulação diária"/"jornada diária"/"sessões diárias"/"multa diária"
+- **Contratos:** apostilamento, repactuação CCT, revisão anual/IPCA, prorrogação proporcional, supressão (valor R$ 0,00), instrumentos errados (Termo Compromisso, Fomento, Colaboração, Convênio)
+- **Convênios:** Contratos de Repasse federal (MTUR/MDR/MAPA/MEC/MS/MJ/MTE/MCID/MESP), aditivos a TC vigente (chamamento na origem), contrapartes não-OSC (Universidade, Fundação Pública, Hospital Universitário, Santa Casa, Pio Sodalício), polaridade negativa
+- **Publicidade:** "Fiscal de Contrato" polissemia (35% dos FPs), excerpt selector mismatch
 
 ### Próximo passo
 
-Após completar Ciclo 2 (rotular as 331 pendentes), o snapshot definitivo do baseline v1.5.0 estará pronto. A partir daí, **Ciclo 3** começa após primeiro patch P0 mergeado em `fiscal-digital`, validado contra os mesmos 1.016 amostras.
+**Ciclo 3** começa após primeiro patch P0 mergeado em `fiscal-digital`, validado contra os mesmos 1.016 amostras. Ordem de prioridade dos patches por proximidade ao piso de 85%:
+
+1. **FiscalPessoal** (67,6%, gap −17,4pp): patch regex conjugados (NOMEIA/EXONERA) + filtros de transição/ratificação retroativa/concurso
+2. **FiscalLicitações** (37,4%, gap −47,6pp): patch tipo de instrumento (excluir locação imóvel/designação fiscal) + classificação obra vs serviço
+3. **FiscalLocação** (19,6%, gap −65,4pp): patch 6 padrões originais + cross-block matching + Lei 13.303
+4. **FiscalContratos** (11,3%, gap −73,7pp): patch suppliers-prod cross-reference (depende de EVO-002 ativo) + filtros de instrumento/repactuação
+5. **FiscalDiárias** (0%, gap −85pp): patch word boundary + co-ocorrência + 12 stopwords
+6. **FiscalConvênios** (0%, gap −85pp): patch whitelist siglas federais + decreto orçamentário + contraparte OSC
+7. **FiscalPublicidade** (8,7%, gap −76,3pp): patch keywords estritas + "Fiscal de Contrato" blocklist
 
 ---
 

@@ -2,13 +2,13 @@
 
 **Data da avaliação:** 2026-05-10
 **Engine version:** v1.5.0
-**Status:** Ciclo 2 em execução — 685/1016 amostras rotuladas (67%)
+**Status:** Ciclo 2 COMPLETO — 1.016/1.016 amostras rotuladas
 
-> **Atualização 2026-05-10 (tarde):** Ciclo 2 ampliou o golden set de 101 para 1.016 amostras reais. Ver [`TRAINING_CYCLES.md`](TRAINING_CYCLES.md) para histórico completo. **Resultado parcial revelou viés amostral severo no Ciclo 1**: Licitações caiu de 88,9% (n=20) para 37,4% (n=150). Conclusão: golden set < 50 amostras por Fiscal tem risco alto de mascarar bugs. Recomenda-se sempre validar com n ≥ 100 antes de declarar Fiscal "pronto".
+> **Conclusão do Ciclo 2 (2026-05-10):** Ciclo 2 ampliou o golden set de 101 para 1.016 amostras reais. **Resultado revelou viés amostral severo no Ciclo 1**: Licitações caiu de 88,9% (n=20) para 37,4% (n=150). Conclusão: golden set < 50 amostras por Fiscal tem risco alto de mascarar bugs. Recomenda-se sempre validar com n ≥ 100 antes de declarar Fiscal "pronto". **Nenhum dos 7 Fiscais com amostragem completa atinge o piso de 85% de precisão** — todos requerem patches.
 
 **Avaliadores:**
 - Ciclo 1 (101 amostras): claude-opus-4-7 manual (40) + 7 sub-agents paralelos (61)
-- Ciclo 2 (915 novas): 14 sub-agents claude-opus-4-7 em paralelo (10 completos = 584 rotuladas, 4 com cota esgotada = 331 pendentes)
+- Ciclo 2 (915 novas): 14 sub-agents claude-opus-4-7 em paralelo (rodadas em 2 ondas devido ao limite de cota)
 
 **Cobertura de Fiscais com amostras reais:** 8 de 10 (Nepotismo e Fornecedores ainda sem amostras — ver [`GAP_REPORT.md`](GAP_REPORT.md))
 
@@ -29,21 +29,26 @@
 | **FiscalPublicidade** | 0 | 6 | 0 | 6 | **0,0%** | CRÍTICO — keyword polissêmica |
 | **TOTAL** | **40** | **56** | **5** | **101** | **41,7%** | — |
 
-### Ciclo 2 (n=685, em execução) — baseline ampliado
+### Ciclo 2 (n=1.016) — baseline definitivo
 
-| Fiscal | TP | FP | Borderline | Total | Pendentes | Precisão | Δ vs C1 |
+| Fiscal | TP | FP | Borderline | Total | Precisão | Δ vs C1 | Gap p/ 85% |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| **FiscalPessoal** | 138 | 61 | 10 | 300 | 91 | **69,3%** | −5,7pp |
-| **FiscalLicitações** | 52 | 87 | 11 | 150 | 0 | **37,4%** | **−51,5pp** ⚠️ |
-| **FiscalContratos** | 8 | 89 | 3 | 180 | 80 | **8,2%** | **−25,1pp** ⚠️ |
-| **FiscalDiárias** | 0 | 37 | 0 | 37 | 0 | **0,0%** | 0pp |
-| **FiscalLocação** | 18 | 72 | 0 | 250 | 160 | **20,0%** | +20pp |
-| **FiscalConvênios** | 0 | 68 | 7 | 75 | 0 | **0,0%** | 0pp |
-| **FiscalPublicidade** | 2 | 21 | 0 | 23 | 0 | **8,7%** | +8,7pp |
-| **FiscalGeral** | 1 | 0 | 0 | 1 | 0 | **100,0%** | n/a |
-| **TOTAL** | **219** | **435** | **31** | **1.016** | **331** | **33,5%** | — |
+| **FiscalPessoal** | 194 | 93 | 13 | 300 | **67,6%** | −7,4pp | −17,4pp |
+| **FiscalLicitações** | 52 | 87 | 11 | 150 | **37,4%** | **−51,5pp** ⚠️ | −47,6pp |
+| **FiscalLocação** | 44 | 180 | 26 | 250 | **19,6%** | +19,6pp | −65,4pp |
+| **FiscalContratos** | 20 | 157 | 3 | 180 | **11,3%** | **−22,0pp** ⚠️ | −73,7pp |
+| **FiscalPublicidade** | 2 | 21 | 0 | 23 | **8,7%** | +8,7pp | −76,3pp |
+| **FiscalConvênios** | 0 | 68 | 7 | 75 | **0,0%** | 0pp | −85,0pp |
+| **FiscalDiárias** | 0 | 37 | 0 | 37 | **0,0%** | 0pp | −85,0pp |
+| **FiscalGeral** | 1 | 0 | 0 | 1 | **100,0%** | n/a | n/a |
+| **TOTAL** | **313** | **643** | **60** | **1.016** | **32,7%** | — | — |
 
-⚠️ **Achado crítico:** Licitações cai de 88,9% para 37,4% com escala. Confirma que golden set < 50 amostras tem risco alto de viés amostral. Bug central de Contratos (overmatch) é mais grave que estimado no Ciclo 1.
+⚠️ **Achados críticos:**
+1. **Nenhum Fiscal atinge o piso de 85%** — todos requerem patches.
+2. **Viés amostral confirmado:** Licitações 88,9% (Ciclo 1, n=20) → 37,4% (Ciclo 2, n=150). Golden set < 50 amostras mascara bugs.
+3. **Bug central de Contratos é mais grave que estimado:** Ciclo 1 mostrou 33,3% sobre 20 amostras; Ciclo 2 confirma 11,3% sobre 180. Aditivos sem cross-reference (suppliers-prod GSI) geram 89% de FP.
+4. **TPs reais aparecem com escala:** Locação salta de 0% (n=10) para 19,6% (n=250) — bug não é total, há detecção real misturada com overmatch.
+5. **FiscalPessoal mais próximo do piso:** 67,6% — patch de regex + filtros de transição/ratificação retroativa pode chegar perto de 85%.
 
 **Leitura:** dos 96 findings classificados como TP+FP, apenas 41,7% são verdadeiros achados de irregularidade. Os 4 Fiscais com 0% precisão geraram **42 FPs publicados ou publicáveis em prod** (a métrica deteriora se incluirmos os 5 borderline como FP).
 
