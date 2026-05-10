@@ -1,0 +1,21 @@
+{
+  "name": "fiscal-digital-evaluations",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Golden set rotulado, ADRs e baselines de precisão para os Fiscais do Fiscal Digital",
+  "type": "module",
+  "scripts": {
+    "label": "node scripts/label-cli.mjs",
+    "extract-pdf": "node scripts/extract-pdf.mjs",
+    "eval": "node scripts/eval-fiscal.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1041.0",
+    "@aws-sdk/client-s3": "^3.1041.0",
+    "@aws-sdk/lib-dynamodb": "^3.1041.0",
+    "pdf-parse": "^1.1.1"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

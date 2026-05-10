@@ -1,0 +1,11 @@
+node_modules/
+*.log
+.env
+.env.local
+.DS_Store
+dist/
+coverage/
+
+# PDFs binários extraídos localmente — só texto entra no repo
+golden-set/pdfs/*.pdf
+!golden-set/pdfs/.gitkeep
