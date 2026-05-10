@@ -1,9 +1,10 @@
 # ADR-001 — FiscalDiárias dispara em qualquer ocorrência da raiz "diári-"
 
-**Status:** Aceito (aguardando patch)
+**Status:** Aplicado (2026-05-10 — `fiscal-digital` PR a ser aberto)
 **Data:** 2026-05-10
-**Precisão atual:** 0,0% (0 TP / 10 FP em 10 amostras)
-**Severidade:** P0 — desligar publicação até correção
+**Precisão pré-patch:** 0,0% Ciclo 1 (n=10) → 0,0% Ciclo 2 (n=37, universo esgotado)
+**Precisão pós-patch:** a medir contra os mesmos 37 rotulados após merge
+**Severidade:** P0 — patch incorpora 19 stopwords + verbo de autorização + trigger restrito (removido `viagem`/`deslocamento` que causavam overmatch em proper nouns)
 
 ---
 

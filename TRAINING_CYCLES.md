@@ -12,8 +12,8 @@ A meta de qualidade do treinamento é **≥ 85% de precisão por Fiscal sobre o 
 |---:|---|---|---:|---:|---:|
 | 1 | 2026-05-10 | v1.5.0 | 101 reais | 0 | 1 de 7 (mas era viés amostral) |
 | 2 | 2026-05-10 | v1.5.0 | 1.016 reais | 55 | **0 de 7** (com n suficiente) |
-| 3 (parcial) | 2026-05-10 | v1.5.0 | **1.514** rotuladas / 1.695 importadas | 55 | **0 de 7** (181 pendentes) |
-| 4 | (próximo) | v1.6.0 | 1.695 reais | 55 | meta: 7 de 7 |
+| 3 | 2026-05-10 | v1.5.0 | **1.695** reais (universo esgotado) | 55 | **0 de 7** (7 PRs patch abertos: #16-22) |
+| 4 | (pós-merge) | v1.6.0 | 1.695 reais | 55 | meta: 7 de 7 |
 
 ---
 

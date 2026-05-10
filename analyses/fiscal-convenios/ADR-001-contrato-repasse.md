@@ -1,10 +1,11 @@
 # ADR-001 — FiscalConvênios confunde Contrato de Repasse federal com Termo de Fomento Lei 13.019
 
-**Status:** Aceito (aguardando patch)
+**Status:** Aplicado (2026-05-10 — `fiscal-digital` PR a ser aberto)
 **Data:** 2026-05-10
 **Autor:** Avaliação automatizada via golden set v1.5.0
-**Precisão atual:** 0,0% (0 TP / 10 FP em 10 amostras)
-**Severidade:** P0 — desligar publicação até correção
+**Precisão pré-patch:** 0,0% Ciclo 1 (n=10) → 0,0% Ciclo 2 (n=75, universo esgotado em prod)
+**Precisão pós-patch:** a medir contra os mesmos 75 rotulados após merge
+**Severidade:** P0 — patch incorpora 4 filtros de exclusão (siglas federais MTUR/MDR/MAPA/MS/MEC/MJ/MMA/MCID + 18 outras; contrapartes não-OSC; decreto orçamentário; polaridade negativa)
 
 ---
 

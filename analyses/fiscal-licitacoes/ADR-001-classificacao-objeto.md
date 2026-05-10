@@ -1,9 +1,10 @@
 # ADR-001 — FiscalLicitações confunde locação de imóvel e designação de fiscal com dispensa por valor
 
-**Status:** Aceito (refino — P2)
+**Status:** Aplicado (2026-05-10 — `fiscal-digital` PR a ser aberto)
 **Data:** 2026-05-10
-**Precisão atual:** 88,9% (16 TP / 2 FP em 20 amostras, 2 borderline)
-**Severidade:** P2 — Fiscal funciona bem mas tem vazamento de escopo
+**Precisão pré-patch:** 88,9% Ciclo 1 (n=20, viés amostral) → 37,4% Ciclo 2 (n=150, baseline definitivo)
+**Precisão pós-patch:** a medir contra os mesmos 150 rotulados após merge
+**Severidade:** P2 — patch incorpora 3 filtros de vazamento de escopo (locação→Locação, aditivo→Contratos, designação fiscal→skip) + 5 detectores de hipóteses sem teto (fornecedor exclusivo Art. 75 III, emergência Art. 75 IV, insumos saúde Art. 75 VIII, entes públicos Art. 75 IX, universidade Art. 75 XV)
 
 ---
 

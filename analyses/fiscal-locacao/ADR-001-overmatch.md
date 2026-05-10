@@ -1,9 +1,10 @@
 # ADR-001 — FiscalLocação dispara em designações, aditivos, rescisões e programas sociais
 
-**Status:** Aceito (aguardando patch)
+**Status:** Aplicado (2026-05-10 — `fiscal-digital` PR a ser aberto)
 **Data:** 2026-05-10
-**Precisão atual:** 0,0% (0 TP / 10 FP em 10 amostras)
-**Severidade:** P0 — desligar publicação até correção
+**Precisão pré-patch:** 0,0% Ciclo 1 (n=10) → 19,6% Ciclo 2 (n=250) → 16,0% Ciclo 3 (n=476, universo esgotado)
+**Precisão pós-patch:** a medir contra os mesmos 476 rotulados após merge do patch
+**Severidade:** P0 — patch incorpora 12 filtros de exclusão (10 ADR + 2 padrões Ciclo 2: SÚMULA cross-block, Lei 13.303 estatais)
 
 ---
 

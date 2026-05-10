@@ -1,9 +1,10 @@
 # ADR-001 — FiscalPessoal subnotifica por regex sem cobertura de verbos conjugados
 
-**Status:** Aceito (refino — P2)
+**Status:** Aplicado (2026-05-10 — `fiscal-digital` PR a ser aberto)
 **Data:** 2026-05-10
-**Precisão atual:** 75,0% (18 TP / 6 FP em 25 amostras)
-**Severidade:** P2 — Fiscal funciona mas com underreporting severo
+**Precisão pré-patch:** 75,0% Ciclo 1 (n=25) → 67,6% Ciclo 2 (n=300) → 36,9% Ciclo 3 (n=572 rotuladas)
+**Precisão pós-patch:** a medir contra os mesmos 572 rotulados após merge
+**Severidade:** P2 — patch incorpora 14 stopwords (ADR + 9 padrões C3 novos: comunicado convocação, vaga substituição, texto normativo, ratificação retroativa, Lei Complementar quadro, "tornar sem efeito", FG/GIP, concurso público, exoneração a pedido) + exceção transição mandato (janeiro pós-eleição dobra threshold)
 
 ---
 
