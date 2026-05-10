@@ -1,0 +1,725 @@
+{
+  "generatedAt": "2026-05-10T08:49:47.314Z",
+  "engine": "fiscal-digital@v1.5.0",
+  "totalSamples": 55,
+  "matrix": {
+    "fiscal-contratos": {
+      "tp_real": 0,
+      "fp_real": 0,
+      "tn_real": 3,
+      "fn_real": 0,
+      "errors": 0,
+      "total": 11,
+      "error": null
+    },
+    "fiscal-convenios": {
+      "tp_real": 0,
+      "fp_real": 0,
+      "tn_real": 1,
+      "fn_real": 0,
+      "errors": 0,
+      "total": 11,
+      "error": null
+    },
+    "fiscal-diarias": {
+      "tp_real": 3,
+      "fp_real": 7,
+      "tn_real": 1,
+      "fn_real": 0,
+      "errors": 0,
+      "total": 11
+    },
+    "fiscal-locacao": {
+      "tp_real": 0,
+      "fp_real": 0,
+      "tn_real": 2,
+      "fn_real": 0,
+      "errors": 0,
+      "total": 11,
+      "error": null
+    },
+    "fiscal-publicidade": {
+      "tp_real": 3,
+      "fp_real": 4,
+      "tn_real": 4,
+      "fn_real": 0,
+      "errors": 0,
+      "total": 11
+    }
+  },
+  "results": [
+    {
+      "id": "SYN-CON-TP-001",
+      "fiscalId": "fiscal-contratos",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CON-TP-002",
+      "fiscalId": "fiscal-contratos",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CON-TP-003",
+      "fiscalId": "fiscal-contratos",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CON-FP-001",
+      "fiscalId": "fiscal-contratos",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CON-FP-002",
+      "fiscalId": "fiscal-contratos",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CON-FP-003",
+      "fiscalId": "fiscal-contratos",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
+      "error": null
+    },
+    {
+      "id": "SYN-CON-FP-004",
+      "fiscalId": "fiscal-contratos",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
+      "error": null
+    },
+    {
+      "id": "SYN-CON-FP-005",
+      "fiscalId": "fiscal-contratos",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CON-FP-EDGE-001",
+      "fiscalId": "fiscal-contratos",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CON-FP-EDGE-002",
+      "fiscalId": "fiscal-contratos",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
+      "error": null
+    },
+    {
+      "id": "SYN-CON-FP-EDGE-003",
+      "fiscalId": "fiscal-contratos",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CONV-TP-001",
+      "fiscalId": "fiscal-convenios",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CONV-TP-002",
+      "fiscalId": "fiscal-convenios",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CONV-TP-003",
+      "fiscalId": "fiscal-convenios",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CONV-FP-001",
+      "fiscalId": "fiscal-convenios",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CONV-FP-002",
+      "fiscalId": "fiscal-convenios",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CONV-FP-003",
+      "fiscalId": "fiscal-convenios",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CONV-FP-004",
+      "fiscalId": "fiscal-convenios",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CONV-FP-005",
+      "fiscalId": "fiscal-convenios",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CONV-FP-EDGE-001",
+      "fiscalId": "fiscal-convenios",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CONV-FP-EDGE-002",
+      "fiscalId": "fiscal-convenios",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-CONV-FP-EDGE-003",
+      "fiscalId": "fiscal-convenios",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
+      "error": null
+    },
+    {
+      "id": "SYN-DIA-TP-001",
+      "fiscalId": "fiscal-diarias",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": true,
+      "emittedCount": 2,
+      "verdict": "tp_real",
+      "firstFinding": {
+        "type": "diaria_irregular",
+        "riskScore": 63,
+        "confidence": 0.6
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-DIA-TP-002",
+      "fiscalId": "fiscal-diarias",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": true,
+      "emittedCount": 2,
+      "verdict": "tp_real",
+      "firstFinding": {
+        "type": "diaria_irregular",
+        "riskScore": 63,
+        "confidence": 0.75
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-DIA-TP-003",
+      "fiscalId": "fiscal-diarias",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "tp_real",
+      "firstFinding": {
+        "type": "diaria_irregular",
+        "riskScore": 85,
+        "confidence": 0.7
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-DIA-FP-001",
+      "fiscalId": "fiscal-diarias",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "diaria_irregular",
+        "riskScore": 85,
+        "confidence": 0.7
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-DIA-FP-002",
+      "fiscalId": "fiscal-diarias",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "diaria_irregular",
+        "riskScore": 85,
+        "confidence": 0.7
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-DIA-FP-003",
+      "fiscalId": "fiscal-diarias",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "diaria_irregular",
+        "riskScore": 85,
+        "confidence": 0.7
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-DIA-FP-004",
+      "fiscalId": "fiscal-diarias",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
+      "error": null
+    },
+    {
+      "id": "SYN-DIA-FP-005",
+      "fiscalId": "fiscal-diarias",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "diaria_irregular",
+        "riskScore": 63,
+        "confidence": 0.6
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-DIA-EDGE-001",
+      "fiscalId": "fiscal-diarias",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "diaria_irregular",
+        "riskScore": 85,
+        "confidence": 0.7
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-DIA-EDGE-002",
+      "fiscalId": "fiscal-diarias",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "diaria_irregular",
+        "riskScore": 69,
+        "confidence": 0.75
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-DIA-EDGE-003",
+      "fiscalId": "fiscal-diarias",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "diaria_irregular",
+        "riskScore": 61,
+        "confidence": 0.7
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-LOC-TP-001",
+      "fiscalId": "fiscal-locacao",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-LOC-TP-002",
+      "fiscalId": "fiscal-locacao",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-LOC-TP-003",
+      "fiscalId": "fiscal-locacao",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-LOC-FP-001",
+      "fiscalId": "fiscal-locacao",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-LOC-FP-002",
+      "fiscalId": "fiscal-locacao",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-LOC-FP-003",
+      "fiscalId": "fiscal-locacao",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
+      "error": null
+    },
+    {
+      "id": "SYN-LOC-FP-004",
+      "fiscalId": "fiscal-locacao",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-LOC-FP-005",
+      "fiscalId": "fiscal-locacao",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
+      "error": null
+    },
+    {
+      "id": "SYN-LOC-FP-006",
+      "fiscalId": "fiscal-locacao",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-LOC-FP-007",
+      "fiscalId": "fiscal-locacao",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-LOC-FP-008",
+      "fiscalId": "fiscal-locacao",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "error",
+      "firstFinding": null,
+      "error": "extractFn.execute is not a function"
+    },
+    {
+      "id": "SYN-PUB-TP-001",
+      "fiscalId": "fiscal-publicidade",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "tp_real",
+      "firstFinding": {
+        "type": "publicidade_eleitoral",
+        "riskScore": 89,
+        "confidence": 0.8
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-PUB-TP-002",
+      "fiscalId": "fiscal-publicidade",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "tp_real",
+      "firstFinding": {
+        "type": "publicidade_eleitoral",
+        "riskScore": 89,
+        "confidence": 0.8
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-PUB-TP-003",
+      "fiscalId": "fiscal-publicidade",
+      "category": "tp_textbook",
+      "expected": "TP",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "tp_real",
+      "firstFinding": {
+        "type": "publicidade_eleitoral",
+        "riskScore": 89,
+        "confidence": 0.8
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-PUB-FP-001",
+      "fiscalId": "fiscal-publicidade",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
+      "error": null
+    },
+    {
+      "id": "SYN-PUB-FP-002",
+      "fiscalId": "fiscal-publicidade",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
+      "error": null
+    },
+    {
+      "id": "SYN-PUB-FP-003",
+      "fiscalId": "fiscal-publicidade",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "publicidade_eleitoral",
+        "riskScore": 89,
+        "confidence": 0.8
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-PUB-FP-004",
+      "fiscalId": "fiscal-publicidade",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "publicidade_eleitoral",
+        "riskScore": 84,
+        "confidence": 0.8
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-PUB-FP-005",
+      "fiscalId": "fiscal-publicidade",
+      "category": "fp_replica",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
+      "error": null
+    },
+    {
+      "id": "SYN-PUB-FP-006",
+      "fiscalId": "fiscal-publicidade",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": false,
+      "emittedCount": 0,
+      "verdict": "tn_real",
+      "firstFinding": null,
+      "error": null
+    },
+    {
+      "id": "SYN-PUB-FP-007",
+      "fiscalId": "fiscal-publicidade",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "publicidade_eleitoral",
+        "riskScore": 89,
+        "confidence": 0.8
+      },
+      "error": null
+    },
+    {
+      "id": "SYN-PUB-FP-008",
+      "fiscalId": "fiscal-publicidade",
+      "category": "fp_edge_case",
+      "expected": "no_finding",
+      "emitted": true,
+      "emittedCount": 1,
+      "verdict": "fp_real",
+      "firstFinding": {
+        "type": "publicidade_eleitoral",
+        "riskScore": 89,
+        "confidence": 0.8
+      },
+      "error": null
+    }
+  ]
+}

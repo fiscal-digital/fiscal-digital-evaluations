@@ -1,0 +1,205 @@
+[
+  {
+    "id": "SYN-LOC-TP-001",
+    "fiscalId": "fiscal-locacao",
+    "category": "tp_textbook",
+    "type": "locacao_sem_justificativa",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-04-10",
+      "excerpt": "EXTRATO DA INEXIGIBILIDADE DE LICITAÇÃO Nº 089/2026\nPROCESSO ADMINISTRATIVO: 25.0.000123456-7\nMODALIDADE: Inexigibilidade de licitação - Art. 74, inciso III, alínea 'b', da Lei nº 14.133/2021\nOBJETO: Locação de imóvel sito à Rua Sete de Setembro, 234, sala 502, Centro Histórico, para instalação e funcionamento da sede administrativa da Secretaria Municipal de Educação.\nLOCADOR: IMOBILIÁRIA SUL LTDA - CNPJ 12.345.678/0001-90\nLOCATÁRIO: MUNICÍPIO DE PORTO ALEGRE\nVALOR MENSAL: R$ 18.000,00 (dezoito mil reais)\nVALOR GLOBAL: R$ 1.080.000,00\nVIGÊNCIA: 60 (sessenta) meses, contados da assinatura do contrato.\nDOTAÇÃO ORÇAMENTÁRIA: 12.122.0001.2001 - 3.3.90.36.00\nPorto Alegre, 09 de abril de 2026.\nFulano de Tal - Secretário Municipal de Educação",
+      "fullPageContext": "[Página 14 do DO de 10/04/2026 - O ato é publicado isoladamente, sem qualquer menção a laudo técnico de avaliação imobiliária, parecer técnico de adequação do imóvel, comparativo de preços de mercado, ou justificativa técnica para a escolha do imóvel específico. Não há referência a documento SEI, processo de avaliação prévia, manifestação técnica da Secretaria de Planejamento ou ratificação fundamentada. O ato simplesmente declara a inexigibilidade e formaliza a contratação direta.]"
+    },
+    "rationale": "Inexigibilidade Art. 74 III sem laudo técnico de avaliação imobiliária. Tipo de ato (Extrato de Inexigibilidade), objeto (locação de imóvel/sala para sede de Secretaria), modalidade (Inexigibilidade) e papel municipal (LOCATÁRIO) configuram TP textbook. PDF inteiro não menciona 'laudo', 'parecer técnico', 'avaliação imobiliária' nem comparativo de mercado.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LOC-TP-002",
+    "fiscalId": "fiscal-locacao",
+    "category": "tp_textbook",
+    "type": "locacao_sem_justificativa",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-02-18",
+      "excerpt": "RATIFICAÇÃO DE DISPENSA DE LICITAÇÃO\nFundamento Legal: Art. 24, inciso X, da Lei nº 8.666/1993, aplicado subsidiariamente nos termos do art. 191 da Lei nº 14.133/2021.\nOBJETO: Locação de imóvel destinado à sede da Subprefeitura de Forqueta, situado à Rua General Câmara, 1.450, bairro Forqueta, neste Município.\nCONTRATANTE: MUNICÍPIO DE CAXIAS DO SUL\nCONTRATADO: ESPÓLIO DE JOÃO PEREIRA DA SILVA - CPF 123.456.789-00\nVALOR MENSAL: R$ 9.500,00\nPRAZO: 12 meses, prorrogáveis nos termos da lei.\nRATIFICO a presente dispensa de licitação, na forma do art. 26 da Lei nº 8.666/93.\nCaxias do Sul, 17 de fevereiro de 2026.\nAdiló Didomenico Zanini - Prefeito Municipal",
+      "fullPageContext": "[Página 7 do DO de 18/02/2026 - O ato cita o fundamento legal (Art. 24 X Lei 8.666) mas não apresenta a 'razão da escolha' do fornecedor nem a 'justificativa do preço' exigidas pelo art. 26, parágrafo único, II e III. Não há menção a laudo de avaliação, comparativo com imóveis similares na região, nem parecer técnico atestando que aquele imóvel específico é o único capaz de atender à finalidade pública. A subprefeitura de Forqueta não é demonstradamente única candidata à locação naquele bairro.]"
+    },
+    "rationale": "Dispensa Art. 24 X Lei 8.666 (aplicada subsidiariamente) sem fundamento de escolha nem justificativa de preço. Ato formaliza contratação direta sem cumprir requisitos do art. 26 § único da própria 8.666. Modalidade (Dispensa), objeto (locação de imóvel/sede de subprefeitura), papel municipal (CONTRATANTE/locatário) configuram TP.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LOC-TP-003",
+    "fiscalId": "fiscal-locacao",
+    "category": "tp_textbook",
+    "type": "locacao_sem_justificativa",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-03-22",
+      "excerpt": "EXTRATO DE CONTRATO DE LOCAÇÃO Nº 217/2026/SMS\nMODALIDADE: Inexigibilidade de Licitação - Art. 74, III, 'b', Lei 14.133/2021\nPROCESSO SEI: 6018.2026/0008912-3\nOBJETO: Locação direta de imóvel comercial situado à Avenida Paulista, 1.500, conjunto 1201, para abrangência da Coordenadoria de Vigilância em Saúde - Subprefeitura Sé.\nLOCADOR: PAULISTA EMPREENDIMENTOS IMOBILIÁRIOS S.A. - CNPJ 87.654.321/0001-12\nLOCATÁRIO: PREFEITURA DO MUNICÍPIO DE SÃO PAULO - SECRETARIA MUNICIPAL DA SAÚDE\nVALOR MENSAL: R$ 42.800,00\nVALOR GLOBAL ESTIMADO: R$ 1.540.800,00\nVIGÊNCIA: 36 meses\nAssinatura: 21/03/2026.",
+      "fullPageContext": "[Página 23 do DOC de 22/03/2026 - O extrato é publicado de forma isolada, sem anexar nem referenciar laudo de avaliação imobiliária realizado por engenheiro/arquiteto credenciado. Não há menção a pesquisa de preços de imóveis comparáveis na Avenida Paulista nem demonstração de que o conjunto 1201 daquele edifício específico é o único adequado às necessidades da Coordenadoria. O processo SEI é citado apenas para identificação administrativa, sem listar peças técnicas que fundamentem a escolha direta.]"
+    },
+    "rationale": "Locação direta sem comparativo de mercado. Inexigibilidade Art. 74 III 'b' formalizada sem demonstração de singularidade do imóvel ou laudo de avaliação. Citação de processo SEI é meramente administrativa (não conta para o atenuador do filtro 5 do ADR-001 — exige 2+ ocorrências de docs SEI substantivas, parecer ou manifestação técnica).",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-LOC-FP-001",
+    "fiscalId": "fiscal-locacao",
+    "category": "fp_replica",
+    "fpPattern": "designacao_fiscal_contrato",
+    "type": "locacao_sem_justificativa",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3170206",
+      "cityName": "Uberlândia",
+      "date": "2026-03-05",
+      "excerpt": "PORTARIA Nº 451/2026, DE 04 DE MARÇO DE 2026.\nO SECRETÁRIO MUNICIPAL DE ADMINISTRAÇÃO, no uso de suas atribuições legais, RESOLVE:\nArt. 1º DESIGNAR a servidora MARIA SOUZA DOS SANTOS, matrícula 67890-1, ocupante do cargo de Analista Administrativo, como GESTORA DO CONTRATO DE LOCAÇÃO Nº 023/2024, firmado com IMOBILIÁRIA NORTE LTDA, CNPJ 11.222.333/0001-44, cujo objeto é a locação do imóvel sede da Coordenadoria de Trânsito.\nArt. 2º DESIGNAR o servidor JOÃO CARLOS PEREIRA, matrícula 54321-2, como FISCAL DO CONTRATO referido no art. 1º.\nArt. 3º Esta Portaria entra em vigor na data de sua publicação.\nUberlândia, 04 de março de 2026.\nRoberto Almeida - Secretário Municipal de Administração",
+      "fullPageContext": "[Página 4 do DO de 05/03/2026 - Ato é exclusivamente designação de servidores para acompanhamento de contrato preexistente (Contrato 023/2024). Não há nova contratação, novo valor empenhado, nem nova vigência. Trata-se de cumprimento do art. 117 da Lei 14.133/2021 que exige indicação formal de gestor e fiscal.]"
+    },
+    "rationale": "Ato é apenas designação de gestor/fiscal de contrato existente, não nova contratação. Padrão FP recorrente do GS-062, GS-064, GS-101. Verbo 'DESIGNAR' + 'Gestor(a)/Fiscal de Contrato' deve ser excluído antes do match de objeto.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em DESIGNAR.*(Gestor|Fiscal)\\s+de\\s+Contrato|Nomear.*Gestor\\s+de\\s+Contrato"
+  },
+  {
+    "id": "SYN-LOC-FP-002",
+    "fiscalId": "fiscal-locacao",
+    "category": "fp_replica",
+    "fpPattern": "termo_aditivo_prorrogacao",
+    "type": "locacao_sem_justificativa",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2304400",
+      "cityName": "Fortaleza",
+      "date": "2026-01-30",
+      "excerpt": "EXTRATO DO 3º TERMO ADITIVO AO CONTRATO Nº 045/2022\nPARTES: MUNICÍPIO DE FORTALEZA / IMOBILIÁRIA LITORAL LTDA - CNPJ 22.333.444/0001-55\nOBJETO ORIGINAL: Locação do imóvel situado à Av. Beira Mar, 2.100, sede da Secretaria Municipal de Turismo.\nOBJETO DO ADITIVO: Prorrogação contratual pelo período de 12 (doze) meses, com fundamento no art. 107 da Lei 14.133/2021 e na cláusula sexta do contrato original.\nVALOR MENSAL MANTIDO: R$ 32.000,00\nVIGÊNCIA: 01/02/2026 a 31/01/2027.\nRATIFICO a renovação contratual à vista do parecer técnico favorável da Procuradoria Geral do Município (doc SEI nº 12345/2026).\nFortaleza, 29 de janeiro de 2026.",
+      "fullPageContext": "[Página 9 do DO de 30/01/2026 - Aditivo de prorrogação de contrato preexistente. Não constitui nova contratação por inexigibilidade — é renovação fundamentada no art. 107 da Lei 14.133/2021, com parecer da PGM citado.]"
+    },
+    "rationale": "Termo Aditivo de prorrogação não é nova contratação direta. Padrão FP do GS-018 e GS-100. Filtro 1 do ADR-001 deve excluir 'Termo Aditivo|prorrogação|RATIFICO a renovação' antes de processar.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Termo\\s+Aditivo|prorrogação|RATIFICO\\s+a\\s+renovação"
+  },
+  {
+    "id": "SYN-LOC-FP-003",
+    "fiscalId": "fiscal-locacao",
+    "category": "fp_replica",
+    "fpPattern": "regulamento_tributario",
+    "type": "locacao_sem_justificativa",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-04-02",
+      "excerpt": "DECRETO Nº 53.789, DE 1º DE ABRIL DE 2026.\nRegulamenta a concessão de isenção do Imposto Sobre Serviços de Qualquer Natureza (ISSQN) incidente sobre operações de locação de bens móveis e equipamentos no âmbito do Programa Carioca Empreendedor.\nO PREFEITO DA CIDADE DO RIO DE JANEIRO, no uso das atribuições legais, DECRETA:\nArt. 1º Fica regulamentada a isenção prevista no art. 12 da Lei Municipal nº 8.901/2025, aplicável às receitas decorrentes de operações de locação realizadas por microempresas optantes do Simples Nacional cadastradas no programa.\nArt. 2º A isenção alcança contratos de locação firmados entre particulares, vedada extensão a operações com a Administração Pública.\nArt. 3º Este Decreto entra em vigor na data de sua publicação.\nRio de Janeiro, 1º de abril de 2026.",
+      "fullPageContext": "[Página 1 do DO de 02/04/2026 - Município atua como ente regulador (legislador tributário), não como locatário. Não há contratação pública envolvida. Termo 'locação' aparece em contexto de fato gerador tributário entre particulares.]"
+    },
+    "rationale": "Decreto regulamenta benefício fiscal sobre locação entre particulares. Município é regulador, não locatário. Padrão FP do GS-060 e GS-063. Filtro 1 do ADR-001 deve excluir 'Decreto.*regulamenta'; filtro 4 (papel municipal) confirma exclusão.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em Decreto.*regulamenta + verificar papel municipal (não é LOCATÁRIO)"
+  },
+  {
+    "id": "SYN-LOC-FP-004",
+    "fiscalId": "fiscal-locacao",
+    "category": "fp_replica",
+    "fpPattern": "extrato_rescisao",
+    "type": "locacao_sem_justificativa",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-02-12",
+      "excerpt": "EXTRATO DE RESCISÃO CONTRATUAL\nCONTRATO Nº 088/2023 - LOCAÇÃO DE IMÓVEL\nPARTES: MUNICÍPIO DE CURITIBA / EDIFÍCIO BATEL S.A. - CNPJ 33.444.555/0001-66\nOBJETO: Rescisão amigável do contrato de locação do imóvel situado à Rua Comendador Araújo, 470, sala 802, anteriormente utilizado pela Coordenadoria de Projetos Especiais.\nFUNDAMENTO: Art. 138, inciso II, da Lei 14.133/2021 (rescisão por mútuo acordo entre as partes).\nDATA EFETIVA DA RESCISÃO: 31/01/2026.\nSEM ÔNUS PARA AS PARTES.\nCuritiba, 11 de fevereiro de 2026.",
+      "fullPageContext": "[Página 12 do DO de 12/02/2026 - Ato encerra contrato preexistente. Não há nova contratação, novo empenho ou nova relação locatícia sendo estabelecida.]"
+    },
+    "rationale": "Extrato de Rescisão é encerramento, não contratação. Padrão FP do GS-061. Filtro 1 do ADR-001 deve excluir 'RESCISÃO|EXTRATO\\s+DE\\s+RESCISÃO' antes do match.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em RESCISÃO|EXTRATO\\s+DE\\s+RESCISÃO"
+  },
+  {
+    "id": "SYN-LOC-FP-005",
+    "fiscalId": "fiscal-locacao",
+    "category": "fp_replica",
+    "fpPattern": "pregao_locacao_veiculo",
+    "type": "locacao_sem_justificativa",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5300108",
+      "cityName": "Brasília",
+      "date": "2026-03-18",
+      "excerpt": "AVISO DE LICITAÇÃO\nPREGÃO ELETRÔNICO Nº 027/2026 - SRP\nPROCESSO: 00040-00012345/2026-78\nOBJETO: Registro de Preços para eventual contratação de empresa especializada na prestação de serviço de LOCAÇÃO DE VEÍCULOS automotores tipo sedan, SUV e utilitário, sem motorista, para atender às demandas da frota administrativa do Distrito Federal.\nMODALIDADE: Pregão Eletrônico - Lei 14.133/2021\nCRITÉRIO DE JULGAMENTO: Menor preço por lote.\nVALOR ESTIMADO: R$ 4.800.000,00\nDATA DE ABERTURA: 02/04/2026, às 10h00, no portal Comprasnet.\nEdital disponível em: www.comprasnet.gov.br - UASG 925005.\nBrasília, 17 de março de 2026.",
+      "fullPageContext": "[Página 31 do DO de 18/03/2026 - Modalidade competitiva (Pregão Eletrônico) e objeto fora do escopo do Art. 74 III (locação de veículos não é locação de imóvel). Procedimento normal de SRP com critério de menor preço.]"
+    },
+    "rationale": "Pregão Eletrônico para locação de veículos. Modalidade competitiva (não inexigibilidade) + objeto fora de escopo (veículo, não imóvel). Padrão FP do GS-099. Filtros 2 (objeto restrito a imóvel) e 3 (excluir Pregão) do ADR-001 cobrem.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Filtro 2: objeto deve ser imóvel/prédio/edifício/sala/sede/loja/terreno/área (não veículo). Filtro 3: excluir Pregão|Concorrência|Tomada de Preços."
+  },
+  {
+    "id": "SYN-LOC-FP-006",
+    "fiscalId": "fiscal-locacao",
+    "category": "fp_edge_case",
+    "fpPattern": "locacao_imovel_com_laudo",
+    "type": "locacao_sem_justificativa",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1501402",
+      "cityName": "Belém",
+      "date": "2026-04-25",
+      "excerpt": "EXTRATO DE INEXIGIBILIDADE Nº 034/2026\nPROCESSO SEI Nº 0011.2026.000456-7\nFUNDAMENTO: Art. 74, inciso III, alínea 'b', da Lei nº 14.133/2021.\nOBJETO: Locação de imóvel situado à Rua Padre Eutíquio, 1.220, para instalação da Unidade Básica de Saúde - UBS Jurunas II.\nLOCADOR: SOCIEDADE BENEFICENTE PARÁ - CNPJ 44.555.666/0001-77\nLOCATÁRIO: MUNICÍPIO DE BELÉM\nVALOR MENSAL: R$ 14.500,00\nA contratação foi precedida de Laudo Técnico de Avaliação Imobiliária nº 022/2026 elaborado pela Comissão de Avaliação de Imóveis da Secretaria Municipal de Patrimônio (doc SEI nº 0011.2026.000456-3), que atestou compatibilidade do valor com o praticado no mercado regional. Aprovado pelo Comitê Técnico de Contratações Diretas em reunião de 18/04/2026 (ata doc SEI nº 0011.2026.000456-5), à vista do parecer técnico favorável da Vigilância Sanitária quanto à adequação do imóvel ao uso pretendido (doc SEI nº 0011.2026.000456-6).\nBelém, 24 de abril de 2026.",
+      "fullPageContext": "[Página 8 do DO de 25/04/2026 - Inexigibilidade fundamentada com laudo técnico, parecer da vigilância sanitária e aprovação de comitê. Múltiplas referências SEI substantivas. Caso paradigmático de inexigibilidade bem instruída.]"
+    },
+    "rationale": "Locação de imóvel COM laudo técnico, parecer técnico e aprovação de comitê — todos referenciados via documentos SEI substantivos. Filtro 5 do ADR-001 (atenuador de justificativa referenciada) deve detectar 3+ ocorrências de 'doc SEI nº', 'parecer técnico', 'aprovado pelo Comitê' e suprimir/atenuar confidence em -0,3.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Filtro 5: detectar 2+ ocorrências de doc(s)? SEI nº \\d+|à vista (do parecer|da manifestação)|aprovado pelo Comitê — atenuar confidence (-0,3) ou suprimir."
+  },
+  {
+    "id": "SYN-LOC-FP-007",
+    "fiscalId": "fiscal-locacao",
+    "category": "fp_edge_case",
+    "fpPattern": "inexigibilidade_com_avaliacoes_comparativas",
+    "type": "locacao_sem_justificativa",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2927408",
+      "cityName": "Salvador",
+      "date": "2026-03-08",
+      "excerpt": "EXTRATO DE INEXIGIBILIDADE DE LICITAÇÃO Nº 056/2026/SEMGE\nFUNDAMENTO LEGAL: Art. 74, III, 'b', da Lei 14.133/2021.\nOBJETO: Locação de imóvel sito à Av. Tancredo Neves, 620, Edifício Empresarial Mundo Plaza, conjunto 1804, para abrigar a Coordenadoria de Tecnologia da Informação da Secretaria Municipal de Gestão.\nCONTRATADO: MUNDO PLAZA EMPREENDIMENTOS LTDA - CNPJ 55.666.777/0001-88\nVALOR MENSAL: R$ 28.700,00\nA presente contratação foi precedida de pesquisa de mercado contemplando 03 (três) avaliações comparativas de imóveis similares na Avenida Tancredo Neves: (i) Edifício Suarez Trade, conjunto 2105, R$ 31.200,00/mês (Laudo SEI nº 0023.2026.001112-1); (ii) Centro Empresarial Iguatemi, sala 1402, R$ 33.500,00/mês (Laudo SEI nº 0023.2026.001112-2); (iii) Salvador Trade Center, conjunto 805, R$ 29.800,00/mês (Laudo SEI nº 0023.2026.001112-3). À vista do parecer técnico nº 089/2026 da Comissão Permanente de Avaliação de Imóveis (doc SEI nº 0023.2026.001112-7), o imóvel objeto desta inexigibilidade apresentou a melhor relação custo-benefício considerando localização, infraestrutura e valor.\nSalvador, 07 de março de 2026.",
+      "fullPageContext": "[Página 17 do DO de 08/03/2026 - Inexigibilidade com pesquisa formal de mercado, 3 laudos comparativos referenciados via SEI e parecer técnico de comissão permanente. Caso de inexigibilidade adequadamente instruída.]"
+    },
+    "rationale": "Inexigibilidade citando 3+ avaliações comparativas formais, todas via doc SEI substantivo + parecer técnico de comissão. Filtro 5 do ADR-001 deve detectar 4+ ocorrências SEI + 'parecer técnico' + 'à vista' e suprimir.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Filtro 5: 4 ocorrências de doc SEI nº + 'à vista do parecer' — atenuar confidence (-0,3) ou suprimir."
+  },
+  {
+    "id": "SYN-LOC-FP-008",
+    "fiscalId": "fiscal-locacao",
+    "category": "fp_edge_case",
+    "fpPattern": "chamamento_publico_locacao",
+    "type": "locacao_sem_justificativa",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3106200",
+      "cityName": "Belo Horizonte",
+      "date": "2026-04-15",
+      "excerpt": "AVISO DE CHAMAMENTO PÚBLICO Nº 008/2026\nEDITAL DE CHAMAMENTO PÚBLICO PARA LOCAÇÃO DE IMÓVEL\nA SECRETARIA MUNICIPAL DE ASSISTÊNCIA SOCIAL DE BELO HORIZONTE torna público o presente AVISO DE INTERESSE EM LOCAÇÃO de imóvel destinado à instalação do Centro de Referência Especializado de Assistência Social - CREAS Norte.\nMODALIDADE: Chamamento Público - procedimento competitivo prévio à eventual contratação direta.\nFUNDAMENTO: Art. 78 da Lei 14.133/2021 c/c Decreto Municipal nº 17.890/2024.\nREQUISITOS TÉCNICOS DO IMÓVEL:\n- Área útil mínima de 350 m²;\n- Localização em raio de 2 km da Regional Norte;\n- Acessibilidade plena (NBR 9050);\n- Mínimo de 8 vagas de estacionamento;\n- Conformidade com AVCB.\nVALOR ESTIMADO MÁXIMO: R$ 22.000,00/mês\nPRAZO PARA APRESENTAÇÃO DE PROPOSTAS: 30 (trinta) dias corridos da publicação.\nO julgamento observará: (i) menor valor mensal; (ii) adequação técnica conforme laudo da Comissão de Avaliação Imobiliária.\nBelo Horizonte, 14 de abril de 2026.",
+      "fullPageContext": "[Página 22 do DO de 15/04/2026 - Modalidade competitiva pública (chamamento) com critérios técnicos objetivos publicados, prazo amplo para concorrentes e julgamento por menor preço + adequação técnica. Não é contratação direta por inexigibilidade.]"
+    },
+    "rationale": "Aviso de Chamamento Público é modalidade competitiva, não contratação direta. Padrão FP do GS-098. Filtro 1 do ADR-001 deve excluir 'AVISO DE INTERESSE EM LOCAÇÃO|EDITAL DE CHAMAMENTO'.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "Excluir match em AVISO\\s+DE\\s+INTERESSE\\s+EM\\s+LOCAÇÃO|EDITAL\\s+DE\\s+CHAMAMENTO"
+  }
+]

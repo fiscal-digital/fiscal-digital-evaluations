@@ -1,0 +1,220 @@
+[
+  {
+    "id": "SYN-CON-TP-001",
+    "fiscalId": "fiscal-contratos",
+    "category": "tp_textbook",
+    "type": "aditivo_abusivo",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2910800",
+      "cityName": "Feira de Santana",
+      "date": "2026-04-15",
+      "excerpt": "EXTRATO DO QUARTO TERMO ADITIVO AO CONTRATO Nº 123/2024\nCONTRATANTE: Município de Feira de Santana, por meio da Secretaria Municipal de Saúde.\nCONTRATADO: CONSTRUTORA MUNICIPAL LTDA, CNPJ 12.345.678/0001-90.\nOBJETO: Execução das obras de construção da Unidade Básica de Saúde do Bairro Cidade Nova, conforme projeto básico anexo ao Edital Concorrência nº 008/2024.\nVALOR ORIGINAL DO CONTRATO: R$ 1.000.000,00 (um milhão de reais), firmado em 12/03/2024.\nVALOR DO PRESENTE ADITIVO: R$ 500.000,00 (quinhentos mil reais), correspondente a acréscimo de 50,00% (cinquenta por cento) sobre o valor original.\nVALOR ATUALIZADO DO CONTRATO: R$ 1.500.000,00 (um milhão e quinhentos mil reais).\nFUNDAMENTO: alteração quantitativa do objeto, art. 125 da Lei nº 14.133/2021. Justifica-se em razão de superveniência de necessidade de ampliação da área construída solicitada pela unidade gestora.\nDATA DA ASSINATURA: 14/04/2026.\nSIGNATÁRIOS: Secretário Municipal de Saúde e representante legal da contratada."
+    },
+    "rationale": "Aditivo de +50,00% sobre o valor original do contrato (R$ 1.000.000,00 → R$ 1.500.000,00), com valor original explicitamente declarado no próprio extrato publicado. Trata-se de obra nova (construção de UBS), não reforma, portanto o limite legal é de 25% (art. 125, §1º, I, Lei 14.133/2021). O aditivo dobra o limite permitido. Evidência completa no PDF, sem necessidade de cross-reference em suppliers-prod.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-CON-TP-002",
+    "fiscalId": "fiscal-contratos",
+    "category": "tp_textbook",
+    "type": "aditivo_abusivo",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-04-22",
+      "excerpt": "EXTRATO DO SEGUNDO TERMO ADITIVO AO CONTRATO Nº 087/2025\nCONTRATANTE: Município de Porto Alegre, por intermédio da Secretaria Municipal da Fazenda.\nCONTRATADO: SERVIÇOS DIGITAIS PORTO ALEGRE LTDA, CNPJ 23.456.789/0001-12.\nOBJETO: Prestação de serviços de manutenção e suporte técnico ao sistema de gestão tributária municipal, conforme Pregão Eletrônico nº 044/2025.\nVALOR DO PRESENTE ADITIVO: R$ 240.000,00 (duzentos e quarenta mil reais), correspondente a acréscimo de 30% (trinta por cento) sobre o valor inicialmente contratado.\nFUNDAMENTO: art. 125 da Lei nº 14.133/2021, em razão de inclusão de novos módulos não previstos no termo de referência original.\nDATA DA ASSINATURA: 21/04/2026.",
+      "supplierLookup": {
+        "contractId": "087/2025",
+        "supplierCnpj": "23.456.789/0001-12",
+        "originalValue": 800000.00,
+        "originalDate": "2025-06-10",
+        "objectType": "servico",
+        "source": "fiscal-digital-suppliers-prod#CONTRACT#087-2025"
+      }
+    },
+    "rationale": "Aditivo de +30% sobre contrato de serviço cujo valor original (R$ 800.000,00) está registrado em suppliers-prod via cross-reference por contractId. Limite legal para serviços é 25% (art. 125, §1º, I). O acréscimo de 30% supera o teto. Cenário valida a EVO-002 (consulta GSI suppliers-prod por contractId).",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-CON-TP-003",
+    "fiscalId": "fiscal-contratos",
+    "category": "tp_textbook",
+    "type": "prorrogacao_excessiva",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3550308",
+      "cityName": "São Paulo",
+      "date": "2026-05-02",
+      "excerpt": "EXTRATO DO DÉCIMO SEGUNDO TERMO ADITIVO AO CONTRATO Nº 015/2014\nCONTRATANTE: Prefeitura do Município de São Paulo, por intermédio da Secretaria Municipal de Infraestrutura Urbana e Obras.\nCONTRATADO: MANUTENÇÃO PREDIAL PAULISTANA LTDA, CNPJ 34.567.890/0001-23.\nOBJETO: Prestação continuada de serviços de manutenção preventiva e corretiva nas edificações próprias do Município, contrato originalmente firmado em 01/06/2014.\nOBJETO DO ADITIVO: prorrogação do prazo de vigência por mais 12 (doze) meses, a contar de 01/06/2026, totalizando 12 (doze) anos de vigência ininterrupta.\nFUNDAMENTO: invocado o art. 107 da Lei nº 14.133/2021.\nDATA DA ASSINATURA: 30/04/2026.",
+      "supplierLookup": {
+        "contractId": "015/2014",
+        "supplierCnpj": "34.567.890/0001-23",
+        "originalDate": "2014-06-01",
+        "totalDurationYears": 12,
+        "objectType": "servico_continuado",
+        "source": "fiscal-digital-suppliers-prod#CONTRACT#015-2014"
+      }
+    },
+    "rationale": "Prorrogação cumulativa que totaliza 12 anos de vigência em contrato de serviço continuado. O art. 107 da Lei 14.133/2021 limita prorrogações a 10 anos no total. Vigência atinge 12 anos, ultrapassando o teto legal em 2 anos. Cross-reference em suppliers-prod confirma data original 2014-06-01.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-CON-FP-001",
+    "fiscalId": "fiscal-contratos",
+    "category": "fp_replica",
+    "fpPattern": "missing_original_contract_value",
+    "type": "aditivo_abusivo",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "5002704",
+      "cityName": "Campo Grande",
+      "date": "2026-03-10",
+      "excerpt": "EXTRATO DO TERMO ADITIVO AO CONTRATO Nº 456/2023\nCONTRATANTE: Município de Campo Grande, por meio da Secretaria Municipal de Educação.\nCONTRATADO: PRESTADORA DE SERVIÇOS LTDA, CNPJ 45.678.901/0001-34.\nOBJETO: Serviços de manutenção predial em unidade escolar.\nVALOR DO PRESENTE ADITIVO: R$ 500,00 (quinhentos reais).\nFUNDAMENTO: art. 125 da Lei nº 14.133/2021.\nDATA DA ASSINATURA: 09/03/2026.",
+      "fullPageContext": "[PDF não menciona o valor original do contrato Nº 456/2023; suppliers-prod não possui registro para contractId 456/2023.]",
+      "supplierLookup": null
+    },
+    "rationale": "Aditivo de R$ 500,00 sem valor original conhecido no PDF e sem registro em suppliers-prod. R$ 500 pode representar 5% de R$ 10.000 (irrelevante) ou 50% de R$ 1.000 (TP); sem cross-reference o engine não tem base factual para decidir. Engine atual dispara finding por desconhecimento; comportamento esperado pós-EVO-002 é skip.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "EVO-002: consultar suppliers-prod GSI por contractId. Se ausente → skip. Adicionalmente, floor de R$ 5.000 para o valor do aditivo evita trivialidades. Referência: ADR-001 padrão #1 missing_original_contract_value (13/14 FP)."
+  },
+  {
+    "id": "SYN-CON-FP-002",
+    "fiscalId": "fiscal-contratos",
+    "category": "fp_replica",
+    "fpPattern": "ignored_explicit_percentage_in_text",
+    "type": "aditivo_abusivo",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3304557",
+      "cityName": "Rio de Janeiro",
+      "date": "2026-02-18",
+      "excerpt": "EXTRATO DO TERCEIRO TERMO ADITIVO AO CONTRATO Nº 201/2024\nCONTRATANTE: Município do Rio de Janeiro, Secretaria Municipal de Conservação.\nCONTRATADO: OBRAS CARIOCAS LTDA, CNPJ 56.789.012/0001-45.\nOBJETO: Recuperação e recapeamento asfáltico de vias públicas.\nVALOR DO PRESENTE ADITIVO: R$ 360.000,00, correspondente a acréscimo de 18% (dezoito por cento) do valor original do contrato.\nFUNDAMENTO: art. 125 da Lei nº 14.133/2021.\nDATA DA ASSINATURA: 17/02/2026."
+    },
+    "rationale": "O próprio texto declara expressamente o percentual de 18%, abaixo do limite de 25% para serviços. Engine atual ignorou o percentual textual e calculou um valor próprio sem o original. Pós-patch deve extrair o percentual declarado quando presente e respeitá-lo se < limite legal.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "EVO-003: regex prévia para capturar 'acréscimo de N% (por cento)' / 'correspondente a N%' no excerpt. Se N abaixo do limite legal aplicável (25% serviço/obra, 50% reforma) → skip. Referência: ADR-001 padrão #2 ignored_explicit_percentage_in_text."
+  },
+  {
+    "id": "SYN-CON-FP-003",
+    "fiscalId": "fiscal-contratos",
+    "category": "fp_replica",
+    "fpPattern": "termo_compromisso_nao_e_contrato",
+    "type": "aditivo_abusivo",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4106902",
+      "cityName": "Curitiba",
+      "date": "2026-01-30",
+      "excerpt": "TERMO DE COMPROMISSO Nº 09/2026\nCOMPROMITENTE: Município de Curitiba.\nCOMPROMISSADO: JOÃO DA SILVA, CPF 123.456.789-00, profissional autônomo cadastrado como Conselheiro Tutelar.\nOBJETO: assunção das atribuições previstas na Lei nº 8.069/1990 (ECA) durante o mandato 2026-2029.\nVALOR MENSAL DA REMUNERAÇÃO: R$ 4.500,00 (quatro mil e quinhentos reais), reajustável anualmente.\nFUNDAMENTO: Lei Municipal nº 14.594/2014 e Resolução CMDCA nº 02/2025.\nDATA DA ASSINATURA: 29/01/2026."
+    },
+    "rationale": "Termo de Compromisso para mandato de Conselheiro Tutelar não é contrato administrativo regido pela Lei 14.133/2021. Não há aditivo, não há objeto licitável; trata-se de vínculo institucional regulado por lei municipal. Engine confunde por presença de 'TERMO' + valor monetário no mesmo bloco textual.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "EVO-004: classifier de tipo documental antes de aplicar regras de aditivo. Excluir 'Termo de Compromisso', 'Termo de Posse', 'Termo de Cooperação' (≠ Termo Aditivo). Referência: ADR-001 padrão #3."
+  },
+  {
+    "id": "SYN-CON-FP-004",
+    "fiscalId": "fiscal-contratos",
+    "category": "fp_replica",
+    "fpPattern": "reajuste_indice_nao_e_acrescimo",
+    "type": "aditivo_abusivo",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4205407",
+      "cityName": "Florianópolis",
+      "date": "2026-03-25",
+      "excerpt": "EXTRATO DE APOSTILAMENTO AO CONTRATO Nº 078/2023\nCONTRATANTE: Município de Florianópolis, Secretaria Municipal da Educação.\nCONTRATADA: ALIMENTAÇÃO ESCOLAR ILHA LTDA, CNPJ 67.890.123/0001-56.\nOBJETO DO APOSTILAMENTO: revisão anual dos preços do contrato pelo INPC acumulado de março/2025 a fevereiro/2026, índice de 4,87%.\nVALOR REAJUSTADO MENSAL: R$ 124.350,00.\nFUNDAMENTO: art. 124, II, 'd', da Lei nº 14.133/2021 e cláusula contratual de reajuste por índice oficial.\nDATA: 24/03/2026."
+    },
+    "rationale": "Reajuste por índice oficial (INPC) é hipótese expressa do art. 124 da Lei 14.133/2021, não constitui acréscimo ao objeto e não se submete ao limite de 25% do art. 125. Engine atual confunde por estar publicado em seção 'Aditivos e Apostilamentos'. Apostilamento ≠ Termo Aditivo.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "EVO-005: distinguir 'Apostilamento' (art. 124) de 'Termo Aditivo' (art. 125). Detectar palavras-chave: 'reajuste', 'índice', 'INPC', 'IPCA', 'IGP-M', 'apostilamento'. Se presente → skip. Referência: ADR-001 padrão correlato a Art. 124."
+  },
+  {
+    "id": "SYN-CON-FP-005",
+    "fiscalId": "fiscal-contratos",
+    "category": "fp_replica",
+    "fpPattern": "extraction_window_acoplou_bloco_adjacente",
+    "type": "aditivo_abusivo",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "1501402",
+      "cityName": "Belém",
+      "date": "2026-04-05",
+      "excerpt": "EXTRATO DO PRIMEIRO TERMO ADITIVO AO CONTRATO Nº 144/2025\nCONTRATANTE: Município de Belém, Secretaria Municipal de Saúde.\nCONTRATADO: FORNECIMENTO HOSPITALAR PARÁ LTDA, CNPJ 78.901.234/0001-67.\nOBJETO: prorrogação por 6 (seis) meses, sem alteração de valor.\nFUNDAMENTO: art. 107 da Lei nº 14.133/2021.\nDATA: 04/04/2026.\n\n---\n\nEXTRATO DO TERMO DE COLABORAÇÃO Nº 22/2025\nADMINISTRAÇÃO PÚBLICA: Município de Belém, Fundo Municipal de Assistência Social.\nORGANIZAÇÃO DA SOCIEDADE CIVIL: ASSOCIAÇÃO BENEFICENTE LUZ DO PARÁ, CNPJ 89.012.345/0001-78.\nOBJETO: oferta de serviços socioassistenciais.\nVALOR GLOBAL DO REPASSE: R$ 850.000,00.\nFUNDAMENTO: Lei nº 13.019/2014.\nDATA: 04/04/2026."
+    },
+    "rationale": "Janela de extração do engine acoplou o valor de R$ 850.000,00 (Termo de Colaboração com OSC, regido pela Lei 13.019/2014) ao Termo Aditivo do Contrato 144/2025 (que é prorrogação sem alteração de valor). O engine reportou aditivo abusivo inexistente. Bloco textual adjacente não pertence ao mesmo ato.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "EVO-006: limitar janela de extração ao delimitador '---' / 'EXTRATO' subsequente. Validar que valor extraído pertence ao mesmo CNPJ/contractId do cabeçalho do bloco. Se aditivo declara 'sem alteração de valor' → skip. Referência: ADR-001 padrão #4 extraction_window."
+  },
+  {
+    "id": "SYN-CON-FP-EDGE-001",
+    "fiscalId": "fiscal-contratos",
+    "category": "fp_edge_case",
+    "fpPattern": "valor_abaixo_floor",
+    "type": "aditivo_abusivo",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "2611606",
+      "cityName": "Recife",
+      "date": "2026-04-12",
+      "excerpt": "EXTRATO DO TERMO ADITIVO AO CONTRATO Nº 312/2024\nCONTRATANTE: Município do Recife, Secretaria Municipal de Cultura.\nCONTRATADO: GRÁFICA RECIFENSE LTDA, CNPJ 90.123.456/0001-89.\nOBJETO: ajuste de quantitativo de impressão de cartilhas educativas.\nVALOR DO PRESENTE ADITIVO: R$ 4.500,00 (quatro mil e quinhentos reais).\nFUNDAMENTO: art. 125 da Lei nº 14.133/2021.\nDATA: 11/04/2026."
+    },
+    "rationale": "Valor absoluto do aditivo (R$ 4.500,00) está abaixo do floor sugerido de R$ 5.000,00. Mesmo que percentualmente possa exceder limite, o impacto orçamentário não justifica alerta público. Floor evita ruído e protege precisão da timeline de findings.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "EVO-007: floor mínimo de R$ 5.000,00 para valor absoluto do aditivo. Aditivos abaixo do floor são ignorados independentemente do percentual. Política de precisão sobre recall em valores triviais."
+  },
+  {
+    "id": "SYN-CON-FP-EDGE-002",
+    "fiscalId": "fiscal-contratos",
+    "category": "fp_edge_case",
+    "fpPattern": "repactuacao_mao_de_obra",
+    "type": "aditivo_abusivo",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "3106200",
+      "cityName": "Belo Horizonte",
+      "date": "2026-05-01",
+      "excerpt": "EXTRATO DE REPACTUAÇÃO AO CONTRATO Nº 067/2024\nCONTRATANTE: Município de Belo Horizonte, Secretaria Municipal de Serviços Urbanos.\nCONTRATADO: LIMPEZA URBANA MINEIRA LTDA, CNPJ 01.234.567/0001-90.\nOBJETO DO CONTRATO: serviços continuados de limpeza pública com dedicação exclusiva de mão de obra.\nOBJETO DA REPACTUAÇÃO: ajuste do componente mão de obra em razão da Convenção Coletiva de Trabalho 2026/2027 (CCT SINTEAC-MG), aumento de 6,2% no salário-base da categoria.\nIMPACTO MENSAL: R$ 78.400,00.\nFUNDAMENTO: art. 124, II, 'd', da Lei nº 14.133/2021 e cláusula contratual de repactuação.\nDATA: 30/04/2026."
+    },
+    "rationale": "Repactuação de contrato com dedicação exclusiva de mão de obra é hipótese específica do art. 124 da Lei 14.133/2021, vinculada a CCT/ACT da categoria. Não é acréscimo de objeto e não se submete ao teto do art. 125. Engine atual confunde por aparecer valor expressivo em contexto contratual.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "EVO-008: classificar 'Repactuação' como subcategoria de art. 124. Palavras-chave: 'repactuação', 'CCT', 'Convenção Coletiva', 'dissídio', 'dedicação exclusiva de mão de obra'. Se presente → skip. Referência: ADR-001 fronteira entre Art. 124 e Art. 125."
+  },
+  {
+    "id": "SYN-CON-FP-EDGE-003",
+    "fiscalId": "fiscal-contratos",
+    "category": "fp_edge_case",
+    "fpPattern": "prorrogacao_proxima_do_limite",
+    "type": "prorrogacao_excessiva",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-04-28",
+      "excerpt": "EXTRATO DO NONO TERMO ADITIVO AO CONTRATO Nº 033/2017\nCONTRATANTE: Município de Porto Alegre, Departamento Municipal de Limpeza Urbana.\nCONTRATADO: SERVIÇOS GAÚCHOS DE COLETA LTDA, CNPJ 12.345.678/0001-91.\nOBJETO: prestação continuada de coleta seletiva, contrato originalmente firmado em 01/05/2017.\nOBJETO DO ADITIVO: prorrogação por 12 (doze) meses, totalizando 9 (nove) anos de vigência ininterrupta a contar de 01/05/2026.\nFUNDAMENTO: art. 107 da Lei nº 14.133/2021.\nDATA: 27/04/2026.",
+      "supplierLookup": {
+        "contractId": "033/2017",
+        "supplierCnpj": "12.345.678/0001-91",
+        "originalDate": "2017-05-01",
+        "totalDurationYears": 9,
+        "objectType": "servico_continuado",
+        "source": "fiscal-digital-suppliers-prod#CONTRACT#033-2017"
+      }
+    },
+    "rationale": "Vigência total atinge 9 anos, abaixo do teto de 10 anos previsto no art. 107 da Lei 14.133/2021. Edge case próximo do limite mas dentro da legalidade. Engine não deve disparar; pode-se opcionalmente registrar 'watch_list' interna sem publicar finding.",
+    "shouldTriggerAfterPatch": false,
+    "filterRule": "EVO-009: prorrogação só dispara finding se totalDurationYears >= 10. Entre 8 e 10 anos: registrar em watch_list interna (não publicar). Cross-reference suppliers-prod por originalDate é obrigatório para calcular duração total."
+  }
+]
