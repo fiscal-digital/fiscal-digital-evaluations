@@ -1,0 +1,295 @@
+[
+  {
+    "id": "SYN-GER-TP-001",
+    "fiscalId": "fiscal-geral",
+    "category": "tp_textbook",
+    "type": "padrao_recorrente",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "cnpj": "47.832.119/0001-55",
+    "supplier": "BUFFET SABOR & ARTE EVENTOS LTDA",
+    "syntheticGazettes": [
+      {
+        "cityId": "4305108",
+        "cityName": "Caxias do Sul",
+        "date": "2025-11-12",
+        "fiscalSourceId": "fiscal-licitacoes",
+        "findingType": "dispensa_licitacao",
+        "valor": 47800.00,
+        "objeto": "Serviços de buffet e coffee break para evento institucional da Secretaria Municipal de Cultura",
+        "excerpt": "EXTRATO DE DISPENSA DE LICITAÇÃO Nº 218/2025\nCONTRATANTE: Município de Caxias do Sul, por meio da Secretaria Municipal de Cultura.\nCONTRATADA: BUFFET SABOR & ARTE EVENTOS LTDA, CNPJ 47.832.119/0001-55.\nOBJETO: Contratação de serviços de buffet e coffee break para evento institucional da pasta.\nVALOR: R$ 47.800,00 (quarenta e sete mil e oitocentos reais).\nFUNDAMENTO: art. 75, II, da Lei nº 14.133/2021.\nDATA: 11/11/2025."
+      },
+      {
+        "cityId": "4305108",
+        "cityName": "Caxias do Sul",
+        "date": "2026-01-20",
+        "fiscalSourceId": "fiscal-licitacoes",
+        "findingType": "dispensa_licitacao",
+        "valor": 49500.00,
+        "objeto": "Serviços de buffet e coffee break para reunião de planejamento da Secretaria Municipal de Educação",
+        "excerpt": "EXTRATO DE DISPENSA DE LICITAÇÃO Nº 014/2026\nCONTRATANTE: Município de Caxias do Sul, por meio da Secretaria Municipal de Educação.\nCONTRATADA: BUFFET SABOR & ARTE EVENTOS LTDA, CNPJ 47.832.119/0001-55.\nOBJETO: Serviços de buffet e coffee break para reunião de planejamento estratégico.\nVALOR: R$ 49.500,00 (quarenta e nove mil e quinhentos reais).\nFUNDAMENTO: art. 75, II, da Lei nº 14.133/2021.\nDATA: 19/01/2026."
+      },
+      {
+        "cityId": "4305108",
+        "cityName": "Caxias do Sul",
+        "date": "2026-03-08",
+        "fiscalSourceId": "fiscal-licitacoes",
+        "findingType": "dispensa_licitacao",
+        "valor": 48900.00,
+        "objeto": "Serviços de buffet e coffee break para evento de capacitação da Secretaria Municipal de Saúde",
+        "excerpt": "EXTRATO DE DISPENSA DE LICITAÇÃO Nº 091/2026\nCONTRATANTE: Município de Caxias do Sul, por meio da Secretaria Municipal de Saúde.\nCONTRATADA: BUFFET SABOR & ARTE EVENTOS LTDA, CNPJ 47.832.119/0001-55.\nOBJETO: Serviços de buffet e coffee break para evento de capacitação de servidores.\nVALOR: R$ 48.900,00 (quarenta e oito mil e novecentos reais).\nFUNDAMENTO: art. 75, II, da Lei nº 14.133/2021.\nDATA: 07/03/2026."
+      },
+      {
+        "cityId": "4305108",
+        "cityName": "Caxias do Sul",
+        "date": "2026-04-22",
+        "fiscalSourceId": "fiscal-licitacoes",
+        "findingType": "dispensa_licitacao",
+        "valor": 49200.00,
+        "objeto": "Serviços de buffet e coffee break para encontro intersetorial da Secretaria Municipal de Assistência Social",
+        "excerpt": "EXTRATO DE DISPENSA DE LICITAÇÃO Nº 152/2026\nCONTRATANTE: Município de Caxias do Sul, por meio da Secretaria Municipal de Assistência Social.\nCONTRATADA: BUFFET SABOR & ARTE EVENTOS LTDA, CNPJ 47.832.119/0001-55.\nOBJETO: Serviços de buffet e coffee break para encontro intersetorial.\nVALOR: R$ 49.200,00 (quarenta e nove mil e duzentos reais).\nFUNDAMENTO: art. 75, II, da Lei nº 14.133/2021.\nDATA: 21/04/2026."
+      }
+    ],
+    "expectedConsolidation": {
+      "windowMonths": 6,
+      "totalFindings": 4,
+      "sameObjectCategory": "buffet_coffee_break",
+      "totalValue": 195400.00,
+      "secretariasDistintas": 4,
+      "patternSignal": "fracionamento_recorrente_mesmo_fornecedor"
+    },
+    "rationale": "Quatro dispensas de licitação para o mesmo fornecedor (CNPJ 47.832.119/0001-55) em janela de 6 meses, todas para o mesmo objeto (buffet e coffee break), distribuídas entre 4 secretarias diferentes, sempre com valor logo abaixo do teto de R$ 50k da dispensa por valor (art. 75, II). Padrão clássico de fracionamento sistemático: o FiscalGeral consolida cross-gazette via consolidarAsync e dispara padrao_recorrente porque ≥ 3 findings mesmo CNPJ em 12 meses. O somatório (R$ 195.400,00) excede com folga o teto de dispensa, indicando burla à exigência de licitação.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-GER-TP-002",
+    "fiscalId": "fiscal-geral",
+    "category": "tp_textbook",
+    "type": "padrao_recorrente",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "cnpj": "62.118.447/0001-08",
+    "supplier": "ENGELIMP CONSERVAÇÃO E SERVIÇOS LTDA",
+    "syntheticGazettes": [
+      {
+        "cityId": "4314902",
+        "cityName": "Porto Alegre",
+        "date": "2025-08-04",
+        "fiscalSourceId": "fiscal-licitacoes",
+        "findingType": "inexigibilidade",
+        "valor": 320000.00,
+        "objeto": "Serviços de limpeza e conservação predial em unidades da Secretaria Municipal de Saúde",
+        "excerpt": "EXTRATO DE INEXIGIBILIDADE DE LICITAÇÃO Nº 047/2025\nCONTRATANTE: Município de Porto Alegre, por intermédio da Secretaria Municipal de Saúde.\nCONTRATADA: ENGELIMP CONSERVAÇÃO E SERVIÇOS LTDA, CNPJ 62.118.447/0001-08.\nOBJETO: Serviços continuados de limpeza e conservação predial em unidades de saúde.\nVALOR: R$ 320.000,00 (trezentos e vinte mil reais).\nFUNDAMENTO: art. 74 da Lei nº 14.133/2021, com justificativa de notória especialização.\nDATA: 03/08/2025."
+      },
+      {
+        "cityId": "4314902",
+        "cityName": "Porto Alegre",
+        "date": "2025-12-15",
+        "fiscalSourceId": "fiscal-contratos",
+        "findingType": "contrato_sem_licitacao",
+        "valor": 410000.00,
+        "objeto": "Serviços de limpeza e conservação em unidades da Secretaria Municipal de Educação",
+        "excerpt": "EXTRATO DE CONTRATO Nº 198/2025\nCONTRATANTE: Município de Porto Alegre, por intermédio da Secretaria Municipal de Educação.\nCONTRATADA: ENGELIMP CONSERVAÇÃO E SERVIÇOS LTDA, CNPJ 62.118.447/0001-08.\nOBJETO: Serviços continuados de limpeza e conservação predial em escolas municipais.\nVALOR: R$ 410.000,00 (quatrocentos e dez mil reais).\nMODALIDADE: contratação direta com fundamento em razões de notória especialização.\nFUNDAMENTO: art. 74 da Lei nº 14.133/2021.\nDATA: 14/12/2025."
+      },
+      {
+        "cityId": "4314902",
+        "cityName": "Porto Alegre",
+        "date": "2026-04-02",
+        "fiscalSourceId": "fiscal-contratos",
+        "findingType": "contrato_sem_licitacao",
+        "valor": 380000.00,
+        "objeto": "Serviços de limpeza e conservação em prédios da Secretaria Municipal de Cultura",
+        "excerpt": "EXTRATO DE CONTRATO Nº 062/2026\nCONTRATANTE: Município de Porto Alegre, por intermédio da Secretaria Municipal de Cultura.\nCONTRATADA: ENGELIMP CONSERVAÇÃO E SERVIÇOS LTDA, CNPJ 62.118.447/0001-08.\nOBJETO: Serviços continuados de limpeza e conservação predial em equipamentos culturais.\nVALOR: R$ 380.000,00 (trezentos e oitenta mil reais).\nMODALIDADE: contratação direta por inexigibilidade.\nFUNDAMENTO: art. 74 da Lei nº 14.133/2021.\nDATA: 01/04/2026."
+      }
+    ],
+    "expectedConsolidation": {
+      "windowMonths": 8,
+      "totalFindings": 3,
+      "sameObjectCategory": "limpeza_conservacao",
+      "totalValue": 1110000.00,
+      "secretariasDistintas": 3,
+      "patternSignal": "contratacao_direta_sistematica_servico_comum"
+    },
+    "rationale": "Três contratos consecutivos sem licitação (uma inexigibilidade + dois contratos diretos) para o mesmo fornecedor (CNPJ 62.118.447/0001-08), no mesmo município, em janela de 8 meses, todos invocando art. 74 da Lei 14.133/2021 (notória especialização) para serviços de limpeza e conservação — atividade comum, sem singularidade técnica que justifique contratação direta. O FiscalGeral consolida via consolidarAsync e identifica padrao_recorrente: ≥ 3 findings mesmo CNPJ em 12 meses, totalizando R$ 1.110.000,00 sem qualquer disputa competitiva.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-GER-TP-003",
+    "fiscalId": "fiscal-geral",
+    "category": "tp_textbook",
+    "type": "padrao_recorrente",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "cnpj": "29.456.781/0001-63",
+    "supplier": "RODOVIÁRIA EXPRESSO SUL LTDA",
+    "supplierStatus": {
+      "ceis": {
+        "sancionado": true,
+        "tipoSancao": "Inidoneidade",
+        "dataInicio": "2025-06-15",
+        "dataFim": "2027-06-15",
+        "fonte": "https://portaldatransparencia.gov.br/sancoes/ceis"
+      }
+    },
+    "syntheticGazettes": [
+      {
+        "cityId": "4314902",
+        "cityName": "Porto Alegre",
+        "date": "2025-09-22",
+        "fiscalSourceId": "fiscal-fornecedores",
+        "findingType": "fornecedor_sancionado",
+        "valor": 180000.00,
+        "objeto": "Serviços de transporte escolar para alunos da rede municipal",
+        "excerpt": "EXTRATO DE CONTRATO Nº 134/2025\nCONTRATANTE: Município de Porto Alegre, por meio da Secretaria Municipal de Educação.\nCONTRATADA: RODOVIÁRIA EXPRESSO SUL LTDA, CNPJ 29.456.781/0001-63.\nOBJETO: Prestação de serviços de transporte escolar para alunos da rede municipal de ensino.\nVALOR: R$ 180.000,00 (cento e oitenta mil reais).\nFUNDAMENTO: Pregão Eletrônico nº 087/2025.\nDATA: 21/09/2025."
+      },
+      {
+        "cityId": "4314902",
+        "cityName": "Porto Alegre",
+        "date": "2026-01-09",
+        "fiscalSourceId": "fiscal-fornecedores",
+        "findingType": "fornecedor_sancionado",
+        "valor": 95000.00,
+        "objeto": "Locação de ônibus para evento institucional",
+        "excerpt": "EXTRATO DE CONTRATO Nº 008/2026\nCONTRATANTE: Município de Porto Alegre, por meio da Secretaria Municipal de Cultura.\nCONTRATADA: RODOVIÁRIA EXPRESSO SUL LTDA, CNPJ 29.456.781/0001-63.\nOBJETO: Locação de ônibus com motorista para deslocamento de público em evento institucional.\nVALOR: R$ 95.000,00 (noventa e cinco mil reais).\nFUNDAMENTO: art. 75, II, da Lei nº 14.133/2021 (dispensa por valor).\nDATA: 08/01/2026."
+      },
+      {
+        "cityId": "4314902",
+        "cityName": "Porto Alegre",
+        "date": "2026-03-30",
+        "fiscalSourceId": "fiscal-fornecedores",
+        "findingType": "fornecedor_sancionado",
+        "valor": 220000.00,
+        "objeto": "Serviços de transporte para servidores em capacitação intermunicipal",
+        "excerpt": "EXTRATO DE CONTRATO Nº 058/2026\nCONTRATANTE: Município de Porto Alegre, por meio da Secretaria Municipal de Administração.\nCONTRATADA: RODOVIÁRIA EXPRESSO SUL LTDA, CNPJ 29.456.781/0001-63.\nOBJETO: Serviços de transporte para servidores em programa de capacitação intermunicipal.\nVALOR: R$ 220.000,00 (duzentos e vinte mil reais).\nFUNDAMENTO: Pregão Eletrônico nº 022/2026.\nDATA: 29/03/2026."
+      }
+    ],
+    "expectedConsolidation": {
+      "windowMonths": 6,
+      "totalFindings": 3,
+      "sameObjectCategory": "transporte_rodoviario",
+      "totalValue": 495000.00,
+      "secretariasDistintas": 3,
+      "patternSignal": "contratacoes_recorrentes_fornecedor_sancionado_ceis",
+      "ceisActiveOnAllDates": true
+    },
+    "rationale": "Fornecedor (CNPJ 29.456.781/0001-63) declarado inidôneo no CEIS em 15/06/2025 com vigência até 2027-06-15, ainda assim recebe três contratos consecutivos da mesma prefeitura entre 09/2025 e 03/2026, totalizando R$ 495.000,00, em três secretarias diferentes. Cada finding individual já é TP do FiscalFornecedores; o FiscalGeral consolida cross-gazette e dispara padrao_recorrente reforçando a gravidade: contratação reiterada de empresa sancionada viola art. 156, IV da Lei 14.133/2021. ≥ 3 findings mesmo CNPJ em 12 meses confirmado.",
+    "shouldTriggerAfterPatch": true
+  },
+  {
+    "id": "SYN-GER-FP-001",
+    "fiscalId": "fiscal-geral",
+    "category": "fp_edge_case",
+    "fpPattern": "cascata_findings_individuais_fp",
+    "type": "padrao_recorrente",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "cnpj": "11.222.333/0001-44",
+    "supplier": "TECNOLOGIA INTEGRADA DO SUL LTDA",
+    "syntheticGazettes": [
+      {
+        "cityId": "4305108",
+        "cityName": "Caxias do Sul",
+        "date": "2025-10-14",
+        "fiscalSourceId": "fiscal-licitacoes",
+        "findingType": "dispensa_licitacao",
+        "valor": 18500.00,
+        "objeto": "Aquisição de licenças de software de gestão documental",
+        "excerpt": "EXTRATO DE DISPENSA DE LICITAÇÃO Nº 187/2025\nCONTRATANTE: Município de Caxias do Sul, por meio da Secretaria Municipal de Administração.\nCONTRATADA: TECNOLOGIA INTEGRADA DO SUL LTDA, CNPJ 11.222.333/0001-44.\nOBJETO: Aquisição de 50 licenças de software de gestão documental para uso interno.\nVALOR: R$ 18.500,00 (dezoito mil e quinhentos reais).\nFUNDAMENTO: art. 75, II, da Lei nº 14.133/2021. Foi realizada cotação prévia com 3 fornecedores, anexa ao processo SEI nº 12345/2025, escolha pelo menor preço.\nDATA: 13/10/2025.",
+        "individualOutcome": "FP — cotação prévia com 3 fornecedores documentada, valor bem abaixo do teto, fundamentação adequada"
+      },
+      {
+        "cityId": "4305108",
+        "cityName": "Caxias do Sul",
+        "date": "2026-02-05",
+        "fiscalSourceId": "fiscal-contratos",
+        "findingType": "aditivo_abusivo",
+        "valor": 4200.00,
+        "objeto": "Aditivo de quantitativo a contrato de licenças de software",
+        "excerpt": "EXTRATO DO PRIMEIRO TERMO ADITIVO AO CONTRATO Nº 187/2025\nCONTRATANTE: Município de Caxias do Sul.\nCONTRATADA: TECNOLOGIA INTEGRADA DO SUL LTDA, CNPJ 11.222.333/0001-44.\nOBJETO: Acréscimo de 12 licenças adicionais ao contrato de gestão documental.\nVALOR ORIGINAL: R$ 18.500,00. VALOR DO ADITIVO: R$ 4.200,00 (acréscimo de 22,7%).\nFUNDAMENTO: art. 125, §1º, I, da Lei nº 14.133/2021.\nDATA: 04/02/2026.",
+        "individualOutcome": "FP — aditivo de 22,7% está abaixo do limite legal de 25% para serviços; finding gerado por regex que não considerou percentual exato"
+      },
+      {
+        "cityId": "4305108",
+        "cityName": "Caxias do Sul",
+        "date": "2026-04-18",
+        "fiscalSourceId": "fiscal-fornecedores",
+        "findingType": "cnpj_jovem",
+        "valor": 22000.00,
+        "objeto": "Renovação anual de licenças de software de gestão documental",
+        "excerpt": "EXTRATO DE CONTRATO Nº 097/2026\nCONTRATANTE: Município de Caxias do Sul, por meio da Secretaria Municipal de Administração.\nCONTRATADA: TECNOLOGIA INTEGRADA DO SUL LTDA, CNPJ 11.222.333/0001-44.\nOBJETO: Renovação anual das licenças de gestão documental.\nVALOR: R$ 22.000,00 (vinte e dois mil reais).\nFUNDAMENTO: Pregão Eletrônico nº 031/2026, vencido em ampla concorrência com 7 participantes.\nDATA: 17/04/2026.",
+        "individualOutcome": "FP — empresa cadastrada em 2010 conforme RFB; finding cnpj_jovem foi gerado por bug de parsing de data no FiscalFornecedores (já reportado em ERR-20260301-002)"
+      }
+    ],
+    "expectedConsolidation": {
+      "windowMonths": 7,
+      "totalFindings": 3,
+      "sameObjectCategory": "licencas_software_gestao_documental",
+      "totalValue": 44700.00,
+      "individualFindingsAreFP": true,
+      "patternSignal": "cascata_de_falsos_positivos"
+    },
+    "rationale": "Aparentemente bate o gatilho de ≥ 3 findings mesmo CNPJ em 12 meses, mas cada finding individual é falso positivo: (1) dispensa com cotação prévia documentada, (2) aditivo abaixo de 25% (regex disparou erradamente), (3) cnpj_jovem causado por bug de parsing. Padrão aparente de recorrência decorre de cascata de FPs nos fiscais a montante, não de irregularidade real. FiscalGeral não deve disparar padrao_recorrente sem antes validar que ao menos a maioria dos findings constituintes tem confidence ≥ 0.70 — caso contrário consolida lixo. Edge case que justifica patch: ponderar consolidação por confidence agregada dos findings de origem.",
+    "shouldTriggerAfterPatch": false
+  },
+  {
+    "id": "SYN-GER-FP-002",
+    "fiscalId": "fiscal-geral",
+    "category": "fp_edge_case",
+    "fpPattern": "mesmo_cnpj_objetos_distintos",
+    "type": "padrao_recorrente",
+    "expectedOutcome": "no_finding",
+    "source": "synthetic",
+    "cnpj": "08.716.245/0001-17",
+    "supplier": "GRUPO COMERCIAL ATLAS S.A.",
+    "supplierContext": "Holding com múltiplos ramos de atividade econômica registrados na RFB (CNAE primário 4711-3/02 — comércio varejista; secundários incluem distribuição de combustíveis, papelaria, equipamentos de informática, mobiliário corporativo). Empresa de grande porte com presença consolidada no estado.",
+    "syntheticGazettes": [
+      {
+        "cityId": "3550308",
+        "cityName": "São Paulo",
+        "date": "2025-08-19",
+        "fiscalSourceId": "fiscal-licitacoes",
+        "findingType": "pregao_homologado",
+        "valor": 540000.00,
+        "objeto": "Aquisição de gêneros alimentícios não perecíveis para merenda escolar",
+        "excerpt": "EXTRATO DE HOMOLOGAÇÃO DO PREGÃO ELETRÔNICO Nº 198/2025\nCONTRATANTE: Município de São Paulo, por intermédio da Secretaria Municipal de Educação.\nCONTRATADA: GRUPO COMERCIAL ATLAS S.A., CNPJ 08.716.245/0001-17.\nOBJETO: Aquisição de gêneros alimentícios não perecíveis para o programa de merenda escolar (lote 1 — cereais e leguminosas).\nVALOR: R$ 540.000,00.\nFUNDAMENTO: Pregão Eletrônico nº 198/2025, com 11 participantes.\nDATA: 18/08/2025.",
+        "individualOutcome": "no_finding — licitação regular, ampla concorrência, vencedor por menor preço"
+      },
+      {
+        "cityId": "3550308",
+        "cityName": "São Paulo",
+        "date": "2025-12-04",
+        "fiscalSourceId": "fiscal-licitacoes",
+        "findingType": "pregao_homologado",
+        "valor": 175000.00,
+        "objeto": "Fornecimento de papelaria e suprimentos de escritório",
+        "excerpt": "EXTRATO DE HOMOLOGAÇÃO DO PREGÃO ELETRÔNICO Nº 312/2025\nCONTRATANTE: Município de São Paulo, por intermédio da Secretaria Municipal da Fazenda.\nCONTRATADA: GRUPO COMERCIAL ATLAS S.A., CNPJ 08.716.245/0001-17.\nOBJETO: Fornecimento de papelaria, materiais de escritório e suprimentos de impressão para órgãos da administração direta.\nVALOR: R$ 175.000,00.\nFUNDAMENTO: Pregão Eletrônico nº 312/2025, com 9 participantes.\nDATA: 03/12/2025.",
+        "individualOutcome": "no_finding — licitação regular, objeto distinto do anterior"
+      },
+      {
+        "cityId": "3550308",
+        "cityName": "São Paulo",
+        "date": "2026-03-25",
+        "fiscalSourceId": "fiscal-licitacoes",
+        "findingType": "pregao_homologado",
+        "valor": 820000.00,
+        "objeto": "Aquisição de equipamentos de informática (desktops e monitores)",
+        "excerpt": "EXTRATO DE HOMOLOGAÇÃO DO PREGÃO ELETRÔNICO Nº 081/2026\nCONTRATANTE: Município de São Paulo, por intermédio da Secretaria Municipal de Inovação e Tecnologia.\nCONTRATADA: GRUPO COMERCIAL ATLAS S.A., CNPJ 08.716.245/0001-17.\nOBJETO: Aquisição de 400 desktops e 400 monitores para modernização do parque tecnológico das unidades de saúde.\nVALOR: R$ 820.000,00.\nFUNDAMENTO: Pregão Eletrônico nº 081/2026, com 14 participantes.\nDATA: 24/03/2026.",
+        "individualOutcome": "no_finding — licitação regular, objeto totalmente distinto, vencedor por menor preço entre 14 participantes"
+      }
+    ],
+    "expectedConsolidation": {
+      "windowMonths": 7,
+      "totalFindings": 3,
+      "sameObjectCategory": null,
+      "objetosDistintos": [
+        "alimentos_merenda",
+        "papelaria",
+        "equipamentos_informatica"
+      ],
+      "totalValue": 1535000.00,
+      "patternSignal": "mesmo_cnpj_em_objetos_nao_relacionados"
+    },
+    "rationale": "Mesmo CNPJ aparece em ≥ 3 contratos no mesmo município em 12 meses, mas trata-se de holding com múltiplos CNAEs registrados (alimentos, papelaria, informática), e cada contrato decorreu de pregão eletrônico distinto, com ampla participação (9 a 14 concorrentes), vencido por menor preço. Não há sinal de irregularidade: empresa grande operando em múltiplos ramos pode legitimamente vencer pregões variados. Acionar padrao_recorrente apenas pelo CNPJ repetido — ignorando heterogeneidade de objeto e o fato de cada finding individual ser regular — gera FP. Edge case que justifica patch: consolidação por padrao_recorrente deve exigir similaridade de objeto/CNAE entre os findings, não apenas coincidência de CNPJ.",
+    "shouldTriggerAfterPatch": false
+  }
+]

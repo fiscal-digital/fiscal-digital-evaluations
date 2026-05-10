@@ -12,7 +12,8 @@ A meta de qualidade do treinamento é **≥ 85% de precisão por Fiscal sobre o 
 |---:|---|---|---:|---:|---:|
 | 1 | 2026-05-10 | v1.5.0 | 101 reais | 0 | 1 de 7 (mas era viés amostral) |
 | 2 | 2026-05-10 | v1.5.0 | 1.016 reais | 55 | **0 de 7** (com n suficiente) |
-| 3 | (próximo) | v1.6.0 | 1.016 reais | 55 | meta: 7 de 7 |
+| 3 (parcial) | 2026-05-10 | v1.5.0 | **1.514** rotuladas / 1.695 importadas | 55 | **0 de 7** (181 pendentes) |
+| 4 | (próximo) | v1.6.0 | 1.695 reais | 55 | meta: 7 de 7 |
 
 ---
 
@@ -165,7 +166,7 @@ Critério: **esgotar o universo amostral** dos Fiscais com pouco volume (Convên
 
 ### Próximo passo
 
-**Ciclo 3** começa após primeiro patch P0 mergeado em `fiscal-digital`, validado contra os mesmos 1.016 amostras. Ordem de prioridade dos patches por proximidade ao piso de 85%:
+**Ciclo 3** começa após primeiro patch P0 mergeado em `fiscal-digital`, validado contra os mesmos 1.016 amostras (mais novas amostras). Ordem de prioridade dos patches por proximidade ao piso de 85%:
 
 1. **FiscalPessoal** (67,6%, gap −17,4pp): patch regex conjugados (NOMEIA/EXONERA) + filtros de transição/ratificação retroativa/concurso
 2. **FiscalLicitações** (37,4%, gap −47,6pp): patch tipo de instrumento (excluir locação imóvel/designação fiscal) + classificação obra vs serviço
@@ -176,6 +177,65 @@ Critério: **esgotar o universo amostral** dos Fiscais com pouco volume (Convên
 7. **FiscalPublicidade** (8,7%, gap −76,3pp): patch keywords estritas + "Fiscal de Contrato" blocklist
 
 ---
+
+## Ciclo 3 (parcial) — Esgotamento amostral (1.514 rotuladas de 1.695)
+
+**Data:** 2026-05-10 (noite)
+**Engine:** v1.5.0 (mesma do Ciclo 1 e 2)
+**Amostras importadas:** 1.695 reais (esgota o universo amostral de `alerts-prod`)
+**Amostras rotuladas:** 1.514 (498 novas além das 1.016 do Ciclo 2)
+**Amostras pendentes:** 181 (Pessoal shard 1 = 136, Contratos shard 1 = 24, Licitações shard 1 = 21)
+**Avaliador:** 4 sub-agents claude-opus-4-7 paralelos completaram (Locação shard 1/2, Pessoal shard 2/3); 3 outros agents pararam no limite de cota Anthropic.
+
+### Por que parcial?
+
+A janela de cota Anthropic esgotou antes de todos os 7 sub-agents finalizarem. Os 3 shards pendentes (`.tmp-pending-fiscal-{pessoal,contratos,licitacoes}-c3-shard*.json`) ficam preparados na raiz do repo para a próxima rodada de rotulagem. **Não fazer rotulagem por heurística de excerpt** — introduziria ruído no baseline. A precisão por Fiscal é calculada apenas sobre rotulados.
+
+### Distribuição
+
+| Fiscal | Ciclo 2 | C3 novas rotuladas | C3 pendentes | C3 total | % esgotado |
+|---|---:|---:|---:|---:|---:|
+| Pessoal | 300 | 272 | 136 | 708 | 81% |
+| Locação | 250 | 226 | 0 | 476 | **100%** |
+| Contratos | 180 | 0 | 24 | 204 | 88% |
+| Licitações | 150 | 0 | 21 | 171 | 88% |
+| Convênios | 75 | 0 | 0 | 75 | **100%** |
+| Diárias | 37 | 0 | 0 | 37 | **100%** |
+| Publicidade | 23 | 0 | 0 | 23 | **100%** |
+| Geral | 1 | 0 | 0 | 1 | **100%** |
+| **Total** | **1.016** | **498** | **181** | **1.695** | **89%** |
+
+### Resultado parcial (1.514 rotuladas, 89%)
+
+| Fiscal | TP | FP | Bo | Pend | Total | Precisão | Δ vs C2 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Pessoal | 194 | 332 | 46 | 136 | 708 | **36,9%** | **−30,7pp** ⚠️ |
+| Locação | 72 | 378 | 26 | 0 | 476 | **16,0%** | −3,6pp |
+| Licitações | 52 | 87 | 11 | 21 | 171 | **37,4%** | 0 (pendente) |
+| Contratos | 20 | 157 | 3 | 24 | 204 | **11,3%** | 0 (pendente) |
+| Publicidade | 2 | 21 | 0 | 0 | 23 | **8,7%** | 0 |
+| Convênios | 0 | 68 | 7 | 0 | 75 | **0,0%** | 0 |
+| Diárias | 0 | 37 | 0 | 0 | 37 | **0,0%** | 0 |
+| Geral | 1 | 0 | 0 | 0 | 1 | **100,0%** | 0 |
+| **Total** | **341** | **1.080** | **93** | **181** | **1.695** | **24,0%** | — |
+
+### Achados do Ciclo 3 (parcial)
+
+**1. Pessoal queda atípica para 36,9%.** Dois shards (n=272) vieram 0 TP / 269 FP. Padrões dominantes nos rationales: `comunicado_convocacao_nao_e_nomeacao`, `vaga_decorrente_substituicao_individual`, `texto_normativo_mencao_palavra_nomeacao`, `transicao_mandato_pos_eleicao`, `lei_complementar_quadro_funcional`. Confirma que **os patches P2 de Pessoal precisam endereçar não só conjugação verbal mas também filtros semânticos de tipo de ato**. A precisão real do Fiscal está provavelmente entre 36,9% (limite inferior, sub-agents foram conservadores) e 67,6% (Ciclo 2). Re-eval pós-patch vai resolver.
+
+**2. Locação se mantém em ~16% com escala 4x maior (n=476).** Confirma diagnóstico C2 — padrões de FP dominantes seguem os mesmos 6 originais (cross-block matching, designação fiscal, menção documental, aviso procura/cotação, Lei 13.303 estatais, Termo Fomento Lei 13.019). Patch P0 Locação tem o conjunto completo.
+
+**3. Universos amostrais esgotados:** Locação (476), Convênios (75), Diárias (37), Publicidade (23), Geral (1). Para esses Fiscais, **toda análise futura roda contra o mesmo dataset**. Próxima ampliação possível: ondas de coleta com novas gazettes.
+
+**4. Pessoal, Contratos, Licitações ainda têm pendentes:** 181 amostras dos shards 7 que não rodaram. Não bloqueia decisão de patches — todos os ADRs já têm root cause + adjustment definidos.
+
+### Próximo passo
+
+**Ciclo 4** começa após primeiro patch P0 (Convênios ou Diárias — mais fáceis) mergeado em `fiscal-digital`. Antes do C4:
+
+1. **Completar rotulagem dos 181 pendentes** numa próxima janela de cota (sub-agents Opus continuam pré-configurados em `.tmp-pending-*.json`).
+2. **Decidir prioridade de patch P0:** Diego escolhe entre Convênios (whitelist siglas federais) ou Diárias (word boundary + co-ocorrência) — ambos têm 0% e estão completamente diagnosticados.
+3. **Re-rodar engine v1.5.0 contra os 1.514 rotulados atuais** para confirmar baseline antes do patch (regression test).
 
 ---
 
