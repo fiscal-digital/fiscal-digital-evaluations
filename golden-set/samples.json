@@ -419,10 +419,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-diarias#2507507#diaria_irregular#2026-05-03T18:17:44.682Z",
       "createdAt": "2026-05-03T18:17:44.682Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Citação direta do PDF: '- Técnicas de tiro: tiro duplo, acompanhamento do alvo etc... - Panes/incidentes de tiro: identificação e saneamento.' O trecho é parte do conteúdo programático de um curso de formação em segurança urbana (uso de pistola por agentes da SEMUSB), não pagamento de diária a servidor. Nenhuma ocorrência da palavra 'diária' / 'diaria' / 'diariamente' existe no PDF inteiro — o match parece ter vindo de heurística ampla (talvez 'Diária' interpretado em contexto de 'CARGA HORÁRIA'/'PRÁTICA' ou cabeçalho de tabela do edital).",
+      "rootCause": {
+        "type": "match_sem_palavra_chave",
+        "why": "FiscalDiárias gerou finding em PDF que não contém a palavra-raiz 'diária' em nenhuma forma; provável tokenização parcial ou regex que casa com substrings em palavras como 'CARGA HORÁRIA' / 'TEÓRICA' / 'PRÁTICA' do edital de curso"
+      },
+      "adjustment": {
+        "summary": "Antes de gerar finding, exigir match exato de \\b(diária|diárias|diaria|diarias)\\b no texto da gazette (boundary de palavra, sem hífen) e descartar quando não houver. Adicionar guarda 'word_count(\"diária\") >= 1' como pré-condição obrigatória"
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-015",
@@ -443,10 +454,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-diarias#3549904#diaria_irregular#2026-05-03T06:22:11.998Z",
       "createdAt": "2026-05-03T06:22:11.998Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Citação direta do PDF: 'OBJETO: ATA DE REGISTRO DE PREÇOS PARA A PRESTAÇÃO DE SERVIÇO DE DIÁRIA EM HOTEL - APARTAMENTO SIMPLES. PRAZO: 12 (DOZE) MESES VALOR: R$ 136.500,00 MODALIDADE: PREGAO ELETRONICO - 302/2023'. Trata-se de Ata de Registro de Preços para hospedagem (diária = unidade de medida de hotel), assinada com pessoa física via pregão eletrônico. NÃO é pagamento de diária a servidor; é contrato comercial de hospedagem. Valor total de R$ 136.500 ao longo de 12 meses, não diária por dia.",
+      "rootCause": {
+        "type": "regex_overmatch_unidade_medida",
+        "why": "Regex de 'diária' não distingue entre (a) diária como verba de viagem a servidor (Lei 8.112 Art. 58) e (b) 'diária' como unidade de medida em ata de RP de hospedagem/locação"
+      },
+      "adjustment": {
+        "summary": "Excluir contextos onde 'diária' aparece com co-ocorrência de: 'ATA DE REGISTRO DE PREÇOS', 'ARP', 'PREGÃO', 'HOTEL', 'APARTAMENTO', 'HOSPEDAGEM' em janela de 200 chars. Diária a servidor aparece com 'concessão', 'pagamento', 'autorizo', 'desloca-se', nome de servidor + matrícula"
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-016",
@@ -466,10 +488,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-publicidade#4113700#publicidade_eleitoral#2026-05-03T18:10:54.291Z",
       "createdAt": "2026-05-03T18:10:54.291Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Data da gazette: 2024-10-29 — dentro de janela eleitoral 2024 (06/jul–31/dez), porém o excerpt aponta 'OBJETO: A contratação de empresas de fretamento de ônibus para o transporte de alunos no dia 30/11/2024 nos períodos matutino e vespertino' — trata-se de transporte escolar, não de contratação publicitária. A gazette contém em seção separada (linhas 2186+) um 'RELATÓRIO DO 3º TRIMESTRE DE 2024 DAS DESPESAS REALIZADAS COM A PROPAGANDA E PUBLICIDADE DOS ATOS' (transparência obrigatória pela Lei Orgânica Art. 62), mas isso é prestação de contas pública retroativa, não contratação ativa. O finding linkou os termos 'PUBLICIDADE/PROPAGANDA' do relatório a um excerpt totalmente alheio (transporte escolar), produzindo evidência inconsistente.",
+      "rootCause": {
+        "type": "excerpt_proximity_mismatch",
+        "why": "Fiscal disparou ao detectar termos 'publicidade'/'propaganda' em qualquer ponto da gazette e selecionou um excerpt distante (transporte escolar) sem validar coerência semântica entre o trecho citado e o termo gatilho. Além disso, não distingue 'relatório de prestação de contas trimestral' (obrigação de transparência) de 'nova contratação publicitária'."
+      },
+      "adjustment": {
+        "summary": "1) Garantir que o excerpt selecionado contenha o termo gatilho dentro de janela ±N linhas; 2) Adicionar lista de exceções para relatórios obrigatórios de transparência: regex como 'RELATÓRIO.*(TRIMESTRE|TRIMESTRAL).*PUBLICIDADE' ou 'em atendimento ao §1º do art. 62 da Lei Orgânica' devem suprimir o finding (é prestação de contas, não contratação)."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-017",
@@ -491,10 +524,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T18:04:02.687Z",
       "createdAt": "2026-05-03T18:04:02.687Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho citado: 'Considerando a necessidade de ajustar a execução orçamentária para prorrogação do convênio com a PUCC, conforme informações constantes no processo SEI n° PMC.2025.00061252-07/SMS' (linhas 97-99). Documento é Decreto nº 23.862/2025 de Campinas — abertura de crédito adicional suplementar de R$ 66.215.000 para ajustar orçamento. NÃO é instrumento novo de termo de fomento/colaboração com OSC: PUCC é a Pontifícia Universidade Católica de Campinas (instituição de ensino superior, parceira histórica do SUS municipal), não OSC típica de Lei 13.019. Além disso, o PDF contém múltiplas menções a 'chamamento público' (linhas 5112, 5115, 11236, 12224, 12228, 12289, 12295, 12303) e termos de colaboração já regularizados sob Lei 13.019/2014 com chamamento público citado.",
+      "rootCause": "Fiscal disparou em 'convênio' mencionado em decreto orçamentário (suplementação de crédito) sem distinguir entre (a) celebração nova de termo com OSC vs (b) ajuste orçamentário de convênio pré-existente com instituição de ensino. Não validou natureza da contraparte (PUCC = universidade, não OSC).",
+      "adjustment": "1) Filtrar excerpts que estão dentro de decretos de abertura/suplementação de crédito (palavras-chave: 'CRÉDITO ADICIONAL SUPLEMENTAR', 'abertura de crédito', 'execução orçamentária'). 2) Whitelist de contrapartes que não disparam: universidades (PUC, USP, UFMG etc.), hospitais universitários, autarquias federais. 3) Buscar 'chamamento' no PDF inteiro antes de disparar — se houver evidência de chamamento citado no documento, reduzir confidence.",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-018",
@@ -514,10 +553,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-locacao#4305108#locacao_sem_justificativa#2026-05-02T17:55:58.958Z",
       "createdAt": "2026-05-02T17:55:58.958Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho exato do PDF: 'Objeto: Termo Aditivo nº 2 ao Contrato nº 2019/747, celebrado para prorrogar o prazo de vigência contratual de 20/03/2021 até 31/12/2021, tendo em vista a locação de imóvel destinado ao funcionamento da Escola de Educação Infantil Professora Maria do Carmo Loopi.' Análise do PDF: trata-se de TERMO ADITIVO (prorrogação de prazo) ao Contrato 2019/747 — a inexigibilidade original (Dispensa nº 20/2019, Processo 2019/9051) foi formalizada em 2019 e está fora do escopo deste diário. Aditivo de prorrogação não exige nova justificativa para inexigibilidade — usa a justificativa do contrato-mãe.",
+      "rootCause": {
+        "type": "regex_matches_aditivo_as_new_contract",
+        "why": "Regex captura 'locação de imóvel' + 'Dispensa' sem distinguir contrato novo de termo aditivo de prorrogação. Aditivo herda justificativa do contrato original."
+      },
+      "adjustment": {
+        "summary": "Detectar via regex 'Termo Aditivo|Aditivo nº|prorrogar|prorrogação' e excluir do gatilho de inexigibilidade — aditivo não é ato de contratação inicial. Pré-filtro: requer ausência de marcadores de aditivo na vizinhança (±200 chars) do match de 'locação de imóvel'."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-019",
@@ -1358,10 +1408,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-diarias#3106200#diaria_irregular#2026-05-03T06:01:25.961Z",
       "createdAt": "2026-05-03T06:01:25.961Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Citação direta do PDF: 'IV- Período da realização da viagem: 18/05/22 A 20/05/22 V - Objetivos da viagem: Representação e discussão de assuntos de interesse do Munícipio VI - Conclusão acerca do cumprimento dos objetivos: cumprido. VII - Indicação dos benefícios para o Município: Alinhamento de políticas municipais junto a outros órgãos. VIII- Despesas de Viagem: R$ 2.329,52'. A palavra 'diária' não aparece em nenhuma forma no PDF inteiro — o que existe é relatório oficial de viagem com objetivo cumprido, valor total agregado (R$ 2.329,52 para 3 dias = ~R$ 776/dia, abaixo do teto R$ 800), e justificativa formal documentada (representação institucional). Match provável foi sobre 'Viagem' por overmatch de heurística.",
+      "rootCause": {
+        "type": "match_palavra_errada",
+        "why": "Sem 'diária' no PDF, o gatilho deve ter sido 'viagem' ou similar; mesmo se houvesse, o documento traz justificativa formal completa (objetivo cumprido + benefícios) que invalidaria o flag de irregularidade"
+      },
+      "adjustment": {
+        "summary": "Idem GS-014: exigir token exato 'diária(s)' como pré-condição. Adicionalmente, para diárias a servidor, suprimir finding quando o mesmo bloco de texto contiver 'cumprimento dos objetivos' / 'benefícios para o Município' / 'representação institucional' (relatório oficial post-viagem com prestação de contas)"
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-047",
@@ -1382,10 +1443,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-diarias#4205407#diaria_irregular#2026-05-03T09:51:59.067Z",
       "createdAt": "2026-05-03T09:51:59.067Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Citação direta do PDF: 'reajustado conforme o INPC-IBGE em 3,415370%, o valor global da diária do contrato passará de R$ 2.208,00 (dois mil, duzentos e oito reais), para R$ 2.283,48 (dois mil, duzentos e oitenta e três reais e quarenta e oito centavos)'. Contexto completo (linhas 2531-2570): 'SEXTO TERMO ADITIVO DO CONTRATO Nº 229/SMA/2018 — PMF X DISK CAR LOCAÇÃO DE VEÍCULOS S.A.' — é um termo aditivo de reajuste INPC de contrato comercial de locação de veículos. 'Diária' aqui é unidade de medida do contrato de locação de carros, não diária de servidor.",
+      "rootCause": {
+        "type": "regex_overmatch_unidade_medida",
+        "why": "'Valor global da diária do contrato' em aditivo de locação de veículos é confundido com diária a servidor. R$ 2.208,00 acima de R$ 800 disparou o gatilho de valor"
+      },
+      "adjustment": {
+        "summary": "Excluir contextos onde 'diária' aparece com 'LOCAÇÃO DE VEÍCULOS', 'TERMO ADITIVO', 'INPC-IBGE', 'reajuste do contrato', ou nome de empresa fornecedora (CNPJ formato XX.XXX.XXX/XXXX-XX) na mesma janela. Pagamento de diária a servidor referencia matrícula/CPF de pessoa física, não razão social"
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-048",
@@ -1406,10 +1478,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-diarias#3549904#diaria_irregular#2026-05-03T06:22:11.998Z",
       "createdAt": "2026-05-03T06:22:11.998Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Caso idêntico a GS-015 (mesmo PDF, mesmo trecho). Citação: 'OBJETO: ATA DE REGISTRO DE PREÇOS PARA A PRESTAÇÃO DE SERVIÇO DE DIÁRIA EM HOTEL - APARTAMENTO SIMPLES'. ARP de hospedagem comercial via pregão, não diária de servidor. Indica também problema de deduplicação: o mesmo PDF disparou dois findings distintos (GS-015 e GS-048) para o mesmo trecho.",
+      "rootCause": {
+        "type": "regex_overmatch_unidade_medida",
+        "why": "Mesmo overmatch de GS-015. Adicionalmente, falha de deduplicação: o engine produziu dois findings distintos para o mesmo excerpt do mesmo PDF"
+      },
+      "adjustment": {
+        "summary": "(1) Mesma exclusão de GS-015 (ARP/Pregão/Hotel). (2) Deduplicar findings por (cityId + gazetteId + tipo + offset_excerpt) antes de persistir — evitar duplicata bruta como GS-015/GS-048"
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-049",
@@ -1429,10 +1512,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-diarias#2611606#diaria_irregular#2026-05-03T04:28:00.311Z",
       "createdAt": "2026-05-03T04:28:00.311Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Citação direta do PDF (linhas 2087-2241, planilha de RP): 'm²/Diária 377 3000 R$43,00 R$129.000,00', 'Unid./diária 123 27 R$90,00 R$2.430,00', '14.13 Locação de sofá – 2 lugares Unid./diária 123 94 R$353,00 R$33.182,00', '14.14 Locação de sofá – 3 lugares Unid./diária 123 20 R$473,60 R$9.472,00'. É edital/ata de registro de preços para locação de mobiliário, cobertura, espelho, sofá etc. para a Secretaria de Turismo. 'Diária' = unidade de medida de locação (preço por dia de aluguel), não diária a servidor.",
+      "rootCause": {
+        "type": "regex_overmatch_unidade_medida",
+        "why": "Em planilhas de cotação 'Unid./diária' e 'm²/Diária' são unidades de medida ('preço por dia de aluguel'). Regex matchou e disparou o gatilho de valor (alguns itens > R$ 800, ex: R$ 4.500/diária por item)"
+      },
+      "adjustment": {
+        "summary": "Excluir contextos onde 'diária' aparece como sufixo de unidade de medida ('Unid./diária', 'm²/Diária', 'unidade/diária', 'Pç/diária'). Pattern: detectar regex `\\w+\\s*[/]\\s*[Dd]i[áa]ria` e descartar — é coluna de planilha, não diária de servidor"
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-050",
@@ -1452,10 +1546,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-publicidade#4113700#publicidade_eleitoral#2026-05-03T16:44:15.811Z",
       "createdAt": "2026-05-03T16:44:15.811Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Data da gazette: 2024-08-27 — dentro de janela eleitoral 2024 (06/jul–31/dez), porém o excerpt 'SÚMULA: Designa servidor para exercer a função de Fiscal de Contrato' refere-se à Portaria que designa fiscais de contrato para serviço de tecnologia da informação ('cessão de direito de uso, parametrização, transferência de conhecimento... sistema de integração com o eSocial'). Não há contratação publicitária — o termo 'Fiscal' aqui é cargo administrativo (fiscal de contrato), não fiscalização de publicidade.",
+      "rootCause": {
+        "type": "regex_false_positive_keyword",
+        "why": "Fiscal disparou em ato administrativo de designação de fiscal de contrato, possivelmente por captura ampla de termos como 'divulgação' (Pág. 4 do diário) ou 'comunicação' que aparecem em vários atos não-publicitários. Sem filtro de objeto contratual ('publicidade institucional', 'propaganda', 'mídia', 'campanha publicitária', 'agência de publicidade')."
+      },
+      "adjustment": {
+        "summary": "Restringir gatilho a termos de objeto contratual estrito: 'publicidade institucional', 'propaganda', 'serviços de mídia', 'campanha publicitária', 'agência de publicidade', 'inserções em rádio/TV/jornal'. Excluir explicitamente atos de designação de fiscal de contrato e portarias de RH."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-051",
@@ -1475,10 +1580,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-publicidade#5201405#publicidade_eleitoral#2026-05-03T11:54:00.675Z",
       "createdAt": "2026-05-03T11:54:00.675Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Data da gazette: 2024-12-06 — dentro de janela eleitoral 2024, porém o excerpt 'II- organização da divulgação do serviço e mobilização das famílias' descreve atribuições do coordenador do Serviço em Família Acolhedora (Lei municipal sobre acolhimento de crianças/adolescentes), não contratação publicitária. A 'divulgação do serviço' aqui é tarefa funcional do servidor, não contrato com agência de publicidade.",
+      "rootCause": {
+        "type": "regex_false_positive_keyword",
+        "why": "Termo 'divulgação' tem alta polissemia: aparece em qualquer ato que envolva tornar público algo (atribuição funcional, divulgação de edital, divulgação de resultados, divulgação de serviço social). Sem distinguir 'divulgação contratada' de 'divulgação como atribuição'."
+      },
+      "adjustment": {
+        "summary": "Não usar 'divulgação' isolado como gatilho. Exigir co-ocorrência com objeto contratual explícito ('contratação para divulgação', 'serviços de divulgação', 'CNPJ de empresa de publicidade', valor monetário R$). Excluir contexto de leis/decretos que definem atribuições funcionais."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-052",
@@ -1498,10 +1614,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-publicidade#4314902#publicidade_eleitoral#2026-05-02T18:09:03.680Z",
       "createdAt": "2026-05-02T18:09:03.680Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Data da gazette: 2024-07-26 — dentro de janela eleitoral 2024 (apenas 20 dias após início), porém o excerpt 'Autoridade competente por homologar as contratações diretas (titular da pasta ou Ordenador de Despesa com delegação) — Secretário Municipal — Órgão de divulgação do Município' é cabeçalho administrativo do diário oficial e designação de competência. A única ocorrência relacionada a publicidade na gazette está em outra seção (linha 900): 'PREGÃO ELETRÔNICO – PROCESSO 243/2024... empresa para a prestação de serviço de inserções em Diários Oficiais para a divulgação de anúncios de caráter legal' — isso é publicação legal (atos administrativos no DO), expressamente fora da vedação do Art. 73 VI 'b' da Lei 9.504/97 (que veda publicidade institucional, não publicações legais obrigatórias).",
+      "rootCause": {
+        "type": "missing_legal_exception_check",
+        "why": "Fiscal não distingue 'publicidade institucional' (vedada) de 'publicação legal de atos administrativos' (obrigação imposta por Lei 4.965/66 e legislações municipais — explicitamente fora da vedação eleitoral). 'Anúncios de caráter legal' é termo técnico que indica publicação obrigatória. Adicionalmente, o excerpt selecionado nem é o trecho relevante."
+      },
+      "adjustment": {
+        "summary": "1) Whitelist semântica: termos 'anúncios de caráter legal', 'publicação legal', 'publicação de editais', 'inserções em Diário Oficial', 'transparência ativa' devem suprimir o finding; 2) corrigir seleção de excerpt para apontar para o trecho que efetivamente disparou o gatilho."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-053",
@@ -1521,10 +1648,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-publicidade#4305108#publicidade_eleitoral#2026-05-02T17:22:14.586Z",
       "createdAt": "2026-05-02T17:22:14.586Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Data da gazette: 2024-11-04 — dentro de janela eleitoral 2024, porém o excerpt 'Contratado: BRASIL OUTDOOR CAXIAS SPE S.A. Objeto: Termo aditivo n.º 01 ao contrato de concessão n.º 503/2023 para prorrogação da segunda parcela da outorga fixa' refere-se a CONCESSÃO de espaço publicitário urbano (mobiliário urbano com outdoors), modalidade 'Concorrência nº 2023/76', em que a empresa privada PAGA outorga ao Município pelo direito de explorar comercialmente os outdoors — operação inversa de contratação publicitária (prefeitura é receptora, não pagadora). O contrato original é de 2023 (fora da janela 2024) e o aditivo apenas prorroga prazo de pagamento da outorga, sem novo objeto. A menção 'Publicidade e Propaganda' na linha 1287 é vaga de estágio (PCD) em curso superior — sem qualquer relação contratual.",
+      "rootCause": {
+        "type": "concession_vs_publicity_contract_confusion",
+        "why": "Fiscal trata 'outdoor' como gatilho de publicidade institucional, mas concessão de mobiliário urbano publicitário é o oposto: receita municipal, não despesa. Lei 14.133/2021 e Lei 9.504/97 vedam contratação de publicidade pelo poder público — não cabe vedação a concessão patrimonial onde o particular paga ao ente público."
+      },
+      "adjustment": {
+        "summary": "Adicionar guarda: se contrato é 'concessão' E a 'Contratada' paga 'outorga' / 'receita' / 'royalties' ao Município, então NÃO é publicidade institucional — é exploração comercial de bem público. Termos como 'outorga fixa', 'concessão de mobiliário urbano', 'concessão onerosa' devem suprimir o finding."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-054",
@@ -1544,10 +1682,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-publicidade#4314902#publicidade_eleitoral#2026-05-02T18:01:11.154Z",
       "createdAt": "2026-05-02T18:01:11.154Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Data da gazette: 2024-12-18 — dentro de janela eleitoral 2024, porém o excerpt 'DESIGNA 27/01/2025 26/01/2026... os servidores abaixo relacionados, para acompanhar e fiscalizar a execução e o adequado cumprimento das cláusulas estabelecidas no Contrato referente nº 81833/2023, Termo Aditivo firmado no Processo SEI com a empresa SELBETTI TECNOLOGIA' refere-se à designação de fiscais de contrato para serviço de impressão outsourcing (linhas 173-177: 'prestação de serviços de impressão (outsourcing), com fornecimento de 02 (dois) equipamentos, manutenção preventiva e corretiva'). Não é contratação publicitária — é serviço de TI/impressão de documentos administrativos. Contrato original é de 2023, aditivo apenas prorroga vigência.",
+      "rootCause": {
+        "type": "regex_false_positive_keyword",
+        "why": "Fiscal disparou em portaria de designação de fiscais de contrato envolvendo termos como 'impressão' e 'fiscalizar', possivelmente em conjunto com 'divulgação' (cabeçalho do diário 'Órgão de divulgação do Município'). Sem filtro de objeto contratual real ('serviços de impressão outsourcing' não é publicidade)."
+      },
+      "adjustment": {
+        "summary": "1) Excluir 'Órgão de divulgação do Município' (cabeçalho recorrente em diários oficiais) do escopo de match; 2) excluir atos de designação de fiscais de contrato/serviço; 3) restringir match a atos cujo OBJETO contratual é explicitamente publicidade/propaganda/mídia (não cabeçalho, não cargo, não serviço de TI)."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-055",
@@ -1569,10 +1718,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-convenios#2927408#convenio_sem_chamamento#2026-05-03T15:47:23.990Z",
       "createdAt": "2026-05-03T15:47:23.990Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho citado: 'O valor orçado na subação 1047 esta incluso a fonte: 0124 de convênio no valor de R$ 2.397.000,00 que teve somente 2% da sua execução, pois os contratos foram migrados para a SUCOP' (linhas 1966-1967). É observação em DEMONSTRATIVO DE EXECUÇÃO ORÇAMENTÁRIA da SEMTEL/SEMDEC de Salvador, não celebração de novo convênio. PDF contém múltiplas menções a chamamento público regular (linhas 3128 'MODALIDADE: Chamamento Público nº 020/2019', 5072-5075 'Comissão Especial de Chamamento Público/SMS') e termos de colaboração com Lei 13.019/2014 fundamentados (linha 3637 'AMPARO LEGAL: Lei Federal 13.019/2014').",
+      "rootCause": "Fiscal disparou em 'convênio' que aparece em contexto de relatório de execução orçamentária (descrevendo fonte 0124), interpretado como celebração nova. A palavra 'convênio' aqui é metonímia para 'recursos provenientes de convênio'.",
+      "adjustment": "Excluir matches em que 'convênio' está em contexto de fonte de recurso orçamentário ('fonte: XXXX de convênio', 'recurso de convênio', 'execução de convênio'). Exigir verbo de celebração próximo: 'celebrar', 'firmar', 'assinar', 'aprovar termo'.",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-056",
@@ -1594,10 +1749,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T05:23:34.154Z",
       "createdAt": "2026-05-03T05:23:34.154Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho citado: 'CONTRATO DE REPASSE Nº909091/2020/MTUR/CAIXA ... R$ 5.000.000,00' (linha 23) — CONTRATO DE REPASSE FEDERAL Ministério do Turismo via Caixa Econômica Federal para o Município. Trata-se de transferência voluntária da União ao Município (Lei 8.666 ou IN STN), regida pela Lei 13.019/2014 SOMENTE quando entre Município e OSC — NÃO se aplica entre União/Estado e Município. PDF tem inúmeras menções a chamamento público e dispensa Art. 30 fundamentada (linhas 977, 1004, 1042, 1110, 1144 etc.) para os efetivos termos com OSCs.",
+      "rootCause": "Fiscal não distingue 'CONTRATO DE REPASSE federal' (União→Município, regrado pela Lei 8.666 e IN STN) de 'termo de fomento/colaboração' (Município→OSC, regrado pela Lei 13.019). São instrumentos legais distintos. 'Repasse' federal nunca exige chamamento público municipal.",
+      "adjustment": "Adicionar regra de exclusão: se excerpt contém 'CONTRATO DE REPASSE Nº' + ministério federal (MTUR, MDR, MAPA, MCIDADANIA, MS, MEC etc.) + CAIXA, classificar como repasse federal (fora do escopo da Lei 13.019) e suprimir alerta. Whitelist de siglas de ministérios federais.",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-057",
@@ -1618,10 +1779,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T15:53:05.863Z",
       "createdAt": "2026-05-03T15:53:05.863Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho citado: 'CONTRATO DE REPASSE N° 903505/2020/MDR/CAIXA .........R$ 723.352,00' (linha 24). Decreto orçamentário de Campinas para suplementar verba de pavimentação asfáltica e drenagem urbana, custeada por contrato de repasse federal MDR (Ministério do Desenvolvimento Regional)/Caixa ao Município. Não envolve OSC. PDF contém menções extensas a chamamento público com dispensa Art. 30 fundamentada (linhas 1176, 1180-1190 'EXTRATO DA JUSTIFICATIVA DA DISPENSA DE CHAMAMENTO... art. 32 § 1º... art. 30 inciso I da Lei Federal 13.019/2014').",
+      "rootCause": "Mesmo padrão de GS-056: contrato de repasse federal União→Município sendo flagged como convênio sem chamamento. Sigla MDR é federal.",
+      "adjustment": "Mesma regra de GS-056: excluir 'CONTRATO DE REPASSE N° XXXXXX/{ANO}/MDR/CAIXA' e variações. Lista de ministérios federais a ignorar.",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-058",
@@ -1642,10 +1809,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T05:12:14.915Z",
       "createdAt": "2026-05-03T05:12:14.915Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho citado: 'CONTRATO REPASSE Nº903505/2020/MDR/CAIXA ............... R$ 723.352,00' (linha 133). Decreto nº 21.897/2022 de Campinas sobre abertura de crédito adicional suplementar para drenagem urbana, custeado por mesmo contrato federal MDR/Caixa de GS-057. PDF é estritamente decreto orçamentário (2.839 linhas, busca por 'OSC', 'chamamento', '13.019' não retorna nada relevante para OSC), não há celebração de termo com OSC.",
+      "rootCause": "Idêntico a GS-057: contrato de repasse federal MDR/Caixa, sem qualquer relação com OSC ou Lei 13.019.",
+      "adjustment": "Mesma regra: ignorar 'CONTRATO (DE) REPASSE Nº' + sigla ministério federal.",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-059",
@@ -1666,10 +1839,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-convenios#4305108#convenio_sem_chamamento#2026-05-02T17:47:03.155Z",
       "createdAt": "2026-05-02T17:47:03.155Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho citado: 'Em cumprimento ao disposto no artigo 2º da Lei nº 9452/97, de 20 de março de 1997, comunicamos que a Caixa Econômica Federal efetuou, em 15 de junho de 2022, liberação de recurso financeiro ao Município de Caxias do Sul, no âmbito do Contrato de Repasse nº 907854/2020/MAPA/Caixa, para execução de pavimentação asfáltica em CBUQ na Estrada Municipal São João Batista, no valor de R$ 955.000,00' (linhas 245-248). É comunicação obrigatória pela Lei 9452/97 (que exige aviso público quando município recebe recurso federal). Repasse Ministério da Agricultura, Pecuária e Abastecimento (MAPA) via Caixa para obra municipal — não envolve OSC nem Lei 13.019/2014.",
+      "rootCause": "Mesmo erro: 'Contrato de Repasse' federal interpretado como convênio sob Lei 13.019. Adicionalmente, contexto explícito menciona Lei 9452/97 (transparência de recursos federais) — Fiscal poderia ter usado essa âncora para excluir.",
+      "adjustment": "Excluir contextos com Lei 9452/97 ('artigo 2º da Lei nº 9452') — essa lei trata de comunicação de recursos federais, sinaliza claramente que NÃO é Lei 13.019.",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-060",
@@ -1689,10 +1868,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-locacao#3205200#locacao_sem_justificativa#2026-05-03T10:48:40.377Z",
       "createdAt": "2026-05-03T10:48:40.377Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho exato do PDF: 'IV - arcar com todas as despesas decorrentes de eventuais danos causados ao imóvel objeto do contrato de locação;' Análise do PDF: trata-se da Lei nº 6.524/2021 e do regulamento do Programa 'Auxílio Moradia Temporário' do município de Vila Velha — subsídio CONCEDIDO A FAMÍLIAS de risco para QUE ELAS aluguem moradia. Não há contratação municipal de locação por inexigibilidade; o contrato de locação é entre beneficiário e locador particular. O município apenas paga subsídio social.",
+      "rootCause": {
+        "type": "regex_matches_social_program_as_municipal_contract",
+        "why": "Regex captura 'contrato de locação' + 'imóvel' em decreto regulamentador de programa social, sem identificar que município é financiador (não contratante)."
+      },
+      "adjustment": {
+        "summary": "Exigir co-ocorrência de 'Município|Prefeitura|Secretaria' como CONTRATANTE/LOCATÁRIO (papel ativo no contrato), e excluir matches em decretos regulamentadores (presença de 'Decreto nº' + 'auxílio moradia|subsídio|benefício social' na mesma seção)."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-061",
@@ -1712,10 +1902,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-locacao#3300456#locacao_sem_justificativa#2026-05-03T18:27:46.570Z",
       "createdAt": "2026-05-03T18:27:46.570Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho exato do PDF: 'EXTRATO DE RESCISÃO ... CONTRATO: 001/SEMAD/2014 ... LOCATÁRIO: Sr. JOÃO LUIZ GONÇALVES GATTO ... OBJETO: Locação do Imóvel na Avenida Florípes Rocha ... FUNDAMENTAÇÃO LEGAL: As partes acordam em rescindir o contrato de locação firmado em 09 de janeiro de 2014 ... com base na Lei nº 8.245/91, conforme termo de rescisão de contrato de locação. DISPOSIÇÕES FINAIS: Fica rescindido o contrato a partir da data de assinatura do termo de rescisão contratual'. Análise: é EXTRATO DE RESCISÃO (encerramento de contrato), não ato de contratação. Não há nova locação por inexigibilidade.",
+      "rootCause": {
+        "type": "regex_matches_termination_as_new_contract",
+        "why": "Regex captura 'Locação do Imóvel' sem identificar que o cabeçalho do ato é 'EXTRATO DE RESCISÃO' (encerramento)."
+      },
+      "adjustment": {
+        "summary": "Excluir atos cujo título ou cabeçalho contenha 'RESCISÃO|EXTRATO DE RESCISÃO|distrato|encerramento contratual|cancelamento de contrato' — esses não são contratações."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-062",
@@ -1736,10 +1937,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-locacao#2507507#locacao_sem_justificativa#2026-05-03T15:58:52.384Z",
       "createdAt": "2026-05-03T15:58:52.384Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho exato do PDF: 'I – Designar JOSÉ DE SOUZA DANTAS FILHO, matrícula nº 81.902-6, GESTOR, e MARILEIDE PONTES DA SILVA, matrícula nº 17.226-0, FISCAL, lotados na Secretaria da Administração, para acompanhar e fiscalizar o contrato de Locação de Imóvel para funcionamento da Junta Médica do Município.' Análise: é PORTARIA de DESIGNAÇÃO de fiscal e gestor de contrato (Lei 8.666/93 Art. 67), não ato de contratação por inexigibilidade. O contrato-mãe foi celebrado em outro ato.",
+      "rootCause": {
+        "type": "regex_matches_fiscal_designation_as_new_contract",
+        "why": "Regex 'locação de imóvel' captura portaria de designação de fiscal/gestor — ato administrativo posterior à contratação, sem informação sobre justificativa."
+      },
+      "adjustment": {
+        "summary": "Excluir atos com padrões 'Designar.*Gestor|Designar.*Fiscal|para acompanhar e fiscalizar|Portaria.*designação' — designação de fiscal não é contratação. Requer co-ocorrência com 'CONTRATANTE|CONTRATADO|Termo de Contrato|Extrato de Contrato' como cabeçalho do ato."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-063",
@@ -1759,10 +1971,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-locacao#3170206#locacao_sem_justificativa#2026-05-03T07:09:54.099Z",
       "createdAt": "2026-05-03T07:09:54.099Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho exato do PDF: '§ 4º O locatário, para obter a alteração da data de recolhimento do IPTU, deverá obedecer ao cronograma constante do Anexo deste Decreto e apresentar os seguintes documentos perante a Plataforma de Atendimento: I – cópia do contrato de locação ou de documento similar que comprove a utilização do imóvel por terceiro;'. Análise: o trecho é parte de Decreto municipal de Uberlândia regulando como CIDADÃOS LOCATÁRIOS (de imóveis particulares) podem alterar a data de recolhimento de IPTU. Não há contratação municipal de locação — o município é fisco, não locatário.",
+      "rootCause": {
+        "type": "regex_matches_tax_regulation_as_municipal_contract",
+        "why": "Regex 'contrato de locação' captura decreto tributário onde o município REGULA contratos privados de terceiros, não os celebra."
+      },
+      "adjustment": {
+        "summary": "Excluir matches em atos cujo cabeçalho seja 'Decreto nº ... regulamenta|dispõe sobre' tributos (IPTU/ISS/ITBI). Exigir contexto contratual ativo: 'CONTRATANTE: Município|Prefeitura' ou 'LOCATÁRIO: Município|Prefeitura' a < 200 chars do match."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-064",
@@ -1782,10 +2005,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-locacao#3301009#locacao_sem_justificativa#2026-05-03T05:39:02.594Z",
       "createdAt": "2026-05-03T05:39:02.594Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho exato do PDF: 'Art.1º Nomear o Servidor Diego Pereira da Cruz, matrícula nº 41.109, Coordenador de Proteção da Alta Complexidade, para atuar como Gestor de Contrato e Rosângela Pereira Marvila, matrícula nº 41.112, Coordenadora de Proteção de Média Complexidade, para atuar como Fiscal de Contrato, no que se refere a Locação de Imóvel referente ao Contrato nº 001L\\2023'. Análise: é PORTARIA de nomeação de Gestor e Fiscal de Contrato — ato administrativo posterior à contratação. A inexigibilidade (se houve) está em outro ato.",
+      "rootCause": {
+        "type": "regex_matches_fiscal_designation_as_new_contract",
+        "why": "Regex 'Locação de Imóvel' + 'Contrato nº' captura portaria de nomeação de gestor/fiscal."
+      },
+      "adjustment": {
+        "summary": "Mesmo ajuste do GS-062: excluir 'Nomear.*Gestor de Contrato|Nomear.*Fiscal de Contrato|atuar como Gestor|atuar como Fiscal'. Documento de nomeação de fiscalizador interno não pode ser tratado como ato de contratação."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-065",
@@ -1805,10 +2039,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T06:15:50.892Z",
       "createdAt": "2026-05-03T06:15:50.892Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF p.1 sumário lista 14 atos: 10 EXONERAÇÕES (ADRIANO CUTRIM ALVES, CLAUDIA TERESA SOUZA SANTOS, INARA PINHEIRO LAGES, INGRID KAROLAINE OLIVEIRA SAMPAIO, JACIENE FARIAS GOMES, MARY LÚCIA JARDIM CASTRO DOS REIS, MATHEUS RIBEIRO FALCÃO, PAULO CESAR MENDES CARDOSO, TANIA REGINA DURANS BALDEZ, WANDERSON DOS SANTOS MOTA) + 4 NOMEAÇÕES (ADRIANO CUTRIM ALVES, MARY LÚCIA JARDIM CASTRO DOS REIS, MATHEUS RIBEIRO FALCÃO, TANIA REGINA DURANS BALDEZ — 4 dos exonerados foram realocados em outros cargos). Pessoas distintas: 10. Cidade São Luís/MA (CAPITAL, ~1.1M hab). Janela: 13/11/2025 — FORA de janela eleitoral. Limiar fora-janela = 7. 10 ≥ 7 confirma pico_nomeacoes legítimo. Risco baixo (48) reflete só ausência de janela eleitoral, mas evento é real.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-066",
@@ -1828,10 +2068,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#3518800#pico_nomeacoes#2026-05-03T08:40:30.468Z",
       "createdAt": "2026-05-03T08:40:30.468Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF lista PORTARIAS 757/2024-GP a 773/2024-GP — cada portaria NOMEIA uma pessoa nova ao mesmo tempo que informa exoneração do antecessor. Pessoas nomeadas distintas: Maria Rosana Caldeira Ferreira, Renato Cheffer, Leandro Soares dos Santos, Priscila Evangelista de Souza Scaranello, Dario José Barreto, Vandson Santos Silva, Keity Cristina Rech Bauer + exonerações nomeadas (Dario José Barreto, Ana Maria de Oliveira Marques, Cesar Sousa de Oliveira, Vera Lucia Evangelista de Souza, Helio Silva Oliveira, Sergio Luis da Silva, Mauricio Segantin Junior, Renato Cheffer, Vandson Santos Silva, Bianca Souza Santos, Katia Regina Vargas Silva, Keity Cristina Rech Bauer) — 17 atos. Cidade Guarulhos/SP (1.4M, top 10 nacional). Janela: 04/04/2024 — FORA. Limiar 7. 17 ≥ 7 = TP, mas o Fiscal subnotificou (risco 44, abaixo do threshold 60) — provavelmente regex /nome[ao]/ não pegou conjugados ('NOMEIA') ou contou errado. Bug confirmado: subnotificação por verbo conjugado.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-067",
@@ -1851,10 +2097,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#3303302#pico_nomeacoes#2026-05-03T12:13:48.389Z",
       "createdAt": "2026-05-03T12:13:48.389Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF p.1-2 lista Portarias Nº 2890-2899/2025: 5 EXONERAÇÕES (THALISOM CARNEIRO SILVA, BERNARDO BOIRON DOS SANTOS, VIVIANE RODRIGUES SOARES, ELAINE LOPES GONÇALVES, LUZIA MARIA PEREIRA ROCHA) + 5 NOMEAÇÕES (LÚCIO FLÁVIO REGINALDO DA SILVA, GUILHERME GARCIA DIAS DOS SANTOS, BARTOLOMEU HOMEM DEL-REI PINTO, ACYR ASSIS GONÇALVES NETO, ESTEVÃO MARIANO CARVALHO). Pessoas distintas: 10 (todas únicas, cada exoneração tem nomeação para vaga). Cidade Niterói/RJ (~515k, capital regional do leste-fluminense). Janela: 31/05/2025 — FORA. Limiar 7. 10 ≥ 7 = TP. Risco baixo 35 do Fiscal sugere subnotificação — regex pode não ter pego pattern 'Port. Nº X/Y - Nomeia/Exonera NOME'.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-068",
@@ -1874,10 +2126,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T14:01:30.179Z",
       "createdAt": "2026-05-03T14:01:30.179Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF sumário lista 13 atos: 6 EXONERAÇÕES (DANIELLE ARAÚJO DUAILIBE, LIZANDRA RAFAELA DIAS MARTINS, MANOEL CARLOS CORREIA DA SILVA, MARYLEIA DE SANTANA MENDES, MAYARA DE SOUSA GONÇALVES, POLLYANA MENDES VIANA) + 7 NOMEAÇÕES (ANA MICHELLE PEREIRA DUAILIBE, ANDRESSA NAGILA MORAES AZEVEDO, ANNA PAULA RAMOS DOS SANTOS CHAGAS, FERNANDA DOS REIS FIGUEIREDO, MARIA ADÉLIA PEREIRA DE PAIVA FURTADO, MAYARA DE SOUSA GONÇALVES, NILTON DAMASCENO OBAMA). Pessoas distintas: 12 (MAYARA aparece em 2 atos — exoneração+nova nomeação, conta como 1 pessoa). Cidade São Luís/MA (CAPITAL, ~1.1M). Janela: 18/08/2023 — FORA (não-ano eleitoral municipal). Limiar 7. 12 ≥ 7 = TP. Risco 40 do Fiscal indica subnotificação parcial.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-069",
@@ -1897,10 +2155,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#3118601#pico_nomeacoes#2026-05-03T12:18:53.898Z",
       "createdAt": "2026-05-03T12:18:53.898Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF tem múltiplas seções de exonerações em massa (6.698 linhas). Trecho excerpt: 'EXONERA, a pedido, do cargo em comissão DAM-11, código SEMOBS.DAM11.01' — ato administrativo padronizado da Prefeitura de Contagem. Identifiquei na primeira seção 8 atos com 8 pessoas DISTINTAS: 2 EXONERAÇÕES (RAYSSA CORDEIRO FIGUEIREDO, LUANA GABRIELA SIMOES) + 3 NOMEAÇÕES (RUBENS OLIVEIRA DO NASCIMENTO, AGOSTINHO ALVES DOS SANTOS, GABRIELA LEANDRO DA COSTA) + 1 DESIGNAÇÃO (Sírlei de Sá Moura) + 1 DISPENSAR (Adalete Alves Paxeco) + 1 DESIGNAR (Giselle Alves Lopes). Cidade Contagem/MG (~668k, interior MG, top 30 nacional). Janela: 29/08/2024 — DENTRO de janela eleitoral municipal 2024 (06/jul-31/dez). Limiar dentro-janela = 3. 8 ≥ 3 confirma pico_nomeacoes em janela eleitoral. Risco 78 já reflete bem.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-070",
@@ -1920,10 +2184,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#2111300#pico_nomeacoes#2026-05-03T04:34:21.703Z",
       "createdAt": "2026-05-03T04:34:21.703Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF é grande (4.477 linhas, sumário lista 39 atos): 10 EXONERAÇÕES (AUGUSTO CÉSAR RODRIGUES XAVIER, JAYANE CAROLYNE AQUINO DA SILVA, JONNATAS DOS SANTOS COELHO, JOSÉ ANTÔNIO SILVA FRAZÃO JÚNIOR, KARLA MILENA DE JESUS MACHADO, MARTINHO EUGÊNIO AROUCHE, MAURÍCIO NUNES BORGES, VINICIUS OLIVEIRA DA SILVA, VITOR AURÉLIO COELHO MORAES, YASMIN SANDOVAL SANTANA LEAL MACIEL) + 29 NOMEAÇÕES (ALICIA, AUGUSTO CÉSAR (recolocado), CIRO, DANIEL, EMILLY, FRANCISCO BRUNO, GEDSON, JAYANE (recoloc), JOANDERSON, JONNATAS (recoloc), JOSÉ ALBERTO LUCAS, JOSÉ ANTÔNIO (recoloc), JOYNA, KARLA MILENA (recoloc), KETHLEN, LUAN, LUIS DIEGO, LUIS FELIPE, LUIS GUSTAVO, MARCUS VINICIUS, MARTINHO (recoloc), MAURÍCIO (recoloc), MAYARA, MICHELE, PABLO, THAYNÁ, VINICIUS (recoloc), VITOR (recoloc), YASMIN (recoloc)). Pessoas distintas ≥ 29. Cidade São Luís/MA (CAPITAL ~1.1M). Janela: 26/03/2026 — FORA (mas 2026 é ano de eleição estadual/federal, não municipal). Limiar 7 (fora janela municipal). 29 ≥ 7 — pico massivo confirmado. Risco baixo 48 indica subnotificação severa.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-071",
@@ -1943,10 +2213,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#3118601#pico_nomeacoes#2026-05-03T15:21:43.418Z",
       "createdAt": "2026-05-03T15:21:43.418Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF p.4-7 (1.385 linhas): identifiquei apenas 5 atos NOMINALMENTE individualizados de pessoas: 1 DISPENSAR (ADRIANA KELEN DINIZ) + 2 DESIGNAR (NEUSA MARIA PINTO, ADRIANA KELEN DINIZ — MESMA pessoa do dispensar, recolocada em outra função) + 1 EXONERA (DAYANE BRAGANCA CAMPOS) + 1 DESLIGA com efeitos exoneratórios (MARGARIDA MAGALHÃES DA FONSECA) + 1 RATIFICAR nomeação histórica (JOSE FRANCISCO CUELLAR ERAZO — ratificação retroativa de nomeação de 2005, NÃO é nomeação atual). Pessoas distintas hoje: 4 (ADRIANA, NEUSA, DAYANE, MARGARIDA — JOSE é ratificação retroativa). Cidade Contagem/MG (~668k, interior MG). Janela: 18/09/2024 — DENTRO de janela eleitoral 2024. Limiar dentro-janela = 3. 4 ≥ 3 = TP marginal, MAS dois atos são da MESMA pessoa (ADRIANA dispensada+designada novamente) e um é ratificação retroativa de 2005. Pessoas REALMENTE com mudança de cargo nesta gazette: 4. Risco 74 superestima — não há concentração suspeita de movimento eleitoral, é rotina administrativa. Bug: ratificação retroativa contou como nomeação nova.",
+      "rootCause": "regex_capturou_ratificacao_retroativa",
+      "adjustment": "excluir_pattern_RATIFICAR_a_nomeacao + DESLIGA_com_efeitos_exoneratorios; deduplicar mesma pessoa em multiplos atos no mesmo gazette; quantificar 'pessoas com mudança líquida de cargo' não 'atos'",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-072",
@@ -1966,10 +2242,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#3518800#pico_nomeacoes#2026-05-03T16:28:37.314Z",
       "createdAt": "2026-05-03T16:28:37.314Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF p.1 (1.387 linhas) — excerpt mostra UMA NOMEAÇÃO via portaria padronizada de Guarulhos: 'Para o cargo em comissão: Diretor de Departamento (302-27), lotado na SH01. Vaga: exoneração de Guilherme de Araujo Lavras'. Identifiquei na varredura completa: ~50 atos. PORÉM contexto crítico: Guarulhos/SP (1.4M hab, top 10 nacional). Janela: 14/01/2025 — FORA de janela eleitoral municipal (eleição out/2024 já passada), MAS é INÍCIO de novo mandato municipal (gestão 2025-2028 toma posse em 01/jan/2025). Volume alto de nomeações em janeiro de início de mandato é ESPERADO (transição de governo) — todo prefeito recém-empossado nomeia equipe nova. NÃO é pico atípico que justifique alerta legal sob Lei 9.504/97. Limiar fora janela = 7; volume 50 supera, mas o contexto de transição de mandato torna o alerta sem valor jornalístico — se publicarmos isso, seria FP de relevância (alerta verdadeiro estatisticamente, falso na imputação de irregularidade). Risco baixo 39 do Fiscal acidentalmente está adequado.",
+      "rootCause": "fiscal_nao_considera_transicao_de_mandato_municipal",
+      "adjustment": "adicionar exclusao_periodo_transicao_mandato (01/jan a 31/jan de ano impar pos-eleicao municipal) OU exigir comparativo com baseline mensal historico da propria cidade — pico real e desvio sobre media, nao volume absoluto",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-073",
@@ -1989,10 +2271,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-pessoal#4205407#pico_nomeacoes#2026-05-03T09:26:05.992Z",
       "createdAt": "2026-05-03T09:26:05.992Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF p.1-2 (1.297 linhas): identifiquei apenas 3 atos com pessoas nominalmente identificadas: 1 EXONERAR a pedido (LUIZ CARLOS PADILHA — Diretor de Empreendedorismo) + 1 NOMEAR (GERUSA — servidora) + 1 EXONERAR (servidora MARIA — última linha 604). Pessoas distintas: 3. Cidade Florianópolis/SC (CAPITAL ~510k). Janela: 20/05/2024 — FORA de janela eleitoral (2024 é ano municipal, janela começa em 06/jul). Limiar fora-janela = 7. 3 < 7 = NÃO atende limiar para pico. Pessoal de gabinete normal de gazette de capital de porte médio. Risco 35 já refletia limiar não-atingido. Fiscal corretamente atribuiu risco baixo, mas como passou do threshold 60 para entrar como finding (na verdade não passou — risco 35 < 60), não deveria ter sido emitido como alerta — é NOISE, não alerta publicável. Confirma FP por critério de threshold.",
+      "rootCause": "regex_acionou_finding_sem_atender_limiar_publicavel_riskScore_60",
+      "adjustment": "manter threshold riskScore >= 60 para publicacao; FiscalPessoal nao deve gerar finding com risco < 50 (downgrade silencioso); adicionar shortcut: se pessoas_distintas < limiar(janela), nao emitir finding mesmo que regex bata",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-074",
@@ -2015,10 +2303,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T16:11:41.885Z",
       "createdAt": "2026-05-02T16:11:41.885Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "borderline",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF cita 'Aquisição de Agulhas de Punção Intraóssea. Valor R$ 68.100,00. Dispensa n.º 151/2025. Fundamento Legal: Art. 75, inciso VIII, da Lei nº 14.133/21'. Objeto = COMPRA (insumo médico). Teto Art. 75 II = R$ 50k. Valor R$ 68.100 > R$ 50k. PORÉM, fundamento citado é Art. 75 VIII (emergência/calamidade pública), hipótese sem teto de valor. Agulhas de Punção Intraóssea são equipamento médico de urgência/emergência. Sem checar processo administrativo, não dá para confirmar/negar emergência sanitária. Borderline.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-075",
@@ -2041,10 +2335,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T17:52:20.309Z",
       "createdAt": "2026-05-02T17:52:20.309Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF cita 'SMED – Contratado: LIZ TUR TRANSPORTES EIRELI. Objeto: Dispensa de licitação para prestação de serviço de transporte escolar - Roteiros 101 e 1002. Valor: R$ 189.860,00. Dispensa nº 174/2022. Fundamento legal: Art. 24, inciso IV, da Lei n.º 8.666/93'. Mesma data (16/08/2022) tem Dispensas 173 (R$ 1.020.800), 174 (R$ 189.860), 175 (R$ 35.750), todas para o MESMO objeto (transporte escolar) divididas por roteiros. Padrão clássico de fracionamento — necessidade previsível dividida em múltiplas dispensas para cada uma ficar abaixo do teto. Art. 24 IV (emergência) é fundamento questionável para serviço corriqueiro ano-letivo.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-076",
@@ -2067,10 +2367,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T16:50:08.493Z",
       "createdAt": "2026-05-02T16:50:08.493Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF cita 'Contratado(a): SLOMP COMERCIO DE MATERIAIS DE CONSTRUCAO LTDA. Objeto: Fornecimento de Concreto Usinado Convencional e Bombeado. Valor R$ 549.066,18. Dispensa n.º 87/2025. Fundamento Legal: Art. 75, inciso III, alínea \"a\", da Lei nº 14.133/21'. Objeto = COMPRA de material (concreto usinado). Art. 75 III \"a\" trata de fornecedor exclusivo de bens/peças especializados — concreto usinado é commodity de mercado competitivo, NÃO se enquadra. Teto Art. 75 II (compras) = R$ 50k. Valor R$ 549.066 >>> R$ 50k. Fundamento legal inadequado + valor 10x acima do teto = dispensa irregular.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-077",
@@ -2092,10 +2398,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:26:34.739Z",
       "createdAt": "2026-05-02T16:26:34.739Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF cita 'SEMMA – Contratado: OMC EMPREENDIMENTOS IMOBILIÁRIOS LTDA, com interveniência da IMOBILIÁRIA BASSANESI. Objeto: Termo Aditivo nº 3 ao Contrato nº 2019/925, para prorrogação de vigência do contrato de locação de imóvel da sede administrativa da SEMMA. Valor Global: R$ 264.000,00. Modalidade: Dispensa de Licitação nº 056/2019'. Trata-se de LOCAÇÃO DE IMÓVEL — hipótese específica de dispensa (Art. 24 X Lei 8.666/93 ou Art. 74 III Lei 14.133/21), sem teto de valor. Regex confundiu dispensa de locação (modalidade do contrato original de 2019) com dispensa irregular por valor. Além disso, é mero termo aditivo de prorrogação, não nova contratação.",
+      "rootCause": "regex_confused_locacao_with_dispensa_por_valor",
+      "adjustment": "Antes de flagrar dispensa, checar se objeto contém 'locação de imóvel'/'locação imóvel'/'aluguel'. Se sim, redirecionar para FiscalLocacao (avaliar valor de mercado, justificativa) e NÃO aplicar teto Art. 75. Adicional: detectar se é 'Termo Aditivo' a contrato pré-existente — se sim, pertence ao FiscalContratos (avaliar % aditivo), não FiscalLicitacoes.",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-078",
@@ -2118,10 +2430,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T16:53:22.908Z",
       "createdAt": "2026-05-02T16:53:22.908Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF cita 'SEMMA – Contratado(a): CODECA COMPANHIA DE DESENVOLVIMENTO DE CAXIAS DO SUL. Objeto: prestação de serviço de coleta orgânica de resíduos sólidos urbanos. Valor R$ 23.340.057,06 (depois retificado para R$ 22.835.118,72). Dispensa nº 085/2024. Fundamento Legal: Art. 75, inciso IX da Lei nº 14.133/21'. Objeto = SERVIÇO. Art. 75 IX (insumos estratégicos à saúde) NÃO se aplica a coleta de resíduos. Mesmo considerando contratação de empresa pública municipal (que teria fundamento próprio), o inciso citado é manifestamente incorreto para o objeto. Valor R$ 22.8 milhões com fundamento legal mal aplicado = irregularidade grave.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-079",
@@ -2144,10 +2462,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#dispensa_irregular#2026-05-02T16:14:13.563Z",
       "createdAt": "2026-05-02T16:14:13.563Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF cita 'SMED – Contratado: VIAÇÃO GIRATUR LTDA. Objeto: Prestação de serviços de transporte escolar para alunos da Rede Pública de Ensino. Valor R$ 378.950,00. Dispensa nº 104/2022. Fundamento legal: Art. 24, inciso IV, da Lei n.º 8.666/93'. Objeto = SERVIÇO. Art. 24 IV (emergência/calamidade) é fundamento inadequado para transporte escolar — necessidade previsível e recorrente de cada ano letivo, não emergência. Teto Art. 24 II (8.666/93, vigente em 2022 antes da migração total) era R$ 17.600 / Art. 75 II (14.133/21) = R$ 50k. Valor R$ 378.950 >>> qualquer teto. Dispensa irregular confirmada.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-080",
@@ -2170,10 +2494,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#4305108#fracionamento#2026-05-02T16:49:23.452Z",
       "createdAt": "2026-05-02T16:49:23.452Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF cita 'SMED - Contratado: BRAGÉ VIAGENS E TURISMO EIRELI. Objeto: Dispensa de licitação para prestação de serviço de transporte escolar - Roteiros 143 M/T, 144 M/T, 145 M/T e 146 M/T. Valor: R$ 176.000,00. Dispensa n.º 017/2021. Fundamento legal: Art. 24, inciso IV, da Lei n.º 8.666/93'. Mesma data (09/03/2021) traz múltiplas dispensas para transporte escolar (Bragé, Viação Giratur, etc.) divididas por roteiros, todas Art. 24 IV. Padrão clássico de fracionamento — serviço único (transporte escolar) particionado em várias dispensas para fugir de licitação, com fundamento (emergência) inadequado para serviço previsível. Risk 100 acerta.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-081",
@@ -2194,10 +2524,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-licitacoes#3301702#dispensa_irregular#2026-05-03T07:26:32.405Z",
       "createdAt": "2026-05-03T07:26:32.405Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "PDF cita 'TIPO DE CONTRATO: LOCAÇÃO DE IMÓVEL [...] OBJETO DO CONTRATO: ESCOLA M. DARCY RIBEIRO [...] VALOR R$ 300.929,99 [...] ATO DE ORIGEM: DISPENSA DE LICITAÇÃO conforme art 24 inciso X da Lei 8666/93'. Art. 24 X da Lei 8.666/93 é hipótese expressa de dispensa para LOCAÇÃO de imóvel destinado a finalidade precípua da administração — sem teto de valor. Locação de prédio para escola municipal é uso próprio. Documento é mera designação de fiscais do contrato (não nova contratação) referente a contrato de 2009. Regex confundiu locação de imóvel com dispensa por valor.",
+      "rootCause": "regex_confused_locacao_with_dispensa_por_valor",
+      "adjustment": "Mesmo de GS-077: detectar 'LOCAÇÃO DE IMÓVEL' / 'TIPO DE CONTRATO: LOCAÇÃO' no contexto e excluir do FiscalLicitacoes. Adicional: detectar se documento é ato de DESIGNAÇÃO DE FISCAIS / GESTORES de contrato pré-existente (palavras-chave: 'DESIGNAR como Gerente/Fiscais', 'fiscalização e acompanhamento') — esses não são contratações novas e devem ser excluídos.",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-082",
@@ -2218,10 +2554,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:30:20.686Z",
       "createdAt": "2026-05-02T16:30:20.686Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Excerpt cita 'R$ 2.700.000,00 (dois milhoes e setecentos mil reais). Modalidade de Licitacao: Inexigibilidade no 2022/59'. Esse valor pertence ao Termo de Colaboracao FUCS-Hospital Geral (linhas 28-32 do PDF), nao ao aditivo. O aditivo real (linha 37) e: 'Termo aditivo n.o 01 ao termo de compromisso n.o 2021/1541 para alteracao de clausula de pagamento conforme decreto n.o 22.023 de 20/04/2022. Valor Estimado: R$ 0,00.' Aditivo de mera alteracao de clausula, valor R$ 0. Engine acoplou o valor R$ 2.7M do bloco anterior (Termo de Colaboracao) ao aditivo subsequente (MARCELO LISSOTT). Bug de janela de extracao + ausencia de cross-reference do contrato 2021/1541.",
+      "rootCause": {
+        "type": "missing_original_contract_value",
+        "why": "Engine extraiu valor R$ 2.7M de um item adjacente (Termo de Colaboracao para subvencao hospitalar) e atribuiu ao aditivo do MARCELO LISSOTT. O aditivo verdadeiro tem valor R$ 0 (alteracao de clausula). Sem cruzar com o contrato original 2021/1541 via suppliers-prod, qualquer valor proximo do excerpt vira candidato."
+      },
+      "adjustment": {
+        "summary": "Apos EVO-002 (suppliers-prod com sk contratado): consultar valor original do contrato 2021/1541 via GSI antes de calcular %. Adicionar tambem deteccao de 'Valor Estimado: R$ 0,00' explicito no proprio excerpt do aditivo - nesse caso skip imediato. Reduzir janela de extracao para nao acoplar valores de blocos adjacentes."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-083",
@@ -2242,10 +2589,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:31:39.503Z",
       "createdAt": "2026-05-02T16:31:39.503Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Aditivo no 05 ao Contrato 2019/192 (transporte escolar MARISOL), valor R$ 25.850,00 para 'revisao anual de valores contratuais' (reajuste contratual previsto). PDF nao menciona valor original do contrato 2019/192 - busquei numero do contrato no arquivo inteiro e so aparece nesta linha. Sem cross-reference, nao da pra saber se R$ 25.850 e 25% de R$ 100k (TP) ou de R$ 1M (FP claro). Alem disso, 'revisao anual' e instrumento legal previsto no proprio art. 124 Lei 14.133 (reajuste por indice contratual), nao 'aditivo abusivo'.",
+      "rootCause": {
+        "type": "missing_original_contract_value",
+        "why": "Fiscal calcula % em cima de valor inferido sem referencia ao contrato 2019/192. Suppliers-prod cross-supplier nao estava ativo no momento do finding. Engine tambem nao distingue 'revisao anual de valores' (reajuste contratual valido) de aditivo de acrescimo."
+      },
+      "adjustment": {
+        "summary": "Apos EVO-002: consultar valor original do contrato 2019/192 via GSI sk='CONTRATO#2019/192'. Se ausente -> riskScore=0 + skip. Adicionar tambem regex de exclusao para 'revisao anual', 'reajuste por indice', 'repactuacao' - sao instrumentos legais previstos no art. 124, nao acrescimos."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-084",
@@ -2267,10 +2625,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#5002704#aditivo_abusivo#2026-05-03T05:19:38.814Z",
       "createdAt": "2026-05-03T05:19:38.814Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Aditivo ao Contrato n.388/2020 (Construtora Artec, Campo Grande). PDF EXPLICITAMENTE traz o valor original e o calculo: valor original R$ 19.458.639,47 -> passou para R$ 19.520.912,97. Acrescimo liquido de apenas 0,32%. O proprio extrato detalha: 'decrescimo de 19,90% (...) Acrescimo de 20,22%' - ambos abaixo do limite legal de 25% (Lei 8.666/93 art. 65 par 1, equivalente ao art. 125 Lei 14.133). Aditivo e PERFEITAMENTE LEGAL. Engine flagrou apesar do PDF ter declaracao explicita 'Acrescimo de 20,22%' (< 25%).",
+      "rootCause": {
+        "type": "ignored_explicit_percentage_in_text",
+        "why": "Engine ignorou o calculo explicito presente no proprio texto ('Acrescimo de 20,22% do valor do contrato'). Em vez de ler o percentual declarado, inferiu abuso pelo valor absoluto (R$ 3.9M de acrescimo). Falta heuristica que prioriza percentual declarado quando presente no excerpt."
+      },
+      "adjustment": {
+        "summary": "Adicionar regex de captura para padrao 'acrescimo de XX,YY% do valor do contrato' / 'decrescimo de XX,YY%'. Quando presente no excerpt, usar como fonte primaria do calculo - se ambos < 25% (ou < 50% para reformas), riskScore=0 + skip. Esse tipo de extrato (Lei 8.666/93 estilo) sempre traz percentual declarado."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-085",
@@ -2291,10 +2660,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:38:15.890Z",
       "createdAt": "2026-05-02T16:38:15.890Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Termo Aditivo no 01 ao Contrato 049/2022 (impressos diversos, FAS Caxias), valor R$ 2.200,00 para 'acrescimo de quantidade'. Valor minusculo (R$ 2,2k). PDF nao tem valor original do contrato 049/2022 (busquei o numero, so aparece nesta linha). Sem cross-reference impossivel saber se R$ 2.200 e 25% de R$ 8k (TP) ou de R$ 50k (FP). Bug central: engine subiu finding com riskScore 87 e confidence 0.85 sem o dado minimo necessario.",
+      "rootCause": {
+        "type": "missing_original_contract_value",
+        "why": "Fiscal calcula % em cima de valor inferido sem referencia ao contrato 049/2022 (suppliers-prod cross-supplier nao estava ativo). Pior: aditivo de R$ 2.2k provavelmente e percentual minusculo de qualquer contrato razoavel."
+      },
+      "adjustment": {
+        "summary": "Apos EVO-002: consultar valor original do contrato 049/2022 via GSI. Se ausente -> riskScore=0 + skip. Adicional: floor de valor minimo do aditivo (ex: R$ 5.000) - aditivos abaixo desse limite raramente sao 'abusivos' em qualquer contrato municipal real e sao quase sempre ajustes operacionais."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-086",
@@ -2315,10 +2695,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:12:20.192Z",
       "createdAt": "2026-05-02T17:12:20.192Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Termo Aditivo no 08 ao Contrato 2018/751 (TOPSUL, cuidadoria PIM Caxias) para 'prorrogar a vigencia do contrato de 20/08/2023 ate 19/08/2024'. Valor R$ 8.757.534,60 e o valor estimado do PERIODO PRORROGADO (12 meses), nao acrescimo sobre valor original. Contrato de 2018, em 2023 = 5 anos de vigencia (abaixo do threshold de 10 anos para prorrogacao_excessiva). PDF nao traz valor original do contrato 2018/751 (busquei numero, so aparece neste excerpt). Sem cross-reference, engine confundiu valor anual da prorrogacao com acrescimo abusivo.",
+      "rootCause": {
+        "type": "missing_original_contract_value",
+        "why": "Fiscal interpretou valor R$ 8.7M (custo anual do periodo prorrogado) como acrescimo sobre original. Sem suppliers-prod, nao consegue saber que esse valor e o anual recorrente do contrato. Alem disso, aditivo de prorrogacao por 12 meses em contrato de servico continuado e expressamente permitido pelo art. 107 Lei 14.133 (ate 10 anos)."
+      },
+      "adjustment": {
+        "summary": "Apos EVO-002: consultar valor anual original do contrato 2018/751 via GSI. Detectar palavras-chave de prorrogacao ('prorrogar a vigencia', 'periodo de 12 meses', 'a contar do termo final') - quando presentes E vigencia acumulada < 10 anos E sem termo de acrescimo/decrescimo, classificar como prorrogacao_legal (skip). Computar idade do contrato a partir do numero (2018/751 -> 2018) e comparar com data do aditivo."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-087",
@@ -2339,10 +2730,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#2910800#aditivo_abusivo#2026-05-03T04:17:32.784Z",
       "createdAt": "2026-05-03T04:17:32.784Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "TP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Aditivo no 127-2021-13AC (Feira de Santana, DNA.SERVICOS & GESTAO EIRELI) ao contrato 279-2020-13C de 08/04/2021. PDF traz EXPLICITAMENTE: valor original R$ 6.900.000,00 -> 'passando o valor acumulado do contrato para R$ 13.800.000,00'. Acrescimo de R$ 6.900.000 sobre R$ 6.900.000 = +100% sobre o original. Excede MUITO o limite legal de 25% (art. 125 Lei 14.133, ou art. 65 par 1 Lei 8.666/93 da epoca). Alem disso, prorrogacao por 12 meses (contrato com so 12 meses de existencia ja sendo dobrado em valor). TP CLARO de aditivo abusivo. Excerpt 'passando o valor acumulado do contrato para R$13.800.000,00' tem o calculo embutido.",
+      "rootCause": null,
+      "adjustment": null,
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-088",
@@ -2363,10 +2760,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T16:55:51.459Z",
       "createdAt": "2026-05-02T16:55:51.459Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Termo aditivo no 09 ao contrato 2019/159 (DELIZ Viagens, transporte escolar Caxias) para 'reducao de quilometragem roteiro 803 M/T e acrescimo de quilometragem roteiro 903 M/T'. Valor R$ 234,96 (DUZENTOS E TRINTA E QUATRO REAIS). Valor MICROSCOPICO - rebalanceamento de quilometragem entre roteiros, ajuste operacional de rotina. Impossivel ser 'aditivo abusivo' em qualquer contrato realista. PDF nao tem valor original do contrato 2019/159. Bug central CONFIRMADO: engine subiu finding riskScore 87 / confidence 0.85 sobre R$ 234 sem cross-reference. FP claro - exatamente o padrao do bug critico documentado.",
+      "rootCause": {
+        "type": "missing_original_contract_value",
+        "why": "Engine flagrou aditivo de R$ 234,96 como abusivo sem cruzar com contrato 2019/159 original (suppliers-prod cross-supplier ausente). Como observado no batch anterior (precisao 42%), Fiscal dispara em qualquer aditivo que regex captura, sem floor de valor nem cross-reference."
+      },
+      "adjustment": {
+        "summary": "Apos EVO-002: consultar valor original do contrato 2019/159 via GSI - se ausente skip. Adicional URGENTE: aplicar floor de valor (ex: R$ 5.000 ou R$ 10.000) para aditivo - abaixo disso, ajustes operacionais de quilometragem/quantidade sao rotina, nunca abuso. Detectar tambem palavras-chave de rebalanceamento ('reducao (...) acrescimo de quilometragem', 'remanejamento de roteiro') - nesses casos riskScore=0."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-089",
@@ -2388,10 +2796,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-contratos#4305108#aditivo_abusivo#2026-05-02T17:13:19.560Z",
       "createdAt": "2026-05-02T17:13:19.560Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Termo Aditivo no 02 ao Termo de Compromisso (TC) no 2020/609 (VINICIUS MEDEIROS, SMU Caxias). Valor R$ 10.752 - mensal de ~R$ 896 x 12 meses, padrao de remuneracao de pessoa fisica autonoma. Importante: e Termo de Compromisso, nao contrato administrativo da Lei 14.133. PDF mostra padrao replicado para 5+ pessoas (Marli, Jose, Paulo, Vinicius, Fernanda) todos com R$ 10.752 - prestacao de servico autonomo padronizada. 'Aditivo' aqui e mera renovacao de prazo (12 meses) sem acrescimo de valor. FP duplo: (a) instrumento errado (TC nao e contrato), (b) sem valor original do TC original 2020/609 para comparar.",
+      "rootCause": {
+        "type": "missing_original_contract_value",
+        "why": "Engine flagrou renovacao de Termo de Compromisso (instrumento de prestacao de servico autonomo, nao contrato administrativo) como aditivo abusivo. Alem de faltar cross-reference do TC 2020/609, FiscalContratos deveria filtrar por tipo de instrumento - TC nao se sujeita ao art. 125 Lei 14.133."
+      },
+      "adjustment": {
+        "summary": "Adicionar filtro de tipo de instrumento: se 'Termo de Compromisso', 'Termo de Cooperacao', 'Termo de Fomento', 'Termo de Colaboracao' -> skip (nao se aplica art. 125 Lei 14.133). Apos EVO-002: para aditivos a contratos validos, consultar valor original via GSI. Adicional: detectar padrao de renovacao de prazo sem acrescimo de valor ('renovacao do prazo de vigencia contratual. Periodo de 12 meses') - se presente E vigencia acumulada < 10 anos -> classificar como prorrogacao_legal."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-090",
@@ -2411,10 +2830,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-diarias#2611606#diaria_irregular#2026-05-03T16:52:08.758Z",
       "createdAt": "2026-05-03T16:52:08.758Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Citação direta do PDF (linha 4648): 'viagens para divulgação do destino Recife, bem como a alimentação diária das redes sociais e sites gerenciados, pela Secretaria de'. Aqui 'diária' é adjetivo qualificando 'alimentação' (= postagem regular). O excerpt mostrado ainda traz 'a gente vai garantir que cerca de 60 mil pessoas, diariamente, sejam beneficiadas' — uso adverbial de 'diariamente'. Não é pagamento de diária a servidor.",
+      "rootCause": {
+        "type": "regex_overmatch_adverbio_adjetivo",
+        "why": "Regex captura 'diária' / 'diariamente' como advérbio ('diariamente') ou adjetivo ('alimentação diária', 'publicação diária'); ambos são uso linguístico, não verba de viagem"
+      },
+      "adjustment": {
+        "summary": "Excluir 'diariamente' (advérbio puro) do match. Para 'diária' como adjetivo, exigir co-ocorrência em janela de ±50 chars com pelo menos um termo financeiro: 'R$', 'pagamento', 'concessão', 'autorizo', 'arbitro', 'no valor de', 'à razão de'"
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-091",
@@ -2434,10 +2864,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-diarias#2507507#diaria_irregular#2026-05-03T18:17:44.682Z",
       "createdAt": "2026-05-03T18:17:44.682Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Caso idêntico a GS-014 (mesmo PDF, mesmo trecho de curso de tiro). Citação: '- Técnicas de tiro: tiro duplo, acompanhamento do alvo etc...'. Conteúdo programático de curso de pistola — sem qualquer ocorrência de 'diária' no PDF. Indica também falha de deduplicação (mesmo trecho gerou GS-014 e GS-091).",
+      "rootCause": {
+        "type": "match_sem_palavra_chave",
+        "why": "Mesma causa de GS-014 + falha de deduplicação (dois findings para o mesmo (gazette, excerpt))"
+      },
+      "adjustment": {
+        "summary": "(1) Idem GS-014: pré-condição word boundary 'diária(s)'. (2) Idem GS-048: deduplicar por (cityId + gazetteId + offset)"
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-092",
@@ -2457,10 +2898,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-diarias#2611606#diaria_irregular#2026-05-03T11:12:27.789Z",
       "createdAt": "2026-05-03T11:12:27.789Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Citação direta do PDF (contexto linha 343 e excerpt): 'Localizada no coração de Boa Viagem, unidade é composta por' e excerpt 'Para a loja de Boa Viagem, a Prefeitura do Recife, através da Secretaria de Desenvolvimento Econômico, apoiou nas contratações'. 'Boa Viagem' é nome do bairro nobre do Recife. Não há 'diária' / 'diaria' / 'diariamente' em parte alguma do PDF. Match foi sobre o token 'Viagem' (nome próprio de bairro).",
+      "rootCause": {
+        "type": "match_palavra_errada",
+        "why": "Sem 'diária' no PDF, o gatilho foi 'Viagem' (token isolado) confundido com viagem de servidor; agravado por ser nome próprio de bairro ('Boa Viagem')"
+      },
+      "adjustment": {
+        "summary": "Não usar 'viagem' isolado como gatilho de FiscalDiárias. Exigir co-ocorrência obrigatória de 'diária(s)' explícita + 'R$' + nome de servidor (matrícula ou CPF mascarado)"
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-093",
@@ -2481,10 +2933,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-diarias#4305108#diaria_irregular#2026-05-02T18:07:19.806Z",
       "createdAt": "2026-05-02T18:07:19.806Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Citação direta do PDF (linhas 124, 494, 524, etc.): '3.3.90.14.00.00.00.00.0500 DIÁRIAS - PESSOAL CIVIL R$ 5.000,00', '3.3.90.14.00.00.00.00.0500 DIÁRIAS - PESSOAL CIVIL R$ 2.684,35', '3.3.90.14.00.00.00.00.0500 DIÁRIAS - PESSOAL CIVIL R$ 10.000,00'. Contexto: 'É aberto um Crédito Adicional Suplementar no valor de R$ 12.793.425,68 ... conforme as dotações a seguir especificadas'. O documento é DECRETO DE CRÉDITO SUPLEMENTAR — abertura de dotação orçamentária na rubrica '3.3.90.14 — DIÁRIAS - PESSOAL CIVIL', não pagamento real. É autorização de orçamento, não despesa concreta.",
+      "rootCause": {
+        "type": "regex_overmatch_dotacao_orcamentaria",
+        "why": "Regex confunde rubrica orçamentária classificadora '3.3.90.14 DIÁRIAS - PESSOAL CIVIL' (categoria contábil de crédito suplementar) com pagamento concreto de diária a servidor identificado"
+      },
+      "adjustment": {
+        "summary": "Excluir contextos onde 'DIÁRIAS' aparece precedido de código orçamentário (regex `\\d\\.\\d\\.\\d{2}\\.\\d{2}.*DIÁRIAS`) ou em janela de 100 chars junto com: 'Crédito Adicional', 'Crédito Suplementar', 'Dotação Orçamentária', 'Decreta', 'Lei Orçamentária'. Diária real cita servidor identificado + período + destino + valor unitário diário"
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-094",
@@ -2506,10 +2969,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-convenios#3106200#convenio_sem_chamamento#2026-05-03T16:33:42.040Z",
       "createdAt": "2026-05-03T16:33:42.040Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho citado: 'Fundo Municipal de Saúde – FMS – R$7.944.525,00. Despesa com pagamento de auxílio transporte no terceiro trimestre de 2024. Gastos com os contratos administrativos (CADM) e repasse em favor do Hospital Metropolitano Odilon Behrens' (linhas 291-294). É decreto orçamentário de Belo Horizonte (FMS) para auxílio transporte e custeio do Hospital Odilon Behrens — fundação pública municipal/autarquia (não OSC sob Lei 13.019). 'Contratos administrativos (CADM)' são contratos comuns, não termos de colaboração. PDF não contém palavra 'chamamento' nessa região; menções genéricas a OSC aparecem em outras seções (1437+) com dispensa Art. 29 (emendas parlamentares) corretamente fundamentada.",
+      "rootCause": "Fiscal disparou em 'repasse em favor de [entidade]' sem verificar a natureza jurídica da contraparte. Hospital Odilon Behrens é fundação pública municipal (entidade da administração indireta), não organização da sociedade civil. Lei 13.019 não se aplica a transferências entre entes da mesma administração.",
+      "adjustment": "Whitelist de entidades da administração indireta: fundações públicas, autarquias, empresas estatais. Heurística simples: nomes contendo 'Hospital Metropolitano', 'Fundação Municipal', 'Autarquia', 'Companhia Municipal', 'Instituto Municipal' geralmente são adm. indireta — verificar e suprimir alerta.",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-095",
@@ -2531,10 +3000,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T05:23:34.154Z",
       "createdAt": "2026-05-03T05:23:34.154Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Mesmo PDF e mesmo trecho de GS-056: 'CONTRATO DE REPASSE Nº909091/2020/MTUR/CAIXA' (linha 23). Repasse federal Ministério do Turismo/Caixa para o Município de Campinas. Não é convênio com OSC. PDF inteiro contém dispensa de chamamento fundamentada em Art. 30 VI da Lei 13.019/2014 para OSCs reais (linhas 1004-1019, 1105-1120 etc.) — a regulação está sendo seguida nos casos onde realmente se aplica.",
+      "rootCause": "Duplicata efetiva de GS-056 (mesmo PDF, mesma linha). Indica que o coletor pode estar gerando findings duplicados para o mesmo trecho — investigar deduplicação por (cityId, gazetteId, excerpt-hash).",
+      "adjustment": "Além da regra de exclusão de contrato de repasse federal: implementar deduplicação por hash do excerpt + gazetteId antes de gerar finding. Evita que o mesmo trecho gere múltiplos alerts.",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-096",
@@ -2555,10 +3030,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T12:04:48.273Z",
       "createdAt": "2026-05-03T12:04:48.273Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho citado: 'Considerando a necessidade de realizar a contratação de empresa destinada ao acolhimento de usuários de uma OSC que não poderá ter o Termo de Colaboração renovado' (linhas 188-190). É EXATAMENTE O OPOSTO de convênio sem chamamento: o decreto está abrindo crédito para CONTRATAR EMPRESA (via licitação regular) JUSTAMENTE PORQUE a OSC não pode renovar o Termo de Colaboração. Mostra observância à Lei 13.019 (não renova convênio sem chamamento, opta por licitação). PDF tem ampla evidência de termos de colaboração regulares com chamamento e dispensa Art. 30 fundamentada (linhas 3837+, 3867+ etc.).",
+      "rootCause": "Fiscal disparou em co-ocorrência de 'OSC' + 'Termo de Colaboração' sem analisar a polaridade do contexto. A frase é negativa ('não poderá ter o Termo... renovado') — efeito é justamente substituir convênio por licitação. Análise sintática rasa.",
+      "adjustment": "Detectar negação próxima ao termo: 'não poderá ter', 'não será renovado', 'rescisão', 'encerramento', 'sem renovação'. Quando padrão indica encerramento/substituição (não celebração), suprimir alerta. Idealmente passar pelo Nova Lite para classificar polaridade do ato (celebrar vs encerrar/substituir).",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-097",
@@ -2580,10 +3061,16 @@
       ],
       "sourceFindingId": "FINDING#fiscal-convenios#3509502#convenio_sem_chamamento#2026-05-03T16:54:52.299Z",
       "createdAt": "2026-05-03T16:54:52.299Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho citado: 'TUDEPI - CONTRATO REPASSE Nº920231/2021/MCIDADANIA/CAIXA' (linhas 104, etc.). Decreto orçamentário de Campinas — contrato de repasse Ministério da Cidadania (MCIDADANIA)/Caixa para o Município. TUDEPI é a sigla do programa federal (Tudo de Pessoa Idosa). Não é convênio com OSC, é repasse intergovernamental federal→municipal.",
+      "rootCause": "Mesmo padrão de GS-056/057/058/059: contrato de repasse federal União→Município erroneamente classificado como convênio sob Lei 13.019. MCIDADANIA é federal.",
+      "adjustment": "Adicionar 'MCIDADANIA' à lista de siglas federais. Regra geral consolidada: 'CONTRATO (DE) REPASSE Nº ddddd/AAAA/{SIGLA_FEDERAL}/CAIXA' — suprimir. Lista mínima: MTUR, MDR, MAPA, MCIDADANIA, MS, MEC, MJ, MMA, MCID, MIN.",
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-098",
@@ -2603,10 +3090,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-locacao#2704302#locacao_sem_justificativa#2026-05-03T14:18:32.115Z",
       "createdAt": "2026-05-03T14:18:32.115Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho exato do PDF: 'SECRETARIA MUNICIPAL DE ASSISTÊNCIA SOCIAL – SEMAS, torna público o interesse em alugar um imóvel nesta Capital, conforme características mínimas a seguir: CARACTERISTICAS MINIMAS DO IMOVEL PRETENDIDO ... Detalhes de Localização Clima Bom, Osman Loureiro, Tabuleiro ... Destinação CRAS – Clima Bom - Tabuleiro ... Características mínimas do imóvel, essenciais às atividades a ser nele executado: Um imóvel em bom estado de conservação, preferencialmente com instalações de pontos de lógicas, rede para telefone e elétricas compatíveis com a ocupação, contendo: Local onde se realizam as atividades administrativas relativas ao CRAS. Neste mesmo ambiente, devem-se prever a sala da equipe de coordenação, salas para atendimento, sala para reuniões e da Coordenação bem como banheiros para os funcionários e usuários. Propostas Deverá conter prazo mínimo de 90 (noventa) dias ... A locação será regida pela Lei 8.245, de 18/10/1991 e Lei 8.666 de 21/06/1993'. Análise: é AVISO DE INTERESSE EM LOCAÇÃO (chamamento público prévio) com critérios técnicos detalhados (localização específica para CRAS, características técnicas mínimas, destinação operacional) — o oposto do tipo 'locacao_sem_justificativa'. A justificativa técnica está EXPLÍCITA no próprio aviso.",
+      "rootCause": {
+        "type": "missed_technical_justification_in_aviso",
+        "why": "Regex captura 'contrato de locação' sem detectar que o ato é AVISO DE INTERESSE/CHAMAMENTO PÚBLICO com características técnicas declaradas — justificativa técnica está embutida no próprio documento."
+      },
+      "adjustment": {
+        "summary": "Excluir matches em atos com padrão 'AVISO DE INTERESSE EM LOCAÇÃO|EDITAL DE CHAMAMENTO|torna público o interesse em alugar' — esses são chamamentos prévios competitivos, não inexigibilidades. Adicionalmente, detectar presença de 'características mínimas|destinação|requisitos técnicos|critérios de seleção' na vizinhança como sinal de justificativa técnica documentada."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-099",
@@ -2626,10 +3124,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-locacao#3549904#locacao_sem_justificativa#2026-05-03T04:10:34.699Z",
       "createdAt": "2026-05-03T04:10:34.699Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho exato do PDF: 'CONTRATO Nº 558/23 DATA: 17/10/2023 PARTES: MUNICÍPIO DE SÃO JOSÉ DOS CAMPOS E NOVA OPCAO LOCADORA DE VEICULOS LTDA OBJETO: LOCACAO DE VEICULO LEVE PARA 5 PESSOAS E VEICULO CARROCERIA TIPO FURGAO PRAZO: 24 (VINTE E QUATRO) MESES VALOR: R$ 96.607,68 - LOTE 02 MODALIDADE: PREGAO ELETRONICO - 158/2023'. Análise: é LOCAÇÃO DE VEÍCULO (não imóvel), via PREGÃO ELETRÔNICO (modalidade competitiva, não inexigibilidade). Duplo erro: tipo de objeto errado (veículo) + modalidade errada (pregão, não inexigibilidade).",
+      "rootCause": {
+        "type": "regex_substring_match_no_imovel_check",
+        "why": "Regex /loca[çc][ãa]o/ captura 'LOCACAO DE VEICULO' sem exigir co-ocorrência com 'imóvel|imovel|prédio|edifício|sala|terreno|sede'. Modalidade pregão eletrônico passou batido sem filtro contra inexigibilidade."
+      },
+      "adjustment": {
+        "summary": "Exigir co-ocorrência obrigatória de 'imóvel|imovel|prédio|predio|edifício|edificio|sala|sede|loja|terreno' a < 80 chars do match de 'locação'. Restringir a 'Modalidade: (Inexigibilidade|Dispensa)' explicitamente — excluir Pregão/Concorrência/Tomada de Preços que são modalidades competitivas."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-100",
@@ -2650,10 +3159,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-locacao#3509502#locacao_sem_justificativa#2026-05-03T16:36:05.867Z",
       "createdAt": "2026-05-03T16:36:05.867Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho exato do PDF: 'Diante dos elementos constantes no presente protocolado, e à vista das manifestações da Secretaria de Justiça (docs. 3241406 e 3243676), RATIFICO a renovação do contrato de locação celebrado entre o Município de Campinas e o Sr. Edson Luiz Del'Grande Silva e a Sra. Maria Regina Moura Silva, proprietários do imóvel onde se encontra instalada a sede da Central de Penas Alternativas, por mais 12 (doze) meses, com fulcro no artigo 26, caput da Lei Federal n.º 8.666/93. A despesa decorrente, no valor total de R$ 57.600,00 ... aprovado pelo Comitê Gestor no doc. SEI nº3175096'. Análise: é RENOVAÇÃO de contrato (não nova contratação) E há justificativa técnica EXPLÍCITA referenciada via manifestações da Secretaria de Justiça (docs SEI 3241406 e 3243676) e aprovação do Comitê Gestor (doc SEI nº3175096). Justificativa em ato anterior referenciado.",
+      "rootCause": {
+        "type": "missed_referenced_justification_documents",
+        "why": "Justificativa técnica está em documentos SEI referenciados explicitamente no ato (manifestações Secretaria de Justiça + aprovação Comitê Gestor). Regex/heurística não interpreta referências SEI como justificativa válida. Adicionalmente, é renovação (não nova contratação)."
+      },
+      "adjustment": {
+        "summary": "Detectar referências a documentos justificadores via padrões 'doc(s)?\\.? SEI nº?\\s*\\d+|à vista (do parecer|da manifestação)|com base no parecer|conforme manifestação|aprovado pelo Comitê' — presença de 2+ referências documentais é sinal forte de justificativa estruturada. Adicional: distinguir 'RATIFICO a renovação' (renovação contratual) de nova inexigibilidade — renovação herda justificativa do contrato-mãe."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     },
     {
       "id": "GS-101",
@@ -2673,10 +3193,21 @@
       ],
       "sourceFindingId": "FINDING#fiscal-locacao#2704302#locacao_sem_justificativa#2026-05-03T15:20:29.909Z",
       "createdAt": "2026-05-03T15:20:29.909Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "schemaVersion": 1
+      "label": "FP",
+      "labeledBy": "claude-opus-4-7-via-subagent",
+      "labeledAt": "2026-05-10T08:18:20.043Z",
+      "schemaVersion": 1,
+      "rationale": "Trecho exato do PDF: 'Art. 1º DESIGNAR a servidora pública municipal, RITA DE CÁSSIA DE LIMA, Matrícula funcional nº 5248-5 ... como Gestora e Fiscal Técnica respectivamente dos Contratos firmados entre o MUNICÍPIO DE MACEIÓ, com interveniência desta SECRETARIA MUNICIPAL DE ASSISTÊNCIA SOCIAL – SEMAS, conforme relação constante no anexo desta Portaria. ... ANEXO CONTRATO FORNECEDOR OBJETO 036/2020 T.L.S EMPREENDIMENTOS IMOBILIÁRIOS LTDA LOCAÇÃO DE IMÓVEL PARA ATIVIDADES DO BOLSA FAMÍLIA E CAD ÚNICO ...'. Análise: PORTARIA de DESIGNAÇÃO de Gestora e Fiscal Técnica de contratos pré-existentes (lista de 9 contratos no anexo) — ato administrativo posterior à contratação, sem nova inexigibilidade. Os contratos foram celebrados em 2020 e 2022, fora do escopo deste ato.",
+      "rootCause": {
+        "type": "regex_matches_fiscal_designation_with_contract_list",
+        "why": "Regex 'LOCAÇÃO DE IMÓVEL' captura listagem em anexo de portaria de designação de fiscal — todos os contratos listados são pré-existentes."
+      },
+      "adjustment": {
+        "summary": "Mesmo ajuste de GS-062 e GS-064: excluir 'DESIGNAR.*Gestora?|DESIGNAR.*Fiscal|Portaria.*designação'. Adicional: quando match estiver em ANEXO (heurística: após linha 'ANEXO' isolada, antes do próximo título), tratar como referência a contratos antigos, não nova contratação."
+      },
+      "regressionTest": null,
+      "evaluatedBy": "claude-opus-4-7-via-subagent",
+      "evaluatedAt": "2026-05-10T08:18:20.043Z"
     }
   ]
 }
