@@ -96,8 +96,37 @@ Análise preliminar mostra que `riskScore` não correlaciona bem com TP em vári
 
 ---
 
+## Validação contra dataset SINTÉTICO (Fase 2 — pré-patch)
+
+55 amostras sintéticas (11 por Fiscal: 3 TP textbook + 5 FP réplica + 3 FP edge case) rodadas contra engine v1.5.0 com extractor regex realista (substitui Bedrock para excerpts limpos):
+
+| Fiscal | TP detectados | FP confirmados | TN filtrados | FN (gap cobertura) |
+|---|---:|---:|---:|---:|
+| FiscalDiárias | 3/3 | **7/8** | 1/8 | 0 |
+| FiscalLocação | 3/3 | **6/8** | 2/8 | 0 |
+| FiscalPublicidade | 3/3 | **4/8** | 4/8 | 0 |
+| FiscalConvênios | 0/3 | **4/8** | 4/8 | **3/3** |
+| FiscalContratos | 1/3 | 0/8 | 8/8 | **2/3** |
+| **Total** | 10/15 | 21/40 | 19/40 | 5/15 |
+
+**Achados:**
+- **21 FPs confirmados** em sintéticos (réplica dos padrões reais identificados nos ADRs).
+- **FiscalConvênios também tem subnotificação** (3 TPs não detectados): possível threshold de valor alto demais ou regex `isAcordoCooperacaoSemRepasse` capturando TPs erradamente. Investigar antes do patch P0.
+- **FiscalContratos detecta apenas 1 dos 3 TPs offline**: confirma dependência forte de `suppliers-prod` cross-reference para casos onde valor original não está no excerpt.
+- **FiscalDiárias detecta 3/3 TPs textbook**: bug não é de cobertura, é exclusivamente de overmatch.
+
+**Métrica de sucesso pós-patch:**
+- Cada Fiscal deve atingir **0 FPs nos sintéticos** mantendo **3/3 TPs** detectados.
+- Threshold mínimo para reativação de publicação: 100% sintético + ≥ 5 TPs em prod com ≤ 1 FP em janela de 30 dias.
+
+---
+
 ## Próxima reavaliação
 
-Após cada PR de correção (P0/P1/P2), rerodar avaliação contra o golden set v1.5.0 e medir delta de precisão. Política: **não merge sem regression test** (caso TP que segue disparando + caso FP que para de disparar) por amostra do golden set citada no PR.
+Após cada PR de correção (P0/P1/P2), rerodar:
+1. `npm run eval` (golden set real v1.5.0) — medir delta de precisão real.
+2. `npm run eval:synthetic` (dataset sintético) — validar regression tests.
+
+Política: **não merge sem regression test** por amostra do golden set citada no PR.
 
 Próximo baseline: **v1.6.0** após P0 + P1 fechados.
