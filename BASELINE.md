@@ -1,10 +1,12 @@
-# Baseline v1.5.0 — Fiscal Digital Engine
+# Baseline v1.5.0 → v1.6.0 — Fiscal Digital Engine
 
-**Data da avaliação:** 2026-05-10
-**Engine version:** v1.5.0 (com 7 PRs P0/P1/P2 abertos — ainda não merged em main)
-**Status:** Ciclo 3 COMPLETO — **1.695/1.695 amostras rotuladas (100% do universo amostral em prod)**
+**Data da avaliação:** 2026-05-10 (Ciclo 3) / 2026-05-11 (Ciclo 4 — engine v1.6.0 em prod)
+**Engine version:** v1.6.0 (7 PRs P0/P1/P2 mergeados em main, deploy completo em prod)
+**Status:** Ciclo 4 INICIADO — observação 30d em prod (até 2026-06-10)
 
-> **Conclusão do Ciclo 3 completo (2026-05-10):** Universo amostral de `alerts-prod` totalmente esgotado para 8 dos 10 Fiscais (Locação, Convênios, Diárias, Publicidade, Geral, Pessoal, Contratos, Licitações). **Nenhum Fiscal atinge o piso de 85% de precisão**. Pessoal caiu de 67,6% (C2, n=300) → 31,6% (C3, n=708). 7 PRs de patch P0/P1/P2 abertos em `fiscal-digital` (#16-22) endereçando todos os padrões de FP identificados; aguardam merge + re-eval pós-patch para confirmar elevação de precisão.
+> **Atualização 2026-05-11 (Ciclo 4 iniciado):** 7 PRs P0/P1/P2 (#16-22) foram mergeados em sequência em `main` de `fiscal-digital` e deployados em prod via `deploy.yml`. Engine v1.6.0 ativo nas Lambdas analyzer/publisher. Próximos 30 dias são janela de observação contra feed real de gazettes — meta: ≥ 5 TPs reais e ≤ 1 FP por Fiscal antes de declarar pronto. Ver [`TRAINING_CYCLES.md`](TRAINING_CYCLES.md) seção Ciclo 4.
+>
+> **Conclusão do Ciclo 3 completo (2026-05-10):** Universo amostral de `alerts-prod` totalmente esgotado para 8 dos 10 Fiscais (Locação, Convênios, Diárias, Publicidade, Geral, Pessoal, Contratos, Licitações). **Nenhum Fiscal atinge o piso de 85% de precisão**. Pessoal caiu de 67,6% (C2, n=300) → 31,6% (C3, n=708). 7 PRs de patch P0/P1/P2 mergeados em `fiscal-digital` (#16-22) endereçando todos os padrões de FP identificados.
 >
 > **Avaliadores:** Ciclo 1 (101): claude-opus-4-7 manual + 7 sub-agents. Ciclo 2 (915 novas): 14 sub-agents paralelos. Ciclo 3 (679 novas): 7 sub-agents paralelos em 2 ondas (4 + 3 retomado após pausa de cota).
 
