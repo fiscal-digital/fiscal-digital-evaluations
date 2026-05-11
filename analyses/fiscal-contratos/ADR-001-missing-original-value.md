@@ -1,10 +1,10 @@
 # ADR-001 — FiscalContratos calcula % de aditivo sem valor original do contrato
 
-**Status:** Aplicado parcial (2026-05-10 — `fiscal-digital` PR a ser aberto; cross-ref suppliers-prod pendente)
+**Status:** Aplicado completo (2026-05-11 — PR #22 mergeado + PR follow-up com skill `querySuppliersContract`)
 **Data:** 2026-05-10
-**Precisão pré-patch:** 33,3% Ciclo 1 (n=20) → 11,3% Ciclo 2 (n=180)
-**Precisão pós-patch:** a medir contra os mesmos 180 rotulados após merge
-**Severidade:** P1 — patch aplica filtros defensivos (4 itens do ADR sem mexer em IaC): floor R$ 5.000, percentual declarado, instrumento fora de escopo (Termo Compromisso/Cooperação/Fomento/Colaboração/Cessão Uso/Convênio/Súmula), reajuste legal Art. 124 (revisão anual/IPCA/repactuação CCT/apostilamento/supressão). Cross-ref formal com `suppliers-prod` GSI fica como follow-up (requer skill adicional via context).
+**Precisão pré-patch:** 33,3% Ciclo 1 (n=20) → 11,3% Ciclo 2 (n=180) → 10,0% Ciclo 3 (n=204, universo esgotado)
+**Precisão pós-patch:** a medir contra os 204 rotulados após observação 30d (Ciclo 5)
+**Severidade:** P1 — patch original (#22) aplicou 4 filtros defensivos. **Follow-up 2026-05-11**: skill `querySuppliersContract` consulta `suppliers-prod` (GSI1-city-date) para cross-reference do valor original — source canônica que resolve 89% dos FPs identificados.
 
 ---
 
