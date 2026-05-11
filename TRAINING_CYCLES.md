@@ -13,7 +13,7 @@ A meta de qualidade do treinamento é **≥ 85% de precisão por Fiscal sobre o 
 | 1 | 2026-05-10 | v1.5.0 | 101 reais | 0 | 1 de 7 (mas era viés amostral) |
 | 2 | 2026-05-10 | v1.5.0 | 1.016 reais | 55 | **0 de 7** (com n suficiente) |
 | 3 | 2026-05-10 | v1.5.0 | **1.695** reais (universo esgotado) | 55 | **0 de 7** (7 PRs patch abertos: #16-22) |
-| 4 | (pós-merge) | v1.6.0 | 1.695 reais | 55 | meta: 7 de 7 |
+| 4 | 2026-05-11 | **v1.6.0** | 1.695 reais | 55 | em observação (7 PRs MERGED em prod, aguarda 30d) |
 
 ---
 
@@ -236,6 +236,64 @@ A janela de cota Anthropic esgotou antes de todos os 7 sub-agents finalizarem. O
 1. **Completar rotulagem dos 181 pendentes** numa próxima janela de cota (sub-agents Opus continuam pré-configurados em `.tmp-pending-*.json`).
 2. **Decidir prioridade de patch P0:** Diego escolhe entre Convênios (whitelist siglas federais) ou Diárias (word boundary + co-ocorrência) — ambos têm 0% e estão completamente diagnosticados.
 3. **Re-rodar engine v1.5.0 contra os 1.514 rotulados atuais** para confirmar baseline antes do patch (regression test).
+
+---
+
+## Ciclo 4 — Engine v1.6.0 em prod (observação)
+
+**Data início:** 2026-05-11
+**Engine version:** v1.6.0 (com 7 patches mergeados em main de `fiscal-digital`)
+**Amostras de referência:** 1.695 rotuladas no Ciclo 3 (universo amostral esgotado em prod)
+**Status:** em observação por 30 dias
+
+### O que mudou (v1.5.0 → v1.6.0)
+
+7 PRs P0/P1/P2 mergeados sequencialmente em 2026-05-11 (após validação local com octopus merge + suite 226/233 passing + eval:synthetic com FPs caindo 21→7 = −66%):
+
+| PR | Fiscal | Tier | Pre-patch | Filtros aplicados |
+|---|---|---|---:|---|
+| [#16](https://github.com/fiscal-digital/fiscal-digital/pull/16) | Locação | P0 | 16,0% | 12 stopwords (designação fiscal, Termo Aditivo, RESCISÃO, AVISO, Decreto, ANEXO, SÚMULA, Lei 13.303, Termo Fomento, rol documental, cláusulas, Pregão) |
+| [#17](https://github.com/fiscal-digital/fiscal-digital/pull/17) | Diárias | P0 | 0,0% | Trigger restrito + 19 stopwords (ARP/Pregão/hotel, locação veículo, dotação 3.3.90.14, polissemia) + verbo autorização |
+| [#18](https://github.com/fiscal-digital/fiscal-digital/pull/18) | Convênios | P0 | 0,0% | 4 filtros (Contrato Repasse federal MTUR/MDR/MAPA, contraparte não-OSC, decreto orçamentário, polaridade negativa) |
+| [#19](https://github.com/fiscal-digital/fiscal-digital/pull/19) | Publicidade | P0 | 8,7% | 18 stopwords (cabeçalho DO, designação fiscal, publicação legal, concessão outdoor, atribuição funcional, polissemia Fiscal) |
+| [#20](https://github.com/fiscal-digital/fiscal-digital/pull/20) | Pessoal | P2 | 31,6% | 14 stopwords (comunicado convocação, vaga substituição, texto normativo, ratificação retroativa, Lei Complementar, "tornar sem efeito", FG/GIP, concurso público) + exceção transição mandato |
+| [#21](https://github.com/fiscal-digital/fiscal-digital/pull/21) | Licitações | P2 | 37,3% | 3 filtros vazamento escopo + 5 hipóteses sem teto (Art. 75 III/IV/VIII/IX/XV) |
+| [#22](https://github.com/fiscal-digital/fiscal-digital/pull/22) | Contratos | P1 | 10,0% | 4 defensivos (floor R$ 5k, % declarado, instrumento fora escopo, reajuste legal Art. 124); cross-ref `suppliers-prod` formal como follow-up |
+
+Tests engine: **226/233 passing** (+25 vs baseline 201/208, zero regressões).
+Eval sintético pós-patch: **FPs caíram 21→7 (−66%)** com 0 TPs perdidos.
+
+### Plano de observação (30 dias — até 2026-06-10)
+
+1. **Coleta diária via fluxo normal** (collector → analyzer → publisher) com engine v1.6.0 em todas as 50 cidades cobertas. Nenhum smoke test sintético.
+2. **Monitorar findings publicados em [fiscaldigital.org/alertas](https://fiscaldigital.org/alertas)** — meta: ≥ 5 TPs reais e ≤ 1 FP por Fiscal antes de declarar pronto.
+3. **Threshold de reativação SSM** (decisão operacional do Diego, separada do treshold de avaliação 85%): para cada Fiscal hoje publicando, manter; para Fiscais que não publicam (Locação/Diárias/Convênios/Publicidade ainda em P0), aguardar primeiro TP real validado por humano + 0 FPs em 7 dias antes de reativar SSM.
+4. **Issue de feedback público** em https://github.com/fiscal-digital/fiscal-digital-evaluations/issues — convidar juristas, jornalistas e cidadãos a reportar FPs ou FNs durante a janela de 30 dias.
+
+### Métricas de sucesso esperadas (Ciclo 5 — 2026-06-10)
+
+- ≥ 5 dos 7 Fiscais com precisão ≥ 85% após patch (vs 0 dos 7 em C3).
+- Contratos abaixo de 85% se cross-ref suppliers-prod ainda não foi implementado (depende de skill follow-up — TODO).
+- Diárias e Convênios em observação prolongada se ainda não houver TPs reais coletados (universo de 37 e 75 amostras respectivamente é pequeno; novos casos chegam lentamente).
+
+### Como reproduzir o Ciclo 4
+
+```bash
+# 1. Pull do engine pós-patch
+cd ../fiscal-digital && git checkout main && git pull
+
+# 2. Build engine v1.6.0
+npm run build -w packages/engine
+
+# 3. Rodar eval contra golden set (mock LLM — comparação descritiva)
+cd ../fiscal-digital-evaluations && npm run eval
+
+# 4. Rodar eval sintético (regression real)
+npm run eval:synthetic
+
+# 5. Observar findings reais publicados em prod
+curl https://api.fiscaldigital.org/alerts | jq '.[] | {fiscalId, riskScore, narrative}'
+```
 
 ---
 
