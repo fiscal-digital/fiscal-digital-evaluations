@@ -13,7 +13,8 @@ A meta de qualidade do treinamento é **≥ 85% de precisão por Fiscal sobre o 
 | 1 | 2026-05-10 | v1.5.0 | 101 reais | 0 | 1 de 7 (mas era viés amostral) |
 | 2 | 2026-05-10 | v1.5.0 | 1.016 reais | 55 | **0 de 7** (com n suficiente) |
 | 3 | 2026-05-10 | v1.5.0 | **1.695** reais (universo esgotado) | 55 | **0 de 7** (7 PRs patch abertos: #16-22) |
-| 4 | 2026-05-11 | **v1.6.0** | 1.695 reais | 55 | em observação (7 PRs MERGED em prod, aguarda 30d) |
+| 4 | 2026-05-11 | v1.6.0 | 1.695 reais | 55 | em observação (7 PRs em prod) |
+| 4.1 | 2026-05-13 | **v1.7.0** | 1.695 reais | 55 | + skill `querySuppliersContract` em prod (PR #24) — cross-ref suppliers-prod ativo para Contratos |
 
 ---
 

@@ -1,10 +1,10 @@
 # ADR-001 — FiscalContratos calcula % de aditivo sem valor original do contrato
 
-**Status:** Aplicado completo (2026-05-11 — PR #22 mergeado + PR follow-up com skill `querySuppliersContract`)
+**Status:** Aplicado completo + em prod (engine v1.7.0 desde 2026-05-13 01:10 UTC)
 **Data:** 2026-05-10
 **Precisão pré-patch:** 33,3% Ciclo 1 (n=20) → 11,3% Ciclo 2 (n=180) → 10,0% Ciclo 3 (n=204, universo esgotado)
 **Precisão pós-patch:** a medir contra os 204 rotulados após observação 30d (Ciclo 5)
-**Severidade:** P1 — patch original (#22) aplicou 4 filtros defensivos. **Follow-up 2026-05-11**: skill `querySuppliersContract` consulta `suppliers-prod` (GSI1-city-date) para cross-reference do valor original — source canônica que resolve 89% dos FPs identificados.
+**Severidade:** P1 — patch original ([#22](https://github.com/fiscal-digital/fiscal-digital/pull/22), mergeado 2026-05-11) aplicou 4 filtros defensivos. Follow-up ([#24](https://github.com/fiscal-digital/fiscal-digital/pull/24), mergeado 2026-05-13): skill `querySuppliersContract` consulta `suppliers-prod` (DDB Query por `pk=SUPPLIER#{cnpj}`) + injeção via `FiscalContext.querySuppliersContract` no boot do Lambda analyzer. **Source canônica que resolve 89% dos FPs identificados está agora ativa em prod.**
 
 ---
 
