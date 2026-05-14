@@ -14,7 +14,7 @@ A meta de qualidade do treinamento é **≥ 85% de precisão por Fiscal sobre o 
 | 2 | 2026-05-10 | v1.5.0 | 1.016 reais | 55 | **0 de 7** (com n suficiente) |
 | 3 | 2026-05-10 | v1.5.0 | **1.695** reais (universo esgotado) | 55 | **0 de 7** (7 PRs patch abertos: #16-22) |
 | 4 | 2026-05-11 | v1.6.0 | 1.695 reais | 55 | em observação (7 PRs em prod) |
-| 4.1 | 2026-05-13 | **v1.7.0** | 1.695 reais | 55 | + skill `querySuppliersContract` em prod (PR #24) — cross-ref suppliers-prod ativo para Contratos |
+| 4.1 | 2026-05-13 | **v1.7.0** | 1.695 reais | 55 | skill `querySuppliersContract` (PR #24) + reanálise completa do histórico (38.772 gazettes em 14h, −47% findings em DDB) |
 
 ---
 
@@ -295,6 +295,85 @@ npm run eval:synthetic
 # 5. Observar findings reais publicados em prod
 curl https://api.fiscaldigital.org/alerts | jq '.[] | {fiscalId, riskScore, narrative}'
 ```
+
+---
+
+## Ciclo 4.1 — Reanálise completa do histórico (2026-05-13)
+
+**Data:** 2026-05-13 a 2026-05-14 (14h contínuas)
+**Engine:** v1.7.0 (com skill `querySuppliersContract` ativa)
+**Operação:** reanálise de 38.772 gazettes municipais com a engine pós-patch
+**Status:** concluído sem erros
+
+### Por que rodamos uma reanálise
+
+Os 7 patches do Ciclo 4 foram aplicados em prod em 2026-05-11. A partir desse momento, novos diários oficiais coletados passaram a ser analisados pela engine v1.6.0 corrigida. Mas o histórico em produção (1.696 alertas gerados ao longo de anos pela engine v1.5.0 "ingênua") ficou intocado.
+
+Decisão: re-rodar a engine corrigida sobre todo o histórico. Razões:
+
+1. **Confiança pública.** Quem visita o site hoje vê o melhor estado possível da análise, não uma mistura de alertas antigos com regras antigas e alertas novos com regras novas.
+2. **Validação em escala real.** O Ciclo 3 validou os patches contra 1.695 amostras rotuladas e 55 sintéticos. A reanálise testa contra todo o universo de 46.660 gazettes históricas. É a primeira medida do impacto dos patches em dados reais não filtrados.
+3. **Custo único.** Patches futuros precisam validar contra o histórico para descobrir regressões. A reanálise construiu um cache (35.249 gazettes ganharam excerpts em DynamoDB) que torna futuras reanálises rápidas e baratas.
+
+### Mudança técnica (v1.6.0 → v1.7.0)
+
+Antes da reanálise, foi entregue uma evolução adicional do Fiscal de Contratos:
+
+- **Skill `querySuppliersContract` ativa em prod** (PR [#24](https://github.com/fiscal-digital/fiscal-digital/pull/24) no engine). O Fiscal de Contratos passa a cruzar o valor declarado no aditivo contra o histórico do fornecedor em `suppliers-prod`. Quando o valor original implícito na narrativa diverge do valor declarado real, o Fiscal recalcula corretamente. Isso fecha o root cause documentado no [ADR-001 do Fiscal de Contratos](analyses/fiscal-contratos/ADR-001-missing-original-value.md).
+
+### Resultado em produção
+
+Compara o estado do banco antes da reanálise (1.696 findings v1.6.0) com o estado depois (892 findings v1.7.0). A queda foi maior em Fiscais que receberam patches P0 (mais agressivos):
+
+| Fiscal | Antes (v1.6.0) | Depois (v1.7.0) | Δ | Patch principal |
+|---|---:|---:|---:|---|
+| Pessoal | 708 | 117 | **−83%** | P2 stopwords + exceção transição |
+| Diárias | 37 | 3 | **−92%** | P0 trigger restrito + 19 stopwords |
+| Contratos | 204 | 101 | **−50%** | P1 filtros defensivos + cross-ref `suppliers-prod` |
+| Publicidade | 23 | 13 | −43% | P0 18 stopwords |
+| Licitações | 171 | 148 | −13% | P2 filtros vazamento |
+| Convênios | 75 | 66 | −12% | P0 4 filtros |
+| Locação | 476 | 442 | −7% | P0 12 stopwords |
+| **Total** | **1.695** | **891** | **−47%** | (7 PRs do Ciclo 4) |
+
+Critério de publicação no site (`riskScore ≥ 60` E `confidence ≥ 0.70`):
+
+| | Antes (v1.6.0) | Depois (v1.7.0) |
+|---|---:|---:|
+| Findings publicáveis | 617 | **179** |
+| Cidades com alertas | 41 | 26 |
+
+### Como interpretar a queda
+
+"Menos alertas" não significa "menos fiscalização". Os alertas removidos eram, em sua maioria, falsos positivos diagnosticados nos Ciclos 1-3 e endereçados nos patches do Ciclo 4. Exemplos típicos:
+
+- **Pessoal.** "Comunicado de convocação para concurso público" disparava o Fiscal de Pessoal como pico de nomeações, mesmo sem nomeação real. O patch P2 adicionou stopwords como `concurso público` e `comunicado convocação`.
+- **Diárias.** Excerpts contendo "ARP nº 3.3.90.14 — pregão para hotel" disparavam o Fiscal de Diárias como se fossem pagamento de diária a servidor. O patch P0 restringiu o trigger e adicionou stopwords (`ARP`, `Pregão`, `hotel`, `dotação 3.3.90.14`).
+- **Contratos.** Aditivos com valor original na narrativa divergente do contrato real (ex: aditivo cita "valor original R$ 50k" quando o contrato real era R$ 200k) disparavam como aditivo abusivo. A skill `querySuppliersContract` resolve cruzando com `suppliers-prod`.
+
+A população real de irregularidades nas 50 cidades cobertas é menor do que a engine v1.5.0 alegava. A engine v1.7.0 está dentro de margem mais realista, ainda conservadora.
+
+### Custos e tempo
+
+- **Tempo de execução:** 14h contínuas. O gargalo é o rate-limit do [Querido Diário](https://queridodiario.ok.org.br) (60 requisições por minuto por IP).
+- **Custo direto:** ~R$ 30 (Lambda execution + DynamoDB writes). Bedrock zero porque o cache de extração de Camada 2 (entidades por gazette) cobriu todas as gazettes, evitando re-chamada do Nova Lite.
+- **Cache construído:** 35.249 gazettes ganharam excerpts persistidos em DynamoDB. Próxima reanálise leva ~30 minutos, não 14h. Esse é o princípio da otimização EVO-001 (lazy-fill write-through).
+
+### Limpeza pós-reanálise
+
+A engine v1.7.0 gravou os 891 findings novos com `pk` determinístico baseado em hash da gazette + Fiscal + tipo. Findings antigos cujo `pk` coincidiu foram sobrescritos naturalmente. Findings antigos cujos Fiscais reanalisados deixaram de disparar viraram "órfãos" no banco.
+
+1.694 órfãos foram identificados (`createdAt < 2026-05-13T01:20:26Z` AND `fiscalId IN [9 Fiscais reanalisados]`) e deletados via `BatchWriteItem`. Um finding do Fiscal Geral (orquestrador cross-gazette, não parte da reanálise) foi preservado.
+
+### Conexão com a janela de observação 30d (Ciclo 4)
+
+A reanálise é um snapshot tomado no meio da janela de observação. A janela 30 dias continua até 2026-06-10: coletamos diariamente, observamos quais Fiscais disparam em diários novos, comparamos contra o que prevíamos.
+
+Métricas alvo do Ciclo 5 (após 2026-06-10) continuam: ≥ 5 dos 7 Fiscais com precisão ≥ 85% medida sobre TPs reais coletados na janela, validados por revisão humana.
+
+### Relatório operacional
+
+Detalhes técnicos da operação (logs, comandos, batch size, cleanup, estado da fila SQS) estão em [`docs/operations/reanalyze-report-2026-05-13.md`](https://github.com/fiscal-digital/fiscal-digital/blob/main/docs/operations/reanalyze-report-2026-05-13.md) no repositório engine.
 
 ---
 
