@@ -14,7 +14,7 @@ A meta de qualidade do treinamento é **≥ 85% de precisão por Fiscal sobre o 
 | 2 | 2026-05-10 | v1.5.0 | 1.016 reais | 55 | **0 de 7** (com n suficiente) |
 | 3 | 2026-05-10 | v1.5.0 | **1.695** reais (universo esgotado) | 55 | **0 de 7** (7 PRs patch abertos: #16-22) |
 | 4 | 2026-05-11 | v1.6.0 | 1.695 reais | 55 | em observação (7 PRs em prod) |
-| 4.1 | 2026-05-13 | **v1.7.0** | 1.695 reais | 55 | + skill `querySuppliersContract` em prod (PR #24) — cross-ref suppliers-prod ativo para Contratos |
+| 4.1 | 2026-05-13 | **v1.7.0** | 1.695 reais | 55 | reanálise completa do histórico (46.660 gazettes); skill `querySuppliersContract` ativa; site reduz de 617 → 179 publicáveis (-71%) |
 
 ---
 
@@ -295,6 +295,97 @@ npm run eval:synthetic
 # 5. Observar findings reais publicados em prod
 curl https://api.fiscaldigital.org/alerts | jq '.[] | {fiscalId, riskScore, narrative}'
 ```
+
+---
+
+## Ciclo 4.1 — Reanálise completa com Engine v1.7.0 (2026-05-13)
+
+**Data:** 2026-05-13 a 2026-05-14
+**Engine:** v1.7.0 (skill `querySuppliersContract` ativa, cross-ref `suppliers-prod`)
+**Operação:** reanálise completa de todas as gazettes em produção
+**Universo:** 46.660 gazettes municipais (cobertura ~2021 → 2026, 44 cidades indexadas pelo Querido Diário entre as 50 ativas)
+
+### Por que rodamos uma reanálise
+
+Os 7 patches do Ciclo 4 (PRs [#16](https://github.com/fiscal-digital/fiscal-digital/pull/16) a [#22](https://github.com/fiscal-digital/fiscal-digital/pull/22) do `fiscal-digital`) entraram em produção em 2026-05-11. A partir daquele dia, novos diários oficiais passaram a ser analisados pela engine v1.6.0/v1.7.0 calibrada.
+
+Mas o site ainda exibia alertas antigos, gerados pela engine v1.5.0 antes dos patches. Esses alertas continham falsos positivos que os Ciclos 1, 2 e 3 já haviam identificado e documentado em ADRs públicos neste mesmo repositório.
+
+O princípio de **verificabilidade pública** exige consistência: o que o cidadão vê no site deve refletir o melhor estado atual da análise, não o estado de uma engine descalibrada que já foi corrigida. A reanálise é a operação que aplica os patches retroativamente ao histórico, e neste ciclo foi viabilizada pela primeira vez em escala (46k gazettes em 14h) graças ao cache de extração introduzido em EVO-001.
+
+### Mudança técnica do Ciclo 4.1 (v1.6.0 → v1.7.0)
+
+| Mudança | Fiscal afetado | ADR | Impacto |
+|---|---|---|---|
+| Skill `querySuppliersContract` (cross-ref `suppliers-prod`) | Contratos | [ADR-001](analyses/fiscal-contratos/ADR-001-missing-original-value.md) | Cruzar valor declarado em narrativas de aditivo contra o valor real do contrato no banco de fornecedores. Elimina a classe de FP "valor original ausente na evidência mas presente no contrato registrado". |
+
+A skill foi mergeada em [`fiscal-digital` PR #24](https://github.com/fiscal-digital/fiscal-digital/pull/24) e deployada em prod em 2026-05-13.
+
+### Como a reanálise foi executada
+
+1. **Script:** [`packages/analyzer/scripts/reanalyze.mjs`](https://github.com/fiscal-digital/fiscal-digital/blob/main/packages/analyzer/scripts/reanalyze.mjs) faz scan paginado de `gazettes-prod` (DDB), enfileiramento via SQS, processamento pela Lambda `analyzer` com os 9 Fiscais ativos.
+2. **Estratégia de overwrite:** sobrescrita determinística por chave primária. Findings novos com mesmo `pk` substituem os antigos automaticamente. Findings antigos sem correspondência (Fiscais que não disparam mais sob v1.7.0) ficam como órfãos e são deletados após a operação.
+3. **Cache:** a engine reaproveita extrações Bedrock anteriores via cache em DDB (não paga Bedrock duas vezes). Custo total da operação ficou em **~R$ 30** (vs ~R$ 270 sem cache).
+4. **Tempo total:** 14h, zero erros, zero reinícios. Bottleneck é o rate-limit do Querido Diário (60 requisições/minuto por IP) usado para reidratar excerpts em gazettes que estavam em DDB mas ainda sem excerpts persistidos.
+
+### Resultado em produção
+
+Comparação do estado do banco `alerts-prod` antes do reanalyze (engine v1.6.0 + alertas legados v1.5.0) e depois (engine v1.7.0 unificado):
+
+| Métrica | Antes | Depois | Δ |
+|---|---:|---:|---:|
+| Total de findings no banco | 1.696 | 892 | **-47%** |
+| Findings publicáveis no site (riskScore ≥ 60 AND confidence ≥ 0.70) | 617 | 179 | **-71%** |
+| Cidades com pelo menos um alerta | 41 | 26 | -37% |
+| Valor total em contratos analisados | — | R$ 499 milhões | — |
+
+Detalhe por Fiscal (totais no banco; valor entre parênteses é o subset publicável no site):
+
+| Fiscal | Antes (total) | Depois (total) | Δ total | Publicáveis | Patch aplicado |
+|---|---:|---:|---:|---:|---|
+| Pessoal | 708 | 117 | **-83%** | 8 | P2 ([PR #20](https://github.com/fiscal-digital/fiscal-digital/pull/20)) |
+| Locação | 476 | 442 | -7% | 2 | P0 ([PR #16](https://github.com/fiscal-digital/fiscal-digital/pull/16)) |
+| Contratos | 204 | 101 | -50% | 101 | P1 ([PR #22](https://github.com/fiscal-digital/fiscal-digital/pull/22)) + skill ([PR #24](https://github.com/fiscal-digital/fiscal-digital/pull/24)) |
+| Licitações | 171 | 148 | -13% | 49 | P2 ([PR #21](https://github.com/fiscal-digital/fiscal-digital/pull/21)) |
+| Convênios | 75 | 66 | -12% | 3 | P0 ([PR #18](https://github.com/fiscal-digital/fiscal-digital/pull/18)) |
+| Diárias | 37 | 3 | **-92%** | 2 | P0 ([PR #17](https://github.com/fiscal-digital/fiscal-digital/pull/17)) |
+| Publicidade | 23 | 13 | -43% | 13 | P0 ([PR #19](https://github.com/fiscal-digital/fiscal-digital/pull/19)) |
+| Geral | 1 | 1 | 0% | 1 | — (cross-gazette, não é parte da reanálise) |
+
+### Como interpretar a queda
+
+Reduzir o número total de alertas publicados é o **objetivo declarado** do Ciclo 4. Os Ciclos 1, 2 e 3 mostraram, em golden set de 1.695 amostras reais rotuladas, que a engine v1.5.0 tinha precisão muito abaixo da meta de 85% em vários Fiscais (Diárias 0%, Convênios 0%, Publicidade 8,7%, Locação 16%, Contratos 11,3%, Pessoal 31,6%, Licitações 37,3%).
+
+Ou seja: a maioria dos 617 alertas publicáveis anteriores não resistiria a uma auditoria rigorosa. Os patches removem exatamente as classes documentadas de falso positivo. Cada PR aplicado tem ADR público com root cause, regression test e justificativa legal.
+
+**Menos alertas com qualidade superior é a meta.** Um sistema de fiscalização perde credibilidade ao publicar achados com erros já conhecidos.
+
+### Cleanup pós-reanálise
+
+1.694 findings órfãos (criados antes do reanalyze e cujos Fiscais não disparam mais sob v1.7.0) foram deletados via `BatchWriteItem` (25 itens por lote, 0 unprocessed). Um finding antigo do FiscalGeral foi preservado porque o orquestrador roda em modo cross-gazette e não é parte do reanalyze.
+
+### Cache build-out
+
+A reanálise pagou um custo único de inicialização do cache de excerpts em DDB. Antes da operação, apenas 3.523 gazettes tinham excerpts persistidos (7,6% do universo). Depois, **35.249 gazettes (76% do universo) estão cacheadas**.
+
+**Próxima reanálise (após patches futuros) leva ~30 minutos, não 14 horas.** O ciclo de evolução acelera substancialmente a partir daqui.
+
+### Relação com o Ciclo 4 (observação 30d)
+
+A reanálise não encerra o Ciclo 4. A janela de observação até **2026-06-10** segue válida. O objetivo daquela janela é validar que os patches funcionam contra **novos** diários publicados em prod a cada dia, com avaliação humana caso a caso de TPs e FPs reais.
+
+O Ciclo 4.1 é complementar: aplica os mesmos patches **retroativamente** ao histórico, garantindo consistência do que está exposto publicamente enquanto a observação corre.
+
+### Próximos passos
+
+1. **Continuar janela de observação** até 2026-06-10 com meta de ≥ 5 TPs reais e ≤ 1 FP por Fiscal.
+2. **Auditoria pública dos 179 publicáveis** — convidamos jornalistas, juristas e cidadãos a abrir [Issues neste repo](https://github.com/fiscal-digital/fiscal-digital-evaluations/issues) identificando FPs nos alertas visíveis em [fiscaldigital.org/alertas](https://fiscaldigital.org/alertas).
+3. **Ciclo 5 (planejado para 2026-06-10):** novo dataset rotulado sobre os 179 publicáveis pós-reanálise, comparação direta vs golden set do Ciclo 3 (mesmas classes de amostra, engine diferente).
+4. **Reanálise periódica:** a cada novo patch significativo, considerar reanalisar o dataset histórico. Antes do Ciclo 4.1 isso era inviável (custo ~R$ 270 + 14h); agora é trivial (~R$ 5 + 30min).
+
+### Relatório operacional
+
+Detalhes técnicos completos (logs por etapa, cache hit/miss, métricas internas, scripts auxiliares) em [`docs/operations/reanalyze-report-2026-05-13.md`](https://github.com/fiscal-digital/fiscal-digital/blob/main/docs/operations/reanalyze-report-2026-05-13.md) no repo `fiscal-digital`.
 
 ---
 
