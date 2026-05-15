@@ -4,6 +4,9 @@
 
 [fiscaldigital.org](https://fiscaldigital.org) · [fiscal-digital](https://github.com/fiscal-digital/fiscal-digital) (engine) · [@FiscalDigitalBR](https://x.com/FiscalDigitalBR)
 
+[![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
+[![Data: CC-BY 4.0](https://img.shields.io/badge/data-CC--BY%204.0-orange.svg)](LICENSE-DATA)
+
 ---
 
 ## Por que este repositório existe
@@ -100,6 +103,43 @@ Contribuições de juristas, jornalistas, pesquisadores e cidadãos interessados
 - **Dataset e análises (`golden-set/`, `analyses/`, `reports/`):** [CC-BY 4.0](LICENSE-DATA)
 
 Derivações livres com crédito.
+
+---
+
+## 🇺🇸 English
+
+**How Fiscal Digital evaluates itself.** Labeled golden set, per-Fiscal ADRs, precision baselines per release.
+
+### Why this repo exists
+
+The Fiscal Digital project's principle of public verifiability requires the system's evaluation methodology to also be auditable. This repo applies that radically: every alert sample classified TP/FP/FN/borderline, every false positive root-caused, every patch traceable to a regression test.
+
+### What's here
+
+- **Golden set:** real findings sampled from `alerts-prod`, classified manually with rationale
+- **Per-Fiscal ADRs:** analyses of recurring FP patterns for each of the 10 Fiscal Agents
+- **Per-release baselines:** numeric snapshots of precision at each engine version
+- **Synthetic regression:** 11 samples per Fiscal (3 textbook TP, 5 FP replica, 3 edge FP) for pre-PR validation
+
+### Training cycles
+
+The complete history is in [`TRAINING_CYCLES.md`](TRAINING_CYCLES.md). Ciclos 1-3 established baselines, Ciclo 4 applied 7 patches that reduced false positives by 66% on synthetic regression, Ciclo 4.1 reanalyzed the full historical dataset under engine v1.7.0 (1,696 to 892 findings, 617 to 179 publishable).
+
+### Who can contribute
+
+- **Jurists:** review `legalBasis` per Fiscal, flag questionable interpretations
+- **Journalists:** identify FP patterns in real coverage
+- **Researchers:** propose new evaluation dimensions or metrics
+- **Citizens:** label additional samples to strengthen the golden set
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+### Licenses
+
+- **Code** (`scripts/`): MIT
+- **Dataset and analyses** (`golden-set/`, `analyses/`, `reports/`): CC-BY 4.0
+
+Free use, with attribution.
 
 ---
 
