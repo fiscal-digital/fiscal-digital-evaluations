@@ -1,0 +1,192 @@
+[
+  {
+    "id": "SYN-FOR-V2-TP-001",
+    "fiscalId": "fiscal-fornecedores",
+    "featureVersion": "v2",
+    "category": "tp_concentracao_12m",
+    "type": "concentracao_fornecedor",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-03-15",
+      "excerpt": "CONTRATO n° 047/2026. Objeto: prestação de serviços de limpeza urbana. Valor: R$ 120.000,00. Contratada: ServiLimpa Caxias LTDA, CNPJ: 44.555.666/0001-77. Secretaria Municipal de Obras e Serviços Urbanos. Vigência: 12 meses."
+    },
+    "gsi2MockData": {
+      "secretariaId": "Secretaria Municipal de Obras e Serviços Urbanos",
+      "gazetteDate": "2026-03-15",
+      "contratos": [
+        { "cnpj14": "44555666000177", "mesCNPJ": "2025-04#44555666000177", "valueAmount": 80000, "contractedAt": "2025-04-10" },
+        { "cnpj14": "44555666000177", "mesCNPJ": "2025-07#44555666000177", "valueAmount": 90000, "contractedAt": "2025-07-20" },
+        { "cnpj14": "44555666000177", "mesCNPJ": "2025-10#44555666000177", "valueAmount": 85000, "contractedAt": "2025-10-05" },
+        { "cnpj14": "99888777000111", "mesCNPJ": "2025-05#99888777000111", "valueAmount": 30000, "contractedAt": "2025-05-12" },
+        { "cnpj14": "11222333000144", "mesCNPJ": "2025-08#11222333000144", "valueAmount": 25000, "contractedAt": "2025-08-18" }
+      ],
+      "totalSecretaria": 310000,
+      "cnpjAlvo": "44555666000177",
+      "totalCnpjAlvo": 255000,
+      "percentualCnpjAlvo": 0.823
+    },
+    "rationale": "CNPJ 44.555.666/0001-77 recebeu R$ 255.000 em 3 contratos na Secretaria Municipal de Obras nos ultimos 12 meses, representando 82,3% do volume da secretaria. Supera o limite de 40%. Dados historicos reais via GSI2_ConcentracaoSecretaria. Cenario valida o path principal do v2.",
+    "shouldTriggerAfterPatch": true,
+    "notes": "Porcentagem de 82.3% e alta o suficiente para score recalibrado resultar em riskScore >= 60 (publicavel)."
+  },
+  {
+    "id": "SYN-FOR-V2-TP-002",
+    "fiscalId": "fiscal-fornecedores",
+    "featureVersion": "v2",
+    "category": "tp_concentracao_12m_limiar",
+    "type": "concentracao_fornecedor",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4314902",
+      "cityName": "Porto Alegre",
+      "date": "2026-06-01",
+      "excerpt": "DISPENSA DE LICITACAO n° 033/2026. Objeto: servicos de consultoria em TI. Valor: R$ 45.000,00. Contratada: TechPOA Sistemas LTDA, CNPJ: 22.333.444/0001-55. Secretaria Municipal de Tecnologia e Inovacao."
+    },
+    "gsi2MockData": {
+      "secretariaId": "Secretaria Municipal de Tecnologia e Inovacao",
+      "gazetteDate": "2026-06-01",
+      "contratos": [
+        { "cnpj14": "22333444000155", "mesCNPJ": "2025-07#22333444000155", "valueAmount": 40000, "contractedAt": "2025-07-10" },
+        { "cnpj14": "22333444000155", "mesCNPJ": "2025-11#22333444000155", "valueAmount": 42000, "contractedAt": "2025-11-15" },
+        { "cnpj14": "55666777000188", "mesCNPJ": "2025-09#55666777000188", "valueAmount": 35000, "contractedAt": "2025-09-20" },
+        { "cnpj14": "88999000000199", "mesCNPJ": "2025-12#88999000000199", "valueAmount": 38000, "contractedAt": "2025-12-10" },
+        { "cnpj14": "11100200000100", "mesCNPJ": "2026-02#11100200000100", "valueAmount": 45000, "contractedAt": "2026-02-05" }
+      ],
+      "totalSecretaria": 200000,
+      "cnpjAlvo": "22333444000155",
+      "totalCnpjAlvo": 82000,
+      "percentualCnpjAlvo": 0.41
+    },
+    "rationale": "CNPJ 22.333.444/0001-55 com 41% do volume (R$ 82.000 de R$ 200.000) na Secretaria de TI em 12 meses. Limiar de 40% ultrapassado por margem estreita (1 ponto percentual). Testa o comportamento exato no limite.",
+    "shouldTriggerAfterPatch": true,
+    "notes": "Validar que percentual de 41% DISPARA o alerta (>= 0.40 e o limite e inclusivo)."
+  },
+  {
+    "id": "SYN-FOR-V2-TN-001",
+    "fiscalId": "fiscal-fornecedores",
+    "featureVersion": "v2",
+    "category": "tn_concentracao_abaixo_limite",
+    "type": "concentracao_fornecedor",
+    "expectedOutcome": "TN",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-03-15",
+      "excerpt": "CONTRATO n° 048/2026. Objeto: fornecimento de materiais de escritorio. Valor: R$ 25.000,00. Contratada: Papelaria Gauchao LTDA, CNPJ: 77.888.999/0001-00. Secretaria Municipal de Administracao."
+    },
+    "gsi2MockData": {
+      "secretariaId": "Secretaria Municipal de Administracao",
+      "gazetteDate": "2026-03-15",
+      "contratos": [
+        { "cnpj14": "77888999000100", "mesCNPJ": "2025-06#77888999000100", "valueAmount": 25000, "contractedAt": "2025-06-01" },
+        { "cnpj14": "11122233000144", "mesCNPJ": "2025-07#11122233000144", "valueAmount": 30000, "contractedAt": "2025-07-10" },
+        { "cnpj14": "22233344000155", "mesCNPJ": "2025-08#22233344000155", "valueAmount": 28000, "contractedAt": "2025-08-20" },
+        { "cnpj14": "33344455000166", "mesCNPJ": "2025-09#33344455000166", "valueAmount": 22000, "contractedAt": "2025-09-15" },
+        { "cnpj14": "44455566000177", "mesCNPJ": "2025-11#44455566000177", "valueAmount": 20000, "contractedAt": "2025-11-08" }
+      ],
+      "totalSecretaria": 125000,
+      "cnpjAlvo": "77888999000100",
+      "totalCnpjAlvo": 25000,
+      "percentualCnpjAlvo": 0.20
+    },
+    "rationale": "CNPJ 77.888.999/0001-00 com apenas 20% do volume (R$ 25.000 de R$ 125.000). Abaixo do limite de 40%. Mercado diversificado com 5 fornecedores distintos na secretaria. NÃO deve disparar concentracao_fornecedor.",
+    "shouldTriggerAfterPatch": false,
+    "notes": "Validar que 20% NÃO dispara o alerta v2."
+  },
+  {
+    "id": "SYN-FOR-V2-TN-002",
+    "fiscalId": "fiscal-fornecedores",
+    "featureVersion": "v2",
+    "category": "tn_gsi2_vazio",
+    "type": "concentracao_fornecedor",
+    "expectedOutcome": "TN",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-03-15",
+      "excerpt": "CONTRATO n° 049/2026. Objeto: manutencao de veiculos. Valor: R$ 18.000,00. Contratada: AutoService Ltda, CNPJ: 88.999.000/0001-11. Secretaria Municipal de Saude."
+    },
+    "gsi2MockData": {
+      "secretariaId": "Secretaria Municipal de Saude",
+      "gazetteDate": "2026-03-15",
+      "contratos": [],
+      "totalSecretaria": 0,
+      "cnpjAlvo": "88999000000111",
+      "totalCnpjAlvo": 0,
+      "percentualCnpjAlvo": 0
+    },
+    "rationale": "GSI2 retorna lista vazia (fornecedor novo na secretaria, sem historico de 12 meses). Sem dados historicos, v2 nao tem base para calcular concentracao. NÃO deve disparar concentracao_fornecedor.",
+    "shouldTriggerAfterPatch": false,
+    "notes": "Cenario de fallback: GSI2 vazio → sem finding de concentracao."
+  },
+  {
+    "id": "SYN-FOR-V2-TP-003",
+    "fiscalId": "fiscal-fornecedores",
+    "featureVersion": "v2",
+    "category": "tp_dedup_secretaria",
+    "type": "concentracao_fornecedor",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-03-15",
+      "excerpt": "CONTRATOS 050 e 051/2026 — Secretaria Municipal de Educacao. CNPJ: 55.666.777/0001-88 (ambos). Valores: R$ 30.000 e R$ 20.000."
+    },
+    "gsi2MockData": {
+      "secretariaId": "Secretaria Municipal de Educacao",
+      "gazetteDate": "2026-03-15",
+      "contratos": [
+        { "cnpj14": "55666777000188", "mesCNPJ": "2025-05#55666777000188", "valueAmount": 50000, "contractedAt": "2025-05-01" },
+        { "cnpj14": "55666777000188", "mesCNPJ": "2025-09#55666777000188", "valueAmount": 60000, "contractedAt": "2025-09-01" },
+        { "cnpj14": "11000000000111", "mesCNPJ": "2025-06#11000000000111", "valueAmount": 20000, "contractedAt": "2025-06-01" }
+      ],
+      "totalSecretaria": 130000,
+      "cnpjAlvo": "55666777000188",
+      "totalCnpjAlvo": 110000,
+      "percentualCnpjAlvo": 0.846
+    },
+    "rationale": "Gazette com 2 excerpts da mesma secretaria. GSI2 deve ser consultado apenas 1x (deduplicacao). CNPJ 55.666.777/0001-88 com 84.6% do volume. Dispara 1 finding de concentracao_fornecedor (nao 2).",
+    "shouldTriggerAfterPatch": true,
+    "notes": "Validar deduplicacao: queryConcentracaoGSI2 chamado apenas 1x para a mesma secretariaId na mesma gazette."
+  },
+  {
+    "id": "SYN-FOR-V2-TP-004",
+    "fiscalId": "fiscal-fornecedores",
+    "featureVersion": "v2",
+    "category": "tp_cnpj_jovem_compatibilidade",
+    "type": "cnpj_jovem",
+    "expectedOutcome": "TP",
+    "source": "synthetic",
+    "syntheticGazette": {
+      "cityId": "4305108",
+      "cityName": "Caxias do Sul",
+      "date": "2026-03-15",
+      "excerpt": "CONTRATO n° 052/2026. Objeto: servicos de consultoria em seguranca. Valor: R$ 48.000,00. Contratada: Nova Sec LTDA, CNPJ: 55.111.222/0001-33. Secretaria Municipal de Administracao. Vigência: 12 meses.",
+      "rfbData": {
+        "cnpj": "55.111.222/0001-33",
+        "razaoSocial": "Nova Sec LTDA",
+        "situacaoCadastral": "ativa",
+        "dataAbertura": "2025-12-01"
+      }
+    },
+    "gsi2MockData": {
+      "secretariaId": "Secretaria Municipal de Administracao",
+      "gazetteDate": "2026-03-15",
+      "contratos": [],
+      "totalSecretaria": 0,
+      "cnpjAlvo": "55111222000133",
+      "totalCnpjAlvo": 0,
+      "percentualCnpjAlvo": 0
+    },
+    "rationale": "CNPJ aberto em 2025-12-01 (3 meses antes da gazette de 2026-03-15). Deve disparar cnpj_jovem independentemente do v2. Confirma compatibilidade do path cnpj_jovem entre v1 e v2.",
+    "shouldTriggerAfterPatch": true,
+    "notes": "Este caso testa compatibilidade de cnpj_jovem no v2 — o check RFB e identico ao v1."
+  }
+]
