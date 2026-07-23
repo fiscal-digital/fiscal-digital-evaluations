@@ -2940,7 +2940,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_calamidade",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "3509502",
@@ -2948,9 +2948,10 @@
       "date": "2024-07-15",
       "excerpt": "EXTRATO DO CONTRATO EMERGENCIAL Nº 900/2024\nPARTES: Município de Campinas e RÁDIO ALERTA COMUNICAÇÃO LTDA - CNPJ 50.600.700/0001-30\nOBJETO: Contratação emergencial de serviços de mídia para veiculação de campanha publicitária de utilidade pública relativa à situação de calamidade pública decretada pelo Decreto Municipal nº 22.487/2024 (enchentes) — inserções em rádio e TV com orientações sobre pontos de abrigo, doação de mantimentos, procedimentos de evacuação e prevenção sanitária.\nVALOR: R$ 280.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 75, VIII (emergência) c/c Lei 9.504/97 Art. 73 §3º (exceção para grave e urgente necessidade pública reconhecida pela Justiça Eleitoral em caso de calamidade).\nDATA: 15/07/2024."
     },
-    "rationale": "Data 2024-07-15 dentro da janela eleitoral, mas há EXCEÇÃO LEGAL EXPRESSA do Art. 73 §3º da Lei 9.504/97: campanhas de utilidade pública em situação de calamidade reconhecida são permitidas. Decreto Municipal nº 22.487/2024 citado e fundamento legal explícito.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('calamidade pública' OU 'emergência sanitária' OU 'situação de emergência') E ('decreto.*calamidade' OU 'Art.\\s*73\\s*§\\s*3' OU 'utilidade pública'), suprimir."
+    "rationale": "Data 2024-07-15 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA calamidade/utilidade pública (Decreto Municipal nº 22.487/2024), mas a exceção do inciso VI 'b' só afasta a vedação quando a grave e urgente necessidade pública é reconhecida pela Justiça Eleitoral — o decreto municipal, por si só, não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A exceção do inciso VI 'b' (grave e urgente necessidade pública) só afasta a vedação se houver reconhecimento pela Justiça Eleitoral — a alegação de calamidade/utilidade pública no contrato não comprova esse reconhecimento e não autoriza supressão automática."
   },
   {
     "id": "SYN-PUB-FP-140",
@@ -2958,7 +2959,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_calamidade",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "4205407",
@@ -2966,9 +2967,10 @@
       "date": "2024-08-02",
       "excerpt": "EXTRATO DO CONTRATO EMERGENCIAL Nº 903/2024\nPARTES: Município de Florianópolis e RÁDIO ALERTA COMUNICAÇÃO LTDA - CNPJ 51.601.701/0001-31\nOBJETO: Contratação emergencial de serviços de mídia para veiculação de campanha publicitária de utilidade pública relativa à situação de calamidade pública decretada pelo Decreto Municipal nº 18.302/2024 (estiagem severa) — inserções em rádio e TV com orientações sobre pontos de abrigo, doação de mantimentos, procedimentos de evacuação e prevenção sanitária.\nVALOR: R$ 320.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 75, VIII (emergência) c/c Lei 9.504/97 Art. 73 §3º (exceção para grave e urgente necessidade pública reconhecida pela Justiça Eleitoral em caso de calamidade).\nDATA: 02/08/2024."
     },
-    "rationale": "Data 2024-08-02 dentro da janela eleitoral, mas há EXCEÇÃO LEGAL EXPRESSA do Art. 73 §3º da Lei 9.504/97: campanhas de utilidade pública em situação de calamidade reconhecida são permitidas. Decreto Municipal nº 18.302/2024 citado e fundamento legal explícito.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('calamidade pública' OU 'emergência sanitária' OU 'situação de emergência') E ('decreto.*calamidade' OU 'Art.\\s*73\\s*§\\s*3' OU 'utilidade pública'), suprimir."
+    "rationale": "Data 2024-08-02 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA calamidade/utilidade pública (Decreto Municipal nº 18.302/2024), mas a exceção do inciso VI 'b' só afasta a vedação quando a grave e urgente necessidade pública é reconhecida pela Justiça Eleitoral — o decreto municipal, por si só, não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A exceção do inciso VI 'b' (grave e urgente necessidade pública) só afasta a vedação se houver reconhecimento pela Justiça Eleitoral — a alegação de calamidade/utilidade pública no contrato não comprova esse reconhecimento e não autoriza supressão automática."
   },
   {
     "id": "SYN-PUB-FP-141",
@@ -2976,7 +2978,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_calamidade",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "4106902",
@@ -2984,9 +2986,10 @@
       "date": "2024-08-19",
       "excerpt": "EXTRATO DO CONTRATO EMERGENCIAL Nº 906/2024\nPARTES: Município de Curitiba e RÁDIO ALERTA COMUNICAÇÃO LTDA - CNPJ 52.602.702/0001-32\nOBJETO: Contratação emergencial de serviços de mídia para veiculação de campanha publicitária de utilidade pública relativa à situação de calamidade pública decretada pelo Decreto Municipal nº 9.451/2024 (vendaval com destelhamento) — inserções em rádio e TV com orientações sobre pontos de abrigo, doação de mantimentos, procedimentos de evacuação e prevenção sanitária.\nVALOR: R$ 360.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 75, VIII (emergência) c/c Lei 9.504/97 Art. 73 §3º (exceção para grave e urgente necessidade pública reconhecida pela Justiça Eleitoral em caso de calamidade).\nDATA: 19/08/2024."
     },
-    "rationale": "Data 2024-08-19 dentro da janela eleitoral, mas há EXCEÇÃO LEGAL EXPRESSA do Art. 73 §3º da Lei 9.504/97: campanhas de utilidade pública em situação de calamidade reconhecida são permitidas. Decreto Municipal nº 9.451/2024 citado e fundamento legal explícito.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('calamidade pública' OU 'emergência sanitária' OU 'situação de emergência') E ('decreto.*calamidade' OU 'Art.\\s*73\\s*§\\s*3' OU 'utilidade pública'), suprimir."
+    "rationale": "Data 2024-08-19 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA calamidade/utilidade pública (Decreto Municipal nº 9.451/2024), mas a exceção do inciso VI 'b' só afasta a vedação quando a grave e urgente necessidade pública é reconhecida pela Justiça Eleitoral — o decreto municipal, por si só, não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A exceção do inciso VI 'b' (grave e urgente necessidade pública) só afasta a vedação se houver reconhecimento pela Justiça Eleitoral — a alegação de calamidade/utilidade pública no contrato não comprova esse reconhecimento e não autoriza supressão automática."
   },
   {
     "id": "SYN-PUB-FP-142",
@@ -2994,7 +2997,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_calamidade",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "3304557",
@@ -3002,9 +3005,10 @@
       "date": "2024-09-03",
       "excerpt": "EXTRATO DO CONTRATO EMERGENCIAL Nº 909/2024\nPARTES: Município de Rio de Janeiro e RÁDIO ALERTA COMUNICAÇÃO LTDA - CNPJ 53.603.703/0001-33\nOBJETO: Contratação emergencial de serviços de mídia para veiculação de campanha publicitária de utilidade pública relativa à situação de calamidade pública decretada pelo Decreto Municipal nº 11.728/2024 (surto de dengue) — inserções em rádio e TV com orientações sobre pontos de abrigo, doação de mantimentos, procedimentos de evacuação e prevenção sanitária.\nVALOR: R$ 400.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 75, VIII (emergência) c/c Lei 9.504/97 Art. 73 §3º (exceção para grave e urgente necessidade pública reconhecida pela Justiça Eleitoral em caso de calamidade).\nDATA: 03/09/2024."
     },
-    "rationale": "Data 2024-09-03 dentro da janela eleitoral, mas há EXCEÇÃO LEGAL EXPRESSA do Art. 73 §3º da Lei 9.504/97: campanhas de utilidade pública em situação de calamidade reconhecida são permitidas. Decreto Municipal nº 11.728/2024 citado e fundamento legal explícito.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('calamidade pública' OU 'emergência sanitária' OU 'situação de emergência') E ('decreto.*calamidade' OU 'Art.\\s*73\\s*§\\s*3' OU 'utilidade pública'), suprimir."
+    "rationale": "Data 2024-09-03 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA calamidade/utilidade pública (Decreto Municipal nº 11.728/2024), mas a exceção do inciso VI 'b' só afasta a vedação quando a grave e urgente necessidade pública é reconhecida pela Justiça Eleitoral — o decreto municipal, por si só, não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A exceção do inciso VI 'b' (grave e urgente necessidade pública) só afasta a vedação se houver reconhecimento pela Justiça Eleitoral — a alegação de calamidade/utilidade pública no contrato não comprova esse reconhecimento e não autoriza supressão automática."
   },
   {
     "id": "SYN-PUB-FP-143",
@@ -3012,7 +3016,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_calamidade",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "5300108",
@@ -3020,9 +3024,10 @@
       "date": "2024-09-17",
       "excerpt": "EXTRATO DO CONTRATO EMERGENCIAL Nº 912/2024\nPARTES: Município de Brasília e RÁDIO ALERTA COMUNICAÇÃO LTDA - CNPJ 54.604.704/0001-34\nOBJETO: Contratação emergencial de serviços de mídia para veiculação de campanha publicitária de utilidade pública relativa à situação de calamidade pública decretada pelo Decreto Municipal nº 14.892/2024 (deslizamento de encostas) — inserções em rádio e TV com orientações sobre pontos de abrigo, doação de mantimentos, procedimentos de evacuação e prevenção sanitária.\nVALOR: R$ 440.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 75, VIII (emergência) c/c Lei 9.504/97 Art. 73 §3º (exceção para grave e urgente necessidade pública reconhecida pela Justiça Eleitoral em caso de calamidade).\nDATA: 17/09/2024."
     },
-    "rationale": "Data 2024-09-17 dentro da janela eleitoral, mas há EXCEÇÃO LEGAL EXPRESSA do Art. 73 §3º da Lei 9.504/97: campanhas de utilidade pública em situação de calamidade reconhecida são permitidas. Decreto Municipal nº 14.892/2024 citado e fundamento legal explícito.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('calamidade pública' OU 'emergência sanitária' OU 'situação de emergência') E ('decreto.*calamidade' OU 'Art.\\s*73\\s*§\\s*3' OU 'utilidade pública'), suprimir."
+    "rationale": "Data 2024-09-17 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA calamidade/utilidade pública (Decreto Municipal nº 14.892/2024), mas a exceção do inciso VI 'b' só afasta a vedação quando a grave e urgente necessidade pública é reconhecida pela Justiça Eleitoral — o decreto municipal, por si só, não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A exceção do inciso VI 'b' (grave e urgente necessidade pública) só afasta a vedação se houver reconhecimento pela Justiça Eleitoral — a alegação de calamidade/utilidade pública no contrato não comprova esse reconhecimento e não autoriza supressão automática."
   },
   {
     "id": "SYN-PUB-FP-144",
@@ -3030,7 +3035,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_calamidade",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "2304400",
@@ -3038,9 +3043,10 @@
       "date": "2024-10-01",
       "excerpt": "EXTRATO DO CONTRATO EMERGENCIAL Nº 915/2024\nPARTES: Município de Fortaleza e RÁDIO ALERTA COMUNICAÇÃO LTDA - CNPJ 55.605.705/0001-35\nOBJETO: Contratação emergencial de serviços de mídia para veiculação de campanha publicitária de utilidade pública relativa à situação de calamidade pública decretada pelo Decreto Municipal nº 8.211/2024 (surto de febre amarela) — inserções em rádio e TV com orientações sobre pontos de abrigo, doação de mantimentos, procedimentos de evacuação e prevenção sanitária.\nVALOR: R$ 480.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 75, VIII (emergência) c/c Lei 9.504/97 Art. 73 §3º (exceção para grave e urgente necessidade pública reconhecida pela Justiça Eleitoral em caso de calamidade).\nDATA: 01/10/2024."
     },
-    "rationale": "Data 2024-10-01 dentro da janela eleitoral, mas há EXCEÇÃO LEGAL EXPRESSA do Art. 73 §3º da Lei 9.504/97: campanhas de utilidade pública em situação de calamidade reconhecida são permitidas. Decreto Municipal nº 8.211/2024 citado e fundamento legal explícito.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('calamidade pública' OU 'emergência sanitária' OU 'situação de emergência') E ('decreto.*calamidade' OU 'Art.\\s*73\\s*§\\s*3' OU 'utilidade pública'), suprimir."
+    "rationale": "Data 2024-10-01 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA calamidade/utilidade pública (Decreto Municipal nº 8.211/2024), mas a exceção do inciso VI 'b' só afasta a vedação quando a grave e urgente necessidade pública é reconhecida pela Justiça Eleitoral — o decreto municipal, por si só, não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A exceção do inciso VI 'b' (grave e urgente necessidade pública) só afasta a vedação se houver reconhecimento pela Justiça Eleitoral — a alegação de calamidade/utilidade pública no contrato não comprova esse reconhecimento e não autoriza supressão automática."
   },
   {
     "id": "SYN-PUB-FP-145",
@@ -3048,7 +3054,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_calamidade",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "2927408",
@@ -3056,9 +3062,10 @@
       "date": "2024-10-22",
       "excerpt": "EXTRATO DO CONTRATO EMERGENCIAL Nº 918/2024\nPARTES: Município de Salvador e RÁDIO ALERTA COMUNICAÇÃO LTDA - CNPJ 56.606.706/0001-36\nOBJETO: Contratação emergencial de serviços de mídia para veiculação de campanha publicitária de utilidade pública relativa à situação de calamidade pública decretada pelo Decreto Municipal nº 19.005/2024 (enxurrada com vítimas) — inserções em rádio e TV com orientações sobre pontos de abrigo, doação de mantimentos, procedimentos de evacuação e prevenção sanitária.\nVALOR: R$ 520.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 75, VIII (emergência) c/c Lei 9.504/97 Art. 73 §3º (exceção para grave e urgente necessidade pública reconhecida pela Justiça Eleitoral em caso de calamidade).\nDATA: 22/10/2024."
     },
-    "rationale": "Data 2024-10-22 dentro da janela eleitoral, mas há EXCEÇÃO LEGAL EXPRESSA do Art. 73 §3º da Lei 9.504/97: campanhas de utilidade pública em situação de calamidade reconhecida são permitidas. Decreto Municipal nº 19.005/2024 citado e fundamento legal explícito.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('calamidade pública' OU 'emergência sanitária' OU 'situação de emergência') E ('decreto.*calamidade' OU 'Art.\\s*73\\s*§\\s*3' OU 'utilidade pública'), suprimir."
+    "rationale": "Data 2024-10-22 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA calamidade/utilidade pública (Decreto Municipal nº 19.005/2024), mas a exceção do inciso VI 'b' só afasta a vedação quando a grave e urgente necessidade pública é reconhecida pela Justiça Eleitoral — o decreto municipal, por si só, não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A exceção do inciso VI 'b' (grave e urgente necessidade pública) só afasta a vedação se houver reconhecimento pela Justiça Eleitoral — a alegação de calamidade/utilidade pública no contrato não comprova esse reconhecimento e não autoriza supressão automática."
   },
   {
     "id": "SYN-PUB-FP-146",
@@ -3066,7 +3073,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_calamidade",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "3106200",
@@ -3074,9 +3081,10 @@
       "date": "2024-11-08",
       "excerpt": "EXTRATO DO CONTRATO EMERGENCIAL Nº 921/2024\nPARTES: Município de Belo Horizonte e RÁDIO ALERTA COMUNICAÇÃO LTDA - CNPJ 57.607.707/0001-37\nOBJETO: Contratação emergencial de serviços de mídia para veiculação de campanha publicitária de utilidade pública relativa à situação de calamidade pública decretada pelo Decreto Municipal nº 22.114/2024 (queimadas urbanas) — inserções em rádio e TV com orientações sobre pontos de abrigo, doação de mantimentos, procedimentos de evacuação e prevenção sanitária.\nVALOR: R$ 560.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 75, VIII (emergência) c/c Lei 9.504/97 Art. 73 §3º (exceção para grave e urgente necessidade pública reconhecida pela Justiça Eleitoral em caso de calamidade).\nDATA: 08/11/2024."
     },
-    "rationale": "Data 2024-11-08 dentro da janela eleitoral, mas há EXCEÇÃO LEGAL EXPRESSA do Art. 73 §3º da Lei 9.504/97: campanhas de utilidade pública em situação de calamidade reconhecida são permitidas. Decreto Municipal nº 22.114/2024 citado e fundamento legal explícito.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('calamidade pública' OU 'emergência sanitária' OU 'situação de emergência') E ('decreto.*calamidade' OU 'Art.\\s*73\\s*§\\s*3' OU 'utilidade pública'), suprimir."
+    "rationale": "Data 2024-11-08 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA calamidade/utilidade pública (Decreto Municipal nº 22.114/2024), mas a exceção do inciso VI 'b' só afasta a vedação quando a grave e urgente necessidade pública é reconhecida pela Justiça Eleitoral — o decreto municipal, por si só, não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A exceção do inciso VI 'b' (grave e urgente necessidade pública) só afasta a vedação se houver reconhecimento pela Justiça Eleitoral — a alegação de calamidade/utilidade pública no contrato não comprova esse reconhecimento e não autoriza supressão automática."
   },
   {
     "id": "SYN-PUB-FP-147",
@@ -3084,7 +3092,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_calamidade",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "1302603",
@@ -3092,9 +3100,10 @@
       "date": "2024-11-25",
       "excerpt": "EXTRATO DO CONTRATO EMERGENCIAL Nº 924/2024\nPARTES: Município de Manaus e RÁDIO ALERTA COMUNICAÇÃO LTDA - CNPJ 58.608.708/0001-38\nOBJETO: Contratação emergencial de serviços de mídia para veiculação de campanha publicitária de utilidade pública relativa à situação de calamidade pública decretada pelo Decreto Municipal nº 13.500/2024 (surto de chikungunya) — inserções em rádio e TV com orientações sobre pontos de abrigo, doação de mantimentos, procedimentos de evacuação e prevenção sanitária.\nVALOR: R$ 600.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 75, VIII (emergência) c/c Lei 9.504/97 Art. 73 §3º (exceção para grave e urgente necessidade pública reconhecida pela Justiça Eleitoral em caso de calamidade).\nDATA: 25/11/2024."
     },
-    "rationale": "Data 2024-11-25 dentro da janela eleitoral, mas há EXCEÇÃO LEGAL EXPRESSA do Art. 73 §3º da Lei 9.504/97: campanhas de utilidade pública em situação de calamidade reconhecida são permitidas. Decreto Municipal nº 13.500/2024 citado e fundamento legal explícito.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('calamidade pública' OU 'emergência sanitária' OU 'situação de emergência') E ('decreto.*calamidade' OU 'Art.\\s*73\\s*§\\s*3' OU 'utilidade pública'), suprimir."
+    "rationale": "Data 2024-11-25 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA calamidade/utilidade pública (Decreto Municipal nº 13.500/2024), mas a exceção do inciso VI 'b' só afasta a vedação quando a grave e urgente necessidade pública é reconhecida pela Justiça Eleitoral — o decreto municipal, por si só, não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A exceção do inciso VI 'b' (grave e urgente necessidade pública) só afasta a vedação se houver reconhecimento pela Justiça Eleitoral — a alegação de calamidade/utilidade pública no contrato não comprova esse reconhecimento e não autoriza supressão automática."
   },
   {
     "id": "SYN-PUB-FP-148",
@@ -3102,7 +3111,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_calamidade",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "2611606",
@@ -3110,9 +3119,10 @@
       "date": "2024-12-10",
       "excerpt": "EXTRATO DO CONTRATO EMERGENCIAL Nº 927/2024\nPARTES: Município de Recife e RÁDIO ALERTA COMUNICAÇÃO LTDA - CNPJ 59.609.709/0001-39\nOBJETO: Contratação emergencial de serviços de mídia para veiculação de campanha publicitária de utilidade pública relativa à situação de calamidade pública decretada pelo Decreto Municipal nº 15.770/2024 (rompimento de barragem) — inserções em rádio e TV com orientações sobre pontos de abrigo, doação de mantimentos, procedimentos de evacuação e prevenção sanitária.\nVALOR: R$ 640.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021, Art. 75, VIII (emergência) c/c Lei 9.504/97 Art. 73 §3º (exceção para grave e urgente necessidade pública reconhecida pela Justiça Eleitoral em caso de calamidade).\nDATA: 10/12/2024."
     },
-    "rationale": "Data 2024-12-10 dentro da janela eleitoral, mas há EXCEÇÃO LEGAL EXPRESSA do Art. 73 §3º da Lei 9.504/97: campanhas de utilidade pública em situação de calamidade reconhecida são permitidas. Decreto Municipal nº 15.770/2024 citado e fundamento legal explícito.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('calamidade pública' OU 'emergência sanitária' OU 'situação de emergência') E ('decreto.*calamidade' OU 'Art.\\s*73\\s*§\\s*3' OU 'utilidade pública'), suprimir."
+    "rationale": "Data 2024-12-10 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA calamidade/utilidade pública (Decreto Municipal nº 15.770/2024), mas a exceção do inciso VI 'b' só afasta a vedação quando a grave e urgente necessidade pública é reconhecida pela Justiça Eleitoral — o decreto municipal, por si só, não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A exceção do inciso VI 'b' (grave e urgente necessidade pública) só afasta a vedação se houver reconhecimento pela Justiça Eleitoral — a alegação de calamidade/utilidade pública no contrato não comprova esse reconhecimento e não autoriza supressão automática."
   },
   {
     "id": "SYN-PUB-FP-149",
@@ -3120,7 +3130,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_campanha_educativa_saude",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "3304557",
@@ -3128,9 +3138,10 @@
       "date": "2024-08-02",
       "excerpt": "EXTRATO DO CONTRATO Nº 950/2024 - SECRETARIA DE SAÚDE\nPARTES: Secretaria Municipal de Saúde de Rio de Janeiro e VETOR COMUNICAÇÃO INSTITUCIONAL LTDA - CNPJ 60.700.800/0001-35\nOBJETO: Serviços de publicidade para campanha educativa de vacinação contra Influenza — 'Vacine-se contra a Gripe' — voltada à conscientização da população, com peças informativas em rádio, TV e mídia digital, com chamada à ação de comparecimento às UBS e postos de saúde.\nVALOR: R$ 380.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021 c/c Lei 9.504/97 Art. 73 §3º (exceção para campanhas de caráter educativo, informativo ou de orientação social vinculadas à saúde pública).\nDATA: 02/08/2024.\nOBSERVAÇÃO: as peças não contêm nome ou imagem de autoridade pública, conforme veda o §1º do Art. 73."
     },
-    "rationale": "Data dentro da janela eleitoral, mas é EXCEÇÃO EXPRESSA do Art. 73 §3º: campanhas educativas/informativas em saúde pública são permitidas, desde que sem promoção pessoal. Sem nome/imagem do gestor, foco em vacinação contra Influenza.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('campanha educativa' OU 'campanha informativa' OU 'orientação social') E ('vacinação' OU 'saúde pública' OU 'prevenção' OU 'SUS') E referência a 'Art.\\s*73\\s*§\\s*3', suprimir. Validar ausência de promoção pessoal."
+    "rationale": "Data 2024-08-02 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA campanha educativa/informativa de saúde pública, mas o inciso VI 'b' não isenta automaticamente campanhas educativas: a vedação só é afastada em caso de grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. A natureza educativa/sanitária alegada no contrato não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A natureza educativa/informativa de saúde não é exceção automática à vedação do inciso VI 'b'; a exceção exige grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. Sem comprovação desse reconhecimento, não há supressão automática."
   },
   {
     "id": "SYN-PUB-FP-150",
@@ -3138,7 +3149,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_campanha_educativa_saude",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "5300108",
@@ -3146,9 +3157,10 @@
       "date": "2024-08-19",
       "excerpt": "EXTRATO DO CONTRATO Nº 955/2024 - SECRETARIA DE SAÚDE\nPARTES: Secretaria Municipal de Saúde de Brasília e VETOR COMUNICAÇÃO INSTITUCIONAL LTDA - CNPJ 61.701.801/0001-36\nOBJETO: Serviços de publicidade para campanha educativa de prevenção do câncer de mama (Outubro Rosa) — 'Outubro Rosa' — voltada à conscientização da população, com peças informativas em rádio, TV e mídia digital, com chamada à ação de comparecimento às UBS e postos de saúde.\nVALOR: R$ 405.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021 c/c Lei 9.504/97 Art. 73 §3º (exceção para campanhas de caráter educativo, informativo ou de orientação social vinculadas à saúde pública).\nDATA: 19/08/2024.\nOBSERVAÇÃO: as peças não contêm nome ou imagem de autoridade pública, conforme veda o §1º do Art. 73."
     },
-    "rationale": "Data dentro da janela eleitoral, mas é EXCEÇÃO EXPRESSA do Art. 73 §3º: campanhas educativas/informativas em saúde pública são permitidas, desde que sem promoção pessoal. Sem nome/imagem do gestor, foco em prevenção do câncer de mama (Outubro Rosa).",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('campanha educativa' OU 'campanha informativa' OU 'orientação social') E ('vacinação' OU 'saúde pública' OU 'prevenção' OU 'SUS') E referência a 'Art.\\s*73\\s*§\\s*3', suprimir. Validar ausência de promoção pessoal."
+    "rationale": "Data 2024-08-19 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA campanha educativa/informativa de saúde pública, mas o inciso VI 'b' não isenta automaticamente campanhas educativas: a vedação só é afastada em caso de grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. A natureza educativa/sanitária alegada no contrato não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A natureza educativa/informativa de saúde não é exceção automática à vedação do inciso VI 'b'; a exceção exige grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. Sem comprovação desse reconhecimento, não há supressão automática."
   },
   {
     "id": "SYN-PUB-FP-151",
@@ -3156,7 +3168,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_campanha_educativa_saude",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "2304400",
@@ -3164,9 +3176,10 @@
       "date": "2024-09-03",
       "excerpt": "EXTRATO DO CONTRATO Nº 960/2024 - SECRETARIA DE SAÚDE\nPARTES: Secretaria Municipal de Saúde de Fortaleza e VETOR COMUNICAÇÃO INSTITUCIONAL LTDA - CNPJ 62.702.802/0001-37\nOBJETO: Serviços de publicidade para campanha educativa de prevenção do câncer de próstata (Novembro Azul) — 'Novembro Azul' — voltada à conscientização da população, com peças informativas em rádio, TV e mídia digital, com chamada à ação de comparecimento às UBS e postos de saúde.\nVALOR: R$ 430.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021 c/c Lei 9.504/97 Art. 73 §3º (exceção para campanhas de caráter educativo, informativo ou de orientação social vinculadas à saúde pública).\nDATA: 03/09/2024.\nOBSERVAÇÃO: as peças não contêm nome ou imagem de autoridade pública, conforme veda o §1º do Art. 73."
     },
-    "rationale": "Data dentro da janela eleitoral, mas é EXCEÇÃO EXPRESSA do Art. 73 §3º: campanhas educativas/informativas em saúde pública são permitidas, desde que sem promoção pessoal. Sem nome/imagem do gestor, foco em prevenção do câncer de próstata (Novembro Azul).",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('campanha educativa' OU 'campanha informativa' OU 'orientação social') E ('vacinação' OU 'saúde pública' OU 'prevenção' OU 'SUS') E referência a 'Art.\\s*73\\s*§\\s*3', suprimir. Validar ausência de promoção pessoal."
+    "rationale": "Data 2024-09-03 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA campanha educativa/informativa de saúde pública, mas o inciso VI 'b' não isenta automaticamente campanhas educativas: a vedação só é afastada em caso de grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. A natureza educativa/sanitária alegada no contrato não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A natureza educativa/informativa de saúde não é exceção automática à vedação do inciso VI 'b'; a exceção exige grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. Sem comprovação desse reconhecimento, não há supressão automática."
   },
   {
     "id": "SYN-PUB-FP-152",
@@ -3174,7 +3187,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_campanha_educativa_saude",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "2927408",
@@ -3182,9 +3195,10 @@
       "date": "2024-09-17",
       "excerpt": "EXTRATO DO CONTRATO Nº 965/2024 - SECRETARIA DE SAÚDE\nPARTES: Secretaria Municipal de Saúde de Salvador e VETOR COMUNICAÇÃO INSTITUCIONAL LTDA - CNPJ 63.703.803/0001-38\nOBJETO: Serviços de publicidade para campanha educativa de combate à dengue, zika e chikungunya — '10 Minutos contra a Dengue' — voltada à conscientização da população, com peças informativas em rádio, TV e mídia digital, com chamada à ação de comparecimento às UBS e postos de saúde.\nVALOR: R$ 455.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021 c/c Lei 9.504/97 Art. 73 §3º (exceção para campanhas de caráter educativo, informativo ou de orientação social vinculadas à saúde pública).\nDATA: 17/09/2024.\nOBSERVAÇÃO: as peças não contêm nome ou imagem de autoridade pública, conforme veda o §1º do Art. 73."
     },
-    "rationale": "Data dentro da janela eleitoral, mas é EXCEÇÃO EXPRESSA do Art. 73 §3º: campanhas educativas/informativas em saúde pública são permitidas, desde que sem promoção pessoal. Sem nome/imagem do gestor, foco em combate à dengue, zika e chikungunya.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('campanha educativa' OU 'campanha informativa' OU 'orientação social') E ('vacinação' OU 'saúde pública' OU 'prevenção' OU 'SUS') E referência a 'Art.\\s*73\\s*§\\s*3', suprimir. Validar ausência de promoção pessoal."
+    "rationale": "Data 2024-09-17 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA campanha educativa/informativa de saúde pública, mas o inciso VI 'b' não isenta automaticamente campanhas educativas: a vedação só é afastada em caso de grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. A natureza educativa/sanitária alegada no contrato não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A natureza educativa/informativa de saúde não é exceção automática à vedação do inciso VI 'b'; a exceção exige grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. Sem comprovação desse reconhecimento, não há supressão automática."
   },
   {
     "id": "SYN-PUB-FP-153",
@@ -3192,7 +3206,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_campanha_educativa_saude",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "3106200",
@@ -3200,9 +3214,10 @@
       "date": "2024-10-01",
       "excerpt": "EXTRATO DO CONTRATO Nº 970/2024 - SECRETARIA DE SAÚDE\nPARTES: Secretaria Municipal de Saúde de Belo Horizonte e VETOR COMUNICAÇÃO INSTITUCIONAL LTDA - CNPJ 64.704.804/0001-39\nOBJETO: Serviços de publicidade para campanha educativa de vacinação contra HPV em adolescentes — 'HPV — Proteção Hoje' — voltada à conscientização da população, com peças informativas em rádio, TV e mídia digital, com chamada à ação de comparecimento às UBS e postos de saúde.\nVALOR: R$ 480.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021 c/c Lei 9.504/97 Art. 73 §3º (exceção para campanhas de caráter educativo, informativo ou de orientação social vinculadas à saúde pública).\nDATA: 01/10/2024.\nOBSERVAÇÃO: as peças não contêm nome ou imagem de autoridade pública, conforme veda o §1º do Art. 73."
     },
-    "rationale": "Data dentro da janela eleitoral, mas é EXCEÇÃO EXPRESSA do Art. 73 §3º: campanhas educativas/informativas em saúde pública são permitidas, desde que sem promoção pessoal. Sem nome/imagem do gestor, foco em vacinação contra HPV em adolescentes.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('campanha educativa' OU 'campanha informativa' OU 'orientação social') E ('vacinação' OU 'saúde pública' OU 'prevenção' OU 'SUS') E referência a 'Art.\\s*73\\s*§\\s*3', suprimir. Validar ausência de promoção pessoal."
+    "rationale": "Data 2024-10-01 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA campanha educativa/informativa de saúde pública, mas o inciso VI 'b' não isenta automaticamente campanhas educativas: a vedação só é afastada em caso de grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. A natureza educativa/sanitária alegada no contrato não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A natureza educativa/informativa de saúde não é exceção automática à vedação do inciso VI 'b'; a exceção exige grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. Sem comprovação desse reconhecimento, não há supressão automática."
   },
   {
     "id": "SYN-PUB-FP-154",
@@ -3210,7 +3225,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_campanha_educativa_saude",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "1302603",
@@ -3218,9 +3233,10 @@
       "date": "2024-10-22",
       "excerpt": "EXTRATO DO CONTRATO Nº 975/2024 - SECRETARIA DE SAÚDE\nPARTES: Secretaria Municipal de Saúde de Manaus e VETOR COMUNICAÇÃO INSTITUCIONAL LTDA - CNPJ 65.705.805/0001-40\nOBJETO: Serviços de publicidade para campanha educativa de conscientização sobre a doação de órgãos — 'Doe Vida' — voltada à conscientização da população, com peças informativas em rádio, TV e mídia digital, com chamada à ação de comparecimento às UBS e postos de saúde.\nVALOR: R$ 505.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021 c/c Lei 9.504/97 Art. 73 §3º (exceção para campanhas de caráter educativo, informativo ou de orientação social vinculadas à saúde pública).\nDATA: 22/10/2024.\nOBSERVAÇÃO: as peças não contêm nome ou imagem de autoridade pública, conforme veda o §1º do Art. 73."
     },
-    "rationale": "Data dentro da janela eleitoral, mas é EXCEÇÃO EXPRESSA do Art. 73 §3º: campanhas educativas/informativas em saúde pública são permitidas, desde que sem promoção pessoal. Sem nome/imagem do gestor, foco em conscientização sobre a doação de órgãos.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('campanha educativa' OU 'campanha informativa' OU 'orientação social') E ('vacinação' OU 'saúde pública' OU 'prevenção' OU 'SUS') E referência a 'Art.\\s*73\\s*§\\s*3', suprimir. Validar ausência de promoção pessoal."
+    "rationale": "Data 2024-10-22 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA campanha educativa/informativa de saúde pública, mas o inciso VI 'b' não isenta automaticamente campanhas educativas: a vedação só é afastada em caso de grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. A natureza educativa/sanitária alegada no contrato não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A natureza educativa/informativa de saúde não é exceção automática à vedação do inciso VI 'b'; a exceção exige grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. Sem comprovação desse reconhecimento, não há supressão automática."
   },
   {
     "id": "SYN-PUB-FP-155",
@@ -3228,7 +3244,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_campanha_educativa_saude",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "2611606",
@@ -3236,9 +3252,10 @@
       "date": "2024-11-08",
       "excerpt": "EXTRATO DO CONTRATO Nº 980/2024 - SECRETARIA DE SAÚDE\nPARTES: Secretaria Municipal de Saúde de Recife e VETOR COMUNICAÇÃO INSTITUCIONAL LTDA - CNPJ 66.706.806/0001-41\nOBJETO: Serviços de publicidade para campanha educativa de prevenção ao suicídio (Setembro Amarelo) — 'Setembro Amarelo' — voltada à conscientização da população, com peças informativas em rádio, TV e mídia digital, com chamada à ação de comparecimento às UBS e postos de saúde.\nVALOR: R$ 530.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021 c/c Lei 9.504/97 Art. 73 §3º (exceção para campanhas de caráter educativo, informativo ou de orientação social vinculadas à saúde pública).\nDATA: 08/11/2024.\nOBSERVAÇÃO: as peças não contêm nome ou imagem de autoridade pública, conforme veda o §1º do Art. 73."
     },
-    "rationale": "Data dentro da janela eleitoral, mas é EXCEÇÃO EXPRESSA do Art. 73 §3º: campanhas educativas/informativas em saúde pública são permitidas, desde que sem promoção pessoal. Sem nome/imagem do gestor, foco em prevenção ao suicídio (Setembro Amarelo).",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('campanha educativa' OU 'campanha informativa' OU 'orientação social') E ('vacinação' OU 'saúde pública' OU 'prevenção' OU 'SUS') E referência a 'Art.\\s*73\\s*§\\s*3', suprimir. Validar ausência de promoção pessoal."
+    "rationale": "Data 2024-11-08 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA campanha educativa/informativa de saúde pública, mas o inciso VI 'b' não isenta automaticamente campanhas educativas: a vedação só é afastada em caso de grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. A natureza educativa/sanitária alegada no contrato não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A natureza educativa/informativa de saúde não é exceção automática à vedação do inciso VI 'b'; a exceção exige grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. Sem comprovação desse reconhecimento, não há supressão automática."
   },
   {
     "id": "SYN-PUB-FP-156",
@@ -3246,7 +3263,7 @@
     "category": "fp_edge_case",
     "fpPattern": "excecao_legal_campanha_educativa_saude",
     "type": "publicidade_eleitoral",
-    "expectedOutcome": "no_finding",
+    "expectedOutcome": "TP",
     "source": "synthetic",
     "syntheticGazette": {
       "cityId": "5208707",
@@ -3254,9 +3271,10 @@
       "date": "2024-11-25",
       "excerpt": "EXTRATO DO CONTRATO Nº 985/2024 - SECRETARIA DE SAÚDE\nPARTES: Secretaria Municipal de Saúde de Goiânia e VETOR COMUNICAÇÃO INSTITUCIONAL LTDA - CNPJ 67.707.807/0001-42\nOBJETO: Serviços de publicidade para campanha educativa de promoção do aleitamento materno — 'Agosto Dourado' — voltada à conscientização da população, com peças informativas em rádio, TV e mídia digital, com chamada à ação de comparecimento às UBS e postos de saúde.\nVALOR: R$ 555.000,00\nFUNDAMENTO LEGAL: Lei 14.133/2021 c/c Lei 9.504/97 Art. 73 §3º (exceção para campanhas de caráter educativo, informativo ou de orientação social vinculadas à saúde pública).\nDATA: 25/11/2024.\nOBSERVAÇÃO: as peças não contêm nome ou imagem de autoridade pública, conforme veda o §1º do Art. 73."
     },
-    "rationale": "Data dentro da janela eleitoral, mas é EXCEÇÃO EXPRESSA do Art. 73 §3º: campanhas educativas/informativas em saúde pública são permitidas, desde que sem promoção pessoal. Sem nome/imagem do gestor, foco em promoção do aleitamento materno.",
-    "shouldTriggerAfterPatch": false,
-    "filterRule": "Detector de exceção: se excerpt contém ('campanha educativa' OU 'campanha informativa' OU 'orientação social') E ('vacinação' OU 'saúde pública' OU 'prevenção' OU 'SUS') E referência a 'Art.\\s*73\\s*§\\s*3', suprimir. Validar ausência de promoção pessoal."
+    "rationale": "Data 2024-11-25 dentro da janela vedada (Lei 9.504/97 Art. 73 VI 'b'). O contrato ALEGA campanha educativa/informativa de saúde pública, mas o inciso VI 'b' não isenta automaticamente campanhas educativas: a vedação só é afastada em caso de grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. A natureza educativa/sanitária alegada no contrato não comprova esse reconhecimento judicial. Logo NÃO é no_finding automático: o Fiscal deve emitir finding com confiança abaixo do gate de publicação (informar, não suprimir — BUG-FSC-005 / PR #124); a exceção só se aplica se comprovado o reconhecimento pela Justiça Eleitoral.",
+    "shouldTriggerAfterPatch": true,
+    "expectedConfidenceBelowGate": true,
+    "filterRule": "Não suprimir. Emitir finding com confidence < 0.70 (abaixo do gate de publicação: confidence >= 0.70 + riskScore >= 60). A natureza educativa/informativa de saúde não é exceção automática à vedação do inciso VI 'b'; a exceção exige grave e urgente necessidade pública reconhecida pela Justiça Eleitoral. Sem comprovação desse reconhecimento, não há supressão automática."
   },
   {
     "id": "SYN-PUB-FP-157",
