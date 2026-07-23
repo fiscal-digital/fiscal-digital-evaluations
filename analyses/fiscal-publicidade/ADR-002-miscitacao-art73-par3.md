@@ -128,8 +128,13 @@ futuro do harness — registrado aqui como follow-up, não implementado neste PR
 
 ## Fora de escopo (achados laterais)
 
-- **`SYN-CONV-FP-EDGE-042`** (`fiscal-convenios`) também referencia "§3" da Lei 9.504/97, mas é
-  outro Fiscal e outro contexto legal. **Não editado aqui** — abrir card próprio se procede.
+- **`SYN-CONV-FP-EDGE-042`** (`fiscal-convenios`) — **reclassificado como falso alarme na varredura
+  EVAL-002** (2026-07-23). A nota original desta ADR afirmava que a amostra "também referencia §3 da
+  Lei 9.504/97"; **isso estava incorreto**. Verificado abrindo a amostra: o excerpt cita
+  `Art. 4º, §3º da Lei nº 14.820/2024` (regime jurídico de entidade filantrópica CEBAS/SUS — Santa
+  Casa de Misericórdia de Sorocaba), um **estatuto distinto** da Lei 9.504/97 Art. 73. A citação está
+  **correta no seu contexto** e **não** é miscitação do Art. 73 §3º. **Nada a corrigir em
+  fiscal-convenios.** Detalhe em `analyses/ADR-cross-fiscal-art73-par3.md`.
 - **Jurisprudência TSE de campanhas de saúde:** não há fonte lida nesta sessão que sustente uma
   exceção jurisprudencial específica. Não citada (Princípio "Sempre citar a fonte" +
   `check-legal-citation.js`). Se o mantenedor quiser ancorar em acórdão TSE, abrir sub-tarefa com
