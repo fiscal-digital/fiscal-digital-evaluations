@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedAt": "2026-05-10T00:00:00.000Z",
-  "description": "EVO-003 — Golden set rotulado para baseline de precisao por Fiscal. 70 amostras finais (30 iniciais + 40 follow-up). Distribuicao desigual ponderada por risco reputacional.",
+  "description": "EVO-003 — Golden set rotulado para baseline de precisao por Fiscal. 1695 amostras reais rotuladas (1202 FP / 348 TP / 145 borderline), acumuladas ao longo dos Ciclos 1-4.1 (v1.5.0 -> v1.7.0). Cobertura: 39 cidades, incluindo Caxias do Sul (4305108) e Porto Alegre (4314902). Finding-level; apenas amostras reais de alerts-prod (sem sinteticos). Distribuicao desigual ponderada por risco reputacional. (Contagem historica original: 70 amostras finais = 30 iniciais + 40 follow-up, superada nos ciclos seguintes.)",
   "samples": [
     {
       "id": "GS-001",
