@@ -8,7 +8,8 @@
     "label": "node scripts/label-cli.mjs",
     "extract-pdf": "node scripts/extract-pdf.mjs",
     "eval": "node scripts/eval-fiscal.mjs",
-    "eval:synthetic": "node scripts/eval-synthetic.mjs"
+    "eval:synthetic": "node scripts/eval-synthetic.mjs",
+    "calibrate": "node scripts/calibrate-labeler.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.1041.0",
