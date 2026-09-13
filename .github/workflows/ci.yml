@@ -1,0 +1,47 @@
+# Gate de PR do repo de avaliacoes (issue #12).
+#
+# Ate aqui o repo mergeou 10 PRs sem nenhuma verificacao automatizada —
+# incluindo a correcao de mis-citacao legal (#6) e o gate de calibracao (#9).
+#
+# Sem `npm ci` de proposito: `@fiscal-digital/engine` e declarado como
+# `file:../fiscal-digital/packages/engine`, caminho que nao existe no runner.
+# Tudo que roda aqui usa apenas builtins do Node.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Testes da logica pura do validador
+        run: node --test scripts/validate-golden-set.test.mjs
+
+      - name: Schema do golden set
+        run: node scripts/validate-golden-set.mjs
+
+      - name: JSON dos cenarios sinteticos e parseavel
+        run: |
+          shopt -s nullglob globstar
+          falhou=0
+          for f in golden-set/synthetic/**/*.json ; do
+            node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" || { echo "::error file=$f::JSON invalido"; falhou=1; }
+          done
+          exit $falhou

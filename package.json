@@ -9,7 +9,9 @@
     "extract-pdf": "node scripts/extract-pdf.mjs",
     "eval": "node scripts/eval-fiscal.mjs",
     "eval:synthetic": "node scripts/eval-synthetic.mjs",
-    "calibrate": "node scripts/calibrate-labeler.mjs"
+    "calibrate": "node scripts/calibrate-labeler.mjs",
+    "validate": "node scripts/validate-golden-set.mjs",
+    "test": "node --test scripts/validate-golden-set.test.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.1041.0",
