@@ -9,6 +9,7 @@
  *   pnpm label --import --fiscal=X --count=N  # importa novas amostras de prod
  *   pnpm label --fiscal=X                   # filtra para 1 Fiscal só
  *   pnpm label --stats                      # mostra distribuicao atual
+ *   pnpm label --file=golden-set/candidates/X.json   # rotula outro arquivo (mesmo schema)
  *
  * Cada amostra leva <10s: mostra excerpt + finding hipotetico, pede T/F/N/B/?.
  *
@@ -22,7 +23,10 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = path.resolve(__dirname, '..')
-const GOLDEN_SET_PATH = path.join(REPO_ROOT, 'golden-set/samples.json')
+// --file=<path>: rotula OUTRO arquivo no mesmo schema (ex.: golden-set/candidates/*.json,
+// candidatos de canário que ainda não entraram no set). Default: o golden set.
+const fileArg = process.argv.find(a => a.startsWith('--file='))?.slice('--file='.length)
+const GOLDEN_SET_PATH = fileArg ? path.resolve(fileArg) : path.join(REPO_ROOT, 'golden-set/samples.json')
 
 // ── Distribuicao alvo (Plan agent: ponderada por risco reputacional) ─────────
 
