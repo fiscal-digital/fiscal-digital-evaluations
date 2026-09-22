@@ -1,0 +1,1276 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-22T17:01:43.365Z",
+  "description": "Candidatos NÃO rotulados do canário da Fase 1 (#166/#179): braço B = fiscais sobre keywordWindows(texto integral da camada raw), cidade 4305108, 2025-01-01..2025-07-21. 35 achados publicáveis (risk>=60, conf>=0.7) de 68 findings em 503 diários. Rotular com label-cli.mjs --file=<este arquivo>. Narrativa ausente por desenho (dry-run sem Haiku).",
+  "provenance": {
+    "script": "fiscal-digital/scripts/canary-fase1.mjs",
+    "filterVersion": 1,
+    "cityId": "4305108",
+    "since": "2025-01-01",
+    "until": "2025-07-21",
+    "gate": {
+      "riskThreshold": 60,
+      "confidenceThreshold": 0.7
+    },
+    "armA": {
+      "gazettes": 458,
+      "findings": 22,
+      "publishable": 4,
+      "dates": 140
+    },
+    "armB": {
+      "gazettes": 503,
+      "findings": 68,
+      "publishable": 35,
+      "dates": 140,
+      "semJanela": 88,
+      "truncados": 0
+    },
+    "datesOnlyInB": 0
+  },
+  "samples": [
+    {
+      "id": "F1-4305108-001",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 79,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "58.118.417/0001-33",
+      "secretaria": "Serviço Autônomo Municipal de Água e Esgoto, SAMAE, de Caxias do Sul, RS",
+      "evidence": [
+        {
+          "excerpt": "de 25/01/2013.\n\nRegistre-se, comunique-se, publique-se e cumpra-se.\nGABINETE DO DIRETOR-PRESIDENTE DO SERVIÇO AUTÔNOMO MUNICIPAL DE ÁGUA E ESGOTO, SAMAE, DE CAXIAS DO\nSUL, RS, em 09 de julho de 2025.\n\nJoão Uez,\nDiretor-Presidente.\n\n Registro no Livro de Portarias nº. 060, à folha nº. 447.\n \n\nSúmula\nPregão Eletrônico n.º 90055/2025. Nota de Empenho 2025/3156. Contratada: ANNA JULIA PINHEIRO ALAVARCI SOUZA –\nCNPJ n.º 58.118.417/0001-33. Objeto: aquisição de Copo plástico descartável PP, com capacidade de 200ml, personalizado, em\ntiras de 100 unidades, conforme Termo de Referência – Anexo I. Número do ",
+          "date": "2025-07-17",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5559"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:50:42.702Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-07-17#raw85b9209a",
+        "gazetteDate": "2025-07-17",
+        "rawS3Key": "raw/txt/4305108/2025-07-17/85b9209a3f25c974.txt",
+        "windowsInGazette": 8,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-002",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "59.463.659/0001-27",
+      "value": 1332,
+      "evidence": [
+        {
+          "excerpt": "ção sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\nsite www.gov.br/compras UASG: 988599. Informações: (54) 3218-6087.\n \n\nCaxias do Sul, 26 de junho de 2025.\n \n\nGrégora Fortuna dos Passos\nSecretária Municipal de Administração, Tecnologia e Inovação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a): DPM EDUCACAO LTDA. CNPJ: 13.021.017/0001-77. Objeto: Contratação de serviço comum, não continuado\nde capacitações referente ao curso “Retenções de IRRF das Pessoas Físicas e Jurídicas e os Reflexos na EFD REINF”. Valor R$\n1.332,00. Inexigibilidade n.º 154/2025. Processo n.º 2025/24749. Fundamento Legal: Art. 74, inciso III, alínea “f”, da Lei nº\n14.133/21.\n \n\nGrégora Fortuna dos Passos\nSecretária de Administração, Tecnologia e Inovação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a): SOCIEDADE BRASILEIRA DE MEDICINA TROPICAL. CNPJ: 20.858.932/0001-87. Objeto: Inscrições de\nservidores no “60º Congresso da Sociedade Brasileira de Medicina Tropical”, a ser realizado de 02 a 05 de novembro de 2025. \nValor R$ 2.100,00. Inexigibilidade n.º 153/2025. Processo n.º 2025/25280. Fundamento Legal: Art. 74, inciso III, alínea “f”, da Lei\nnº 14.133/21.\n \n\nGrégora Fortuna dos Passos\nSecretária de Administração, Tecnologia e Inovação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a): 59.463.659 MAIRON URIDION MOCCELIN DE CARVALHO. CNPJ: 59.463.659/0001-27. Objeto: Prestação\nde serviços de cachê artístico de uma curadoria/produção para compor a ação do “Hip Hop N’Ativa – Caxias do Sul, Zona Norte”,\nno dia 13 de julho de 2025, no Complexo Zona Norte no bairro Portal da Maestra em Caxias do Sul.  Valor R$ 6.000,00.\nInexigibilidade n.º 155/2025. Processo n.º 2025/25281. Fundamento Legal: Art. 74, inciso II da Lei nº 14.133/21.\n \n\nTatiane Frizzo\nSecretária Municipal da Cultura\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a):  24.308.800 ALEXANDRE RECH MACIEL. CNPJ:  24.308.800/0001-32. Objeto:  Prestação de serviços de\nprodução artística/curadoria  do  Festival  de  Bandas  comemorativo  ao  Dia  Mundial  do  Rock  e  legado do  guitarrista  Paulo\nSchroeber, no dia 20 de julho de 2025, na Praça das Feiras de Caxias do Sul. Valor R$  8.000,00. Inexigibilidade n.º 152/2025.\nProcesso n.º 2025/24859. Fundamento Legal: Art. 74, inciso II, da Lei nº 14.133/21.\n \n\nTatiane Frizzo\nSecretária Municipal da Cultura\n\n \n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a):  J  C  V  IMPORTADORA  E  EXPORTADORA  DE  EQUIPAMENTOS  HOSPITALARES  LTDA.  CNPJ:\n09.572.885/0001-78. Objeto: Aquisição dos materiais médico-hospitalares - eletrodos e adesivos para uso em desfibrilador DEA\nZOLL modelo AED PLUS, bem como a estrutura para fixação em ambulância e o papel de ECG para o uso em cardioversor ZOLL,\nmodelo M2. Valor R$ 136.109,00. Inexigibilidade n.º 156/2025. Processo n.º 2025/20233. Fundamento Legal: Art. 74, inciso I da\nLei nº 14.133/21.\n \n\nGeraldo da Rocha Feitas Junior\nSecretário da Saúde\n\n \nAVISO DE LICITAÇÃO\n\n \nMODALIDADE: PREGÃO ELETRÔNICO Nº 159/2025.\nAbertura: 17 de julho de 2025, às 9h.\nObjeto: Aquisição de materiais de decoração, artesanato e conservação - Processo 2.\n \nO(s) documento(s) está(ão) disponível(is) no site http://cenlic.caxias.rs.gov.br/licitacoes.php, e, quando eletrônicos, também, no\nsite www.gov.br/comp",
+          "date": "2025-06-30",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5510"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:52:37.573Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-06-30#raw7c0ef8c7",
+        "gazetteDate": "2025-06-30",
+        "rawS3Key": "raw/txt/4305108/2025-06-30/7c0ef8c7cd226e8a.txt",
+        "windowsInGazette": 8,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-003",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "dispensa_irregular",
+      "riskScore": 93,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 75, II",
+      "cnpj": "08.613.246/0003-02",
+      "secretaria": "Secretaria Municipal de Administração, Tecnologia e Inovação",
+      "value": 1879083.76,
+      "evidence": [
+        {
+          "excerpt": "lano de Trabalho, no valor de R$ 1.879.083,76 (um\n\nmilhão, oitocentos e setenta e nove mil, oitenta e três reais e setenta e seis centavos).\n \n\nCaxias do Sul, 27 de junho de 2025.\nGilberto José Galafassi\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Dispensa de Licitação por SRP\n \nContratado(a): MF2 FARMACIA DE MANIPULACAO LTDA. CNPJ: 08.613.246/0003-02. Objeto: Aquisição de medicamentos\nmanipulados por dispensa por registro de preços. Valor R$  2.952,00. Dispensa por SRP n.º 106/2025. Processo n.º 2025/26460.\nFundamento Legal: Art. 75, inciso II, da Lei nº 14.133/",
+          "date": "2025-06-27",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5509"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:52:44.881Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-06-27#raw66ef9545",
+        "gazetteDate": "2025-06-27",
+        "rawS3Key": "raw/txt/4305108/2025-06-27/66ef9545293b139f.txt",
+        "windowsInGazette": 1,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-004",
+      "fiscalId": "fiscal-licitacoes",
+      "cityId": "4305108",
+      "type": "fracionamento",
+      "riskScore": 85,
+      "confidence": 0.9,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 75, §1º",
+      "cnpj": "08.613.246/0003-02",
+      "secretaria": "Secretaria Municipal de Administração, Tecnologia e Inovação",
+      "value": 1882035.76,
+      "evidence": [
+        {
+          "excerpt": "lano de Trabalho, no valor de R$ 1.879.083,76 (um\n\nmilhão, oitocentos e setenta e nove mil, oitenta e três reais e setenta e seis centavos).\n \n\nCaxias do Sul, 27 de junho de 2025.\nGilberto José Galafassi\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Dispensa de Licitação por SRP\n \nContratado(a): MF2 FARMACIA DE MANIPULACAO LTDA. CNPJ: 08.613.246/0003-02. Objeto: Aquisição de medicamentos\nmanipulados por dispensa por registro de preços. Valor R$  2.952,00. Dispensa por SRP n.º 106/2025. Processo n.º 2025/26460.\nFundamento Legal: Art. 75, inciso II, da Lei nº 14.133/",
+          "date": "2025-06-27",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5509"
+        },
+        {
+          "excerpt": "Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Dispensa de Licitação por SRP\n \nContratado(a): MF2 FARMACIA DE MANIPULACAO LTDA. CNPJ: 08.613.246/0003-02. Objeto: Aquisição de medicamentos\nmanipulados por dispensa por registro de preços. Valor R$  2.952,00. Dispensa por SRP n.º 106/2025. Processo",
+          "date": "2025-06-27",
+          "source": "https://data.queridodiario.ok.org.br/4305108/2025-06-27/905513bd7c0f2f6aaf27dc39d25b8ed0fcf04f81.pdf"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:52:44.881Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-06-27#raw66ef9545",
+        "gazetteDate": "2025-06-27",
+        "rawS3Key": "raw/txt/4305108/2025-06-27/66ef9545293b139f.txt",
+        "windowsInGazette": 1,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-005",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 79,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "03.157.268/0006-34",
+      "secretaria": "Secretaria Municipal de Administração, Tecnologia e Inovação",
+      "evidence": [
+        {
+          "excerpt": "e, quando eletrônicos, também, no\nsite www.gov.br/compras UASG: 988599. Informações: (54) 3218-6087.\n \n\nCaxias do Sul, 24 de junho de 2025.\n \n\nGrégora Fortuna dos Passos\nSecretária Municipal de Administração, Tecnologia e Inovação\n\nSERVIÇO AUTÔNOMO MUNICIPAL DE ÁGUA E\nESGOTO SAMAE\n\n \nSÚMULA \n\nTermo Aditivo n.º 3240122502.  Contratada:  GR INDÚSTRIA E COMÉRCIO DE PRODUTOS QUÍMICOS S.A.  –  CNPJ n.º\n03.157.268/0006-34.  Alteração:  A  qualificação  da  Contratada,  constante  do  contrato  original,  passa  a  ser  a  seguinte:  GR\nINDÚSTRIA E COMÉRCIO DE PRODUTOS QUÍMICOS S.A., inscrita no CNPJ sob o ",
+          "date": "2025-06-24",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5494"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:53:03.796Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-06-24#raw9c1faaa7",
+        "gazetteDate": "2025-06-24",
+        "rawS3Key": "raw/txt/4305108/2025-06-24/9c1faaa71d6cca9c.txt",
+        "windowsInGazette": 2,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-006",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 75,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "56.220.963/0001-55",
+      "value": 10000,
+      "evidence": [
+        {
+          "excerpt": "3 de junho de 2025.\n \n\nGREGORA FORTUNA DOS PASSOS\nSECRETÁRIA MUNICIPAL DE ADMINISTRAÇÃO, TECNOLOGIA E INOVAÇÃO\n\nReg. no Livro de Portarias\nn°. 909, à folha n°. 090.\n\nSANIA ROSSI PEZZI\nDIRETORA DE PESSOAL\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): DIALOGOS CLINICA E ENSINO LTDA. CNPJ: 56.220.963/0001-55. Objeto: Contratação do curso “Z-Teste\nColetivo e Individual Técnica de Zulliger e Elaboração de Documentos em Avaliação Psicológica”, para até 10 (dez) servidores, a\nser disponibilizado de forma presencial na sala de treinamento 3 na Prefeitura Municipal de Caxias do Sul, nos dias 02 e 09 de\nagosto de 2025. Valor R$ 10.000,00. Inexigibilidade n.º 137/2025. Processo n.º 2025/23430. Fundamento Legal: Art. 74, inciso III,\nalínea “f”, da Lei nº 14.133/21.\n \n\nGrégora Fortuna dos Passos\nSecretária de Administração, Tecnologia e Inovação\n\n \n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 5469 - 20/06/2025 - Página 64\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): ASSOCIACAO DE TURISMO DA SERRA NORDESTE. CNPJ: 90.481.227/0001-99. Objeto: Contratação de\ninscrições dos servidores o “9º Congresso Internacional de Turismo da Região Uva e Vinho – Serra Gaúcha”, a ser realizado, no\ndia 25 de junho de 2025. Valor R$ 821,70. Inexigibilidade n.º 138/2025. Processo n.º 2025/24350. Fundamento Legal: Art. 74,\ninciso III, alínea “f”, da Lei nº 14.133/21.\n \n\nGrégora Fortuna dos Passos\nSecretária de Administração, Tecnologia e Inovação\n\n \n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a):  ESCOLA DE EDUCACAO INFANTIL REINO DA ALEGRIA LTDA.  CNPJ:  56.976.292/0001-57.  Objeto:\nCompra de vagas de educação infantil. Valor R$ 314.583,10. Inexigibilidade n.º 139/2025. Processo n.º 2025/23796. Fundamento\nLegal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\n Marta Fattori\nSecretária da Educação\n\n \n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a):  ESCOLA INFANTIL EDUCAR LTDA. CNPJ: 05.802.832/0001-45. Objeto:  Compra de vagas de educação\ninfantil. Valor R$ 150.645,60. Inexigibilidade n.º 140/2025. Processo n.º 2025/23764. Fundamento Legal: Art. 74, inciso IV, da Lei\nnº 14.133/21.\n\n Marta Fattori\nSecretária da Educação\n\n \n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): ESCOLA DE EDUCAÇÃO INFANTIL CASTELO ENCANTADO LTDA. CNPJ: 45.114.109/0001-98. Objeto:\nCompra de vagas de educação infantil. Valor R$ 503.332,96. Inexigibilidade n.º 141/2025. Processo n.º 2025/23747. Fundamento\nLegal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nMarta Fattori\nSecretária da Educação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a): PREBIANCA EDUCACAO INFANTIL LTDA. CNPJ: 14.896.863/0001-01 Objeto: Compra de vagas de educação\ninfantil. Valor R$ 352.096,88. Inexigibilidade n.º 142/2025. Processo n.º 2025/23768. Fundamento Legal: Art. 74, inciso IV, da Lei\nnº 14.133/21.\n \n\nMarta Fattori\nSecretária da Educação\n\n \n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): ELISANDRA PORTOLAN. CNPJ: 17.860.410/0001-05. Objeto: Compra de vagas de educação infantil. Valor R$\n741.707,54. Inexigibilidade n.º 143/2025. Processo n.º 2025/23737. Fundamento Legal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nMarta Fattori\nSecretária da Educação\n\n \n \n\nAVISO DE RETIFICAÇÃO\nCONCORRÊNCIA INTERNACIONAL PRESENCIAL Nº 080/2025\n\n \nO Município de Caxias do Sul, torna pública, a retificação da licitação em epígrafe. Objeto: Concessão administrativa para\nconstrução, manutenção, conservação, gestão e operação dos serviços não-pedagógico de 31 (trinta e uma) novas unidades\neducacionais da rede municipal de educação infantil do município de Caxias do Sul (RS).  Permanecendo a data de abertura de\n08/07",
+          "date": "2025-06-20",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5484"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:53:07.617Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-06-20#raw39cdf410",
+        "gazetteDate": "2025-06-20",
+        "rawS3Key": "raw/txt/4305108/2025-06-20/39cdf4103396f61a.txt",
+        "windowsInGazette": 7,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-007",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 75,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "56.976.292/0001-57",
+      "value": 10000,
+      "evidence": [
+        {
+          "excerpt": "3 de junho de 2025.\n \n\nGREGORA FORTUNA DOS PASSOS\nSECRETÁRIA MUNICIPAL DE ADMINISTRAÇÃO, TECNOLOGIA E INOVAÇÃO\n\nReg. no Livro de Portarias\nn°. 909, à folha n°. 090.\n\nSANIA ROSSI PEZZI\nDIRETORA DE PESSOAL\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): DIALOGOS CLINICA E ENSINO LTDA. CNPJ: 56.220.963/0001-55. Objeto: Contratação do curso “Z-Teste\nColetivo e Individual Técnica de Zulliger e Elaboração de Documentos em Avaliação Psicológica”, para até 10 (dez) servidores, a\nser disponibilizado de forma presencial na sala de treinamento 3 na Prefeitura Municipal de Caxias do Sul, nos dias 02 e 09 de\nagosto de 2025. Valor R$ 10.000,00. Inexigibilidade n.º 137/2025. Processo n.º 2025/23430. Fundamento Legal: Art. 74, inciso III,\nalínea “f”, da Lei nº 14.133/21.\n \n\nGrégora Fortuna dos Passos\nSecretária de Administração, Tecnologia e Inovação\n\n \n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 5469 - 20/06/2025 - Página 64\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): ASSOCIACAO DE TURISMO DA SERRA NORDESTE. CNPJ: 90.481.227/0001-99. Objeto: Contratação de\ninscrições dos servidores o “9º Congresso Internacional de Turismo da Região Uva e Vinho – Serra Gaúcha”, a ser realizado, no\ndia 25 de junho de 2025. Valor R$ 821,70. Inexigibilidade n.º 138/2025. Processo n.º 2025/24350. Fundamento Legal: Art. 74,\ninciso III, alínea “f”, da Lei nº 14.133/21.\n \n\nGrégora Fortuna dos Passos\nSecretária de Administração, Tecnologia e Inovação\n\n \n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a):  ESCOLA DE EDUCACAO INFANTIL REINO DA ALEGRIA LTDA.  CNPJ:  56.976.292/0001-57.  Objeto:\nCompra de vagas de educação infantil. Valor R$ 314.583,10. Inexigibilidade n.º 139/2025. Processo n.º 2025/23796. Fundamento\nLegal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\n Marta Fattori\nSecretária da Educação\n\n \n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a):  ESCOLA INFANTIL EDUCAR LTDA. CNPJ: 05.802.832/0001-45. Objeto:  Compra de vagas de educação\ninfantil. Valor R$ 150.645,60. Inexigibilidade n.º 140/2025. Processo n.º 2025/23764. Fundamento Legal: Art. 74, inciso IV, da Lei\nnº 14.133/21.\n\n Marta Fattori\nSecretária da Educação\n\n \n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): ESCOLA DE EDUCAÇÃO INFANTIL CASTELO ENCANTADO LTDA. CNPJ: 45.114.109/0001-98. Objeto:\nCompra de vagas de educação infantil. Valor R$ 503.332,96. Inexigibilidade n.º 141/2025. Processo n.º 2025/23747. Fundamento\nLegal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nMarta Fattori\nSecretária da Educação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a): PREBIANCA EDUCACAO INFANTIL LTDA. CNPJ: 14.896.863/0001-01 Objeto: Compra de vagas de educação\ninfantil. Valor R$ 352.096,88. Inexigibilidade n.º 142/2025. Processo n.º 2025/23768. Fundamento Legal: Art. 74, inciso IV, da Lei\nnº 14.133/21.\n \n\nMarta Fattori\nSecretária da Educação\n\n \n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): ELISANDRA PORTOLAN. CNPJ: 17.860.410/0001-05. Objeto: Compra de vagas de educação infantil. Valor R$\n741.707,54. Inexigibilidade n.º 143/2025. Processo n.º 2025/23737. Fundamento Legal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nMarta Fattori\nSecretária da Educação\n\n \n \n\nAVISO DE RETIFICAÇÃO\nCONCORRÊNCIA INTERNACIONAL PRESENCIAL Nº 080/2025\n\n \nO Município de Caxias do Sul, torna pública, a retificação da licitação em epígrafe. Objeto: Concessão administrativa para\nconstrução, manutenção, conservação, gestão e operação dos serviços não-pedagógico de 31 (trinta e uma) novas unidades\neducacionais da rede municipal de educação infantil do município de Caxias do Sul (RS).  Permanecendo a data de abertura de\n08/07",
+          "date": "2025-06-20",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5484"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:53:07.617Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-06-20#raw39cdf410",
+        "gazetteDate": "2025-06-20",
+        "rawS3Key": "raw/txt/4305108/2025-06-20/39cdf4103396f61a.txt",
+        "windowsInGazette": 7,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-008",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "4305108",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 62,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 74, V c/c § 5º",
+      "cnpj": "01.227.689/0001-54",
+      "value": 8094,
+      "evidence": [
+        {
+          "excerpt": "pio de Caxias do Sul Número 5469 - 20/06/2025 - Página 65\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\n \nCaxias do Sul, 18 de junho de 2025\n\nGrégora Fortuna dos Passos\nSecretária Municipal de Administração, Tecnologia e Inovação\n\n \n \n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): METRICA TECNOLOGIA LTDA. CNPJ: 01.227.689/0001-54. Objeto: Prestação de serviços de locação de\nsoftware Métrica TOPO. Valor R$ 8.094,00. Inexigibilidade n.º 144/2025. Processo n.º 2025/22206. Fundamento Legal: Art. 74,\ninciso I, da Lei nº 14.133/21.\n \n\nSecretário Lucas Suzin\nSecretário Municipal de Obras\n\n \n \n\nJULGAMENTO E RESULTADO DE LICITAÇÃO\n \nA Central de Licitações do Município de Caxias do Sul torna público que o Relatório, referente à Dispensa Eletrônica n.º\n098-2025 (prestação de serviços de transporte escolar), o Termo de Homologação, referente ao Pregão Eletrônico n.º\n108-2025 (fornecimento de reagentes e materiais para laboratórios do Hemocentro Regional de Caxias do Sul e Central de\nExames Complementares), o Relatório, referente à Dispensa Eletrônica n.º 101-2025 (prestação de serviços de conserto do\nprojetor Epson NR 226080) e o Termo de Homologação, referente ao Pregão Eletrônico n.º 104-2025 (fornecimento e\ngarantia de equipamentos e insumos de informática), estão disponíveis no site www.caxias.rs.gov.br. \n \nOs editais estão disponíveis na Central de Licitações - CENLIC ou no site www.caxias.rs.gov.br. Mais informações pelo fone (54)\n3218-6000.\n \n\nCaxias do Sul, 18 de junho de 2025.\n \n\nGrégora Fortuna dos Passos\nSecretária Municipal da Administração, Tecnologia e Inovação\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Compras\n \n\nEXTRATO DE REGISTRO DE PREÇOS\n \nPregão Eletrônico por SRP N.º 109/2025\nFornecimento de óleos e graxas lubrificantes, para os veículos e máquinas da frota do Município\n(Repetição parcial PE SRP 82-2025, sem alterações)\n \nEmpresas vencedoras:\nLUBE PACK COMERCIAL LTDA., no valor global estimado de R$ 85.200,00;\nDUFILTER DISTRIBUIDORA DE FI",
+          "date": "2025-06-20",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5484"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:53:17.189Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-06-20#raw39cdf410",
+        "gazetteDate": "2025-06-20",
+        "rawS3Key": "raw/txt/4305108/2025-06-20/39cdf4103396f61a.txt",
+        "windowsInGazette": 7,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-009",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 125, caput (regra geral)",
+      "cnpj": "07.965.552/0001-83",
+      "secretaria": "Secretaria Municipal de Administração, Tecnologia e Inovação",
+      "value": 43178.76,
+      "evidence": [
+        {
+          "excerpt": "OMENICO\nPREFEITO MUNICIPAL DE CAXIAS DO SUL\n\nReg. no Livro de Portarias\nn°. 906, à folha n°. 164.\n\nGREGORA FORTUNA DOS PASSOS\nSECRETÁRIA MUNICIPAL DE ADMINISTRAÇÃO, TECNOLOGIA E INOVAÇÃO\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nJULGAMENTO E RESULTADO DE LICITAÇÃO\n \nA Central de Licitações do Município de Caxias do Sul torna público que o Termo de Homologação, referente ao Pregão\nEletrônico  por  SRP  n.°  095-2025  (Fornecimento  de  materiais  elétricos  e  de  iluminação  -  2)  está  disponível  no  site\nwww.caxias.rs.gov.br. \nO edital está disponível na Central de Licitações - CENLIC ou no site www.caxias.rs.gov.br. Mais informações pelo fone (54)\n3218-6000.\n \n\nCaxias do Sul, 29 de maio de 2025.\n \n\nGrégora Fortuna dos Passos\nSecretária Municipal da Administração, Tecnologia e Inovação\n\nSERVIÇO AUTÔNOMO MUNICIPAL DE ÁGUA E\nESGOTO SAMAE\n\n \nTERMO DE FORMALIZAÇÃO E RATIFICAÇÃO DE INEXIGIBILIDADE DE LICITAÇÃO\n\nInexigibilidade de Licitação n.º 90005/2025. Processo Administrativo n.º 25/8070-0000374-8. Fica inexigível de licitação para\ncontratação de consultoria especializada para atuação na área de criação, ocupação e manutenção de áreas de captação de água,\nem Caxias do Sul - RS, em observância ao art. 74, inc. III, alínea c, da Lei Federal nº 14.133, de 1º de abril de 2021 e alterações,\nem vista  das  justificativas  e  fundamentações  e  levando-se  em consideração os  termos do  parecer  jurídico,  expedido pela\nAssessoria Jurídica desta Autarquia, aprovo a realização da despesa, independente de licitação. Caxias do Sul, 29 de maio de\n2025. João Jocemar Uez Pezzi, Diretor-Presidente do SAMAE.\n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 5412 - 29/05/2025 - Página 2\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\n \nSÚMULA\n\nTermo  Aditivo  n.º  3250502501.  Contratada:  C.E.  Macedo  Comércio  de  Materiais  Hidráulicos  Ltda.  –  CNPJ  n.º\n07.965.552/0001-83. Retificação: No Contrato n.º 3250500000, na cláusula terceira – Do Preço, onde se lê “O SAMAE pagará à\nContratada o valor correspondente a R$ 43.178,76 (quarenta e três mil e ",
+          "date": "2025-05-29",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5427"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:54:20.046Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-05-29#rawc84bed65",
+        "gazetteDate": "2025-05-29",
+        "rawS3Key": "raw/txt/4305108/2025-05-29/c84bed654975a175.txt",
+        "windowsInGazette": 1,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-010",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_situacao_irregular",
+      "riskScore": 88,
+      "confidence": 0.92,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 14 (regularidade fiscal e trabalhista)",
+      "cnpj": "55.092.375/0001-10",
+      "value": 12350,
+      "evidence": [
+        {
+          "excerpt": "REGORA FORTUNA DOS PASSOS\nSECRETÁRIA MUNICIPAL DE ADMINISTRAÇÃO, TECNOLOGIA E INOVAÇÃO\n\nReg. no Livro de Portarias\nn°. 906, à folha n°. 064.\n\nLUCIANO MONTANARI SBABO\nRESPONDENDO PELA DIRETORIA DE PESSOAL\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): 55.092.375 UELINTON DE OLIVEIRA CANEDO. CNPJ: 55.092.375/0001-10. Objeto: Prestação de serviços\ntécnicos profissionais de instrutor para ministrar aulas de TEATRO e HISTÓRIA E TEORIA DA DANÇA para Escola Preparatória\nde Dança - EPD da Cia. Municipal de Dança da Secretaria Municipal da Cultura. Valor R$ 12.350,00. Inexigibilidade n.º 115/2025.\nProcesso n.º 2025/17054. Fundamento Legal: Art. 74, inciso II da Lei nº 14.133/21.\n \n\nTatiane Frizzo\nSecretária da Cultura\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a): VANESSA CARRARO ARMILIATO 01822561540. CNPJ: 27.517.699/0001-18. Objeto: Prestação de serviços\ntécnicos profissionais de oficineiro para ministrar oficina de Arte Contemporânea 3 para Escola Preparatória de Dança - EPD da\nCia. Municipal de Dança da Secretaria Municipal da Cultura. Valor R$ 2.600,00. Inexigibilidade n.º 116/2025. Processo n.º\n2025/20362. Fundamento Legal: Art. 74, inciso II da Lei nº 14.133/21.\n \n\nTatiane Frizzo\nSecretária da Cultura\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a): JULIANO VIEIRA DIAS. CNPJ: 12.418.284/0001-10. Objeto: Prestação de serviços técnicos profissionais de\noficineiro para ministrar oficina de Danças Urbanas para Escola Preparatória de Dança - EPD da Cia. Municipal de Dança da\nSecretaria Municipal da Cultura. Valor R$ 1.300,00. Inexigibilidade n.º 117/2025. Processo n.º 2025/20291. Fundamento Legal:\nArt. 74, inciso II da Lei nº 14.133/21.\n \n\nTatiane Frizzo\nSecretária da Cultura\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a): 17.600.816 LUISA FEDRIZZI. CNPJ: 17.600.816/0001-59. Objeto: Prestação de serviços técnicos profissionais\nde instrutor para ministrar aulas de Arte Contemporânea 2 na Escola Preparatória de Dança de Caxias do Sul - EPD da Cia. Valor\nR$ 6.175,00. Inexigibilidade n.º 118/2025. Processo n.º 2025/20040. Fundamento Legal: Art. 74, inciso II, da Lei nº 14.133/21.\n \n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 5403 - 27/05/2025 - Página 29\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\nTatiane Frizzo\nSecretária Municipal da Cultura\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a): EDUARDO AIRTON ARRUDA 01660932033. CNPJ: 32.340.199/0001-93. Objeto: Prestação de serviços para\noficinas de Musicalização para Escola Preparatória de Dança, nos meses de junho e julho, na sede da Escola Preparatória de\nDança,  no  Centro  de  Cultura  Dr.  Henrique  Ordovás  Filho.  Valor  R$  1.472,00.  Inexigibilidade  n.º  119/2025.  Processo  n.º\n2025/20306. Fundamento Legal: Art. 74, inciso II da Lei nº 14.133/21.\n \n\nTatiane Frizzo\nSecretária da Cultura\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a): VANESSA CARRARO ARMILIATO xxx225615xx. CNPJ: 27.517.699/0001-18. Objeto: Prestação de serviços\ntécnicos profissionais de instrutor para ministrar aulas de JAZZ para Escola Preparatória de Dança - EPD da Cia. Municipal de\nDança  da  Secretaria  Municipal  da  Cultura.  Valor  R$  6.175,00.  Inexigibilidade  n.º  120/2025.  Processo  n.º  2025/17053.\nFundamento Legal: Art. 74, inciso II da Lei nº 14.133/21.\n \n\nTatiane Frizzo\nSecretária da Cultura\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a): TIAGO LUIS FINIMUNDI DA LUZ 01497850037. CNPJ: 13.249.080/0001-65. Objeto: Prestação de serviços\ntécnicos profissionais de instrutor para ministrar aulas de Circo na Escola Preparatória de Dança de Caxias do Sul - EPD da Cia.\nValor  R$  6.175,00.  Inexigibilidade  n.º  121/2025.  Processo  n.º  2025/17058.  Fundamento  Legal:  Art.  74,  inciso  II,  da  Lei\n14.133/2021.\n \n\nTatiane Frizzo\nSecretária Municipal da Cultura\n\n \n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): 23.171.732 ASSAURY HIROSHI GONCALVES. CNPJ: 23.171.732/0001-40. Objeto: Prestação de serviços\ntécnicos profissionais de instrutor para ministrar aulas de Arte Contemporânea 1 na Escola Preparatória de Dança de Caxias do\nSul - EPD da Cia. Valor R$ 3.087,50. Inexigibilidade n.º 122/2025. Processo n.º 2025/20014. Fundamento Legal: Art. 74, inciso II,\nda Lei nº 14.133/2021.\n \n\nTatiane Frizzo\nSecretária Municipal da Cultura\n\n \n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): JENIFER BONHO ZARDO. CNPJ: 51.514.265/0001-49. Objeto: Prestação de serviços técnicos profissionais de\ninstrutor para ministrar aulas de Práticas e Técnicas de Salão e Arte Contemporânea 4 na Escola Preparatória de Dança de Caxias\ndo Sul - EPD da Cia. Municipal de Dança da Secretaria Municipal da Cultura. Valor R$ 6.175,00. Inexigibilidade n.º 123/2025.\nProcesso n.º 2025/20025. Fundamento Legal: Art. 74, inciso II da Lei nº 14.133/21.\n \n\nTatiane Frizzo\nSecretária da Cultura\n\n \nAviso de Dispensa de Licitação\n\n \nContratado(a): GARDEN CONSULTORIA PROJETOS E GESTAO LTDA. CNPJ: 07.351.538/0001-90. Objeto: Contratação de\nempresa para prestação de serviços especiais de Engenharia e Arqueologia, sob regime de empreitada global no sítio do futuro\nAeroporto Regional da Serra Gaúcha. Valor R$ 125.450,00. Dispensa n.º 90/2025. Processo n.º 2025/14083. Fundamento Legal:\nArt. 75, inciso I da Lei nº 14.133/21.\n \n\nMarcus Vinicius Caberlon\nSecretário de Planejamento e Parcerias Estratégicas\n\n \nAVISO DE LICITAÇÃO\n\n \n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 5403 - 27/05/2025 - Página 30\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\nMODALIDADE: PREGÃO ELETRÔNICO POR SRP Nº 110/2025.\nAbertura: 13 de junho de 2025, às 9h.\nObjeto: Fornecimento de tintas diversas e produtos correlatos\n \nO(s) documento(s) está(ão) disponível(is) no site http://cenlic.caxias.rs.gov.br/licitacoes.php, e, quando eletrônicos, também, no\nsite www.gov.br/compras UASG: 988599. Informações: (54) 3218-6087.\n \n\nCaxias do Sul, 23 de maio de 2025.\n \n\nGrégora Fortuna dos Passos\nSecretária Municipal de Administração, Tecnologia e Inovação\n\n \n \n\nJULGAMENTO E RESULTADO DE LICITAÇÃO\n \nA Central de Licitações do Município de Caxias do Sul torna público que o Termo de Homologação, referente ao Pregão\nEletrônico por SRP n.° 049-2025 (fornecimento e garantia de baterias para reposição em máquinas, veículos e equipamentos)\ne o Termo de Homologação, referente ao Pregão Eletrônico por SRP n.° 090-2025 (fornecimento de sementes de flores,\nmudas, plugs, bandejas, substrato, composto orgânico e fertilizantes para produção de mudas de flores), estão disponíveis no site\nwww.caxias.rs.gov.br. \n \nOs editais estão disponíveis na Central de Licitações - CENLIC ou no site w",
+          "date": "2025-05-27",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5418"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:54:28.725Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-05-27#raw940d587a",
+        "gazetteDate": "2025-05-27",
+        "rawS3Key": "raw/txt/4305108/2025-05-27/940d587ab959bee8.txt",
+        "windowsInGazette": 4,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-011",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_situacao_irregular",
+      "riskScore": 88,
+      "confidence": 0.92,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 14 (regularidade fiscal e trabalhista)",
+      "cnpj": "03.294.888/0001-00",
+      "secretaria": "Secretaria Municipal de Administração, Tecnologia e Inovação",
+      "value": 3250,
+      "evidence": [
+        {
+          "excerpt": "ANGELO DIDOMENICO\nPREFEITO MUNICIPAL DE CAXIAS DO SUL\n\nGREGORA FORTUNA DOS PASSOS\nSECRETÁRIA MUNICIPAL DE ADMINISTRAÇÃO, TECNOLOGIA E INOVAÇÃO\n\nReg. no Livro de Portarias\nn°. 904, à folha n°. 124.\n\n \n \n \n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Inexigibilidade de Licitação\n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 5378 - 16/05/2025 - Página 80\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\n \nContratado(a):  MUNDOGEO EVENTOS E  CONSULTORIA EMPRESARIAL LTDA.  CNPJ:  03.294.888/0001-00.  Objeto:\nContratação de serviço comum, não continuado de capacitações referente ao curso “Mundo Geo Connect\". Valor R$ 3.250,00.\nInexigibilidade n.º 105/2025. Processo n.º 2025/19137. Fundamento Legal: Art. 74, inciso III, alínea “f”, da Lei nº 14.133/21.\n \n\nGrégora Fortuna dos Passos\nSecretária de Administração, Tecnologia e Inovação\n\nPoder Executivo\nSecretaria Municipal do Urbanismo\n \n\nPROCESSO ADMINISTRATIVO N° 2024/30907\nDECISÃO DE INSTAURAÇÃO DE REURB-S\n\nNÚCLEO URBANO INFORMAL “COOESP Q.3398”\n \nTrata-se de expediente administrativo de regularização fundiária do núcleo urbano informal denominado de “COOESP Q.3398”,\ncadastrado no Sistema GeoCaxias sob n.º 386, que tramita na forma da Lei Municipal n.º 657/2021.\nEm função da solicitação de pedido de regularização pelos legitimados, será feita a instauração de Regularização Fundiária\nUrbana - ReUrb, nos termos da Lei nº 13.465/17 e Lei Complementar Municipal n.º 657/2021.\nTrata-se de núcleo urbano consolidado, que restou inicialmente comprovada a inexistência de decisão judicial es",
+          "date": "2025-05-16",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5393"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:55:02.165Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-05-16#raw5d5a30bf",
+        "gazetteDate": "2025-05-16",
+        "rawS3Key": "raw/txt/4305108/2025-05-16/5d5a30bfb900aa3e.txt",
+        "windowsInGazette": 9,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-012",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "4305108",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 62,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 74, V c/c § 5º",
+      "cnpj": "15.533.772/0001-66",
+      "secretaria": "Secretaria Municipal de Administração, Tecnologia e Inovação",
+      "value": 5900,
+      "evidence": [
+        {
+          "excerpt": "Oficial Eletrônico\nEdição Extra\n\nNúmero 5376    Órgão Oficial do Município de Caxias do Sul    15/05/2025\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): CILIA TECNOLOGIA S.A. CNPJ: 15.533.772/0001-66. Objeto: Prestação de serviços de locação de licenças do\nsoftware Cilia para listas de preços de peças e orçamentos para a frota do Município de Caxias do Sul. Valor R$ 5.900,00.\nInexigibilidade n.º 106/2025. Processo n.º 2025/14362. Fundamento Legal: Art. 74, inciso I, da Lei nº 14.133/21.\n \n\nLucas Suzin\nSecretário Municipal de Obras\n\n \n \n\nAVISO DE ADIAMENTO DA SESSÃO PÚBLICA\nCONCORRÊNCIA INTERNACIONAL Nº 080/2025\nPROCESSO ADMINISTRATIVO PROA Nº: 24/8050-0018035-4\nOBJETO: CONCESSÃO ADMINI",
+          "date": "2025-05-15",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5391"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:55:03.333Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-05-15#rawc5a2383a",
+        "gazetteDate": "2025-05-15",
+        "rawS3Key": "raw/txt/4305108/2025-05-15/c5a2383ac6fdf48f.txt",
+        "windowsInGazette": 3,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-013",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 91,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "59.890.062/0001-69",
+      "value": 1899.5,
+      "evidence": [
+        {
+          "excerpt": " processo administrativo no PROA/SISTEMA SAMAE: 2025003944. Valor: R$ 1.899,50 (um mil, oitocentos e\nnoventa e nove reais e cinquenta centavos). Fundamentação Legal: Lei Federal nº 14.133, de 1º de abril de 2021 e alterações.\nCaxias do Sul, 06 de maio de 2025. João Uez, Diretor-Presidente do SAMAE.\nPregão Eletrônico n.º 90029/2025. Nota de Empenho 2025/2095. Contratada: DISPRO DISTRIBUIDORA LTDA – CNPJ n.º\n59.890.062/0001-69. Objeto: ITEM 6 - aquisição de materiais de construção diversos para reposição ao estoque da Seção de\nAlmoxarifado, para uso em reformas, demarcações e em manutenções das unidad",
+          "date": "2025-05-07",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5366"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:55:30.299Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-05-07#rawa0e37c18",
+        "gazetteDate": "2025-05-07",
+        "rawS3Key": "raw/txt/4305108/2025-05-07/a0e37c18897278bd.txt",
+        "windowsInGazette": 12,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-014",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 79,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "56.976.292/0001-57",
+      "secretaria": "null",
+      "evidence": [
+        {
+          "excerpt": " Escola; \nCadastro da Escola junto ao Sistema Municipal de Ensino de nº 492/2025, tendo processo específico, instruído com os seguintes\ndocumentos: cópia do contrato social, formulários de cadastro da Entidade Mantenedora, de qualificação dos dirigentes e de\nidentificação da Escola; cópia da ata de nomeação da Direção da Escola; cópia do CNPJ da Entidade Mantenedora, sob nº\n56.976.292/0001-57, e cópia do contrato de locação do imóvel; \nCertidão Negativa de Débitos da Mantenedora da Fazenda Pública Municipal;\nCertidão Negativa de Débitos da Mantenedora na Fazenda Púbica Nacional;\nDeclaração emitida pel",
+          "date": "2025-04-30",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5356"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:55:53.199Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-04-30#raw8a16db70",
+        "gazetteDate": "2025-04-30",
+        "rawS3Key": "raw/txt/4305108/2025-04-30/8a16db70621f8caf.txt",
+        "windowsInGazette": 17,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-015",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "4305108",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 62,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 74, V c/c § 5º",
+      "cnpj": "23.484.444/0001-45",
+      "secretaria": "Secretaria Municipal de Administração, Tecnologia e Inovação",
+      "value": 89116,
+      "evidence": [
+        {
+          "excerpt": "Oficial Eletrônico\nEdição Extra\n\nNúmero 5336    Órgão Oficial do Município de Caxias do Sul    28/04/2025\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a): 3F LTDA. CNPJ: 23.484.444/0001-45. Objeto: Prestação de serviços de locação de licenças dos softwares\nOrçaFascio para desenvolvimento de projetos e orçamentação para Diretoria de Projetos. Valor R$ 89.116,00. Inexigibilidade n.º\n85/2025. Processo n.º 2024/11624. Fundamento Legal: Art. 74, inciso I da Lei nº 14.133/21.\n \n\nLucas Suzin\nSecretário Municipal de Obras\n\nCOMPANHIA DE DESENVOLVIMENTO DE CAXIAS\nDO SUL CODECA\n\n \n                                CODECA – COMPANHIA DE DESENVOLVIMENTO DE CAXIAS DO SUL\n\n \n \n\n         ",
+          "date": "2025-04-28",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5351"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:55:57.815Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-04-28#rawbd9d7a5d",
+        "gazetteDate": "2025-04-28",
+        "rawS3Key": "raw/txt/4305108/2025-04-28/bd9d7a5d9299ae01.txt",
+        "windowsInGazette": 1,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-016",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 81,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "57.277.537/0001-10",
+      "secretaria": "SAMAE",
+      "value": 17160,
+      "evidence": [
+        {
+          "excerpt": " PROA/SISTEMA SAMAE: 25/8070-0000526-0. Valor: R$ 17.160,00 (dezessete mil, cento e\nsessenta reais). Fundamentação Legal: Lei Federal nº 14.133, de 1º de abril de 2021 e alterações.  Caxias do Sul, 17 de abril de\n2025. João Uez, Diretor-Presidente do SAMAE.\n \n\nTERMO DE FORMALIZAÇÃO E RATIFICAÇÃO\nDE INEXIGIBILIDADE DE LICITAÇÃO\n\nInexigibilidade de Licitação n.º 90014/2025. Processo Administrativo n.º 25/8070-0000740-9. Fica inexigível de licitação para\ncontratação de vagas para participação no curso presencial “Sindicância e Processo Administrativo Disciplinar no Município\", em\nobservância ao art. 74, inc. III, da Lei Federal nº 14.133, de 1º de abril de 2021 e alterações, em vista das justificativas e\nfundamentações, aprovo a realização da despesa, independente de licitação. Caxias do Sul, 17 de abril de 2025. João Jocemar Uez\nPezzi, Diretor-Presidente do SAMAE.\n\nSÚMULA\nContrato n.º 3250180000. Inexigibilidade de Licitação n.º 90006/2025. Contratada: Conaut Controles Automáticos Ltda. –\nCNPJ 57.277.537/0001-10. Objeto: Contratação de empresa de assistência técnica especializada para prestação de serviço de\nmanutenção em macromedidor UFC 400 da marca CONAUT, com fornecimento de peças e mão de obra, no SAMAE. Valor: R$",
+          "date": "2025-04-22",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5335"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:56:06.827Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-04-22#rawb28fe563",
+        "gazetteDate": "2025-04-22",
+        "rawS3Key": "raw/txt/4305108/2025-04-22/b28fe563c29b61ca.txt",
+        "windowsInGazette": 5,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-017",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 125, caput (regra geral)",
+      "cnpj": "81.706.251/0001-98",
+      "secretaria": "Secretaria Municipal de Administração, Tecnologia e Inovação",
+      "value": 22662.64,
+      "evidence": [
+        {
+          "excerpt": "Oficial Eletrônico\nEdição Extra\n\nNúmero 5317    Órgão Oficial do Município de Caxias do Sul    17/04/2025\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Dispensa de Licitação\n \nContratado(a):  PROMEFARMA MEDICAMENTOS E  PRODUTOS HOSPITALARES LTDA.  CNPJ:  81.706.251/0001-98.\nObjeto: Aquisição de medicamento valerato de estradiol para atender a Rede Municipal da Saúde. Valor R$ 22.662,64. Dispensa\nn.º 70/2025. Processo n.º 2025/14956. Fundamento Legal: Art. 75, inciso VIII da Lei nº 14.133/21.\n \n\nGeraldo da Rocha Freitas Junior\nSecretário Municipal da Saúde\n\nSERVIÇO AUTÔNOMO MUNICIPAL DE ÁGUA E\nESGOTO SAMAE\n\n \nSÚMULA \n\nTermo Aditivo n.º 3230712502. Contratada: Hidrosp Sistemas Hidráulicos Ltda. – CNPJ n.º 82.275.918/0004-50. Vigência: O\nprazo de execução estipulado na cláusula quinta do contrato original fica prorrogado pelo período de 90 (noventa) dias, a contar\nde 08 de janeiro de 2025. O prazo de vigência estipulado na cláu",
+          "date": "2025-04-17",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5332"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:56:13.306Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-04-17#rawd3080c0e",
+        "gazetteDate": "2025-04-17",
+        "rawS3Key": "raw/txt/4305108/2025-04-17/d3080c0edcf8744d.txt",
+        "windowsInGazette": 1,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-018",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "4305108",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 62,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 74, V c/c § 5º",
+      "value": 7000,
+      "evidence": [
+        {
+          "excerpt": "ontratante: Município de Caxias do Sul\nContratada: BBC EVENTOS LTDA CONTRATO N.º 2025/387\nObjeto: Termo de Contrato para prestação de serviço de locação de espaço, no período de 24 e 25 de abril de 2025, para\nparticipação na MTM - Minas Travel Market.\nValor: R$ 7.000,00 (sete mil reais)\nModalidade: Inexigibilidade nº 2025/75\nProcesso GRP n.º 2025/14736 e PROA n.º 25/8050-0009561-1\n \nOs atos foram ratificados pelo Prefeito Municipal.\nFundamento legal: Dispositivos da Lei Federal n. 8.666/93 e alterações, Lei Federal nº 10.520/2002, Lei Federal n. 14.133/21, Lei\nMunicipal n. 5.285/1999 e demais normas aplicáveis.\n\nPoder Legislativo\n \n\nAVISO DE INEXIGIBILIDADE DE LICITAÇÃO\n \n\nCONTRATANTE: CÂMARA MUNICIPAL DE CAXIAS DO SUL\nCONTRATADO : RBS – ZERO HORA EDITORA JORNALÍSTICA S.A.\nOBJETO: Aquisição de 03 assinaturas anuais do Jornal ZERO HORA impresso e digital\nVALOR R$ 7.874,70 (sete mil, oitocentos e setenta e quatro reais e setenta centavos)\nBASE LEGAL: Processo Licitatório nº 50/2025. Inexigibilidade nº 02/2025. \nFUNDAMENTO LEGAL: Art. 74, inciso I da Lei nº 14.133/21.\n \n\nVEREADOR LUCAS CAREGNATO\nPRESIDENTE\n\n \n \n\nAVISO DE INEXIGIBILIDADE DE LICITAÇÃO\n \nCONTRATANTE: CÂMARA MUNICIPAL DE CAXIAS DO SUL\nCONTRATADO : EMPRESA JORNALÍSTICA CALDAS JUNIOR LTDA\nOBJETO: Aquisição de 03 assinaturas anuais do Jornal CORREIO DO POVO impresso e digital\nVALOR R$ 5.400,00 (cinco mil e quatrocentos reais)\nBASE LEGAL: Processo Licitatório nº 51/2025. Inexigibilidade nº 03/2025. \nFUNDAMENTO LEGAL: Art. 74, inciso I da Lei nº 14.133/21.\n \n\nVEREADOR LUCAS CAREGNATO\nPRESIDENTE\n\n \n\nDIÁRIO OFICIAL ELETRÔNICO DO MUNICÍPIO DE CAXIAS DO SUL\nPublicado em cumprimento ao que dispõe o art. 12 do Ato das Disposições Transitórias da Lei Orgânica do Município, em\nconsonância ",
+          "date": "2025-04-16",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5329"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:56:21.352Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-04-16#rawc8c7c440",
+        "gazetteDate": "2025-04-16",
+        "rawS3Key": "raw/txt/4305108/2025-04-16/c8c7c440302bc728.txt",
+        "windowsInGazette": 1,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-019",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 75,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "55.623.647/0001-61",
+      "secretaria": "SAMAE",
+      "evidence": [
+        {
+          "excerpt": " 2000 e alterações; Lei Complementar n.º 123, de 14 de dezembro de 2006 e alterações; e demais legislações\npertinentes à matéria, as regras e condições estabelecidas no Aviso e anexos que o integram. Caxias do Sul, 04 de abril de 2025.\nJoão Jocemar Uez Pezzi, Diretor-Presidente do SAMAE.\n \n\nSúmulas\nPregão  Eletrônico  n.º  90016/2025.  Nota  de  Empenho  2025/1621.  Contratada:  GAMA  PNEUS  LTDA.  –  CNPJ  n.º\n55.623.647/0001-61. Objeto: ITENS 1 E 7 - Aquisição de pneus para a frota própria do SAMAE, para reposição do estoque,\nconforme especificações técnicas do Termo de Referência – Anexo I. Númer",
+          "date": "2025-04-07",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5299"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:57:05.275Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-04-07#raw7277c378",
+        "gazetteDate": "2025-04-07",
+        "rawS3Key": "raw/txt/4305108/2025-04-07/7277c3788322cba9.txt",
+        "windowsInGazette": 9,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-020",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 75,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "55.695.599/0001-17",
+      "secretaria": "SAMAE",
+      "value": 61439.2,
+      "evidence": [
+        {
+          "excerpt": " PROA/SISTEMA\nSAMAE:  2025002369.  Valor:  R$  61.439,20  (sessenta  e  um  mil,  quatrocentos  e  trinta  e  nove  reais  e  vinte  centavos).\nFundamentação Legal: Lei Federal nº 14.133, de 1º de abril de 2021 e alterações. Caxias do Sul, 04 de abril de 2025. João Uez,\nDiretor-Presidente do SAMAE.\nPregão Eletrônico n.º 90016/2025. Nota de Empenho 2025/1622. Contratada: MAGBA E-COMMERCE LTDA. – CNPJ n.º\n55.695.599/0001-17. Objeto: ITENS 2, 4 E 5 - Aquisição de pneus para a frota própria do SAMAE, para reposição do estoque,\nconforme especificações técnicas do Termo de Referência – Anexo I. Número do processo administrativo no PROA/SISTEMA\nSAMAE: 2025002369. Valor: R$ 13.038,86 (treze mil e trinta e oito reais e oitenta e seis centavos). Fundamentação Legal: Lei\nFederal nº 14.133, de 1º de abril de 2021 e alterações. Caxias do Sul, 04 de abril de 2025. João Uez, Diretor-Presidente do\nSAMAE.\nPregão  Eletrônico  n.º  90016/2025.  Nota  de  Empenho  2025/1623.  Contratada:  FIRENZE PNEUS LTDA.  –  CNPJ  n.º\n44.722.796/0001-61. Objeto: ITENS 3 e 6 - Aquisição de pneus para a frota própria do SAMAE, para reposição do estoque,\nconforme especificações técnicas do Termo de Referência – Anexo I. Núme",
+          "date": "2025-04-07",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5299"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:57:05.275Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-04-07#raw7277c378",
+        "gazetteDate": "2025-04-07",
+        "rawS3Key": "raw/txt/4305108/2025-04-07/7277c3788322cba9.txt",
+        "windowsInGazette": 9,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-021",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_situacao_irregular",
+      "riskScore": 88,
+      "confidence": 0.92,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 14 (regularidade fiscal e trabalhista)",
+      "cnpj": "08.375.681/0003-46",
+      "value": 1818013.6,
+      "evidence": [
+        {
+          "excerpt": "8 de março de 2025.\n \n\nGREGORA FORTUNA DOS PASSOS\nSECRETÁRIA MUNICIPAL DE ADMINISTRAÇÃO, TECNOLOGIA E INOVAÇÃO\n\nReg. no Livro de Portarias\nn°. 899, à folha n°. 046.\n\nSANIA ROSSI PEZZI\nDIRETORA DE PESSOAL\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Inexigibilidade de Licitação\n \nContratado(a):  R S ESCOLA DE EDUCACAO INFANTIL LTDA.  CNPJ: 08.375.681/0003-46. Objeto: Aquisição de vagas\nescolares – Chamamento Público n.º 298/2024. Valor R$ 1.818.013,60. Inexigibilidade n.º 64/2025. Processo n.º 2025/12834.\nFundamento Legal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nContratado(a):  METRICA TECNOLOGIA LTDA.  CNPJ: 01.227.689/0001-54. Objeto: Aquisição de assinatura de software\ntopográfico para a elaboração de peças técnicas de acordo com as normas vigentes, para atender as necessidades da Topografia\ndo Urbanismo. Valor R$ 21.420,00. Inexigibilidade n.º 65/2025. Processo n.º 2025/9235. Fundamento Legal: Art. 74, inciso I da\nLei nº 14.133/21.\n \n\nMarcus Vinicius Caberlon\nSecretária Municipal de Planejamento e Parcerias Estratégicas\n\n \nJULGAMENTO E RESULTADO DE LICITAÇÃO\n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 5269 - 02/04/2025 - Página 20\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\n \nA Central de Licitações do Município de Caxias do Sul torna público que o Termo de Homologação, referente ao Pregão\nEletrônico  por  SRP n.°  042-2025  (fornecimento,  instalação,  montagem e  garantia  de  móveis  prontos)  e  o  Termo de\nHomologação, referente ao Pregão Eletrônico por SRP n.° 044-2025 (fornecimento de materiais de construção (areia,\nargamassa, cal e cimento)), estão disponíveis no site www.caxias.rs.gov.br. \n \nOs editais estão disponíveis na Central de Licitações - CENLIC ou no site www.caxias.rs.gov.br. Mais informações pelo fone (54)\n3218-6000.\n",
+          "date": "2025-04-02",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5284"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:57:24.927Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-04-02#raw6e83a90a",
+        "gazetteDate": "2025-04-02",
+        "rawS3Key": "raw/txt/4305108/2025-04-02/6e83a90af8ba6ec0.txt",
+        "windowsInGazette": 6,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-022",
+      "fiscalId": "fiscal-convenios",
+      "cityId": "4305108",
+      "type": "convenio_sem_chamamento",
+      "riskScore": 89,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 13.019/2014, Art. 24",
+      "cnpj": "02.693.502/0001-70",
+      "secretaria": "Secretaria Municipal de Assistência Social de Caxias do Sul",
+      "value": 2491405.41,
+      "evidence": [
+        {
+          "excerpt": "DAÇÃO DE ASSISTÊNCIA SOCIAL DE CAXIAS DO SUL, em 27 de março de 2025.\n \n\nSAMUEL RIBEIRO DE AVILLA\nPRESIDENTE DA FUNDAÇÃO DE ASSISTÊNCIA SOCIAL\n\n \nReg. no Livro de Portarias\n\nn°. 48, à folha n°. 097.\n \n\nELISANDRA SOARES LISBOA\nDIRETORA DE RECURSOS HUMANOS E GESTÃO DO TRABALHO\n\n \n \n \n\nSÚMULA DE TERMO ADITIVO\n \nTermo Aditivo nº 11 ao Termo de Colaboração nº 002/2020. Objeto: Execução de Serviço de Acolhimento Institucional\ndenominado  Casas  Lar  Santa  Alegria.  Organização  da  Sociedade  Civil  Parceira:  Associação  Mão  Amiga.  Vigência\nprorrogada: 01/04/2025 a 31/03/2026. Recurso: FAS. Valor total do aditivo: R$ 2.491.405,41. Processo Administrativo\nEletrônico nº 25/8080-0000112-3.\n \nFundamento Legal:  Lei  Federal  nº  13.019/2014,  Decreto  Municipal  nº  19.817/2018 e  suas  alterações  e  demais  normas\naplicáveis.\n \n \n\nSamuel Ribeiro De Avilla\nPresidente da FAS\n\n \n\nAdministradora de Consórcios Intermunicipais S/A\nADCOINTER\n\n \nCONCURSO PÚBLICO 001/2022 \n\nEDITAL DE PRORROGAÇÃO DE VALIDADE \n\nA ADCOINTER – Administradora de Consórcios Intermunicipais S/A, empresa pública, CNPJ sob nº 02.693.502/0001-70, com sede\nà Rua Jacob Luchesi, nº 3181, Bairro Santa Lúcia, no município de Caxias do Sul - RS, representada por seu Diretor Presidente,\nRudimar José Menegotto, por seu Dire",
+          "date": "2025-03-31",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5278"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:57:32.623Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-03-31#raw5003ebb9",
+        "gazetteDate": "2025-03-31",
+        "rawS3Key": "raw/txt/4305108/2025-03-31/5003ebb9768cd13b.txt",
+        "windowsInGazette": 5,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-023",
+      "fiscalId": "fiscal-locacao",
+      "cityId": "4305108",
+      "type": "locacao_sem_justificativa",
+      "riskScore": 62,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 74, V c/c § 5º",
+      "cnpj": "88.648.761/0047-88",
+      "value": 101250,
+      "evidence": [
+        {
+          "excerpt": "\nde 26 de junho de 2024.\n \nO(s) documento(s) está(ão) disponível(is) no site https://caxias.rs.gov.br/servicos/recursos-humanos/central-de-licitacoes-cenlic.\n \n\nCaxias do Sul, 25 de março de 2025.\n \n\nGrégora Fortuna dos Passos\nSecretária Municipal de Administração, Tecnologia e Inovação\n\n \nAviso de Dispensa de Licitação\n\n \nSMTTM – Contratado(a): FUNDACAO UNIVERSIDADE DE CAXIAS DO SUL. CNPJ: 88.648.761/0047-88. Objeto: Prestação\ndos serviços médico-veterinário, exames e internação de animais capturados no Aeroporto Regional Hugo Cantergiani. Valor R$\n101.250,00. Dispensa n.º 53/2025. Processo n.º 2024/45917. Fundamento Legal: Art. 75, inciso XV da Lei nº 14.133/21.\n \n\nCaxias do Sul, 25 de março de 2025.\n \n\nElisandro Fiuza\nSecretário de Trânsito, Transportes e Mobilidade\n\n \nAviso de Inexigibilidade de Licitação\n\n \nSMED – Contratado(a): ESCOLA DE EDUCACAO INFANTIL PEQUENOS DIAMANTES LTDA. CNPJ: 22.103.364/0001-30.\nObjeto: Compras de vaga de educação infantil.  Valor R$ 392.056,56. Inexigibilidade n.º 60/2025. Processo n.º 2024/51826.\nFundamento Legal: Art. 74, inciso IV da Lei nº 14.133/21.\n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 5255 - 26/03/2025 - Página 6\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\n \nCaxias do Sul, 25 de março de 2025.\n\n \nMarta Fattori\n\nSecretária Municipal da Educação\n \n\nAVISO DE LICITAÇÃO\n \nMODALIDADE: PREGÃO ELETRÔNICO Nº 065/2025.\nAbertura: 15 de abril de 2025, às 9h.\nObjeto: Fornecimento, garantia e assistência técnica de peneira rotativa tipo trommel e trator agrícola.\n \nO(s) documento(s) está(ão) disponível(is) no site https://caxias.rs.gov.br/servicos/recursos-humanos/central-de-licitacoes-cenlic, e,\nquando eletrônicos, também, no site www.gov.br/compras UASG: 988599. Informações: (54) 3218-6087.\n \n\nCaxias do Sul, 25 de março de 2025.\n \n\nGrégora Fortuna dos Passos\nSecretária Municipal de Administração, Tecnologia e Inovação\n\n \nAVISO DE LICITAÇÃO\n\n \nMODALIDADE: PREGÃO ELETRÔNICO Nº 066/2025.\nAbertura: 16 de abril de 2025, às 9h.\nObjeto: Prestação de serviços de locação de equipamentos para realização de testes de coagulação com o fornecimento de\ninsumos.\n \nO(s) documento(s) está(ão) disponível(is) no site https://caxias.rs.gov.br/servicos/recursos-humanos/central-de-licitacoes-cenlic, e,\nquando eletrônicos, também, no site www.gov.br/compras UASG: 988599. Informações: (54) 3218-6087.\n \n\nCaxias do Sul, 25 de março de 2025.\n \n\nGrégora Fortuna dos Passos\nSecretária Municipal de Administração, Tecnologia e Inovação\n\n \nAVISO DE LICITAÇÃO\n\n \nMODALIDADE: CREDENCIAMENTO Nº 063/2025.\nPeríodo para inscrições: 26 de março a 03 de abril de 2025.\nObjeto: Credenciamento, seleção e contratação de instrutores para ministrar aulas de artes na Escola Preparatória de Dança de\nCaxias do Sul (EPD), da Cia. Municipal de Dança vinculada à Secretaria",
+          "date": "2025-03-26",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5270"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:57:40.938Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-03-26#raw1c9da1ed",
+        "gazetteDate": "2025-03-26",
+        "rawS3Key": "raw/txt/4305108/2025-03-26/1c9da1ed2d250db5.txt",
+        "windowsInGazette": 5,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-024",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 81,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "56.385.366/0001-80",
+      "value": 9598.89,
+      "evidence": [
+        {
+          "excerpt": "\n\nadministrativo no PROA/SISTEMA SAMAE: 2025000572. Valor: R$ 9.598,89 (nove mil, quinhentos e noventa e oito reais e oitenta\ne nove centavos). Fundamentação Legal: Lei Federal nº 14.133, de 1º de abril de 2021 e alterações. Caxias do Sul, 25 de março\nde 2025. João Uez, Diretor-Presidente do SAMAE.\nPregão  Eletrônico  n.º  90013/2025.  Notas  de  Empenho 2025/1223 e  1224.  Contratada:  STAR  MIX  COMERCIO  DE\nPAPELARIA E VARIEDADES LTDA. – CNPJ n.º 56.385.366/0001-80. Objeto: GRUPO 3 - Aquisição de materiais de expediente para\nreposição ao estoque de almoxarifado, visando o atendimento às diversas ",
+          "date": "2025-03-25",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5267"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:57:41.545Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-03-25#raw030f0d88",
+        "gazetteDate": "2025-03-25",
+        "rawS3Key": "raw/txt/4305108/2025-03-25/030f0d888adaf1b2.txt",
+        "windowsInGazette": 12,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-025",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 83,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "57.359.764/0001-95",
+      "value": 15000.24,
+      "evidence": [
+        {
+          "excerpt": "ntos comerciais de\nalimentação do tipo bar.\nValor: R$ 15.000,24 (Quinze mil reais, vinte e quatro centavos)\nModalidade: Leilão presencial nº 2025/10\nProcesso GRP n.º 2025/1075 e PROA n.º 25/8050-0000818-2\n \nSMS - Locatário: Município de Caxias do Sul\nLocadora: M R N TEDESCO & CIA LTDA\nObjeto: Termo Aditivo nº 11 ao Contrato nº 2017/452 para renovação contratual.\nValor: R$ 129.780,00 (cento e vinte e nove mil, setecentos e oitenta reais)\nModalidade: Dispensa nº 2017/14\nProcesso GRP n.º 2017/13439\n \nOs atos foram ratificados pelo Prefeito Municipal.\nFundamento legal: Dispositivos da Lei Federal n. 8.666/93 e alterações, Lei Federal nº 10.520/2002, Lei Federal n. 14.133/21, Lei\nMunicipal n. 5.285/1999 e demais normas aplicáveis.\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Inexigibilidade de Licitação\n \nSMED – Contratado(a): TRILHA DO SABER ESCOLA DE EDUCACAO INFANTIL LTDA. CNPJ: 57.359.764/0001-95. Objeto:\nCompra de vagas de educação infantil. Valor R$ 439.384,92. Inexigibilidade n.º 58/2025. Processo n.º 2025/1703. Fundamento\nLegal: Art. 74, inciso IV da Lei nº 14.133/21.\n \n\nCaxias do Sul, 18 de março de 2025.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAVISO DE LICITAÇÃO\n\n \nMODALIDADE: LEILÃO PRESENCIAL Nº 057/2025.\nAbertura: 11 de abril de 2025, às 9h.\nObjeto: Outorga de permissão de uso onerosa para exploração de estabelecimento comercial de alimentação do tipo bar.\n \nO(s) documento(s) está(ão) disponível(is) no site https://caxias.rs.gov.br/servicos/recursos-humanos/central-de-licitacoes-cenlic, e,\nquando eletrônicos, também, no site www.gov.br/compras UASG: 988599. Informações: (54) 3218-6087.\n \n\nCaxias do Sul, 18 de março de 2025.\n \n\nGrégora Fortuna dos Passos\nSecretária Municipal de Administração, Tecnologia e Inovação\n\n \nAVISO DE LICITAÇÃO\n\n \n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 5239 - 19/03/2025 - Página 2\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\nMODALIDADE: CONCORRÊNCIA Nº 055/2025.\nAbertura: 11 de abril de 2025, às 9h.\nObjeto: Execução da(s) obr",
+          "date": "2025-03-19",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5254"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:57:58.762Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-03-19#raw7a8ae620",
+        "gazetteDate": "2025-03-19",
+        "rawS3Key": "raw/txt/4305108/2025-03-19/7a8ae6200136a0f7.txt",
+        "windowsInGazette": 7,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-026",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 83,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "57.394.128/0001-02",
+      "evidence": [
+        {
+          "excerpt": "cola;\n2.3 Cadastro da Escola junto ao Sistema Municipal de Ensino de nº 490/2024, tendo processo específico, instruído com os\nseguintes documentos: cópia do contrato social, formulários de cadastro da Entidade Mantenedora, de qualificação dos dirigentes\ne de identificação da Escola; cópia da ata de nomeação da Direção da Escola; cópia do CNPJ da Entidade Mantenedora, sob nº\n57.394.128/0001-02, e cópia do contrato de locação do imóvel; \n2.4 Certidão Negativa de Débito da Mantenedora da Fazenda Pública Municipal;\n2.5 Certidão Negativa de Débitos da Mantenedora na Fazenda Púbica Nacional;\n2.6 Declaração ",
+          "date": "2025-03-12",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5238"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:58:20.176Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-03-12#raw12b9aaaa",
+        "gazetteDate": "2025-03-12",
+        "rawS3Key": "raw/txt/4305108/2025-03-12/12b9aaaae8bde5a1.txt",
+        "windowsInGazette": 4,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-027",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 79,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "55.813.393/0001-44",
+      "value": 44000,
+      "evidence": [
+        {
+          "excerpt": "e Referência - Anexo I. Número do processo administrativo no PROA/SISTEMA SAMAE: 2025000647.\nValor: R$ 44.000,00 (quarenta e quatro mil reais). Fundamentação Legal: Lei Federal nº 14.133, de 1º de abril de 2021 e\nalterações.  Caxias do Sul, 7 de março de 2025. João Uez, Diretor-Presidente do SAMAE.\nPregão Eletrônico n.º 90007/2025. Nota de Empenho 2025/1171. Contratada: L.A COMPANY REPRESENTACOES LTDA. –\nCNPJ n.º 33.980.249/0001-60. Objeto: AQUISIÇÃO DE AÇÚCAR, DO TIPO CRISTAL, BRANCO, PARA ESTOQUE NA SEÇÃO DE\nALMOXARIFADO DO SAMAE,  CONFORME TERMO DE REFERÊNCIA -  ANEXO I.  Número  do  processo  administrativo  no\nPROA/SISTEMA SAMAE: 2025000408. Valor: R$ 7.254,00 (sete mil, duzentos e cinquenta e quatro reais). Fundamentação Legal:\nLei Federal nº 14.133, de 1º de abril de 2021 e alterações.  Caxias do Sul, 7 de março de 2025. João Uez, Diretor-Presidente do\nSAMAE.\nPregão Eletrônico n.º 90007/2025. Nota de Empenho 2025/1172. Contratada: LUAN E. DE OLIVEIRA RAMBO LTDA. – CNPJ\nn.º 55.813.393/0001-44. Objeto: AQUISIÇÃO DE CAFÉ, TORRADO E MOÍDO, DO TIPO TRADICIONAL, EMBALADO A VÁCUO,\nPARA ESTOQUE NA SEÇÃO DE ALMOXARIFADO DO SAMAE, CONFORME TERMO DE REFERÊNCIA - ANEXO I.",
+          "date": "2025-03-10",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5230"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:58:29.567Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-03-10#rawb624e9f0",
+        "gazetteDate": "2025-03-10",
+        "rawS3Key": "raw/txt/4305108/2025-03-10/b624e9f05ebf1386.txt",
+        "windowsInGazette": 23,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-028",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 83,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "57.248.872/0001-90",
+      "secretaria": "Secretaria Municipal de Administração, Tecnologia e Inovação",
+      "value": 1122,
+      "evidence": [
+        {
+          "excerpt": "RRATA\n \nNa publicação do dia 07/03/2025, no Diário Oficial Eletrônico do Município de Caxias do Sul, na Edição Extra n.°\n5214, página n.º 01 ocorreu falha involuntária,\n\n \nonde lê-se:\n\n \nAGM - Convenente: Município de Caxias do Sul\nConcedente: INOVE INDÚSTRIA E COMÉRCIO DE MÓVEIS LTDA\nObjeto: Termo aditivo n° 02 ao contrato n° 2024/920 para prorrogação do prazo de vigência contratual\nModalidade: Pregão Eletrônico nº 2024/181\nProcesso GRP n.º 2024/23273 e PROA n.º 24/8050-0014215-0\n\n \nleia-se:\n\n \nSMS - Convenente: Município de Caxias do Sul\nConcedente: INOVE INDÚSTRIA E COMÉRCIO DE MÓVEIS LTDA\nObjeto: Termo aditivo n° 02 ao contrato n° 2024/920 para prorrogação do prazo de vigência contratual\nModalidade: Pregão Eletrônico nº 2024/181\nProcesso GRP n.º 2024/23273 e PROA n.º 24/8050-0014215-0\n \nOs atos foram ratificados pelo Prefeito Municipal.\nFundamento legal: Dispositivos da Lei Federal n. 8.666/93 e alterações, Lei Federal n. 10.520/2002, Lei Municipal n. 5.285/1999 e\ndemais normas aplicáveis.\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Inexigibilidade de Licitação\n \nSMATI – Contratado(a): PETRYK & LIBERALESSO ORGANIZACAO DE ENVENTOS LTDA. CNPJ: 57.248.872/0001-90.\nObjeto: Contratação de serviço comum, não continuado de capacitações referente ao “Seminário de Neurobiologia do Autismo”.\nValor R$ 1.122,00. Inexigibilidade n.º 051/2025. Processo n.º 2025/7991. Fundamento Legal: Art. 74, inciso III, alínea f, da Lei nº\n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 5216 - 10/03/2025 - Página 2\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\n14.133/21.\n \n\nCaxias do Sul, 10 de março de 2025.\n \n\nGrégora Fortuna dos Passos\nSecretária Municipal de Administração, Tecnologia e Inovação\n\n \n \n\nJULGAMENTO E RESULTADO DE LICITAÇÃO \n \nA Central de Licitações do Município de Caxias do Sul torna público que o Termo de Homologação, referente ao Pregão\nEletrônico  por  SRP  n.º  313-2024  (fornecimento  de  materiais  de  consumo  odontológico),  está  disponível  no  site\nwww.caxias.rs.gov.br. \n \nO edital está disponível na Central de Licitações - CENLIC ou no site www.caxias.rs.gov.br. Mais informações pelo fone (54)\n3218-6000.\n \n\nCaxias do Sul",
+          "date": "2025-03-10",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5231"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:58:38.180Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-03-10#raw249e49f7",
+        "gazetteDate": "2025-03-10",
+        "rawS3Key": "raw/txt/4305108/2025-03-10/249e49f708edf060.txt",
+        "windowsInGazette": 5,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-029",
+      "fiscalId": "fiscal-convenios",
+      "cityId": "4305108",
+      "type": "convenio_sem_chamamento",
+      "riskScore": 89,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 13.019/2014, Art. 24",
+      "cnpj": "87.828.000/0001-62",
+      "secretaria": "Secretaria Municipal de Administração, Tecnologia e Inovação",
+      "value": 1300000,
+      "evidence": [
+        {
+          "excerpt": "Oficial Eletrônico\nEdição Extra\n\nNúmero 5213    Órgão Oficial do Município de Caxias do Sul    07/03/2025\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Inexigibilidade de Licitação\n \nSMAPA – Contratado(a): COMISSAO DA FESTA DA UVA E FEIRAS AGRO INDUSTRIAIS. CNPJ: 87.828.000/0001-62.\nObjeto: Repasse de recurso financeiro à Comissão da Festa da Uva, destinado a realização do evento Festa das Colheitas 2025,\nconforme Lei nº 9.270, de 28 de fevereiro de 2025, por intermédio da SMAPA. Valor R$ 1.300.000,00. Inexigibilidade n.º 50/2025.\nProcesso n.º 2025/9575. Fundamento Legal: Art. 31, inciso II da Lei nº 13.019/14.\n \n\nCaxias do Sul, 07 de março de 2025.\n \n\nRudimar Menegotto\nSecretário Municipal da Agricultura, Pecuária e Abastecimento\n\nPoder Executivo\nSecretaria Municipal da Saúde\n \nDECISÃO FINAL EM PROCESSO ADMINIS",
+          "date": "2025-03-07",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5228"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:58:49.042Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-03-07#rawc8d0fe93",
+        "gazetteDate": "2025-03-07",
+        "rawS3Key": "raw/txt/4305108/2025-03-07/c8d0fe93b5957618.txt",
+        "windowsInGazette": 3,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-030",
+      "fiscalId": "fiscal-convenios",
+      "cityId": "4305108",
+      "type": "repasse_recorrente_osc",
+      "riskScore": 85,
+      "confidence": 0.9,
+      "narrative": null,
+      "legalBasis": "Lei 13.019/2014, Art. 33 e 35",
+      "cnpj": "87.828.000/0001-62",
+      "secretaria": "Secretaria Municipal de Administração, Tecnologia e Inovação",
+      "value": 1300000,
+      "evidence": [
+        {
+          "excerpt": "Oficial Eletrônico\nEdição Extra\n\nNúmero 5213    Órgão Oficial do Município de Caxias do Sul    07/03/2025\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\nSecretaria Municipal de Administração, Tecnologia e Inovação\nCentral de Licitações\n \n\nAviso de Inexigibilidade de Licitação\n \nSMAPA – Contratado(a): COMISSAO DA FESTA DA UVA E FEIRAS AGRO INDUSTRIAIS. CNPJ: 87.828.000/0001-62.\nObjeto: Repasse de recurso financeiro à Comissão da Festa da Uva, destinado a realização do evento Festa das Colheitas 2025,\nconforme Lei nº 9.270, de 28 de fevereiro de 2025, por intermédio da SMAPA. Valor R$ 1.300.000,00. Inexigibilidade n.º 50/2025.\nProcesso n.º 2025/9575. Fundamento Legal: Art. 31, inciso II da Lei nº 13.019/14.\n \n\nCaxias do Sul, 07 de março de 2025.\n \n\nRudimar Menegotto\nSecretário Municipal da Agricultura, Pecuária e Abastecimento\n\nPoder Executivo\nSecretaria Municipal da Saúde\n \nDECISÃO FINAL EM PROCESSO ADMINIS",
+          "date": "2025-03-07",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5228"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T16:58:49.042Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-03-07#rawc8d0fe93",
+        "gazetteDate": "2025-03-07",
+        "rawS3Key": "raw/txt/4305108/2025-03-07/c8d0fe93b5957618.txt",
+        "windowsInGazette": 3,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-031",
+      "fiscalId": "fiscal-contratos",
+      "cityId": "4305108",
+      "type": "aditivo_abusivo",
+      "riskScore": 87,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 125, caput (regra geral)",
+      "cnpj": "36.682.582/0001-80",
+      "secretaria": "SMAPA",
+      "value": 457277.55,
+      "evidence": [
+        {
+          "excerpt": "025.\nValor: R$ 457.277,55 (quatrocentos e cinquenta e sete mil, duzentos e setenta e\nsete reais e cinquenta e cinco centavos)\nProcesso GRP n.º 2024/50754 e PROA n.º 24/8050-0032306-6\n \nSMAPA - Contratante: Município de Caxias do Sul\nContratado: MASOTTI TRANSPORTES E TERRAPLANAGEM LTDA\nObjeto: Termo aditivo nº 4 ao contrato 2022/342 para renovação contratual.\nValor: R$ 367.728,00 (Trezentos e sessenta e sete mil e setecentos e vinte oito reais)\nModalidade: Pregão eletrônico nº 2022/7\nProcesso GRP n.º 2021/45832\n \nSMOSP - Contratante: Município de Caxias do Sul\nContratado: MINERAÇÃO FLORENSE LTDA\nObjeto: Termo aditivo nº2 ao contrato 2024/132 para retificação do prazo de vigência e alteração de dotação orçamentária,\nreferente prestação de serviços especializados para perfuração de rocha.\nModalidade: Tomada de preços nº 2023/382\nProcesso GRP n.º 2023/31708 e PROA n.º 23/8050-0017038-8\n \nOs atos foram ratificados pelo Prefeito Municipal.\nFundamento legal: Dispositivos da Lei Federal n. 8.666/93 e alterações, Lei Federal nº 10.520/2002, Lei Federal n. 14.133/21, Lei\nMunicipal n. 5.285/1999 e demais normas aplicáveis.\n\nSERVIÇO AUTÔNOMO MUNICIPAL DE ÁGUA E\nESGOTO SAMAE\n\n \nSÚMULA \n\nTermo Aditivo n.º 3240652502. Contratada: Forza Engenharia e Obras Ltda. – CNPJ n.º 36.682.582/0001-80. Acréscimo: Ao\nvalor total do contrato original será acrescido o percentual de 14,39% (quatorze vírgula trinta e nove por cento), correspondente\na R$ 55.406,53 (cinquenta e cinco mil e quatrocentos e seis reais",
+          "date": "2025-01-30",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5134"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T17:00:38.563Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-01-30#rawf2cd9406",
+        "gazetteDate": "2025-01-30",
+        "rawS3Key": "raw/txt/4305108/2025-01-30/f2cd94066e0558b1.txt",
+        "windowsInGazette": 1,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-032",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_situacao_irregular",
+      "riskScore": 88,
+      "confidence": 0.92,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 14 (regularidade fiscal e trabalhista)",
+      "cnpj": "93.284.131/0001-29",
+      "secretaria": "SAMAE",
+      "evidence": [
+        {
+          "excerpt": "133, de 1º de abril de 2021; Lei Complementar n.º\n101, de 04 de maio de 2000 e alterações; Lei Complementar n.º 123, de 14 de dezembro de 2006 e alterações; e demais\nlegislações pertinentes à matéria. Caxias do Sul, 21 de janeiro de 2025. João Jocemar Uez Pezzi, Diretor-Presidente do SAMAE.\n \nTermo Aditivo n.º 3240122501. Contratada: QGS - Química do Brasil Ltda. – CNPJ n.º 93.284.131/0001-29. Vigência: O prazo\nde vigência estipulado no contrato original fica prorrogado pelo período de 12 (doze) meses, a contar de 06 de fevereiro de 2025.\nFundamentação Legal: art. 107, da Lei Federal n.º 14.133, de 01 de abril de 2021 e alterações. Caxias do Sul, 22 de janeiro de\n2025. João Jocemar Uez Pezzi, Diretor-Presidente do SAMAE.\n \nTermo Aditivo n.º  3220132504.  Contratada:  Chiele  e  Chiele  Advogados Associados S/S –  CNPJ n.º  02.613.187/0001-24.\nAlteração: O parágrafo primeiro da cláusula décima primeira – Da Fiscalização, do contrato original, passa a ter a seguinte\nredação: § 1º A execução do Contrato será objeto de acompanhamento,",
+          "date": "2025-01-23",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5116"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T17:00:52.536Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-01-23#raw40fa5e04",
+        "gazetteDate": "2025-01-23",
+        "rawS3Key": "raw/txt/4305108/2025-01-23/40fa5e04f3d0846f.txt",
+        "windowsInGazette": 6,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-033",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_jovem",
+      "riskScore": 81,
+      "confidence": 0.85,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 67 (qualificação técnica e econômico-financeira)",
+      "cnpj": "55.588.764/0001-31",
+      "secretaria": "Secretaria Municipal de Recursos Humanos e Logística",
+      "evidence": [
+        {
+          "excerpt": " 19 de dezembro de 2024.\n\nADRIANO TACCA\nPROCURADOR-GERAL DO MUNICÍPIO DE CAXIAS DO SUL\n\nReg. no Livro de Portarias\nn°. 881, à folha n°. 057.\n\nRONALDO BONIATTI\nSECRETÁRIO MUNICIPAL DE RECURSOS HUMANOS E LOGÍSTICA\n\nSecretaria Municipal de Recursos Humanos e Logística\nCentral de Licitações\n \n\nAVISO DE LICITAÇÃO\n\nMODALIDADE: PREGÃO ELETRÔNICO POR SRP Nº 04/2025.\nAbertura: 11 de fevereiro de 2025, às 9h.\nObjeto: Fornecimento de medicamentos constantes na lista de preços de medicamentos oficiais da ANVISA/CMED referentes às\ndemandas judiciais – Tabela 4.\n\n \nO(s) documento(s) está(ão) disponível(is) no site https://caxias.rs.gov.br/servicos/recursos-humanos/central-de-licitacoes-cenlic, e,\nquando eletrônicos, também, no site www.gov.br/compras UASG: 988599. Informações: (54) 3218-6087.\n\n \nCaxias do Sul, 06 de janeiro de 2025.\n\n \n \n\nRoneide Valdecir Dornelles\nChefe da Casa Civil Municipal\n\n \nAviso de Dispensa de Licitação\n\n \nSMC –  Contratado(a):  55.588.764 JEFERSON BRUM DE BRUM. CNPJ:  55.588.764/0001-31.  Objeto:  Contratação  de\nserviços especializados para a reforma de portões existentes e a instalação de um sistema eletrônico de automação no terceiro\nportão, visando melhorias na segurança e eficiência operacio",
+          "date": "2025-01-08",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5079"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T17:01:22.010Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-01-08#rawe3cea093",
+        "gazetteDate": "2025-01-08",
+        "rawS3Key": "raw/txt/4305108/2025-01-08/e3cea0936a050edd.txt",
+        "windowsInGazette": 9,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-034",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_situacao_irregular",
+      "riskScore": 88,
+      "confidence": 0.92,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 14 (regularidade fiscal e trabalhista)",
+      "cnpj": "28.562.696/0001-69",
+      "value": 1211145.2,
+      "evidence": [
+        {
+          "excerpt": "ro de 2025.\n \n\nGREGORA FORTUNA DOS PASSOS\nSECRETÁRIA MUNICIPAL DE RECURSOS HUMANOS E LOGÍSTICA\n\nReg. no Livro de Portarias\nn°. 882, à folha n°. 148.\n\nLUCIANO MONTANARI SBABO\nRESPONDENDO PELA DIRETORIA DE PESSOAL\n\nSecretaria Municipal de Recursos Humanos e Logística\nCentral de Licitações\n \n\nAviso de Inexigibilidade de Licitação\n \nSMED – Contratado(a): ESCOLA DE EDUCACAO INFANTIL CORES E LETRAS LTDA. CNPJ: 18.485.725/0001-82. Objeto:\nCompra de vagas de educação infantil. Valor R$ 1.211.145,20. Inexigibilidade n.º 07/2025. Processo n.º 2024/51808. Fundamento\nLegal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nCaxias do Sul, 06 de janeiro de 2025.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nSMED – Contratado(a):  IGM RECREACOES LTDA. CNPJ:  26.727.572/0001-60.  Objeto:  Compra de vagas de educação\ninfantil. Valor R$ 534.130,56. Inexigibilidade n.º 09/2025. Processo n.º 2024/51838. Fundamento Legal: Art. 74, inciso IV, da Lei\nnº 14.133/21.\n \n\nCaxias do Sul, 06 de janeiro de 2025.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nSMED – Contratado(a): ESCOLA DE EDUCACAO INFANTIL CLUBINHO DA DISNEY LTDA. CNPJ: 02.689.185/0001-19\nObjeto: Compra de vagas de educação infantil. Valor R$ 1.736.621,28. Inexigibilidade n.º 08/2025. Processo n.º 2024/51805.\nFundamento Legal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nCaxias do Sul, 06 de janeiro de 2025.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nSMED –  Contratado(a):  ESCOLA DE EDUCACAO INFANTIL TOPO KIDS LTDA.  CNPJ:  36.047.418/0001-00.  Objeto:\nCompra de vagas de educação infantil – Chamamento Público n.º 298/2024. Valor R$ 1.348.227,36. Inexigibilidade n.º 11/2025.\nProcesso n.º 2024/51834. Fundamento Legal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nCaxias do Sul, 06 de janeiro de 2025.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nSMED – Contratado(a):  PRIMEIRO DEGRAU ESCOLA DE EDUCACAO INFANTIL LTDA. CNPJ: 21.213.068/0001-29.\nObjeto: Compra de vagas de educação infantil.  Valor R$ 742.622,40. Inexigibilidade n.º 12/2025. Processo n.º 2024/51842.\n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 5060 - 07/01/2025 - Página 78\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - Disque 100.\n\nFundamento Legal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nCaxias do Sul, 06 de janeiro de 2025.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nSMED – Contratado(a): ESCOLA DE EDUCACAO INFANTIL ALEGRIA DE CRESCER LTDA. CNPJ: 14.391.074/0001-00.\nObjeto: Compra de vagas de educação infantil – Chamamento Público n.º 298/2024. Valor R$ 407.048,40. Inexigibilidade n.º\n14/2025. Processo n.º 2024/51789. Fundamento Legal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nCaxias do Sul, 06 de janeiro de 2025.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nSMED – Contratado(a): ESCOLA DE EDUCACAO INFANTIL CINCO ESTRELAS LTDA. CNPJ: 12.238.950/0001-38. Objeto:\nCompra de vagas de educação infantil. Valor R$ 845.474,40. Inexigibilidade n.º 010/2025. Processo n.º 2024/51804. Fundamento\nLegal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nCaxias do Sul, 06 de janeiro de 2025.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nSMED – Contratado(a): ESCOLA DE EDUCACAO INFANTIL VALE ANIMADO LTDA. CNPJ: 94.395.290/0001-63. Objeto:\nCompra de vagas de educação infantil. Valor R$ 636.982,56. Inexigibilidade n.º 13/2025. Processo n.º 2024/51835. Fundamento\nLegal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nCaxias do Sul, 06 de janeiro de 2025.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nSMED – Contratado(a): ESCOLA DE EDUCACAO INFANTIL TINDOLELE DA ALEGRIA LTDA. CNPJ: 28.562.696/0001-69.\nObjeto: Compra de vagas de educação infantil. Valor R$ 251.376,48. Inexigibilidade n.º 015/2025. Processo n.º 2024/51832.\nFundamento Legal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nCaxias do Sul, 06 de janeiro de 2025.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAviso de Inexigibilidade de Licitação\n\n \nSMED – Contratado(a): ESCOLA DE EDUCACAO INFANTIL AMOR MAIOR LTDA. CNPJ: 14.190.174/0001-79. Objeto:\nCompra de vagas de educação infantil. Valor R$ 482.007,60. Inexigibilidade n.º 16/2025. Processo n.º 2024/51791. Fundamento\nLegal: Art. 74, inciso IV, da Lei nº 14.133/21.\n \n\nCaxias do Sul, 06 de janeiro de 2025.\n \n\nMarta Fattori\nSecretária Municipal da Educação\n\n \nAVISO DE LICITAÇÃO\n\n \nMODALIDADE: PREGÃO ELETRÔNICO POR SRP Nº 03/2025.\nAbertura: 27 de janeiro de 2025, às 9h.\nObjeto: Fornecimento de material hidráulico.\n\n\n\nDiário Oficial Eletrônico do Município de Caxias do Sul Número 5060 - 07/01/2025 - Página 79\n\nExploração sexual de crianças e adolescentes é crime, denuncie ao Conselho Tutelar - D",
+          "date": "2025-01-07",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5075"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T17:01:24.395Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-01-07#rawf303dfaa",
+        "gazetteDate": "2025-01-07",
+        "rawS3Key": "raw/txt/4305108/2025-01-07/f303dfaa8081ea23.txt",
+        "windowsInGazette": 8,
+        "dateSeenByA": true
+      }
+    },
+    {
+      "id": "F1-4305108-035",
+      "fiscalId": "fiscal-fornecedores",
+      "cityId": "4305108",
+      "type": "cnpj_situacao_irregular",
+      "riskScore": 88,
+      "confidence": 0.92,
+      "narrative": null,
+      "legalBasis": "Lei 14.133/2021, Art. 14 (regularidade fiscal e trabalhista)",
+      "cnpj": "47.751.671/0001-58",
+      "secretaria": "FUNDAÇÃO DE ASSISTÊNCIA SOCIAL FAS",
+      "value": 9.6,
+      "evidence": [
+        {
+          "excerpt": "E PENALIDADES\n\n \nO Instituto de Previdência e Assistência Municipal – IPAM, Autarquia do Município de Caxias do Sul/RS, torna pública a aplicação\nde penalidades à empresa DZYRRE COMERCIO DE COSMÉTICOS E SANEANTES LTDA., CNPJ n.º 47.751.671/0001-58, em razão\ndo descumprimento dos termos licitados no Pregão Eletrônico por SRP n° 353/2022, do Município de Caxias do Sul/RS, pela não\nentrega total dos produtos solicitados, conforme Ata de Registro de Preços n.º 203/2023 e Processo Administrativo PROA n.º\n23/9120-0001250-1, nos seguintes termos: multa compensatória, a teor do item 13.1.4 do Termo de Referência do Edital do\nPregão Eletrônico por SRP n° 353/2022, do Município de Caxias do Sul/RS, no valor de R$ 9,60 (nove reais e sessenta cetavos);\nimpedimento de licitar e contratar com a Administração Pública, com base no mesmo item, e no art. 7º da Lei Federal n.º 10.520,\nde 17 de julho de 2002, pelo período de 60 (sessenta) meses, a contar da publicação.\n \n\nEm 07 de janeiro de 2025.\n \n\nGUSTAVO DA SILVA MACHADO\nPresidente do IPAM\n\nFUNDAÇÃO DE ASSISTÊNCIA SOCIAL FAS\n \n\nEXTRATO DE REGISTRO DE PREÇOS\nPregão Eletrônico n.º 036/2024\n\nFornecimento de utensílios de cozinha, para atender as necessidades da FAS.\nEMPRESAS VENCEDORAS:\nARPL DISTRIBUIDORA LTDA., no valor estimado de R$ 11.425,01\nBEATRIZ BRUST DE SOUZA - EPP, no valor estimado de R$ 803,00\nCOLUZZI DISTRIBUIDORA DE PRODUTOS ALIMENTÍCIOS LTDA., no",
+          "date": "2025-01-07",
+          "source": "https://doe.caxias.rs.gov.br/site/download/5075"
+        }
+      ],
+      "sourceFindingId": null,
+      "createdAt": "2026-09-22T17:01:24.395Z",
+      "label": null,
+      "labeledBy": null,
+      "labeledAt": null,
+      "rationale": null,
+      "rootCause": null,
+      "schemaVersion": 1,
+      "canary": {
+        "arm": "B",
+        "gazetteId": "4305108#2025-01-07#rawf303dfaa",
+        "gazetteDate": "2025-01-07",
+        "rawS3Key": "raw/txt/4305108/2025-01-07/f303dfaa8081ea23.txt",
+        "windowsInGazette": 8,
+        "dateSeenByA": true
+      }
+    }
+  ]
+}

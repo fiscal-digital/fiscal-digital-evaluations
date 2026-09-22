@@ -29,6 +29,7 @@ Tudo aqui é público, versionado e auditável. Críticas a metodologia são bem
 ```
 golden-set/
   samples.json     — dataset rotulado (versionado)
+  candidates/      — candidatos NÃO rotulados vindos de canários; entram em samples.json só depois de rotulados
   pdfs/            — texto extraído dos diários oficiais usados na avaliação
   changelog.md     — cada amostra adicionada/modificada
 
