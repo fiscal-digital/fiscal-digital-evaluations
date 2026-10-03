@@ -49,11 +49,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:50:42.702Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "CNPJ aberto em 15/11/2024, empenho de julho/2025 (8 meses). Mas a contratação veio do Pregão Eletrônico 90055/2025 (copos plásticos, SAMAE): concorrência aberta.",
+      "rootCause": {
+        "type": "young_cnpj_in_open_competition",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "CNPJ jovem vencendo pregão eletrônico ou credenciamento por chamamento público: concorrência aberta, FP típico pela METHODOLOGY.md."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -84,11 +88,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:52:37.573Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "MAIRON (CNPJ de 13/02/2025) foi contratado por inexigibilidade (Art. 74 II, cachê artístico) por R$ 6.000, e o ato está no texto integral. O achado traz valor R$ 1.332, que é do ato vizinho (DPM Educação), e o excerpt de evidência não contém o ato de MAIRON. Alerta publicado com valor errado.",
+      "rootCause": {
+        "type": "window_cross_act_attribution",
+        "location": "packages/engine/src/filter/keyword_windows.ts",
+        "why": "A janela de texto integral junta atos vizinhos do diário; valor e/ou entidade de um ato são atribuídos a outro."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -120,11 +128,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:52:44.881Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "Dispensa SRP 106/2025 para MF2 Farmácia é de R$ 2.952,00. O valor do achado (R$ 1.879.083,76) é a liberação de recurso do DAER do ato anterior.",
+      "rootCause": {
+        "type": "window_cross_act_attribution",
+        "location": "packages/engine/src/filter/keyword_windows.ts",
+        "why": "A janela de texto integral junta atos vizinhos do diário; valor e/ou entidade de um ato são atribuídos a outro."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -161,11 +173,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:52:44.881Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "Fracionamento somou R$ 1.879.083,76 (repasse do DAER, outro ato) + R$ 2.952,00 (dispensa real). Só existe uma dispensa de R$ 2.952 para este fornecedor neste diário.",
+      "rootCause": {
+        "type": "window_cross_act_attribution",
+        "location": "packages/engine/src/filter/keyword_windows.ts",
+        "why": "A janela de texto integral junta atos vizinhos do diário; valor e/ou entidade de um ato são atribuídos a outro."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -196,11 +212,18 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:53:03.796Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "CNPJ 03.157.268/0006-34 é filial aberta em 30/10/2024 de empresa cuja raiz é antiga. O ato é termo aditivo que só atualiza a qualificação da contratada e aplica reajuste.",
+      "rootCause": {
+        "type": "branch_cnpj_age",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "Idade medida pelo CNPJ da filial; a matriz (mesma raiz de 8 dígitos) é antiga.",
+        "secondary": [
+          "non_contract_act"
+        ]
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -231,10 +254,10 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:53:07.617Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
+      "label": "TP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "DIALOGOS CLINICA E ENSINO (CNPJ de 02/08/2024) contratada por inexigibilidade (Art. 74 III f) por R$ 10.000,00 em junho/2025, ~10,5 meses depois da abertura. Contratação direta, sem concorrência. Valor e entidade corretos no excerpt.",
       "rootCause": null,
       "schemaVersion": 1,
       "canary": {
@@ -266,11 +289,18 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:53:07.617Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "Escola Reino da Alegria (CNPJ de 22/08/2024) teve compra de vagas por R$ 314.583,10; o achado traz R$ 10.000 (ato vizinho) e o excerpt é de outra empresa. Além disso, compra de vagas de educação infantil segue chamamento público (credenciamento), concorrência aberta.",
+      "rootCause": {
+        "type": "window_cross_act_attribution",
+        "location": "packages/engine/src/filter/keyword_windows.ts",
+        "why": "A janela de texto integral junta atos vizinhos do diário; valor e/ou entidade de um ato são atribuídos a outro.",
+        "secondary": [
+          "young_cnpj_in_open_competition"
+        ]
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -301,11 +331,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:53:17.189Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "Objeto é \"locação de software Métrica TOPO\" por inexigibilidade (Art. 74 I, fornecedor exclusivo). Não é locação de imóvel.",
+      "rootCause": {
+        "type": "polysemy_locacao",
+        "location": "packages/engine/src/fiscais/locacao.ts",
+        "why": "\"Locação\" de licença de software, de espaço em feira ou de equipamento tratada como locação de imóvel."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -337,11 +371,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:54:20.046Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "O \"termo aditivo\" é retificação de preço de R$ 43.178,76 para R$ 43.138,76, uma redução de R$ 40. Não há acréscimo.",
+      "rootCause": {
+        "type": "non_contract_act",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "O ato não é contratação: credenciamento no Conselho Municipal de Educação, aplicação de penalidade, retificação ou alteração cadastral."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -372,11 +410,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:54:28.725Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "UELINTON (CNPJ de 11/05/2024) foi baixado em 19/12/2025. O ato de inexigibilidade é de maio/2025, quando o CNPJ estava ativo.",
+      "rootCause": {
+        "type": "registry_status_anachronism",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "Usa a situação cadastral ATUAL da BrasilAPI; a baixa/inaptidão é posterior à data do ato. Comparar data_situacao_cadastral com a data do contrato."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -408,11 +450,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:55:02.165Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "MUNDOGEO foi baixada por incorporação em 14/08/2026. Contratação de maio/2025, com CNPJ ativo desde 1997.",
+      "rootCause": {
+        "type": "registry_status_anachronism",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "Usa a situação cadastral ATUAL da BrasilAPI; a baixa/inaptidão é posterior à data do ato. Comparar data_situacao_cadastral com a data do contrato."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -444,11 +490,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:55:03.333Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "Objeto é \"locação de licenças do software Cilia\" (Art. 74 I). Não é locação de imóvel.",
+      "rootCause": {
+        "type": "polysemy_locacao",
+        "location": "packages/engine/src/fiscais/locacao.ts",
+        "why": "\"Locação\" de licença de software, de espaço em feira ou de equipamento tratada como locação de imóvel."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -479,11 +529,18 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:55:30.299Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "DISPRO (CNPJ de 13/03/2025) venceu item do Pregão Eletrônico 90029/2025: concorrência aberta. O valor do achado (R$ 1.899,50) é do empenho anterior (Comercial Sponchiado); o da DISPRO é R$ 9.402,40.",
+      "rootCause": {
+        "type": "young_cnpj_in_open_competition",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "CNPJ jovem vencendo pregão eletrônico ou credenciamento por chamamento público: concorrência aberta, FP típico pela METHODOLOGY.md.",
+        "secondary": [
+          "window_cross_act_attribution"
+        ]
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -514,11 +571,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:55:53.199Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "O ato é parecer do Conselho Municipal de Educação sobre credenciamento e autorização de funcionamento da escola. Não há contratação.",
+      "rootCause": {
+        "type": "non_contract_act",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "O ato não é contratação: credenciamento no Conselho Municipal de Educação, aplicação de penalidade, retificação ou alteração cadastral."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -550,11 +611,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:55:57.815Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "Objeto é \"locação de licenças dos softwares OrçaFascio\" (Art. 74 I). Não é locação de imóvel.",
+      "rootCause": {
+        "type": "polysemy_locacao",
+        "location": "packages/engine/src/fiscais/locacao.ts",
+        "why": "\"Locação\" de licença de software, de espaço em feira ou de equipamento tratada como locação de imóvel."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -586,11 +651,18 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:56:06.827Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "CONAUT contratada por inexigibilidade (Art. 74 I) para manutenção de macromedidor da própria marca CONAUT, por R$ 71.936,00. O achado traz R$ 17.160 do ato vizinho (LLG). Fabricante exclusivo da marca; CNPJ de 2024 com capital de R$ 46,9 mi indica reorganização societária, não empresa nova.",
+      "rootCause": {
+        "type": "window_cross_act_attribution",
+        "location": "packages/engine/src/filter/keyword_windows.ts",
+        "why": "A janela de texto integral junta atos vizinhos do diário; valor e/ou entidade de um ato são atribuídos a outro.",
+        "secondary": [
+          "branch_cnpj_age"
+        ]
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -622,11 +694,18 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:56:13.306Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "O ato da PROMEFARMA é dispensa (Art. 75 VIII), não aditivo. O aditivo vizinho (Hidrosp) só prorroga prazo, sem valor.",
+      "rootCause": {
+        "type": "non_contract_act",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "O ato não é contratação: credenciamento no Conselho Municipal de Educação, aplicação de penalidade, retificação ou alteração cadastral.",
+        "secondary": [
+          "window_cross_act_attribution"
+        ]
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -656,11 +735,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:56:21.352Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "Locação de espaço em feira de turismo (MTM - Minas Travel Market) por 2 dias, R$ 7.000. Não é locação de imóvel para a administração.",
+      "rootCause": {
+        "type": "polysemy_locacao",
+        "location": "packages/engine/src/fiscais/locacao.ts",
+        "why": "\"Locação\" de licença de software, de espaço em feira ou de equipamento tratada como locação de imóvel."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -691,11 +774,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:57:05.275Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "GAMA PNEUS (CNPJ de 21/06/2024) venceu itens do Pregão Eletrônico 90016/2025: concorrência aberta.",
+      "rootCause": {
+        "type": "young_cnpj_in_open_competition",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "CNPJ jovem vencendo pregão eletrônico ou credenciamento por chamamento público: concorrência aberta, FP típico pela METHODOLOGY.md."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -727,11 +814,18 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:57:05.275Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "MAGBA (CNPJ de 26/06/2024) venceu itens do Pregão Eletrônico 90016/2025: concorrência aberta. O achado traz R$ 61.439,20, que é da GAMA PNEUS; o da MAGBA é R$ 13.038,86.",
+      "rootCause": {
+        "type": "young_cnpj_in_open_competition",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "CNPJ jovem vencendo pregão eletrônico ou credenciamento por chamamento público: concorrência aberta, FP típico pela METHODOLOGY.md.",
+        "secondary": [
+          "window_cross_act_attribution"
+        ]
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -762,11 +856,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:57:24.927Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "R.S Escola (filial) foi baixada em 10/07/2026. Ato de abril/2025, com CNPJ ativo; a compra de vagas veio do Chamamento Público 298/2024.",
+      "rootCause": {
+        "type": "registry_status_anachronism",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "Usa a situação cadastral ATUAL da BrasilAPI; a baixa/inaptidão é posterior à data do ato. Comparar data_situacao_cadastral com a data do contrato."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -798,11 +896,18 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:57:32.623Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "O ato é o Termo Aditivo nº 11 ao Termo de Colaboração 002/2020 (prorrogação) com a Associação Mão Amiga. O CNPJ do achado é da ADCOINTER, de um ato vizinho. Prorrogação não é celebração, então \"sem chamamento\" não é verificável aqui.",
+      "rootCause": {
+        "type": "window_cross_act_attribution",
+        "location": "packages/engine/src/filter/keyword_windows.ts",
+        "why": "A janela de texto integral junta atos vizinhos do diário; valor e/ou entidade de um ato são atribuídos a outro.",
+        "secondary": [
+          "non_contract_act"
+        ]
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -833,11 +938,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:57:40.938Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "O ato é dispensa (Art. 75 XV) para serviços veterinários da UCS. Não há locação; o termo veio de aviso vizinho (\"locação de equipamentos\" em outro pregão).",
+      "rootCause": {
+        "type": "window_cross_act_attribution",
+        "location": "packages/engine/src/filter/keyword_windows.ts",
+        "why": "A janela de texto integral junta atos vizinhos do diário; valor e/ou entidade de um ato são atribuídos a outro."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -868,11 +977,18 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:57:41.545Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "STAR MIX (CNPJ de 08/08/2024) venceu grupo do Pregão Eletrônico 90013/2025: concorrência aberta. Valor do achado R$ 9.598,89 é do empenho anterior; o da STAR MIX é R$ 2.408,95.",
+      "rootCause": {
+        "type": "young_cnpj_in_open_competition",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "CNPJ jovem vencendo pregão eletrônico ou credenciamento por chamamento público: concorrência aberta, FP típico pela METHODOLOGY.md.",
+        "secondary": [
+          "window_cross_act_attribution"
+        ]
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -903,11 +1019,18 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:57:58.762Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "Trilha do Saber (CNPJ de 19/09/2024) teve compra de vagas por R$ 439.384,92 (credenciamento). O achado traz R$ 15.000,24, da permissão de uso de um bar (outro ato).",
+      "rootCause": {
+        "type": "young_cnpj_in_open_competition",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "CNPJ jovem vencendo pregão eletrônico ou credenciamento por chamamento público: concorrência aberta, FP típico pela METHODOLOGY.md.",
+        "secondary": [
+          "window_cross_act_attribution"
+        ]
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -937,11 +1060,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:58:20.176Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "O ato é parecer do Conselho Municipal de Educação sobre credenciamento da Escola Carambola. Não há contratação.",
+      "rootCause": {
+        "type": "non_contract_act",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "O ato não é contratação: credenciamento no Conselho Municipal de Educação, aplicação de penalidade, retificação ou alteração cadastral."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -972,11 +1099,18 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:58:29.567Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "LUAN RAMBO (CNPJ de 05/07/2024) venceu item do Pregão Eletrônico 90007/2025: concorrência aberta. Valor do achado R$ 44.000,00 é da LALUH; o da LUAN RAMBO é R$ 42.287,50.",
+      "rootCause": {
+        "type": "young_cnpj_in_open_competition",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "CNPJ jovem vencendo pregão eletrônico ou credenciamento por chamamento público: concorrência aberta, FP típico pela METHODOLOGY.md.",
+        "secondary": [
+          "window_cross_act_attribution"
+        ]
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -1008,10 +1142,10 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:58:38.180Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
+      "label": "TP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "PETRYK & LIBERALESSO (CNPJ de 11/09/2024) contratada por inexigibilidade (Art. 74 III f) por R$ 1.122,00 em março/2025, 6 meses depois da abertura. Contratação direta. Materialidade baixa: inscrições em seminário.",
       "rootCause": null,
       "schemaVersion": 1,
       "canary": {
@@ -1044,11 +1178,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:58:49.042Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "O ato cita como fundamento o Art. 31, II da Lei 13.019/2014 e a Lei Municipal 9.270/2025, que autoriza o repasse à Comissão da Festa da Uva. A ausência de chamamento está declarada e fundamentada.",
+      "rootCause": {
+        "type": "legal_exception_in_act",
+        "location": "packages/engine/src/fiscais/convenios.ts",
+        "why": "O próprio ato cita o fundamento da dispensa/inexigibilidade do chamamento e lei municipal específica autorizando o repasse."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -1080,11 +1218,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T16:58:49.042Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "Um único ato no diário; não há recorrência demonstrada na evidência. O repasse é autorizado por lei municipal específica de 2025, o que contradiz \"sem renovação formal\".",
+      "rootCause": {
+        "type": "legal_exception_in_act",
+        "location": "packages/engine/src/fiscais/convenios.ts",
+        "why": "O próprio ato cita o fundamento da dispensa/inexigibilidade do chamamento e lei municipal específica autorizando o repasse."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -1116,11 +1258,18 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T17:00:38.563Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "Aditivo da Forza acresce 14,39% (R$ 55.406,53), abaixo do limite. O valor do achado (R$ 457.277,55) é do termo de repasse ao INSAUDE, outro ato.",
+      "rootCause": {
+        "type": "below_threshold",
+        "location": "packages/engine/src/fiscais/contratos.ts",
+        "why": "O acréscimo do aditivo é inferior ao limite que o Fiscal verifica.",
+        "secondary": [
+          "window_cross_act_attribution"
+        ]
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -1151,11 +1300,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T17:00:52.536Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "QGS foi baixada por incorporação em 13/05/2025. O aditivo de prorrogação é de 22/01/2025, com CNPJ ativo.",
+      "rootCause": {
+        "type": "registry_status_anachronism",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "Usa a situação cadastral ATUAL da BrasilAPI; a baixa/inaptidão é posterior à data do ato. Comparar data_situacao_cadastral com a data do contrato."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -1186,10 +1339,10 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T17:01:22.010Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
+      "label": "TP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "CNPJ 55.588.764 (aberto em 19/06/2024; no ato como JEFERSON BRUM DE BRUM, hoje SERRALHERIA ACO SUL) contratado por dispensa (Art. 75 II) por R$ 5.361,00 em janeiro/2025, ~6,5 meses depois da abertura. Contratação direta. Ressalva: o excerpt de evidência não contém o ato; ele está no texto integral do mesmo diário.",
       "rootCause": null,
       "schemaVersion": 1,
       "canary": {
@@ -1221,11 +1374,18 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T17:01:24.395Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "TINDOLELE só ficou inapta em 25/05/2026; o ato é de janeiro/2025. O valor do achado (R$ 1.211.145,20) é da Escola Cores e Letras; o da TINDOLELE é R$ 251.376,48.",
+      "rootCause": {
+        "type": "registry_status_anachronism",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "Usa a situação cadastral ATUAL da BrasilAPI; a baixa/inaptidão é posterior à data do ato. Comparar data_situacao_cadastral com a data do contrato.",
+        "secondary": [
+          "window_cross_act_attribution"
+        ]
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
@@ -1257,11 +1417,15 @@
       ],
       "sourceFindingId": null,
       "createdAt": "2026-09-22T17:01:24.395Z",
-      "label": null,
-      "labeledBy": null,
-      "labeledAt": null,
-      "rationale": null,
-      "rootCause": null,
+      "label": "FP",
+      "labeledBy": "claude-fable-5-1",
+      "labeledAt": "2026-10-03T23:46:38Z",
+      "rationale": "O ato é aplicação de PENALIDADE pelo IPAM à empresa (multa de R$ 9,60 e impedimento de licitar). Não há contratação. O R$ 9,60 é a multa.",
+      "rootCause": {
+        "type": "non_contract_act",
+        "location": "packages/engine/src/fiscais/fornecedores.ts",
+        "why": "O ato não é contratação: credenciamento no Conselho Municipal de Educação, aplicação de penalidade, retificação ou alteração cadastral."
+      },
       "schemaVersion": 1,
       "canary": {
         "arm": "B",
